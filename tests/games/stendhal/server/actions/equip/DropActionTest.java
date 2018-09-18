@@ -76,10 +76,10 @@ public class DropActionTest extends ZoneAndPlayerTestImpl {
 
 		// Same using item paths
 		localzone.remove(item);
-		player.equip("bag", item);
+		player.equip("背包", item);
 		action = new RPAction();
 		action.put("type", "drop");
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		action.put(EquipActionConsts.SOURCE_PATH, path);
 		action.put("x", player.getX());
 		action.put("y", player.getY() + 1);

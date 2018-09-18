@@ -211,7 +211,7 @@ public class BringListOfItemsQuestLogicTest {
 		StackableItem item = new StackableItem("one", "", "", null);
 		item.setQuantity(10);
 		item.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "yes");
 		assertEquals("item brought", quest.askForItemsAfterPlayerSaidHeHasItems(), getReply(npc));
 
@@ -231,11 +231,11 @@ public class BringListOfItemsQuestLogicTest {
 		item = new StackableItem("two", "", "", null);
 		item.setQuantity(10);
 		item.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = new StackableItem("three", "", "", null);
 		item.setQuantity(10);
 		item.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "three");
 		assertEquals("item brought", quest.respondToItemBrought(), getReply(npc));
 		en.step(player, "two");

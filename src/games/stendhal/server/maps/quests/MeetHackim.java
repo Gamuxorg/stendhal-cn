@@ -60,7 +60,7 @@ public class MeetHackim extends AbstractQuest {
 		}
 		res.add("I talked with Hackim, the very nice 塞门镇 blacksmith assistant. He wants to help me with how to buy weapon so I should ask him about that help.");
 		if (isCompleted(player)) {
-			res.add("I listened to his really useful information about how to deal with traders like Xin Blanca, a guy in 塞门镇 tavern.");
+			res.add("I listened to his really useful information about how to deal with traders like 辛布兰卡, a guy in 塞门镇 tavern.");
 		}
 		return res;
 	}
@@ -93,7 +93,7 @@ public class MeetHackim extends AbstractQuest {
 			"Ask him what he has to #offer, and look at what he will let you #buy and #sell. For instance, if you had a 镶嵌盾 which you didn't want, you could #'sell 镶嵌盾'.",
 			null);
 
-		final String answer = "Guessed who supplies Xin Blanca with the weapons he sells? Well, it's me! I have to avoid raising suspicion, though, so I can only smuggle him small weapons. If you want something more powerful, you'll have to venture into the dungeons and kill some of the creatures there for items.\n";
+		final String answer = "Guessed who supplies 辛布兰卡 with the weapons he sells? Well, it's me! I have to avoid raising suspicion, though, so I can only smuggle him small weapons. If you want something more powerful, you'll have to venture into the dungeons and kill some of the creatures there for items.\n";
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new EquipItemAction("money", 5));
@@ -134,7 +134,7 @@ public class MeetHackim extends AbstractQuest {
 				"The blacksmith assistant Hackim Easso has some useful information.",
 				false);
 		yesTrigger = new LinkedList<String>(ConversationPhrases.YES_MESSAGES);
-		yesTrigger.add("Xin Blanca");
+		yesTrigger.add("辛布兰卡");
 		yesTrigger.add("Blanca");
 		yesTrigger.add("Xin");
 		prepareHackim();

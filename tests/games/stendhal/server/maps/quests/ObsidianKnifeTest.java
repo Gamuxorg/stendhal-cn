@@ -90,7 +90,7 @@ public class ObsidianKnifeTest {
 		player.setQuest(questSlot, "meat");
 
 		Item item = ItemTestHelper.createItem("meat", 100);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 		final double oldKarma = player.getKarma();
 
@@ -189,7 +189,7 @@ public class ObsidianKnifeTest {
 
 		// -----------------------------------------------
 		item = ItemTestHelper.createItem("obsidian");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// add one item
 		en.step(player, "hi");
 		assertEquals("Hello again. Don't forget I offered to make that obsidian knife, if you bring me a cod and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.", getReply(npc));
@@ -197,7 +197,7 @@ public class ObsidianKnifeTest {
 		assertEquals("Bye.", getReply(npc));
 		// add the next item
 		item = ItemTestHelper.createItem("cod");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		// they haven't killed a dragon
 		en.step(player, "hi");

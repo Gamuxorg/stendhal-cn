@@ -57,7 +57,7 @@ public class PlayerTransformer implements Transformer {
 	private static final List<String> ITEMS_TO_UNBIND = Arrays.asList("标记卷轴");
 
 	/** these items should be deleted for non admins */
-	private static final List<String> ITEMS_FOR_ADMINS = Arrays.asList("rod of the gm", "master key");
+	private static final List<String> ITEMS_FOR_ADMINS = Arrays.asList("GM自慰棒", "master key");
 
 	public Player create(final RPObject object) {
 
@@ -144,8 +144,8 @@ public class PlayerTransformer implements Transformer {
 	void loadItemsIntoSlots(final Player player) {
 
 		// load items
-		final String[] slotsItems = { "bag", "rhand", "lhand", "head", "armor",
-				"legs", "feet", "finger", "cloak", "back", "belt", "keyring", "trade" };
+		final String[] slotsItems = { "背包", "rhand", "lhand", "head", "armor",
+				"legs", "feet", "finger", "cloak", "back", "belt", "钥匙环", "trade" };
 
 		try {
 			for (final String slotName : slotsItems) {
@@ -154,7 +154,7 @@ public class PlayerTransformer implements Transformer {
 				}
 				final RPSlot slot = player.getSlot(slotName);
 				final PlayerSlot newSlot;
-				if (slotName.equals("keyring")) {
+				if (slotName.equals("钥匙环")) {
 					newSlot = new PlayerKeyringSlot(slotName);
 				} else if (slotName.equals("trade")) {
 					newSlot = new PlayerTradeSlot(slotName);

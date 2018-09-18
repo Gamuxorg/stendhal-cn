@@ -67,7 +67,7 @@ import games.stendhal.server.maps.Region;
 public class CloakCollector2 extends AbstractQuest {
 
     private static final List<String> NEEDEDCLOAKS2 = Arrays.asList("红斗篷", "影子斗篷", "异种元素斗篷",
-								       "像小精灵的斗篷", "混沌斗篷", "华丽的斗篷",
+								       "精灵披风", "混沌斗篷", "华丽的斗篷",
 								       "金斗篷", "黑龙斗篷");
     private static final String OLD_QUEST = "cloaks_collector";
     private static final String QUEST_SLOT = "cloaks_collector_2";

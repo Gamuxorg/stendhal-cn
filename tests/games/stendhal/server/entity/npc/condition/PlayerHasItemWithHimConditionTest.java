@@ -58,13 +58,13 @@ public class PlayerHasItemWithHimConditionTest {
 				"itemname");
 		assertFalse(cond.fire(player, null, null));
 		Item item = ItemTestHelper.createItem("itemname");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		assertTrue(cond.fire(player, null, null));
 		cond = new PlayerHasItemWithHimCondition("itemname", 2);
 		assertFalse(cond.fire(player, null, null));
 		item = ItemTestHelper.createItem("itemname");
 
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		assertTrue(cond.fire(player, null, null));
 	}
 

@@ -142,7 +142,7 @@ public class AmazonPrincessTest {
 
 		// -----------------------------------------------
 		final Item item = ItemTestHelper.createItem("pina colada");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Huh, what are you doing here?", getReply(npc));

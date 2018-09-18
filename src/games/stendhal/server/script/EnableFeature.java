@@ -7,7 +7,7 @@ import games.stendhal.server.core.scripting.ScriptImpl;
 import games.stendhal.server.entity.npc.action.EnableFeatureAction;
 import games.stendhal.server.entity.player.Player;
 /**
- * Script to enable a feature like keyring for a player
+ * Script to enable a feature like 钥匙环 for a player
  *
  * @author madmetzger
  */

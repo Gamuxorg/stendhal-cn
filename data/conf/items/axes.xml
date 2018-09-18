@@ -17,7 +17,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -38,7 +38,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -58,14 +58,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
   <item name="黑戟">
     <type class="axe" subclass="black_halberd" tileid="-1"/>
-    <description>这是一把黑戟. 非常重, 会造成巨大的破坏, 但是冷却时间很长. </description>
+    <description>这是一把黑戟. 非常重, 会造成巨大的破坏, 但是不能快速进攻. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="57"/>
@@ -78,7 +78,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -86,7 +86,7 @@
   </item>
   
   <item name="黑镰刀">
-    <type class="axe" subclass="black_axe" tileid="-1"/>
+    <type class="axe" subclass="black_scythe" tileid="-1"/>
     <description>这是一把黑镰刀. 对于一种农具来说, 它的攻击力是惊人的. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
@@ -100,7 +100,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -122,7 +122,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -145,7 +145,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -166,14 +166,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
   <item name="战戟">
     <type class="axe" subclass="halberd" tileid="-1"/>
-    <description>这是一把非常稀有的战戟, 斧柄固定在轴上, 既重又锋利. </description>
+    <description>这是一把非常稀有的战戟, 斧柄固定在轴上, 虽重但锋利. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -187,7 +187,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -207,7 +207,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -229,7 +229,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -249,7 +249,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -270,7 +270,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -290,7 +290,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -310,7 +310,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -331,7 +331,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>

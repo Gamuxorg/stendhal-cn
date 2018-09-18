@@ -117,8 +117,8 @@ public class EntityHelperTest {
 		zone.add(rpo1);
 		assertNull(EntityHelper.entityFromSlot(player, action));
 		zone.add(player);
-		player.getSlot("bag").add(rpo1);
-		action.put(BASESLOT, "bag");
+		player.getSlot("背包").add(rpo1);
+		action.put(BASESLOT, "背包");
 		action.put(BASEOBJECT, player.getID().getObjectID());
 		action.put(BASEITEM, rpo1.getID().getObjectID());
 		assertThat(EntityHelper.entityFromSlot(player, action), is(rpo1));

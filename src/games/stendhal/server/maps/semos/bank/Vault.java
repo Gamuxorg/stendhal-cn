@@ -99,14 +99,14 @@ public class Vault extends StendhalRPZone {
 					if (!(item.getX() == 2 && item.getY() == 5)) {
 						Player player = (Player) entity;
 						String message;
-						boolean equippedToBag = player.equip("bag", item);
+						boolean equippedToBag = player.equip("背包", item);
 						if (equippedToBag) {
 
 							message = "你披在地面上的物品 "+item.getName() +  "已自动反回到你的背包.";
 
-							new GameEvent(player.getName(), "equip", item.getName(), "vault", "bag", Integer.toString(item.getQuantity())).raise();
+							new GameEvent(player.getName(), "equip", item.getName(), "vault", "背包", Integer.toString(item.getQuantity())).raise();
 							// Make it look like a normal equip
-							new ItemLogger().equipAction(player, item, new String[] {"ground", zone.getName(), item.getX() + " " + item.getY()}, new String[] {"slot", player.getName(), "bag"});
+							new ItemLogger().equipAction(player, item, new String[] {"ground", zone.getName(), item.getX() + " " + item.getY()}, new String[] {"slot", player.getName(), "背包"});
 						} else {
 							boolean equippedToBank = player.equip("bank", item);
 							if (equippedToBank) {

@@ -60,16 +60,16 @@ public class UpdatePlayerEntitiesTest {
 			Player loaded = pm.loadPlayer(transaction, "george");
 			// "pm can only handle existing players, so if this fails first create a player called george in db by login"
 			assumeThat(loaded, notNullValue());
-			if (loaded.getSlot("bag").size() > 0) {
-				loaded.getSlot("bag").remove(loaded.getSlot("bag").getFirst().getID());
+			if (loaded.getSlot("背包").size() > 0) {
+				loaded.getSlot("背包").remove(loaded.getSlot("背包").getFirst().getID());
 			}
-			//assertEquals(null, loaded.getSlot("bag").getFirst());
+			//assertEquals(null, loaded.getSlot("背包").getFirst());
 
 			EntityManager em = SingletonRepository.getEntityManager();
 			Item item = em.getItem("leather armor");
 			item.put("name", "leather_armor_+1");
 			loaded.equipToInventoryOnly(item);
-			assertTrue(loaded.getSlot("bag").has(item.getID()));
+			assertTrue(loaded.getSlot("背包").has(item.getID()));
 
 			assertTrue(pm.savePlayer(transaction, loaded));
 			UpdatePlayerEntities updatePlayerEntities = new UpdatePlayerEntities();
@@ -80,9 +80,9 @@ public class UpdatePlayerEntitiesTest {
 			Player secondLoaded = pm.loadPlayer(transaction, "george");
 			assertNotNull(secondLoaded);
 
-			assertNotNull(secondLoaded.getSlot("bag"));
-			assertNotNull(secondLoaded.getSlot("bag").getFirst());
-			assertThat(secondLoaded.getSlot("bag").getFirst().get("name"), not(is("leather_armor_+1")));
+			assertNotNull(secondLoaded.getSlot("背包"));
+			assertNotNull(secondLoaded.getSlot("背包").getFirst());
+			assertThat(secondLoaded.getSlot("背包").getFirst().get("name"), not(is("leather_armor_+1")));
 
 			TransactionPool.get().rollback(transaction);
 		} catch (Throwable e) {

@@ -49,7 +49,7 @@ public class FeaturesTestArea implements ZoneConfigurator {
 
 	private void createDoorAndKey(final StendhalRPZone zone) {
 		final List<String> slots = new LinkedList<String>();
-		slots.add("bag");
+		slots.add("背包");
 
 		DefaultItem item = new DefaultItem("key", "gold", "golden key", -1);
 		item.setImplementation(Item.class);

@@ -28,16 +28,16 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 	private void buildBakeryArea(final StendhalRPZone zone) {
 
-		// grower for an empty slim bottle that cannot be taken (out of reach)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("slim bottle", 288000);
+		// grower for an empty 细瓶子 that cannot be taken (out of reach)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("细瓶子", 288000);
 		bottleGrower1.setPosition(4, 1);
 		bottleGrower1.setDescription("这里好像是存放瓶子的地方.");
 		zone.add(bottleGrower1);
 
 		bottleGrower1.setToFullGrowth();
 
-		// grower for an empty slim bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("slim bottle", 12000);
+		// grower for an empty 细瓶子 (1h)
+		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("细瓶子", 12000);
 		bottleGrower2.setPosition(22, 2);
 		bottleGrower2.setDescription("这里好像是存放瓶子的地方.");
 		zone.add(bottleGrower2);

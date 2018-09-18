@@ -289,8 +289,8 @@ public class WeddingRingTest {
 		final WeddingRing ring = (WeddingRing) SingletonRepository.getEntityManager().getItem("wedding ring");
 		final WeddingRing ring2 = (WeddingRing) SingletonRepository.getEntityManager().getItem("wedding ring");
 
-		frodo.equip("bag", ring);
-		frodo.equip("bag", ring2);
+		frodo.equip("背包", ring);
+		frodo.equip("背包", ring2);
 
 		assertNotNull(frodo.getAllEquipped("wedding ring"));
 		assertEquals(frodo.getAllEquipped("wedding ring").size(), 2);
@@ -306,8 +306,8 @@ public class WeddingRingTest {
 		final WeddingRing ring2 = (WeddingRing) SingletonRepository.getEntityManager().getItem("wedding ring");
 
 		ring.setBoundTo("frodo");
-		frodo.equip("bag", ring);
-		frodo.equip("bag", ring2);
+		frodo.equip("背包", ring);
+		frodo.equip("背包", ring2);
 
 		assertNotNull(frodo.getAllEquipped("wedding ring"));
 		assertEquals(frodo.getAllEquipped("wedding ring").size(), 2);
@@ -330,8 +330,8 @@ public class WeddingRingTest {
 		ring.setBoundTo("frodo");
 		ring2.setBoundTo("frodo");
 		ring2.setInfoString("galadriel");
-		frodo.equip("bag", ring);
-		frodo.equip("bag", ring2);
+		frodo.equip("背包", ring);
+		frodo.equip("背包", ring2);
 
 		assertNotNull(frodo.getAllEquipped("wedding ring"));
 		assertEquals("one should be destroyed", frodo.getAllEquipped("wedding ring").size(), 1);
@@ -354,8 +354,8 @@ public class WeddingRingTest {
 
 		ring.setBoundTo("frodo");
 		ring2.setBoundTo("gollum");
-		frodo.equip("bag", ring);
-		frodo.equip("bag", ring2);
+		frodo.equip("背包", ring);
+		frodo.equip("背包", ring2);
 
 		assertNotNull(frodo.getAllEquipped("wedding ring"));
 		assertEquals(frodo.getAllEquipped("wedding ring").size(), 2);

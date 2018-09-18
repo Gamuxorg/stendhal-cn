@@ -167,7 +167,7 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 		// You see the slightly rotten corpse of Charles. You can inspect it to see its contents.
 		// You read: "IOU 250 money. (signed) McPegleg"
 		// take IOU with me
-		PlayerTestHelper.equipWithItem(player, "note", "charles");
+		PlayerTestHelper.equipWithItem(player, "笔记", "charles");
 		en2.step(player, "hi");
 
 		// drop leather legs for testing

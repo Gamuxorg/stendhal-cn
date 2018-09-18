@@ -52,7 +52,7 @@ class CloakForJosephine {
 		// and waits for you to say yes or the name of the cloak you brought
 		// if she just said about '蓝色条纹斗篷' "well i don't want that" then that's confusing for player
 		// so we let player give her that cloak even if she was asking about the other quests
-		// of course, she will only take it from ida if player was in quest state for teh 黑曜石斗篷 quest of "taking_striped_cloak"
+		// of course, she will only take it from ida if player was in quest state for teh 密银斗篷 quest of "taking_striped_cloak"
 
 		final SpeakerNPC npc = npcs.get("Josephine");
 
@@ -89,7 +89,7 @@ class CloakForJosephine {
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("蓝色条纹斗篷", "mithril", "黑曜石斗篷", "ida"),
+				Arrays.asList("蓝色条纹斗篷", "mithril", "密银斗篷", "ida"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"), new PlayerHasItemWithHimCondition("蓝色条纹斗篷")),
 				ConversationStates.ATTENDING,
 				"Oh that's from Ida isn't it?! Oh yay! Thank you! Please tell her thanks from me!!",
@@ -107,7 +107,7 @@ class CloakForJosephine {
 
 		// acknowledge that player took cloak and ask for clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("thanks", "josephine", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("thanks", "josephine", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "gave_striped_cloak"),
 				ConversationStates.ATTENDING,
 				"Aw, Josephine is so sweet. I'm glad she liked her 蓝色条纹斗篷. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.",

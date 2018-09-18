@@ -60,7 +60,7 @@ public class ElvishArmor extends AbstractQuest implements
 
 	private static final List<String> NEEDEDITEMS = Arrays.asList(
 			"精灵护甲", "elvish legs", "精灵靴", "精灵之剑",
-			"像小精灵的斗篷", "精灵之盾");
+			"精灵披风", "精灵之盾");
 
 	@Override
 	public String getSlotName() {

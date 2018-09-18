@@ -199,7 +199,7 @@ public class SevenCherubs extends AbstractQuest {
 								 *
 								 * 烈火剑 was disabled because it can be
 								 * earned by fighting, and because the
-								 * stronger ice sword is available through
+								 * stronger 冰剑 is available through
 								 * other quest and through fighting.
 								 *
 								 * Once enough quests exist, this quest

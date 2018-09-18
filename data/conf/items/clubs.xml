@@ -17,7 +17,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -40,7 +40,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -61,7 +61,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -81,7 +81,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -101,7 +101,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -122,14 +122,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
-  <item name="黄金狼牙棒">
+  <item name="黄金权杖">
     <type class="club" subclass="golden_mace" tileid="-1"/>
-    <description>一根华丽的黄金狼牙棒, 虽然看着像装饰品,但它的破坏力很强.</description>
+    <description>一根华丽的黄金权杖, 虽然看着像装饰品,但它的破坏力很强.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="22"/>
@@ -142,7 +142,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -163,7 +163,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -185,7 +185,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -205,14 +205,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="morning star">
+  <item name="破晓之星">
     <type class="club" subclass="golden_flail" tileid="-1"/>
-    <description>You see a morning star.  This is a very rare item indeed.</description>
+    <description>You see a 破晓之星.  This is a very rare item indeed.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="25"/>
@@ -226,12 +226,12 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="necromancers staff">
+  <item name="巫师法杖">
     <type class="club" subclass="wizard_staff" tileid="-1"/>
     <description>You see a cunningly beautiful staff. If you listen carefully you can hear its previous owners' souls screaming from within it.</description>
     <implementation class-name="games.stendhal.server.entity.item.NecroStaff"/>
@@ -245,16 +245,16 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item> 
   
-  <item name="rod of the gm">
+  <item name="GM自慰棒">
     <type class="club" subclass="rod_of_the_gm" tileid="-1"/>
-    <description>You see a rod of the GM.  This rod is reserved for those with special powers, be careful not to let it fall into the wrong hands.</description>
+    <description>You see a GM自慰棒.  This rod is reserved for those with special powers, be careful not to let it fall into the wrong hands.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="100"/>
@@ -268,14 +268,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="skull staff">
+  <item name="骨玉法杖">
     <type class="club" subclass="skull_staff" tileid="-1"/>
-    <description>You see a rare skull staff. It appears mystical but will work like any other staff.</description>
+    <description>You see a rare 骨玉法杖. It appears mystical but will work like any other staff.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="22"/>
@@ -290,7 +290,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -310,14 +310,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="ugmash">
+  <item name="巨棍">
     <type class="club" subclass="ugmash" tileid="-1"/>
-    <description>You see a huge ugmash. It can attack with a faster rate than many other clubs.</description>
+    <description>You see a huge 巨棍. It can attack with a faster rate than many other clubs.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -329,16 +329,16 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
 
-  <item name="vulcano hammer">
+  <item name="火山之锤">
     <type class="club" subclass="vulcano_hammer" tileid="-1"/>
-    <description>You see a vulcano hammer. It's said to be a weapon of a God, but attacks with a snail like pace.</description>
+    <description>You see a 火山之锤. It's said to be a weapon of a God, but attacks with a snail like pace.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="48"/>
@@ -353,7 +353,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -374,7 +374,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>

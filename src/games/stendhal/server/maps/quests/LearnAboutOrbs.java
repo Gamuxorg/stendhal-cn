@@ -72,16 +72,16 @@ public class LearnAboutOrbs extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Ilisa in 塞门镇 Temple.");
+		res.add("I have met 伊丽莎 in 塞门镇 Temple.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("done")) {
-			res.add("Ilisa taught me how to use orbs. I must be careful as they could send me somewhere dangerous.");
+			res.add("伊丽莎 taught me how to use orbs. I must be careful as they could send me somewhere dangerous.");
 		}
 		return res;
 	}
 
 	private void step1() {
-		final SpeakerNPC npc = npcs.get("Ilisa");
+		final SpeakerNPC npc = npcs.get("伊丽莎");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
@@ -137,7 +137,7 @@ public class LearnAboutOrbs extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Learn About Orbs",
-				"Ilisa will teach about using Orbs.",
+				"伊丽莎 will teach about using Orbs.",
 				false);
 		step1();
 
@@ -160,6 +160,6 @@ public class LearnAboutOrbs extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Ilisa";
+		return "伊丽莎";
 	}
 }

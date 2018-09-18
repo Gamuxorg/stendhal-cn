@@ -125,7 +125,7 @@ public class SpellTest {
 	public void testPossibleSlots() throws Exception {
 		boolean inSpells = healingSpell.canBeEquippedIn("spells");
 		assertThat(Boolean.valueOf(inSpells), is(Boolean.TRUE));
-		boolean inBag = healingSpell.canBeEquippedIn("bag");
+		boolean inBag = healingSpell.canBeEquippedIn("背包");
 		assertThat(Boolean.valueOf(inBag), is(Boolean.FALSE));
 	}
 

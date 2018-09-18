@@ -45,7 +45,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li>tomi asks cryptic messages about ice</li>
- * <li>if you have an ice sword you get rewarded</li>
+ * <li>if you have an 冰剑 you get rewarded</li>
  * </ul>
  *
  * REWARD:
@@ -86,12 +86,12 @@ public class HelpTomi extends AbstractQuest {
 		res.add("I met Tomi, a boy being tortured in hell.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.startsWith("done")) {
-			res.add("Tomi asked for \"ice\" and took the ice sword I was carrying!");
+			res.add("Tomi asked for \"ice\" and took the 冰剑 I was carrying!");
 			// provided quest isn't in 'old version' we should be able to check how many times it was done
 			if (!"done".equals(questState)) {
 				final int repetitions = player.getNumberOfRepetitions(getSlotName(), 1);
 				if (repetitions>1) {
-					res.add("I've given " + repetitions + " ice swords to Tomi so far.");
+					res.add("I've given " + repetitions + " 冰剑s to Tomi so far.");
 				}
 			}
 		}
@@ -101,34 +101,34 @@ public class HelpTomi extends AbstractQuest {
 	private void step1() {
 		final SpeakerNPC npc = npcs.get("tomi");
 
-		// says quest or ice and doesn't have an ice sword and hasn't brought one before
+		// says quest or ice and doesn't have an 冰剑 and hasn't brought one before
 		npc.add(ConversationStates.ATTENDING,
 			questTrigger,
-			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT), new NotCondition(new PlayerHasItemWithHimCondition("ice sword"))),
+			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT), new NotCondition(new PlayerHasItemWithHimCondition("冰剑"))),
 			ConversationStates.ATTENDING,
 			"my ice? ice plz", null);
 
-		// says quest or ice and doesn't have an ice sword and has brought one in the past
+		// says quest or ice and doesn't have an 冰剑 and has brought one in the past
 		npc.add(ConversationStates.ATTENDING,
 			questTrigger,
-			new AndCondition(new QuestCompletedCondition(QUEST_SLOT), new NotCondition(new PlayerHasItemWithHimCondition("ice sword"))),
+			new AndCondition(new QuestCompletedCondition(QUEST_SLOT), new NotCondition(new PlayerHasItemWithHimCondition("冰剑"))),
 			ConversationStates.ATTENDING,
 			"where is my ice?", null);
 
-		// says quest or ice and has ice sword with him (first time)
+		// says quest or ice and has 冰剑 with him (first time)
 		// player gets a karma bonus and some xp
 		npc.add(ConversationStates.ATTENDING,
 			questTrigger,
-			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT), new PlayerHasItemWithHimCondition("ice sword")),
+			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT), new PlayerHasItemWithHimCondition("冰剑")),
 			ConversationStates.ATTENDING,
 			"my ice :)",
-			new MultipleActions(new DropItemAction("ice sword"), new IncreaseXPAction(1000), new IncreaseKarmaAction(30.0), new SetQuestAction(QUEST_SLOT, "done;1")));
+			new MultipleActions(new DropItemAction("冰剑"), new IncreaseXPAction(1000), new IncreaseKarmaAction(30.0), new SetQuestAction(QUEST_SLOT, "done;1")));
 
-		// says quest or ice and has ice sword with him (second+ time)
+		// says quest or ice and has 冰剑 with him (second+ time)
 		// player gets a karma bonus and some xp
 		npc.add(ConversationStates.ATTENDING,
 			questTrigger,
-			new AndCondition(new QuestCompletedCondition(QUEST_SLOT), new PlayerHasItemWithHimCondition("ice sword")),
+			new AndCondition(new QuestCompletedCondition(QUEST_SLOT), new PlayerHasItemWithHimCondition("冰剑")),
 			ConversationStates.ATTENDING,
 			null,
 			new ChatAction() {
@@ -146,7 +146,7 @@ public class HelpTomi extends AbstractQuest {
 						final String[] questparts = questState.split(";");
 						N = Integer.parseInt(questparts[1]) + 1;
 					}
-					player.drop("ice sword");
+					player.drop("冰剑");
 						player.addKarma(N * 15.0);
 						player.setQuest(QUEST_SLOT, "done;" + Integer.toString(N));
 						// Used to be n * n, but it became a problem when with

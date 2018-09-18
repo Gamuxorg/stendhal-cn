@@ -112,18 +112,18 @@ public class CloakCollectorTest {
 				getReply(npc));
 
 		Item cloak = new Item("elf cloak", "", "", null);
-		monica.getSlot("bag").add(cloak);
+		monica.getSlot("背包").add(cloak);
 		en.stepTest(monica, "elf cloak");
 		assertEquals(cc.respondToItemBrought(), getReply(npc));
 		en.stepTest(monica, "elf cloak");
 		assertEquals(cc.respondToOfferOfNotMissingItem(), getReply(npc));
 
 		cloak = new Item("stone cloak", "", "", null);
-		monica.getSlot("bag").add(cloak);
+		monica.getSlot("背包").add(cloak);
 
 		for (final String cloakName : cc.getNeededItems()) {
 			cloak = new Item(cloakName, "", "", null);
-			monica.getSlot("bag").add(cloak);
+			monica.getSlot("背包").add(cloak);
 			en.step(monica, cloakName);
 		}
 

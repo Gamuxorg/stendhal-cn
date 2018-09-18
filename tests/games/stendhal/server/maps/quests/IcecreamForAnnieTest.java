@@ -104,7 +104,7 @@ public class IcecreamForAnnieTest {
 		en = npc.getEngine();
 
 		Item item = ItemTestHelper.createItem("money", 30);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Hi. Can I #offer you an ice cream?", getReply(npc));

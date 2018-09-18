@@ -63,9 +63,9 @@ public class PlayerDieerTest {
                 zone.add(hasNoRingBad);
 
 		final RingOfLife ring = new RingOfLife();
-		hasRingGood.equip("bag", ring);
+		hasRingGood.equip("背包", ring);
 		final RingOfLife ring2 = new RingOfLife();
-		hasRingBad.equip("bag", ring2);
+		hasRingBad.equip("背包", ring2);
 
 		assertFalse(ring.isBroken());
 		assertFalse(ring2.isBroken());

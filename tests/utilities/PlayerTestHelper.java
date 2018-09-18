@@ -278,9 +278,9 @@ public abstract class PlayerTestHelper {
 	}
 
 	public static void addEmptySlots(final Player player) {
-		//		"bag", "rhand", "lhand", "head", "armor",
-		//		"legs", "feet", "finger", "cloak", "keyring"
-		player.addSlot(new PlayerSlot("bag"));
+		//		"背包", "rhand", "lhand", "head", "armor",
+		//		"legs", "feet", "finger", "cloak", "钥匙环"
+		player.addSlot(new PlayerSlot("背包"));
 		player.addSlot(new PlayerSlot("lhand"));
 		player.addSlot(new PlayerSlot("rhand"));
 		player.addSlot(new PlayerSlot("armor"));
@@ -289,7 +289,7 @@ public abstract class PlayerTestHelper {
 		player.addSlot(new PlayerSlot("feet"));
 		player.addSlot(new PlayerSlot("finger"));
 		player.addSlot(new PlayerSlot("cloak"));
-		player.addSlot(new PlayerSlot("keyring"));
+		player.addSlot(new PlayerSlot("钥匙环"));
 		player.addSlot(new RPSlot("!quests"));
 		player.getSlot("!quests").add(new RPObject());
 		player.addSlot(new RPSlot("!kills"));

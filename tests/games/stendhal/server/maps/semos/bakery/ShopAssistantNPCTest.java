@@ -117,7 +117,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		final StackableItem flour = new StackableItem("flour", "", "", null);
 		flour.setQuantity(2);
 		flour.setID(new ID(2, ZONE_NAME));
-		player.getSlot("bag").add(flour);
+		player.getSlot("背包").add(flour);
 		assertEquals(2, player.getNumberOfEquipped("flour"));
 
 		en.step(player, "make");
@@ -164,7 +164,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		final StackableItem flour = new StackableItem("flour", "", "", null);
 		flour.setQuantity(4);
 		flour.setID(new ID(2, ZONE_NAME));
-		player.getSlot("bag").add(flour);
+		player.getSlot("背包").add(flour);
 		assertEquals(4, player.getNumberOfEquipped("flour"));
 
 		en.step(player, "make 2 breads");
@@ -211,7 +211,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		final StackableItem flour = new StackableItem("flour", "", "", null);
 		flour.setQuantity(6);
 		flour.setID(new ID(2, ZONE_NAME));
-		player.getSlot("bag").add(flour);
+		player.getSlot("背包").add(flour);
 		assertEquals(6, player.getNumberOfEquipped("flour"));
 
 		en.step(player, "make 3");

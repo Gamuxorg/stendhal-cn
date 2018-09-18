@@ -101,9 +101,9 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 				addReply("duty", "是的, 一个非常特殊和重要的使命!");
 				addHelp("我爸爸总是跟我说不要去陌生的森林里闲逛...他还说我应该记得带着一些吃的和喝的 #eat #and #drink ,以防不测!");
 				addReply("sneak", "是的, 如果你想成为一个我所期望的勇士, 你必须跑快点!");
-				addReply(Arrays.asList("eat","drink","eat and drink"), "Leander 是 塞门镇 的面包师, 他会制作的三明治非常可口, 妈妈总是在那儿买, 他的面包也很好吃！我不知道饮料在哪里买, 或许你可以问问 #卡蔓 或者 #Margaret?");
+				addReply(Arrays.asList("eat","drink","eat and drink"), "Leander 是 塞门镇 的面包师, 他会制作的三明治非常可口, 妈妈总是在那儿买, 他的面包也很好吃！我不知道饮料在哪里买, 或许你可以问问 #卡蔓 或者 #玛格丽特?");
 				addReply("卡蔓", "卡蔓 是 Semon 镇有名的医疗师, 可能你见过她, 她就在村庄到镇子上的路上 :)");
-				addReply("Margaret", "Margaret 在酒馆工作, 但我父母不让我去那里..");
+				addReply("玛格丽特", "玛格丽特 在酒馆工作, 但我父母不让我去那里..");
 				addQuest("我正在执行任务 :) 我警戒坏坏的家伙或警告并帮助 #help 过往的人们! 不过我还不需要你的帮助...");
 				addGoodbye("Shhhhh, 不在大声说话！要小心！再见!");
 			}

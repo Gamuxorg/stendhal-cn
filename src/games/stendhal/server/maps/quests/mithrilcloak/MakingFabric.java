@@ -420,7 +420,7 @@ class MakingFabric {
 
 		// player asks about fabric/quest
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 				ConversationStates.QUEST_OFFERED,
 				"I would love to weave you some fabric but I'm afraid my mind is full of other things. I have offended a fellow wizard. I was up all night writing him an apology letter, but I have no-one to deliver it to him. Unless ... that is ... would YOU deliver this letter for me?",
@@ -446,7 +446,7 @@ class MakingFabric {
 
 		// player returns without having taking letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "pedinghaus", "task", "quest", "letter", "note"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest", "letter", "笔记"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
 				ConversationStates.ATTENDING,
 				"Please don't forget to take that letter to Pedinghaus. It means a lot to me.", null);
@@ -454,7 +454,7 @@ class MakingFabric {
 		// player returns having taking letter
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak",
-							  "黑曜石斗篷", "pedinghaus", "regards", "forgiven", "task", "quest"),
+							  "密银斗篷", "pedinghaus", "regards", "forgiven", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "took_letter"),
 				ConversationStates.SERVICE_OFFERED,
 				"Thank you so much for taking that letter! Now, do you have the 40 spools of mithril thread "
@@ -462,7 +462,7 @@ class MakingFabric {
 
 		// player's quest state is in nothing to do with the letter, thread or weaving.
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "pedinghaus", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest"),
 				new NotCondition(
 								 new OrCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 												 new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
@@ -509,7 +509,7 @@ class MakingFabric {
 
 		// player returns while fabric is still being woven, or is ready
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+			Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "weavingfabric;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -542,7 +542,7 @@ class MakingFabric {
 
 		// accept the letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("letter", "note", "whiggins", "apology"),
+				Arrays.asList("letter", "笔记", "whiggins", "apology"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"), new PlayerHasItemWithHimCondition("sealed envelope")),
 				ConversationStates.ATTENDING,
 				"*reads* ... *reads* ... Well, I must say, that is a weight off my mind. Thank you ever so much. Please convey my warmest regards to Whiggins. All is forgiven.",
@@ -558,7 +558,7 @@ class MakingFabric {
 
 		// accept the fabric and ask for scissors
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("fabric", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("fabric", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_fabric"), new PlayerHasItemWithHimCondition(mithrilcloak.getFabricName())),
 				ConversationStates.ATTENDING,
 				"Wow you got the " + mithrilcloak.getFabricName() + " , that took longer than I expected! Now, to cut it I need magical #scissors, if you would go get them from #Hogart. I will be waiting for you to return.",
@@ -570,7 +570,7 @@ class MakingFabric {
 		// remind about fabric. there are so many steps to getting fabric
 		// that the player could be in many quest states and she still is just waiting for fabric
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("fabric", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("fabric", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_fabric"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "makingthread;"),
@@ -585,7 +585,7 @@ class MakingFabric {
 								 ),
 				ConversationStates.ATTENDING,
 				"I'm still waiting for the " + mithrilcloak.getFabricName()
-				+ " so I can start work on your 黑曜石斗篷. You should ask #Kampusch about anything textile related.",
+				+ " so I can start work on your 密银斗篷. You should ask #Kampusch about anything textile related.",
 				null);
 
 		npc.addReply("Hogart", "He's that grumpy old dwarf in the Or'ril mines. I already sent him a message saying I wanted some new scissors but he didn't respond. Well, what he lacks in people skills he makes up for in his metal work.");

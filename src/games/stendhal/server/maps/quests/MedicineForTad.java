@@ -49,8 +49,8 @@ import games.stendhal.server.maps.Region;
  *
  * <p>
  * STEPS:<ul>
- * <li> 泰德 asks you to buy a 瓶子 to give it to Margaret.
- * <li> Margaret sells you a 瓶子
+ * <li> 泰德 asks you to buy a 瓶子 to give it to 玛格丽特.
+ * <li> 玛格丽特 sells you a 瓶子
  * <li> 泰德 thanks you and asks you to take the 瓶子 to Ilisa
  * <li> Ilisa asks you for a few herbs.
  * <li> Return the created dress potion to 泰德.
@@ -70,45 +70,45 @@ import games.stendhal.server.maps.Region;
 public class MedicineForTad extends AbstractQuest {
 
 	static final String ILISA_TALK_ASK_FOR_FLASK = "#泰德 要的药？他不是让你把 瓶子 带给他吗?";
-	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 瓶子. #泰德 需要药, 对吧？ 唔... 我还需要点 #草药. 你能帮我取点吗?";
-	static final String ILISA_TALK_DESCRIBE_HERB = "塞门镇北面, 挨着小树林, 生长着一种名叫海芋的草药, 这张图画的是这种草药的图片, 所以快照图去找吧.";
-	static final String ILISA_TALK_INTRODUCE_TAD = "他需要一种强心济来治好他的病, 他会给帮助过他的人很不错的酬金. ";
-	static final String ILISA_TALK_REMIND_HERB = "你拿到这些 #草药 来制作 #药济 了吗?";
+	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 瓶子. 是 #泰德 需要药, 对吧？ 唔... 我还需要点 #草药. 你能帮我取点吗?";
+	static final String ILISA_TALK_DESCRIBE_HERB = "在塞门镇北面, 挨着小树林, 生长着一种名叫海芋的草药, 这张图画的是这种草药的图片, 所以快照图去找吧.";
+	static final String ILISA_TALK_INTRODUCE_TAD = "他需要一种强心济来治好他的病, 他会给帮助过他的人丰厚的酬金. ";
+	static final String ILISA_TALK_REMIND_HERB = "你找到制作 #药济 的 #草药 了吗?";
 	static final String ILISA_TALK_PREPARE_MEDICINE = "很好!谢谢你, 现在我要把这些混合...加入这个...然后再滴点... 好了！你能让 #泰德 停下并收集这个吗？ 我想知道他在做些什么. ";
 	static final String ILISA_TALK_EXPLAIN_MEDICINE = "这是 #泰德 急需的东西.";
 
-	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会, 你见到Ted了, 在旅店里？如果你有机会, 请看看他, 我听说他近来身体不太好. 你可以在 塞门镇 村子里的旅店找到他, 离Nishiya很近.";
+	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会, 你在旅店里见到泰德了？ 如果你有时间请去看看他, 我听说他近来身体不太好. 你可以在塞门镇西边村子的旅店里找到他, 离尼世亚很近.";
 	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "再见, 不要忘了去看看 泰德. 我希望他好起来.";
 
 	static final String TAD_TALK_GOT_FLASK = "Ok, 你得到了 瓶子!";
 	static final String TAD_TALK_REWARD_MONEY = "拿着, 这些钱足够你的开销了.";
-	static final String TAD_TALK_FLASK_ILISA = "现在, 我需要你带着它去找 #Ilisa... 她一看就明白接下来要做什么. ";
-	static final String TAD_TALK_REMIND_FLASK_ILISA = "我需要你带着瓶子去找 #Ilisa... 她一看就明白接下来要做什么. ";
-	static final String TAD_TALK_INTRODUCE_ILISA = "Ilisa 是 塞门镇 教堂的召唤治疗师. ";
-	static final String TAD_TALK_REMIND_MEDICINE = "*cough* 咳...咳！我希望 #Ilisa 能快点把药制好...";
-	static final String TAD_TALK_COMPLETE_QUEST = "谢谢！我会尽快和 #Ilisa 谈谈. ";
+	static final String TAD_TALK_FLASK_ILISA = "现在, 我需要你带着它去找 #伊丽莎... 她一看就明白接下来要做什么. ";
+	static final String TAD_TALK_REMIND_FLASK_ILISA = "我需要你带着瓶子去找 #伊丽莎... 她一看就明白接下来要做什么. ";
+	static final String TAD_TALK_INTRODUCE_ILISA = "伊丽莎 是 塞门镇 教堂的召唤治疗师. ";
+	static final String TAD_TALK_REMIND_MEDICINE = "*cough* 咳...咳！我希望 #伊丽莎 能快点把药制好...";
+	static final String TAD_TALK_COMPLETE_QUEST = "谢谢！我会尽快和 #伊丽莎 谈谈. ";
 
-	static final String TAD_TALK_ASK_FOR_EMPTY_FLASK = "我感觉很不好... 我需要拿到一瓶药济. 你能帮我取一个空的 #瓶子 吗?";
-	static final String TAD_TALK_ALREADY_HELPED_1 = "我现在好了, 谢谢. ";
+	static final String TAD_TALK_ASK_FOR_EMPTY_FLASK = "我感觉很不好... 我需要拿到一瓶药济. 你能帮我取一个空 #瓶子 吗?";
+	static final String TAD_TALK_ALREADY_HELPED_1 = "我现在好多了, 谢谢.";
 	static final String TAD_TALK_ALREADY_HELPED_2 = "你帮我脱离险境！现在我觉得好多了！";
-	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* 咳...咳！Oh 亲爱的... 我真的需要这些药！请快点去找 #Margaret 取个 #瓶子 回来.";
-	static final String TAD_TALK_FLASK_MARGARET = "你应该去 #Margaret 处取个 瓶子.";
-	static final String TAD_TALK_INTRODUCE_MARGARET = "Margaret 是酒店的服务员, 平时就在离这不远的酒店里. ";
+	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* 咳...咳！Oh 亲爱的... 我真的需要这些药！请快点去找 #玛格丽特 取个 #瓶子 回来.";
+	static final String TAD_TALK_FLASK_MARGARET = "你能去 #玛格丽特 处取个 瓶子 吗?";
+	static final String TAD_TALK_INTRODUCE_MARGARET = "玛格丽特 是酒馆的服务员, 平时就在离这不远的酒馆里.";
 	static final String TAD_TALK_CONFIRM_QUEST = "所以, 你会帮我吗?";
-	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗？ *sneeze*";
-	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. *sneeze*";
+	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗? 呜呜 *sneeze*";
+	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. 呜呜 *sneeze*";
 
 	static final String HISTORY_MET_TAD = "我在 塞门镇 旅店里见到了 泰德.";
-	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒店里 找 Margaret 买一个 瓶子 .";
+	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒馆里 找 玛格丽特 买一个 瓶子 .";
 	static final String HISTORY_GOT_FLASK = "我拿到了 瓶子 , 并马上带给了 泰德 .";
-	static final String HISTORY_TAKE_FLASK_TO_ILISA = "泰德 让我拿着 瓶子 到 塞门镇教堂找 Ilisa.";
-	static final String HISTORY_ILISA_ASKED_FOR_HERB = "Ilisa 让我去 塞门镇的北边取一种叫 海芋 的药草, 这种药草长在小树林的旁边.";
-	static final String HISTORY_GOT_HERB = "我找到了 海芋 药草, 并把它带给了 Ilisa.";
-	static final String HISTORY_POTION_READY = "Ilisa 制作了一种强心济帮助 泰德 治疗. 她让我给他带话, 药已备好. ";
+	static final String HISTORY_TAKE_FLASK_TO_ILISA = "泰德 让我拿着 瓶子 到 塞门镇教堂找 伊丽莎.";
+	static final String HISTORY_ILISA_ASKED_FOR_HERB = "伊丽莎 让我去 塞门镇的北边取一种叫 海芋 的药草, 这种药草长在小树林的旁边.";
+	static final String HISTORY_GOT_HERB = "我找到了 海芋 药草, 并把它带给了 伊丽莎.";
+	static final String HISTORY_POTION_READY = "伊丽莎 制作了一种强心济帮助 泰德 治疗. 她让我给他带话, 药已备好. ";
 	static final String HISTORY_DONE = "泰德 对我十分感谢.";
 
 	static final String STATE_START = "start";
-	static final String STATE_ILISA = "ilisa";
+	static final String STATE_ILISA = "伊丽莎";
 	static final String STATE_HERB = "corpse&herbs";
 	static final String STATE_SHOWN_DRAWING = "shownDrawing";
 	static final String STATE_POTION = "potion";
@@ -204,7 +204,7 @@ public class MedicineForTad extends AbstractQuest {
 				null);
 
 		npc.add(ConversationStates.QUEST_OFFERED,
-				"margaret",
+				"玛格丽特",
 				null,
 				ConversationStates.QUEST_OFFERED,
 				TAD_TALK_INTRODUCE_MARGARET + " " + TAD_TALK_CONFIRM_QUEST,
@@ -229,7 +229,7 @@ public class MedicineForTad extends AbstractQuest {
                 null);
 
 		npc.add(ConversationStates.ATTENDING,
-				"margaret",
+				"玛格丽特",
 				null,
 				ConversationStates.ATTENDING,
 				TAD_TALK_INTRODUCE_MARGARET,
@@ -281,7 +281,7 @@ public class MedicineForTad extends AbstractQuest {
                 null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("ilisa", "iiisa", "llisa"),
+				Arrays.asList("伊丽莎", "依丽莎", "伊丽沙"),
 				null,
 				ConversationStates.ATTENDING,
 				TAD_TALK_INTRODUCE_ILISA,
@@ -289,7 +289,7 @@ public class MedicineForTad extends AbstractQuest {
 	}
 
 	private void step_4() {
-		final SpeakerNPC npc = npcs.get("Ilisa");
+		final SpeakerNPC npc = npcs.get("伊丽莎");
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
@@ -315,11 +315,11 @@ public class MedicineForTad extends AbstractQuest {
 				ILISA_TALK_ASK_FOR_HERB,
 				new MultipleActions(processStep));
 
-		ChatAction showArandulaDrawing = new ExamineChatAction("arandula.png", "Ilisa's drawing", "海芋");
+		ChatAction showArandulaDrawing = new ExamineChatAction("arandula.png", "伊丽莎的画", "海芋");
 		ChatAction flagDrawingWasShown = new SetQuestAction(QUEST_SLOT, 1, STATE_SHOWN_DRAWING);
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("yes", "ok"),
+				Arrays.asList("好", "ok", "好的", "没问题"),
 				new AndCondition(
 						new QuestInStateCondition(QUEST_SLOT, 0, STATE_HERB),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 1, STATE_SHOWN_DRAWING)),
@@ -346,7 +346,7 @@ public class MedicineForTad extends AbstractQuest {
 	}
 
 	private void step_5() {
-		final SpeakerNPC npc = npcs.get("Ilisa");
+		final SpeakerNPC npc = npcs.get("伊丽莎");
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(
@@ -427,8 +427,8 @@ public class MedicineForTad extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Tad的药济",
-				"泰德, 塞门镇 旅馆的一位青年, 需要我帮忙取些药. ",
+				"泰德的药济",
+				"泰德,是塞门镇旅馆的一位青年, 需要我帮忙取些药. ",
 				false);
 		step_1();
 		step_2();

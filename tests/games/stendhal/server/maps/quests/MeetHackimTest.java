@@ -81,7 +81,7 @@ public class MeetHackimTest {
 		en.step(player, "yes");
 		assertEquals("Ask him what he has to #offer, and look at what he will let you #buy and #sell. For instance, if you had a studded shield which you didn't want, you could #'sell studded shield'.", getReply(npc));
 		en.step(player, "sell");
-		assertEquals("Guessed who supplies Xin Blanca with the weapons he sells? Well, it's me! I have to avoid raising suspicion, though, " +
+		assertEquals("Guessed who supplies 辛布兰卡 with the weapons he sells? Well, it's me! I have to avoid raising suspicion, though, " +
 				"so I can only smuggle him small weapons. If you want something more powerful, you'll have to venture into the dungeons and kill some of the creatures there for items.\n" +
 				"If anybody asks, you don't know me!", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);

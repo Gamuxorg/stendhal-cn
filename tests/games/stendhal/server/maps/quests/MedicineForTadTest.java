@@ -169,7 +169,7 @@ public class MedicineForTadTest extends ZonePlayerAndNPCTestImpl {
 		player.setQuest(questSlot, MedicineForTad.STATE_ILISA);
 		PlayerTestHelper.equipWithItem(player, "flask");
 
-		String firstReply = startTalkingToNpc("Ilisa");
+		String firstReply = startTalkingToNpc("伊丽莎");
 
 		assertEquals(MedicineForTad.ILISA_TALK_ASK_FOR_HERB, firstReply);
 		assertEquals(MedicineForTad.STATE_HERB, player.getQuest(questSlot));
@@ -199,7 +199,7 @@ public class MedicineForTadTest extends ZonePlayerAndNPCTestImpl {
 		player.setQuest(questSlot, MedicineForTad.STATE_HERB);
 		PlayerTestHelper.equipWithItem(player, "flask");
 
-		String firstReply = startTalkingToNpc("Ilisa");
+		String firstReply = startTalkingToNpc("伊丽莎");
 
 		assertEquals(MedicineForTad.ILISA_TALK_REMIND_HERB, firstReply);
 	}
@@ -210,7 +210,7 @@ public class MedicineForTadTest extends ZonePlayerAndNPCTestImpl {
 		PlayerTestHelper.equipWithItem(player, "flask");
 		PlayerTestHelper.equipWithItem(player, "海芋");
 
-		String firstReply = startTalkingToNpc("Ilisa");
+		String firstReply = startTalkingToNpc("伊丽莎");
 
 		assertEquals(MedicineForTad.ILISA_TALK_PREPARE_MEDICINE, firstReply);
 
@@ -242,7 +242,7 @@ public class MedicineForTadTest extends ZonePlayerAndNPCTestImpl {
 		// Test for bug #5839. Saying "herbs" to Ilisa broke the quest state
 		// in a way that it was not possible to start the quest.
 		player.setQuest(questSlot, null);
-		startTalkingToNpc("Ilisa");
+		startTalkingToNpc("伊丽莎");
 		en.step(player, "herbs");
 		assertFalse(new QuestStartedCondition(questSlot).fire(player, null, null));
 	}

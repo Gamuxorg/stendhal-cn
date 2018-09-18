@@ -52,7 +52,7 @@ public class BarMaidNPC implements ZoneConfigurator {
 	}
 
 	private void buildMargaret(final StendhalRPZone zone) {
-		final SpeakerNPC margaret = new SpeakerNPC("Margaret") {
+		final SpeakerNPC margaret = new SpeakerNPC("玛格丽特") {
 
 			@Override
 			protected void createPath() {
@@ -97,7 +97,7 @@ public class BarMaidNPC implements ZoneConfigurator {
                 );
 
 		margaret.setEntityClass("tavernbarmaidnpc");
-		margaret.setDescription("Margaret 看着很火辣, 你虽不能帮她, 但总可以在那买点东西.");
+		margaret.setDescription("玛格丽特 看着很火辣, 你虽不能帮她, 但总可以在那买点东西.");
 		margaret.setPosition(11, 4);
 		margaret.initHP(100);
 		margaret.setSounds(Arrays.asList("hiccup-1", "hiccup-2", "hiccup-3"));

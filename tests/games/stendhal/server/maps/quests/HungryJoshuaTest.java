@@ -115,7 +115,7 @@ public class HungryJoshuaTest {
 		en = npc.getEngine();
 
 		Item item = ItemTestHelper.createItem("sandwich", 5);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 
 		en.step(player, "hi");

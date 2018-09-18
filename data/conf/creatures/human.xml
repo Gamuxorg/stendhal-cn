@@ -798,7 +798,7 @@
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="10.0"/>
       <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
-      <item value="vulcano hammer" quantity="[1,1]" probability="0.0050"/>
+      <item value="火山之锤" quantity="[1,1]" probability="0.0050"/>
       <item value="greater potion" quantity="[1,2]" probability="1.5"/>
       <item value="巨剑" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -833,7 +833,7 @@
       <item value="money" quantity="[60,300]" probability="100.0"/>
       <item value="石甲" quantity="[1,1]" probability="0.15"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.025"/>
-      <item value="ugmash" quantity="[1,1]" probability="0.0050"/>
+      <item value="巨棍" quantity="[1,1]" probability="0.0050"/>
       <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
       <item value="greater potion" quantity="[1,3]" probability="1.5"/>
       <item value="混乱之盾" quantity="[1,1]" probability="0.0050"/>
@@ -1778,7 +1778,7 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.4"/>
       <item value="影盾" quantity="[1,1]" probability="0.07"/>
       <item value="双刃剑" quantity="[1,1]" probability="2.5"/>
-      <item value="morning star" quantity="[1,1]" probability="2.0"/>
+      <item value="破晓之星" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
     </equips>
@@ -2870,7 +2870,7 @@
       <item value="混沌靴" quantity="[1,1]" probability="2.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="附魔钢盾" quantity="[1,1]" probability="1.0"/>
-      <item value="ice sword" quantity="[1,1]" probability="0.1"/>
+      <item value="冰剑" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -2984,9 +2984,9 @@
       <item value="money" quantity="[100,600]" probability="100.0"/>
       <item value="greater potion" quantity="[2,4]" probability="20.0"/>
       <item value="mega potion" quantity="[1,1]" probability="20.0"/>
-      <item value="vulcano hammer" quantity="[1,1]" probability="0.01"/>
+      <item value="火山之锤" quantity="[1,1]" probability="0.01"/>
       <item value="黑镰刀" quantity="[1,1]" probability="0.1"/>
-      <item value="hell dagger" quantity="[1,1]" probability="0.5"/>
+      <item value="地狱匕首" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -3231,7 +3231,7 @@
       <item value="链靴" quantity="[1,1]" probability="1.0"/>
       <item value="cloak" quantity="[1,1]" probability="0.5"/>
       <item value="studded helmet" quantity="[1,1]" probability="1.0"/>
-      <item value="short sword" quantity="[1,1]" probability="2.5"/>
+      <item value="短剑" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>
     </equips>

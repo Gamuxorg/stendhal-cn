@@ -85,8 +85,8 @@ public class HelpTomiTest {
 		en.step(player, "bye");
 		assertEquals("bye", getReply(npc));
 
-		Item item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		Item item = ItemTestHelper.createItem("冰剑");
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
@@ -94,7 +94,7 @@ public class HelpTomiTest {
 		assertEquals("where is my ice?", getReply(npc));
 		en.step(player, "ice");
 		assertEquals("my ice :)", getReply(npc));
-		assertFalse(player.isEquipped("ice sword"));
+		assertFalse(player.isEquipped("冰剑"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertTrue(player.isQuestCompleted(questSlot));
 		// [22:07] kymara earns 1000 experience points.
@@ -108,28 +108,28 @@ public class HelpTomiTest {
 		en.step(player, "bye");
 		assertEquals("bye", getReply(npc));
 
-		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		item = ItemTestHelper.createItem("冰剑");
+		player.getSlot("背包").add(item);
 		final int xp2 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
 		en.step(player, "ice");
 		assertEquals("my ice :) :) ", getReply(npc));
-		assertFalse(player.isEquipped("ice sword"));
+		assertFalse(player.isEquipped("冰剑"));
 		assertThat(player.getXP(), greaterThan(xp2));
 		assertTrue(player.isQuestCompleted(questSlot));
 		// [22:07] kymara earns 4000 experience points.
 		en.step(player, "bye");
 		assertEquals("bye", getReply(npc));
 
-		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		item = ItemTestHelper.createItem("冰剑");
+		player.getSlot("背包").add(item);
 		final int xp3 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
 		en.step(player, "ice");
 		assertEquals("my ice :) :) :) ", getReply(npc));
-		assertFalse(player.isEquipped("ice sword"));
+		assertFalse(player.isEquipped("冰剑"));
 		assertThat(player.getXP() - xp3, is(9000));
 		assertTrue(player.isQuestCompleted(questSlot));
 		// [22:07] kymara earns 9000 experience points.
@@ -138,14 +138,14 @@ public class HelpTomiTest {
 
 		// check the XP rate change point
 		player.setQuest(questSlot, 1, "11");
-		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		item = ItemTestHelper.createItem("冰剑");
+		player.getSlot("背包").add(item);
 		final int xp4 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
 		en.step(player, "ice");
 		assertEquals("my ice :) :) :) :) :) :) :) :) :) :) :) :) ", getReply(npc));
-		assertFalse(player.isEquipped("ice sword"));
+		assertFalse(player.isEquipped("冰剑"));
 		assertThat(player.getXP() - xp4, is(10 * 12 * 1000));
 		assertTrue(player.isQuestCompleted(questSlot));
 		en.step(player, "bye");

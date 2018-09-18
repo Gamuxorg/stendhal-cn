@@ -26,7 +26,7 @@ import games.stendhal.server.maps.Region;
 import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
 
 /**
- * QUEST: 黑曜石斗篷
+ * QUEST: 密银斗篷
  * <p>
  * PARTICIPANTS:
  * <ul>
@@ -45,7 +45,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * STEPS:
  * <ul>
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
- * <li>Once machine fixed and if you have done 黑曜石盾 quest, Ida offers you cloak</li>
+ * <li>Once machine fixed and if you have done 密银盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
  * <li>Imperial scientists take silk glands and make silk thread</li>
  * <li>Kampusch fuses mithril nuggets into the silk thread</li>
@@ -60,14 +60,14 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Pdiddi sells the moss to get to twilight zone</li>
  * <li>A creature in the twilight zone drops the elixir to heal lda</li>
  * <li>After being ill Ida asks you to take a 蓝色条纹斗篷 to Josephine</li>
- * <li>After taking cloak to Josephine and telling Ida she asks for 黑曜石胸针</li>
- * <li>Pedinghaus makes 黑曜石胸针</li>
+ * <li>After taking cloak to Josephine and telling Ida she asks for 密银胸针</li>
+ * <li>Pedinghaus makes 密银胸针</li>
  * <li>The clasp completes the cloak</li>
  * </ul>
  * <p>
  * REWARD:
  * <ul>
- * <li>黑曜石斗篷</li>
+ * <li>密银斗篷</li>
  * <li> XP</li>
  * <li> Karma</li>
  * </ul>
@@ -92,7 +92,7 @@ public class MithrilCloak extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"黑曜石斗篷",
+				"密银斗篷",
 				"随着女裁缝Ida给我的的长长的任务列表一件件完成, 一件银亮且防御很高的斗蓬就要完工了, ",
 				false);
 
@@ -222,7 +222,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("need_clasp")) {
 			return res;
 		}
-		res.add("Pedinghaus 正在锻造密银扣子 黑曜石胸针. 我等不及了!");
+		res.add("Pedinghaus 正在锻造密银扣子 密银胸针. 我等不及了!");
 		if (questState.startsWith("forgingclasp;")) {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;

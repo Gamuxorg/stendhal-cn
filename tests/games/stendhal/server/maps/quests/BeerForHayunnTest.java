@@ -92,7 +92,7 @@ public class BeerForHayunnTest {
 		final StackableItem beer = new StackableItem("beer", "", "", null);
 		beer.setQuantity(1);
 		beer.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(beer);
+		player.getSlot("背包").add(beer);
 		assertEquals(1, player.getNumberOfEquipped("beer"));
 		en.step(player, "hi");
 		en.step(player, "yes");
@@ -136,7 +136,7 @@ public class BeerForHayunnTest {
 
 		player.setQuest("beer_hayunn", "start");
 		history.remove("I do not want to make Hayunn drunk.");
-		history.add("I promised to buy him a beer from Margaret in Semos Tavern.");
+		history.add("I promised to buy him a beer from 玛格丽特 in Semos Tavern.");
 		assertEquals(history, bfh.getHistory(player));
 
 		player.equipToInventoryOnly(SingletonRepository.getEntityManager().getItem("beer"));

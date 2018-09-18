@@ -64,7 +64,7 @@ class MakingClasp {
 
 		// offer the clasp when prompted
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "黑曜石胸针", "ida", "cloak", "黑曜石斗篷"),
+			Arrays.asList("clasp", "密银胸针", "ida", "cloak", "密银斗篷"),
 			new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 			ConversationStates.SERVICE_OFFERED,
 			"A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?",
@@ -102,7 +102,7 @@ class MakingClasp {
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "黑曜石胸针", "ida", "cloak", "黑曜石斗篷"),
+			Arrays.asList("clasp", "密银胸针", "ida", "cloak", "密银斗篷"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -121,7 +121,7 @@ class MakingClasp {
 					player.addXP(100);
 					player.addKarma(15);
 					final Item clasp = SingletonRepository.getEntityManager().getItem(
-									"黑曜石胸针");
+									"密银胸针");
 					clasp.setBoundTo(player.getName());
 					player.equipOrPutOnGround(clasp);
 					player.setQuest(mithrilcloak.getQuestSlot(), "got_clasp");
@@ -138,26 +138,26 @@ class MakingClasp {
 
 		// Player brought the clasp, don't make them wait any longer for the cloak
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "黑曜石胸针", "cloak", "黑曜石斗篷", "task", "quest"),
-				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_clasp"), new PlayerHasItemWithHimCondition("黑曜石胸针")),
+				Arrays.asList("clasp", "密银胸针", "cloak", "密银斗篷", "task", "quest"),
+				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_clasp"), new PlayerHasItemWithHimCondition("密银胸针")),
 				ConversationStates.ATTENDING,
 				"Wow, Pedinghaus really outdid himself this time. It looks wonderful on your new cloak! Wear it with pride.",
 				new MultipleActions(
-									 new DropItemAction("黑曜石胸针"),
+									 new DropItemAction("密银胸针"),
 									 new SetQuestAndModifyKarmaAction(mithrilcloak.getQuestSlot(), "done", 10.0),
-									 new EquipItemAction("黑曜石斗篷", 1, true),
+									 new EquipItemAction("密银斗篷", 1, true),
 									 new IncreaseXPAction(1000)
 									 )
 				);
 
 		// remind about getting clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "黑曜石胸针", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("clasp", "密银胸针", "cloak", "密银斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),
 								new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_clasp"),
-												 new NotCondition(new PlayerHasItemWithHimCondition("黑曜石胸针")))
+												 new NotCondition(new PlayerHasItemWithHimCondition("密银胸针")))
 								),
 				ConversationStates.ATTENDING,
 				"You haven't got the clasp from #Pedinghaus yet. As soon as I have that your cloak will be finished!",

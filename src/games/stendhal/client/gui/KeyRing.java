@@ -28,7 +28,7 @@ class KeyRing extends SlotWindow implements FeatureChangeListener {
 	public KeyRing() {
 		// Remember if you change these numbers change also a number in
 		// src/games/stendhal/server/entity/RPEntity.java
-		super("keyring", 2, 4);
+		super("钥匙环", 2, 4);
 		// A panel window; forbid closing
 		setCloseable(false);
 	}
@@ -61,7 +61,7 @@ class KeyRing extends SlotWindow implements FeatureChangeListener {
 	 */
 	@Override
 	public void featureDisabled(final String name) {
-		if (name.equals("keyring")) {
+		if (name.equals("钥匙环")) {
 			disableKeyring();
 		}
 	}
@@ -76,7 +76,7 @@ class KeyRing extends SlotWindow implements FeatureChangeListener {
 	 */
 	@Override
 	public void featureEnabled(final String name, final String value) {
-		if (name.equals("keyring")) {
+		if (name.equals("钥匙环")) {
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override
 				public void run() {

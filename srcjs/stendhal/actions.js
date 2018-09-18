@@ -19,7 +19,7 @@ stendhal.slashActionRepository = {
 			var action = {
 				"type": type,
 				"target": params[0],
-				"note": remainder
+				"笔记": remainder
 			};
 			marauroa.clientFramework.sendAction(action);
 			return true;

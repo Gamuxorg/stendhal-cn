@@ -56,7 +56,7 @@ public class BarmanNPCTest {
 		engine.step(player,"buy 500 巧克力棒");
 		assertThat(getReply(dale),is("500 巧克力棒s will cost 50000. Do you want to buy them?"));
 		final Item item = ItemTestHelper.createItem("money", 50000);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		engine.step(player,"yes");
 		assertThat(getReply(dale),is("Congratulations! Here are your 巧克力棒s!"));

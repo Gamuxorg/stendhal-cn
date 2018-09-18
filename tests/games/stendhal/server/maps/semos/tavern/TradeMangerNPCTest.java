@@ -215,7 +215,7 @@ public class TradeMangerNPCTest extends ZonePlayerAndNPCTestImpl {
 		final Engine en = npc.getEngine();
 		player.addXP(1700);
 
-		Item keyring = SingletonRepository.getEntityManager().getItem("keyring");
+		Item keyring = SingletonRepository.getEntityManager().getItem("钥匙环");
 		StackableItem playersMoney = (StackableItem) SingletonRepository
 				.getEntityManager().getItem("money");
 		final int expectedTradingFee = 1500;
@@ -231,29 +231,29 @@ public class TradeMangerNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue("Equipping player with keyring in belt should be successfull.", player.equip("belt", keyring));
 		assertTrue("Equipping player with money in bag should be successfull.", player.equipToInventoryOnly(playersMoney));
 		assertTrue("Player is not equipped with money for trading fee.", player.isEquipped("money", expectedTradingFee));
-		assertTrue("Player is not equipped with keyring.", player.isEquipped("keyring"));
+		assertTrue("Player is not equipped with 钥匙环.", player.isEquipped("钥匙环"));
 
 		Item key = SingletonRepository.getEntityManager().getItem("dungeon silver key");
-		keyring.getSlot("content").add(key);
+		钥匙环.getSlot("content").add(key);
 
 		assertTrue(en.step(player, "hello"));
 		assertEquals("Welcome to Semos trading center. How can I #help you?", getReply(npc));
 
 		// Try first selling it when it's not empty
 
-		assertTrue(en.step(player, "sell keyring 150000"));
-		assertEquals("Please empty your keyring first.", getReply(npc));
-		assertTrue(player.isEquipped("keyring"));
+		assertTrue(en.step(player, "sell 钥匙环 150000"));
+		assertEquals("Please empty your 钥匙环 first.", getReply(npc));
+		assertTrue(player.isEquipped("钥匙环"));
 		assertTrue(player.isEquipped("dungeon silver key"));
 
 		// Then after emptying it
 		keyring.getSlot("content").clear();
-		assertTrue(en.step(player, "sell keyring 150000"));
-		assertEquals("Do you want to sell a keyring for 150000 money? It would cost you 1500 money.", getReply(npc));
+		assertTrue(en.step(player, "sell 钥匙环 150000"));
+		assertEquals("Do you want to sell a 钥匙环 for 150000 money? It would cost you 1500 money.", getReply(npc));
 
 		assertTrue(en.step(player, "yes"));
 		assertEquals("I added your offer to the trading center and took the fee of 1500.", getReply(npc));
-		assertFalse(player.isEquipped("keyring"));
+		assertFalse(player.isEquipped("钥匙环"));
 		assertFalse(player.isEquipped("dungeon silver key"));
 
 		assertTrue(en.step(player, "bye"));

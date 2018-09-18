@@ -189,10 +189,10 @@ public class KillEnemyArmyTest {
 		assertEquals("I hope you have disturbed me for a good reason?", getReply(npc));
 		int tempxp = 1000000;
 		player.setXP(tempxp);
-		int tempmoneys = player.getEquippedItemClass("bag", "money").getQuantity();
+		int tempmoneys = player.getEquippedItemClass("背包", "money").getQuantity();
 		double tempkarma = player.getKarma();
 		en.step(player, "quest");
-        int moneys = player.getEquippedItemClass("bag", "money").getQuantity();
+        int moneys = player.getEquippedItemClass("背包", "money").getQuantity();
         int moneysdiff = moneys - tempmoneys;
         assertEquals("Good work! Take these " + moneysdiff + " coins. And if you need an assassin job again, ask me in one week. My advisors tell me they may try to fight me again.", getReply(npc));
         assertEquals(tempxp, player.getXP()-100000);
@@ -254,10 +254,10 @@ public class KillEnemyArmyTest {
 
 		en.step(player, "hi");
 		assertEquals("I hope you have disturbed me for a good reason?", getReply(npc));
-		int tempmoneys = player.getEquippedItemClass("bag", "money").getQuantity();
+		int tempmoneys = player.getEquippedItemClass("背包", "money").getQuantity();
 
 		en.step(player, "quest");
-        int moneys = player.getEquippedItemClass("bag", "money").getQuantity();
+        int moneys = player.getEquippedItemClass("背包", "money").getQuantity();
         int moneysdiff = moneys - tempmoneys;
 		assertEquals("Pretty good! You killed "+(killed-killsnumb)+
 				" extra " +	Grammar.plnoun(killed-killsnumb, "soldier")+

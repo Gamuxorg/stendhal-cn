@@ -106,7 +106,7 @@
       <item value="钉靴" quantity="[1,1]" probability="0.4"/>
       <item value="cloak" quantity="[1,1]" probability="0.4"/>
       <item value="连枷" quantity="[1,1]" probability="1.0"/>
-      <item value="short sword" quantity="[1,1]" probability="1.0"/>
+      <item value="短剑" quantity="[1,1]" probability="1.0"/>
       <item value="布衣" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>

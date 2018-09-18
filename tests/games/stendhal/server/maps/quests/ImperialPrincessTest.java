@@ -127,17 +127,17 @@ public class ImperialPrincessTest {
 
 
 		Item item = ItemTestHelper.createItem("海芋", 7);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("kokuda", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("sclaria", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("kekik", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("antidote", 14);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("potion", 28);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		final int xp = player.getXP();
 		en.step(player, "hi");

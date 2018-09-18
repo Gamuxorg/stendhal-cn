@@ -38,7 +38,7 @@ class AdminNoteAction implements SlashAction {
 
 		action.put("type", "adminnote");
 		action.put("target", params[0]);
-		action.put("note", remainder);
+		action.put("笔记", remainder);
 
 		ClientSingletonRepository.getClientFramework().send(action);
 

@@ -39,13 +39,13 @@ import games.stendhal.server.maps.Region;
  * PARTICIPANTS:
  * <ul>
  * <li> Hackim </li>
- * <li> Xin Blanca </li>
+ * <li> 辛布兰卡 </li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Hackim asks you to give a message to Xin Blanca. </li>
- * <li> Xin Blanca thanks you with a pair of leather legs. </li>
+ * <li> Hackim asks you to give a message to 辛布兰卡. </li>
+ * <li> 辛布兰卡 thanks you with a pair of leather legs. </li>
  * </ul>
  *
  * REWARD:
@@ -73,15 +73,15 @@ public class NewsFromHackim extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Hackim the blacksmith assistant wants me to bring a secret message to Xin Blanca in 塞门镇 tavern.");
+		res.add("Hackim the blacksmith assistant wants me to bring a secret message to 辛布兰卡 in 塞门镇 tavern.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("That job was just too hot for me and I don't want to do anything illegal.");
 			return res;
 		}
-		res.add("It can't be that bad to just collect a message to Xin Blanca. What will happen? I'll do it.");
+		res.add("It can't be that bad to just collect a message to 辛布兰卡. What will happen? I'll do it.");
 		if (isCompleted(player)) {
-			res.add("I brought Xin Blanca the message by Hackim. That brought me some nice leather legs.");
+			res.add("I brought 辛布兰卡 the message by Hackim. That brought me some nice leather legs.");
 		}
 		return res;
 	}
@@ -121,17 +121,17 @@ public class NewsFromHackim extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("Xin", "Xin Blanca", "Blanca"),
+			Arrays.asList("Xin", "辛布兰卡", "Blanca"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"You don't know who Xin is? Everybody at the tavern knows Xin. He's the guy who owes 啤酒 money to most of the people in 塞门镇! So, will you do it?",
 			null);
 
-		npc.addReply(Arrays.asList("Xin", "Xin Blanca", "Blanca"), "Xin's so cool. I want to work in the tavern too like him but my dad says I have to learn a trade.");
+		npc.addReply(Arrays.asList("Xin", "辛布兰卡", "Blanca"), "Xin's so cool. I want to work in the tavern too like him but my dad says I have to learn a trade.");
 	}
 
 	private void step_2() {
-		final SpeakerNPC npc = npcs.get("Xin Blanca");
+		final SpeakerNPC npc = npcs.get("辛布兰卡");
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),

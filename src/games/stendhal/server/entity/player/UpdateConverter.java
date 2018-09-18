@@ -49,10 +49,10 @@ public abstract class UpdateConverter {
 			"longbow_+1", "lion_shield_+1"
 	);
 	private static final List<String> ITEM_NAMES_NEW = Arrays.asList(
-			"morning star", "鳞甲", "护肩皮胸甲",
+			"破晓之星", "鳞甲", "护肩皮胸甲",
 			"加固锁子甲", "铁鳞甲", "黄金锁子甲",
 			"护肩铁胸甲", "黄金双刃斧", "蓝灵斗篷", "加强狼牙棒",
-			"黄金狼牙棒", "黄金战锤", "aventail", "horned golden helmet",
+			"黄金权杖", "黄金战锤", "aventail", "horned golden helmet",
 			"composite bow", "加强狮盾"
 	);
 
@@ -181,10 +181,10 @@ public abstract class UpdateConverter {
      *            RPObject representing a player
      */
     public static void updatePlayerRPObject(final RPObject object) {
-    	final String[] slotsNormal = { "bag", "rhand", "lhand", "head", "armor",
+    	final String[] slotsNormal = { "背包", "rhand", "lhand", "head", "armor",
     			"legs", "feet", "finger", "cloak", "bank", "bank_ados",
     			"zaras_chest_ados", "bank_fado", "bank_nalwor", "spells",
-    			"keyring", "trade" };
+    			"钥匙环", "trade" };
 
     	final String[] slotsSpecial = { "!quests", "!kills", "!buddy", "!ignore",
     			"!visited", "skills", "!tutorial"};
@@ -310,8 +310,8 @@ public abstract class UpdateConverter {
 
 		//port to 0.86: port keymap to feature map, karma_indicator as feature
 		if (object.hasSlot("!features")) {
-			if (KeyedSlotUtil.getKeyedSlot(object, "!features", "keyring") != null) {
-				object.put("features", "keyring", "");
+			if (KeyedSlotUtil.getKeyedSlot(object, "!features", "钥匙环") != null) {
+				object.put("features", "钥匙环", "");
 			}
 			object.removeSlot("!features");
 		}
@@ -435,12 +435,12 @@ public abstract class UpdateConverter {
 	 * @param player converted player
 	 */
 	public static void updateKeyring(Player player) {
-		if (player.getFeature("keyring") != null) {
+		if (player.getFeature("钥匙环") != null) {
 			/*
 			 * There are many things that could go wrong. Try to bail harmlessly
 			 * if that happens. The old keyrings still work.
 			 */
-			Item keyring = SingletonRepository.getEntityManager().getItem("keyring");
+			Item keyring = SingletonRepository.getEntityManager().getItem("钥匙环");
 			if (keyring == null) {
 				logger.error("Failed to create keyring item");
 				return;
@@ -462,10 +462,10 @@ public abstract class UpdateConverter {
 				return;
 			}
 
-			RPSlot oldSlot = player.getSlot("keyring");
+			RPSlot oldSlot = player.getSlot("钥匙环");
 			EntitySlot newSlot = keyring.getEntitySlot("content");
-			if (!"keyring".equals(newSlot.getContentSlotName())) {
-				logger.error("Keyring has incorrect slot name: "
+			if (!"钥匙环".equals(newSlot.getContentSlotName())) {
+				logger.error("钥匙环 has incorrect slot name: "
 						+ newSlot.getContentSlotName() + ", item is: " + keyring);
 				return;
 			}
@@ -480,7 +480,7 @@ public abstract class UpdateConverter {
 			oldSlot.clear();
 			// Remove the old feature. After this the player won't be able to
 			// use the old style keyring, so everything would better be OK now.
-			player.setFeature("keyring", false);
+			player.setFeature("钥匙环", false);
 		}
 	}
 

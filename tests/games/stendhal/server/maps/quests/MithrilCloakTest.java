@@ -130,17 +130,17 @@ public class MithrilCloakTest {
 		assertEquals("Bye, thanks for stepping in.", getReply(npc));
 
 		final Item bobbin = ItemTestHelper.createItem("bobbin");
-		bobbin.setEquipableSlots(Arrays.asList("bag"));
+		bobbin.setEquipableSlots(Arrays.asList("背包"));
 		player.equipToInventoryOnly(bobbin);
 		assertTrue(player.isEquipped("bobbin"));
 
 		final Item oil = ItemTestHelper.createItem("oil");
-		oil.setEquipableSlots(Arrays.asList("bag"));
+		oil.setEquipableSlots(Arrays.asList("背包"));
 		player.equipToInventoryOnly(oil);
 		assertTrue(player.isEquipped("oil"));
 
 		final Item armor = ItemTestHelper.createItem("leather armor");
-		armor.setEquipableSlots(Arrays.asList("bag"));
+		armor.setEquipableSlots(Arrays.asList("背包"));
 		player.equipToInventoryOnly(armor);
 		assertTrue(player.isEquipped("leather armor"));
 
@@ -198,11 +198,11 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 
 		Item item = ItemTestHelper.createItem("silk gland", 40);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("mithril nugget", 7);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("silk thread", 40);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Ha ha he he woo hoo ... ha ... Sorry, I get carried away sometimes. What do you want?", getReply(npc));
@@ -248,7 +248,7 @@ public class MithrilCloakTest {
 		assertEquals("For 40 spools of mithril thread to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #balloon.", getReply(npc));
 		// add the item
 		item = ItemTestHelper.createItem("balloon", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "fuse");
 		assertEquals("I will fuse 40 mithril thread for you. Please come back in 4 hours.", getReply(npc));
 		en.step(player, "bye");
@@ -370,9 +370,9 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 		player.setQuest(questSlot, "need_eggshells;4");
 		Item item = ItemTestHelper.createItem("mithril bar", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("iron", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Hi. I don't get so many visitors, down here.", getReply(npc));
@@ -381,7 +381,7 @@ public class MithrilCloakTest {
 		en.step(player, "4");
 		assertEquals("Ok, ask me again when you have 24 disease poisons with you.", getReply(npc));
 		item = ItemTestHelper.createItem("disease poison", 24);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "eggshells");
 		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 disease poisons you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
 		en.step(player, "4");
@@ -443,7 +443,7 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 		player.setQuest(questSlot, "told_joke;1");
 		item = ItemTestHelper.createItem("magical needle", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Hello there.", getReply(npc));
@@ -475,7 +475,7 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 
 		item = ItemTestHelper.createItem("magical needle", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		player.setQuest(questSlot, "told_joke;1;1");
 
 		en.step(player, "hi");
@@ -519,7 +519,7 @@ public class MithrilCloakTest {
 		player.setQuest(questSlot, "twilight_zone");
 
 		Item item = ItemTestHelper.createItem("money", 3000);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("SHHH! Don't want all n' sundry knowin' wot I #deal in.", getReply(npc));
@@ -540,7 +540,7 @@ public class MithrilCloakTest {
 		// [22:22] You see a bottle of medicinal elixir. It is a special quest reward for jammyjam, and cannot be used by others.
 
 		item = ItemTestHelper.createItem("twilight elixir", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Is that elixir for me? If #yes I will take it immediately. You must return to see me again in my normal state.", getReply(npc));
@@ -578,7 +578,7 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 
 		Item item = ItemTestHelper.createItem("blue striped cloak", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Welcome back! Have you brought any #cloaks with you?", getReply(npc));
@@ -643,7 +643,7 @@ public class MithrilCloakTest {
 
 		en.step(player, "hi");
 		Item item = ItemTestHelper.createItem("mithril bar", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
 		en.step(player, "clasp");

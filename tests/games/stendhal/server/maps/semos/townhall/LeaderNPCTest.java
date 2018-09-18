@@ -115,15 +115,15 @@ public class LeaderNPCTest {
 
 		player.drop(weapon);
 
-		final Item weapon2 = new Item("ice sword", "sword", "subclass", null);
+		final Item weapon2 = new Item("冰剑", "sword", "subclass", null);
 		weapon2.setEquipableSlots(Arrays.asList("lhand"));
 		weapon2.put("atk", 29);
 		weapon2.put("rate", 5);
 		player.equipToInventoryOnly(weapon2);
-		assertTrue(player.isEquipped("ice sword"));
+		assertTrue(player.isEquipped("冰剑"));
 
 		assertTrue(en.step(player, "weapon"));
-		assertEquals("That ice sword is a powerful weapon, it has a good damage to rate ratio.", getReply(npc));
+		assertEquals("That 冰剑 is a powerful weapon, it has a good damage to rate ratio.", getReply(npc));
 		player.drop(weapon2);
 
 		final Item weapon3 = new Item("vampire sword", "sword", "subclass", null);

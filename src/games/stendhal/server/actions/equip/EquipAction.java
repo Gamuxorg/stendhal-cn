@@ -69,7 +69,7 @@ public class EquipAction extends EquipmentAction {
 			// Warn about min level
 			if (player.equals(dest.parent)
 					&& Slots.CARRYING.getNames().contains(dest.slot)
-					&& !"bag".equals(dest.slot)) {
+					&& !"背包".equals(dest.slot)) {
 				if(entity instanceof Item) {
 					int minLevel = ((Item) entity).getMinLevel();
 					if (minLevel > player.getLevel()) {

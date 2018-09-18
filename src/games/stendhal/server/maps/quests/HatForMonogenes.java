@@ -47,7 +47,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> 梦金斯 asks you to buy a hat for him.</li>
- * <li> Xin Blanca sells you a leather helmet.</li>
+ * <li> 辛布兰卡 sells you a leather helmet.</li>
  * <li> 梦金斯 sees your leather helmet and asks for it and then thanks you.</li>
  * </ul>
  *

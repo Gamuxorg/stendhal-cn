@@ -36,17 +36,17 @@ import games.stendhal.server.maps.quests.logic.ItemCollector;
 import games.stendhal.server.util.TimeUtil;
 
 /**
- * QUEST: The 黑曜石盾 forging.
+ * QUEST: The 密银盾 forging.
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Baldemar, mithrilbourgh elite wizard, will forge a 黑曜石盾.
+ * <li> Baldemar, mithrilbourgh elite wizard, will forge a 密银盾.
  * </ul>
  *
  * STEPS:
  * <ul>
  * <li> Baldemar tells you about shield.
- * <li> He offers to forge a 黑曜石盾 for you if you bring him what he
+ * <li> He offers to forge a 密银盾 for you if you bring him what he
  * needs.
  * <li> You give him all he asks for.
  * <li> Baldemar checks if you have ever killed a 黑巨人 alone, or not
@@ -55,7 +55,7 @@ import games.stendhal.server.util.TimeUtil;
  *
  * REWARD:
  * <ul>
- * <li> 黑曜石盾
+ * <li> 密银盾
  * <li> 95000 XP
  * <li> some karma (25)
  * </ul>
@@ -84,7 +84,7 @@ public class StuffForBaldemar extends AbstractQuest {
 
 	public StuffForBaldemar() {
 		itemCollector.require().item("mithril bar").pieces(20)
-				.bySaying("I cannot #forge it without the missing %s. After all, this IS a 黑曜石盾.");
+				.bySaying("I cannot #forge it without the missing %s. After all, this IS a 密银盾.");
 		itemCollector.require().item("obsidian")
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
 		itemCollector.require().item("diamond")
@@ -214,10 +214,10 @@ public class StuffForBaldemar extends AbstractQuest {
 						return;
 					}
 
-					raiser.say("I have finished forging your new 黑曜石盾. Enjoy. Now I will see what Trillium has stored behind the counter for me. ;)");
+					raiser.say("I have finished forging your new 密银盾. Enjoy. Now I will see what Trillium has stored behind the counter for me. ;)");
 					player.addXP(95000);
 					player.addKarma(25);
-					final Item mithrilshield = SingletonRepository.getEntityManager().getItem("黑曜石盾");
+					final Item mithrilshield = SingletonRepository.getEntityManager().getItem("密银盾");
 					mithrilshield.setBoundTo(player.getName());
 					player.equipOrPutOnGround(mithrilshield);
 					player.notifyWorldAboutChanges();
@@ -287,10 +287,10 @@ public class StuffForBaldemar extends AbstractQuest {
 			res.add("I will need to bravely face a 黑巨人 alone, before I am worthy of this shield.");
 		}
 		if (questState.startsWith("forging")) {
-			res.add("Baldemar is forging my 黑曜石盾!");
+			res.add("Baldemar is forging my 密银盾!");
 		}
 		if (isCompleted(player)) {
-			res.add("I brought Baldemar many items, killed a 黑巨人 solo, and he forged me a 黑曜石盾.");
+			res.add("I brought Baldemar many items, killed a 黑巨人 solo, and he forged me a 密银盾.");
 		}
 		return res;
 	}

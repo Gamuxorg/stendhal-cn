@@ -68,7 +68,7 @@ public class HatForMonogenesTest {
 
 		final ZoneConfigurator zoneConf = new TraderNPC();
 		zoneConf.configureZone(new StendhalRPZone("int_塞门_酒馆"), null);
-		npcXin = SingletonRepository.getNPCList().get("Xin Blanca");
+		npcXin = SingletonRepository.getNPCList().get("辛布兰卡");
 		enXin = npcXin.getEngine();
 
 		quest = new MeetMonogenes();
@@ -132,7 +132,7 @@ public class HatForMonogenesTest {
 		// -----------------------------------------------
 
 		final Item item = ItemTestHelper.createItem("money", 25);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		enXin.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npcXin));
 		enXin.step(player, "buy leather helmet");
@@ -172,7 +172,7 @@ public class HatForMonogenesTest {
 
 		// -----------------------------------------------
 
-		player.equip("bag", SingletonRepository.getEntityManager().getItem("leather helmet"));
+		player.equip("背包", SingletonRepository.getEntityManager().getItem("leather helmet"));
 		en.step(player, "hi");
 		assertEquals("Hey! Is that leather hat for me?", getReply(npc));
 		oldXP = player.getXP();
@@ -201,7 +201,7 @@ public class HatForMonogenesTest {
 		assertEquals(history, quest.getHistory(player));
 
 		player.setQuest("hat_monogenes", "start");
-		player.equip("bag", ItemTestHelper.createItem("leather helmet"));
+		player.equip("背包", ItemTestHelper.createItem("leather helmet"));
 		history.add("I have found a hat.");
 
 		assertEquals(history, quest.getHistory(player));

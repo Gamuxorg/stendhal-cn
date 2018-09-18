@@ -77,10 +77,10 @@ public class UltimateCollector extends AbstractQuest {
 	/** Immortal Sword Quest in Kotoch: Vulcanus is the NPC */
 	private static final String IMMORTAL_SWORD_QUEST_SLOT = "immortalsword_quest"; // kotoch
 
-	/** 黑曜石斗篷 quest: Ida is the NPC */
+	/** 密银斗篷 quest: Ida is the NPC */
 	private static final String MITHRIL_CLOAK_QUEST_SLOT = "mithril_cloak"; // mithril
 
-	/** 黑曜石盾 quest: Baldemar is the NPC */
+	/** 密银盾 quest: Baldemar is the NPC */
 	private static final String MITHRIL_SHIELD_QUEST_SLOT = "mithrilshield_quest"; // mithril
 
 	/** Cloak Collector 2nd quest: Josephine is the NPC (Completing 2nd requires 1st) */

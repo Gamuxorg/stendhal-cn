@@ -66,9 +66,9 @@ public class GoldProspectorNPC implements ZoneConfigurator {
 				        ConversationStates.ATTENDING,
 				        "I don't have a task for you, I'm just here to help new prospectors.", null);
 
-				add(ConversationStates.ATTENDING, Arrays.asList("gold", "pan", "金盘子"), null,
+				add(ConversationStates.ATTENDING, Arrays.asList("gold", "pan", "淘金盘"), null,
 				        ConversationStates.ATTENDING,
-				        "I don't have a 金盘子, but maybe you could ask a blacksmith to sell you one.", null);
+				        "I don't have a 淘金盘, but maybe you could ask a blacksmith to sell you one.", null);
 
 				addGoodbye("Seeya, get yer spurs on!");
 			}

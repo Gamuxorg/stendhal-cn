@@ -189,7 +189,7 @@ public class CloakCollector2Test {
 					+ Grammar.a_noun(itemName) + " with you.", getReply(npc));
 
 			final Item cloak = new Item(itemName, "", "", null);
-			player.getSlot("bag").add(cloak);
+			player.getSlot("背包").add(cloak);
 			en.stepTest(player, itemName);
 			assertEquals("Wow, thank you! What else did you bring?", getReply(npc));
 
@@ -207,7 +207,7 @@ public class CloakCollector2Test {
 		assertEquals("Oh, I'm disappointed. You don't really have "
 				+ Grammar.a_noun(lastCloak) + " with you.", getReply(npc));
 		final Item cloak = new Item(lastCloak, "", "", null);
-		player.getSlot("bag").add(cloak);
+		player.getSlot("背包").add(cloak);
 		en.stepTest(player, lastCloak);
 		assertEquals("Answer to last brought cloak", "Oh, yay! You're so kind, I bet you'll have great Karma now! Here, take these killer boots. I think they're gorgeous but they don't fit me!", getReply(npc));
 

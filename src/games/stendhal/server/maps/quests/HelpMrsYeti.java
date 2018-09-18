@@ -207,7 +207,7 @@ import games.stendhal.server.maps.Region;
 				new PlayerHasItemWithHimCondition("pie",5)),
 				ConversationStates.ATTENDING, "Ah, thank you very much! Now I will tell you a little secret of mine. I am not a blacksmith, "
 				+ "only an assistant. I can't make knives at all! But I sell Salva a normal knife and is happy enough with that! So just take her "
-				+ "a plain knife like you could buy from Xin Blanca in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
+				+ "a plain knife like you could buy from 辛布兰卡 in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
 				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "knife", 1.0), new DropItemAction("pie",5)));
 
 	    npc.add(ConversationStates.ATTENDING, Arrays.asList("salva", "pies"),
@@ -374,7 +374,7 @@ import games.stendhal.server.maps.Region;
 			if ("pies".equals(questState)) {
 				return res;
 			}
-			res.add("Hackim said I should go buy a standard knife like from Xin Blanca!! Apparently he tricked Salva all these years into believing they are magic, I better not let on...");
+			res.add("Hackim said I should go buy a standard knife like from 辛布兰卡!! Apparently he tricked Salva all these years into believing they are magic, I better not let on...");
 			if ("knife".equals(questState)) {
 				return res;
 			}

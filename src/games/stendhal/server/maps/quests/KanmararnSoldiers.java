@@ -281,7 +281,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(henry.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
-						new PlayerHasInfostringItemWithHimCondition("note", "charles"),
+						new PlayerHasInfostringItemWithHimCondition("笔记", "charles"),
 						new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")),
 				ConversationStates.ATTENDING,
 				"Oh my! Peter, Tom, and Charles are all dead? *cries*. Anyway, here is your reward. And keep the IOU.",
@@ -294,7 +294,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 						new NotCondition(
 								new AndCondition(
 										new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
-										new PlayerHasInfostringItemWithHimCondition("note", "charles"),
+										new PlayerHasInfostringItemWithHimCondition("笔记", "charles"),
 										new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")))),
 				ConversationStates.ATTENDING,
 				"You didn't prove that you have found them all!",
@@ -352,7 +352,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		// Add our new Ex-NPC to the game world
 		zone.add(charles);
 		// Add a refiller to automatically fill the corpse of unlucky Charles
-		final CorpseRefiller charlesRefiller = new CorpseRefiller(charles, "note",
+		final CorpseRefiller charlesRefiller = new CorpseRefiller(charles, "笔记",
 				"You read: \"IOU 250 money. (signed) McPegleg\"");
 		charlesRefiller.start();
 

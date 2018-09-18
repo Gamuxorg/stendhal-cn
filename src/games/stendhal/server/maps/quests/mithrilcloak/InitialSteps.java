@@ -184,7 +184,7 @@ class InitialSteps {
 								 new QuestStartedCondition(mithrilcloak.getShieldQuestSlot())
 								 ),
 				ConversationStates.ATTENDING,
-				"Oh, I see you are already on a quest to obtain a mithril shield. You see, I was going to offer you a 黑曜石斗篷. But you should finish that first. Come back when you've finished the mithril shield quest and we will speak again.",
+				"Oh, I see you are already on a quest to obtain a mithril shield. You see, I was going to offer you a 密银斗篷. But you should finish that first. Come back when you've finished the mithril shield quest and we will speak again.",
 				new SetQuestAction(mithrilcloak.getQuestSlot(), "need_mithril_shield"));
 
 			// player asks for quest but they haven't completed mithril shield quest

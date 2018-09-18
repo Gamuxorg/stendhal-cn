@@ -117,7 +117,7 @@ public class DiceDealerNPCTest extends ZonePlayerAndNPCTestImpl {
 
 				// immediately drop the win (and anything other than money also), so we have enough space for the dices again
 				for(;;) {
-					Iterator<RPObject> it = player.getSlot("bag").iterator();
+					Iterator<RPObject> it = player.getSlot("背包").iterator();
 					boolean found = false;
 
 					while(it.hasNext()) {

@@ -45,7 +45,7 @@ public class TestShowItemList extends ScriptImpl {
 		if (args.isEmpty()) {
 			itemList.add(prepareItem("木棍", 100));
 			itemList.add(prepareItem("皮甲", -100));
-			itemList.add(prepareItem("ice sword", -10000));
+			itemList.add(prepareItem("冰剑", -10000));
 		} else {
 			ShopList shops = SingletonRepository.getShopList();
 			Map<String, Integer> items = shops.get(args.get(0));

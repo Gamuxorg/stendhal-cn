@@ -165,11 +165,11 @@ public class HerbsForCarmenTest {
 		assertEquals("Bye.", getReply(npc));
 
 		Item apple= ItemTestHelper.createItem("苹果", 1);
-		player.getSlot("bag").add(apple);
+		player.getSlot("背包").add(apple);
 		Item arandula = ItemTestHelper.createItem("海芋", 3);
-		player.getSlot("bag").add(arandula);
+		player.getSlot("背包").add(arandula);
 		Item porcini = ItemTestHelper.createItem("大脚菇", 1);
-		player.getSlot("bag").add(porcini);
+		player.getSlot("背包").add(porcini);
 
 		//-----------------------------------------------------------------
 		// bring some of the ingredients. try to take one twice
@@ -199,13 +199,13 @@ public class HerbsForCarmenTest {
 
 		final int xp = player.getXP();
 		Item apples2= ItemTestHelper.createItem("苹果", 2);
-		player.getSlot("bag").add(apples2);
+		player.getSlot("背包").add(apples2);
 		Item arandula2 = ItemTestHelper.createItem("海芋", 2);
-		player.getSlot("bag").add(arandula2);
+		player.getSlot("背包").add(arandula2);
 		Item wood = ItemTestHelper.createItem("wood", 2);
-		player.getSlot("bag").add(wood);
+		player.getSlot("背包").add(wood);
 		Item mushroom = ItemTestHelper.createItem("小圆菇", 1);
-		player.getSlot("bag").add(mushroom);
+		player.getSlot("背包").add(mushroom);
 
 		// ----------------------------------------------------------
 		// bring remaining ingredients and check reward

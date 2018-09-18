@@ -67,14 +67,14 @@ public class BoyNPC implements ZoneConfigurator {
 								}),
 				        ConversationStates.ATTENDING,
 				        null,
-				        new SayTextAction("嘘! 来这边, [name]! 我有个任务 #task 交给你."));
+				        new SayTextAction("嘘! 来这边, [name]! 我有个 #任务 交给你."));
 
 				// this is the condition for any other case while the quest is active, not covered by the quest.
 				add(ConversationStates.IDLE,
 						ConversationPhrases.GREETING_MESSAGES,
 						new GreetingMatchesNameCondition(getName()), true,
 				        ConversationStates.ATTENDING,
-				        "*sniff* *sniff* 我病了, 快帮我把药 #favour 拿来.",
+				        "*sniff* *sniff* 我病了, 快帮我把我 #喜好 的药拿来.",
 				        null);
 
 				add(ConversationStates.IDLE,

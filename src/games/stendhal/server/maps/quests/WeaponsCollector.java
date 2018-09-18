@@ -39,12 +39,12 @@ import games.stendhal.server.maps.quests.logic.BringListOfItemsQuestLogic;
  * <li> You get one of the weapons somehow, e.g. by killing a monster. </li>
  * <li> You bring the weapon up the mountain and give it to Balduin. </li>
  * <li> Repeat until Balduin received all weapons. (Of course you can bring up several weapons at the same time.) </li>
- * <li> Balduin gives you an ice sword in exchange. </li>
+ * <li> Balduin gives you an 冰剑 in exchange. </li>
  * </ul>
  * <p>
  * REWARD:
  * <ul>
- * <li> ice sword </li>
+ * <li> 冰剑 </li>
  * <li> 5000 XP </li>
  * <li> 30 karma </li>
  * </ul>
@@ -56,7 +56,7 @@ public class WeaponsCollector extends AbstractQuest implements
 
 	private static final List<String> neededWeapons = Arrays.asList("大砍刀",
 			"战斧", "阔剑", "连枷", "战戟", "katana",
-			"黄金狼牙棒", "scimitar", "大镰刀", "战锤");
+			"黄金权杖", "scimitar", "大镰刀", "战锤");
 
 	private static final String QUEST_SLOT = "weapons_collector";
 
@@ -195,12 +195,12 @@ public class WeaponsCollector extends AbstractQuest implements
 	@Override
 	public String respondToLastItemBrought() {
 		return "At last, my collection is complete! Thank you very much; "
-				+ "here, take this #'ice sword' in exchange!";
+				+ "here, take this #'冰剑' in exchange!";
 	}
 
 	@Override
 	public void rewardPlayer(final Player player) {
-		final Item iceSword = SingletonRepository.getEntityManager().getItem("ice sword");
+		final Item iceSword = SingletonRepository.getEntityManager().getItem("冰剑");
 		iceSword.setBoundTo(player.getName());
 		player.equipOrPutOnGround(iceSword);
 		player.addXP(5000);

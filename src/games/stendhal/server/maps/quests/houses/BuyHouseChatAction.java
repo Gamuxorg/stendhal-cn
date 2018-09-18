@@ -95,7 +95,7 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 	}
 
 	private static void fillChest(final StoredChest chest, String id) {
-		Item item = SingletonRepository.getEntityManager().getItem("note");
+		Item item = SingletonRepository.getEntityManager().getItem("笔记");
 		item.setDescription("WELCOME TO THE HOUSE OWNER\n"
 				+ "1. If you do not pay your house taxes, the house and all the items in the chest will be confiscated.\n"
 				+ "2. All people who can get in the house can use the chest.\n"

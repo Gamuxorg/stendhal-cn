@@ -92,7 +92,7 @@ public class PlinksToyTest {
 		// -----------------------------------------------
 
 		final Item teddy = ItemTestHelper.createItem("teddy");
-		teddy.setEquipableSlots(Arrays.asList("bag"));
+		teddy.setEquipableSlots(Arrays.asList("背包"));
 		player.equipToInventoryOnly(teddy);
 		assertTrue(player.isEquipped("teddy"));
 

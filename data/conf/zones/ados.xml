@@ -2300,7 +2300,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="2" y="12">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buystuff</parameter>
-        <parameter name="title">-- Xin Blanca (塞门镇) buys --</parameter>
+        <parameter name="title">-- 辛布兰卡 (塞门镇) buys --</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">book_blue</attribute>

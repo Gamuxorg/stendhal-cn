@@ -86,7 +86,7 @@ public class McPeglegIOUTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("I see you!", getReply(npc));
 
 		// equip with IOU "IOU 250 money. (signed) McPegleg"
-		PlayerTestHelper.equipWithItem(player, "note", "charles");
+		PlayerTestHelper.equipWithItem(player, "笔记", "charles");
 
 		en.step(player, "hi");
 		assertEquals("Yo matey! You look like you need #help.", getReply(npc));

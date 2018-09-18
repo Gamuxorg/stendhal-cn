@@ -46,7 +46,7 @@ public class TraderNPC implements ZoneConfigurator {
 	}
 
 	private void buildXinBlanca(final StendhalRPZone zone) {
-		final SpeakerNPC xinBlanca = new SpeakerNPC("Xin Blanca") {
+		final SpeakerNPC xinBlanca = new SpeakerNPC("辛布兰卡") {
 
 			@Override
 			protected void createPath() {
@@ -74,7 +74,7 @@ public class TraderNPC implements ZoneConfigurator {
 		};
 
 		xinBlanca.setEntityClass("weaponsellernpc");
-		xinBlanca.setDescription("你遇见了 Xin Blanca. 他卖给新手冒险者一些基本装备...");
+		xinBlanca.setDescription("你遇见了 辛布兰卡. 他卖给新手冒险者一些基本装备...");
 		xinBlanca.setPosition(2, 15);
 		xinBlanca.initHP(100);
 		zone.add(xinBlanca);

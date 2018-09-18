@@ -68,7 +68,7 @@
       <item value="mega potion" quantity="[2,5]" probability="50.0"/>
       <item value="soup" quantity="[2,4]" probability="50.0"/>
       <item value="giant heart" quantity="[1,1]" probability="90.0"/>
-      <item value="黑曜石靴" quantity="[1,1]" probability="1.0"/>
+      <item value="密银靴" quantity="[1,1]" probability="1.0"/>
       <item value="加强箭" quantity="[10,30]" probability="5.0"/>
       <item value="mithril bow" quantity="[1,1]" probability="0.5"/>
       <item value="money" quantity="[5000,25000]" probability="100.0"/>
@@ -119,7 +119,7 @@
       <item value="giant heart" quantity="[1,1]" probability="85.0"/>
       <item value="money" quantity="[200,1000]" probability="100.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.02"/>
-      <item value="vulcano hammer" quantity="[1,1]" probability="0.01"/>
+      <item value="火山之锤" quantity="[1,1]" probability="0.01"/>
       <item value="黑斗篷" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>

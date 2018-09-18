@@ -108,7 +108,7 @@ public class RingMakerTest {
 		assertTrue(en.step(player, "bye"));
 		// -----------------------------------------------
 		final RingOfLife ring = (RingOfLife) SingletonRepository.getEntityManager().getItem("emerald ring");
-		player.getSlot("bag").add(ring);
+		player.getSlot("背包").add(ring);
 		assertTrue(en.step(player, "hi"));
 		assertEquals("Hi! Can I #help you?", getReply(npc));
 		assertTrue(en.step(player, "help"));
@@ -139,7 +139,7 @@ public class RingMakerTest {
 		en = npc.getEngine();
 		final RingOfLife ring = (RingOfLife) SingletonRepository.getEntityManager().getItem("emerald ring");
 		ring.damage();
-		player.getSlot("bag").add(ring);
+		player.getSlot("背包").add(ring);
 		assertTrue(en.step(player, "hi"));
 		assertEquals("Hi! Can I #help you?", getReply(npc));
 		assertTrue(en.step(player, "help"));

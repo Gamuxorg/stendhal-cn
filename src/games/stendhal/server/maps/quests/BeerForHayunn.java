@@ -47,8 +47,8 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>海云那冉 asks you to buy a 啤酒 from Margaret.</li>
- * <li>Margaret sells you a 啤酒.</li>
+ * <li>海云那冉 asks you to buy a 啤酒 from 玛格丽特.</li>
+ * <li>玛格丽特 sells you a 啤酒.</li>
  * <li>海云那冉 sees your 啤酒, asks for it and then thanks you.</li>
  * </ul>
  *
@@ -82,7 +82,7 @@ public class BeerForHayunn extends AbstractQuest {
 			res.add("我不想让 海云那冉 喝醉.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("我答应海云那冉, 从塞门镇 酒店的 Margaret 处买瓶啤酒给他.");
+			res.add("我答应海云那冉, 从塞门镇 酒店的 玛格丽特 处买瓶啤酒给他.");
 		}
 		if ("start".equals(questState) && player.isEquipped("啤酒")
 				|| "done".equals(questState)) {
@@ -143,15 +143,15 @@ public class BeerForHayunn extends AbstractQuest {
 			"啤酒",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"#Margaret 卖的冰镇啤酒就够了, 怎么样, 你愿意去吗？",
+			"#玛格丽特 卖的冰镇啤酒就够了, 怎么样, 你愿意去吗？",
 			null);
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			"Margaret",
+			"玛格丽特",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"Margaret 是酒店的可爱妹纸, 当然也非常漂亮！哈哈, 你是不是要去看看？顺便买点啤酒. ",
+			"玛格丽特 是酒店的可爱妹纸, 当然也非常漂亮！哈哈, 你是不是要去看看？顺便买点啤酒. ",
 			null);
 	}
 

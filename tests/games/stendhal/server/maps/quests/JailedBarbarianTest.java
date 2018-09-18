@@ -88,7 +88,7 @@ public class JailedBarbarianTest {
 
 		// -----------------------------------------------
 		Item item = ItemTestHelper.createItem("scythe", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Flowers, flowers. All over here these ugly flowers!", getReply(npc));
@@ -154,7 +154,7 @@ public class JailedBarbarianTest {
 
 
 		item = ItemTestHelper.createItem("egg", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "hi");
 		assertEquals("Flowers, flowers. All over here these ugly flowers!", getReply(npc));
 		en.step(player, "quest");
@@ -206,7 +206,7 @@ public class JailedBarbarianTest {
 
 		// -----------------------------------------------
 		item = ItemTestHelper.createItem("barbarian armor", 1);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "hi");
 		assertEquals("Flowers, flowers. All over here these ugly flowers!", getReply(npc));
 		en.step(player, "quest");

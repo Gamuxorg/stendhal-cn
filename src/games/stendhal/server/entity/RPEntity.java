@@ -2673,7 +2673,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 	 * You can only throw missiles while you're not holding another weapon. This
 	 * restriction is a workaround because of the way attack strength is
 	 * determined; otherwise, one could increase one's spear attack strength by
-	 * holding an ice sword in the other hand.
+	 * holding an 冰剑 in the other hand.
 	 *
 	 * @return The missiles, or null if this entity is not holding missiles. If
 	 *         the entity has missiles in each hand, returns the missiles in its

@@ -112,8 +112,8 @@ public class KoboldishTorcibud extends AbstractQuest {
     // a template of the items that wrviliza will ask for the quest,
     // it is only used to initialize the triggers in phase_2.
     private static final String REQUIRED_ITEMS_TEMPLATE =
-        "eared bottle=0;" +
-        "slim bottle=0;" +
+        "耳瓶=0;" +
+        "细瓶子=0;" +
         "mandragora=0;" +
         "洋蓟=0;" +
         "海芋=0;" +
@@ -239,8 +239,8 @@ public class KoboldishTorcibud extends AbstractQuest {
 		int required_mandragora = Rand.randUniform(1,3) + pLevel / FACTOR_MANDRAGORA;
 
         return
-            "eared bottle=" + required_bottle_eared + ";" +
-            "slim bottle=" + required_bottle_slim + ";" +
+            "耳瓶=" + required_bottle_eared + ";" +
+            "细瓶子=" + required_bottle_slim + ";" +
             "mandragora=" + required_mandragora + ";" +
             "洋蓟=" + Rand.roll1D6() + ";" +
             "海芋=" + Rand.roll1D6() + ";" +

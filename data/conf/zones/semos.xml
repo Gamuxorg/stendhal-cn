@@ -2183,9 +2183,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellstuff</parameter>
-        <parameter name="title">Xin Blanca's shop (selling)</parameter>
+        <parameter name="title">辛布兰卡's shop (selling)</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">You can buy these things from Xin Blanca.</parameter>
+        <parameter name="caption">You can buy these things from 辛布兰卡.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2195,9 +2195,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buystuff</parameter>
-        <parameter name="title">Xin Blanca's shop (buying)</parameter>
+        <parameter name="title">辛布兰卡's shop (buying)</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">You can sell these things to Xin Blanca.</parameter>
+        <parameter name="caption">You can sell these things to 辛布兰卡.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2208,7 +2208,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="2" y="16">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.chest.NPCOwnedChest">
-        <parameter name="npc">Xin Blanca</parameter>
+        <parameter name="npc">辛布兰卡</parameter>
       </implementation>
     </entity>
 
@@ -2218,7 +2218,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
         <parameter name="shop">food&amp;drinks</parameter>
         <parameter name="title">Semos Tavern's menu</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">You can buy these things by asking Margaret.</parameter>
+        <parameter name="caption">You can buy these things by asking 玛格丽特.</parameter>
       </implementation>
 
       <attribute name="class">book_red</attribute>
@@ -2305,7 +2305,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.QuestCheckingPortal">
         <parameter name="quest">learn_scrying</parameter>
-        <parameter name="rejected">If Ilisa asks, say #yes you have a message from the ball.</parameter>
+        <parameter name="rejected">If 伊丽莎 asks, say #yes you have a message from the ball.</parameter>
       </implementation>
       <attribute name="use" />
     </portal>
@@ -2315,7 +2315,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.QuestCheckingPortal">
         <parameter name="quest">learn_scrying</parameter>
-        <parameter name="rejected">If Ilisa asks, say #yes you have a message from the ball.</parameter>
+        <parameter name="rejected">If 伊丽莎 asks, say #yes you have a message from the ball.</parameter>
       </implementation>
       <attribute name="use" />
     </portal>
@@ -2700,7 +2700,7 @@ Holy mackerel! These chips are tasty.
     <entity x="22" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see an ad to sell armor to Xin Blanca.</attribute>
+      <attribute name="text">You see an ad to sell armor to 辛布兰卡.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>

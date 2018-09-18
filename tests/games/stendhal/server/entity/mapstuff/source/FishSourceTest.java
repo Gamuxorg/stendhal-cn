@@ -56,7 +56,7 @@ public class FishSourceTest {
 				null);
 		fishingRod.setQuantity(1);
 		fishingRod.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(fishingRod);
+		player.getSlot("背包").add(fishingRod);
 		assertTrue(player.isEquipped("fishing rod"));
 		fs.onUsed(player);
 		assertEquals("You have started fishing.", player.events().get(0).get("text"));
@@ -65,7 +65,7 @@ public class FishSourceTest {
 		assertFalse(player.has("private_text"));
 		final Player player2 = PlayerTestHelper.createPlayer("bob");
 
-		player2.getSlot("bag").add(fishingRod);
+		player2.getSlot("背包").add(fishingRod);
 		fs.onUsed(player2);
 		assertEquals("You have started fishing.", player2.events().get(0).get("text"));
 	}

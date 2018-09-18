@@ -76,7 +76,7 @@ public class SeedTest {
 		zone.add(player);
 
 		assertNotNull(seed);
-		player.equip("bag", seed);
+		player.equip("背包", seed);
 
 		assertFalse(seed.onUsed(player));
 	}

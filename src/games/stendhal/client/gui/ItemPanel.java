@@ -456,7 +456,7 @@ class ItemPanel extends JComponent implements DropTarget, Inspectable {
 			action.put(EquipActionConsts.TYPE, "equip");
 			action.put(EquipActionConsts.SOURCE_PATH, entityView.getEntity().getPath());
 			action.put(Actions.TARGET_PATH,
-					Arrays.asList(Integer.toString(User.get().getID().getObjectID()), "bag"));
+					Arrays.asList(Integer.toString(User.get().getID().getObjectID()), "背包"));
 
 			// Compatibility item identification data
 			// source object and content from THIS container
@@ -466,7 +466,7 @@ class ItemPanel extends JComponent implements DropTarget, Inspectable {
 			action.put(EquipActionConsts.BASE_ITEM, content.getID().getObjectID());
 			// target is player's bag
 			action.put(EquipActionConsts.TARGET_OBJECT, User.get().getID().getObjectID());
-			action.put(EquipActionConsts.TARGET_SLOT, "bag");
+			action.put(EquipActionConsts.TARGET_SLOT, "背包");
 
 			StendhalClient.get().send(action);
 		}

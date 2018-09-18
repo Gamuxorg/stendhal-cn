@@ -212,25 +212,25 @@ public class UltimateCollectorTest {
 		en.step(player, "bye");
 		assertEquals("It was nice to meet you.", getReply(npc));
 
-		player.setQuest("ultimate_collector", "vulcano hammer=1");
+		player.setQuest("ultimate_collector", "火山之锤=1");
 
 		en.step(player, "hi");
 		assertEquals("Did you bring me that very rare item I asked you for?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Hm, no, you don't have a vulcano hammer, don't try to fool me!", getReply(npc));
+		assertEquals("Hm, no, you don't have a 火山之锤, don't try to fool me!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("It was nice to meet you.", getReply(npc));
 
 		en.step(player, "hi");
 		assertEquals("Did you bring me that very rare item I asked you for?", getReply(npc));
 		en.step(player, "no");
-		assertEquals("Very well, come back when you have the vulcano hammer with you.", getReply(npc));
+		assertEquals("Very well, come back when you have the 火山之锤 with you.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("It was nice to meet you.", getReply(npc));
 
 
 		final int xp = player.getXP();
-		PlayerTestHelper.equipWithItem(player, "vulcano hammer");
+		PlayerTestHelper.equipWithItem(player, "火山之锤");
 		en.step(player, "hi");
 		assertEquals("Did you bring me that very rare item I asked you for?", getReply(npc));
 		en.step(player, "yes");

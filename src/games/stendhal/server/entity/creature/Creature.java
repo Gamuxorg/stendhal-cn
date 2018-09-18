@@ -544,7 +544,7 @@ public class Creature extends NPC {
 		}
 		if (harmlessCorpseName == null) {
 			// Set default harmless corpse to "bag.png"
-			harmlessCorpseName = "bag";
+			harmlessCorpseName = "背包";
 		}
 		corpseWidth = width;
 		corpseHeight = height;
@@ -561,7 +561,7 @@ public class Creature extends NPC {
 	@Override
 	public String getHarmlessCorpseName() {
 		if (harmlessCorpseName == null) {
-			return "bag";
+			return "背包";
 		}
 		return harmlessCorpseName;
 	}

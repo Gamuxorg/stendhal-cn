@@ -548,7 +548,7 @@ public class RPEntityTest {
 	public void testSlotNameToEquip() {
 		final RPEntity baglessentity = new MockRPentity();
 		final Item item = createMock(Item.class);
-		final List<String> slotnames = Arrays.asList("bag");
+		final List<String> slotnames = Arrays.asList("背包");
 		replay(item);
 		assertEquals(null, baglessentity.getSlotToEquip(item));
 		verify(item);
@@ -556,19 +556,19 @@ public class RPEntityTest {
 		reset(item);
 		final RPEntity entityWithBag = new MockRPentity() {
 			{
-				addSlot(new RPSlot("bag"));
+				addSlot(new RPSlot("背包"));
 			}
 		};
 		expect(item.getPossibleSlots()).andReturn(slotnames);
 
 		replay(item);
-		assertEquals("bag", entityWithBag.getSlotToEquip(item).getName());
+		assertEquals("背包", entityWithBag.getSlotToEquip(item).getName());
 		verify(item);
 
 		reset(item);
 		final RPEntity entityWithFullBag = new MockRPentity() {
 			{
-				RPSlot slot = new RPSlot("bag");
+				RPSlot slot = new RPSlot("背包");
 				addSlot(slot);
 				slot.setCapacity(0);
 			}
@@ -594,11 +594,11 @@ public class RPEntityTest {
 
 		entity.addSlot(new PlayerSlot("lhand"));
 		entity.addSlot(new PlayerSlot("rhand"));
-		entity.addSlot(new PlayerSlot("bag"));
+		entity.addSlot(new PlayerSlot("背包"));
 
 		// this is not actually legal in the game, due to the item definition.
 		// but this test shows that the flag must be in a hand to be droppable.
-		entity.getSlot("bag").add(flag);
+		entity.getSlot("背包").add(flag);
 
 		droppables = entity.getDroppables();
 		assertEquals(null, droppables);

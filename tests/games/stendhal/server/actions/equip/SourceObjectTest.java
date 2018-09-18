@@ -155,7 +155,7 @@ public class SourceObjectTest {
 		action.put(EquipActionConsts.BASE_ITEM, dropitem.getID().getObjectID());
 
 		action.put(EquipActionConsts.BASE_OBJECT , bob.getID().getObjectID());
-		action.put(EquipActionConsts.BASE_SLOT, "bag");
+		action.put(EquipActionConsts.BASE_SLOT, "背包");
 		MockStendlRPWorld.get().addRPZone(zone);
 		assertNotNull(bob.getZone());
 
@@ -181,7 +181,7 @@ public class SourceObjectTest {
 		action.put(EquipActionConsts.BASE_ITEM, dropitem.getID().getObjectID());
 
 		action.put(EquipActionConsts.BASE_OBJECT , bob.getID().getObjectID());
-		action.put(EquipActionConsts.BASE_SLOT, "bag");
+		action.put(EquipActionConsts.BASE_SLOT, "背包");
 		MockStendlRPWorld.get().addRPZone(zone);
 		assertNotNull(bob.getZone());
 

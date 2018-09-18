@@ -126,8 +126,8 @@ public class MeetMonogenes extends AbstractQuest {
 			"地图", null, ConversationStates.ATTENDING,
 			"我已在这张地图上作了地标标记:\n"
 			+ "1 镇政厅, 城主住在里面,   2 图书馆,   3 银库,   4 面包房,\n"
-			+ "5 银库,   6 铁匠铺的卡蔓,   7 酒店的Margaret \n"
-        	+ "8 教堂的Ilisa,   9 地牢 Dungeon,\n"
+			+ "5 银库,   6 铁匠铺的卡蔓,   7 酒店的玛格丽特 \n"
+        	+ "8 教堂的伊丽莎,   9 地牢 Dungeon,\n"
         	+ "10 公共箱, \n"
         	+ "A 塞门镇 村庄,   B 北部平源和矿山, \n"
         	+ "C 去 Ados 城的大路, \n"

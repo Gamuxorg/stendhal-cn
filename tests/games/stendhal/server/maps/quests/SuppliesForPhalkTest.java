@@ -334,11 +334,11 @@ public class SuppliesForPhalkTest {
 		// the armor and cloak must be the special ones, we tested ones without infostring already.
 		Item armor = ItemTestHelper.createItem("golden armor", 1);
 		armor.setInfoString("Phalk");
-		player.getSlot("bag").add(armor);
+		player.getSlot("背包").add(armor);
 
 		Item cloak = ItemTestHelper.createItem("dwarf cloak", 1);
 		cloak.setInfoString("Phalk");
-		player.getSlot("bag").add(cloak);
+		player.getSlot("背包").add(cloak);
 
 		final int xp = player.getXP();
 

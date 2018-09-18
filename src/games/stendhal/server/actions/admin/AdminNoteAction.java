@@ -29,7 +29,7 @@ public class AdminNoteAction extends AdministrationAction {
 
 		if (action.has("target")) {
 			String target = action.get("target");
-			String adminnote = action.get("note");
+			String adminnote = action.get("笔记");
 
 			Logger.getLogger(AdminNoteAction.class).info(sender + " has added an adminnote to " + target + " saying: " + adminnote);
 			new GameEvent(sender, "adminnote",  target, adminnote).raise();

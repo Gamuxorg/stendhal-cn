@@ -253,7 +253,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("knives", "knife");
 		testPluralisationAndSingularisation("daggers", "dagger");
-		testPluralisationAndSingularisation("short swords", "short sword");
+		testPluralisationAndSingularisation("短剑s", "短剑");
 		testPluralisationAndSingularisation("swords", "sword");
 		testPluralisationAndSingularisation("scimitars", "scimitar");
 		testPluralisationAndSingularisation(
@@ -426,7 +426,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bronze gm tokens",
 				"bronze gm token");
 		testPluralisationAndSingularisation("tokens", "token");
-		testPluralisationAndSingularisation("notes", "note");
+		testPluralisationAndSingularisation("notes", "笔记");
 		testPluralisationAndSingularisation("coupons", "coupon");
 		testPluralisationAndSingularisation("dice", "dice");
 		testPluralisationAndSingularisation("teddies", "teddy");

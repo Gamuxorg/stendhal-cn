@@ -62,7 +62,7 @@ public class McPeglegIOU extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("McPegleg");
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "note"),
+			Arrays.asList("iou", "henry", "charles", "笔记"),
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING, null,
 			new ChatAction() {
@@ -71,7 +71,7 @@ public class McPeglegIOU extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					// from all notes that the player is carrying, try to
 					// find the IOU note
-					final List<Item> notes = player.getAllEquipped("note");
+					final List<Item> notes = player.getAllEquipped("笔记");
 					Item iouNote = null;
 					for (final Item note : notes) {
 						if ("charles".equalsIgnoreCase(note.getInfoString())) {
@@ -95,7 +95,7 @@ public class McPeglegIOU extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "note"),
+			Arrays.asList("iou", "henry", "charles", "笔记"),
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
 			"You already got cash for that damned IOU!", null);

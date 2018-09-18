@@ -130,7 +130,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("异种元素斗篷",1);
 
 		// club
-		items.put("skull staff",1);
+		items.put("骨玉法杖",1);
 
 		// drinks
 		items.put("mega potion",5);
@@ -186,8 +186,8 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("卓尔之剑",1);
 		items.put("烈火剑",1);
 		items.put("巨剑",1);
-		items.put("hell dagger",1);
-		items.put("ice sword",1);
+		items.put("地狱匕首",1);
+		items.put("冰剑",1);
 		items.put("immortal sword",1);
 		items.put("night dagger",1);
 		items.put("xeno sword",1);

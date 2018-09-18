@@ -21,7 +21,7 @@ public final class Constants {
 	 * order (i.e. bag first).
 	 */
 	// TODO: let the slots decide that themselves
-	public static final String[] CARRYING_SLOTS = { "bag", "head", "rhand",
-			"lhand", "armor", "finger", "cloak", "legs", "feet", "keyring", "back", "belt" };
+	public static final String[] CARRYING_SLOTS = { "背包", "head", "rhand",
+			"lhand", "armor", "finger", "cloak", "legs", "feet", "钥匙环", "back", "belt" };
 
 }

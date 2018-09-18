@@ -143,7 +143,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		Item item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza del Mare");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		final SpeakerNPC eliza = SingletonRepository.getNPCList().get("Eliza");
 		en = eliza.getEngine();
@@ -208,7 +208,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Margherita");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc1));
@@ -265,7 +265,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Margherita");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		// on time
 		en.step(player, "hi");
@@ -279,7 +279,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Vegetale");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Welcome to the Ados Wildlife Refuge! We rescue animals from being slaughtered by evil adventurers. But we need help... maybe you could do a #task for us?", getReply(npc1));
@@ -306,7 +306,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Napoli");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		npc1 = SingletonRepository.getNPCList().get("Fidorea");
 		en = npc1.getEngine();
@@ -323,7 +323,7 @@ public class PizzaDeliveryTest {
 
 		// try taking any pizza to fidorea when we didn't have a quest slot activated
 		item = ItemTestHelper.createItem("pizza");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		player.removeQuest(questSlot);
 		assertFalse(player.hasQuest(questSlot));
 
@@ -360,7 +360,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Margherita");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		npc1 = SingletonRepository.getNPCList().get("Jenny");
 		en = npc1.getEngine();
 		player.setQuest(questSlot, "Jenny;" + System.currentTimeMillis());
@@ -395,7 +395,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Vegetale");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// be late
 		player.setQuest(questSlot, "Katinka;0");
 
@@ -426,7 +426,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Hawaii");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// test ask leander for task again before completing last
 		en.step(player, "hi");
 		assertEquals("Hallo! Glad to see you in my kitchen where I make #pizza and #sandwiches.", getReply(npc1));
@@ -461,7 +461,7 @@ public class PizzaDeliveryTest {
 		player.drop("pizza");
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Diavolo");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		npc1 = SingletonRepository.getNPCList().get("Haizen");
 		en = npc1.getEngine();
@@ -478,11 +478,11 @@ public class PizzaDeliveryTest {
 		// Check coming back to leander after a failure
 		// Add a test pizza, one that leander should not steal
 		item = ItemTestHelper.createItem("pizza");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// and then the pizza that belongs to Haizen
 		item = ItemTestHelper.createItem("pizza");
 		item.setInfoString("Pizza Diavolo");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// Haizen allows 4 min delay. Set the time stamp 5min  to the past
 		player.setQuest(questSlot, "Haizen;" + (System.currentTimeMillis() - 1000 * 60 * 5));
 		en = leander.getEngine();

@@ -18,7 +18,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.mapstuff.spawner.PassiveEntityRespawnPoint;
 
 /**
- * Creates a slim and an eared bottle on the counter in front of the small hut.
+ * Creates a slim and an 耳瓶 on the counter in front of the small hut.
  */
 public class ItemsOnTable implements ZoneConfigurator {
 	@Override
@@ -28,16 +28,16 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 	private void buildOutsideHutArea(final StendhalRPZone zone) {
 
-        // grower for a slim bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("slim bottle", 12000);
+        // grower for a 细瓶子 (1h)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("细瓶子", 12000);
 		bottleGrower1.setPosition(48, 28);
 		bottleGrower1.setDescription("This seems a likely spot where a bottle could be found.");
 		zone.add(bottleGrower1);
 
 		bottleGrower1.setToFullGrowth();
 
-        // grower for an eared bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("eared bottle", 12000);
+        // grower for an 耳瓶 (1h)
+		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("耳瓶", 12000);
 		bottleGrower2.setPosition(49, 31);
 		bottleGrower2.setDescription("This seems a likely spot where a bottle could be found.");
 		zone.add(bottleGrower2);

@@ -54,7 +54,7 @@ public class FoodMill extends Item {
     private void init() {
     	if ("sugar mill".equals(getName())) {
     		input = "sugar cane";
-    		container = "empty sack";
+    		container = "空布袋";
     		output = "sugar";
     	} else if ("scroll eraser".equals(getName())) {
     		input = "标记卷轴";

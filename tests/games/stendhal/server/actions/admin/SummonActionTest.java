@@ -168,7 +168,7 @@ public class SummonActionTest {
 		final RPAction action = new RPAction();
 		action.put("type", "summon");
 		action.put("creature", "unknown");
-		action.put("x", "bag");
+		action.put("x", "背包");
 		action.put("y", "perch");
 		CommandCenter.execute(pl, action);
 		assertEquals(1, pl.getID().getObjectID());

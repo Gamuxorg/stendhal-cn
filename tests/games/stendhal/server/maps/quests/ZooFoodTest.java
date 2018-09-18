@@ -151,7 +151,7 @@ public class ZooFoodTest extends ZonePlayerAndNPCTestImpl {
 		final StackableItem ham = new StackableItem("火腿", "", "", null);
 		ham.setQuantity(5);
 		ham.setID(new ID(2, ZONE_NAME));
-		player.getSlot("bag").add(ham);
+		player.getSlot("背包").add(ham);
 		assertEquals(5, player.getNumberOfEquipped("火腿"));
 
 		// bother katinka again
@@ -168,7 +168,7 @@ public class ZooFoodTest extends ZonePlayerAndNPCTestImpl {
 		final StackableItem ham2 = new StackableItem("火腿", "", "", null);
 		ham2.setQuantity(5);
 		ham2.setID(new ID(3, ZONE_NAME));
-		player.getSlot("bag").add(ham2);
+		player.getSlot("背包").add(ham2);
 		assertEquals(10, player.getNumberOfEquipped("火腿"));
 		// bring stuff to katinka
 		assertTrue(enKatinka.step(player, "hi"));

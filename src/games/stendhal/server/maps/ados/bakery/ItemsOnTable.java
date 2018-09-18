@@ -29,8 +29,8 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 	private void buildBakeryArea(final StendhalRPZone zone) {
 
-		// grower for an empty eared bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("eared bottle", 12000);
+		// grower for an empty 耳瓶 (1h)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("耳瓶", 12000);
 		bottleGrower1.setPosition(8, 13);
 		bottleGrower1.setDescription("这地方看起来像是放瓶子的地方.");
 		zone.add(bottleGrower1);

@@ -247,9 +247,9 @@ public class HungryJoshua extends AbstractQuest {
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		if (System.getProperty("stendhal.container") != null) {
 			reward.add(new CreateSlotAction(ImmutableList.of("belt", "back")));
-			reward.add(new EquipItemAction("keyring", 1, true));
+			reward.add(new EquipItemAction("钥匙环", 1, true));
 		} else {
-			reward.add(new EnableFeatureAction("keyring"));
+			reward.add(new EnableFeatureAction("钥匙环"));
 		}
 		/** Complete the quest */
 		npc.add(

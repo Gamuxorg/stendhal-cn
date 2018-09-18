@@ -113,7 +113,7 @@ public class ArmorForDagobertTest {
 
 		// -----------------------------------------------
 		final Item item = ItemTestHelper.createItem("leather cuirass");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		questHistory.add("I found a leather cuirass and will take it to Dagobert.");
 		assertEquals(questHistory, quest.getHistory(player));
 
@@ -151,7 +151,7 @@ public class ArmorForDagobertTest {
 
 		// -----------------------------------------------
 
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		en.step(player, "hi");
 		questHistory.add("I found a leather cuirass and will take it to Dagobert.");
 		assertEquals(questHistory, quest.getHistory(player));

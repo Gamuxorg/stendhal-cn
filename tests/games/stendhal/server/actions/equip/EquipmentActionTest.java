@@ -109,7 +109,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		RPAction drop = new RPAction();
 		drop.put("type", "drop");
 		drop.put("baseobject", player.getID().getObjectID());
-		drop.put("baseslot", "bag");
+		drop.put("baseslot", "背包");
 		drop.put("x", player.getX());
 		drop.put("y", player.getY() + 1);
 		drop.put("quantity", "1");
@@ -122,7 +122,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		// same with source path
 		drop = new RPAction();
 		drop.put("type", "drop");
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag", "-1");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包", "-1");
 		drop.put(EquipActionConsts.SOURCE_PATH, path);
 		action.onAction(player, drop);
 	}
@@ -160,13 +160,13 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		StendhalRPZone localzone = new StendhalRPZone("testzone", 20, 20);
 		Item item = SingletonRepository.getEntityManager().getItem("cheese");
 
-		player.equip("bag", item);
+		player.equip("背包", item);
 		assertTrue(player.isEquipped("cheese"));
 		localzone.add(player);
 		RPAction drop = new RPAction();
 		drop.put("type", "drop");
 		drop.put("baseobject", player.getID().getObjectID());
-		drop.put("baseslot", "bag");
+		drop.put("baseslot", "背包");
 		drop.put("x", player.getX());
 		drop.put("y", player.getY() + 1);
 		drop.put("quantity", "1");
@@ -183,10 +183,10 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 
 		// same with source path
 		localzone.remove(item);
-		player.equip("bag", item);
+		player.equip("背包", item);
 		drop = new RPAction();
 		drop.put("type", "drop");
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		drop.put(EquipActionConsts.SOURCE_PATH, path);
 		drop.put("x", player.getX());
 		drop.put("y", player.getY() + 1);
@@ -208,13 +208,13 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		StendhalRPZone localzone = new StendhalRPZone("testzone", 20, 20);
 		StackableItem item = (StackableItem) SingletonRepository.getEntityManager().getItem("cheese");
 		item.setQuantity(5);
-		player.equip("bag", item);
+		player.equip("背包", item);
 		assertTrue(player.isEquipped("cheese", 5));
 		localzone.add(player);
 		final RPAction drop = new RPAction();
 		drop.put("type", "drop");
 		drop.put("baseobject", player.getID().getObjectID());
-		drop.put("baseslot", "bag");
+		drop.put("baseslot", "背包");
 		drop.put("x", player.getX());
 		drop.put("y", player.getY() + 1);
 		drop.put("quantity", "2");
@@ -247,7 +247,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
 
@@ -263,7 +263,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.SOURCE_PATH, Arrays.asList(Integer.toString(item.getID().getObjectID())));
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
@@ -291,7 +291,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
 
@@ -306,7 +306,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.SOURCE_PATH, Arrays.asList(Integer.toString(item.getID().getObjectID())));
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
@@ -333,7 +333,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
 
@@ -355,7 +355,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.SOURCE_PATH, Arrays.asList(Integer.toString(item.getID().getObjectID())));
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
@@ -396,7 +396,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
 
@@ -411,7 +411,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.SOURCE_PATH, Arrays.asList(Integer.toString(item.getID().getObjectID())));
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 		equip.put(EquipActionConsts.QUANTITY, "2");
 
@@ -442,18 +442,18 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 
 		action.onAction(player, equip);
 
 		assertTrue(player.isEquipped("cheese"));
-		assertTrue("Check the cheese is in bag, not in rhand anymore", player.getSlot("bag").getFirst() == item);
+		assertTrue("Check the cheese is in bag, not in rhand anymore", player.getSlot("背包").getFirst() == item);
 		assertEquals(1, player.getTotalNumberOf("cheese"));
 
 		// The same, but using paths; move the cheese back to hand
 		equip = new RPAction();
 		equip.put("type", "equip");
-		List<String> srcPath = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> srcPath = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		equip.put(EquipActionConsts.SOURCE_PATH, srcPath);
 		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "rhand");
 		equip.put(Actions.TARGET_PATH, path);
@@ -487,7 +487,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 
 		action.onAction(player, equip);
 
@@ -500,7 +500,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		equip.put("type", "equip");
 		List<String> srcPath = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bank", Integer.toString(item.getID().getObjectID()));
 		equip.put(EquipActionConsts.SOURCE_PATH, srcPath);
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 
 		action.onAction(player, equip);
@@ -518,7 +518,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		SingletonRepository.getRPWorld().addRPZone(localzone);
 		final Player player = PlayerTestHelper.createPlayer("bob");
 		StackableItem item = (StackableItem) SingletonRepository.getEntityManager().getItem("cheese");
-		player.equip("bag", item);
+		player.equip("背包", item);
 		localzone.add(player);
 		assertTrue(player.isEquipped("cheese"));
 		assertEquals(1, player.getTotalNumberOf("cheese"));
@@ -528,7 +528,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		RPAction equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.BASE_SLOT, "bag");
+		equip.put(EquipActionConsts.BASE_SLOT, "背包");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
@@ -543,7 +543,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		// The same using item paths
 		equip = new RPAction();
 		equip.put("type", "equip");
-		List<String> srcPath = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> srcPath = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		equip.put(EquipActionConsts.SOURCE_PATH, srcPath);
 		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bank");
 		equip.put(Actions.TARGET_PATH, path);
@@ -565,7 +565,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		final Player player = PlayerTestHelper.createPlayer("bob");
 		final Player player2 = PlayerTestHelper.createPlayer("croesus");
 		StackableItem item = (StackableItem) SingletonRepository.getEntityManager().getItem("cheese");
-		player2.equip("bag", item);
+		player2.equip("背包", item);
 		localzone.add(player);
 		localzone.add(player2);
 		assertFalse(player.isEquipped("cheese"));
@@ -576,11 +576,11 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		RPAction equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_OBJECT, player2.getID().getObjectID());
-		equip.put(EquipActionConsts.BASE_SLOT, "bag");
+		equip.put(EquipActionConsts.BASE_SLOT, "背包");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 
 		action.onAction(player, equip);
 
@@ -591,9 +591,9 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		// The same using item paths
 		equip = new RPAction();
 		equip.put("type", "equip");
-		List<String> srcPath = Arrays.asList(Integer.toString(player2.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> srcPath = Arrays.asList(Integer.toString(player2.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		equip.put(EquipActionConsts.SOURCE_PATH, srcPath);
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 
 		action.onAction(player, equip);
@@ -613,7 +613,7 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		final Player player = PlayerTestHelper.createPlayer("bob");
 		final Player player2 = PlayerTestHelper.createPlayer("croesus");
 		StackableItem item = (StackableItem) SingletonRepository.getEntityManager().getItem("cheese");
-		player2.equip("bag", item);
+		player2.equip("背包", item);
 		localzone.add(player);
 		localzone.add(player2);
 		assertFalse(player.isEquipped("cheese"));
@@ -624,11 +624,11 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		RPAction equip = new RPAction();
 		equip.put("type", "equip");
 		equip.put(EquipActionConsts.BASE_OBJECT, player2.getID().getObjectID());
-		equip.put(EquipActionConsts.BASE_SLOT, "bag");
+		equip.put(EquipActionConsts.BASE_SLOT, "背包");
 		equip.put(EquipActionConsts.BASE_ITEM, item.getID().getObjectID());
 
 		equip.put(EquipActionConsts.TARGET_OBJECT, player.getID().getObjectID());
-		equip.put(EquipActionConsts.TARGET_SLOT, "bag");
+		equip.put(EquipActionConsts.TARGET_SLOT, "背包");
 
 		action.onAction(player2, equip);
 
@@ -639,9 +639,9 @@ public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 		// The same using item paths
 		equip = new RPAction();
 		equip.put("type", "equip");
-		List<String> srcPath = Arrays.asList(Integer.toString(player2.getID().getObjectID()), "bag", Integer.toString(item.getID().getObjectID()));
+		List<String> srcPath = Arrays.asList(Integer.toString(player2.getID().getObjectID()), "背包", Integer.toString(item.getID().getObjectID()));
 		equip.put(EquipActionConsts.SOURCE_PATH, srcPath);
-		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "bag");
+		List<String> path = Arrays.asList(Integer.toString(player.getID().getObjectID()), "背包");
 		equip.put(Actions.TARGET_PATH, path);
 
 		action.onAction(player2, equip);

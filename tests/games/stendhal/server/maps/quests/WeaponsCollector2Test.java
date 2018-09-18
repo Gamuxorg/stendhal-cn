@@ -112,7 +112,7 @@ public class WeaponsCollector2Test {
 
 		assertTrue(en.stepTest(pl, "list"));
 		assertEquals(
-				"There are 3 weapons still missing from my newest collection: #'morning star', #staff, and #'great sword'."
+				"There are 3 weapons still missing from my newest collection: #'破晓之星', #staff, and #'great sword'."
 						+ " Do you have anything like that with you?",
 				getReply(npc));
 
@@ -128,28 +128,28 @@ public class WeaponsCollector2Test {
 
 		assertTrue(en.stepTest(pl, "list"));
 		assertEquals(
-				"There are 3 weapons still missing from my newest collection: #'morning star', #staff, and #'great sword'."
+				"There are 3 weapons still missing from my newest collection: #'破晓之星', #staff, and #'great sword'."
 						+ " Do you have anything like that with you?",
 				getReply(npc));
 
 		assertTrue(en.stepTest(pl, "yes"));
 		assertEquals("What did you find?", getReply(npc));
 
-		Item weapon = new Item("morning star", "", "", null);
-		pl.getSlot("bag").add(weapon);
+		Item weapon = new Item("破晓之星", "", "", null);
+		pl.getSlot("背包").add(weapon);
 
-		assertTrue(en.stepTest(pl, "morning star"));
+		assertTrue(en.stepTest(pl, "破晓之星"));
 		assertEquals("Thank you very much! Do you have anything more for me?",
 				getReply(npc));
 
-		assertTrue(en.stepTest(pl, "morning star"));
+		assertTrue(en.stepTest(pl, "破晓之星"));
 		assertEquals(
 				"I already have that one. Do you have any other weapon for me?",
 				getReply(npc));
 
 		for (final String cloakName : wc.getNeededItems()) {
 			weapon = new Item(cloakName, "", "", null);
-			pl.getSlot("bag").add(weapon);
+			pl.getSlot("背包").add(weapon);
 			en.step(pl, cloakName);
 		}
 

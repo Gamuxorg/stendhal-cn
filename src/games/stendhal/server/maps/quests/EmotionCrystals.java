@@ -378,11 +378,11 @@ public class EmotionCrystals extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(
 						new QuestActiveCondition(QUEST_SLOT),
-						new PlayerHasItemWithHimCondition("red emotion crystal"),
-						new PlayerHasItemWithHimCondition("purple emotion crystal"),
-						new PlayerHasItemWithHimCondition("yellow emotion crystal"),
-						new PlayerHasItemWithHimCondition("pink emotion crystal"),
-						new PlayerHasItemWithHimCondition("blue emotion crystal")),
+						new PlayerHasItemWithHimCondition("红色心情水晶"),
+						new PlayerHasItemWithHimCondition("紫色心情水晶"),
+						new PlayerHasItemWithHimCondition("黄色心情水晶"),
+						new PlayerHasItemWithHimCondition("粉色心情水晶"),
+						new PlayerHasItemWithHimCondition("蓝色心情水晶")),
 				ConversationStates.QUEST_ITEM_BROUGHT,
 				"Did you bring the crystals?",
 				null);
@@ -393,11 +393,11 @@ public class EmotionCrystals extends AbstractQuest {
 				new AndCondition(
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new OrCondition(
-								new NotCondition(new PlayerHasItemWithHimCondition("red emotion crystal")),
-								new NotCondition(new PlayerHasItemWithHimCondition("purple emotion crystal")),
-								new NotCondition(new PlayerHasItemWithHimCondition("yellow emotion crystal")),
-								new NotCondition(new PlayerHasItemWithHimCondition("pink emotion crystal")),
-								new NotCondition(new PlayerHasItemWithHimCondition("blue emotion crystal")))),
+								new NotCondition(new PlayerHasItemWithHimCondition("红色心情水晶")),
+								new NotCondition(new PlayerHasItemWithHimCondition("紫色心情水晶")),
+								new NotCondition(new PlayerHasItemWithHimCondition("黄色心情水晶")),
+								new NotCondition(new PlayerHasItemWithHimCondition("粉色心情水晶")),
+								new NotCondition(new PlayerHasItemWithHimCondition("蓝色心情水晶")))),
 			ConversationStates.ATTENDING,
 			"请带给我所有你找到的心情水晶.",
 			null);

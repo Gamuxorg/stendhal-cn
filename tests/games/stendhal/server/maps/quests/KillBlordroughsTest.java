@@ -173,12 +173,12 @@ public class KillBlordroughsTest {
 		en.step(player, "hi");
 		assertEquals("I hope you have disturbed me for a good reason?", getReply(npc));
 		int tempxp = player.getXP();
-		int tempmoneys = player.getEquippedItemClass("bag", "money").getQuantity();
+		int tempmoneys = player.getEquippedItemClass("背包", "money").getQuantity();
 		double tempkarma = player.getKarma();
 		en.step(player, "quest");
 		assertEquals("Good work! Take this moneys. And if you will need assassin job again, ask me in one week. I think they will try to fight me again.", getReply(npc));
         assertEquals(tempxp, player.getXP()-500000);
-        assertEquals(tempmoneys, player.getEquippedItemClass("bag", "money").getQuantity()-50000);
+        assertEquals(tempmoneys, player.getEquippedItemClass("背包", "money").getQuantity()-50000);
         assertEquals(tempkarma, player.getKarma()-5, 0.000001);
         en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));

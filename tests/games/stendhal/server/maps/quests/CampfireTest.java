@@ -155,7 +155,7 @@ public class CampfireTest {
 		final StackableItem wood = new StackableItem("wood", "", "", null);
 		wood.setQuantity(10);
 		wood.setID(new ID(2, ZONE_NAME));
-		player.getSlot("bag").add(wood);
+		player.getSlot("背包").add(wood);
 		assertEquals(10, player.getNumberOfEquipped("wood"));
 		assertTrue(en.step(player, "hi"));
 		assertEquals(

@@ -72,14 +72,14 @@ public class PlayerTransformerTest {
 		RPObject obje = new RPObject();
 		obje.put("name", "bob");
 		obje.setID(new RPObject.ID(1,"testzone"));
-		RPSlot slot = new RPSlot("bag");
+		RPSlot slot = new RPSlot("背包");
 
 		obje.addSlot(slot);
 		slot.add(new Item("leather_armor","clazz","subclass",null));
 		RPObject transObj = new PlayerTransformer().transform(obje);
-		assertTrue(transObj.hasSlot("bag"));
+		assertTrue(transObj.hasSlot("背包"));
 
-		assertThat(transObj.getSlot("bag").getFirst().get("name"), is("leather armor"));
+		assertThat(transObj.getSlot("背包").getFirst().get("name"), is("leather armor"));
 	}
 	/**
 	 * Tests for transformBind.
@@ -89,7 +89,7 @@ public class PlayerTransformerTest {
 		RPObject obje = new RPObject();
 		obje.put("name", "bob");
 		obje.setID(new RPObject.ID(1,"testzone"));
-		RPSlot slot = new RPSlot("bag");
+		RPSlot slot = new RPSlot("背包");
 
 		obje.addSlot(slot);
 		Item item = new Item("lich gold key","clazz","subclass",null);
@@ -98,8 +98,8 @@ public class PlayerTransformerTest {
 		assertFalse(item.isBound());
 
 		RPObject transObj = new PlayerTransformer().transform(obje);
-		assertTrue(transObj.hasSlot("bag"));
-		RPSlot bag = transObj.getSlot("bag");
+		assertTrue(transObj.hasSlot("背包"));
+		RPSlot bag = transObj.getSlot("背包");
 		RPObject transItem = bag.getFirst();
 		assertTrue(((Item) transItem).isBound());
 	}
@@ -111,7 +111,7 @@ public class PlayerTransformerTest {
 		RPObject obje = new RPObject();
 		obje.put("name", "bob");
 		obje.setID(new RPObject.ID(1,"testzone"));
-		RPSlot slot = new RPSlot("bag");
+		RPSlot slot = new RPSlot("背包");
 
 		obje.addSlot(slot);
 
@@ -121,8 +121,8 @@ public class PlayerTransformerTest {
 		assertTrue(item.isBound());
 
 		RPObject transObj = new PlayerTransformer().transform(obje);
-		assertTrue(transObj.hasSlot("bag"));
-		RPSlot bag = transObj.getSlot("bag");
+		assertTrue(transObj.hasSlot("背包"));
+		RPSlot bag = transObj.getSlot("背包");
 		RPObject transItem = bag.getFirst();
 		assertFalse(((Item) transItem).isBound());
 	}

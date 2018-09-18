@@ -34,7 +34,7 @@ public class PlayerKeyringSlot extends PlayerSlot {
 	@Override
 	public boolean isReachableForTakingThingsOutOfBy(final Entity entity) {
 		if (!mayAccessKeyRing(entity)) {
-			setErrorMessage("Your keyring is broken. You should look for someone who can fix it.");
+			setErrorMessage("Your 钥匙环 is broken. You should look for someone who can fix it.");
 			return false;
 		}
 		return super.isReachableForTakingThingsOutOfBy(entity);
@@ -43,7 +43,7 @@ public class PlayerKeyringSlot extends PlayerSlot {
 	@Override
 	public boolean isReachableForThrowingThingsIntoBy(Entity entity) {
 		if (!mayAccessKeyRing(entity)) {
-			setErrorMessage("Your keyring is broken. You should look for someone who can fix it.");
+			setErrorMessage("Your 钥匙环 is broken. You should look for someone who can fix it.");
 			return false;
 		}
 		return super.isReachableForThrowingThingsIntoBy(entity);
@@ -60,6 +60,6 @@ public class PlayerKeyringSlot extends PlayerSlot {
 			return false;
 		}
 		Player player = (Player) entity;
-		return (player.getFeature("keyring") != null);
+		return (player.getFeature("钥匙环") != null);
 	}
 }

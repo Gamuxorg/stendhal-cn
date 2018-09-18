@@ -55,7 +55,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.elvish", "Nalwor's Bane", "Loot a complete elvish equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "精灵护甲", "elvish hat", "像小精灵的斗篷", "elvish legs",
+				new PlayerLootedNumberOfItemsCondition(1, "精灵护甲", "elvish hat", "精灵披风", "elvish legs",
 						"精灵靴", "精灵之盾")));
 
 		itemAchievements.add(createAchievement("item.set.shadow", "Shadow Dweller", "Loot a complete shadow equipment set",

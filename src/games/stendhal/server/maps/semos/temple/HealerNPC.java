@@ -43,7 +43,7 @@ public class HealerNPC implements ZoneConfigurator {
 	}
 
 	private void buildSemosTempleArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Ilisa") {
+		final SpeakerNPC npc = new SpeakerNPC("伊丽莎") {
 
 			@Override
 			protected void createPath() {
@@ -66,7 +66,7 @@ public class HealerNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("welcomernpc");
-		npc.setDescription("你遇见了 Ilisa. 她年轻可爱, 身上带着魔法气息. ");
+		npc.setDescription("你遇见了 伊丽莎. 她年轻可爱, 身上带着魔法气息. ");
 		npc.setPosition(9, 6);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);

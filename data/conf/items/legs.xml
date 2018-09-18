@@ -17,7 +17,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>
@@ -37,7 +37,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -55,7 +55,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -73,7 +73,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>
@@ -93,7 +93,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -112,7 +112,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -131,7 +131,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -149,7 +149,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>
@@ -168,7 +168,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -186,7 +186,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>
@@ -207,7 +207,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>
@@ -226,7 +226,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -247,7 +247,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -268,7 +268,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -286,7 +286,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="legs"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -304,7 +304,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="legs"/>
     </equipable>

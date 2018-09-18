@@ -137,17 +137,17 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("加强狼牙棒",1);
 		items.put("连枷",1);
 		items.put("黄金战锤",1);
-		items.put("黄金狼牙棒",1);
+		items.put("黄金权杖",1);
 		items.put("hammer",1);
 		items.put("mace",1);
-		items.put("morning star",1);
+		items.put("破晓之星",1);
 		items.put("staff",1);
 		items.put("战锤",1);
 
 		// container
-		items.put("eared bottle",3);
+		items.put("耳瓶",3);
 		items.put("瓶子",5);
-		items.put("slim bottle",5);
+		items.put("细瓶子",5);
 
 		// drinks
 		items.put("antidote",5);
@@ -278,12 +278,12 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("katana",1);
 		items.put("knife",1);
 		items.put("scimitar",1);
-		items.put("short sword",1);
+		items.put("短剑",1);
 		items.put("sword",1);
 
 		// tool
 		items.put("pick",1);
-		items.put("金盘子",1);
+		items.put("淘金盘",1);
 	}
 
 	private ChatAction startQuestAction() {

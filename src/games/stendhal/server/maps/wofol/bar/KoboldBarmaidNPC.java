@@ -92,9 +92,9 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						String requiredContainer = "";
 
 						if ("mild koboldish torcibud".equals(chosenItemName)) {
-							requiredContainer = "slim bottle";
+							requiredContainer = "细瓶子";
 						} else if ("strong koboldish torcibud".equals(chosenItemName)) {
-							requiredContainer = "eared bottle";
+							requiredContainer = "耳瓶";
 						}
 
 						int price = getCharge(res, player);
@@ -102,7 +102,7 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						        price = (int) (BAD_BOY_BUYING_PENALTY * price);
 						}
 
-						if ("slim bottle".equals(requiredContainer) || "eared bottle".equals(requiredContainer)) {
+						if ("细瓶子".equals(requiredContainer) || "耳瓶".equals(requiredContainer)) {
 							if (!player.isEquipped(requiredContainer, amount) || !player.isEquipped("money", price)) {
 								seller.say("Wrauff! I can only sell you "
 									+ chosenItemName
@@ -178,9 +178,9 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						"Wrof! Real stuff from a secret koboldish recipe! Ask me to #offer you some!");
 				addReply("wrvil",
 						"Wrof! He be my husband. Runs shop in northern Wo'fol...");
-				addReply("eared bottle",
+				addReply("耳瓶",
 						"Wrof! A large bottle with handles on the neck that resemble ears... It cannot be you have never seen one!");
-				addReply("slim bottle",
+				addReply("细瓶子",
 						"Wrof! A bottle narrower at bottom and a bit wider at the shoulders ... I'm sure you've seen one already!");
 
                 /**

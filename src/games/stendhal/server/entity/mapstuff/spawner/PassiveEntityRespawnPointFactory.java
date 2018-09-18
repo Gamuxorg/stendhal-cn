@@ -357,11 +357,11 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new GrainField("小麦", Arrays.asList("镰刀", "旧的大镰刀", "黑镰刀"));
+			passiveEntityrespawnPoint = new GrainField("小麦", Arrays.asList("镰刀", "旧的大镰刀", "镰刀", "黑镰刀"));
 			break;
 
 		case 1:
-			passiveEntityrespawnPoint = new GrainField("sugar cane", Arrays.asList("镰刀", "旧的大镰刀", "黑镰刀"));
+			passiveEntityrespawnPoint = new GrainField("sugar cane", Arrays.asList("镰刀", "旧的大镰刀", "镰刀", "黑镰刀"));
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

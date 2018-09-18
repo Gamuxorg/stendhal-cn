@@ -142,9 +142,9 @@ public class MarriageTest {
 		// -----------------------------------------------
 
 		Item item = ItemTestHelper.createItem("money", 5000);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("gold bar", 10);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		en.step(player, "task");
@@ -161,9 +161,9 @@ public class MarriageTest {
 		// -----------------------------------------------
 
 		item = ItemTestHelper.createItem("money", 5000);
-		player2.getSlot("bag").add(item);
+		player2.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("gold bar", 10);
-		player2.getSlot("bag").add(item);
+		player2.getSlot("背包").add(item);
 
 		en.step(player2, "hi");
 		assertEquals("Hi! Can I #help you?", getReply(npc));

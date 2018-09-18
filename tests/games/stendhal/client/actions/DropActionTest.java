@@ -116,7 +116,7 @@ public class DropActionTest {
 				assertEquals(USER_ID, action.getInt("baseobject"));
 				assertEquals(0, action.getInt("x"));
 				assertEquals(0, action.getInt("y"));
-				assertEquals("bag", action.get("baseslot"));
+				assertEquals("背包", action.get("baseslot"));
 				assertEquals(1, action.getInt("quantity"));
 				assertEquals(MONEY_ID, action.getInt("baseitem"));
 			}
@@ -124,7 +124,7 @@ public class DropActionTest {
 
 		// create a player and give him some money
 		final RPObject player = createPlayer();
-		player.getSlot("bag").addPreservingId(createItem("money", MONEY_ID, 100));
+		player.getSlot("背包").addPreservingId(createItem("money", MONEY_ID, 100));
 
 		// issue "/drop money"
 		final DropAction action = new DropAction();
@@ -149,7 +149,7 @@ public class DropActionTest {
 				assertEquals(USER_ID, action.getInt("baseobject"));
 				assertEquals(0, action.getInt("x"));
 				assertEquals(0, action.getInt("y"));
-				assertEquals("bag", action.get("baseslot"));
+				assertEquals("背包", action.get("baseslot"));
 				assertEquals(50, action.getInt("quantity"));
 				assertEquals(MONEY_ID, action.getInt("baseitem"));
 			}
@@ -157,7 +157,7 @@ public class DropActionTest {
 
 		// create a player and give him some money
 		final RPObject player = createPlayer();
-		player.getSlot("bag").addPreservingId(createItem("money", MONEY_ID, 100));
+		player.getSlot("背包").addPreservingId(createItem("money", MONEY_ID, 100));
 
 		// issue "/drop 50 money"
 		final DropAction action = new DropAction();
@@ -182,7 +182,7 @@ public class DropActionTest {
 				assertEquals(USER_ID, action.getInt("baseobject"));
 				assertEquals(0, action.getInt("x"));
 				assertEquals(0, action.getInt("y"));
-				assertEquals("bag", action.get("baseslot"));
+				assertEquals("背包", action.get("baseslot"));
 				assertEquals(1, action.getInt("quantity"));
 				assertEquals(SILVER_SWORD_ID, action.getInt("baseitem"));
 			}
@@ -190,7 +190,7 @@ public class DropActionTest {
 
 		// create a player and give him some money
 		final RPObject player = createPlayer();
-		player.getSlot("bag").addPreservingId(createItem("silver sword", SILVER_SWORD_ID, 1));
+		player.getSlot("背包").addPreservingId(createItem("silver sword", SILVER_SWORD_ID, 1));
 
 		// issue "/drop money"
 		final DropAction action = new DropAction();

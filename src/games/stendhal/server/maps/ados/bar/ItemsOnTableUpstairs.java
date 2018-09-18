@@ -28,24 +28,24 @@ public class ItemsOnTableUpstairs implements ZoneConfigurator {
 
 	private void buildBarUpstairsArea(final StendhalRPZone zone) {
 
-		// grower for an empty slim bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("slim bottle", 12000);
+		// grower for an empty 细瓶子 (1h)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("细瓶子", 12000);
 		bottleGrower1.setPosition(7, 4);
 		bottleGrower1.setDescription("This seems a good spot were a bottle could be standing.");
 		zone.add(bottleGrower1);
 
 		bottleGrower1.setToFullGrowth();
 
-		// grower for an empty slim bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("slim bottle", 12000);
+		// grower for an empty 细瓶子 (1h)
+		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("细瓶子", 12000);
 		bottleGrower2.setPosition(8, 25);
 		bottleGrower2.setDescription("This seems a good spot were a bottle could be standing.");
 		zone.add(bottleGrower2);
 
 		bottleGrower2.setToFullGrowth();
 
-		// grower for an empty eared bottle (1h)
-		final PassiveEntityRespawnPoint bottleGrower3 = new PassiveEntityRespawnPoint("eared bottle", 12000);
+		// grower for an empty 耳瓶 (1h)
+		final PassiveEntityRespawnPoint bottleGrower3 = new PassiveEntityRespawnPoint("耳瓶", 12000);
 		bottleGrower3.setPosition(19, 9);
 		bottleGrower3.setDescription("This seems a good spot were a bottle could be standing.");
 		zone.add(bottleGrower3);

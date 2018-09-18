@@ -55,7 +55,7 @@ public class LearnAboutOrbsTest {
 	public void testQuestAppropriateLevel() {
 		int before = player.getXP();
 		player.setLevel(11);
-		npc = SingletonRepository.getNPCList().get("Ilisa");
+		npc = SingletonRepository.getNPCList().get("伊丽莎");
 		en = npc.getEngine();
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));
@@ -96,7 +96,7 @@ public class LearnAboutOrbsTest {
 	@Test
 	public void testQuestTooLowLevel() {
 		player.setLevel(1);
-		npc = SingletonRepository.getNPCList().get("Ilisa");
+		npc = SingletonRepository.getNPCList().get("伊丽莎");
 		en = npc.getEngine();
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));

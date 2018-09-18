@@ -85,7 +85,7 @@ public class DailyItemQuestTest {
 
 		player.setQuest(questSlot, "pina colada;100");
 		Item item = ItemTestHelper.createItem("pina colada");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 
 		en.step(player, "hi");

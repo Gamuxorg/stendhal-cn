@@ -146,7 +146,7 @@ Inspectable {
 
 		right.add(panel);
 
-		// Bag, keyring, etc
+		// Bag, 钥匙环, etc
 		specialSlots = SBoxLayout.createContainer(SBoxLayout.HORIZONTAL, PADDING);
 		specialSlots.setAlignmentX(CENTER_ALIGNMENT);
 		// Compatibility. See the note at setPlayer().

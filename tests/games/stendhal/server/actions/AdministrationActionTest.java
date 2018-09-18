@@ -864,7 +864,7 @@ public class AdministrationActionTest {
 		action = new RPAction();
 		action.put("type", "summonat");
 		action.put("target", "hugo");
-		action.put("slot", "bag");
+		action.put("slot", "背包");
 		action.put("item", "hugo");
 
 		CommandCenter.execute(player, action);
@@ -874,7 +874,7 @@ public class AdministrationActionTest {
 		action = new RPAction();
 		action.put("type", "summonat");
 		action.put("target", "hugo");
-		action.put("slot", "bag");
+		action.put("slot", "背包");
 		action.put("item", "dagger");
 		assertFalse(player.isEquipped("dagger"));
 		CommandCenter.execute(player, action);
@@ -886,7 +886,7 @@ public class AdministrationActionTest {
 		action = new RPAction();
 		action.put("type", "summonat");
 		action.put("target", "noone");
-		action.put("slot", "bag");
+		action.put("slot", "背包");
 		action.put("item", "dagger");
 
 		CommandCenter.execute(player, action);

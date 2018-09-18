@@ -85,7 +85,7 @@ public final class ShopList {
 		shops.add("sellstuff", "木棍", 10);
 		shops.add("sellstuff", "dagger", 25);
 		shops.add("sellstuff", "木盾", 25);
-		shops.add("sellstuff", "", 25);
+		shops.add("sellstuff", "布衣", 25);
 		shops.add("sellstuff", "leather helmet", 25);
 		shops.add("sellstuff", "cloak", 30);
 		shops.add("sellstuff", "leather legs", 35);
@@ -104,12 +104,12 @@ public final class ShopList {
 		shops.add("sellbetterstuff2", "shadow helmet", 8000);
 		shops.add("sellbetterstuff2", "shadow legs", 10000);
 		shops.add("sellbetterstuff2", "影盾", 30000);
-		shops.add("sellbetterstuff2", "hell dagger", 20000);
+		shops.add("sellbetterstuff2", "地狱匕首", 20000);
 
 		shops.add("sellrangedstuff", "木弓", 300);
 		shops.add("sellrangedstuff", "木箭", 2);
 
-		shops.add("buystuff", "short sword", 15);
+		shops.add("buystuff", "短剑", 15);
 		shops.add("buystuff", "sword", 60);
 		shops.add("buystuff", "镶嵌盾", 20);
 		shops.add("buystuff", "镶嵌甲", 22);
@@ -130,7 +130,7 @@ public final class ShopList {
 		shops.add("selltools", "旧的大镰刀", 120);
         // for harvesting cane fields
 		shops.add("selltools", "镰刀", 80);
-		shops.add("selltools", "金盘子", 230);
+		shops.add("selltools", "淘金盘", 230);
 
 		shops.add("buyiron", "iron", 75);
 
@@ -174,8 +174,8 @@ public final class ShopList {
 		shops.add("buyrare2", "crossbow", 175);
 		shops.add("buyrare2", "巨剑", 250);
 		shops.add("buyrare2", "烈火剑", 2000);
-		shops.add("buyrare2", "ice sword", 5000);
-        shops.add("buyrare2", "hell dagger", 8000);
+		shops.add("buyrare2", "冰剑", 5000);
+        shops.add("buyrare2", "地狱匕首", 8000);
 
 		// very rare armor shop (ados)
 		shops.add("buyrare3", "golden legs", 3000);
@@ -256,7 +256,7 @@ public final class ShopList {
 		shops.add("buyelvish", "精灵之剑", 800);
 		shops.add("buyelvish", "精灵之盾", 1000);
 		shops.add("buyelvish", "卓尔之剑", 1200);
-		shops.add("buyelvish", "像小精灵的斗篷", 400);
+		shops.add("buyelvish", "精灵披风", 400);
 		shops.add("buyelvish", "精灵护甲", 400);
 
 		// magic items or 'relics' (witch in magic city)

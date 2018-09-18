@@ -48,7 +48,7 @@ public class AdminMaker extends ScriptImpl {
 	private static Logger logger = Logger.getLogger(AdminMaker.class);
 	private static final String TELE_QUEST_SLOT = "AdminMakerTele";
 
-	private final List<String> itemsSingle = Arrays.asList("rod of the gm",
+	private final List<String> itemsSingle = Arrays.asList("GM自慰棒",
 			"金盾", "黄金铠甲", "金斗篷",
 			"golden helmet", "golden legs", "金靴子",
 			"hunter crossbow");
@@ -110,7 +110,7 @@ public class AdminMaker extends ScriptImpl {
 				}
 			}
 			// turn on their keyring for them
-			player.setFeature("keyring", true);
+			player.setFeature("钥匙环", true);
 		}
 
 		private void admin(final Player player) {
@@ -124,7 +124,7 @@ public class AdminMaker extends ScriptImpl {
 
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-			raiser.say("I will give you some items, and adjust your level and skills. Also, your keyring is enabled.");
+			raiser.say("I will give you some items, and adjust your level and skills. Also, your 钥匙环 is enabled.");
 			xpGain(player);
 			equip(player);
 			admin(player);

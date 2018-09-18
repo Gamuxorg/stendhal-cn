@@ -112,8 +112,8 @@ public class RPEntityRPClass {
         entity.addRPSlot("back", 1, Definition.PRIVATE);
         entity.addRPSlot("belt", 1, Definition.PRIVATE);
 
-        entity.addRPSlot("bag", 12, Definition.PRIVATE);
-        entity.addRPSlot("keyring", 8, Definition.PRIVATE);
+        entity.addRPSlot("背包", 12, Definition.PRIVATE);
+        entity.addRPSlot("钥匙环", 8, Definition.PRIVATE);
 
         entity.addRPEvent("attack", Definition.VOLATILE);
     }
