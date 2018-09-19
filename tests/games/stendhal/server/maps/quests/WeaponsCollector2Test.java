@@ -112,7 +112,7 @@ public class WeaponsCollector2Test {
 
 		assertTrue(en.stepTest(pl, "list"));
 		assertEquals(
-				"There are 3 weapons still missing from my newest collection: #'破晓之星', #staff, and #'great sword'."
+				"There are 3 weapons still missing from my newest collection: #'破晓之星', #法杖, and #'great sword'."
 						+ " Do you have anything like that with you?",
 				getReply(npc));
 
@@ -128,7 +128,7 @@ public class WeaponsCollector2Test {
 
 		assertTrue(en.stepTest(pl, "list"));
 		assertEquals(
-				"There are 3 weapons still missing from my newest collection: #'破晓之星', #staff, and #'great sword'."
+				"There are 3 weapons still missing from my newest collection: #'破晓之星', #法杖, and #'great sword'."
 						+ " Do you have anything like that with you?",
 				getReply(npc));
 

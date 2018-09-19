@@ -55,7 +55,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>1000 XP</li>
- * <li>5 greater antidote
+ * <li>5 大瓶抗毒药济
  * <li>note to apothecary (disabled until Antivenom Ring quest is ready)
  * <li>Can sell rodent traps to 克拉丝</li>
  * <li>Karma: 10</li>
@@ -91,7 +91,7 @@ public class TrapsForKlaas extends AbstractQuest {
 			res.add("I promised to gather " + REQUIRED_TRAPS + " rodent traps and bring them to 克拉丝.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, 0, "done")) {
-			res.add("I gave the rodent traps to 克拉丝. I got some experience and antidotes.");
+			res.add("I gave the rodent traps to 克拉丝. I got some experience and 抗毒药济s.");
 		}
 		if (isRepeatable(player)) {
 		    res.add("I should check if 克拉丝 needs my help again.");
@@ -165,9 +165,9 @@ public class TrapsForKlaas extends AbstractQuest {
 		// Reward
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("rodent trap", 20));
-		// Replacing "not to apothecary" reward with antidotes until Antivenom Ring quest is done.
+		// Replacing "not to apothecary" reward with 抗毒药济s until Antivenom Ring quest is done.
 		//reward.add(new EquipItemAction("note to apothecary", 1, true));
-		reward.add(new EquipItemAction("greater antidote", 5));
+		reward.add(new EquipItemAction("大瓶抗毒药济", 5));
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new IncreaseKarmaAction(10));
         reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -207,7 +207,7 @@ public class TrapsForKlaas extends AbstractQuest {
 				new PlayerHasItemWithHimCondition("rodent trap", 20),
 				ConversationStates.ATTENDING,
 				// Not mentioning apothecary until Antivenom Ring quest is ready
-				"Thanks! I've got to get these set up as quickly as possible. Take these antidotes as a reward.",// I used to know an old #apothecary. Take this note to him. Maybe he can help you out with something.",
+				"Thanks! I've got to get these set up as quickly as possible. Take these 抗毒药济s as a reward.",// I used to know an old #apothecary. Take this note to him. Maybe he can help you out with something.",
 				new MultipleActions(reward));
 
         // Player says did not bring items

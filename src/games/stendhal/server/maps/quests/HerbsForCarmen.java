@@ -61,7 +61,7 @@ import games.stendhal.server.util.ItemCollection;
  * REWARD:
  * <ul>
  * <li>50 XP</li>
- * <li>2 antidote</li>
+ * <li>2 抗毒药济</li>
  * <li>Karma: 10</li>
  * </ul>
  *

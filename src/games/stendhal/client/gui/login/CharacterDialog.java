@@ -222,7 +222,7 @@ public final class CharacterDialog extends JDialog implements Runnable {
 
 		// this if-block is here for compatibility with stendhal server 0.84
 		if (character.has("name")) {
-			label.append("<br>等级: ");
+			label.append("<br>层级: ");
 			String level = "0";
 			if (character.has("level")) {
 				level = character.get("level");
@@ -330,8 +330,8 @@ public final class CharacterDialog extends JDialog implements Runnable {
 		@Override
 		public void actionPerformed(final ActionEvent evt) {
 			String name = JOptionPane.showInputDialog(parent,
-					"请填入角色名 (只能填字符):",
-					"Create Character",
+					"请填入角色名:",
+					"创建新角色",
 					JOptionPane.QUESTION_MESSAGE);
 
 			if (name == null) {
@@ -340,7 +340,8 @@ public final class CharacterDialog extends JDialog implements Runnable {
 
 			try {
 				// TODO: error handling, exceptions and return of false
-				CharacterResult result = StendhalClient.get().createCharacter(name.toLowerCase(Locale.ENGLISH), new RPObject());
+				//CharacterResult result = StendhalClient.get().createCharacter(name.toLowerCase(Locale.ENGLISH), new RPObject());
+				CharacterResult result = StendhalClient.get().createCharacter(name, new RPObject());
 				if (result.getResult().failed()) {
 					JOptionPane.showMessageDialog(parent, result.getResult().getText());
 				} else {

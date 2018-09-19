@@ -71,7 +71,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 			// fairly rare from glow_monster in haunted house
 			"破晓之星",
 			// rare from monk on mountain
-			"staff",
+			"法杖",
 			// rare from devil_queen on mountain
 			"巨剑"
 	);

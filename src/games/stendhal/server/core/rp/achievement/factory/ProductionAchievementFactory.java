@@ -54,7 +54,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		final String[] drinks = drinklist.toArray(new String[drinklist.size()]);
 
 		// soups and koboldish torcibud are made using quest code so we add extra conditions for those
-		// at time of writing, the other drinks are 沸水, tea, pina colada, and mega potion (which we may remove)
+		// at time of writing, the other drinks are 沸水, 茶, 椰林飘香, and mega potion (which we may remove)
 		achievements.add(createAchievement("production.class.drink", "Thirsty Worker", "Order all drink types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,
 				new AndCondition(

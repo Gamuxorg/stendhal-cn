@@ -69,7 +69,7 @@ public class HealerNPCTest {
 		assertTrue(en.step(player, "hi"));
 		assertEquals("Hi, if I can #help, just say.", getReply(npc));
 		assertTrue(en.step(player, "job"));
-        assertEquals("My special powers help me to heal wounded people. I also sell potions and antidotes.", getReply(npc));
+        assertEquals("My special powers help me to heal wounded people. I also sell potions and 抗毒药济s.", getReply(npc));
         assertTrue(en.step(player, "help"));
         assertEquals("I can #heal you here for free, or you can take one of my prepared medicines with you on your travels; just ask for an #offer.", getReply(npc));
 
@@ -92,7 +92,7 @@ public class HealerNPCTest {
 	        assertEquals("There, you are healed. How else may I help you?", getReply(npc));
 	        assertEquals(player.getHP(),100);
 
-	        //slh.get("antidote")
+	        //slh.get("抗毒药济")
 
 	        assertTrue(en.step(player, "buy "+key));
 	        final StringBuilder builder = new StringBuilder("");

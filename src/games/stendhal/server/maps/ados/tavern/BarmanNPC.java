@@ -70,8 +70,8 @@ public class BarmanNPC implements ZoneConfigurator {
 				addQuest("Just sit back, relax and enjoy the show.");
 				addHelp("This is the room for the ladies. Guys hang out in the other bar, Coralia serves the gents.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-				offerings.put("wine", 20);
-				offerings.put("pina colada", 100);
+				offerings.put("红酒", 20);
+				offerings.put("椰林飘香", 100);
 				offerings.put("巧克力棒", 100);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye("See you around, sweetcheeks.");

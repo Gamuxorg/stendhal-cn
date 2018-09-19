@@ -35,7 +35,7 @@ import games.stendhal.client.sprite.Sprite;
 
 public class AchievementBoxFactory {
 	/** Default font name */
-//	private static final String FONT_NAME = "BlackChancery";
+//	private static final String FONT_NAME = "DroidSansFallbackFull";
 	private static final String FONT_NAME = "";
 	/** Location of the achievement category icons */
 	private static final String ACHIEVEMENT_IMAGE_FOLDER = "data/sprites/achievements/";

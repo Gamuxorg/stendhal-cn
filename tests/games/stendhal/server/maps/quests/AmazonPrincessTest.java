@@ -141,12 +141,12 @@ public class AmazonPrincessTest {
 		assertEquals("Goodbye, and beware of the barbarians.", getReply(npc));
 
 		// -----------------------------------------------
-		final Item item = ItemTestHelper.createItem("pina colada");
+		final Item item = ItemTestHelper.createItem("椰林飘香");
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		assertEquals("Huh, what are you doing here?", getReply(npc));
-		en.step(player, "pina colada");
+		en.step(player, "椰林飘香");
 		assertTrue(getReply(npc).startsWith("Thank you!! Take th"));
 		assertTrue(player.isEquipped("fish pie"));
 		en.step(player, "bye");
@@ -165,7 +165,7 @@ public class AmazonPrincessTest {
 
 		en.step(player, "hi");
 		assertEquals("Huh, what are you doing here?", getReply(npc));
-		en.step(player, "pina colada");
+		en.step(player, "椰林飘香");
 		assertEquals("Sometime you could do me a #favour ...", getReply(npc));
 		en.step(player, "favour");
 		assertTrue(getReply(npc).startsWith("I'm sure I'll be too drunk to have another for at least "));

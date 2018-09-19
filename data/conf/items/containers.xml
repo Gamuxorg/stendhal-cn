@@ -280,9 +280,9 @@
     </equipable>
   </item>
   
-  <item name="红酒杯">
+  <item name="盛血高脚杯">
     <type class="container" subclass="full_goblet" tileid="-1"/>
-    <description>You see a 红酒杯.  You look at its contents, and shiver at the blood inside.</description>
+    <description>You see a 盛血高脚杯.  You look at its contents, and shiver at the blood inside.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

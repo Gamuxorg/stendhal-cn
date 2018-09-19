@@ -104,10 +104,10 @@ public class WaterForXhiphinTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "bottle of water");
 		assertEquals("You can gather water from natural mountain springs or bigger springs like next to waterfalls. If you bring it to me I can check the purity for you.", getReply(npc));
 
-		PlayerTestHelper.equipWithItem(player, "water");
+		PlayerTestHelper.equipWithItem(player, "水");
 		en.step(player, "bottle of water");
 		assertEquals("That water looks clean to me! It must be from a pure source.", getReply(npc));
-		en.step(player, "water");
+		en.step(player, "水");
 		assertEquals("That water looks clean to me! It must be from a pure source.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye! Have a nice stay in Fado!", getReply(npc));
@@ -142,11 +142,11 @@ public class WaterForXhiphinTest extends ZonePlayerAndNPCTestImpl {
 		SpeakerNPC npc = SingletonRepository.getNPCList().get("Xhiphin Zohos");
 		Engine en = npc.getEngine();
 		player.setQuest(QUEST_SLOT, "start");
-		PlayerTestHelper.equipWithItem(player, "water");
+		PlayerTestHelper.equipWithItem(player, "水");
 
 		en.step(player, "hi");
 		assertEquals("Hello! Welcome to Fado City! You can #learn about Fado from me.", getReply(npc));
-		en.step(player, "water");
+		en.step(player, "水");
 		assertEquals("Hmm... it's not that I don't trust you, but I'm not sure that water is okay to drink. Could you go and ask #Stefan to #check it please?", getReply(npc));
 		en.step(player, "check");
 		assertEquals("Sorry, I'm no expert on food or drink myself, try asking #Stefan.", getReply(npc));
@@ -162,7 +162,7 @@ public class WaterForXhiphinTest extends ZonePlayerAndNPCTestImpl {
 		SpeakerNPC npc = SingletonRepository.getNPCList().get("Xhiphin Zohos");
 		Engine en = npc.getEngine();
 		player.setQuest(QUEST_SLOT, "start");
-		PlayerTestHelper.equipWithItem(player, "water", "clean");
+		PlayerTestHelper.equipWithItem(player, "水", "clean");
 
 		en.step(player, "HI");
 		assertEquals("Hello! Welcome to Fado City! You can #learn about Fado from me.", getReply(npc));
@@ -172,7 +172,7 @@ public class WaterForXhiphinTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "thanks");
 		en.step(player, "task");
 		assertEquals("Thank you, I don't need anything right now.", getReply(npc));
-		en.step(player, "water");
+		en.step(player, "水");
 		assertEquals("Thank you, I don't need anything right now.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));

@@ -75,10 +75,10 @@ public class RatChefNPC implements ZoneConfigurator {
                     "I stea.. ahem.. get all my supplies of 面粉 from the nearby 塞门镇.");
 				addReply("egg",
                     "I'd look for one where hens scratch about.");
-				addReply("milk",
+				addReply("牛奶",
                     "A farm would be a good place where one could find that ingredient.");
 				addReply("butter",
-                    "Where you find milk you will most likely find butter as well!");
+                    "Where you find 牛奶 you will most likely find butter as well!");
 				addReply(Arrays.asList("沸水"),
                     "It gets distilled from sugar canes and you could try asking around in Ados market for that.");
                 addReply("sugar",
@@ -98,7 +98,7 @@ public class RatChefNPC implements ZoneConfigurator {
 				requiredResources.put("面粉", 1);
 				requiredResources.put("egg", 1);
 				requiredResources.put("butter", 1);
-				requiredResources.put("milk", 1);
+				requiredResources.put("牛奶", 1);
 				requiredResources.put("sugar", 1);
 				requiredResources.put("巧克力棒", 1);
 				requiredResources.put("沸水", 1);

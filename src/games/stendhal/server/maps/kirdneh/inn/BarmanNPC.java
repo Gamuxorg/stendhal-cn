@@ -76,7 +76,7 @@ public class BarmanNPC implements ZoneConfigurator {
 				addHelp("Ssh, can you come close so I can whisper? (I know Katerina there looks a wreck .. but she's actually a summon healer .. and cheap too.)");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
 				offerings.put("啤酒", 10);
-				offerings.put("wine", 15);
+				offerings.put("红酒", 15);
 				// more expensive than in normal taverns
 				offerings.put("面包", 50);
 				offerings.put("干酪", 20);

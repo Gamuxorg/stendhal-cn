@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
  * Builds 卡尔, the farmer NPC.
  * He gives 马尾鬃 needed for the BowsForOuchit quest
  * He gives help to newcomers about the area
- * He suggests you can buy milk from his wife Philomena
+ * He suggests you can buy 牛奶 from his wife Philomena
  * @author kymara
  */
 public class FarmerNPC implements ZoneConfigurator {
@@ -73,7 +73,7 @@ public class FarmerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Heyho! Nice to see you here at our farm.");
 				addJob("Oh, working here is hard, I don't think that you can help me here.");
-				addOffer("Our milk is really tasty. Ask my wife #Philomena for some.");
+				addOffer("Our 牛奶 is really tasty. Ask my wife #Philomena for some.");
 				addReply("Philomena","She's in the farm house just south west from here.");
 				addHelp("You need help? I can tell you a bit about the #neighborhood.");
 				addReply("neighborhood.","In the north is a cave with bears and other creatures. If you go to the north-east " +

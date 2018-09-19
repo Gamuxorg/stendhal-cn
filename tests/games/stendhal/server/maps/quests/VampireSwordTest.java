@@ -168,8 +168,8 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.QUEST_OFFERED);
 
 			en.step(player, answer);
-			assertEquals("Then you need this #红酒杯. Take it to the Semos #Catacombs.", getReply(npc));
-			assertTrue("Player is given a 红酒杯", player.isEquipped("高脚杯"));
+			assertEquals("Then you need this #盛血高脚杯. Take it to the Semos #Catacombs.", getReply(npc));
+			assertTrue("Player is given a 盛血高脚杯", player.isEquipped("高脚杯"));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -188,8 +188,8 @@ public class VampireSwordTest {
 		assertEquals("answer to 'catacombs'", "The Catacombs of north Semos of the ancient #stories.", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 
-		en.step(player, "红酒杯");
-		assertEquals("answer to '红酒杯'", "Go fill it with the blood of the enemies you meet in the #Catacombs.", getReply(npc));
+		en.step(player, "盛血高脚杯");
+		assertEquals("answer to '盛血高脚杯'", "Go fill it with the blood of the enemies you meet in the #Catacombs.", getReply(npc));
 	}
 
 	@Test
@@ -207,7 +207,7 @@ public class VampireSwordTest {
 			player.equipToInventoryOnly(goblet);
 
 			en.step(player, hello);
-			assertEquals(hello, "Did you lose your way? The Catacombs are in North Semos. Don't come back without a full 红酒杯! Bye!", getReply(npc));
+			assertEquals(hello, "Did you lose your way? The Catacombs are in North Semos. Don't come back without a full 盛血高脚杯! Bye!", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 		}
 	}
@@ -221,12 +221,12 @@ public class VampireSwordTest {
 
 			assertFalse(player.hasQuest(questSlot));
 			assertFalse(player.isEquipped("高脚杯"));
-			assertFalse(player.isEquipped("红酒杯"));
+			assertFalse(player.isEquipped("盛血高脚杯"));
 			en.setCurrentState(ConversationStates.IDLE);
 			player.setQuest(questSlot, "start");
 
 			en.step(player, hello);
-			assertEquals(hello, "I hope you didn't lose your 红酒杯! Do you need another?", getReply(npc));
+			assertEquals(hello, "I hope you didn't lose your 盛血高脚杯! Do you need another?", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.QUESTION_1);
 		}
 	}
@@ -241,14 +241,14 @@ public class VampireSwordTest {
 
 			assertFalse(player.hasQuest(questSlot));
 			assertFalse(player.isEquipped("高脚杯"));
-			assertFalse(player.isEquipped("红酒杯"));
+			assertFalse(player.isEquipped("盛血高脚杯"));
 			en.setCurrentState(ConversationStates.QUESTION_1);
 			player.setQuest(questSlot, "start");
 
 			en.step(player, answer);
 			assertEquals(answer, "You stupid ..... Be more careful next time. Bye!", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
-			assertTrue("Player is given a 红酒杯", player.isEquipped("高脚杯"));
+			assertTrue("Player is given a 盛血高脚杯", player.isEquipped("高脚杯"));
 		}
 	}
 
@@ -260,17 +260,17 @@ public class VampireSwordTest {
 
 		assertFalse(player.hasQuest(questSlot));
 		assertFalse(player.isEquipped("高脚杯"));
-		assertFalse(player.isEquipped("红酒杯"));
+		assertFalse(player.isEquipped("盛血高脚杯"));
 		en.setCurrentState(ConversationStates.QUESTION_1);
 		player.setQuest(questSlot, "start");
 
 		en.step(player, "no");
 		assertEquals("Then why are you back here? Go slay some vampires! Bye!", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
-		assertFalse("Player is not given a 红酒杯", player.isEquipped("高脚杯"));
+		assertFalse("Player is not given a 盛血高脚杯", player.isEquipped("高脚杯"));
 	}
 
-	// **** 红酒杯 filling tests ****
+	// **** 盛血高脚杯 filling tests ****
 	@Test
 	public void sayHelloToVampire() {
 		for (String hello : ConversationPhrases.GREETING_MESSAGES) {
@@ -315,7 +315,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, material);
-			assertEquals("answer to '" + material + "'", "I need blood. I can take it from the entrails of the alive and undead. I will mix the bloods together for you and #fill your #红酒杯, if you let me drink some too. But I'm afraid of the powerful #lord.", getReply(npc));
+			assertEquals("answer to '" + material + "'", "I need blood. I can take it from the entrails of the alive and undead. I will mix the bloods together for you and #fill your #盛血高脚杯, if you let me drink some too. But I'm afraid of the powerful #lord.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -333,7 +333,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, word);
-			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #红酒杯.", getReply(npc));
+			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #盛血高脚杯.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -343,7 +343,7 @@ public class VampireSwordTest {
 	 */
 	@Test
 	public void testVampiresGobletDescription() {
-		for (String word : Arrays.asList("高脚杯", "红酒杯")) {
+		for (String word : Arrays.asList("高脚杯", "盛血高脚杯")) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
 			final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
@@ -351,7 +351,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, word);
-			assertEquals("answer to '" + word + "'", "Only a powerful talisman like this cauldron or a special 红酒杯 should contain blood.", getReply(npc));
+			assertEquals("answer to '" + word + "'", "Only a powerful talisman like this cauldron or a special 盛血高脚杯 should contain blood.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -370,7 +370,7 @@ public class VampireSwordTest {
 		// defined. don't test for it - just test that Markovich wants
 		// something
 		String answer = getReply(npc);
-		assertTrue("answer to 'fill'", answer.startsWith("I can only fill a 红酒杯 if you bring me "));
+		assertTrue("answer to 'fill'", answer.startsWith("I can only fill a 盛血高脚杯 if you bring me "));
 		assertEquals("should not have a '" + sickySlotName + "' slot", null, player.getQuest(sickySlotName));
 		assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 	}
@@ -392,7 +392,7 @@ public class VampireSwordTest {
 
 		en.step(player, "fill");
 		String answer = getReply(npc);
-		assertTrue("answer to 'fill'", answer.startsWith("I can only fill a 红酒杯 if you bring me "));
+		assertTrue("answer to 'fill'", answer.startsWith("I can only fill a 盛血高脚杯 if you bring me "));
 		assertEquals("should not have a '" + sickySlotName + "' slot", null, player.getQuest(sickySlotName));
 		assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 	}
@@ -441,7 +441,7 @@ public class VampireSwordTest {
 			assertEquals("I need you to fetch me 7 #'bat entrails', 7 #'vampirette entrails', a #'skull ring', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
 
 			en.step(player, yes);
-			assertEquals("answer to '" + yes + "'", "OK, I will fill a 红酒杯 for you, but that will take some time. Please come back in 5 minutes.", getReply(npc));
+			assertEquals("answer to '" + yes + "'", "OK, I will fill a 盛血高脚杯 for you, but that will take some time. Please come back in 5 minutes.", getReply(npc));
 
 			en.step(player, "bye");
 			assertEquals("*cough* ... farewell ... *cough*", getReply(npc));
@@ -450,9 +450,9 @@ public class VampireSwordTest {
 			PlayerTestHelper.setPastTime(player, questSlot, 2, 5*60);
 
 			en.step(player, "hi");
-			assertEquals("Welcome back! I'm still busy with your order to fill a 红酒杯 for you. Come back in 5 minutes to get it.", getReply(npc));
+			assertEquals("Welcome back! I'm still busy with your order to fill a 盛血高脚杯 for you. Come back in 5 minutes to get it.", getReply(npc));
 
-			assertFalse(player.isEquipped("红酒杯"));
+			assertFalse(player.isEquipped("盛血高脚杯"));
 			for(String item : requiredForFilling.keySet()) {
 				assertFalse("vampire took " + item, player.isEquipped(item));
 			}
@@ -467,7 +467,7 @@ public class VampireSwordTest {
 
 	@Test
 	public void tryGettingGobletTooEarly() {
-		String questState = "1;红酒杯;" + Long.toString(new Date().getTime());
+		String questState = "1;盛血高脚杯;" + Long.toString(new Date().getTime());
 		for (String hello : ConversationPhrases.GREETING_MESSAGES) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
@@ -480,13 +480,13 @@ public class VampireSwordTest {
 			// This will fail if someone manages to stop the test
 			// within the loop and continue later. (Or to run it on a
 			// ridiculously slow computer)
-			assertEquals("too early '" + hello + "'", "Welcome back! I'm still busy with your order to fill a 红酒杯 for you. Come back in 5 minutes to get it.", getReply(npc));
+			assertEquals("too early '" + hello + "'", "Welcome back! I'm still busy with your order to fill a 盛血高脚杯 for you. Come back in 5 minutes to get it.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 
 			// bothering Markovich should not affect the quest state
-			// or give the 红酒杯 too early
+			// or give the 盛血高脚杯 too early
 			assertEquals(questState, player.getQuest(sickySlotName));
-			assertFalse(player.isEquipped("红酒杯"));
+			assertFalse(player.isEquipped("盛血高脚杯"));
 		}
 	}
 
@@ -494,7 +494,7 @@ public class VampireSwordTest {
 	@Test
 	public void tryGettingGobletWayTooEarly() {
 		// 1 min in the future
-		String questState = "1;红酒杯;" + Long.toString(new Date().getTime() + 60 * 1000);
+		String questState = "1;盛血高脚杯;" + Long.toString(new Date().getTime() + 60 * 1000);
 		for (String hello : ConversationPhrases.GREETING_MESSAGES) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
@@ -504,13 +504,13 @@ public class VampireSwordTest {
 			player.setQuest(sickySlotName, questState);
 
 			en.step(player, hello);
-			assertTrue("''" + hello + "' in future", getReply(npc).startsWith("Welcome back! I'm still busy with your order to fill a 红酒杯 for you. Come back in"));
+			assertTrue("''" + hello + "' in future", getReply(npc).startsWith("Welcome back! I'm still busy with your order to fill a 盛血高脚杯 for you. Come back in"));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 
 			// bothering Markovich should not affect the quest state
-			// or give the 红酒杯 too early
+			// or give the 盛血高脚杯 too early
 			assertEquals(questState, player.getQuest(sickySlotName));
-			assertFalse(player.isEquipped("红酒杯"));
+			assertFalse(player.isEquipped("盛血高脚杯"));
 		}
 	}
 
@@ -521,22 +521,22 @@ public class VampireSwordTest {
 		final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
 
 		// jump to the past
-		String questState = "1;红酒杯;" + Long.toString(new Date().getTime() - 5 * 60 * 1000);
+		String questState = "1;盛血高脚杯;" + Long.toString(new Date().getTime() - 5 * 60 * 1000);
 		for (String hello : ConversationPhrases.GREETING_MESSAGES) {
 			en.setCurrentState(ConversationStates.IDLE);
 			player.setQuest(sickySlotName, questState);
 
 			en.step(player, hello);
-			assertEquals("''" + hello + "' in past", "Welcome back! I'm done with your order. Here you have the 红酒杯.", getReply(npc));
+			assertEquals("''" + hello + "' in past", "Welcome back! I'm done with your order. Here you have the 盛血高脚杯.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 
 			assertEquals("done", player.getQuest(sickySlotName));
-			assertTrue("player got the goblet", player.isEquipped("红酒杯"));
+			assertTrue("player got the goblet", player.isEquipped("盛血高脚杯"));
 
-			final Item goblet = player.getFirstEquipped("红酒杯");
-			assertEquals("The filled 红酒杯 is bound", "me", goblet.getBoundTo());
+			final Item goblet = player.getFirstEquipped("盛血高脚杯");
+			assertEquals("The filled 盛血高脚杯 is bound", "me", goblet.getBoundTo());
 
-			player.drop("红酒杯");
+			player.drop("盛血高脚杯");
 		}
 	}
 
@@ -550,11 +550,11 @@ public class VampireSwordTest {
 
 			en.setCurrentState(ConversationStates.IDLE);
 			player.setQuest(questSlot, "start");
-			Item item = SingletonRepository.getEntityManager().getItem("红酒杯");
+			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
 
 			en.step(player, hello);
-			assertEquals("Hm, that 红酒杯 is not filled with vampire blood; it can't be, you have not killed the vampire lord. You must slay him.", getReply(npc));
+			assertEquals("Hm, that 盛血高脚杯 is not filled with vampire blood; it can't be, you have not killed the vampire lord. You must slay him.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 		}
 	}
@@ -568,12 +568,12 @@ public class VampireSwordTest {
 
 			en.setCurrentState(ConversationStates.IDLE);
 			player.setQuest(questSlot, "start");
-			Item item = SingletonRepository.getEntityManager().getItem("红酒杯");
+			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
 			player.setSharedKill("vampire lord");
 
 			en.step(player, hello);
-			assertEquals("You have battled hard to bring that 红酒杯. I will use it to #forge the vampire sword", getReply(npc));
+			assertEquals("You have battled hard to bring that 盛血高脚杯. I will use it to #forge the vampire sword", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.QUEST_ITEM_BROUGHT);
 		}
 	}
@@ -587,7 +587,7 @@ public class VampireSwordTest {
 		player.setQuest(questSlot, "start");
 
 		en.step(player, "forge");
-		assertEquals("Bring me 10 #iron bars to forge the sword with. Don't forget to bring the 红酒杯 too.", getReply(npc));
+		assertEquals("Bring me 10 #iron bars to forge the sword with. Don't forget to bring the 盛血高脚杯 too.", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.QUEST_ITEM_BROUGHT);
 	}
 
@@ -615,7 +615,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.IDLE);
 			player.setQuest(questSlot, "start");
 
-			Item item = SingletonRepository.getEntityManager().getItem("红酒杯");
+			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
 
 			PlayerTestHelper.equipWithStackableItem(player, "iron", 10);
@@ -624,7 +624,7 @@ public class VampireSwordTest {
 
 			en.step(player, hello);
 			assertEquals("You've brought everything I need to make the vampire sword. Come back in 10 minutes and it will be ready", getReply(npc));
-			assertFalse("dwarf took the 红酒杯", player.isEquipped("红酒杯"));
+			assertFalse("dwarf took the 盛血高脚杯", player.isEquipped("盛血高脚杯"));
 			assertFalse("dwarf took the iron", player.isEquipped("iron"));
 			assertTrue("in forging state", player.getQuest(questSlot).startsWith("forging;"));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);

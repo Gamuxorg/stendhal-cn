@@ -349,7 +349,7 @@ public final class StatsPanelController {
 				amount += obj.getInt("quantity");
 			}
 		}
-		final String text = "金币:" + SPC + amount;
+		final String text = "金钱:" + SPC + amount;
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {

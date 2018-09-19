@@ -152,7 +152,7 @@ import games.stendhal.server.maps.Region;
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
 				new PlayerHasItemWithHimCondition("knife")),
-				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #potion. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 黑珍珠. Please bring them all together at once and then ask me to make the #potion.",
+				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #potion. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #potion.",
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, "potion"), new DropItemAction("knife")));
 
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
@@ -164,7 +164,7 @@ import games.stendhal.server.maps.Region;
 		final List<ChatAction> potionactions = new LinkedList<ChatAction>();
 		potionactions.add(new DropItemAction("紫丁香",3));
 		potionactions.add(new DropItemAction("kokuda"));
-		potionactions.add(new DropItemAction("wine"));
+		potionactions.add(new DropItemAction("红酒"));
 		potionactions.add(new DropItemAction("黑珍珠"));
 		potionactions.add(new EquipItemAction("love potion"));
 		potionactions.add(new IncreaseXPAction(100));
@@ -175,7 +175,7 @@ import games.stendhal.server.maps.Region;
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "potion"),
 								 new PlayerHasItemWithHimCondition("紫丁香",3),
 								 new PlayerHasItemWithHimCondition("kokuda"),
-								 new PlayerHasItemWithHimCondition("wine"),
+								 new PlayerHasItemWithHimCondition("红酒"),
 								 new PlayerHasItemWithHimCondition("黑珍珠")),
 				ConversationStates.ATTENDING, "I see you have all the items for the potion. *mutters magic words* And now, ta da! You have the love potion. Wish Mrs Yeti good luck from me!",
 				new MultipleActions(potionactions));
@@ -185,9 +185,9 @@ import games.stendhal.server.maps.Region;
 								 new NotCondition(
 												  new AndCondition(new PlayerHasItemWithHimCondition("紫丁香",3),
 																   new PlayerHasItemWithHimCondition("kokuda"),
-																   new PlayerHasItemWithHimCondition("wine"),
+																   new PlayerHasItemWithHimCondition("红酒"),
 																   new PlayerHasItemWithHimCondition("黑珍珠")))),
-				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 黑珍珠 to make the love potion. Please bring them all together at once. Thanks!", null);
+				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the love potion. Please bring them all together at once. Thanks!", null);
 
 
 	}
@@ -378,7 +378,7 @@ import games.stendhal.server.maps.Region;
 			if ("knife".equals(questState)) {
 				return res;
 			}
-			res.add("The love potion requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 黑珍珠.");
+			res.add("The love potion requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
 			if ("potion".equals(questState)) {
 				return res;
 			}

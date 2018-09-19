@@ -239,12 +239,12 @@ public class SadScientist extends AbstractQuest {
 		final ChatCondition condition = new AndCondition(
 				new QuestStateStartsWithCondition(QUEST_SLOT, "kill_scientist"),
 				new KilledForQuestCondition(QUEST_SLOT, 1),
-				new PlayerHasItemWithHimCondition("红酒杯")
+				new PlayerHasItemWithHimCondition("盛血高脚杯")
 			);
 		ChatAction action = new MultipleActions(
 										new SetQuestAction(QUEST_SLOT, "decorating;"),
 										new SetQuestToTimeStampAction(QUEST_SLOT, 1),
-										new DropItemAction("红酒杯",1)
+										new DropItemAction("盛血高脚杯",1)
 										);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
@@ -268,7 +268,7 @@ public class SadScientist extends AbstractQuest {
 				new NotCondition(
 						new AndCondition(
 										new KilledForQuestCondition(QUEST_SLOT, 1),
-										new PlayerHasItemWithHimCondition("红酒杯")))
+										new PlayerHasItemWithHimCondition("盛血高脚杯")))
 			);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition, ConversationStates.IDLE,

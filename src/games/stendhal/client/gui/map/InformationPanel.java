@@ -46,12 +46,12 @@ class InformationPanel extends JComponent {
 	 * of these.
 	 */
 	private static final String[] dangerLevelStrings = {
-		"The area feels safe.",
-		"The area feels relatively safe.",
-		"The area feels somewhat dangerous.",
-		"The area feels dangerous.",
-		"The area feels very dangerous!",
-		"The area feels extremely dangerous. Run away!"
+		"此区域安全.",
+		"此区域还算安全.",
+		"此区域有点危险.",
+		"此区域有危险.",
+		"此区域非常危险!",
+		"此区域无法生存. 快跑!"
 	};
 
 	/** Zone name display. */

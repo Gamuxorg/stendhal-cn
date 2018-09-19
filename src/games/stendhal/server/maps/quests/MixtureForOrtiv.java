@@ -80,7 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;kokuda=1;红伞菇=12;licorice=2;苹果=10;wine=30;大蒜=2;pestle and mortar=1";
+	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;kokuda=1;红伞菇=12;licorice=2;苹果=10;红酒=30;大蒜=2;pestle and mortar=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -175,7 +175,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 
 			npc.addReply("licorice", "在魔法城市有一个好看的小酒吧, 里面年轻的女孩销售这种好吃的甜品.");
 
-			npc.addReply("wine", "Mmmmm..没有比把喜人的杯子和红酒混合在一起更好的东西了, 咳咳 *cough* 当然为我的混合物需要它... 我打赌, 你可能在旅店或酒吧的某地买到酒...");
+			npc.addReply("红酒", "Mmmmm..没有比把喜人的杯子和红酒混合在一起更好的东西了, 咳咳 *cough* 当然为我的混合物需要它... 我打赌, 你可能在旅店或酒吧的某地买到酒...");
 
 			npc.addReply("大蒜", "我知道, 刺客和强盗们不是吸血鬼, 但我会尽量好好使用它对抗他们. 城里的花园里有个漂亮的园丁, 她销售自己种的大蒜.");
 

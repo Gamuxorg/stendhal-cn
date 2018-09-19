@@ -431,7 +431,7 @@ class MakingFabric {
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
 				"Wonderful! I'm so relieved! Please take this note to Pedinghaus, you will find him in Ados goldsmiths. Tell him you have a #letter for him.",
-				new MultipleActions(new EquipItemAction("sealed envelope", 1, true),
+				new MultipleActions(new EquipItemAction("密封的信", 1, true),
 									new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_letter"))
 				);
 
@@ -543,11 +543,11 @@ class MakingFabric {
 		// accept the letter
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("letter", "笔记", "whiggins", "apology"),
-				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"), new PlayerHasItemWithHimCondition("sealed envelope")),
+				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"), new PlayerHasItemWithHimCondition("密封的信")),
 				ConversationStates.ATTENDING,
 				"*reads* ... *reads* ... Well, I must say, that is a weight off my mind. Thank you ever so much. Please convey my warmest regards to Whiggins. All is forgiven.",
 				new MultipleActions(
-									 new DropItemAction("sealed envelope"),
+									 new DropItemAction("密封的信"),
 									 new SetQuestAndModifyKarmaAction(mithrilcloak.getQuestSlot(), "took_letter", 10.0)
 				));
 	}

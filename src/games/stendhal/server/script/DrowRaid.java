@@ -25,7 +25,7 @@ public class DrowRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("dark elf", 10);
+		attackArmy.put("黑暗精灵", 10);
 		attackArmy.put("黑暗精灵弓箭手", 2);
 		attackArmy.put("黑暗精灵精英弓箭手", 2);
 		attackArmy.put("黑暗精灵队长", 5);

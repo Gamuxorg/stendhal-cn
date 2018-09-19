@@ -95,7 +95,7 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(50,"Blordrough warriors 现在驻扎在 Ados 地下通道. 他们在战斗中十分强悍, 这是 Blordrough 能占领 Deniran 的领土的原因. "));
 		enemyForces.put("madaram",
 				new Pair<Integer, String>(100,"他们的攻事建在了Fado 的地下, 他们真是丑恶."));
-		enemyForces.put("dark elf",
+		enemyForces.put("黑暗精灵",
 				new Pair<Integer, String>(100,"Drows, or dark elves as they are commonly called, can be found under Nalwor. They use poison in battles, gathering it from different poisonous creatures."));
 		enemyForces.put("chaos",
 				new Pair<Integer, String>(150,"They are strong and crazy. Only my elite archers hold them from expanding more."));
@@ -130,10 +130,10 @@ import marauroa.common.Pair;
 				Arrays.asList("布拉德鲁军队",
 							  "布拉德鲁下士",
 							  "布拉德鲁风暴骑兵"));
-		enemys.put("dark elf",
-				Arrays.asList("幼齿黑暗精灵",
+		enemys.put("黑暗精灵",
+				Arrays.asList("黑暗小精灵",
 							  "黑暗精灵弓箭手",
-							  "dark elf",
+							  "黑暗精灵",
 							  "黑暗精灵精英弓箭手",
 							  "黑暗精灵队长",
 							  "黑暗精灵骑士",

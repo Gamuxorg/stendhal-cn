@@ -234,7 +234,7 @@ public class StendhalQuestSystem {
 		sb.append(questInfo.getName() + " : ");
 		sb.append(questInfo.getDescription() + "\r\n");
 		if (questInfo.getSuggestedMinLevel() > player.getLevel()) {
-			sb.append("(This task may be too dangerous for your level of experience)\r\n");
+			sb.append("(对你来说这个任务非常危险)\r\n");
 		}
 
 		final List<String> history = quest.getHistory(player);
@@ -258,7 +258,7 @@ public class StendhalQuestSystem {
 		final StringBuilder sb = new StringBuilder();
 
 		// Open quests
-		sb.append("\r\n#'Open Quests': ");
+		sb.append("\r\n#'接受任务': ");
 		boolean first = true;
 		for (final IQuest quest : quests) {
 			if (quest.isStarted(player) && !quest.isCompleted(player)) {
@@ -271,7 +271,7 @@ public class StendhalQuestSystem {
 		}
 
 		// Completed Quests
-		sb.append("\r\n#'Completed Quests': ");
+		sb.append("\r\n#'完结任务': ");
 		first = true;
 		for (final IQuest quest : quests) {
 			if (quest.isCompleted(player)) {
@@ -313,7 +313,7 @@ public class StendhalQuestSystem {
 		final StringBuilder sb = new StringBuilder();
 
 		// Open quests
-		sb.append("\r\n#'Open Quests': ");
+		sb.append("\r\n#'接受任务': ");
 
 		for (final IQuest quest : quests) {
 			if (quest.isStarted(player) && !quest.isCompleted(player)) {
@@ -321,8 +321,8 @@ public class StendhalQuestSystem {
 			}
 		}
 
-		// Completed Quests
-		sb.append("\n#'Completed Quests': ");
+		// 完结任务
+		sb.append("\n#'完结任务': ");
 		for (final IQuest quest : quests) {
 			if (quest.isCompleted(player)) {
 				sb.append("\r\n" + quest.getName() + " (" + quest.getSlotName() + "): " + player.getQuest(quest.getSlotName()));
@@ -427,7 +427,7 @@ public class StendhalQuestSystem {
 			if (questInfo.getName().equals(questName)
 					&& (questInfo.getSuggestedMinLevel() > player.getLevel())
 					&& !quest.isCompleted(player)) {
-				return "This task may be too dangerous for your level of experience.";
+				return "对你来说这个任务太危险.";
 			}
 		}
 		return "";

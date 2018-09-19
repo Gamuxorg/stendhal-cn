@@ -283,9 +283,9 @@ CREATE INDEX IF NOT EXISTS i_trade_timedate ON trade(timedate);
 CREATE TABLE IF NOT EXISTS searchindex
   (
   id          INTEGER auto_increment NOT NULL,
-  searchterm  VARCHAR(128),
+  searchterm  VARCHAR(64),
   entitytype  CHAR(1),
-  entityname  VARCHAR(128),
+  entityname  VARCHAR(64),
   searchscore INTEGER,
   PRIMARY KEY(id)
   );

@@ -58,26 +58,26 @@ public class HouseKeeperNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addJob("I'm the housekeeper here. I can #brew you a nice cup of #tea, if you like.");
-				addHelp("I find a lovely cup of #tea sorts out all my problems.");
-				addOffer("I will #brew you a hot cup of #tea, if you like.");
+				addJob("I'm the housekeeper here. I can #brew you a nice cup of #茶, if you like.");
+				addHelp("I find a lovely cup of #茶 sorts out all my problems.");
+				addOffer("I will #brew you a hot cup of #茶, if you like.");
 				addQuest("I have such a headache and little Annie shrieking every time she goes down the slide doesn't help. Maybe you could give her something to keep her occupied? ... like a gag ...");
 				addGoodbye("Bye now.");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("milk", 1);
+				requiredResources.put("牛奶", 1);
 				requiredResources.put("honey", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("granny_brew_tea",
-						"brew", "tea", requiredResources, 3 * 60);
+						"brew", "茶", requiredResources, 3 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "Hello, dear.");
-				addReply("milk",
-		        		"Well my dear, I expect you can get milk from a farm.");
+				addReply("牛奶",
+		        		"Well my dear, I expect you can get 牛奶 from a farm.");
 				addReply("honey",
 				        "Don't you know the beekeeper of Fado Forest?");
-				addReply("tea",
+				addReply("茶",
 				        "It's the very best drink of all. I sweeten mine with #honey. Just ask if you'd like a #brew.");
 			}
 		};

@@ -368,7 +368,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		final CorpseRefiller peterRefiller = new CorpseRefiller(
 				peter,
 				"鳞甲",
-				"You see a slightly rusty 鳞甲. It is heavily deformed by several strong hammer blows.");
+				"You see a slightly rusty 鳞甲. It is heavily deformed by several strong 铁锤 blows.");
 		peterRefiller.start();
 	}
 

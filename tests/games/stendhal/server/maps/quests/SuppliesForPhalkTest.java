@@ -97,21 +97,21 @@ public class SuppliesForPhalkTest {
 		en.step(player, "task");
 		assertEquals("I've been here a long time, and I can not leave this place. Could you bring me some food?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Oh, great! I am really hungry and thirsty. 3 #sandwiches, 3 bottles of #beer and 3 glasses of #wine should be enough. Please bring it to me and say #food!", getReply(npc));
+		assertEquals("Oh, great! I am really hungry and thirsty. 3 #sandwiches, 3 bottles of #beer and 3 glasses of #红酒 should be enough. Please bring it to me and say #food!", getReply(npc));
 		en.step(player, "sandwiches");
 		assertEquals("Come on, ask in a bakery!", getReply(npc));
 		en.step(player, "beer");
 		assertEquals("In an INN of course!", getReply(npc));
-		en.step(player, "wine");
+		en.step(player, "红酒");
 		assertEquals("In an INN of course!", getReply(npc));
 		en.step(player, "food");
-		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of wine?", getReply(npc));
+		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of 红酒?", getReply(npc));
 
         // say no
 		en.step(player, "no");
 		assertEquals("Pff! Then go away! But be sure, you will not get a reward if you don't bring me the items!", getReply(npc));
 		en.step(player, "food");
-		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of wine?", getReply(npc));
+		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of 红酒?", getReply(npc));
 
 		// lie
 		en.step(player, "yes");
@@ -120,18 +120,18 @@ public class SuppliesForPhalkTest {
 		// get the food
 		PlayerTestHelper.equipWithStackableItem(player, "sandwich", 3);
 		PlayerTestHelper.equipWithStackableItem(player, "beer", 3);
-		PlayerTestHelper.equipWithStackableItem(player, "wine", 3);
+		PlayerTestHelper.equipWithStackableItem(player, "红酒", 3);
 
 		// remember xp
 		final int xp = player.getXP();
 		en.step(player, "food");
-		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of wine?", getReply(npc));
+		assertEquals("Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of 红酒?", getReply(npc));
 		en.step(player, "yes");
 		// [16:26] redlads earns 600 experience points.
 
 		assertFalse(player.isEquipped("sandwich"));
 		assertFalse(player.isEquipped("beer"));
-		assertFalse(player.isEquipped("wine"));
+		assertFalse(player.isEquipped("红酒"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getQuest(questSlot), is("clothes;none;none"));
 
@@ -322,7 +322,7 @@ public class SuppliesForPhalkTest {
 		assertEquals("I am waiting for you to bring me new #clothes from Wrvil and Mrotho.", getReply(npc));
 
 		// yes he still replies to these old ones but it does not seem bad
-		en.step(player, "wine");
+		en.step(player, "红酒");
 		assertEquals("In an INN of course!", getReply(npc));
 		en.step(player, "beer");
 		assertEquals("In an INN of course!", getReply(npc));

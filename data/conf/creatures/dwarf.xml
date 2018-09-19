@@ -334,7 +334,7 @@
       <item value="铁鳞甲" quantity="[1,1]" probability="5.0"/>
       <item value="黄金锁子甲" quantity="[1,1]" probability="1.0"/>
       <item value="双刃斧" quantity="[1,1]" probability="2.5"/>
-      <item value="hammer" quantity="[1,1]" probability="0.5"/>
+      <item value="铁锤" quantity="[1,1]" probability="0.5"/>
       <item value="铁靴" quantity="[1,1]" probability="1.0"/>
       <item value="矮人斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="狮盾" quantity="[1,1]" probability="3.5"/>
@@ -401,7 +401,7 @@
       <item value="板甲" quantity="[1,1]" probability="8.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
       <item value="大砍刀" quantity="[1,1]" probability="0.45"/>
-      <item value="战锤" quantity="[1,1]" probability="5.25"/>
+      <item value="大战锤" quantity="[1,1]" probability="5.25"/>
       <item value="石靴" quantity="[1,1]" probability="0.0050"/>
       <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="potion" quantity="[1,2]" probability="1.5"/>

@@ -55,7 +55,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
- * <li>Markovich, a sick vampire who will fill the 红酒杯.</li>
+ * <li>Markovich, a sick vampire who will fill the 盛血高脚杯.</li>
  * </ul>
  * <p>
  * STEPS:
@@ -65,8 +65,8 @@ import games.stendhal.server.maps.Region;
  * needs.</li>
  * <li>Go to the catacombs, kill 7 vampirettes to get to the 3rd level, kill 7
  * killer bats and the vampire lord to get the required items to fill the
- * 红酒杯.</li>
- * <li>Fill the 红酒杯 and come back.</li>
+ * 盛血高脚杯.</li>
+ * <li>Fill the 盛血高脚杯 and come back.</li>
  * <li>You get some items from the Catacombs and kill the Vampire Lord.</li>
  * <li>You get the iron needed in the usual way by collecting iron ore and
  * casting in 塞门镇.</li>
@@ -132,7 +132,7 @@ public class VampireSword extends AbstractQuest {
 		// Player wants to do the quest
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES, null,
-			ConversationStates.ATTENDING, "Then you need this #红酒杯. Take it to the 塞门镇 #Catacombs.",
+			ConversationStates.ATTENDING, "Then you need this #盛血高脚杯. Take it to the 塞门镇 #Catacombs.",
 			new MultipleActions(gobletactions));
 
 		// Player doesn't want to do the quest; remember this, but they can ask again to start it.
@@ -146,7 +146,7 @@ public class VampireSword extends AbstractQuest {
 
 		npc.addReply("catacombs", "The Catacombs of north 塞门镇 of the ancient #stories.");
 
-		npc.addReply("红酒杯", "Go fill it with the blood of the enemies you meet in the #Catacombs.");
+		npc.addReply("盛血高脚杯", "Go fill it with the blood of the enemies you meet in the #Catacombs.");
 	}
 
 	private void prepareGobletFillingStep() {
@@ -156,13 +156,13 @@ public class VampireSword extends AbstractQuest {
 		npc.addGoodbye("*cough* ... farewell ... *cough*");
 		npc.addReply(
 			Arrays.asList("blood", "vampirette entrails", "bat entrails"),
-			"I need blood. I can take it from the entrails of the alive and undead. I will mix the bloods together for you and #fill your #红酒杯, if you let me drink some too. But I'm afraid of the powerful #lord.");
+			"I need blood. I can take it from the entrails of the alive and undead. I will mix the bloods together for you and #fill your #盛血高脚杯, if you let me drink some too. But I'm afraid of the powerful #lord.");
 
 		npc.addReply(Arrays.asList("lord", "vampire", "skull ring"),
-			"The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #红酒杯.");
+			"The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #盛血高脚杯.");
 
 		npc.addReply(
-			Arrays.asList("高脚杯", "红酒杯"),
+			Arrays.asList("高脚杯", "盛血高脚杯"),
 			"Only a powerful talisman like this cauldron or a special goblet should contain blood.");
 
 		// The sick vampire is only a producer. He doesn't care if your quest slot is active, or anything.
@@ -175,7 +175,7 @@ public class VampireSword extends AbstractQuest {
 		requiredResources.put("skull ring", 1);
 		requiredResources.put("高脚杯", 1);
 		final ProducerBehaviour behaviour = new ProducerBehaviour(
-				"sicky_fill_goblet", "fill", "红酒杯", requiredResources,
+				"sicky_fill_goblet", "fill", "盛血高脚杯", requiredResources,
 				5 * 60, true);
 		new ProducerAdder().addProducer(npc, behaviour,
 			"Please don't try to kill me...I'm just a sick old #vampire. Do you have any #blood I could drink? If you have an #高脚杯 I will #fill it with blood for you in my cauldron.");
@@ -187,7 +187,7 @@ public class VampireSword extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("Hogart");
 
 		final List<ChatAction> startforging = new LinkedList<ChatAction>();
-		startforging.add(new DropItemAction("红酒杯"));
+		startforging.add(new DropItemAction("盛血高脚杯"));
 		startforging.add(new DropItemAction("iron", 10));
 		startforging.add(new IncreaseKarmaAction(5.0));
 		startforging.add(new SetQuestAction(QUEST_SLOT, "forging;"));
@@ -197,7 +197,7 @@ public class VampireSword extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new PlayerHasItemWithHimCondition("红酒杯"),
+					new PlayerHasItemWithHimCondition("盛血高脚杯"),
 					new KilledCondition("vampire lord"),
 					new PlayerHasItemWithHimCondition("iron", REQUIRED_IRON)),
 			ConversationStates.IDLE,
@@ -210,11 +210,11 @@ public class VampireSword extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT,"start"),
-						new PlayerHasItemWithHimCondition("红酒杯"),
+						new PlayerHasItemWithHimCondition("盛血高脚杯"),
 						new KilledCondition("vampire lord"),
 						new NotCondition(new PlayerHasItemWithHimCondition("iron", REQUIRED_IRON))),
 		ConversationStates.QUEST_ITEM_BROUGHT,
-		"You have battled hard to bring that 红酒杯. I will use it to #forge the vampire sword",
+		"You have battled hard to bring that 盛血高脚杯. I will use it to #forge the vampire sword",
 		null);
 
 		// Player has only an 高脚杯 currently, remind to go to Catacombs
@@ -222,20 +222,20 @@ public class VampireSword extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
 					new PlayerHasItemWithHimCondition("高脚杯"),
-					new NotCondition(new PlayerHasItemWithHimCondition("红酒杯"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("盛血高脚杯"))),
 			ConversationStates.IDLE,
 			"Did you lose your way? The Catacombs are in North 塞门镇. Don't come back without a " +
-			"full 红酒杯! Bye!",
+			"full 盛血高脚杯! Bye!",
 			null);
 
 		// Player has a goblet (somehow) but did not kill a vampire lord
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT,"start"),
-						new PlayerHasItemWithHimCondition("红酒杯"),
+						new PlayerHasItemWithHimCondition("盛血高脚杯"),
 						new NotCondition(new KilledCondition("vampire lord"))),
 		ConversationStates.IDLE,
-		"Hm, that 红酒杯 is not filled with vampire blood; it can't be, you have not killed the vampire lord. You must slay him.",
+		"Hm, that 盛血高脚杯 is not filled with vampire blood; it can't be, you have not killed the vampire lord. You must slay him.",
 		null);
 
 		// Player lost the 高脚杯?
@@ -243,9 +243,9 @@ public class VampireSword extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT,"start"),
 						new NotCondition(new PlayerHasItemWithHimCondition("高脚杯")),
-						new NotCondition(new PlayerHasItemWithHimCondition("红酒杯"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("盛血高脚杯"))),
 			ConversationStates.QUESTION_1,
-			"I hope you didn't lose your 红酒杯! Do you need another?",
+			"I hope you didn't lose your 盛血高脚杯! Do you need another?",
 			null);
 
 		// Player lost the 高脚杯, wants another
@@ -294,7 +294,7 @@ public class VampireSword extends AbstractQuest {
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"Bring me "
 				+ REQUIRED_IRON
-				+ " #iron bars to forge the sword with. Don't forget to bring the 红酒杯 too.",
+				+ " #iron bars to forge the sword with. Don't forget to bring the 盛血高脚杯 too.",
 			null);
 
 		npc.add(
@@ -329,14 +329,14 @@ public class VampireSword extends AbstractQuest {
 			res.add("I do not want to earn the vampire sword");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I want the life stealing sword. I need to return to Hogart with a 红酒杯 of blood");
+			res.add("I want the life stealing sword. I need to return to Hogart with a 盛血高脚杯 of blood");
 		}
-		if (questState.equals("start") && player.isEquipped("红酒杯")
+		if (questState.equals("start") && player.isEquipped("盛血高脚杯")
 				|| questState.equals("done")) {
-			res.add("I have filled the 红酒杯 and now I need to bring Hogart the materials he needs.");
+			res.add("I have filled the 盛血高脚杯 and now I need to bring Hogart the materials he needs.");
 		}
 		if (player.getQuest(QUEST_SLOT).startsWith("forging;")) {
-			res.add("I took 10 iron and the 红酒杯 to Hogart. Now he's forging my sword.");
+			res.add("I took 10 iron and the 盛血高脚杯 to Hogart. Now he's forging my sword.");
 		}
 		if (questState.equals("done")) {
 			res.add("Finally I earned the vampire sword.");

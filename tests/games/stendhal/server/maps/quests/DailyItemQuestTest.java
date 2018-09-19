@@ -83,15 +83,15 @@ public class DailyItemQuestTest {
 		en.step(player, "bye");
 		assertEquals("Good day to you.", getReply(npc));
 
-		player.setQuest(questSlot, "pina colada;100");
-		Item item = ItemTestHelper.createItem("pina colada");
+		player.setQuest(questSlot, "椰林飘香;100");
+		Item item = ItemTestHelper.createItem("椰林飘香");
 		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 
 		en.step(player, "hi");
 		assertEquals("On behalf of the citizens of Ados, welcome.", getReply(npc));
 		en.step(player, "complete");
-		assertFalse(player.isEquipped("pina colada"));
+		assertFalse(player.isEquipped("椰林飘香"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertTrue(player.isQuestCompleted(questSlot));
 		// [10:50] kymara earns 455960 experience points.

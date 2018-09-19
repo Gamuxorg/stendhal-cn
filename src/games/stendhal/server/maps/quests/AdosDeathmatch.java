@@ -219,7 +219,7 @@ public class AdosDeathmatch extends AbstractQuest {
 			}
 		};
 
-		npc.setEntityClass("noimagenpc"); /* darkwizardnpc */
+		npc.setEntityClass("darkwizardnpc");
 		npc.setPosition(x, y);
 		npc.setDescription("你遇见了 Thanatos. 与这个死亡大赛参赛队员相比, 他还是比较强壮的.");
 		npc.setDirection(Direction.DOWN);

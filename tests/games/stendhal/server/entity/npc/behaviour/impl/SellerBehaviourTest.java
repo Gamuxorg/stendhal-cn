@@ -85,14 +85,14 @@ public class SellerBehaviourTest {
 	    npc.getEngine().step(player, "buy 1 potion");
 		assertEquals("Sorry, I don't sell bottles of potion.", getReply(npc));
 
-	    npc.getEngine().step(player, "buy wine");
-		assertEquals("Sorry, I don't sell glasses of wine.", getReply(npc));
+	    npc.getEngine().step(player, "buy 红酒");
+		assertEquals("Sorry, I don't sell glasses of 红酒.", getReply(npc));
 
-	    npc.getEngine().step(player, "buy 1 glass of wine");
-		assertEquals("Sorry, I don't sell glasses of wine.", getReply(npc));
+	    npc.getEngine().step(player, "buy 1 glass of 红酒");
+		assertEquals("Sorry, I don't sell glasses of 红酒.", getReply(npc));
 
-	    npc.getEngine().step(player, "buy 1 bottle of wine");
-		assertEquals("Sorry, I don't sell glasses of wine.", getReply(npc));
+	    npc.getEngine().step(player, "buy 1 bottle of 红酒");
+		assertEquals("Sorry, I don't sell glasses of 红酒.", getReply(npc));
 
 	    npc.getEngine().step(player, "buy dagger");
 		assertEquals("A dagger will cost 200. Do you want to buy it?", getReply(npc));

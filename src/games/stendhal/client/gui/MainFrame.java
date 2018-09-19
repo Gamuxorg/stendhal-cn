@@ -56,7 +56,7 @@ final class MainFrame {
 		}
 		frame.setTitle(ClientGameConfiguration.get("GAME_NAME") + " "
 				+ stendhal.VERSION + preRelease
-				+ " - a multiplayer online game using Arianne");
+				+ " - 多人在线网游");
 	}
 
 	/**

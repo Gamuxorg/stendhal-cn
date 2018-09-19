@@ -53,13 +53,13 @@ public class Maria extends ScriptImpl {
 //		}
 //
 //		public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-//			if (player.drop("coupon")) {
+//			if (player.drop("赠券")) {
 //				final Item 啤酒 = sandbox.getItem("啤酒");
 //				player.equipOrPutOnGround(beer);
 //				raiser.say("Here is your free beer.");
 //				player.setQuest("MariaCoupon", "done");
 //			} else {
-//				raiser.say("Sorry, you don't have a coupon. You can get one from Maria.");
+//				raiser.say("Sorry, you don't have a 赠券. You can get one from Maria.");
 //			}
 //		}
 //	}
@@ -103,7 +103,7 @@ public class Maria extends ScriptImpl {
 				"job",
 				"我 塞门镇 #酒吧 的酒娘, 现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
 		npc.behave("酒吧",
-//			"I have a #coupon for a free 啤酒 in 塞门镇' tavern. "+
+//			"I have a #赠券 for a free 啤酒 in 塞门镇' tavern. "+
 			"酒吧就在神庙隔壁的左边.");
 		npc.behave("help",
 				"你可以看看本店的服务 #offer ,或者住宿, 或者交结新朋友!");

@@ -49,7 +49,7 @@ public class WindowUtils {
 	/** Font size property name. */
 	private static final String FONT_SIZE_PROPERTY = "ui.font_size";
 	/** Default font point size. */
-	private static final int DEFAULT_FONT_SIZE = 12;
+	private static final int DEFAULT_FONT_SIZE = 13;
 
 	/** Property name used to determine if window dimensions should be restored. */
 	private static final String SAVE_DIMENSIONS_PROPERTY = "ui.dimensions";

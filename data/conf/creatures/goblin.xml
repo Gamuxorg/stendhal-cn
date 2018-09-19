@@ -24,7 +24,7 @@
       <item value="皮甲" quantity="[1,1]" probability="10.0"/>
       <item value="皮胸甲" quantity="[1,1]" probability="2.5"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
-      <item value="staff" quantity="[1,1]" probability="1.0"/>
+      <item value="法杖" quantity="[1,1]" probability="1.0"/>
       <item value="小圆盾" quantity="[1,1]" probability="0.5"/>
       <item value="knife" quantity="[1,1]" probability="0.5"/>
       <item value="布衣" quantity="[1,1]" probability="5.0"/>
@@ -64,7 +64,7 @@
       <item value="镶嵌甲" quantity="[1,1]" probability="4.0"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
       <item value="cloak" quantity="[1,1]" probability="0.5"/>
-      <item value="mace" quantity="[1,1]" probability="2.0"/>
+      <item value="权杖" quantity="[1,1]" probability="2.0"/>
       <item value="木盾" quantity="[1,1]" probability="1.0"/>
       <item value="布衣" quantity="[1,1]" probability="5.0"/>
     </drops>

@@ -36,7 +36,7 @@ public class CommonChest implements ZoneConfigurator {
 	    // load the stuff in the house with presents
 		final Chest chest = new Chest();
 		chest.setPosition(22, 2);
-		chest.add(SingletonRepository.getEntityManager().getItem("wine"));
+		chest.add(SingletonRepository.getEntityManager().getItem("红酒"));
 		chest.add(SingletonRepository.getEntityManager().getItem("复活蛋"));
 		chest.add(SingletonRepository.getEntityManager().getItem("mega potion"));
 		chest.add(SingletonRepository.getEntityManager().getItem("present"));

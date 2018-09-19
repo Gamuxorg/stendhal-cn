@@ -31,9 +31,9 @@ import games.stendhal.client.sprite.DataLoader;
  */
 class Initializer {
 	/** Name of the font used for the html areas. Should match the file name without .ttf */
-	private static final String DECORATIVE_FONT_NAME = "BlackChancery";
+	private static final String DECORATIVE_FONT_NAME = "DroidSansFallbackFull";
 	/** Name of the font used for the tally marks. Should match the file name without .ttf */
-	private static final String TALLY_FONT_NAME = "Tally";
+	private static final String TALLY_FONT_NAME = "DroidSansFallbackFull";
 
 	private static final Logger logger = Logger.getLogger(Initializer.class);
 

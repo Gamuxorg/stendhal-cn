@@ -260,7 +260,7 @@ public class RestockFlowerShop extends AbstractQuest {
 		reward.add(new EquipItemAction("纳尔沃城回城卷", 5));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
-		reward.add(new SayTextAction("非常感谢！现在我要开始忙了. "));
+		reward.add(new SayTextAction("非常感谢! 现在我要开始工作了, 这些纳尔沃回卷就算是给你的谢礼."));
 
 		ChatAction rewardAction = new MultipleActions(reward);
 

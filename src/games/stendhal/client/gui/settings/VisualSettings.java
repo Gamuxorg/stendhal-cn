@@ -62,7 +62,7 @@ class VisualSettings {
 	private JRadioButton customStyleSelector;*/
 
 	/** Default decorative font. */
-	private static final String DEFAULT_FONT = "BlackChancery";
+	private static final String DEFAULT_FONT = "DroidSansFallbackFull";
 	/** Default font size. */
 	private static final int DEFAULT_FONT_SIZE = 15;
 	/** Smallest size in the font size selector. */

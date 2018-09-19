@@ -64,7 +64,7 @@ public class ProgressStatusQueryAction implements ActionListener {
 	 * @param player Player to sent the event to
 	 */
 	private void sendProgressTypes(Player player) {
-		List<String> list = Arrays.asList("Open Quests", "Completed Quests", "Production");
+		List<String> list = Arrays.asList("接受任务", "完结任务", "制作物品");
 		player.addEvent(new ProgressStatusEvent(list));
 		player.notifyWorldAboutChanges();
 	}
@@ -76,16 +76,16 @@ public class ProgressStatusQueryAction implements ActionListener {
 	 * @param progressType the type of progress the player is interested in
 	 */
 	private void sendItemList(Player player, String progressType) {
-		if (progressType.equals("Open Quests")) {
+		if (progressType.equals("接受任务")) {
 			player.addEvent(new ProgressStatusEvent(progressType,
 					SingletonRepository.getStendhalQuestSystem().getOpenQuests(player)));
-		} else if (progressType.equals("Completed Quests")) {
+		} else if (progressType.equals("完结任务")) {
 			// Send first the list of the quests that can be repeated
 			player.addEvent(new ProgressStatusEvent("repeatable",
 					SingletonRepository.getStendhalQuestSystem().getRepeatableQuests(player)));
 			player.addEvent(new ProgressStatusEvent(progressType,
 					SingletonRepository.getStendhalQuestSystem().getCompletedQuests(player)));
-		} else if (progressType.equals("Production")) {
+		} else if (progressType.equals("制作物品")) {
 			player.addEvent(new ProgressStatusEvent(progressType,
 					SingletonRepository.getProducerRegister().getWorkingProducerNames(player)));
 		}
@@ -101,12 +101,12 @@ public class ProgressStatusQueryAction implements ActionListener {
 	 */
 	private void sendDetails(Player player, String progressType, String item) {
 		StendhalQuestSystem questSystem = SingletonRepository.getStendhalQuestSystem();
-		if (progressType.equals("Open Quests") || progressType.equals("Completed Quests")) {
+		if (progressType.equals("接受任务") || progressType.equals("完结任务")) {
 			player.addEvent(new ProgressStatusEvent(progressType, item,
 					questSystem.getQuestDescription(player, item),
 					questSystem.getQuestLevelWarning(player, item),
 					questSystem.getQuestProgressDetails(player, item)));
-		} else if (progressType.equals("Production")) {
+		} else if (progressType.equals("制作物品")) {
 			player.addEvent(new ProgressStatusEvent(progressType, item,
 					SingletonRepository.getProducerRegister().getProductionDescription(player, item),
 					SingletonRepository.getProducerRegister().getProductionDetails(player, item)));

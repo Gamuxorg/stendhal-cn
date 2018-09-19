@@ -96,7 +96,7 @@ public class DeepInspect extends ScriptImpl {
 	 */
 	private void inspect(final Player admin, final RPObject target) {
 		final StringBuilder sb = new StringBuilder();
-		sb.append("Inspecting " + target.get("name") + "\n");
+		sb.append("查验 " + target.get("name") + "\n");
 
 		for (final String value : target) {
 			sb.append(value + ": " + target.get(value) + "\n");
@@ -128,7 +128,7 @@ public class DeepInspect extends ScriptImpl {
 			Player player = (Player) target;
 
 			// Produced items
-			sb.append("Production:\n   ");
+			sb.append("制作物品:\n   ");
 			final ProducerRegister producerRegister = SingletonRepository.getProducerRegister();
 		    final List<String> produceList = new LinkedList<String>();
 
@@ -157,7 +157,7 @@ public class DeepInspect extends ScriptImpl {
 			Collection<Item> itemList = SingletonRepository.getEntityManager().getItems();
 
 			// Looted items
-			sb.append("Loots:\n   ");
+			sb.append("查看:\n   ");
 
 			int itemCount = 0;
 			for (Item item : itemList) {
@@ -173,7 +173,7 @@ public class DeepInspect extends ScriptImpl {
 
 
 			// Harvested items
-			sb.append("Harvested Items (FishSource, FlowerGrower, VegetableGrower):\n   ");
+			sb.append("收成 (FishSource, FlowerGrower, VegetableGrower):\n   ");
 			itemCount = 0;
 			for (Item item : itemList) {
 				itemCount = player.getQuantityOfHarvestedItems(item.getName());

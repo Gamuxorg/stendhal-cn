@@ -147,9 +147,9 @@
     </equipable>
   </item>
   
-  <item name="hammer">
+  <item name="铁锤">
     <type class="club" subclass="hammer" tileid="-1"/>
-    <description>You see a common hammer. It is heavy enough that you should be able to bludgeon your enemies with it, but only slowly</description>
+    <description>You see a common 铁锤. It is heavy enough that you should be able to bludgeon your enemies with it, but only slowly</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="31"/>
@@ -190,9 +190,9 @@
     </equipable>
   </item>
 
-  <item name="mace">
+  <item name="权杖">
     <type class="club" subclass="mace" tileid="-1"/>
-    <description>You see a mace, much neglected in years of use.</description>
+    <description>You see a 权杖, much neglected in years of use.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="16"/>
@@ -233,7 +233,7 @@
   
   <item name="巫师法杖">
     <type class="club" subclass="wizard_staff" tileid="-1"/>
-    <description>You see a cunningly beautiful staff. If you listen carefully you can hear its previous owners' souls screaming from within it.</description>
+    <description>You see a cunningly beautiful 法杖. If you listen carefully you can hear its previous owners' souls screaming from within it.</description>
     <implementation class-name="games.stendhal.server.entity.item.NecroStaff"/>
     <attributes>
       <atk value="8"/>
@@ -295,9 +295,9 @@
     </equipable>
   </item>
   
-  <item name="staff">
+  <item name="法杖">
     <type class="club" subclass="staff" tileid="-1"/>
-    <description>You see a staff. This is a seldom seen or used weapon.</description>
+    <description>You see a 法杖. This is a seldom seen or used weapon.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="9"/>
@@ -358,9 +358,9 @@
     </equipable>
   </item>
   
-  <item name="战锤">
+  <item name="大战锤">
     <type class="club" subclass="grand_warhammer" tileid="-1"/>
-    <description>一把战锤, 看上去很强也很重, 所以你举起它攻击的速度不会很快...</description>
+    <description>一把大战锤, 看上去很强也很重, 所以你举起它攻击的速度不会很快...</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="38"/>

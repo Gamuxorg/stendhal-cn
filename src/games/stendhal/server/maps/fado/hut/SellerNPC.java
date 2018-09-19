@@ -24,7 +24,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.SellerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
- * A lady wizard who sells potions and antidotes. Original name: Sarzina
+ * A lady wizard who sells potions and 抗毒药济s. Original name: Sarzina
  */
 public class SellerNPC implements ZoneConfigurator {
 
@@ -40,7 +40,7 @@ public class SellerNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addGreeting();
-				addJob("I make potions and antidotes, to #offer to warriors.");
+				addJob("I make potions and 抗毒药济s, to #offer to warriors.");
 				addHelp("You can take one of my prepared medicines with you on your travels; just ask for an #offer.");
 				addGoodbye();
 			}

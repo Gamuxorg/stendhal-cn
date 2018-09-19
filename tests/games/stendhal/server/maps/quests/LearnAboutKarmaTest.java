@@ -64,7 +64,7 @@ public class LearnAboutKarmaTest {
 		en.step(player, "help");
 		assertEquals("You can take one of my prepared medicines with you on your travels; just ask for an #offer.", getReply(npc));
 		en.step(player, "offer");
-		assertEquals("I sell antidote, greater antidote, potion, greater potion, and mega potion.", getReply(npc));
+		assertEquals("I sell 抗毒药济, 大瓶抗毒药济, potion, greater potion, and mega potion.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("Are you someone who likes to help others?", getReply(npc));
 		en.step(player, "no");
@@ -96,7 +96,7 @@ public class LearnAboutKarmaTest {
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "job");
-		assertEquals("I make potions and antidotes, to #offer to warriors.", getReply(npc));
+		assertEquals("I make potions and 抗毒药济s, to #offer to warriors.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("Are you someone who likes to help others?", getReply(npc));
 		en.step(player, "yes");

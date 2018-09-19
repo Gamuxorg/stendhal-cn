@@ -150,9 +150,9 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
                 final int STRONG_KOBOLDISH_TORCIBUD_PRICE = 195;
 
 				final Map<String, Integer> items = new HashMap<String, Integer>();
-				//啤酒 and wine have higher than average prices here.
+				//啤酒 and 红酒 have higher than average prices here.
 				items.put("啤酒", 18);
-				items.put("wine", 25);
+				items.put("红酒", 25);
 				items.put("mild koboldish torcibud", MILD_KOBOLDISH_TORCIBUD_PRICE);
 				items.put("strong koboldish torcibud", STRONG_KOBOLDISH_TORCIBUD_PRICE);
 
@@ -162,11 +162,11 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 					"Wroff! Welcome into the Kobold's Den bar wanderer!"
 						+ " I'm Wrviliza, wife of #Wrvil."
 						+ " If you want me to #offer you some beverages, just say so!");
-				addJob("Wroff! I offer wine, 啤酒 and my famous #mild or #strong koboldish #torcibud.");
+				addJob("Wroff! I offer 红酒, 啤酒 and my famous #mild or #strong koboldish #torcibud.");
 				addHelp("Wruff... If you are thirsty I can #offer you some beverage. If you didn't notice, this is a bar!");
 				addGoodbye("Wroff... Goodbye and good luck!");
 
-				addReply(Arrays.asList("wine","啤酒"),
+				addReply(Arrays.asList("红酒","啤酒"),
 						"Wrof! It will quench your thirst for a few coins...");
 				addReply("mild",
 						"Wrof! Not so #strong koboldish #torcibud. Give an empty #slim #bottle and "

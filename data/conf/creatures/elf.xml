@@ -37,7 +37,7 @@
   
   <creature name="天使精灵弓箭手">
     <type class="albino_elf" subclass="albino_elf_archer" tileid="albino_elf.png:0"/>
-    <description>这是一个天使精灵弓箭手. 他的眼睛很敏锐, 能从100米远的地方击中一只蜜蜂. </description>
+    <description>天使精灵弓箭手. 他的眼睛很敏锐, 能从100米远的地方击中一只蜜蜂. </description>
     <attributes>
       <atk value="345"/>
       <def value="94"/>
@@ -68,7 +68,7 @@
     </ai>
   </creature>
   
-  <creature name="天使精灵魔术师">
+  <creature name="天使精灵法师">
     <type class="albino_elf" subclass="albino_elf_magician" tileid="albino_elf.png:2"/>
     <description> 这是一个天使精灵魔术师. 他知道所有的魔术秘密. 你最好不要让他释放他的全部力量</description>
     <attributes>
@@ -165,9 +165,9 @@
   
   <!-- START: dark elf -->
   
-  <creature name="幼齿黑暗精灵">
+  <creature name="黑暗小精灵">
     <type class="dark_elf" subclass="baby_drow" tileid="dark_elf.png:10"/>
-    <description>幼齿黑暗这是一个幼齿黑暗精灵. 你应该知道黑暗精灵在他们还是孩子的时候就已经非常强壮和聪明了. 别以为你跟他打得那么容易</description>
+    <description>黑暗小精灵. 你应该知道黑暗精灵在幼年时就已经非常强壮和聪明. 不要以为他容易对付.</description>
     <attributes>
       <atk value="374"/>
       <def value="67"/>
@@ -198,7 +198,7 @@
   
   <creature name="黑暗精灵弓箭手">
     <type class="dark_elf" subclass="dark_elf_archer" tileid="dark_elf.png:0"/>
-    <description>这是一个黑暗精灵弓箭手. 黑暗精灵弓箭手完美无瑕的瞄准对那些敢于反抗他们的人来说是致命的. </description>
+    <description>这是一个黑暗精灵弓箭手. 他精准的箭术对与之对抗的人来说非常致命. </description>
     <attributes>
       <atk value="385"/>
       <def value="125"/>
@@ -231,7 +231,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf">
+  <creature name="黑暗精灵">
     <type class="dark_elf" subclass="dark_elf" tileid="dark_elf.png:6"/>
     <description></description>
     <attributes>
@@ -369,7 +369,7 @@
   
   <creature name="黑暗精灵将军">
     <type class="dark_elf" subclass="dark_elf_general" tileid="dark_elf.png:3"/>
-    <description>这是一个黑暗精灵将军. 它正在指挥纳尔沃洞穴的邪恶军队抵抗入侵者. </description>
+    <description>这是一个黑暗精灵将军. 它正在指挥纳尔沃洞穴的邪恶军队对抗入侵者.</description>
     <attributes>
       <atk value="515"/>
       <def value="92"/>
@@ -406,7 +406,7 @@
   
   <creature name="黑暗精灵巫师">
     <type class="dark_elf" subclass="dark_elf_wizard" tileid="dark_elf.png:9"/>
-    <description>黑精灵巫师是非常强大和危险的. 他们专门研究黑魔法. =黑精灵巫师是非常强大和危险的. 他们专门研究黑魔法. </description>
+    <description>黑精灵巫师非常强大且危险. 他们精专于黑魔法.</description>
     <attributes>
       <atk value="615"/>
       <def value="103"/>
@@ -434,7 +434,7 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="巨型蜘蛛女王会为我报仇的!"/>
+        <noise state="idle follow fight" value="巨型蜘蛛女王会为我报仇!"/>
       </says>
       <profile name="poisonous" params="5,greater poison"/>
       <profile name="brave"/>
@@ -473,7 +473,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="离我远点, 阳光居民!"/>
+        <noise state="idle follow fight" value="离我远点, 地面居民!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -552,7 +552,7 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="巨型蜘蛛女王会报复你的!"/>
+        <noise state="idle follow fight" value="巨型蜘蛛女王快缠住他!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -587,8 +587,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="害怕黑暗精灵军队!"/>
-        <noise state="idle follow fight" value="我们是你所恐惧的黑暗!"/>
+        <noise state="idle follow fight" value="我们是恐怖的黑暗精灵军队!"/>
+        <noise state="idle follow fight" value="是你所恐惧的黑暗!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -672,7 +672,7 @@
     <ai>
       <says>
         <noise state="idle follow fight" value="你打扰了我的休息!"/>
-        <noise state="idle follow fight" value="现在,你要付钱!"/>
+        <noise state="idle follow fight" value="现在, 你要出代价!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -724,7 +724,7 @@
   
   <creature name="民兵精灵">
     <type class="elf" subclass="militia_elf" tileid="elf.png:6"/>
-    <description>这是一个训练有素的民兵精灵很难打败你! 精灵弓箭手=精灵弓箭手</description>
+    <description>这是一个训练有素的民兵精灵, 很难对付!</description>
     <attributes>
       <atk value="200"/>
       <def value="44"/>
@@ -758,7 +758,7 @@
   
   <creature name="精灵弓箭手">
     <type class="elf" subclass="archer_elf" tileid="elf.png:0"/>
-    <description>精灵弓箭手=精灵弓箭手.</description> 
+    <description>精灵弓箭手.</description> 
     <attributes>
       <atk value="198"/>
       <def value="42"/>
@@ -794,7 +794,7 @@
   
   <creature name="士兵精灵">
     <type class="elf" subclass="soldier_elf" tileid="elf.png:7"/>
-    <description>这是一个士兵精灵, 一个民兵精灵的好伙伴. </description>
+    <description>士兵精灵, 他是民兵精灵的好伙伴.</description>
     <attributes>
       <atk value="216"/>
       <def value="40"/>
@@ -828,7 +828,7 @@
   
   <creature name="精灵法师">
     <type class="elf" subclass="mage_elf" tileid="elf.png:5"/>
-    <description>这是一个法师精灵. 当她站在外面的森林里时, 她能感觉到纯粹的魔力, 并且解放了她的思想. </description>
+    <description>法师精灵. 当她站在外面的森林里时, 她能感觉到纯粹的魔力, 并且解放了她的思想.</description>
     <attributes>
       <atk value="242"/>
       <def value="63"/>
@@ -860,7 +860,7 @@
   
   <creature name="精灵指挥官">
     <type class="elf" subclass="commander_elf" tileid="elf.png:2"/>
-    <description>这是一个忙碌的精灵指挥官. 他控制着精灵的军队. </description>
+    <description>这是一个忙碌的精灵指挥官. 他控制着精灵的军队.</description>
     <attributes>
       <atk value="285"/>
       <def value="102"/>
@@ -896,7 +896,7 @@
   
   <creature name="精灵大法师">
     <type class="elf" subclass="archmage_elf" tileid="elf.png:1"/>
-    <description>这是一个大法师精灵. 她很漂亮. </description>
+    <description>这是一个大法师精灵. 她很漂亮.</description>
     <attributes>
       <atk value="256"/>
       <def value="87"/>
@@ -964,7 +964,7 @@
   
   <creature name="精灵巫师">
     <type class="elf" subclass="elf_wizard" tileid="elf.png:9"/>
-    <description>这是一个精灵巫师. 他是一个非常聪明的精灵, 几乎知道所有的魔法. 他喜欢使用自然魔法使每一种植物和生物都能繁殖, 但他也能在必要时保护自己. </description>
+    <description>这是一个精灵巫师. 他是一个非常聪明的精灵, 几乎掌握所有的魔法. 他喜欢使用自然魔法使各种植物和生物迅速生长, 也能在必要时保护自己. </description>
     <attributes>
       <atk value="400"/>
       <def value="70"/>

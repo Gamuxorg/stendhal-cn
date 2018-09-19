@@ -67,7 +67,7 @@ public class BlacksheepBobNPC implements ZoneConfigurator {
 			requiredResources.put("vampirette entrails", Integer.valueOf(1));
 			requiredResources.put("bat entrails", Integer.valueOf(1));
 			requiredResources.put("肉", Integer.valueOf(1));
-			requiredResources.put("wine", Integer.valueOf(2));
+			requiredResources.put("红酒", Integer.valueOf(2));
 
 			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepbob_make_sausage", "make", "sausage",
 			        requiredResources, 2 * 60);

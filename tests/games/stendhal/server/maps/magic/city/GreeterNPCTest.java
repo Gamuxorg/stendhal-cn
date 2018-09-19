@@ -134,8 +134,8 @@ public class GreeterNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue(en.step(player, "buy someunknownthing"));
 		assertEquals("Sorry, I don't sell someunknownthings.", getReply(npc));
 
-		assertTrue(en.step(player, "buy a bottle of wine"));
-		assertEquals("Sorry, I don't sell glasses of wine.", getReply(npc));
+		assertTrue(en.step(player, "buy a bottle of 红酒"));
+		assertEquals("Sorry, I don't sell glasses of 红酒.", getReply(npc));
 
 		assertTrue(en.step(player, "buy scroll"));
 		assertEquals("There is more than one scroll. Please specify which sort of scroll you want to buy.", getReply(npc));

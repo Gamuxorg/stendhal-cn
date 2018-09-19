@@ -458,7 +458,7 @@
     <drops>
       <item value="肉" quantity="[1,3]" probability="60.0"/>
       <item value="火腿" quantity="[1,2]" probability="30.0"/>
-      <item value="antidote" quantity="[1,1]" probability="5.0"/>
+      <item value="抗毒药济" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -487,7 +487,7 @@
     <drops>
       <item value="肉" quantity="[1,3]" probability="60.0"/>
       <item value="火腿" quantity="[1,2]" probability="30.0"/>
-      <item value="antidote" quantity="[1,1]" probability="5.0"/>
+      <item value="抗毒药济" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -1467,6 +1467,7 @@
     <drops>
       <item value="冰剑" quantity="[1,1]" probability="20.0"/>
       <item value="苹果" quantity="[10,30]" probability="80.0"/>
+      <item value="密银铠甲" quantity="[1,1]" probability="0.9"/>
     </drops>
     <equips/>
     <ai>

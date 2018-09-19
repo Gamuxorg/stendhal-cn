@@ -64,7 +64,7 @@ class ProgressLog {
 	/** Image used for the log background. */
 	private static final String BACKGROUND_IMAGE = "data/gui/scroll_background.png";
 	/** Name of the font used for the html areas. Should match the file name without .ttf */
-	private static final String FONT_NAME = "BlackChancery";
+	private static final String FONT_NAME = "DroidSansFallbackFull";
 	/** Image data element for marking repeatable quests. */
 	private static final String IMAGE = "<img border=\"0\" style=\"border-style: none\" src='" + DataLoader.getResource("data/gui/rp.png").toString() + "'/>";
 
@@ -263,7 +263,7 @@ class ProgressLog {
 					0, SBoxLayout.COMMON_PADDING, SBoxLayout.COMMON_PADDING));
 			add(buttonBox);
 			// A button for reloading the page contents
-			JButton refresh = new JButton("Update");
+			JButton refresh = new JButton("更新");
 			refresh.setMnemonic(KeyEvent.VK_U);
 			refresh.setAlignmentX(Component.RIGHT_ALIGNMENT);
 			refresh.addActionListener(new ActionListener() {
@@ -273,7 +273,7 @@ class ProgressLog {
 				}
 			});
 			buttonBox.add(refresh);
-			JButton closeButton = new JButton("Close");
+			JButton closeButton = new JButton("关闭");
 			closeButton.setMnemonic(KeyEvent.VK_C);
 			closeButton.addActionListener(new ActionListener() {
 				@Override

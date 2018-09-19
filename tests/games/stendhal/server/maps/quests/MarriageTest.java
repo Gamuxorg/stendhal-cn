@@ -420,7 +420,7 @@ public class MarriageTest {
 		// 8. Waterfall Wonder - splash, or admire
 		// 9. Wooden Delicacy - go back to your roots
 		// 10. Simple Serenity - a room of calm
-		// 11. Water of Love - wine flows freely
+		// 11. Water of Love - 红酒 flows freely
 		// 12. Stone Hearted - an architect's delight
 		// 13. Blue For You - azure, lapis, cobalt and cornflower
 		// 14. Rhapsody in pink - romantic yet regal

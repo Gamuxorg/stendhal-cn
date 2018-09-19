@@ -153,7 +153,7 @@ data/sprites/monsters/farm_animal/
 
 beaver.png       ???; ???; ???
 bull.*           Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
-chick.png        Shepardskin, Jordan Irwin (AntumDeluge); CC0; https://opengameart.org/node/76895
+chick.*          Shepardskin, Jordan Irwin (AntumDeluge); CC0; https://opengameart.org/node/76895
 cow.*            Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
 goat.png         bluecarrot16; CC BY 3.0; https://opengameart.org/node/36051; Based on "LPC Style Farm Animals" by Daniel Eddeland (daneeklu), commissioned by Thomas Bruno (tebruno99). License: CC-BY 3.0 / GPL 2+. http://opengameart.org/content/lpc-style-farm-animals
 grass_snake.png  Svetlana Kushnariova (Cabbit); OGA BY 3.0; https://opengameart.org/node/72969
@@ -239,7 +239,7 @@ green_dragon.*            Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
 king_cobra.*              Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/20678
 kraken.png                ???; ???; ???
 red_dragon.*              Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
-thing.*                   IndigoFenix, olonu; CC BY 3.0/4.0; https://opengameart.org/node/84760
+thing*                    IndigoFenix, olonu; CC BY 3.0/4.0; https://opengameart.org/node/84760
 twin_head_dragon.png      ZaPaper, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/79018; Credits to http://www.buko-studios.com/ Commissioned by PlayCraft: https://www.playcraftapp.com/
 
 data/sprites/monsters/human/
@@ -262,11 +262,11 @@ cannibalwoman.*            Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDel
 darkmonk.png               Svetlana Kushnariova (Cabbit), onu/olonu; OGA BY 3.0; https://github.com/arianne/stendhal/issues/124
 elder_cannibal.*           Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969
 emperor_dalmung.*          Svetlana Kushnariova (Cabbit), wulax, DkuCook, olonu, Jordan Irwin (AntumDeluge); CC BY-SA 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/11165, https://opengameart.org/node/82451
-hunter.*                   ???; ???; ???
+hunter.*                   ???, Svetlana Kushnariova, olonu; ???; https://opengameart.org/node/72969, https://opengameart.org/node/66349
 imperial_archer.*          Svetlana Kushnariova (Cabbit), olonu, SoCay; OGA BY 3.0; https://github.com/arianne/stendhal/issues/151
 imperial_archer_leader.*   Svetlana Kushnariova (Cabbit), olonu, SoCay; OGA BY 3.0; https://github.com/arianne/stendhal/issues/160
 imperial_chief.png         ???; ???; ???
-imperial_commander.png     ???; ???; ???
+imperial_commander.*       Svetlana Kushnariova (Cabbit); CC BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/72575
 imperial_defender.*        Svetlana Kushnariova (Cabbit), Spring, olonu, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/68650
 imperial_elite_archer.*    Svetlana Kushnariova (Cabbit), olonu, Fabzy, SoCay; CC BY-SA 3.0; https://github.com/arianne/stendhal/issues/151
 imperial_elite_guardian.*  Svetlana Kushnariova (Cabbit), LordNeo, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/10878

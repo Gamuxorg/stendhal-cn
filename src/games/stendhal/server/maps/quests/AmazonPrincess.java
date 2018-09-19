@@ -75,7 +75,7 @@ public class AmazonPrincess extends AbstractQuest {
 
 	// The delay between repeating quests is 60 minutes
 	private static final int REQUIRED_MINUTES = 60;
-	private static final List<String> triggers = Arrays.asList("drink", "pina colada", "cocktail", "cheers", "pina");
+	private static final List<String> triggers = Arrays.asList("drink", "椰林飘香", "cocktail", "cheers", "pina");
 
 
 	private void offerQuestStep() {
@@ -136,11 +136,11 @@ npc.add(ConversationStates.ATTENDING,
 		final SpeakerNPC npc = npcs.get("Princess Esclara");
 		npc.add(
 			ConversationStates.ATTENDING, triggers,
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("pina colada")),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("椰林飘香")),
 			ConversationStates.ATTENDING,
 			null,
 			new MultipleActions(
-						new DropItemAction("pina colada"),
+						new DropItemAction("椰林飘香"),
 						new ChatAction() {
 							@Override
 							public void fire(final Player player,
@@ -156,12 +156,12 @@ npc.add(ConversationStates.ATTENDING,
 																 + System.currentTimeMillis(), 15.0).fire(player, sentence, npc);
 							}
 						},
-						new InflictStatusOnNPCAction("pina colada")
+						new InflictStatusOnNPCAction("椰林飘香")
 						));
 
 		npc.add(
 			ConversationStates.ATTENDING, triggers,
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("pina colada"))),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("椰林飘香"))),
 			ConversationStates.ATTENDING,
 			"你没有带来我喜欢的饮品, 去弄一些外来的品种！",
 			null);
@@ -199,14 +199,14 @@ npc.add(ConversationStates.ATTENDING,
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
 			res.add("公主很渴, 我答应给她找一个异域饮品, 找到后对她说 'drink' . ");
 		}
-		if ("start".equals(questState) && player.isEquipped("pina colada") || isCompleted(player)) {
-			res.add("我为公主找到一种 pina colada 的饮料, 我觉得她会喜欢喝. ");
+		if ("start".equals(questState) && player.isEquipped("椰林飘香") || isCompleted(player)) {
+			res.add("我为公主找到一种 椰林飘香 的饮料, 我觉得她会喜欢喝. ");
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("我把 pina colada 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 fish pies.");
+                res.add("我把 椰林飘香 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 fish pies.");
             } else {
-                res.add("公主 Esclara 很爱我带给她的 pina colada , 她不再感到口渴了. 她把 fish pies 送给了我, 还有一个香吻!");
+                res.add("公主 Esclara 很爱我带给她的 椰林飘香 , 她不再感到口渴了. 她把 fish pies 送给了我, 还有一个香吻!");
             }
 		}
 		return res;

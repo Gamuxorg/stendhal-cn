@@ -481,7 +481,7 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_ciorba.put("pinto beans", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("洋葱", new Pair<Integer, Integer>(2,4));
         requiredIngredients_ciorba.put("大蒜", new Pair<Integer, Integer>(1,3));
-        requiredIngredients_ciorba.put("milk", new Pair<Integer, Integer>(1,3));
+        requiredIngredients_ciorba.put("牛奶", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("胡萝卜", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("vinegar", new Pair<Integer, Integer>(1,3));
 
@@ -500,7 +500,7 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_schnitzel.put("小圆菇", new Pair<Integer, Integer>(4,8));
         requiredIngredients_schnitzel.put("火腿", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("肉", new Pair<Integer, Integer>(2,3));
-        requiredIngredients_schnitzel.put("milk", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_schnitzel.put("牛奶", new Pair<Integer, Integer>(1,2));
         requiredIngredients_schnitzel.put("干酪", new Pair<Integer, Integer>(1,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_consomme = new HashMap<String, Pair<Integer, Integer>>();
@@ -578,7 +578,7 @@ public class MealForGroongo extends AbstractQuest {
         // All not-yet-existing ingredients commented out for testing purposes
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_brigadeiro = new HashMap<String, Pair<Integer, Integer>>();
-        requiredIngredients_brigadeiro.put("milk", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_brigadeiro.put("牛奶", new Pair<Integer, Integer>(1,4));
         requiredIngredients_brigadeiro.put("sugar", new Pair<Integer, Integer>(2,4));
         requiredIngredients_brigadeiro.put("butter", new Pair<Integer, Integer>(2,4));
         //requiredIngredients_brigadeiro.put("椰子", new Pair<Integer, Integer>(1,2)); // will be cacao pod... monkeys?
@@ -590,7 +590,7 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_macedonia.put("西瓜", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_slagroomtart = new HashMap<String, Pair<Integer, Integer>>();
-        requiredIngredients_slagroomtart.put("milk", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_slagroomtart.put("牛奶", new Pair<Integer, Integer>(1,4));
         requiredIngredients_slagroomtart.put("sugar", new Pair<Integer, Integer>(1,2));
         requiredIngredients_slagroomtart.put("egg", new Pair<Integer, Integer>(2,4));
         //requiredIngredients_slagroomtart.put("菠萝", new Pair<Integer, Integer>(1,4));
@@ -611,13 +611,13 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_tarte.put("面粉", new Pair<Integer, Integer>(1,2));
         requiredIngredients_tarte.put("sugar", new Pair<Integer, Integer>(1,4));
         requiredIngredients_tarte.put("chocolate", new Pair<Integer, Integer>(1,6));
-        requiredIngredients_tarte.put("milk", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_tarte.put("牛奶", new Pair<Integer, Integer>(2,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_kirschtorte = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_kirschtorte.put("面粉", new Pair<Integer, Integer>(1,2));
         requiredIngredients_kirschtorte.put("sugar", new Pair<Integer, Integer>(1,4));
         requiredIngredients_kirschtorte.put("butter", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_kirschtorte.put("milk", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_kirschtorte.put("牛奶", new Pair<Integer, Integer>(2,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_gulab = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_gulab.put("面粉", new Pair<Integer, Integer>(1,2));

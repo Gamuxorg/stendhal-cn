@@ -57,11 +57,11 @@ public class MotherNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hello. I'm sorry I don't have much time as my boy is ill.");
 				addJob("My brother runs this farm. I just look after my son here.");
-				addHelp("Philomena can sell you milk and butter.");
+				addHelp("Philomena can sell you 牛奶 and butter.");
 				addGoodbye("Goodbye.");
 			}
 		};
-		npc.setEntityClass("noimagenpc"); // "woman_006_npc"
+		npc.setEntityClass("woman_006_npc");
 		npc.setPosition(30, 9);
 		npc.initHP(100);
 		npc.setDescription("You see Anastasia, looking worried.");

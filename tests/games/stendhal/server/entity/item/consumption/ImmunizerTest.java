@@ -65,40 +65,40 @@ public class ImmunizerTest {
 
 		Immunizer immu = new Immunizer();
 
-		ConsumableItem item = ConsumableTestHelper.createImmunizer("antidote");
+		ConsumableItem item = ConsumableTestHelper.createImmunizer("抗毒药济");
 		item.put("id", 1);
 		Player player = PlayerTestHelper.createPlayer("herrkules");
 		assertFalse(player.getStatusList().isImmune(StatusType.POISONED));
 		assertTrue(immu.feed(item, player));
 		assertTrue(player.getStatusList().isImmune(StatusType.POISONED));
-		ConsumableItem item2 = ConsumableTestHelper.createImmunizer("antidote");
+		ConsumableItem item2 = ConsumableTestHelper.createImmunizer("抗毒药济");
 		item2.put("id", 2);
 
-		assertEquals(2, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(2, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 
 		TurnNotifier.get().logic(TurnNotifier.get().getCurrentTurnForDebugging() + 1);
 
-		assertEquals(1, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(1, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 		assertThat(player.events().size(), is(0));
 		assertTrue(immu.feed(item2, player));
 
 		assertThat(player.events().size(), is(0));
 		assertTrue(player.getStatusList().isImmune(StatusType.POISONED));
-		assertEquals(2, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(2, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 
 		TurnNotifier.get().logic(TurnNotifier.get().getCurrentTurnForDebugging() + 1);
 		assertTrue(player.getStatusList().isImmune(StatusType.POISONED));
-		assertEquals(1, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(1, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 
 		TurnNotifier.get().logic(TurnNotifier.get().getCurrentTurnForDebugging() + 1);
 		assertFalse(player.getStatusList().isImmune(StatusType.POISONED));
-		assertEquals(-1, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(-1, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 		assertThat(player.events().size(), is(1));
 		assertThat(player.events().get(0).get("text"), is("You are not immune to being poisoned anymore."));
 
 		TurnNotifier.get().logic(TurnNotifier.get().getCurrentTurnForDebugging() + 1);
 		assertFalse(player.getStatusList().isImmune(StatusType.POISONED));
-		assertEquals(-1, TurnNotifier.get().getRemainingTurns(new AntidoteEater(player)));
+		assertEquals(-1, TurnNotifier.get().getRemainingTurns(new StatusHealerEater(player, StatusType.POISONED)));
 
 	}
 

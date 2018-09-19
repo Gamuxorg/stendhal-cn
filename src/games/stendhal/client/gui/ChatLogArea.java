@@ -93,7 +93,7 @@ class ChatLogArea {
 	}
 
 	private NotificationChannel setupPersonalChannel(KTextEdit edit) {
-		edit.setChannelName("Personal");
+		edit.setChannelName("私信");
 		/*
 		 * Give it a different background color to make it different from the
 		 * main chat log.
@@ -108,11 +108,11 @@ class ChatLogArea {
 				+ NotificationType.CLIENT + "," + NotificationType.GROUP + ","
 				+ NotificationType.TUTORIAL + "," + NotificationType.SUPPORT;
 		
-		return new NotificationChannel("Personal", edit, false, personalDefault);
+		return new NotificationChannel("私信", edit, false, personalDefault);
 	}
 
 	private NotificationChannel setupMainChannel(KTextEdit edit) {
-		NotificationChannel channel = new NotificationChannel("Main", edit, true, "");
+		NotificationChannel channel = new NotificationChannel("主频道", edit, true, "");
 		
 		// Follow settings changes for the main channel
 		WtWindowManager wm = WtWindowManager.getInstance();

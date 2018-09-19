@@ -82,7 +82,7 @@ public class TheMissingBooks extends AbstractQuest {
 						"of 阿多斯城, heading out for reaching the right entrance to a life full of joy and peace - at least they hoped for that.");
 		quotes.put("Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge,...",
 						"it's powerful, it has a hard forehand...Could that be it? It is a balrog!");
-		quotes.put("You need some 面粉, some eggs, some butter, some sugar, some chocolate and some milk...",
+		quotes.put("You need some 面粉, some eggs, some butter, some sugar, some chocolate and some 牛奶...",
 						"a hot drink for the winter, some rat to make it silk. Now after waiting for some time and after the job is done: a crepes suzette that is you hold, enjoy it and have fun!");
 	}
 

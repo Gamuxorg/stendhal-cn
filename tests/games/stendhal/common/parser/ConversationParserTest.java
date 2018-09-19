@@ -200,11 +200,11 @@ public class ConversationParserTest {
 		assertEquals(7, sentence.getObject(0).getAmount());
 		assertEquals("banana", sentence.getObject(0).getNormalized());
 
-		sentence = ConversationParser.parse("buy a bottle of wine");
+		sentence = ConversationParser.parse("buy a bottle of 红酒");
 		assertFalse(sentence.hasError());
 		assertEquals("buy", sentence.getVerbString());
 		assertEquals(1, sentence.getObject(0).getAmount());
-		assertEquals("wine", sentence.getObject(0).getNormalized());
+		assertEquals("红酒", sentence.getObject(0).getNormalized());
 
 		sentence = ConversationParser.parse("buy two pairs of trousers");
 		assertFalse(sentence.hasError());

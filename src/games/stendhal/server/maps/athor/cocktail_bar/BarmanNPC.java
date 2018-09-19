@@ -55,8 +55,8 @@ public class BarmanNPC implements ZoneConfigurator {
 				addQuest("What you say?");
 				addOffer("Perhaps I can #mix a nice #椰子 and #菠萝 cocktail to cool you down...");
 				addReply("菠萝","Sadly 菠萝s don't grow on Athor, you'll have to hunt me some yourself.");
-				addReply("椰子","I'll use the milk to #mix your cocktail, look for them under palm trees.");
-				addHelp("You want a pina colada mixed, I'm your man!");
+				addReply("椰子","I'll use the 牛奶 to #mix your cocktail, look for them under palm trees.");
+				addHelp("You want a 椰林飘香 mixed, I'm your man!");
 				addGoodbye("Cheers!");
 
 				// make cocktail!
@@ -65,7 +65,7 @@ public class BarmanNPC implements ZoneConfigurator {
 				requiredResources.put("椰子", 1);
 				requiredResources.put("菠萝", 1);
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("barman_mix_pina",
-						"mix", "pina colada", requiredResources, 2 * 60);
+						"mix", "椰林飘香", requiredResources, 2 * 60);
 				new ProducerAdder().addProducer(this, mixerBehaviour, "Aloha!");
 			}
 		};

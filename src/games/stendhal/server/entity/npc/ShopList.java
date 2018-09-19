@@ -27,7 +27,7 @@ public final class ShopList {
 		final ShopList shops = ShopList.get();
 
 		shops.add("food&drinks", "啤酒", 10);
-		shops.add("food&drinks", "wine", 15);
+		shops.add("food&drinks", "红酒", 15);
 		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
 		shops.add("food&drinks", "苹果", 10);
@@ -45,13 +45,13 @@ public final class ShopList {
 		shops.add("buyfood", "面粉", 25);
 		shops.add("buyfood", "大脚菇", 30);
 
-		shops.add("healing", "antidote", 50);
+		shops.add("healing", "抗毒药济", 50);
 		shops.add("healing", "minor potion", 100);
 		shops.add("healing", "potion", 250);
 		shops.add("healing", "greater potion", 500);
 
-		shops.add("superhealing", "antidote", 50);
-		shops.add("superhealing", "greater antidote", 100);
+		shops.add("superhealing", "抗毒药济", 50);
+		shops.add("superhealing", "大瓶抗毒药济", 100);
 		shops.add("superhealing", "potion", 250);
 		shops.add("superhealing", "greater potion", 500);
 		shops.add("superhealing", "mega potion", 1500);
@@ -125,7 +125,7 @@ public final class ShopList {
 		// enable these if you need them for a quest or something
 		// shops.add("selltools", "pick", 50);
 		// shops.add("selltools", "shovel", 50);
-		shops.add("selltools", "hammer", 60);
+		shops.add("selltools", "铁锤", 60);
 		// used for harvest 小麦.
 		shops.add("selltools", "旧的大镰刀", 120);
         // for harvesting cane fields
@@ -164,12 +164,12 @@ public final class ShopList {
 		shops.add("elfbuyrare", "双刃斧", 80);
 		shops.add("elfbuyrare", "双刃剑", 90);
 		shops.add("elfbuyrare", "阔剑", 100);
-		shops.add("elfbuyrare", "staff", 75);
+		shops.add("elfbuyrare", "法杖", 75);
 		shops.add("elfbuyrare", "加强狮盾", 100);
 		shops.add("elfbuyrare", "王冠之盾", 120);
 
 		// more rare weapons shop (fado)
-		shops.add("buyrare2", "战锤", 120);
+		shops.add("buyrare2", "大战锤", 120);
 		shops.add("buyrare2", "突刺剑", 150);
 		shops.add("buyrare2", "crossbow", 175);
 		shops.add("buyrare2", "巨剑", 250);
@@ -302,7 +302,7 @@ public final class ShopList {
 		shops.add("buyoddsandends", "knife", 5);
 		shops.add("buyoddsandends", "dagger", 20);
 		shops.add("buyoddsandends", "skull ring", 250);
-		shops.add("buyoddsandends", "greater antidote", 80);
+		shops.add("buyoddsandends", "大瓶抗毒药济", 80);
 		shops.add("buyoddsandends", "marbles", 80);
 		shops.add("buyoddsandends", "magical needle", 1500);
 		shops.add("buyoddsandends", "snowglobe", 150);
@@ -412,10 +412,10 @@ public final class ShopList {
 		shops.add("tradeswords", "dagger", 10);
 
 		// party time! For maria for example. Bit more expensive than normal
-		shops.add("sellparty", "pina colada", 100);
+		shops.add("sellparty", "椰林飘香", 100);
 		shops.add("sellparty", "巧克力棒", 100);
 		shops.add("sellparty", "啤酒", 10);
-		shops.add("sellparty", "wine", 15);
+		shops.add("sellparty", "红酒", 15);
 		shops.add("sellparty", "vanilla shake", 150);
 		shops.add("sellparty", "冰淇淋", 50);
 		shops.add("sellparty", "hotdog", 180);
@@ -463,13 +463,13 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "cheeseydog", 175);
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
 		shops.add("sellrevivalweeks", "三明治", 130);
-		shops.add("sellrevivalweeks", "wine", 25);
+		shops.add("sellrevivalweeks", "红酒", 25);
 		shops.add("sellrevivalweeks", "啤酒", 20);
 		shops.add("sellrevivalweeks", "水", 15);
 
 		// for ados botanical gardens or if you like, other cafes.
 		// expensive prices to make sure that the npc production of these items isn't compromised
-		shops.add("cafe", "tea", 80);
+		shops.add("cafe", "茶", 80);
 		shops.add("cafe", "水", 50);
 		shops.add("cafe", "chocolate shake", 150);
 		shops.add("cafe", "三明治", 170);

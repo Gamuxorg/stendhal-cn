@@ -466,7 +466,7 @@
     <attributes>
       <def value="15"/>
 	  <min_level value="50"/>
-	  <life_support value="water"/>
+	  <life_support value="水"/>
     </attributes>
     <weight value="45.0"/>
     <value value="34391"/>

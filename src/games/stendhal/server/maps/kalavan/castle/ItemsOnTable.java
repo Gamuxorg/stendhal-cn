@@ -39,8 +39,8 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 		plantGrower.setToFullGrowth();
 
-		// Plant grower for antidote
-		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("greater antidote", 4500);
+		// Plant grower for 抗毒药济
+		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("大瓶抗毒药济", 4500);
 		plantGrower2.setPosition(83, 111);
 		plantGrower2.setDescription("Scientists often put bottles down here.");
 		zone.add(plantGrower2);

@@ -1054,7 +1054,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手持蜡烛站在它上面, 然后它会飘起来.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -2577,7 +2577,7 @@ Holy mackerel! These chips are tasty.
     <entity x="4" y="28">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-       Adventurers have described the effects of poisonous creatures and mushrooms as not only unhealthy, but also as confusing for the orientation. They recommend always to take an antidote with you.
+       Adventurers have described the effects of poisonous creatures and mushrooms as not only unhealthy, but also as confusing for the orientation. They recommend always to take an 抗毒药济 with you.
      </attribute>
       <attribute name="class">book_blue</attribute>
     </entity>
@@ -4500,7 +4500,16 @@ Mature sheep wanted: please speak to 赛特
       <parameter name="color_method">softlight</parameter>
       <parameter name="color">#22ffdd</parameter>
     </attributes>
-    <!-- Don't allow teleporting in as we don't want 标记卷轴s made 
+    
+    <!-- Music -->
+    <entity x="0" y="0">
+      <implementation
+        class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
+        <parameter name="sound">eerie_curious</parameter>
+      </implementation>
+    </entity>
+
+    <!-- Don't allow teleporting in as we don't want marked scrolls made 
       or ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <portal x="43" y="49" ref="exit1">

@@ -138,11 +138,11 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("连枷",1);
 		items.put("黄金战锤",1);
 		items.put("黄金权杖",1);
-		items.put("hammer",1);
-		items.put("mace",1);
+		items.put("铁锤",1);
+		items.put("权杖",1);
 		items.put("破晓之星",1);
-		items.put("staff",1);
-		items.put("战锤",1);
+		items.put("法杖",1);
+		items.put("大战锤",1);
 
 		// container
 		items.put("耳瓶",3);
@@ -150,17 +150,17 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("细瓶子",5);
 
 		// drinks
-		items.put("antidote",5);
+		items.put("抗毒药济",5);
 		items.put("啤酒",10);
-		items.put("greater antidote",5);
+		items.put("大瓶抗毒药济",5);
 		items.put("greater potion",5);
-		items.put("milk",5);
+		items.put("牛奶",5);
 		items.put("minor potion",5);
 		items.put("poison",5);
 		items.put("potion",5);
-		items.put("tea",3);
+		items.put("茶",3);
 		items.put("水",5);
-		items.put("wine",10);
+		items.put("红酒",10);
 
 		// flower
 		items.put("雏菊",5);

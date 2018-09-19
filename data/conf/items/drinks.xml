@@ -141,9 +141,9 @@
     </equipable>
   </item>
   
-  <item name="wine">
-    <type class="drink" subclass="wine" tileid="-1"/>
-    <description>You see a glass of red wine. It will quench your thirst.</description>
+  <item name="红酒">
+    <type class="drink" subclass="红酒" tileid="-1"/>
+    <description>You see a glass of red 红酒. It will quench your thirst.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="10"/>
@@ -187,9 +187,9 @@
     </equipable>
   </item>
   
-  <item name="pina colada">
+  <item name="椰林飘香">
     <type class="drink" subclass="pina_colada2" tileid="-1"/>
-    <description>You see a pina colada. It looks delicious but tastes dangerously strong!</description>
+    <description>椰林飘香. 一种看起来很好喝却很冲的鸡尾酒!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="28"/>
@@ -210,9 +210,9 @@
     </equipable>
   </item>
   
-  <item name="tea">
+  <item name="茶">
     <type class="drink" subclass="tea" tileid="-1"/>
-    <description>You see a lovely cup of tea.</description>
+    <description>You see a lovely 一杯茶.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="30"/>
@@ -233,9 +233,9 @@
     </equipable>
   </item>
   
-  <item name="milk">
+  <item name="牛奶">
     <type class="drink" subclass="milk" tileid="-1"/>
-    <description>You see a small bottle of fresh milk.</description>
+    <description>You see a small bottle of fresh 牛奶.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="10"/>
@@ -256,11 +256,12 @@
     </equipable>
   </item>
   
-  <item name="antidote">
+  <item name="抗毒药济">
     <type class="drink" subclass="antidote" tileid="-1"/>
-    <description>You see an antidote, to cure you of poison and protect you for a while.</description>
-    <implementation class-name="games.stendhal.server.entity.item.Drink"/>
+    <description>You see an 抗毒药济, to cure you of poison and protect you for a while.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer"/>
     <attributes>
+      <immunization value="poisoned"/>
       <amount value="400"/>
       <frequency value="1"/>
       <quantity value="1"/>
@@ -279,11 +280,12 @@
     </equipable>
   </item>
   
-  <item name="greater antidote">
+  <item name="大瓶抗毒药济">
     <type class="drink" subclass="greater_antidote" tileid="-1"/>
-    <description>You see a greater antidote, to cure you of poison and protect you for a long while.</description>
-    <implementation class-name="games.stendhal.server.entity.item.Drink"/>
+    <description>You see a 大瓶抗毒药济, to cure you of poison and protect you for a long while.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer"/>
     <attributes>
+      <immunization value="poisoned"/>
       <amount value="800"/>
       <frequency value="1"/>
       <quantity value="1"/>
@@ -623,6 +625,30 @@
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
+    </equipable>
+  </item>
+  
+  <item name="sedative">
+    <type class="drink" subclass="sedative" tileid="-1" />
+    <description>You see a sedative. It's effects can protect you from a shocked state.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer" />
+    <attributes>
+      <immunization value="shocked" />
+      <amount value="400" />
+      <frequency value="1"/>
+      <quantity value="1"/>
+      <regen value="1"/>
+      <menu value="Drink|Use" />
+    </attributes>
+    <weight value="1.0" />
+    <value value="1" />
+    <equipable>
+      <slot name="ground" />
+      <slot name="content" />
+      <slot name="lhand" />
+      <slot name="rhand" />
+      <slot name="bag" />
+      <slot name="trade" />
     </equipable>
   </item>
   

@@ -79,7 +79,7 @@ public class ImperialPrincess extends AbstractQuest {
 	private static final int POTION_DIVISOR = 10;
 
 	/** The player is asked to get a number of herbs depending on level.
-	 * So if they are level 40, they must bring 2 + 1 antidotes
+	 * So if they are level 40, they must bring 2 + 1 抗毒药济s
 	 */
 	private static final int ANTIDOTE_DIVISOR = 20;
 
@@ -101,7 +101,7 @@ public class ImperialPrincess extends AbstractQuest {
 		final String questState = player.getQuest(QUEST_SLOT);
 		res.add("Princess Ylflia asked me for some herbs and potions to ease the pain of captives in Kalavan Basement.");
 		if (!questState.equals("recommended") && !questState.equals("done")) {
-			res.add("I must tell Princess Ylflia that I have \"herbs\" when I have collected all the herbs, potions and antidotes she needs.");
+			res.add("I must tell Princess Ylflia that I have \"herbs\" when I have collected all the herbs, potions and 抗毒药济s she needs.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "recommended", "done")) {
 			res.add("I took Princess Ylflia the healing items and she told me she would recommend me to her father, the King.");
@@ -166,7 +166,7 @@ public class ImperialPrincess extends AbstractQuest {
 								+ " potions and "
 								+ Integer.toString(1 + player.getLevel()
 										/ ANTIDOTE_DIVISOR)
-								+ " antidotes. Will you get these items?");
+								+ " 抗毒药济s. Will you get these items?");
 					}
 				});
 
@@ -236,13 +236,13 @@ public class ImperialPrincess extends AbstractQuest {
 								&& player.isEquipped("海芋",
 										required_arandula)
 								&& player.isEquipped("potion", required_potion)
-								&& player.isEquipped("antidote",
+								&& player.isEquipped("抗毒药济",
 										required_antidote))
 							{
 								player.drop("kekik");
 								player.drop("kokuda");
 								player.drop("sclaria");
-								player.drop("antidote", required_antidote);
+								player.drop("抗毒药济", required_antidote);
 								player.drop("potion", required_potion);
 								player.drop("海芋", required_arandula);
 								raiser.say("Perfect! I will recommend you to my father, as a fine, " +
@@ -259,7 +259,7 @@ public class ImperialPrincess extends AbstractQuest {
 									+ required_potion
 									+ " potions and "
 									+ required_antidote
-									+ " antidotes. I don't want anyone suspecting our code.");
+									+ " 抗毒药济s. I don't want anyone suspecting our code.");
 							}
 						} catch (final NumberFormatException e) {
 							// Should not happen but catch the exception

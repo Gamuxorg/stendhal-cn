@@ -92,7 +92,7 @@ public class ImperialPrincessTest {
 		en.step(player, "favour");
 		assertEquals("I cannot free the captives in the basement but I could do one thing: ease their pain. I need #herbs for this.", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 antidotes. Will you get these items?", getReply(npc));
+		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("So you'll just let them suffer! How despicable.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("rejected"));
@@ -109,11 +109,11 @@ public class ImperialPrincessTest {
 		en.step(player, "hi");
 		assertEquals("How do you do?", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 antidotes. Will you get these items?", getReply(npc));
+		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Thank you! We must be subtle about this, I do not want the scientists suspecting I interfere. When you return with the items, please say codeword #herbs.", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("Shh! Don't say it till you have the 7 海芋, 1 #kokuda, 1 #sclaria, 1 #kekik, 28 potions and 14 antidotes. I don't want anyone suspecting our code.", getReply(npc));
+		assertEquals("Shh! Don't say it till you have the 7 海芋, 1 #kokuda, 1 #sclaria, 1 #kekik, 28 potions and 14 抗毒药济s. I don't want anyone suspecting our code.", getReply(npc));
 		en.step(player, "kokuda");
 		assertEquals("I believe that herb can only be found on Athor, though they guard their secrets closely over there.", getReply(npc));
 		en.step(player, "kekik");
@@ -134,7 +134,7 @@ public class ImperialPrincessTest {
 		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("kekik", 1);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("antidote", 14);
+		item = ItemTestHelper.createItem("抗毒药济", 14);
 		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("potion", 28);
 		player.getSlot("背包").add(item);
@@ -149,7 +149,7 @@ public class ImperialPrincessTest {
 		assertEquals("Perfect! I will recommend you to my father, as a fine, helpful person. He will certainly agree you are eligible for citizenship of Kalavan.", getReply(npc));
 		// [22:21] kymara earns 110400 experience points.
 		assertFalse(player.isEquipped("potion"));
-		assertFalse(player.isEquipped("antidote"));
+		assertFalse(player.isEquipped("抗毒药济"));
 		assertFalse(player.isEquipped("海芋"));
 		assertFalse(player.isEquipped("sclaria"));
 		assertFalse(player.isEquipped("kekik"));

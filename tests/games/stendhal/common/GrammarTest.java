@@ -191,7 +191,7 @@ public class GrammarTest {
 		assertEquals("bottle of beer", Grammar.fullForm("beer"));
 		assertEquals("glass of wine", Grammar.fullForm("wine"));
 		assertEquals("bottle of poison", Grammar.fullForm("poison"));
-		assertEquals("bottle of antidote", Grammar.fullForm("antidote"));
+		assertEquals("bottle of antidote", Grammar.fullForm("抗毒药济"));
 		assertEquals("money", Grammar.fullForm("money"));
 		assertEquals("whatever book", Grammar.fullForm("book whatever"));
 		assertEquals("sprig of arandula", Grammar.fullForm("arandula"));
@@ -799,7 +799,7 @@ public class GrammarTest {
 		assertEquals("trousers", Grammar.extractNoun("pair of trousers"));
 		assertEquals("grain", Grammar.extractNoun("sacks of grain"));
 		assertEquals("grain", Grammar.extractNoun("sheaves of grain"));
-		assertEquals("water", Grammar.extractNoun("bottle of water"));
+		assertEquals("水", Grammar.extractNoun("bottle of water"));
 		assertEquals("arundula", Grammar.extractNoun("sprigs of arundula"));
 		assertEquals("armor", Grammar.extractNoun("suit of armor"));
 		assertEquals("wine", Grammar.extractNoun("glasses of wine"));

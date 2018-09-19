@@ -74,9 +74,9 @@ public class FishSoupForHughieTest {
 		en.step(player, "hi");
 		assertEquals("Goeden dag!", getReply(npc));
 		en.step(player, "offer");
-		assertEquals("I sell butter and milk.", getReply(npc));
+		assertEquals("I sell butter and 牛奶.", getReply(npc));
 		en.step(player, "help");
-		assertEquals("I can sell you a bottle of milk or some butter from our dairy cows if you like.", getReply(npc));
+		assertEquals("I can sell you a bottle of 牛奶 or some butter from our dairy cows if you like.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("If you can write Junit tests then my daughter needs you. Just ask 迪金斯 how to help the project.", getReply(npc));
 		en.step(player, "job");
@@ -156,7 +156,7 @@ public class FishSoupForHughieTest {
 		en.step(player, "job");
 		assertEquals("My brother runs this farm. I just look after my son here.", getReply(npc));
 		en.step(player, "help");
-		assertEquals("Philomena can sell you milk and butter.", getReply(npc));
+		assertEquals("Philomena can sell you 牛奶 and butter.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye.", getReply(npc));
 

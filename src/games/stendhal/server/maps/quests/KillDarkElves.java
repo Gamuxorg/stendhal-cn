@@ -87,7 +87,7 @@ public class KillDarkElves extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I already asked you to kill every dark elf in the tunnel below the secret room. And bring me the 护身符 from the thing.",
+				"I already asked you to kill every 黑暗精灵 in the tunnel below the secret room. And bring me the 护身符 from the thing.",
 				null);
 
 
@@ -115,7 +115,7 @@ public class KillDarkElves extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Good. Please kill every dark elf down there and get the 护身符 from the mutant thing.",
+			"Good. Please kill every 黑暗精灵 down there and get the 护身符 from the mutant thing.",
 			new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -145,13 +145,13 @@ public class KillDarkElves extends AbstractQuest {
 		// support for old-style quest
 
 		// the player returns to Maerion after having started the quest.
-		// Maerion checks if the player has killed one of enough dark elf types
+		// Maerion checks if the player has killed one of enough 黑暗精灵 types
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new NotCondition(new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"))),
 				ConversationStates.QUEST_STARTED,
-				"Don't you remember promising to sort out my dark elf problem? Kill every dark elf in the #secret room below - especially the snivelling 黑暗精灵队长 and any evil dark elf archers you find! And bring me the 护身符 from the mutant thing.",
+				"Don't you remember promising to sort out my 黑暗精灵 problem? Kill every 黑暗精灵 in the #secret room below - especially the snivelling 黑暗精灵队长 and any evil dark elf archers you find! And bring me the 护身符 from the mutant thing.",
 				null);
 
 		npc.add(ConversationStates.IDLE,
@@ -190,15 +190,15 @@ public class KillDarkElves extends AbstractQuest {
 		final String completedQuestState = sb.toString();
 
 		// the player returns to Maerion after having started the quest.
-		// Maerion checks if the player has killed one of enough dark elf types
+		// Maerion checks if the player has killed one of enough 黑暗精灵 types
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(
 						new QuestInStateCondition(QUEST_SLOT,0,"started"),
 						new NotCondition(
 								new QuestInStateCondition(QUEST_SLOT, completedQuestState))),
 				ConversationStates.QUEST_STARTED,
-				"Don't you remember promising to sort out my dark elf problem?"+
-				" Kill every dark elf in the #secret room below - especially"+
+				"Don't you remember promising to sort out my 黑暗精灵 problem?"+
+				" Kill every 黑暗精灵 in the #secret room below - especially"+
 				" the ones who command, do magic or are archers." +
 				"  Don't forget the evil matronmother too."+
 				" And bring me the 护身符 from the mutant thing.",

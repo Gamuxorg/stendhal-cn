@@ -235,7 +235,7 @@ public class SadScientistTest {
 
 		// -----------------------------------------------
 
-		PlayerTestHelper.equipWithItem(player, "红酒杯");
+		PlayerTestHelper.equipWithItem(player, "盛血高脚杯");
 		player.setSharedKill("Sergej Elos");
 
 		en.step(player, "hi");
@@ -243,7 +243,7 @@ public class SadScientistTest {
 		en.step(player, "symbol");
 		assertEquals("I am going to create a pair of black legs. Come back in 5 minutes.", getReply(npc));
 
-		assertFalse(player.isEquipped("红酒杯"));
+		assertFalse(player.isEquipped("盛血高脚杯"));
 
 		assertTrue(player.getQuest("sad_scientist").startsWith("decorating;"));
 		// -----------------------------------------------

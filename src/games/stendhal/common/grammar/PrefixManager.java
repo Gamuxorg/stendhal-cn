@@ -73,8 +73,8 @@ final class PrefixManager
 //		register("stick of ", "sticks of ", "butter");
 //		register("bulb of ", "bulbs of ", "大蒜");
 //		register("jar of ", "jars of ", "honey");
-//		register("glass of ", "glasses of ", "wine");
-//		register("cup of ", "cups of ", "tea");
+//		register("glass of ", "glasses of ", "红酒");
+//		register("cup of ", "cups of ", "茶");
 //		register("sprig of ", "sprigs of ", "海芋");
 //		register("root of ", "roots of ", "mandragora");
 //		register("bunch of ", "bunches of ", "daisies");
@@ -82,14 +82,14 @@ final class PrefixManager
 //		register("can of ", "cans of ", "oil");
 //
 //		register("bottle of ", "bottles of ", "啤酒");
-//		register("bottle of ", "bottles of ", "water");
+//		register("bottle of ", "bottles of ", "水");
 //		register("bottle of ", "bottles of ", "沸水");
-//		register("bottle of ", "bottles of ", "milk");
+//		register("bottle of ", "bottles of ", "牛奶");
 //		register("bottle of ", "bottles of ", "holy water");
 //
 //		registerEnd("bottle of ", "bottles of ", "potion");
 //		registerEnd("bottle of ", "bottles of ", "poison");
-//		registerEnd("bottle of ", "bottles of ", "antidote");
+//		registerEnd("bottle of ", "bottles of ", "抗毒药济");
 //		registerEnd("nugget of ", "nuggets of ", " ore");
 //
 //		registerEnd("pair of ", "pairs of ", " legs");

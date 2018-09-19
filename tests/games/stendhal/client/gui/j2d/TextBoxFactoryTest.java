@@ -58,7 +58,7 @@ public class TextBoxFactoryTest {
 	@Test
 	public void testCrashes() {
 		// Old /listquests output
-		String msg = "[01:30] Open Quests: DailyMonsterQuestMeetHackimSevenCherubsStuffForVulcanusSuntanCreamForZaraToysCollector\nCompleted Quests: ArmorForDagobertCampfireHerbsForCarmenIntroducePlayersLearnAboutKarmaLearnAboutOrbsMeetHayunnMeetIoPlinksToyReverseArrowZooFood";
+		String msg = "[01:30] 接受任务: DailyMonsterQuestMeetHackimSevenCherubsStuffForVulcanusSuntanCreamForZaraToysCollector\n完结任务: ArmorForDagobertCampfireHerbsForCarmenIntroducePlayersLearnAboutKarmaLearnAboutOrbsMeetHayunnMeetIoPlinksToyReverseArrowZooFood";
 		factory.createTextBox(msg, 240, Color.black, Color.black, false);
 		// Long strings in /alterquest
 		msg = "[13:13] Admin kiheru changed your state of the quest 'ultimate_collector' from '29292992929dddddddddddddddddddddddddd' to '29292992929dddddddddddddddddddddddddd'";

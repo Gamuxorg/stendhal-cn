@@ -93,7 +93,7 @@ class KTextEdit extends JComponent {
 		protected void showPopup(final MouseEvent e) {
 			final JPopupMenu popup = new JPopupMenu("save");
 
-			JMenuItem menuItem = new JMenuItem("Save");
+			JMenuItem menuItem = new JMenuItem("保存");
 			menuItem.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(final ActionEvent e) {
@@ -102,7 +102,7 @@ class KTextEdit extends JComponent {
 			});
 			popup.add(menuItem);
 
-			menuItem = new JMenuItem("Clear");
+			menuItem = new JMenuItem("清除");
 			menuItem.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(final ActionEvent e) {

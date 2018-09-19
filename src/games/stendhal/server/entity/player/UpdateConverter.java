@@ -44,8 +44,8 @@ public abstract class UpdateConverter {
 	private static final List<String> ITEM_NAMES_OLD = Arrays.asList(
 			"连枷_+2", "leather_armor_+1", "leather_cuirass_+1",
 			"chain_armor_+1", "scale_armor_+1", "chain_armor_+3",
-			"scale_armor_+2", "twoside_axe_+3", "elf_cloak_+2", "mace_+1",
-			"mace_+2", "hammer_+3", "chain_helmet_+2", "golden_helmet_+3",
+			"scale_armor_+2", "twoside_axe_+3", "elf_cloak_+2", "权杖_+1",
+			"权杖_+2", "铁锤_+3", "chain_helmet_+2", "golden_helmet_+3",
 			"longbow_+1", "lion_shield_+1"
 	);
 	private static final List<String> ITEM_NAMES_NEW = Arrays.asList(

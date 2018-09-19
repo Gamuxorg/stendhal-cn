@@ -7,13 +7,14 @@ Changelog
 - some item sprites re-drawn
 - no longer required to have 1 money to use scroll eraser
 - added "venom gland" item to weekly item quest
-- Katinka awards positive karma for accepting Zoo Food quest
-- New "harmless" corpse sprite for spiders
-- More NPCs won't turn around after collision
-- New hair outfit sprite
+- katinka awards positive karma for accepting Zoo Food quest
+- new "harmless" corpse sprite for spiders
+- more NPCs won't turn around after collision
+- new hair outfit sprite
+- new sedative item that cures/prevents shocked status
 
 *client*
-- sprites & tiles replaced with images suffixed with "-noblood" when blood disabled
+- sprites & tiles replaced with images suffixed with "-safe" when blood disabled
 - double direction key press is used instead of holding Alt. key to intitiate auto-walk
 - players can set continuous movement to continue walking after map change or teleport without releasing direction key
 - weapon nature is used to set combat sprite if available
@@ -21,6 +22,7 @@ Changelog
 *code*
 - portals can use "face" attribute to set player facing direction when used as a destination
 - portals can use "offset" attribute to offset player positioning in relation to destination
+- new implementation for antidotes & other status healing items
 
 
 1.27
@@ -2178,7 +2180,7 @@ kikareukin islands.
  - mainio items from hybrids
  - xeno items from xenocium
  - jewelled legs, liberty helmet
- - chicken, fairy cakes, eggs, 菠萝s, coconuts, pina colada
+ - chicken, fairy cakes, eggs, 菠萝s, coconuts, 椰林飘香
 - Other:
  - Semos bank more secure (one player areas near chests)
  - Magic bank where you can access all chests for fee and limited time

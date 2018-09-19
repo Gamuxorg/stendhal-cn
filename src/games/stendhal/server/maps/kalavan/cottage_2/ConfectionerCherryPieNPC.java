@@ -57,7 +57,7 @@ public class ConfectionerCherryPieNPC implements ZoneConfigurator {
 					"She's my twin sister and we live here together... Like me, she also likes to #bake fruit pies!");
 				addReply("honey",
 					"Try asking #Martha where she finds it.");
-				addReply("milk",
+				addReply("牛奶",
 					"I suppose you can find that in a farm!");
 				addReply("面粉",
 					"I'd look for some at a mill...");
@@ -77,7 +77,7 @@ public class ConfectionerCherryPieNPC implements ZoneConfigurator {
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", Integer.valueOf(2));
 				requiredResources.put("honey", Integer.valueOf(1));
-				requiredResources.put("milk", Integer.valueOf(1));
+				requiredResources.put("牛奶", Integer.valueOf(1));
 				requiredResources.put("egg", Integer.valueOf(1));
 				requiredResources.put("樱桃", Integer.valueOf(2));
 

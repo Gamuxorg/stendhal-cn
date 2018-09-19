@@ -78,25 +78,25 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("Hello, dear.", getReply(npc));
 
 		assertTrue(en.step(player, "job"));
-		assertEquals("I'm the housekeeper here. I can #brew you a nice cup of #tea, if you like.", getReply(npc));
+		assertEquals("I'm the housekeeper here. I can #brew you a nice cup of #茶, if you like.", getReply(npc));
 
 		assertTrue(en.step(player, "offer"));
-		assertEquals("I will #brew you a hot cup of #tea, if you like.", getReply(npc));
+		assertEquals("I will #brew you a hot cup of #茶, if you like.", getReply(npc));
 
 		assertTrue(en.step(player, "quest"));
 		assertEquals("I have such a headache and little Annie shrieking every time she goes down the slide doesn't help. Maybe you could give her something to keep her occupied? ... like a gag ...", getReply(npc));
 
-		assertTrue(en.step(player, "tea"));
+		assertTrue(en.step(player, "茶"));
 		assertEquals("It's the very best drink of all. I sweeten mine with #honey. Just ask if you'd like a #brew.", getReply(npc));
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I can only brew a cup of tea if you bring me a #'bottle of milk' and a #'jar of honey'.", getReply(npc));
+		assertEquals("I can only brew a cup of 茶 if you bring me a #'bottle of 牛奶' and a #'jar of honey'.", getReply(npc));
 
-		assertTrue(en.step(player, "milk"));
-		assertEquals("Well my dear, I expect you can get milk from a farm.", getReply(npc));
+		assertTrue(en.step(player, "牛奶"));
+		assertEquals("Well my dear, I expect you can get 牛奶 from a farm.", getReply(npc));
 
-		assertTrue(en.step(player, "bottle of milk"));
-		assertEquals("Well my dear, I expect you can get milk from a farm.", getReply(npc));
+		assertTrue(en.step(player, "bottle of 牛奶"));
+		assertEquals("Well my dear, I expect you can get 牛奶 from a farm.", getReply(npc));
 
 		assertTrue(en.step(player, "honey"));
 		assertEquals("Don't you know the beekeeper of Fado Forest?", getReply(npc));
@@ -104,23 +104,23 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue(en.step(player, "jar of honey"));
 		assertEquals("Don't you know the beekeeper of Fado Forest?", getReply(npc));
 
-		assertFalse(player.isEquipped("tea"));
+		assertFalse(player.isEquipped("茶"));
 
-		PlayerTestHelper.equipWithItem(player, "milk");
+		PlayerTestHelper.equipWithItem(player, "牛奶");
 		PlayerTestHelper.equipWithItem(player, "honey");
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I need you to fetch me a #'bottle of milk' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
 
 		assertTrue(en.step(player, "no"));
 		assertEquals("OK, no problem.", getReply(npc));
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I need you to fetch me a #'bottle of milk' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
 
 		assertTrue(en.step(player, "yes"));
-		assertEquals("OK, I will brew a cup of tea for you, but that will take some time. Please come back in 3 minutes.", getReply(npc));
-		assertFalse(player.isEquipped("tea"));
+		assertEquals("OK, I will brew a cup of 茶for you, but that will take some time. Please come back in 3 minutes.", getReply(npc));
+		assertFalse(player.isEquipped("茶"));
 
 		assertTrue(en.step(player, "bye"));
 		assertEquals("Bye now.", getReply(npc));
@@ -129,7 +129,7 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		setPastTime(player, QUEST_SLOT, 2, 1*60);
 
 		assertTrue(en.step(player, "hi"));
-		assertEquals("Welcome back! I'm still busy with your order to brew a cup of tea for you. Come back in 2 minutes to get it.", getReply(npc));
+		assertEquals("Welcome back! I'm still busy with your order to brew a cup of 茶for you. Come back in 2 minutes to get it.", getReply(npc));
 
 		assertTrue(en.step(player, "bye"));
 		assertEquals("Bye now.", getReply(npc));
@@ -138,9 +138,9 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		setPastTime(player, QUEST_SLOT, 2, 3*60);
 
 		assertTrue(en.step(player, "hi"));
-		assertEquals("Welcome back! I'm done with your order. Here you have the cup of tea.", getReply(npc));
+		assertEquals("Welcome back! I'm done with your order. Here you have the 一杯茶.", getReply(npc));
 
-		assertTrue(player.isEquipped("tea", 1));
+		assertTrue(player.isEquipped("茶", 1));
 
 		assertTrue(en.step(player, "bye"));
 		assertEquals("Bye now.", getReply(npc));

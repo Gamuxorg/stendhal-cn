@@ -106,7 +106,7 @@ public class NecroStaff extends Item {
 	@Override
 	public boolean onUsed(final RPEntity user) {
 		if (!this.isContained()) {
-			user.sendPrivateText("The staff must be wielded.");
+			user.sendPrivateText("The 法杖 must be wielded.");
 			return false;
 		}
 		final StendhalRPZone zone = user.getZone();
@@ -117,7 +117,7 @@ public class NecroStaff extends Item {
 		}
 
 		if (zone.getNPCList().size() >= MAX_ZONE_NPCS) {
-			user.sendPrivateText("Mysteriously, the staff does not function! Perhaps this area is too crowded...");
+			user.sendPrivateText("Mysteriously, the 法杖 does not function! Perhaps this area is too crowded...");
 			logger.warn(user.getName() + " is trying to use the necromancer staff but there are too many npcs in " + zone.getName());
 			return false;
 		}
@@ -130,7 +130,7 @@ public class NecroStaff extends Item {
 				final AttackableCreature creature = pickSuitableCreature(user.getLevel());
 
 				if (creature == null) {
-					user.sendPrivateText("This staff does not seem to work. Maybe it has lost its unholy power.");
+					user.sendPrivateText("This 法杖 does not seem to work. Maybe it has lost its unholy power.");
 					return false;
 				}
 
