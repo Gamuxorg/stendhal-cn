@@ -485,7 +485,7 @@ public abstract class UpdateConverter {
 	}
 
 	private static void fixMazeQuestSlot(Player player) {
-		final String QUEST_SLOT = "maze";
+		final String QUEST_SLOT = "迷宫";
 
 		// if player didnt started quest --> exit
 		if(!player.hasQuest(QUEST_SLOT)) {

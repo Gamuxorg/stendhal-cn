@@ -45,8 +45,8 @@ public class Maze extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Maze",
-				"Haizen's maze is a great challenge for path finders.",
+				"迷宫",
+				"海震的迷宫对于寻路者是个很大的挑战.",
 				false);
 		addMazeSign();
 		setupConversation();
@@ -58,25 +58,25 @@ public class Maze extends AbstractQuest {
 			if (!player.hasQuest(getSlotName())) {
 				return res;
 			}
-			res.add("Haizen created a magical maze for me to solve.");
+			res.add("海震建立了一个巨型迷宫让我去解开.");
 
 			if (player.getZone().getName().endsWith("_maze")) {
-				res.add("I am currently trapped in the maze.");
+				res.add("我落入的迷宫中的圈套.");
 			} else {
 				if (!isCompleted(player)) {
-					res.add("I couldn't solve the last maze.");
+					res.add("最终我没有解开迷宫.");
 				} else {
-					res.add("I solved the maze!");
+					res.add("我解开了迷宫!");
 				}
 				if (isRepeatable(player)) {
-					res.add("I could have another try to solve a maze now.");
+					res.add("现在我可以再一次尝试试解开迷宫.");
 				} else {
-					res.add("Haizen won't make me a new maze yet.");
+					res.add("海震还没有为我做出新迷宫.");
 				}
 			}
 			final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 			if (repetitions > 1) {
-				res.add("So far I've solved the maze " + repetitions + " times already!");
+				res.add("我解开迷宫已经用了 " + repetitions + " ,这么久的时间!");
 			}
 
 			return res;
@@ -84,12 +84,12 @@ public class Maze extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "Maze";
+		return "迷宫";
 	}
 
 	@Override
 	public String getSlotName() {
-		return "maze";
+		return "迷宫";
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class Maze extends AbstractQuest {
 	}
 
 	private SpeakerNPC getNPC() {
-		return npcs.get("Haizen");
+		return npcs.get("海震");
 	}
 
 	private void addMazeSign() {
@@ -110,22 +110,22 @@ public class Maze extends AbstractQuest {
 	private void setupConversation() {
 		SpeakerNPC npc = getNPC();
 
-		npc.addQuest("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that 蓝色的书 on the table.");
+		npc.addQuest("我可以把你送入 #迷宫 ,你需要自已找到出口. 我在桌子上那本 蓝色的书 上记下了用时最快和解题最多的解题人.");
 
 		npc.add(ConversationStates.ATTENDING,
-				"maze",
+				"迷宫",
 				new TimePassedCondition(getSlotName(), 1, COOLING_TIME),
 				ConversationStates.QUEST_OFFERED,
-				"There will be a portal out in the opposite corner of the maze. I'll also add scrolls to the two other corners you can try to get if you are fast enough. Do you want to try?",
+				"迷宫中会在对角有一个传送口可以出来. 我也在另外两个角落放上卷轴, 如果你够快就能得到. 你想试试吗?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				"maze",
+				"迷宫",
 				new NotCondition(new TimePassedCondition(getSlotName(), 1, COOLING_TIME)),
 				ConversationStates.ATTENDING,
 				null,
 				new SayTimeRemainingAction(getSlotName(), 1,
-						COOLING_TIME, "I can send you to the maze only once in a day. You can go there again in"));
+						COOLING_TIME, "一天我只能提供一次解迷机会. 你可以改天再试"));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES,
@@ -138,7 +138,7 @@ public class Maze extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"OK. You look like you'd only get lost anyway.",
+				"OK. 看来你只能选择放弃了.",
 				null);
 	}
 
@@ -180,7 +180,7 @@ public class Maze extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Haizen";
+		return "海震";
 	}
 
 	@Override

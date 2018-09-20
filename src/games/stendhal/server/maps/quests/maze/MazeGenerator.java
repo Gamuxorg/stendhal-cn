@@ -554,8 +554,8 @@ public class MazeGenerator {
 		points = Math.max(points, 1);
 
 		DBCommandQueue.get().enqueue(new WriteHallOfFamePointsCommand(player.getName(), "M", points, true));
-		new SetQuestAction("maze", 0, "done").fire(player, null, null);
-		new IncrementQuestAction("maze", 2, 1).fire(player, null, null);
+		new SetQuestAction("迷宫", 0, "done").fire(player, null, null);
+		new IncrementQuestAction("迷宫", 2, 1).fire(player, null, null);
 		player.sendPrivateText("You used " + TimeUtil.timeUntil((int) (timediff / 1000), true)
 				+ " to solve the maze. That was worth " + points + "points.");
 		SingletonRepository.getAchievementNotifier().onFinishQuest(player);

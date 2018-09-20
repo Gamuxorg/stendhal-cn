@@ -87,14 +87,14 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 
 				add(ConversationStates.ATTENDING, Arrays.asList("offer", "buy", "trade", "deal", "scroll", "scrolls", "home", "empty",
 				        "marked", "summon", "magic", "wizard", "sorcerer"), null, ConversationStates.ATTENDING,
-				        "我不再销售卷轴了... 我的供应商 #Haizen. 惹出了个大麻烦.", null);
+				        "我不再销售卷轴了... 我的供应商 #海震. 惹出了个大麻烦.", null);
 
 				add(
 				        ConversationStates.ATTENDING,
-				        Arrays.asList("haizen", "haizen."),
+				        Arrays.asList("海震", "海震."),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "Haizen? 他是一个住在 塞门镇 和 Ados之间的小房子的巫师. 我以前常去那里卖卷轴给他, 但他有个条件, 恐怕你不得不一个人去找他.",
+				        "海震? 他是一个住在 塞门镇 和 Ados之间的小房子的巫师. 我以前常去那里卖卷轴给他, 但他有个条件, 恐怕你不得不一个人去找他.",
 				        null);
 			}
 		};

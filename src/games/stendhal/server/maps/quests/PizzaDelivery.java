@@ -266,9 +266,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"Bummer. 凉凉.",
 				15));
 
-		customerDB.put("Haizen",
+		customerDB.put("海震",
 			new CustomerData(
-				"Haizen 是一位魔法师, 他住在到达Ados路边的小屋, 从这里往东然后再往北走就到了. ",
+				"海震 是一位魔法师, 他住在到达Ados路边的小屋, 从这里往东然后再往北走就到了. ",
 				"比萨 Diavolo",
 				// minutes to deliver. Tested by kymara:
 				// exactly 3 min.

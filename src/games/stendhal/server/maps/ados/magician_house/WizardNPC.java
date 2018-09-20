@@ -43,7 +43,7 @@ public class WizardNPC implements ZoneConfigurator {
 	}
 
 	private void buildMagicianHouseArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Haizen") {
+		final SpeakerNPC npc = new SpeakerNPC("海震") {
 
 			@Override
 			protected void createPath() {
@@ -64,34 +64,34 @@ public class WizardNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("I am a wizard who sells #magic #scrolls. Just ask me for an #offer!");
-				addHelp("You can take powerful magic with you on your adventures with the aid of my #magic #scrolls!");
+				addJob("我是个巫师, 也卖点 #魔法卷轴 .具体 #商品 可以问我!");
+				addHelp("旅行时你最好带着我的 #魔法卷轴 ,可以用来救急!");
 
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("scrolls")));
 
 				add(
 				        ConversationStates.ATTENDING,
-				        Arrays.asList("magic", "scroll", "scrolls", "magic scrolls"),
+				        Arrays.asList("魔法卷轴", "卷轴"),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "I #offer scrolls that help you to travel faster: #'home scrolls' and the #markable #'空白卷轴s'. For the more advanced customer, I also have #'召唤卷轴s'!",
+				        "我 #提供 帮你快速到达特定地点的: #'回城卷轴' 和针对高级顾客使用的可以标记的 #'空白卷轴s'. 另外我还销售 #'召唤卷轴'!",
 				        null);
-				add(ConversationStates.ATTENDING, Arrays.asList("home", "home scroll"), null,
+				add(ConversationStates.ATTENDING, Arrays.asList("回城卷轴", "回城卷"), null,
 				        ConversationStates.ATTENDING,
-				        "Home scrolls take you home immediately, a good way to escape danger!", null);
+				        "回城卷可以立即回城, 是脱困的好方法!", null);
 				add(
 				        ConversationStates.ATTENDING,
-				        Arrays.asList("empty", "marked", "空白卷轴", "markable", "标记卷轴"),
+				        Arrays.asList("空卷轴", "空白卷轴"),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "空白卷轴s are used to mark a position. Those 标记卷轴s can take you back to that position. They are a little expensive, though.",
+				        "空白卷轴可以自已标记位置. 然后就可以回到标记处. 但就是有点小贵.",
 				        null);
 				add(
 				        ConversationStates.ATTENDING,
-				        "summon",
+				        "召唤卷轴",
 				        null,
 				        ConversationStates.ATTENDING,
-				        "A 召唤卷轴 empowers you to summon animals to you; advanced magicians will be able to summon stronger monsters than others. Of course, these scrolls can be dangerous if misused.",
+				        "用召唤卷轴可发召唤怪兽, 越高等级的魔法师可以召唤更高等级的怪兽. 当然, 这些滥用卷轴可能会有危险.",
 				        null);
 
 				addGoodbye();
@@ -101,7 +101,7 @@ public class WizardNPC implements ZoneConfigurator {
 		npc.setEntityClass("wisemannpc");
 		npc.setPosition(7, 2);
 		npc.initHP(100);
-		npc.setDescription("You see the mighty magician Haizen. He is able to let people teleport around with his scrolls.");
+		npc.setDescription("你遇见了魔法大师 海震. 用他的卷轴可以让人们任意传送.");
 		zone.add(npc);
 	}
 }

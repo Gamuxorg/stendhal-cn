@@ -40,9 +40,9 @@ public class QuestAchievementFactory extends AbstractAchievementFactory {
 		questAchievements.add(createAchievement("quest.special.kill_monks.0025", "Heretic", "Finish Kill Monks quest 25 times",
 				Achievement.HARD_BASE_SCORE, true, new QuestStateGreaterThanCondition("kill_monks", 2, 24)));
 
-		// Maze
+		// 迷宫
 		questAchievements.add(createAchievement("quest.special.maze", "Pathfinder", "Finish the maze",
-				Achievement.EASY_BASE_SCORE, true, new QuestStateGreaterThanCondition("maze", 2, 0)));
+				Achievement.EASY_BASE_SCORE, true, new QuestStateGreaterThanCondition("迷宫", 2, 0)));
 		questAchievements.add(createAchievement("quest.deathmatch", "Deathmatch Hero", "Earn 100,000 points in deathmatch",
 				Achievement.MEDIUM_BASE_SCORE, true, new QuestStateGreaterThanCondition("deathmatch_score", 0, 100000)));
 

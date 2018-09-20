@@ -49,7 +49,7 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public MazeTest() {
-		super(ZONE_NAME, "Haizen");
+		super(ZONE_NAME, "海震");
 	}
 
 	@Override
@@ -67,20 +67,20 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 
 	@Test
 	public void testQuest() {
-		npc = SingletonRepository.getNPCList().get("Haizen");
+		npc = SingletonRepository.getNPCList().get("海震");
 		en = npc.getEngine();
 
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "task");
 		assertEquals("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that blue book on the table.", getReply(npc));
-		en.step(player, "maze");
+		en.step(player, "迷宫");
 		assertEquals("There will be a portal out in the opposite corner of the maze. I'll also add scrolls to the two other corners you can try to get if you are fast enough. Do you want to try?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("OK. You look like you'd only get lost anyway.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that blue book on the table.", getReply(npc));
-		en.step(player, "maze");
+		en.step(player, "迷宫");
 		assertEquals("There will be a portal out in the opposite corner of the maze. I'll also add scrolls to the two other corners you can try to get if you are fast enough. Do you want to try?", getReply(npc));
 		en.step(player, "yes");
 		String questStarted = player.getQuest(questSlot);
@@ -95,7 +95,7 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "task");
 		assertEquals("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that blue book on the table.", getReply(npc));
-		en.step(player, "maze");
+		en.step(player, "迷宫");
 		assertTrue(getReply(npc).matches("I can send you to the maze only once in a day. You can go there again in .*\\."));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));

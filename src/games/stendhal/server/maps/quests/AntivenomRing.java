@@ -55,22 +55,22 @@ import games.stendhal.server.util.ItemCollection;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Jameson (the retired apothecary)</li>
+ * <li>詹姆森 (the retired apothecary)</li>
  * <li>Other NPCs to give hints at location of apothecary's lab (undecided)</li>
  * <li>Another NPC that fuses the ring (undecided)</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Bring note to apothecary to Jameson.</li>
- * <li>As a favor to 克拉丝, Jameson will help you to strengthen your medicinal ring.</li>
- * <li>Bring Jameson a medicinal ring, venom gland, 2 mandragora and 5 fairycakes.</li>
- * <li>Jameson requires a bottle big enough to hold venom extracted from gland.</li>
- * <li>Bring Jameson a giant bottle.</li>
- * <li>Jameson realizes he doesn't have a way to extract the venom.</li>
+ * <li>Bring note to apothecary to 詹姆森.</li>
+ * <li>As a favor to 克拉丝, 詹姆森 will help you to strengthen your medicinal ring.</li>
+ * <li>Bring 詹姆森 a medicinal ring, venom gland, 2 mandragora and 5 fairycakes.</li>
+ * <li>詹姆森 requires a bottle big enough to hold venom extracted from gland.</li>
+ * <li>Bring 詹姆森 a giant bottle.</li>
+ * <li>詹姆森 realizes he doesn't have a way to extract the venom.</li>
  * <li>Find [NPC undecided] who will extract the venom into the giant bottle.</li>
- * <li>Take the bottle filled with venom back to Jameson.</li>
- * <li>Jameson concocts a mixture to infuse the ring.</li>
+ * <li>Take the bottle filled with venom back to 詹姆森.</li>
+ * <li>詹姆森 concocts a mixture to infuse the ring.</li>
  * <li>Take mixture and ring to [NPC undecided] to be fused.</li>
  * <li>[NPC undecided] will also have requirements for the player.</li>
  * </ul>
@@ -115,7 +115,7 @@ public class AntivenomRing extends AbstractQuest {
 	private static final int FUSION_TIME = 30;
 
 	// NPCs involved in quest
-	private final SpeakerNPC mixer = npcs.get("Jameson");
+	private final SpeakerNPC mixer = npcs.get("詹姆森");
 	// FIXME: find NPCs for these roles
 	private final SpeakerNPC extractor = npcs.get("");
 	private final SpeakerNPC fuser = npcs.get("Hogart");
@@ -130,7 +130,7 @@ public class AntivenomRing extends AbstractQuest {
 		String quest = player.getQuest(QUEST_SLOT, 0);
 		final String[] questState = player.getQuest(QUEST_SLOT).split(",");
 		if ("done".equals(quest)) {
-			res.add("我收集到了 Jameson 要的全部原料. 他把这些特殊的原料混合进我的戒指, 使这个戒指的抗毒性更强了. 我还得到了一些经验和运气.");
+			res.add("我收集到了 詹姆森 要的全部原料. 他把这些特殊的原料混合进我的戒指, 使这个戒指的抗毒性更强了. 我还得到了一些经验和运气.");
 		}
 		else if ("rejected".equals(quest)) {
 			res.add("毒非常危险, 我可不想受害. ");
@@ -142,7 +142,7 @@ public class AntivenomRing extends AbstractQuest {
 			else {
 				final ItemCollection missingMixItems = new ItemCollection();
 				missingMixItems.addFromQuestStateString(questState[0]);
-				res.add("我还需要把 Jameson 带来 " + missingMixItems.toStringList() + ".");
+				res.add("我还需要把 詹姆森 带来 " + missingMixItems.toStringList() + ".");
 			}
 
 			if (questState[1].split("=")[0] == "extracting") {
@@ -158,34 +158,34 @@ public class AntivenomRing extends AbstractQuest {
 
 	private void prepareHintNPCs() {
 		final SpeakerNPC hintNPC1 = npcs.get("Valo");
-		final SpeakerNPC hintNPC2 = npcs.get("Haizen");
+		final SpeakerNPC hintNPC2 = npcs.get("海震");
 		final SpeakerNPC hintNPC3 = npcs.get("Ortiv Milquetoast");
 
 		// Valo is asked about an apothecary
 		hintNPC1.add(ConversationStates.ATTENDING,
-				"apothecary",
+				"药济师",
 				null,
 				ConversationStates.ATTENDING,
-				"Hmmm, 是的, 我知道以前有个学习药济和解毒的人. 最后我听说他隐居在深山里 #retreating .",
+				"嗯, 是的, 我知道以前有个学习药济和解毒的人. 最后我听说他 #隐居 在深山里.",
 				null);
 
 		hintNPC1.add(ConversationStates.ATTENDING,
-				Arrays.asList("retreat", "retreats", "retreating"),
+				Arrays.asList("隐居", "深山"),
 				null,
 				ConversationStates.ATTENDING,
 				"他可能藏起来了, 眼睁大点, 注意隐藏的入口",
 				null);
 
-		// Haizen is asked about an apothecary
+		// 海震 is asked about an apothecary
 		hintNPC2.add(ConversationStates.ATTENDING,
-				"apothecary",
+				"药济师",
 				null,
 				ConversationStates.ATTENDING,
-				"是的, 在 Kalavan 有个贱人. 但是,由于领导权之争, 他被迫离开, 听说她现在隐藏在 Semon 地区的某处 #hiding .",
+				"是的, 在 Kalavan 有个贱人. 但是,由于领导权之争, 他被迫离开, 听说她现在 #隐藏 在塞门地区的某处.",
 				null);
 
 		hintNPC2.add(ConversationStates.ATTENDING,
-				Arrays.asList("hide", "hides", "hiding", "hidden"),
+				"隐藏",
 				null,
 				ConversationStates.ATTENDING,
 				"要是我也藏起来, 我一定会找一个有隐蔽入口的安全一点的房子. ",
@@ -193,14 +193,14 @@ public class AntivenomRing extends AbstractQuest {
 
 		// Ortiv Milquetoast is asked about an apothecary
 		hintNPC3.add(ConversationStates.ATTENDING,
-				"apothecary",
+				"药济师",
 				null,
 				ConversationStates.ATTENDING,
-				"你一定要和我的同事 Jameson 谈谈. 因为在 Dalavan 的事, 他也被迫藏了起来 #hide . 他没对我说具体在哪, 但他拜访我时, 总带一些好吃的过来.",
+				"你一定要和我的同事 詹姆森 谈谈. 因为在 Dalavan 的事, 他也被迫 #藏 了起来. 他没对我说具体在哪, 但他拜访我时, 总带一些好吃的过来.",
 				null);
 
 		hintNPC3.add(ConversationStates.ATTENDING,
-				Arrays.asList("hide", "hides", "hiding", "hidden"),
+				Arrays.asList("藏", "隐藏"),
 				null,
 				ConversationStates.ATTENDING,
 				"他提到他在一个自己建的隐密的实验室, 入口也是隐藏的.",
@@ -221,7 +221,7 @@ public class AntivenomRing extends AbstractQuest {
 				"Oh, 克拉丝的信. 是给我的吗?",
 				null);
 
-		// In case player dropped note before speaking to Jameson
+		// In case player dropped note before speaking to 詹姆森
 		mixer.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(mixer.getName()),
@@ -249,7 +249,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.GOODBYE_MESSAGES,
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"这不是一个是非 \"yes\" 或者 \"no\" 问题. 我说, 这是你带来的信吗?",
+				"这不是一个 #是否 的问题. 我说, 这是你带来的信吗?",
 				null);
 
 		// Player rejects quest
@@ -319,7 +319,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.QUESTION_1,
-				Arrays.asList("cake", "仙女蛋糕"),
+				Arrays.asList("蛋糕", "仙女蛋糕"),
 				null,
 				ConversationStates.QUESTION_1,
 				"Oh, 我是我品尝过的最好的食物. 只有最重的生物才能做出如此可口的食物. ",
@@ -378,7 +378,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.ATTENDING,
-				Arrays.asList("cake", "仙女蛋糕"),
+				Arrays.asList("蛋糕", "仙女蛋糕"),
 				null,
 				ConversationStates.ATTENDING,
 				"Oh, 这是我吃过最好的食物了. 只有最重的生物才能做出如此好吃的食物. ",
@@ -431,12 +431,12 @@ public class AntivenomRing extends AbstractQuest {
 						new QuestActiveCondition(QUEST_SLOT),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 0, "mixing"))),
 				ConversationStates.ATTENDING,
-				"你来了, 你带来我要的 #items 了吗?",
+				"你来了, 你带来我要的 #东西 了吗?",
 				null);
 
 		// player asks what is missing (says "items")
 		mixer.add(ConversationStates.ATTENDING,
-				Arrays.asList("item", "items", "ingredient", "ingredients"),
+				Arrays.asList("什么东西", "东西", "什么"),
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
 				null,
@@ -526,7 +526,7 @@ public class AntivenomRing extends AbstractQuest {
 		ChatAction mixAction = new MultipleActions (
 		new SetQuestAction(QUEST_SLOT, 1, "mixing"),
 		new SetQuestToTimeStampAction(QUEST_SLOT, 4),
-		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕 仙女蛋糕s 后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
+		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
 		);
 
 		/* add triggers for the item names */
@@ -570,7 +570,7 @@ public class AntivenomRing extends AbstractQuest {
 	private void requestCobraVenom() {
 		// Player asks for antivenom
 		extractor.add(ConversationStates.ATTENDING,
-				Arrays.asList("jameson", "antivenom", "extract", "眼镜蛇", "venom"),
+				Arrays.asList("詹姆森", "antivenom", "extract", "眼镜蛇", "venom"),
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 1, "extracting=done")
 						)
@@ -599,7 +599,7 @@ public class AntivenomRing extends AbstractQuest {
 		// Greeting while quest is active
 		fuser.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("jameson", "antivenom", "ring", "fuse"),
+				Arrays.asList("詹姆森", "antivenom", "ring", "fuse"),
 				new AndCondition(
 						new QuestActiveCondition(QUEST_SLOT),
 						new NotCondition(
@@ -633,7 +633,7 @@ public class AntivenomRing extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Antivenom Ring",
-				"作为送给老朋友的礼物, 药济师 Jameson 能够加强医疗戒指 medicinal ring.",
+				"作为送给老朋友的礼物, 药济师 詹姆森 能够加强医疗戒指 medicinal ring.",
 				false);
 		prepareHintNPCs();
 		requestAntivenom();
@@ -670,6 +670,6 @@ public class AntivenomRing extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Jameson";
+		return "詹姆森";
 	}
 }

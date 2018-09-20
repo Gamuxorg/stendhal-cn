@@ -610,7 +610,7 @@
     <entity x="77" y="82">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
       <attribute name="text">
-向北： Haizen's house
+向北： 海震's house
 向东： Ados
 向西： 塞门镇
       </attribute>
