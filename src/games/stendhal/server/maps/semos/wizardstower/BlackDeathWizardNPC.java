@@ -70,10 +70,10 @@ public class BlackDeathWizardNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("人类！欢迎你, 现在什么时间了？");
-				addHelp("抱歉人类, 我正忙着在巫师圈子内建立死灵法师部门. ");
-				addJob("我叫 拉瓦侠客. 是巫师圈子内 #灵魂熔炉 的死灵法师. ");
-				addOffer("抱歉人类, 我正忙着在巫师圈子内建立死灵法师部门. ");
-				addQuest("这个世界上的魔法技术刚刚起步, 我忙着在巫师圈子中组建 #灵魂熔炉 的死灵法师. 当需要你出力的时候, 我会及时通知你. ");
+				addHelp("抱歉人类, 我正忙着在巫师界内建立死灵法师部门. ");
+				addJob("我叫 拉瓦侠客. 是巫师界内 #灵魂熔炉 的死灵法师. ");
+				addOffer("抱歉人类, 我正忙着在巫师界内建立死灵法师部门. ");
+				addQuest("这个世界上的魔法技术刚刚起步, 我忙着在巫师界中组建 #灵魂熔炉 的死灵法师. 当需要你出力的时候, 我会及时通知你. ");
 				addReply("灵魂熔炉", "在 glory 的中心地带安置着灵魂熔炉, 是一所黑暗魔法学校.");
 				addGoodbye("太久了！人类！");
 

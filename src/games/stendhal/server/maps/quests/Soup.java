@@ -43,16 +43,16 @@ import games.stendhal.server.maps.Region;
 import marauroa.common.game.IRPZone;
 
 /**
- * QUEST: Special Soup.
+ * QUEST: Special 蔬菜汤.
  * <p>
  * PARTICIPANTS: <ul><li> Old Mother Helena in Fado tavern</ul>
  *
- * STEPS: <ul><li> Old Mother Helena tells you the ingredients of a special soup <li> You
- * collect the ingredients <li> You bring the ingredients to the tavern <li> The soup
- * is served at table<li> Eating the soup heals you fully over time <li> Making it adds karma
+ * STEPS: <ul><li> Old Mother Helena tells you the ingredients of a special 蔬菜汤 <li> You
+ * collect the ingredients <li> You bring the ingredients to the tavern <li> The 蔬菜汤
+ * is served at table<li> Eating the 蔬菜汤 heals you fully over time <li> Making it adds karma
  * </ul>
  *
- * REWARD: <ul><li>healing soup <li> Karma bonus of 5 (if ingredients given individually)<li>20 XP</ul>
+ * REWARD: <ul><li>healing 蔬菜汤 <li> Karma bonus of 5 (if ingredients given individually)<li>20 XP</ul>
  *
  * REPETITIONS: <ul><li> as many as desired <li> Only possible to repeat once every ten
  * minutes</ul>
@@ -109,7 +109,7 @@ public class Soup extends AbstractQuest {
 	 */
 	private void placeSoupFor(final Player player) {
 		final Item soup = SingletonRepository.getEntityManager()
-				.getItem("soup");
+				.getItem("蔬菜汤");
 		final IRPZone zone = SingletonRepository.getRPWorld().getZone("int_fado_tavern");
 		// place on table (for effect only :) )
 		soup.setPosition(17, 23);
@@ -143,7 +143,7 @@ public class Soup extends AbstractQuest {
 					new QuestCompletedCondition(QUEST_SLOT),
 					new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 			ConversationStates.QUEST_OFFERED,
-			"Hello again. Have you returned for more of my special soup?",
+			"Hello again. Have you returned for more of my special 蔬菜汤?",
 			null);
 
 		// player returns after finishing the quest (it is repeatable) before
@@ -155,7 +155,7 @@ public class Soup extends AbstractQuest {
 						new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "I hope you don't want more soup, because I haven't finished washing the dishes. Please check back in")
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "I hope you don't want more 蔬菜汤, because I haven't finished washing the dishes. Please check back in")
 			);
 
 		// player responds to word 'revive'
@@ -174,7 +174,7 @@ public class Soup extends AbstractQuest {
 						npc.say("I have everything for the recipe now.");
 						npc.setCurrentState(ConversationStates.ATTENDING);
 					} else {
-						npc.say("My special soup has a magic touch. "
+						npc.say("My special 蔬菜汤 has a magic touch. "
 								+ "I need you to bring me the #ingredients.");
 					}
 				}
@@ -190,7 +190,7 @@ public class Soup extends AbstractQuest {
 					npc.say("I need "
 							+ needed.size() +
 									"ingredient"
-							+ " before I make the soup: "
+							+ " before I make the 蔬菜汤: "
 							+ needed
 							+ ". Will you collect them?");
 				}
@@ -230,7 +230,7 @@ public class Soup extends AbstractQuest {
 			Arrays.asList("色拉", "胡萝卜"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"I usually have to get them imported from 塞门镇. So do you want the soup?",
+			"I usually have to get them imported from 塞门镇. So do you want the 蔬菜汤?",
 			null);
 	}
 
@@ -249,7 +249,7 @@ public class Soup extends AbstractQuest {
 					new QuestStartedCondition(QUEST_SLOT),
 					new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "done"))),
 			ConversationStates.QUESTION_1,
-			"Welcome back! I hope you collected some #ingredients for the soup, or #everything.",
+			"Welcome back! I hope you collected some #ingredients for the 蔬菜汤, or #everything.",
 			null);
 
 		// player asks what exactly is missing
@@ -300,13 +300,13 @@ public class Soup extends AbstractQuest {
 									 * the XP change MIGHT change level and
 									 * player MIGHT gain health points which
 									 * changes the base HP, which is desired
-									 * to be accurate for the place soup
+									 * to be accurate for the place 蔬菜汤
 									 * stage
 									 */
 									placeSoupFor(player);
 									player.getStatusList().removeAll(PoisonStatus.class);
-									npc.say("The soup's on the table for you. It will heal you. "
-											+ "My magical method in making the soup has given you a little karma too.");
+									npc.say("The 蔬菜汤's on the table for you. It will heal you. "
+											+ "My magical method in making the 蔬菜汤 has given you a little karma too.");
 									player.setQuest(QUEST_SLOT, "done;"
 											+ System.currentTimeMillis());
 									player.notifyWorldAboutChanges();
@@ -341,7 +341,7 @@ public class Soup extends AbstractQuest {
 		npc.add(ConversationStates.QUESTION_1, "",
 			new NotCondition(new TriggerInListCondition(NEEDED_FOOD)),
 			ConversationStates.QUESTION_1,
-			"I won't put that in your soup.", null);
+			"I won't put that in your 蔬菜汤.", null);
 
 		// allow to say goodbye while Helena is listening for food names
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.GOODBYE_MESSAGES, null,
@@ -399,8 +399,8 @@ public class Soup extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Soup",
-				"Old Mother Helena makes a wonderful vegetable soup.",
+				"蔬菜汤",
+				"Old Mother Helena makes a wonderful vegetable 蔬菜汤.",
 				false);
 		step_1();
 		step_2();
@@ -414,18 +414,18 @@ public class Soup extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting ingredients to make vegetable soup. I still need " + missingFood(player, false) + ".");
+				res.add("I'm collecting ingredients to make vegetable 蔬菜汤. I still need " + missingFood(player, false) + ".");
 			} else if(isRepeatable(player)){
-				res.add("Old Mother Helena is ready to make soup for me again!");
+				res.add("Old Mother Helena is ready to make 蔬菜汤 for me again!");
 			} else {
-				res.add("I made some healthy soup. Old Mother Helena is now busy washing the dishes.");
+				res.add("I made some healthy 蔬菜汤. Old Mother Helena is now busy washing the dishes.");
 			}
 			return res;
 	}
 
 	@Override
 	public String getName() {
-		return "Soup";
+		return "蔬菜汤";
 	}
 
 	@Override

@@ -72,7 +72,7 @@ public class MagicTeacherNPC implements ZoneConfigurator {
 	@Override
 	public void configureZone(StendhalRPZone zone,
 		Map<String, String> attributes) {
-		SpeakerNPC npc = new SpeakerNPC("Mirlen") {
+		SpeakerNPC npc = new SpeakerNPC("梅林") {
 
 			@Override
 			protected void createDialog() {

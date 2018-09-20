@@ -62,7 +62,7 @@ public class ProducerRegisterTest {
 		requiredResources.put("cod", 2);
 		requiredResources.put("mackerel", 1);
 		requiredResources.put("韭菜", 1);
-		final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "fish pie",
+		final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "鱼肉派",
 		        requiredResources, 5 * 60);
 
 		producerRegister.add("Linzo", behaviour);
@@ -114,11 +114,11 @@ public class ProducerRegisterTest {
 		assertEquals(producerRegister.listWorkingProducers(player),"You have no ongoing or uncollected orders.");
 
 		player.setQuest("arlindo_make_pie", "1;pie;1");
-		player.setQuest("blacksheepbob_make_sausage", "210;sausage;"+System.currentTimeMillis());
+		player.setQuest("blacksheepbob_make_sausage", "210;香肠;"+System.currentTimeMillis());
 
 		assertEquals(producerRegister.listWorkingProducers(player),"\r\nOrders: " +
 				"\nArlindo has finished making your pie."
-				+"\nBlacksheep Bob is making 210 sausages and will be ready in 7 hours.");
+				+"\nBlacksheep Bob is making 210 香肠s and will be ready in 7 hours.");
 
 		//collect orders
 		player.setQuest("arlindo_make_pie", "done");
@@ -148,8 +148,8 @@ public class ProducerRegisterTest {
 
 		assertFalse(producerRegister.getProducers().isEmpty());
 
-		assertEquals(producerRegister.getProducedItemNames("food"), Arrays.asList("pie", "sausage"));
-		assertEquals(producerRegister.getProducedItemNames("food").toString(), "[pie, sausage]");
+		assertEquals(producerRegister.getProducedItemNames("food"), Arrays.asList("馅饼", "香肠"));
+		assertEquals(producerRegister.getProducedItemNames("food").toString(), "[馅饼, 香肠]");
 
 
 	}

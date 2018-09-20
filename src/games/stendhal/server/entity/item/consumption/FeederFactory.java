@@ -27,11 +27,11 @@ public final class FeederFactory {
 			return immunizer;
 		}
 
-		if (item.getName().contains("potion")) {
+		if (item.getName().contains("治疗济")) {
 			return stuffer;
 		}
 
-		if(item.getName().contains("mana")) {
+		if(item.getName().contains("魔力药水")) {
 			return enchanter;
 		}
 

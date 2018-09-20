@@ -76,7 +76,7 @@ public class TwilightElixir extends Drink {
 
 	/**
 	 * the overridden method verifies item is near to player. if so splits one single item of and
-	 * calls consumeItem of the player - so they get poisoned, since that's what twilight elixir does
+	 * calls consumeItem of the player - so they get poisoned, since that's what 莹光药剂 does
 	 * @param user the eating player
 	 * @return true if consumption can be started
 	 *
@@ -94,7 +94,7 @@ public class TwilightElixir extends Drink {
 				if (zone == null) {
 					// invalid zone (shouldn't happen)
 					user.sendPrivateText("Oh oh. 因为一些奇怪的原因, 卷轴没有把我传送到正确的地点.");
-					logger.warn("twilight elixir to unknown zone hell,"
+					logger.warn("莹光药剂 to unknown zone hell,"
 								+ " teleported " + user.getName()
 								+ " to 塞门镇 instead");
 					zone = SingletonRepository.getRPWorld().getZone("0_塞门_镇");
@@ -106,7 +106,7 @@ public class TwilightElixir extends Drink {
 			return super.onUsed(user);
 		} else {
 			// should never happen.
-			logger.warn("some non player RPEntity just used a twilight elixir, which shouldn't be possible.");
+			logger.warn("some non player RPEntity just used a 莹光药剂, which shouldn't be possible.");
 			return false;
 		}
 

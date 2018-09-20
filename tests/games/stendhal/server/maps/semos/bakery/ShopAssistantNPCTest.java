@@ -244,7 +244,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 
 
 	/**
-	 * Tests for borrowing the sugar mill.
+	 * Tests for borrowing the 制糖机.
 	 */
 	@Test
 	public void testBorrowSugarMill() {
@@ -275,22 +275,22 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"I lend out #'sugar mill' and #'pestle and mortar'. If you're interested, please say which you want.",
+				"I lend out #'制糖机' and #'杵和臼'. If you're interested, please say which you want.",
 				getReply(npc));
 
-		en.step(player, "sugar mill");
+		en.step(player, "制糖机");
 		assertTrue(npc.isTalking());
 		assertEquals(
 				"Here you are! Don't forget to #return it or you have to pay!",
 				getReply(npc));
 		final String[] questStatus = player.getQuest(BORROW).split(";");
-		assertEquals("sugar mill", questStatus[0]);
+		assertEquals("制糖机", questStatus[0]);
 
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(BORROW, ";");
 
-		assertEquals(1, player.getNumberOfEquipped("sugar mill"));
+		assertEquals(1, player.getNumberOfEquipped("制糖机"));
 
 		en.step(player, "hi");
 		assertEquals(
@@ -330,20 +330,20 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"I lend out #'sugar mill' and #'pestle and mortar'. If you're interested, please say which you want.",
+				"I lend out #'制糖机' and #'杵和臼'. If you're interested, please say which you want.",
 				getReply(npc));
 
-		en.step(player, "sugar");
+		en.step(player, "糖块");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"Sorry, I can't lend out sugar, only a #sugar #mill.",
+				"Sorry, I can't lend out 糖块, only a #sugar #mill.",
 				getReply(npc));
 
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(BORROW, ";");
 
-		assertEquals(0, player.getNumberOfEquipped("sugar mill"));
+		assertEquals(0, player.getNumberOfEquipped("制糖机"));
 
 		en.step(player, "hi");
 		assertEquals(
@@ -352,7 +352,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	/**
-	 * Tests for borrowing pestle and mortar.
+	 * Tests for borrowing 杵和臼.
 	 */
 	@Test
 	public void testBorrowPestleMortar() {
@@ -383,22 +383,22 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"I lend out #'sugar mill' and #'pestle and mortar'. If you're interested, please say which you want.",
+				"I lend out #'制糖机' and #'杵和臼'. If you're interested, please say which you want.",
 				getReply(npc));
 
-		en.step(player, "pestle and mortar");
+		en.step(player, "杵和臼");
 		assertTrue(npc.isTalking());
 		assertEquals(
 				"Here you are! Don't forget to #return it or you have to pay!",
 				getReply(npc));
 		final String[] questStatus = player.getQuest(BORROW).split(";");
-		assertEquals("pestle and mortar", questStatus[0]);
+		assertEquals("杵和臼", questStatus[0]);
 
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(BORROW, ";");
 
-		assertEquals(1, player.getNumberOfEquipped("pestle and mortar"));
+		assertEquals(1, player.getNumberOfEquipped("杵和臼"));
 
 		en.step(player, "hi");
 		assertEquals(
@@ -408,7 +408,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 
 
 	/**
-	 * Tests for borrowing pestle and mortar with additional space.
+	 * Tests for borrowing 杵和臼 with additional space.
 	 */
 	@Test
 	public void testBorrowPestleAndMortarWithSpace() {
@@ -439,7 +439,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"I lend out #'sugar mill' and #'pestle and mortar'. If you're interested, please say which you want.",
+				"I lend out #'制糖机' and #'杵和臼'. If you're interested, please say which you want.",
 				getReply(npc));
 
 		en.step(player, "pestle and  mortar");
@@ -448,13 +448,13 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 				"Here you are! Don't forget to #return it or you have to pay!",
 				getReply(npc));
 		final String[] questStatus = player.getQuest(BORROW).split(";");
-		assertEquals("pestle and mortar", questStatus[0]);
+		assertEquals("杵和臼", questStatus[0]);
 
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(BORROW, ";");
 
-		assertEquals(1, player.getNumberOfEquipped("pestle and mortar"));
+		assertEquals(1, player.getNumberOfEquipped("杵和臼"));
 
 		en.step(player, "hi");
 		assertEquals(
@@ -484,7 +484,7 @@ I didn't go further and pay the 3000, hope to get that item back from Ortiv to s
 		assertEquals(
 				"Welcome to the Semos bakery! We'll #bake fine bread for anyone who helps bring our #flour delivery from the mill.",
 				getReply(npc));
-		engine.step(brokePlayer, "sugar mill");
+		engine.step(brokePlayer, "制糖机");
 		assertEquals(
 				"You can't borrow from me again till you #return the last tool I lent you.",
 				getReply(npc));
@@ -503,7 +503,7 @@ I didn't go further and pay the 3000, hope to get that item back from Ortiv to s
 		assertEquals(
 				"Welcome to the Semos bakery! We'll #bake fine bread for anyone who helps bring our #flour delivery from the mill.",
 				getReply(npc));
-		engine.step(brokePlayer, "sugar mill");
+		engine.step(brokePlayer, "制糖机");
 		assertEquals(
 				"You can't borrow from me again till you #return the last tool I lent you.",
 				getReply(npc));

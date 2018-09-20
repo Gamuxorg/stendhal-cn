@@ -148,7 +148,7 @@ public class AmazonPrincessTest {
 		assertEquals("Huh, what are you doing here?", getReply(npc));
 		en.step(player, "椰林飘香");
 		assertTrue(getReply(npc).startsWith("Thank you!! Take th"));
-		assertTrue(player.isEquipped("fish pie"));
+		assertTrue(player.isEquipped("鱼肉派"));
 		en.step(player, "bye");
 		assertEquals("Goodbye, and beware of the barbarians.", getReply(npc));
 

@@ -24,7 +24,7 @@ public class SummonActionTest {
 
 			@Override
 			public void send(RPAction arg0) {
-				assertThat(arg0.get("creature"), is("fishing rod"));
+				assertThat(arg0.get("creature"), is("钓鱼杆"));
 			}
 
 			@Override
@@ -75,7 +75,7 @@ public class SummonActionTest {
 	public void testExecute() {
 		new User();
 		assertNotNull(User.get());
-		String[] args = {"fishing rod"};
+		String[] args = {"钓鱼杆"};
 		new SummonAction().execute(args, null);
 	}
 

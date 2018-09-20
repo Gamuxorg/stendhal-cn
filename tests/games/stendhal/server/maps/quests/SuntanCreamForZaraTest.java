@@ -103,17 +103,17 @@ public class SuntanCreamForZaraTest {
 		en.step(player, "suntan cream");
 		assertEquals("David's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.", getReply(npc));
 		en.step(player, "mix");
-		assertEquals("I can only mix a suntan cream if you bring me a #'bottle of minor potion', a #'sprig of 海芋', and a #kokuda.", getReply(npc));
+		assertEquals("I can only mix a suntan cream if you bring me a #'bottle of 小治疗剂', a #'sprig of 海芋', and a #kokuda.", getReply(npc));
 		en.step(player, "sprig of 海芋");
 		assertEquals("海芋 is a herb which is growing around Semos.", getReply(npc));
 		en.step(player, "kokuda");
 		assertEquals("We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.", getReply(npc));
-		en.step(player, "bottle of minor potion");
+		en.step(player, "bottle of 小治疗剂");
 		assertEquals("It's a small bottle full of potion. You can buy it at several places.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Have fun!", getReply(npc));
 
-		PlayerTestHelper.equipWithItem(player, "minor potion");
+		PlayerTestHelper.equipWithItem(player, "小治疗剂");
 		PlayerTestHelper.equipWithItem(player, "kokuda");
 		PlayerTestHelper.equipWithItem(player, "海芋");
 		assertFalse(player.isEquipped("suntan cream"));
@@ -121,14 +121,14 @@ public class SuntanCreamForZaraTest {
 		en.step(player, "hi");
 		assertEquals("Hallo!", getReply(npc));
 		en.step(player, "mix");
-		assertEquals("I need you to fetch me a #'bottle of minor potion', a #'sprig of 海芋', and a #kokuda for this job, which will take 10 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 小治疗剂', a #'sprig of 海芋', and a #kokuda for this job, which will take 10 minutes. Do you have what I need?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("OK, I will mix a suntan cream for you, but that will take some time. Please come back in 10 minutes.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Have fun!", getReply(npc));
 
 		assertNotNull(player.getQuest("pamela_mix_cream"));
-		assertFalse(player.isEquipped("minor potion"));
+		assertFalse(player.isEquipped("小治疗剂"));
 		assertFalse(player.isEquipped("kokuda"));
 		assertFalse(player.isEquipped("海芋"));
 

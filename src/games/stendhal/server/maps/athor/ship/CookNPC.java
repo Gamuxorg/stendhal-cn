@@ -64,7 +64,7 @@ public class CookNPC implements ZoneConfigurator  {
 				offerings.put("红酒", 15);
 				// more expensive than in normal taverns
 				offerings.put("火腿", 100);
-				offerings.put("pie", 150);
+				offerings.put("馅饼", 150);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 
 				addGoodbye();

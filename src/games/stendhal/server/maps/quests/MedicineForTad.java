@@ -111,7 +111,7 @@ public class MedicineForTad extends AbstractQuest {
 	static final String STATE_ILISA = "伊丽莎";
 	static final String STATE_HERB = "corpse&herbs";
 	static final String STATE_SHOWN_DRAWING = "shownDrawing";
-	static final String STATE_POTION = "potion";
+	static final String STATE_POTION = "治疗济";
 	static final String STATE_DONE = "done";
 
 	private static final String QUEST_SLOT = "introduce_players";

@@ -25,9 +25,9 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a npc in Ados (name:Florence Boullabaisse) who is a fish soup maker on the market
+ * Builds a npc in Ados (name:Florence Boullabaisse) who is a 鱼汤 maker on the market
  *
- * @author Krupi (fish soup idea) Vanessa Julius (implemented)
+ * @author Krupi (鱼汤 idea) Vanessa Julius (implemented)
  *
  */
 public class FishSoupMakerNPC implements ZoneConfigurator {
@@ -58,11 +58,11 @@ public class FishSoupMakerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				//addGreeting();
-				addHelp("I can cook a really tasty fish soup for you but if you are not into fish, I can suggest a good friend of mine to you, Old Mother Helena in Fado. She makes the best vegetable soup in the whole of Faiumoni!");
+				addHelp("I can cook a really tasty 鱼汤 for you but if you are not into fish, I can suggest a good friend of mine to you, Old Mother Helena in Fado. She makes the best vegetable soup in the whole of Faiumoni!");
 
-				addQuest("I don't have any quests for you, but I can offer you some fresh made fish soup for your travels.");
-				addJob("I am a trained cook but specialized into soups. My most favourite soup is a fish soup but I also like normal ones...");
-				addOffer("If you are really hungry or need some food for your travels, I can cook a really tasty fish soup for you after a selfmade receipe.");
+				addQuest("I don't have any quests for you, but I can offer you some fresh made 鱼汤 for your travels.");
+				addJob("I am a trained cook but specialized into soups. My most favourite soup is a 鱼汤 but I also like normal ones...");
+				addOffer("If you are really hungry or need some food for your travels, I can cook a really tasty 鱼汤 for you after a selfmade receipe.");
 				addGoodbye("Have a nice stay and day on Ados market!");
 				addEmotionReply("cuddle", "cuddle");
 			}

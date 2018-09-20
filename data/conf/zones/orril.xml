@@ -770,9 +770,9 @@ As a mighty warrior, you always need to wear a powerful armor in fights.
     <entity x="3" y="27">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Wooooza! Magic and its powerful potions
+Wooooza! Magic and its powerful 治疗济s
 -By Salva Mattori-
-You don't believe in magic? The potion of love, made from a magician's hand, even works for Yetis.
+You don't believe in magic? The 治疗济 of love, made from a magician's hand, even works for Yetis.
 	 	</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_green</attribute>
@@ -816,7 +816,7 @@ Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge 
       <attribute name="text">
 Baking for starters
 -By Gaston-
-You need some 面粉, some eggs, some butter, some sugar, some chocolate and some 牛奶, a hot drink for the winter, some rat to make it silk. Now after waiting for some time and after the job is done: a crepes suzette that is you hold, enjoy it and have fun!
+You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and some 牛奶, a hot drink for the winter, some rat to make it silk. Now after waiting for some time and after the job is done: a 可丽饼 that is you hold, enjoy it and have fun!
 			</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_white</attribute>

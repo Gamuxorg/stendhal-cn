@@ -70,7 +70,7 @@ public class BarMaidNPC implements ZoneConfigurator {
 				addHelp("This tavern is a great place to take a break and meet new people! Just ask if you want me to #offer you a drink.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
 				offerings.put("啤酒", 15);
-				offerings.put("pie", 160);
+				offerings.put("馅饼", 160);
 				offerings.put("面包", 50);
 				offerings.put("干酪", 20);
 				offerings.put("西红柿", 30);

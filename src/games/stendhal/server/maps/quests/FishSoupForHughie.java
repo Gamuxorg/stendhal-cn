@@ -56,15 +56,15 @@ import marauroa.common.game.IRPZone;
  *
  * STEPS:
  * <ul>
- * <li> Anastasia asks for some fish soup for her sick boy</li>
- * <li> You collect the fish soup</li>
- * <li> You give the fish soup to Anastasia.</li>
+ * <li> Anastasia asks for some 鱼汤 for her sick boy</li>
+ * <li> You collect the 鱼汤</li>
+ * <li> You give the 鱼汤 to Anastasia.</li>
  * <li> Anastasia rewards you.<li>
  * </ul>
  *
  * REWARD:
  * <ul>
- * <li> 10 potions</li>
+ * <li> 10 治疗济s</li>
  * <li> xp </li>
  * <li> Karma: 5</li>
  * </ul>
@@ -101,18 +101,18 @@ public class FishSoupForHughie extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Anastasia asked me to bring fish soup for her boy Hughie.");
+		res.add("Anastasia asked me to bring 鱼汤 for her boy Hughie.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("I do not want to help Hughie.");
 			return res;
 		}
 		res.add("I do want to help Hughie and Anastasia.");
-		if (player.isEquipped("fish soup") || isCompleted(player)) {
-			res.add("I have fetched the fish soup needed to heal Hughie.");
+		if (player.isEquipped("鱼汤") || isCompleted(player)) {
+			res.add("I have fetched the 鱼汤 needed to heal Hughie.");
 		}
 		if (isCompleted(player)) {
-			res.add("Hughie ate his soup and Anastasia gave me potions.");
+			res.add("Hughie ate his soup and Anastasia gave me 治疗济s.");
 		}
 		if(isRepeatable(player)){
 			res.add("Its been a while since I checked on Hughie and Anastasia, I should remember to go see them again.");
@@ -125,22 +125,22 @@ public class FishSoupForHughie extends AbstractQuest {
 	private void prepareRequestingStep() {
 		final SpeakerNPC npc = npcs.get("Anastasia");
 
-		// player returns with the promised fish soup
+		// player returns with the promised 鱼汤
 		npc.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-					new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("fish soup")),
+					new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("鱼汤")),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Hi, you've got fish soup, I see, is that for Hughie?",
+			"Hi, you've got 鱼汤, I see, is that for Hughie?",
 			null);
 
-		//player returns without promised fish soup
+		//player returns without promised 鱼汤
 		npc.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-					new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("fish soup"))),
+					new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("鱼汤"))),
 			ConversationStates.ATTENDING,
-			"You're back already? Hughie is getting sicker! Don't forget the fish soup for him, please. I promise to reward you.",
+			"You're back already? Hughie is getting sicker! Don't forget the 鱼汤 for him, please. I promise to reward you.",
 			null);
 
 		// first chat of player with Anastasia
@@ -166,7 +166,7 @@ public class FishSoupForHughie extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"You already promised me to bring me some fish soup for Hughie! Please hurry!",
+			"You already promised me to bring me some 鱼汤 for Hughie! Please hurry!",
 			null);
 
 		// first time player asks/ player had rejected
@@ -174,7 +174,7 @@ public class FishSoupForHughie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"My poor boy is sick and the potions I give him aren't working! Please could you fetch him some fish soup?",
+				"My poor boy is sick and the 治疗济s I give him aren't working! Please could you fetch him some 鱼汤?",
 				null);
 
 		// player returns - enough time has passed
@@ -182,7 +182,7 @@ public class FishSoupForHughie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestStartedCondition(QUEST_SLOT), new TimePassedCondition(QUEST_SLOT,REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"My Hughie is getting sick again! Please could you bring another bowl of fish soup? It helped last time.",
+				"My Hughie is getting sick again! Please could you bring another bowl of 鱼汤? It helped last time.",
 				null);
 
 		// player returns - not enough time has passed
@@ -198,7 +198,7 @@ public class FishSoupForHughie extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Thank you! You can ask Florence Bouillabaisse to make you fish soup. I think she's in Ados market somewhere.",
+			"Thank you! You can ask Florence Bouillabaisse to make you 鱼汤. I think she's in Ados market somewhere.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 1.0));
 
 		// player is not willing to help
@@ -212,19 +212,19 @@ public class FishSoupForHughie extends AbstractQuest {
 
 	private void prepareBringingStep() {
 		final SpeakerNPC npc = npcs.get("Anastasia");
-		// player has fish soup and tells Anastasia, yes, it is for her
+		// player has 鱼汤 and tells Anastasia, yes, it is for her
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("fish soup"));
+		reward.add(new DropItemAction("鱼汤"));
 		reward.add(new IncreaseXPAction(200));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT));
 		reward.add(new IncreaseKarmaAction(5));
-		reward.add(new EquipItemAction("potion",10));
+		reward.add(new EquipItemAction("治疗济",10));
 		reward.add(new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				final Item soup = SingletonRepository.getEntityManager()
-				.getItem("fish soup");
+				.getItem("鱼汤");
 				final IRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_村庄_小屋_1");
 				// place on table
 				soup.setPosition(32, 5);
@@ -236,19 +236,19 @@ public class FishSoupForHughie extends AbstractQuest {
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("fish soup"),
-			ConversationStates.ATTENDING, "Thank you! I will always be in your favour. I will feed it to Hughie when he wakes. Please take these potions, they did nothing for him.",
+			new PlayerHasItemWithHimCondition("鱼汤"),
+			ConversationStates.ATTENDING, "Thank you! I will always be in your favour. I will feed it to Hughie when he wakes. Please take these 治疗济s, they did nothing for him.",
 			new MultipleActions(reward));
 
-		//player said the fish soup was for her but has dropped it from his bag or hands
+		//player said the 鱼汤 was for her but has dropped it from his bag or hands
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new NotCondition(new PlayerHasItemWithHimCondition("fish soup")),
+			new NotCondition(new PlayerHasItemWithHimCondition("鱼汤")),
 			ConversationStates.ATTENDING,
-			"Oh! Where did you put the fish soup?",
+			"Oh! Where did you put the 鱼汤?",
 			null);
 
-		// player had fish soup but said it is not for Hughie
+		// player had 鱼汤 but said it is not for Hughie
 		npc.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.NO_MESSAGES,
@@ -261,7 +261,7 @@ public class FishSoupForHughie extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Fish Soup For Hughie",
+				"鱼汤 For Hughie",
 				"Anastasia's son Hughie is sick and needs something to heal him.",
 				true);
 		prepareRequestingStep();
@@ -270,7 +270,7 @@ public class FishSoupForHughie extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "Fish Soup For Hughie";
+		return "鱼汤 For Hughie";
 	}
 
 	@Override

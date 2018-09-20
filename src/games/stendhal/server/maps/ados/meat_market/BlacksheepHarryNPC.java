@@ -57,7 +57,7 @@ public class BlacksheepHarryNPC implements ZoneConfigurator {
 		@Override
 		protected void createDialog() {
 			addJob("I supply canned tuna for the whole world.");
-			addHelp("I only #make canned tuna. My brothers here make sausage and cheese sausage.");
+			addHelp("I only #make canned tuna. My brothers here make 香肠 and 起司香肠.");
 			addOffer("Just give me some mackerel, I will #make you some canned tuna.");
 			addQuest("I don't really think I should ask for help right now.");
 			addGoodbye("Good bye. Tell all your friends about us.");

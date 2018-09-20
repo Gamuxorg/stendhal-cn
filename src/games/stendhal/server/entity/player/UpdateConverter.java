@@ -372,7 +372,7 @@ public abstract class UpdateConverter {
 		final EntityManager entityMgr = SingletonRepository.getEntityManager();
 
 		// rename old quest slot "Valo_concoct_potion" to "valo_concoct_potion"
-		// We avoid to lose potion in case there is an entry with the old and the new name at the same
+		// We avoid to lose 治疗济 in case there is an entry with the old and the new name at the same
 		// time by combining them by calculating the minimum of the two times and the sum of the two amounts.
 		migrateSumTimedQuestSlot(player, "Valo_concoct_potion", "valo_concoct_potion");
 

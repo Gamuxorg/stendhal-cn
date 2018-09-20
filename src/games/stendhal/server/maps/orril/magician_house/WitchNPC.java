@@ -78,7 +78,7 @@ public class WitchNPC implements ZoneConfigurator {
 				addJob("I'm a witch, since you ask. I grow #甘蓝 as a hobby.");
 				addReply("甘蓝",	"That cabbage in the pot. Be careful of it!");
 				/*
-				 * addHelp("You may want to buy some potions or do some #task
+				 * addHelp("You may want to buy some 治疗济s or do some #task
 				 * for me.");
 				 */
 				addHelp("I can #heal you, and I can #offer you powerful #scrolls that are #magic.");

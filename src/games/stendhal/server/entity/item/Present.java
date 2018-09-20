@@ -27,7 +27,7 @@ import games.stendhal.server.entity.player.Player;
  */
 public class Present extends Box {
 
-	private static final String[] ITEMS = { "greater potion", "pie",
+	private static final String[] ITEMS = { "大治疗剂", "馅饼",
 			"三明治", "胡萝卜", "樱桃", "蓝灵斗篷", "召唤卷轴" };
 
 	/**

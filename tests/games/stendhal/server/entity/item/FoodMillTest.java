@@ -39,51 +39,51 @@ public class FoodMillTest {
 
 	@Test
 	public void testOnUsedSugarMill() throws Exception {
-		String name = "sugar mill";
+		String name = "制糖机";
 		String clazz = "";
 		String subclass = "";
 		Map<String, String> attributes = new HashMap<String, String>();
 		FoodMill fm = new FoodMill(name, clazz, subclass, attributes);
 		Player user  =  PlayerTestHelper.createPlayer("fmbob");
 		fm.onUsed(user);
-		assertEquals("You should be carrying the sugar mill in order to use it.", PlayerTestHelper.getPrivateReply(user));
+		assertEquals("You should be carrying the 制糖机 in order to use it.", PlayerTestHelper.getPrivateReply(user));
 
 		user.equip("背包", fm);
 		fm.onUsed(user);
-		assertEquals("You should hold the sugar mill in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
+		assertEquals("You should hold the 制糖机 in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		user.equip("lhand", fm);
 		fm.onUsed(user);
 
 		assertEquals("Your other hand looks empty.", PlayerTestHelper.getPrivateReply(user));
 		PlayerTestHelper.equipWithItemToSlot(user, "cheese", "rhand");
 		fm.onUsed(user);
-		assertEquals("You need to have at least a sugar cane in your other hand", PlayerTestHelper.getPrivateReply(user));
+		assertEquals("You need to have at least a 甘蔗 in your other hand", PlayerTestHelper.getPrivateReply(user));
 
 		user.drop("cheese");
 
-		PlayerTestHelper.equipWithItemToSlot(user, "sugar cane", "rhand");
+		PlayerTestHelper.equipWithItemToSlot(user, "甘蔗", "rhand");
 
 		fm.onUsed(user);
 		assertEquals("You don't have an 空布袋 with you", PlayerTestHelper.getPrivateReply(user));
 		PlayerTestHelper.equipWithItem(user, "空布袋");
 		fm.onUsed(user);
-		assertTrue(user.isEquipped("sugar"));
+		assertTrue(user.isEquipped("糖块"));
 	}
 	@Test
 	public void testOnUsedScrollEraser() throws Exception {
-		String name = "scroll eraser";
+		String name = "重绘机";
 		String clazz = "";
 		String subclass = "";
 		Map<String, String> attributes = new HashMap<String, String>();
 		FoodMill fm = new FoodMill(name, clazz, subclass, attributes);
 		Player user  =  PlayerTestHelper.createPlayer("fmbob");
 		fm.onUsed(user);
-		assertEquals("You should be carrying the scroll eraser in order to use it.", PlayerTestHelper.getPrivateReply(user));
+		assertEquals("You should be carrying the 重绘机 in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		assertFalse(user.isEquipped("empty scroll"));
 
 		user.equip("背包", fm);
 		fm.onUsed(user);
-		assertEquals("You should hold the scroll eraser in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
+		assertEquals("You should hold the 重绘机 in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		assertFalse(user.isEquipped("empty scroll"));
 		
 		user.equip("lhand", fm);
@@ -108,7 +108,7 @@ public class FoodMillTest {
 	@Test
 	public void testFoodMill()
 	 throws Exception {
-		String name = "sugar mill";
+		String name = "制糖机";
 		String clazz = "";
 		String subclass = "";
 		Map<String, String> attributes = new HashMap<String, String>();

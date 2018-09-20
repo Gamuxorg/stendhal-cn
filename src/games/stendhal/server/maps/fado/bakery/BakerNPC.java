@@ -97,7 +97,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addHelp("Ask me to make you a fish and 韭菜 pie. They're not stodgy like meat pies so you can eat them a little quicker.");
 				addGoodbye();
 
-				// Linzo makes fish pies if you bring him 面粉, 韭菜, cod and mackerel
+				// Linzo makes 鱼肉派s if you bring him 面粉, 韭菜, cod and mackerel
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 1);
@@ -105,11 +105,11 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("mackerel", 1);
 				requiredResources.put("韭菜", 1);
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "fish pie",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "鱼肉派",
 				        requiredResources, 5 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Hi there. Have you come to try my fish pies? I can #make one for you.");
+				        "Hi there. Have you come to try my 鱼肉派s? I can #make one for you.");
 			}
 		};
 

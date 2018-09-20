@@ -66,7 +66,7 @@ public class HouseKeeperNPC implements ZoneConfigurator {
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("牛奶", 1);
-				requiredResources.put("honey", 1);
+				requiredResources.put("蜂蜜", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("granny_brew_tea",
 						"brew", "茶", requiredResources, 3 * 60);
@@ -75,10 +75,10 @@ public class HouseKeeperNPC implements ZoneConfigurator {
 				        "Hello, dear.");
 				addReply("牛奶",
 		        		"Well my dear, I expect you can get 牛奶 from a farm.");
-				addReply("honey",
+				addReply("蜂蜜",
 				        "Don't you know the beekeeper of Fado Forest?");
 				addReply("茶",
-				        "It's the very best drink of all. I sweeten mine with #honey. Just ask if you'd like a #brew.");
+				        "It's the very best drink of all. I sweeten mine with #蜂蜜. Just ask if you'd like a #brew.");
 			}
 		};
 		npc.setDescription("You see old Granny Graham, shuffling around her kitchen and muttering to herself.");

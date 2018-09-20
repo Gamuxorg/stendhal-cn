@@ -56,7 +56,7 @@ import marauroa.common.Pair;
  * <p>
  * REWARD:
  * <ul>
- * <li> 3 potions
+ * <li> 3 治疗济s
  * <li> 100 XP
  * <li> No karma (deliberately. Killing gnomes is mean!)
  * </ul>
@@ -138,7 +138,7 @@ public class KillGnomes extends AbstractQuest {
 
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-	    actions.add(new EquipItemAction("potion", 3));
+	    actions.add(new EquipItemAction("治疗济", 3));
 		actions.add(new IncreaseXPAction(100));
 		actions.add(new SetQuestAction(QUEST_SLOT, "killed;1"));
 		actions.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));

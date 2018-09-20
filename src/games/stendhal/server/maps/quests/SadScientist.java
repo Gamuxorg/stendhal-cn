@@ -70,7 +70,7 @@ import games.stendhal.server.util.ItemCollection;
  * STEPS:
  * <ul>
  * 		<li>Talk to Vasi Elos, a lonely scientist.</li>
- * 		<li>Give him all stuff he needs for a present for his honey.</li>
+ * 		<li>Give him all stuff he needs for a present for his 蜂蜜.</li>
  * 		<li>Talk to semos mayor.</li>
  * 		<li>Bring Elos mayor's letter.</li>
  * 		<li>Kill the Imperial Scientist.</li>

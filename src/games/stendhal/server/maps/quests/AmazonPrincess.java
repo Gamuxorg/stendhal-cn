@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>Karma +25 in all</li>
- * <li>Some fish pie, random between 2 and 7.</li>
+ * <li>Some 鱼肉派, random between 2 and 7.</li>
  * </ul>
  *
  * REPETITIONS:
@@ -147,10 +147,10 @@ npc.add(ConversationStates.ATTENDING,
 									final Sentence sentence,
 									final EventRaiser npc) {
 								int pieAmount = Rand.roll1D6() + 1;
-								new EquipItemAction("fish pie", pieAmount, true).fire(player, sentence, npc);
+								new EquipItemAction("鱼肉派", pieAmount, true).fire(player, sentence, npc);
 								npc.say("谢谢你！拿着厨师做的这 " +
 										pieAmount + " 个 " +
-										 "fish pie" +
+										 "鱼肉派" +
 										" , 还有我的～吻. ");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "drinking;"
 																 + System.currentTimeMillis(), 15.0).fire(player, sentence, npc);
@@ -197,16 +197,16 @@ npc.add(ConversationStates.ATTENDING,
 			res.add("她让我找一些饮品, 但我觉得她应该没喝过.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("公主很渴, 我答应给她找一个异域饮品, 找到后对她说 'drink' . ");
+			res.add("公主很渴, 我答应给她找一个异界饮品, 找到后对她说 'drink' . ");
 		}
 		if ("start".equals(questState) && player.isEquipped("椰林飘香") || isCompleted(player)) {
 			res.add("我为公主找到一种 椰林飘香 的饮料, 我觉得她会喜欢喝. ");
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("我把 椰林飘香 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 fish pies.");
+                res.add("我把 椰林飘香 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 鱼肉派s.");
             } else {
-                res.add("公主 Esclara 很爱我带给她的 椰林飘香 , 她不再感到口渴了. 她把 fish pies 送给了我, 还有一个香吻!");
+                res.add("公主 Esclara 很爱我带给她的 椰林飘香 , 她不再感到口渴了. 她把 鱼肉派s 送给了我, 还有一个香吻!");
             }
 		}
 		return res;

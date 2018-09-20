@@ -55,13 +55,13 @@ public class BlacksheepJoeNPC implements ZoneConfigurator {
 
 		@Override
 		protected void createDialog() {
-			addJob("I supply cheese sausages for the whole world.");
-			addHelp("I only #make cheese sausages. My brothers here make sausage and canned tuna.");
-			addOffer("Just check the blackboard in the back, I will #make you some cheese sausages.");
+			addJob("I supply 起司香肠s for the whole world.");
+			addHelp("I only #make 起司香肠s. My brothers here make 香肠 and canned tuna.");
+			addOffer("Just check the blackboard in the back, I will #make you some 起司香肠s.");
 			addQuest("I don't need any help right now. Thanks.");
 			addGoodbye("Good bye. Tell all your friends about us.");
 
-			// Blacksheep Joe creates you some cheese sausages
+			// Blacksheep Joe creates you some 起司香肠s
 			// (uses sorted TreeMap instead of HashMap)
 			final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 			requiredResources.put("vampirette entrails", Integer.valueOf(1));
@@ -70,18 +70,18 @@ public class BlacksheepJoeNPC implements ZoneConfigurator {
 			requiredResources.put("黑珍珠", Integer.valueOf(1));
 			requiredResources.put("干酪", Integer.valueOf(1));
 
-			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepjoe_make_cheese_sausage", "make", "cheese sausage",
+			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepjoe_make_cheese_sausage", "make", "起司香肠",
 			        requiredResources, 2 * 60);
 
 			new ProducerAdder().addProducer(this, behaviour,
-			        "Hi there. Welcome to Blacksheep Meat Market. Can I #make you some cheese sausages?");
+			        "Hi there. Welcome to Blacksheep Meat Market. Can I #make you some 起司香肠s?");
 		}
 	};
 
 	blacksheepjoe.setEntityClass("blacksheepnpc");
 	blacksheepjoe.setPosition(13, 13);
 	blacksheepjoe.initHP(100);
-	blacksheepjoe.setDescription("You see Blacksheep Joe. He is known for his special cheese sausages. Did you taste one already?");
+	blacksheepjoe.setDescription("You see Blacksheep Joe. He is known for his special 起司香肠s. Did you taste one already?");
 	zone.add(blacksheepjoe);
 
 	}

@@ -50,7 +50,7 @@ public class MithrilShieldForgerNPC implements ZoneConfigurator {
 				addHelp("I can forge a shield for you, the likes of which you have only dreamed.");
 				addOffer("I offer you advice. Seek to gather all I require to make a shield for you. You will be eternally grateful.");
 				addReply("mithril", "Mithril was once stored by the Mithrilbourgh soldiers in a vault within their keep. Since they moved, I don't know what has become of it.");
-				addGoodbye("Farewell. Try some of the licorice Trillium has. It is to die for.");
+				addGoodbye("Farewell. Try some of the 甘草 Trillium has. It is to die for.");
 			} //remaining behaviour defined in quest
 		};
 

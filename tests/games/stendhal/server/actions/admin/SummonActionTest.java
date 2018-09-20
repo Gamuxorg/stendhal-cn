@@ -144,7 +144,7 @@ public class SummonActionTest {
 		pl.put("adminlevel", 5000);
 		final RPAction action = new RPAction();
 		action.put("type", "summon");
-		action.put("creature", "fishing rod");
+		action.put("creature", "钓鱼杆");
 		action.put("x", 0);
 		action.put("y", 0);
 		CommandCenter.execute(pl, action);

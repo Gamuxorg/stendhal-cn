@@ -36,7 +36,7 @@ public class FoodMill extends Item {
 	private String output;
 	/** Items that do not require a "container". */
 	private final List<String> containerNotRequired = new ArrayList<String>() {{
-		add("scroll eraser");
+		add("重绘机");
 	}};
 
     public FoodMill(final String name, final String clazz,
@@ -52,11 +52,11 @@ public class FoodMill extends Item {
 
     /** Sets up the input, output and container based on item name */
     private void init() {
-    	if ("sugar mill".equals(getName())) {
-    		input = "sugar cane";
+    	if ("制糖机".equals(getName())) {
+    		input = "甘蔗";
     		container = "空布袋";
-    		output = "sugar";
-    	} else if ("scroll eraser".equals(getName())) {
+    		output = "糖块";
+    	} else if ("重绘机".equals(getName())) {
     		input = "标记卷轴";
     		output = "空白卷轴";
     	} else {

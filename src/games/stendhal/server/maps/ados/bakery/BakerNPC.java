@@ -99,11 +99,11 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("胡萝卜", Integer.valueOf(1));
 				requiredResources.put("小圆菇", Integer.valueOf(2));
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("arlindo_make_pie", "make", "pie",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("arlindo_make_pie", "make", "馅饼",
 				        requiredResources, 7 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Hi! 我敢说你一定听过本店有名的馅饼 #pie , 想要我给你做一个吗？ #make ");
+				        "Hi! 我敢说你一定听过本店有名的馅饼  #馅饼  , 想要我给你做一个吗？ #make ");
 			}
 		};
 

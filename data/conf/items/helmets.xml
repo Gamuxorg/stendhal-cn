@@ -278,9 +278,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="chaos helmet">
+  <item name="混沌头盔">
     <type class="helmet" subclass="chaos_helmet" tileid="-1"/>
-    <description>You see a chaos helmet.</description>
+    <description>You see a 混沌头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -297,9 +297,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="mainio helmet">
+  <item name="奇妙头盔">
     <type class="helmet" subclass="lion_clan_helmet" tileid="-1"/>
-    <description>You see a strange mainio helmet. You can barely see when wearing it, but it protects your head very well.</description>
+    <description>You see a strange 奇妙头盔. You can barely see when wearing it, but it protects your head very well.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="16"/>
@@ -316,9 +316,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="magic chain helmet">
+  <item name="附魔索链头盔">
     <type class="helmet" subclass="magic_chain_helmet" tileid="-1"/>
-    <description>You see a magic chain helmet.</description>
+    <description>You see a 附魔索链头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>
@@ -339,9 +339,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="liberty helmet">
+  <item name="自由头盔">
     <type class="helmet" subclass="liberty_helmet" tileid="-1"/>
-    <description>You see the liberty helmet. It's light and strong, you feel free wearing it.</description>
+    <description>You see the 自由头盔. It's light and strong, you feel free wearing it.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="24"/>
@@ -358,9 +358,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="black helmet">
+  <item name="黑头盔">
     <type class="helmet" subclass="black_helmet" tileid="-1"/>
-    <description>You see a black helmet.</description>
+    <description>You see a 黑头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="26"/>
@@ -379,9 +379,9 @@ Possibly add to weekly item quest. -->
     </equipable>
   </item>
   
-  <item name="mithril helmet">
+  <item name="密银头盔">
     <type class="helmet" subclass="mithril_helmet" tileid="-1"/>
-    <description>You see a mithril helmet.</description>
+    <description>You see a 密银头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="29"/>

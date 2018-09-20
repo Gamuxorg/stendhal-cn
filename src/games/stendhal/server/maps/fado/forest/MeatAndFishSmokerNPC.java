@@ -72,10 +72,10 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
             @Override
             protected void createDialog() {
                 addJob("I can #smoke you #smoked #meat, #smoked #ham, #smoked #trout or #smoked #cod. Just ask me to!");
-                addOffer("I will #smoke for you #smoked #meat, #smoked #ham, #smoked #trout or #smoked cod, but you'll have to bring me what is needed.");
+                addOffer("I will #smoke for you #smoked #meat, #smoked #ham, #smoked #trout or #薰鳕鱼, but you'll have to bring me what is needed.");
                 addHelp("Ask me to #smoke for you #smoked #meat, #smoked #ham, #smoked #trout or #smoked #cod, that's what I'm good at when you bring me what is needed.");
 
-                addReply(Arrays.asList("smoked", "smoked meat", "smoked ham", "smoked trout", "smoked cod"),
+                addReply(Arrays.asList("smoked", "薰肉", "薰火腿", "薰鲑鱼", "薰鳕鱼"),
                     "The true secret is which herbs and which wood will make the perfect #smoke.");
                 addReply(Arrays.asList("sclaria", "kekik"),
                     "It grows in many places, at the edges or well in the depths of a forest.");
@@ -87,10 +87,10 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
                 addGoodbye("S' veg!");
 
                 final HashSet<String> productsNames = new HashSet<String>();
-                productsNames.add("smoked meat");
-                productsNames.add("smoked ham");
-                productsNames.add("smoked trout");
-                productsNames.add("smoked cod");
+                productsNames.add("薰肉");
+                productsNames.add("薰火腿");
+                productsNames.add("薰鲑鱼");
+                productsNames.add("薰鳕鱼");
 
                 final Map<String, Integer> reqRes_smokedMeat = new TreeMap<String, Integer>();
                 reqRes_smokedMeat.put("木头", 2);
@@ -114,22 +114,22 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
 
 
                 final HashMap<String, Map<String, Integer>> requiredResourcesPerProduct = new HashMap<String, Map<String, Integer>>();
-                requiredResourcesPerProduct.put("smoked meat", reqRes_smokedMeat);
-                requiredResourcesPerProduct.put("smoked ham", reqRes_smokedHam);
-                requiredResourcesPerProduct.put("smoked trout", reqRes_smokedTrout);
-                requiredResourcesPerProduct.put("smoked cod", reqRes_smokedCod);
+                requiredResourcesPerProduct.put("薰肉", reqRes_smokedMeat);
+                requiredResourcesPerProduct.put("薰火腿", reqRes_smokedHam);
+                requiredResourcesPerProduct.put("薰鲑鱼", reqRes_smokedTrout);
+                requiredResourcesPerProduct.put("薰鳕鱼", reqRes_smokedCod);
 
                 final HashMap<String, Integer> productionTimesPerProduct = new HashMap<String, Integer>();
-                productionTimesPerProduct.put("smoked meat", 5 * 60);
-                productionTimesPerProduct.put("smoked ham", 8 * 60);
-                productionTimesPerProduct.put("smoked trout", 4 * 60);
-                productionTimesPerProduct.put("smoked cod", 6 * 60);
+                productionTimesPerProduct.put("薰肉", 5 * 60);
+                productionTimesPerProduct.put("薰火腿", 8 * 60);
+                productionTimesPerProduct.put("薰鲑鱼", 4 * 60);
+                productionTimesPerProduct.put("薰鳕鱼", 6 * 60);
 
                 final HashMap<String, Boolean> productsBound = new HashMap<String, Boolean>();
-                productsBound.put("smoked meat", false);
-                productsBound.put("smoked ham", true);
-                productsBound.put("smoked trout", true);
-                productsBound.put("smoked cod", false);
+                productsBound.put("薰肉", false);
+                productsBound.put("薰火腿", true);
+                productsBound.put("薰鲑鱼", true);
+                productsBound.put("薰鳕鱼", false);
 
                 final MultiProducerBehaviour behaviour = new MultiProducerBehaviour(
                     "olmo_smoke_meatandfish",

@@ -32,7 +32,7 @@ public class ItemsOnTable implements ZoneConfigurator {
 	private void buildBasementArea(final StendhalRPZone zone) {
 
 		// Plant grower for poison
-		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("disease poison", 2000);
+		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("痍毒", 2000);
 		plantGrower.setPosition(109, 103);
 		plantGrower.setDescription("Scientists often put bottles down here.");
 		zone.add(plantGrower);
@@ -48,7 +48,7 @@ public class ItemsOnTable implements ZoneConfigurator {
 		plantGrower2.setToFullGrowth();
 
 		// Plant grower for mega poison
-		final PassiveEntityRespawnPoint plantGrower3 = new PassiveEntityRespawnPoint("mega poison", 4000);
+		final PassiveEntityRespawnPoint plantGrower3 = new PassiveEntityRespawnPoint("剧毒", 4000);
 		plantGrower3.setPosition(100, 116);
 		plantGrower3.setDescription("Scientists often put bottles down here.");
 		zone.add(plantGrower3);

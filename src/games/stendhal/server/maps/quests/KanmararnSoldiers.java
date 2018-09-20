@@ -87,7 +87,7 @@ import marauroa.common.game.SlotIsFullException;
  * <li> some karma (15)
  * <p>
  * from Sergeant James
- * <li> 很棒的靴子
+ * <li> 奇妙靴子
  * <li> some karma (15)
  *
  * REPETITIONS:
@@ -402,7 +402,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		actions.add(new IncreaseXPAction(5000));
 		actions.add(new DropInfostringItemAction("地图","Henry"));
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 15.0));
-		actions.add(new EquipItemAction("很棒的靴子", 1, true));
+		actions.add(new EquipItemAction("奇妙靴子", 1, true));
 
 		james.add(ConversationStates.ATTENDING,
 				Arrays.asList("地图", "henry"),
@@ -467,7 +467,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 			if ("地图".equals(questState)) {
 				return res;
 			}
-			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of 很棒的靴子 in return.");
+			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of 奇妙靴子 in return.");
 			if (isCompleted(player)) {
 				return res;
 			}

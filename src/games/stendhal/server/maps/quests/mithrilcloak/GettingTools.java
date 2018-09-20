@@ -185,7 +185,7 @@ class GettingTools {
 				Arrays.asList("eggshells", "magical", "附魔蛋壳", "scissors", "hogart", "ida", "cloak", "密银斗篷", "specials"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_eggshells"),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every " + Integer.toString(REQUIRED_POISONS) + " disease poisons you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?",
+				"Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every " + Integer.toString(REQUIRED_POISONS) + " 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?",
 				null);
 
 		// respond to question of how many eggshells are desired. terry expects a number or some kind
@@ -199,11 +199,11 @@ class GettingTools {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 
                         final int required = (sentence.getNumeral().getAmount());
-						if (player.drop("disease poison", required * REQUIRED_POISONS)) {
+						if (player.drop("痍毒", required * REQUIRED_POISONS)) {
 							npc.say("Ok, here's your " + Integer.toString(required) + " eggshells. Enjoy!");
 							new EquipItemAction("附魔蛋壳", required, true).fire(player, sentence, npc);
 						} else {
-							npc.say("Ok, ask me again when you have " + Integer.toString(required * REQUIRED_POISONS) + " disease poisons with you.");
+							npc.say("Ok, ask me again when you have " + Integer.toString(required * REQUIRED_POISONS) + " 痍毒s with you.");
 						}
 					}
 				});

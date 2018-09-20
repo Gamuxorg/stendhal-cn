@@ -234,6 +234,6 @@ public class HerbsForCarmenTest {
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
-		assertTrue(player.isEquipped("minor potion", 5));
+		assertTrue(player.isEquipped("小治疗剂", 5));
 	}
 }

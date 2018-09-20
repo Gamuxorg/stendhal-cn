@@ -19,8 +19,8 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
-      <item value="greater potion" quantity="[2,6]" probability="75.0"/>
-      <item value="greater poison" quantity="[1,2]" probability="90.0"/>
+      <item value="大治疗剂" quantity="[2,6]" probability="75.0"/>
+      <item value="特级毒药" quantity="[1,2]" probability="90.0"/>
       <item value="orcish sword" quantity="[1,1]" probability="0.3"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
     </drops>
@@ -31,7 +31,7 @@
       <susceptibility type="ice" value="1.5"/>
     </abilities>
     <ai>
-      <profile name="poisonous" params="15,deadly poison"/>
+      <profile name="poisonous" params="15,极毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -122,12 +122,12 @@
     <corpse name="small_boneless" harmless="spiderweb" />
     <drops>
       <item value="money" quantity="[10,35]" probability="100.0"/>
-      <item value="greater poison" quantity="[1,1]" probability="10.0"/>
+      <item value="特级毒药" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
-      <profile name="poisonous" params="40,greater poison"/>
+      <profile name="poisonous" params="40,特级毒药"/>
       <profile name="brave"/>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -151,15 +151,15 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="spiderweb_2x2" width="2" height="2"/>
     <drops>
-      <item value="greater potion" quantity="[1,4]" probability="70.0"/>
-      <item value="greater poison" quantity="[1,2]" probability="80.0"/>
+      <item value="大治疗剂" quantity="[1,4]" probability="70.0"/>
+      <item value="特级毒药" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
       <item value="silk gland" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,特级毒药"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -417,8 +417,8 @@
     <respawn value="1000"/>
     <corpse name="small_boneless"/>
     <drops>
-      <item value="honey" quantity="[1,2]" probability="15.0"/>
-      <item value="poison" quantity="[1,1]" probability="15.0"/>
+      <item value="蜂蜜" quantity="[1,2]" probability="15.0"/>
+      <item value="毒药" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
       <slot name="lhand" item="铁箭" quantity="10000"/>
@@ -429,7 +429,7 @@
         <noise state="idle follow fight" value="嗡嗡"/>
         <sound value="bee-1"/>
       </says>
-      <profile name="poisonous" params="10,poison"/>
+      <profile name="poisonous" params="10,毒药"/>
       <profile name="brave"/>
       <profile name="offensive"/>
       <profile name="archer"/>
@@ -1236,7 +1236,7 @@
     <drops>
       <item value="money" quantity="[3,7]" probability="100.0"/>
       <item value="干酪" quantity="[1,3]" probability="50.0"/>
-      <item value="greater poison" quantity="[1,1]" probability="15.0"/>
+      <item value="特级毒药" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
     </equips>
@@ -1245,7 +1245,7 @@
       	<sound value="rats-2"/>
         <sound value="rats-41"/>
       </says>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,特级毒药"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -1435,7 +1435,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,100]" probability="70.0"/>
-      <item value="greater potion" quantity="[1,4]" probability="30.0"/>
+      <item value="大治疗剂" quantity="[1,4]" probability="30.0"/>
       <item value="木矛" quantity="[20,40]" probability="30.0"/>
     </drops>
     <equips>
@@ -1534,7 +1534,7 @@
     <corpse name="small_boneless"/>
     <drops>
       <item value="money" quantity="[2,6]" probability="60.0"/>
-      <item value="poison" quantity="[1,1]" probability="10.0"/>
+      <item value="毒药" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -1543,7 +1543,7 @@
         <noise state="idle follow fight" value="咝...咝..."/>
         <sound value="snake-1"/>
       </says>
-      <profile name="poisonous" params="5,poison"/>
+      <profile name="poisonous" params="5,毒药"/>
       <profile name="animal"/>
       <profile name="offensive"/>
       <profile name="patrolling"/>
@@ -1566,7 +1566,7 @@
     <corpse name="small_boneless"/>
     <drops>
       <item value="money" quantity="[2,6]" probability="60.0"/>
-      <item value="poison" quantity="[1,1]" probability="10.0"/>
+      <item value="毒药" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -1575,7 +1575,7 @@
         <noise state="idle follow fight" value="咝sss咝sss咝sss!"/>
         <sound value="snake-1"/>
       </says>
-      <profile name="poisonous" params="5,poison"/>
+      <profile name="poisonous" params="5,毒药"/>
       <profile name="animal"/>
       <profile name="offensive"/>
       <profile name="patrolling"/>
@@ -1639,7 +1639,7 @@
         <sound value="snake-cobra-1"/>
         <sound value="snake-cobra-2"/>
       </says>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,特级毒药"/>
       <profile name="animal"/>
       <profile name="offensive"/>
       <profile name="patrolling"/>
@@ -1661,7 +1661,7 @@
     <respawn value="5400"/>
     <corpse name="snake_3x2" harmless="bag_2x2" width="3" height="2"/>
     <drops>
-      <item value="disease poison" quantity="[1,1]" probability="5.0"/>
+      <item value="痍毒" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -1670,7 +1670,7 @@
         <sound value="snake-cobra-1" />
         <sound value="snake-cobra-2" />
       </says>
-      <profile name="poisonous" params="5,disease poison"/>
+      <profile name="poisonous" params="5,痍毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>

@@ -46,15 +46,15 @@ public final class ShopList {
 		shops.add("buyfood", "大脚菇", 30);
 
 		shops.add("healing", "抗毒药济", 50);
-		shops.add("healing", "minor potion", 100);
-		shops.add("healing", "potion", 250);
-		shops.add("healing", "greater potion", 500);
+		shops.add("healing", "小治疗剂", 100);
+		shops.add("healing", "治疗济", 250);
+		shops.add("healing", "大治疗剂", 500);
 
 		shops.add("superhealing", "抗毒药济", 50);
 		shops.add("superhealing", "大瓶抗毒药济", 100);
-		shops.add("superhealing", "potion", 250);
-		shops.add("superhealing", "greater potion", 500);
-		shops.add("superhealing", "mega potion", 1500);
+		shops.add("superhealing", "治疗济", 250);
+		shops.add("superhealing", "大治疗剂", 500);
+		shops.add("superhealing", "强治疗剂", 1500);
 
 		shops.add("scrolls", "home scroll", 250);
 		shops.add("scrolls", "召唤卷轴", 200);
@@ -222,7 +222,7 @@ public final class ShopList {
 		shops.add("boots&helm", "石靴", 2500);
 		shops.add("boots&helm", "混沌靴", 4000);
         shops.add("boots&helm", "绿了吧唧的靴子", 6000);
-        shops.add("boots&helm", "异种元素靴子", 8000);
+        shops.add("boots&helm", "异界靴子", 8000);
         shops.add("boots&helm", "xeno helmet", 8000);
 
 		// helmet shop (mithrilbourgh)
@@ -231,9 +231,9 @@ public final class ShopList {
 		shops.add("boots&helm", "golden helmet", 3000);
 		shops.add("boots&helm", "shadow helmet", 4000);
 		shops.add("boots&helm", "horned golden helmet", 5000);
-		shops.add("boots&helm", "chaos helmet", 6000);
-		shops.add("boots&helm", "magic chain helmet", 8000);
-		shops.add("boots&helm", "black helmet", 10000);
+		shops.add("boots&helm", "混沌头盔", 6000);
+		shops.add("boots&helm", "附魔索链头盔", 8000);
+		shops.add("boots&helm", "黑头盔", 10000);
 
 		// buy axes (woodcutter)
 		shops.add("buyaxe", "战戟", 2000);
@@ -262,7 +262,7 @@ public final class ShopList {
 		// magic items or 'relics' (witch in magic city)
 		shops.add("buymagic", "恶魔剑", 4000);
 		shops.add("buymagic", "暗之匕首", 8000);
-		shops.add("buymagic", "liberty helmet", 8000);
+		shops.add("buymagic", "自由头盔", 8000);
 		shops.add("buymagic", "immortal sword", 10000);
 		shops.add("buymagic", "jewelled legs", 12000);
 		shops.add("buymagic", "附魔钢盾", 16000);
@@ -278,9 +278,9 @@ public final class ShopList {
 
 		// mainio items (despot in mithrilbourgh throne room)
 		shops.add("buymainio", "奇妙甲", 22000);
-		shops.add("buymainio", "很棒的靴子", 4000);
-		shops.add("buymainio", "华丽的斗篷", 12000);
-		shops.add("buymainio", "mainio helmet", 8000);
+		shops.add("buymainio", "奇妙靴子", 4000);
+		shops.add("buymainio", "奇妙斗篷", 12000);
+		shops.add("buymainio", "奇妙头盔", 8000);
 		shops.add("buymainio", "mainio legs", 7000);
 		shops.add("buymainio", "奇妙之盾", 16000);
 
@@ -351,46 +351,46 @@ public final class ShopList {
 		shops.add("buy4gnomes", "木盾", 20);
 
 		// hotdog lady in athor)
-		shops.add("buy4hotdogs", "sausage", 30);
-		shops.add("buy4hotdogs", "cheese sausage", 25);
+		shops.add("buy4hotdogs", "香肠", 30);
+		shops.add("buy4hotdogs", "起司香肠", 25);
 		shops.add("buy4hotdogs", "面包", 15);
 		shops.add("buy4hotdogs", "洋葱", 20);
 		shops.add("buy4hotdogs", "canned tuna", 15);
 		shops.add("buy4hotdogs", "火腿", 15);
 		shops.add("buy4hotdogs", "干酪", 5);
 
-		shops.add("sellhotdogs", "hotdog", 160);
-		shops.add("sellhotdogs", "cheeseydog", 180);
+		shops.add("sellhotdogs", "热狗", 160);
+		shops.add("sellhotdogs", "芝士狗", 180);
 		shops.add("sellhotdogs", "金枪鱼三明治", 130);
 		shops.add("sellhotdogs", "三明治", 120);
-		shops.add("sellhotdogs", "vanilla shake", 110);
-		shops.add("sellhotdogs", "chocolate shake", 110);
+		shops.add("sellhotdogs", "香草奶昔", 110);
+		shops.add("sellhotdogs", "巧克力奶昔", 110);
 		shops.add("sellhotdogs", "巧克力棒", 100);
 		shops.add("sellhotdogs", "snowglobe", 200);
 
 		// magic city barmaid)
-		shops.add("sellmagic", "hotdog", 160);
-		shops.add("sellmagic", "cheeseydog", 180);
+		shops.add("sellmagic", "热狗", 160);
+		shops.add("sellmagic", "芝士狗", 180);
 		shops.add("sellmagic", "金枪鱼三明治", 130);
 		shops.add("sellmagic", "三明治", 120);
-		shops.add("sellmagic", "vanilla shake", 110);
-		shops.add("sellmagic", "chocolate shake", 110);
+		shops.add("sellmagic", "香草奶昔", 110);
+		shops.add("sellmagic", "巧克力奶昔", 110);
 		shops.add("sellmagic", "巧克力棒", 100);
-		shops.add("sellmagic", "licorice", 100);
+		shops.add("sellmagic", "甘草", 100);
 
 		// kirdneh city armor)
 		shops.add("buykirdneharmor", "蓝色盔甲", 13000);
 		shops.add("buykirdneharmor", "石甲", 18000);
 		shops.add("buykirdneharmor", "冰护甲", 19000);
-		shops.add("buykirdneharmor", "异种元素甲", 21000);
+		shops.add("buykirdneharmor", "异界甲", 21000);
 		shops.add("buykirdneharmor", "野蛮人护甲", 5000);
 		shops.add("buykirdneharmor", "绿龙盾", 13000);
-		shops.add("buykirdneharmor", "异域盾", 20000);
+		shops.add("buykirdneharmor", "异界盾", 20000);
 
 
 		// amazon cloaks shop
 		shops.add("buyamazoncloaks", "吸血鬼斗篷", 14000);
-		shops.add("buyamazoncloaks", "异种元素斗篷", 18000);
+		shops.add("buyamazoncloaks", "异界斗篷", 18000);
 		shops.add("buyamazoncloaks", "精灵斗篷", 50);
 		shops.add("buyamazoncloaks", "巫妖斗篷", 10000);
 		shops.add("buyamazoncloaks", "石斗篷", 350);
@@ -416,9 +416,9 @@ public final class ShopList {
 		shops.add("sellparty", "巧克力棒", 100);
 		shops.add("sellparty", "啤酒", 10);
 		shops.add("sellparty", "红酒", 15);
-		shops.add("sellparty", "vanilla shake", 150);
+		shops.add("sellparty", "香草奶昔", 150);
 		shops.add("sellparty", "冰淇淋", 50);
-		shops.add("sellparty", "hotdog", 180);
+		shops.add("sellparty", "热狗", 180);
 		shops.add("sellparty", "三明治", 140);
 
 
@@ -426,7 +426,7 @@ public final class ShopList {
 		shops.add("buyblack", "黑色盔甲", 60000);
 		shops.add("buyblack", "黑靴子", 10000);
 		shops.add("buyblack", "黑斗篷", 20000);
-		shops.add("buyblack", "black helmet", 15000);
+		shops.add("buyblack", "黑头盔", 15000);
 		shops.add("buyblack", "black legs", 40000);
 		shops.add("buyblack", "黑盾", 75000);
 		shops.add("buyblack", "black sword", 20000);
@@ -437,13 +437,13 @@ public final class ShopList {
 		shops.add("buyadosarmors", "蓝盾", 900);
 
 		// Athor ferry
-		shops.add("buypoisons", "poison", 40);
+		shops.add("buypoisons", "毒药", 40);
 		shops.add("buypoisons", "红伞菇", 60);
-		shops.add("buypoisons", "greater poison", 60);
+		shops.add("buypoisons", "特级毒药", 60);
 		shops.add("buypoisons", "red lionfish", 50);
-		shops.add("buypoisons", "deadly poison", 100);
-		shops.add("buypoisons", "mega poison", 500);
-		shops.add("buypoisons", "disease poison", 2000);
+		shops.add("buypoisons", "极毒", 100);
+		shops.add("buypoisons", "剧毒", 500);
+		shops.add("buypoisons", "痍毒", 2000);
 
 		// Should have its own shop (buytraps)
 		shops.add("buypoisons", "rodent trap", 50);
@@ -454,13 +454,13 @@ public final class ShopList {
 		// 矿镇复兴展会周 卡若琳
 		shops.add("sellrevivalweeks", "樱桃派", 195);
 		shops.add("sellrevivalweeks", "苹果派", 195);
-		shops.add("sellrevivalweeks", "vanilla shake", 120);
-		shops.add("sellrevivalweeks", "chocolate shake", 120);
+		shops.add("sellrevivalweeks", "香草奶昔", 120);
+		shops.add("sellrevivalweeks", "巧克力奶昔", 120);
 		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
 		shops.add("sellrevivalweeks", "烤排", 250);
-		shops.add("sellrevivalweeks", "hotdog", 170);
-		shops.add("sellrevivalweeks", "cheeseydog", 175);
+		shops.add("sellrevivalweeks", "热狗", 170);
+		shops.add("sellrevivalweeks", "芝士狗", 175);
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
 		shops.add("sellrevivalweeks", "三明治", 130);
 		shops.add("sellrevivalweeks", "红酒", 25);
@@ -471,7 +471,7 @@ public final class ShopList {
 		// expensive prices to make sure that the npc production of these items isn't compromised
 		shops.add("cafe", "茶", 80);
 		shops.add("cafe", "水", 50);
-		shops.add("cafe", "chocolate shake", 150);
+		shops.add("cafe", "巧克力奶昔", 150);
 		shops.add("cafe", "三明治", 170);
 		shops.add("cafe", "金枪鱼三明治", 180);
 		shops.add("cafe", "苹果派", 250);

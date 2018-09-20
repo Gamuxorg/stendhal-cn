@@ -20,7 +20,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[2,6]" probability="90.0"/>
-      <item value="pie" quantity="[1,1]" probability="1.0"/>
+      <item value="馅饼" quantity="[1,1]" probability="1.0"/>
       <item value="皮甲" quantity="[1,1]" probability="10.0"/>
       <item value="皮胸甲" quantity="[1,1]" probability="2.5"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>

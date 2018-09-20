@@ -62,7 +62,7 @@ public class RatChefNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addJob("I'm the best #crepes suzette au chocolate chef in town. Ask me to #bake one for you!");
+				addJob("I'm the best #可丽饼 au chocolate chef in town. Ask me to #bake one for you!");
 				addReply("crepes",
                     "Ah le dessert for a prince... A taste of which, I really believe, would reform a 食人族 into a civilized gentleman.");
                 /**
@@ -77,37 +77,37 @@ public class RatChefNPC implements ZoneConfigurator {
                     "I'd look for one where hens scratch about.");
 				addReply("牛奶",
                     "A farm would be a good place where one could find that ingredient.");
-				addReply("butter",
-                    "Where you find 牛奶 you will most likely find butter as well!");
+				addReply("奶油",
+                    "Where you find 牛奶 you will most likely find 奶油 as well!");
 				addReply(Arrays.asList("沸水"),
-                    "It gets distilled from sugar canes and you could try asking around in Ados market for that.");
-                addReply("sugar",
-                    "That comes from grinding sugar canes, which you could harvest yourself in #cane #fields."
+                    "It gets distilled from 甘蔗s and you could try asking around in Ados market for that.");
+                addReply("糖块",
+                    "That comes from grinding 甘蔗s, which you could harvest yourself in #cane #fields."
                         + " You will need some #kitchen #tool for the grinding part.");
                 addReply("kitchen tool",
-                    "Yes, a sugar mill! Too bad I've lost mine which I borrowed from Erna some time ago... Oh, please avoid mentioning my name to her!");
+                    "Yes, a 制糖机! Too bad I've lost mine which I borrowed from Erna some time ago... Oh, please avoid mentioning my name to her!");
                 addReply("erna",
                     "Oh, she's Leander assistant and you always find her in 塞门镇 bakery!");
-                addReply(Arrays.asList("cane", "canes", "cane field", "cane fields", "sugar cane", "sugar canes"),
-                    "I have heard that sugar canes need a warm and humid climate to thrive. Maybe you might find some on 阿托尔岛");
-				addOffer("I will serve you crepes suzette au chocolate if you ask me to #bake one!");
-				addHelp("Ask me to #bake you my special #chocolate #crepes suzette, that's what I offer.");
+                addReply(Arrays.asList("cane", "canes", "cane field", "cane fields", "甘蔗", "甘蔗s"),
+                    "I have heard that 甘蔗s need a warm and humid climate to thrive. Maybe you might find some on 阿托尔岛");
+				addOffer("I will serve you 可丽饼 au chocolate if you ask me to #bake one!");
+				addHelp("Ask me to #bake you my special #chocolate #可丽饼, that's what I offer.");
 				addGoodbye("Au revoir voyageur... And come back to visit me anytime you like!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 1);
 				requiredResources.put("egg", 1);
-				requiredResources.put("butter", 1);
+				requiredResources.put("奶油", 1);
 				requiredResources.put("牛奶", 1);
-				requiredResources.put("sugar", 1);
+				requiredResources.put("糖块", 1);
 				requiredResources.put("巧克力棒", 1);
 				requiredResources.put("沸水", 1);
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("gaston_bake_crepesuzette", "bake", "crepes suzette",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("gaston_bake_crepesuzette", "bake", "可丽饼",
 				        requiredResources, 5 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Hi there. I bet you've come to taste my #crepes suzette au chocolate! I can #bake some for you if you like.");
+				        "Hi there. I bet you've come to taste my #可丽饼 au chocolate! I can #bake some for you if you like.");
 			}
 		};
 
@@ -115,7 +115,7 @@ public class RatChefNPC implements ZoneConfigurator {
 		npc.setDirection(Direction.DOWN);
 		npc.setPosition(16, 3);
 		npc.initHP(100);
-		npc.setDescription("You see Gaston. He is the best crepes suzette au chocolate chef in all Rat City.");
+		npc.setDescription("You see Gaston. He is the best 可丽饼 au chocolate chef in all Rat City.");
 		zone.add(npc);
 	}
 }

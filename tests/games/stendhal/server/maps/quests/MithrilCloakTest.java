@@ -377,13 +377,13 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Hi. I don't get so many visitors, down here.", getReply(npc));
 		en.step(player, "eggshells");
-		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 disease poisons you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
+		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
 		en.step(player, "4");
-		assertEquals("Ok, ask me again when you have 24 disease poisons with you.", getReply(npc));
-		item = ItemTestHelper.createItem("disease poison", 24);
+		assertEquals("Ok, ask me again when you have 24 痍毒s with you.", getReply(npc));
+		item = ItemTestHelper.createItem("痍毒", 24);
 		player.getSlot("背包").add(item);
 		en.step(player, "eggshells");
-		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 disease poisons you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
+		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
 		en.step(player, "4");
 		assertEquals("Ok, here's your 4 eggshells. Enjoy!", getReply(npc));
 		en.step(player, "bye");
@@ -539,7 +539,7 @@ public class MithrilCloakTest {
 		// [22:22] jammyjam earns 14580 experience points.
 		// [22:22] You see a bottle of medicinal elixir. It is a special quest reward for jammyjam, and cannot be used by others.
 
-		item = ItemTestHelper.createItem("twilight elixir", 1);
+		item = ItemTestHelper.createItem("莹光药剂", 1);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");

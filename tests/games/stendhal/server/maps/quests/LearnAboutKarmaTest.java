@@ -64,7 +64,7 @@ public class LearnAboutKarmaTest {
 		en.step(player, "help");
 		assertEquals("You can take one of my prepared medicines with you on your travels; just ask for an #offer.", getReply(npc));
 		en.step(player, "offer");
-		assertEquals("I sell 抗毒药济, 大瓶抗毒药济, potion, greater potion, and mega potion.", getReply(npc));
+		assertEquals("I sell 抗毒药济, 大瓶抗毒药济, potion, 大治疗剂, and 强治疗剂.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("Are you someone who likes to help others?", getReply(npc));
 		en.step(player, "no");
@@ -81,7 +81,7 @@ public class LearnAboutKarmaTest {
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "task");
-		assertEquals("If you want to get good #karma all you have to do is be helpful to others. I know a hunter girl called Sally who needs wood, and I know another girl called Annie who loves icecream, well, I know many people who needs tasks doing for them regularly and I'm sure if you help them you will be rewarded, that's how karma works after all.", getReply(npc));
+		assertEquals("If you want to get good #karma all you have to do is be helpful to others. I know a hunter girl called Sally who needs wood, and I know another girl called Annie who loves 冰淇淋, well, I know many people who needs tasks doing for them regularly and I'm sure if you help them you will be rewarded, that's how karma works after all.", getReply(npc));
 		en.step(player, "karma");
 		assertEquals(KARMA_ANSWER, getReply(npc));
 		en.step(player, "yes");

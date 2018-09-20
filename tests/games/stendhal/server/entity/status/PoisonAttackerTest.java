@@ -39,7 +39,7 @@ public class PoisonAttackerTest {
 	 */
 	@Test
 	public void testPoisoner() {
-		final String poisontype = "greater poison";
+		final String poisontype = "特级毒药";
 		final ConsumableItem poison = (ConsumableItem) SingletonRepository.getEntityManager().getItem(poisontype);
 
 		final PoisonAttacker poisoner = new PoisonAttacker(100, poison);
@@ -53,7 +53,7 @@ public class PoisonAttackerTest {
 	 */
 	@Test
 	public void testPoisonerProbabilityZero() {
-		final String poisontype = "greater poison";
+		final String poisontype = "特级毒药";
 		final ConsumableItem poison = (ConsumableItem) SingletonRepository.getEntityManager().getItem(poisontype);
 
 		final PoisonAttacker poisoner = new PoisonAttacker(0, poison);

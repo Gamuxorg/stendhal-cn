@@ -882,9 +882,9 @@
 		</equipable>
 	</item>
 
-	<item name="crepes suzette">
+	<item name="可丽饼">
 		<type class="food" subclass="crepesuzette" tileid="-1" />
-		<description>You see a crepes suzette topped with hot chocolate sauce.</description>
+		<description>You see a 可丽饼 topped with hot chocolate sauce.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />
@@ -951,7 +951,7 @@
 		</equipable>
 	</item>
 
-	<item name="pie">
+	<item name="馅饼">
 		<type class="food" subclass="piesmall" tileid="-1" />
 		<description>You see a meat and vegetable pie.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
@@ -974,7 +974,7 @@
 		</equipable>
 	</item>
 
-	<item name="fish pie">
+	<item name="鱼肉派">
 		<type class="food" subclass="fishpie" tileid="-1" />
 		<description>You see a fish and 韭菜 pie. It's not too stodgy so you can eat it faster than a meat pie.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
@@ -1020,9 +1020,9 @@
 		</equipable>
 	</item>
 
-	<item name="smoked ham">
+	<item name="薰火腿">
 		<type class="food" subclass="ham_smoked" tileid="-1" />
-		<description>You see a smoked ham.</description>
+		<description>You see a 薰火腿.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="160" />
@@ -1043,9 +1043,9 @@
 		</equipable>
 	</item>
 
-	<item name="smoked meat">
+	<item name="薰肉">
 		<type class="food" subclass="meat_smoked" tileid="-1" />
-		<description>You see a piece of smoked meat.</description>
+		<description>You see a piece of 薰肉.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="120" />
@@ -1066,9 +1066,9 @@
 		</equipable>
 	</item>
 
-	<item name="smoked cod">
+	<item name="薰鳕鱼">
 		<type class="food" subclass="cod_smoked" tileid="-1" />
-		<description>You see a smoked cod.</description>
+		<description>You see a 薰鳕鱼.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="80" />
@@ -1089,9 +1089,9 @@
 		</equipable>
 	</item>
 
-	<item name="smoked trout">
+	<item name="薰鲑鱼">
 		<type class="food" subclass="trout_smoked" tileid="-1" />
-		<description>You see a smoked trout.</description>
+		<description>You see a 薰鲑鱼.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="90" />
@@ -1112,9 +1112,9 @@
 		</equipable>
 	</item>
 
-	<item name="sugar">
+	<item name="糖块">
 		<type class="food" subclass="sugar" tileid="-1" />
-		<description>You see a sack of raw sugar.</description>
+		<description>You see a sack of raw 糖块.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -1136,9 +1136,9 @@
 	</item>
 
     <!-- sold -->
-	<item name="butter">
+	<item name="奶油">
 		<type class="food" subclass="butter" tileid="-1" />
-		<description>You see some butter. It is an ingredient or can be eaten if you like.</description>
+		<description>You see some 奶油. It is an ingredient or can be eaten if you like.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="25" />
@@ -1159,9 +1159,9 @@
 		</equipable>
 	</item>
 
-	<item name="honey">
+	<item name="蜂蜜">
 		<type class="food" subclass="honey" tileid="-1" />
-		<description>You see a jar of sticky sweet honey. It's the clear runny kind.</description>
+		<description>You see a jar of sticky sweet 蜂蜜. It's the clear runny kind.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="20" />
@@ -1205,9 +1205,9 @@
 		</equipable>
 	</item>
 
-	<item name="licorice">
+	<item name="甘草">
 		<type class="food" subclass="licorice" tileid="-1" />
-		<description>You see some delicious licorice. Your mouth waters.</description>
+		<description>You see some delicious 甘草. Your mouth waters.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="90" />
@@ -1228,9 +1228,9 @@
 		</equipable>
 	</item>
 
-	<item name="hotdog">
+	<item name="热狗">
 		<type class="food" subclass="sausage_on_bun" tileid="-1" />
-		<description>You see what looks like a tasty hotdog on a bun.</description>
+		<description>You see what looks like a tasty 热狗 on a bun.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="160" />
@@ -1251,9 +1251,9 @@
 		</equipable>
 	</item>
 
-	<item name="cheeseydog">
+	<item name="芝士狗">
 		<type class="food" subclass="cheese_sausage_on_bun" tileid="-1" />
-		<description>You see what looks like a tasty cheeseydog on a bun.</description>
+		<description>You see what looks like a tasty 芝士狗 on a bun.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="180" />
@@ -1274,9 +1274,9 @@
 		</equipable>
 	</item>
 
-	<item name="cheese sausage">
+	<item name="起司香肠">
 		<type class="food" subclass="cheesesausage" tileid="-1" />
-		<description>You see what looks like a tasty cheese sausage.</description>
+		<description>You see what looks like a tasty 起司香肠.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="90" />
@@ -1297,9 +1297,9 @@
 		</equipable>
 	</item>
 
-	<item name="sausage">
+	<item name="香肠">
 		<type class="food" subclass="sausage" tileid="-1" />
-		<description>You see what looks like a tasty sausage.</description>
+		<description>You see what looks like a tasty 香肠.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="80" />
@@ -1343,9 +1343,9 @@
 		</equipable>
 	</item>
 
-	<item name="chocolate shake">
+	<item name="巧克力奶昔">
 		<type class="food" subclass="chocolateshake" tileid="-1" />
-		<description>You see a scrumptious chocolate shake. Absolutely NO calories.</description>
+		<description>You see a scrumptious 巧克力奶昔. Absolutely NO calories.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />
@@ -1366,9 +1366,9 @@
 		</equipable>
 	</item>
 
-	<item name="vanilla shake">
+	<item name="香草奶昔">
 		<type class="food" subclass="vanillashake" tileid="-1" />
-		<description>You see a yummy vanilla shake. Absolutely NO calories.</description>
+		<description>You see a yummy 香草奶昔. Absolutely NO calories.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />

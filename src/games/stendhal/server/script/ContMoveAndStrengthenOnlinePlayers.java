@@ -90,7 +90,7 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 			StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
 			money.setQuantity(5000);
 			player.equipToInventoryOnly(money);
-			StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("greater potion");
+			StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("大治疗剂");
 			potions.setQuantity(5000);
 			player.equipToInventoryOnly(potions);
 			if(!player.isEquipped("混沌匕首")) {
@@ -105,10 +105,10 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				Item shield = SingletonRepository.getEntityManager().getItem("混乱之盾");
 				player.equip("lhand", shield);
 			}
-			if(!player.isEquipped("black helmet")) {
+			if(!player.isEquipped("黑头盔")) {
 				Item first = (Item) player.getSlot("head").getFirst();
 				player.drop(first);
-				Item helmet = SingletonRepository.getEntityManager().getItem("black helmet");
+				Item helmet = SingletonRepository.getEntityManager().getItem("黑头盔");
 				player.equip("head", helmet);
 			}
 			if(!player.isEquipped("elvish legs")) {

@@ -69,7 +69,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("海芋", 1);
 				requiredResources.put("kokuda", 1);
-				requiredResources.put("minor potion", 1);
+				requiredResources.put("小治疗剂", 1);
 
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("pamela_mix_cream",
 						"mix", "suntan cream", requiredResources, 10 * 60);
@@ -86,7 +86,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				        "kokuda",
 				        "We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
 
-				addReply("minor potion", "It's a small bottle full of potion. You can buy it at several places.");
+				addReply("小治疗剂", "It's a small bottle full of 治疗济. You can buy it at several places.");
 			}
 		};
 

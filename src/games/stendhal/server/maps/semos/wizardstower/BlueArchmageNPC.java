@@ -85,7 +85,7 @@ public class BlueArchmageNPC implements ZoneConfigurator {
 				addOffer("我什么都不卖. 不过 Zekiel 和 巫师们应该可以帮到你！");
 				addReply("相克", "想打败火系当然用水系. 但相克不只是针锋相对. " +
 						"我见过 大法师 能够融合它们, 并创建出更强大的魔法. ");
-				addQuest("是的我有个请求, 但你需要首先从巫师圈里学会点魔法知识. 当你完成我的请求时, 我会把这个给你. ");
+				addQuest("是的我有个请求, 但你需要首先从巫师界里学会点魔法知识. 当你完成我的请求时, 我会把这个给你. ");
 				addGoodbye("再见, 冒险者！");
 
 			} //remaining behaviour defined in maps.quests.ArchmageErastusQuest

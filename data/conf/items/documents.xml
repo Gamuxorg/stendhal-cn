@@ -180,7 +180,7 @@
   
   <!--<item name="recipe">
     <type class="documents" subclass="recipe" tileid="-1"/>
-    <description>You see a recipe, ready for being delivered to Imorgen. It names ingredients for a powerful potion against werewolves. </description>
+    <description>You see a recipe, ready for being delivered to Imorgen. It names ingredients for a powerful 治疗济 against werewolves. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

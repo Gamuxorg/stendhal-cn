@@ -176,7 +176,7 @@ public class LookUpQuoteTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("So, what is it?", getReply(pequodNpc));
 
 		assertTrue(pequodEngine.step(player, quote));
-		assertEquals("Oh right, that's it! How could I forget this? Here, take this handy fishing rod as an acknowledgement of my gratitude!",
+		assertEquals("Oh right, that's it! How could I forget this? Here, take this handy 钓鱼杆 as an acknowledgement of my gratitude!",
 				getReply(pequodNpc));
 		assertEquals("done", player.getQuest(QUEST_SLOT));
 		assertTrue(player.isQuestCompleted(QUEST_SLOT));
@@ -207,7 +207,7 @@ public class LookUpQuoteTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals(2, quest.getHistory(player).size());
 		assertEquals(Arrays.asList(
 					"I met Pequod in a hut in Ados city and he asked me to look up a quote by a famous fisherman.",
-					"I got the quote for Pequod and he gave me a fishing rod."),
+					"I got the quote for Pequod and he gave me a 钓鱼杆."),
 				quest.getHistory(player));
 	}
 

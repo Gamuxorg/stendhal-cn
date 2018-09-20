@@ -57,8 +57,8 @@ public class HolidayingWomanNPCTest extends ZonePlayerAndNPCTestImpl {
 
 		askForFoodList();
 		checkReply("bread", BREAD_DESCRIPTION);
-		checkReply("sandwich", SANDWICH_DESCRIPTION);
-		checkReply("sandwich.", SANDWICH_DESCRIPTION);
+		checkReply("三明治", SANDWICH_DESCRIPTION);
+		checkReply("三明治.", SANDWICH_DESCRIPTION);
 
 		endConversation();
 	}
@@ -75,7 +75,7 @@ public class HolidayingWomanNPCTest extends ZonePlayerAndNPCTestImpl {
 		String listOfFoodReply = getReply(aliceNpc);
 		assertTrue(listOfFoodReply.startsWith(TASTED_EVERYTHING_REPLY));
 		assertTrue(listOfFoodReply.contains("#bread"));
-		assertTrue(listOfFoodReply.contains("#sandwich"));
+		assertTrue(listOfFoodReply.contains("#三明治"));
 	}
 
 	private void endConversation() {

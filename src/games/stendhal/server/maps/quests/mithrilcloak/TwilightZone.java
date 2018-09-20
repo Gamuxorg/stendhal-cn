@@ -131,7 +131,7 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-						new NotCondition(new PlayerHasItemWithHimCondition("twilight elixir"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("莹光药剂"))),
 				ConversationStates.IDLE,
 				"I'm sick .. so sick .. only some powerful medicine will fix me.",
 				null);
@@ -140,7 +140,7 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-						new PlayerHasItemWithHimCondition("twilight elixir")),
+						new PlayerHasItemWithHimCondition("莹光药剂")),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Is that elixir for me? If #yes I will take it immediately. You must return to see me again in my normal state.",
 				 null);
@@ -148,12 +148,12 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-								 new PlayerHasItemWithHimCondition("twilight elixir")
+								 new PlayerHasItemWithHimCondition("莹光药剂")
 								 ),
 				ConversationStates.IDLE,
 				"Thank you!",
 				new MultipleActions(
-								new DropItemAction("twilight elixir"),
+								new DropItemAction("莹光药剂"),
 								new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 								new TeleportAction("int_阿多斯_缝纫_店", 12, 20, Direction.DOWN)
 								)
@@ -162,7 +162,7 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.NO_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-								 new PlayerHasItemWithHimCondition("twilight elixir")
+								 new PlayerHasItemWithHimCondition("莹光药剂")
 								 ),
 				ConversationStates.IDLE,
 				"I'm getting sicker ...",

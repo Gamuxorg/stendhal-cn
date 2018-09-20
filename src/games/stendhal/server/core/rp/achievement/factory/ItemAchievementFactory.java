@@ -65,7 +65,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.chaos", "Chaotic Looter", "Loot a complete chaos equipment set",
 				Achievement.HARD_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "浑沌护甲", "chaos helmet", "混沌斗篷", "chaos legs",
+				new PlayerLootedNumberOfItemsCondition(1, "浑沌护甲", "混沌头盔", "混沌斗篷", "chaos legs",
 						"混沌靴", "混乱之盾")));
 
 		itemAchievements.add(createAchievement("item.set.golden", "Golden Boy", "Loot a complete golden equipment set",
@@ -75,18 +75,18 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.black", "Come to the dark side", "Loot a complete black equipment set",
 				Achievement.HARD_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "黑色盔甲", "black helmet", "黑斗篷", "black legs",
+				new PlayerLootedNumberOfItemsCondition(1, "黑色盔甲", "黑头盔", "黑斗篷", "black legs",
 						"黑靴子", "黑盾")));
 
 		itemAchievements.add(createAchievement("item.set.mainio", "Excellent Stuff", "Loot a complete mainio equipment set",
 				Achievement.HARD_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "奇妙甲", "mainio helmet", "华丽的斗篷", "mainio legs",
-						"很棒的靴子", "奇妙之盾")));
+				new PlayerLootedNumberOfItemsCondition(1, "奇妙甲", "奇妙头盔", "奇妙斗篷", "mainio legs",
+						"奇妙靴子", "奇妙之盾")));
 
 		itemAchievements.add(createAchievement("item.set.xeno", "A Bit Xenophobic?", "Loot a complete xeno equipment set",
 				Achievement.HARD_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "异种元素甲", "xeno helmet", "异种元素斗篷", "xeno legs",
-						"异种元素靴子", "异域盾")));
+				new PlayerLootedNumberOfItemsCondition(1, "异界甲", "xeno helmet", "异界斗篷", "xeno legs",
+						"异界靴子", "异界盾")));
 
 		itemAchievements.add(createAchievement("item.cloak.dragon", "Dragon Slayer", "Loot all dragon cloaks",
 				Achievement.MEDIUM_BASE_SCORE, true,

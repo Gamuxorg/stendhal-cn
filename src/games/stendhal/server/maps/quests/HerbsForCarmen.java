@@ -224,7 +224,7 @@ public class HerbsForCarmen extends AbstractQuest {
 				new SayTextAction("太好了! 现在我能免费治好很多人了, 非常感谢. 你工作时可以带上这个. "),
 				new IncreaseXPAction(50),
 				new IncreaseKarmaAction(5),
-				new EquipItemAction("minor potion", 5)
+				new EquipItemAction("小治疗剂", 5)
 				);
 
 		/* add triggers for the item names */

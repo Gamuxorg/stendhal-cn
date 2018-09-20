@@ -158,7 +158,7 @@ public class KillMonks extends AbstractQuest {
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				//add random number of soups
 				final StackableItem soup = (StackableItem) SingletonRepository.getEntityManager()
-						.getItem("soup");
+						.getItem("蔬菜汤");
 				int amount;
 				// between 1 and 5 soup
 				amount = Rand.rand(4) + 1;

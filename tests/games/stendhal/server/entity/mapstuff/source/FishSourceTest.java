@@ -49,15 +49,15 @@ public class FishSourceTest {
 		final Player player = PlayerTestHelper.createPlayer("bob");
 
 		fs.onUsed(player);
-		assertEquals("You need a fishing rod for fishing.",
+		assertEquals("You need a 钓鱼杆 for fishing.",
 				player.events().get(0).get("text"));
 		player.clearEvents();
-		final StackableItem fishingRod = new StackableItem("fishing rod", "", "",
+		final StackableItem fishingRod = new StackableItem("钓鱼杆", "", "",
 				null);
 		fishingRod.setQuantity(1);
 		fishingRod.setID(new ID(2, "testzone"));
 		player.getSlot("背包").add(fishingRod);
-		assertTrue(player.isEquipped("fishing rod"));
+		assertTrue(player.isEquipped("钓鱼杆"));
 		fs.onUsed(player);
 		assertEquals("You have started fishing.", player.events().get(0).get("text"));
 		player.clearEvents();

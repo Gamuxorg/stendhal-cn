@@ -47,7 +47,7 @@ public class FishermansDaughterNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hello, nice to meet you!");
 				addHelp("Did you visit the Ados market already? There are so many #nice #people around and some make #awesome #food!");
-				addReply("awesome food", "I tried the fish soup and 烤排s, they are so delicious!");
+				addReply("awesome food", "I tried the 鱼汤 and 烤排s, they are so delicious!");
 				addReply("nice people", "Florence Boullabaisse is one of my best friends and Haunchy is a really nice guy.");
 				addQuest("I am currently trying to figure out how I can start my own business... I love to cook and might start a #catering #service soon... Meanwhile I enjoy my new renovated house :)");
 				addReply("catering service", "I've heard that some #hotels need some dinner for their guests... their kitchens are too small and they need someone who can easily cook and bring them some food they need.");

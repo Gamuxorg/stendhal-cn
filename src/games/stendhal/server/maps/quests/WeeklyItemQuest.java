@@ -103,7 +103,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("奇妙甲",1);
 		items.put("影子铠甲",1);
 		items.put("石甲",1);
-		items.put("异种元素甲",1);
+		items.put("异界甲",1);
 
 		// axe
 		items.put("黄金双刃斧",1);
@@ -112,11 +112,11 @@ public class WeeklyItemQuest extends AbstractQuest {
 		// boots
 		items.put("混沌靴",1);
 		items.put("金靴子",1);
-		items.put("很棒的靴子",1);
+		items.put("奇妙靴子",1);
 		items.put("影子靴子",1);
 		items.put("铁靴",1);
 		items.put("石靴",1);
-		items.put("异种元素靴子",1);
+		items.put("异界靴子",1);
 
 
 		// cloak
@@ -124,23 +124,23 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("蓝色条纹斗篷",1);
 		items.put("混沌斗篷",1);
 		items.put("金斗篷",1);
-		items.put("华丽的斗篷",1);
+		items.put("奇妙斗篷",1);
 		items.put("红龙斗篷",1);
 		items.put("影子斗篷",1);
-		items.put("异种元素斗篷",1);
+		items.put("异界斗篷",1);
 
 		// club
 		items.put("骨玉法杖",1);
 
 		// drinks
-		items.put("mega potion",5);
-		items.put("fish soup",3);
+		items.put("强治疗剂",5);
+		items.put("鱼汤",3);
 
 		// helmet
-		items.put("chaos helmet",1);
+		items.put("混沌头盔",1);
 		items.put("golden helmet",1);
 		items.put("horned golden helmet",1);
-		items.put("mainio helmet",1);
+		items.put("奇妙头盔",1);
 		items.put("shadow helmet",1);
 
 		// jewellery
@@ -175,7 +175,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("附魔钢盾",1);
 		items.put("奇妙之盾",1);
 		items.put("影盾",1);
-		items.put("异域盾",1);
+		items.put("异界盾",1);
 
 		// sword
 		items.put("刺客匕首",1);

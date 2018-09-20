@@ -25,7 +25,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 
 /**
  * Provides Uncle Dag NPC, in Ados Market.
- * He will produce 沸水 bottles if he is given sugar canes (from cane fields)
+ * He will produce 沸水 bottles if he is given 甘蔗s (from cane fields)
  *
  * @author omero
  */
@@ -54,8 +54,8 @@ public class FierywaterDistillerNPC implements ZoneConfigurator {
                 addReply("沸水",
                     "That's my speciality! Mix that with other ingredients and you'll have an excellent beverage."
                     +   " Gulp that down 100% pure and most likely you will not survive to tell the experience!");
-                addReply(Arrays.asList("sugar", "cane", "canes", "sugar cane"),
-                    "I get all my sugar canes imported directly from 阿托尔岛.");
+                addReply(Arrays.asList("sugar", "cane", "canes", "甘蔗"),
+                    "I get all my 甘蔗s imported directly from 阿托尔岛.");
                 addReply("木头",
                     "You find plenty of wood logs near trees, and forests are the best place to look for those!");
                 addGoodbye("Enjoy the market!");
@@ -68,7 +68,7 @@ public class FierywaterDistillerNPC implements ZoneConfigurator {
         };
 
         final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-        requiredResources.put("sugar cane", 5);
+        requiredResources.put("甘蔗", 5);
         requiredResources.put("木头", 1);
 
         final ProducerBehaviour behaviour = new ProducerBehaviour("uncle_dag_brew_fierywater",

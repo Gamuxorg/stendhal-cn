@@ -42,7 +42,7 @@ import games.stendhal.server.entity.player.Player;
  * STEPS: <ul><li> Find Bunny <li> Say hi <li> Get reward </ul>
  *
  * REWARD: <ul><li> a 篮子 which can be opened to obtain a random good reward: food,
- * money, potions, items, etc...</ul>
+ * money, 治疗济s, items, etc...</ul>
  *
  * REPETITIONS: None
  */

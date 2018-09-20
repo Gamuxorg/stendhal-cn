@@ -21,9 +21,9 @@
     </equipable>
   </item>
 
-  <item name="sugar mill">
+  <item name="制糖机">
     <type class="tool" subclass="sugarmill" tileid="-1"/>
-    <description>You see a sugar mill. You can obtain sugar if you grind canes with it.</description>
+    <description>You see a 制糖机. You can obtain 糖块 if you grind canes with it.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>
@@ -40,9 +40,9 @@
     </equipable>
   </item>
   
-  <item name="scroll eraser">
+  <item name="重绘机">
     <type class="tool" subclass="scrolleraser" tileid="-1"/>
-    <description>You see a scroll eraser. Put a 标记卷轴 in the opposite hand to clean the scroll.</description>
+    <description>You see a 重绘机. Put a 标记卷轴 in the opposite hand to clean the scroll.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>
@@ -59,9 +59,9 @@
     </equipable>
   </item>
 
-  <item name="pestle and mortar">
+  <item name="杵和臼">
     <type class="tool" subclass="pestleandmortar" tileid="-1"/>
-    <description>You see a pestle and mortar. This is the traditional tool to pound herbs, food and other substances.</description>
+    <description>You see a 杵和臼. This is the traditional tool to pound herbs, food and other substances.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -95,9 +95,9 @@
     </equipable>
   </item>
 
-  <item name="fishing rod">
+  <item name="钓鱼杆">
     <type class="tool" subclass="fishing_rod" tileid="-1"/>
-    <description>You see a fishing rod. If you find a fishing spot you can catch fish with it.</description>
+    <description>You see a 钓鱼杆. If you find a fishing spot you can catch fish with it.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

@@ -52,7 +52,7 @@
       <item value="板甲" quantity="[1,1]" probability="7.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
       <item value="战斧" quantity="[1,1]" probability="4.5"/>
-      <item value="potion" quantity="[1,2]" probability="1.5"/>
+      <item value="治疗济" quantity="[1,2]" probability="1.5"/>
       <item value="王冠之盾" quantity="[1,1]" probability="4.5"/>
     </drops>
     <equips>
@@ -169,7 +169,7 @@
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
       <item value="空白卷轴" quantity="[1,1]" probability="3.5"/>
-      <item value="mega potion" quantity="[1,2]" probability="10.5"/>
+      <item value="强治疗剂" quantity="[1,2]" probability="10.5"/>
     </drops>
     <equips>
     </equips>
@@ -404,7 +404,7 @@
       <item value="大战锤" quantity="[1,1]" probability="5.25"/>
       <item value="石靴" quantity="[1,1]" probability="0.0050"/>
       <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
-      <item value="potion" quantity="[1,2]" probability="1.5"/>
+      <item value="治疗济" quantity="[1,2]" probability="1.5"/>
       <item value="王冠之盾" quantity="[1,1]" probability="4.5"/>
     </drops>
     <equips>
@@ -473,7 +473,7 @@
       <item value="mithril bar" quantity="[1,1]" probability="0.0010"/>
       <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
       <item value="mithril nugget" quantity="[1,1]" probability="0.2"/>
-      <item value="greater potion" quantity="[1,2]" probability="30.0"/>
+      <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="snowglobe" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
@@ -502,10 +502,10 @@
     <respawn value="75000"/>
     <corpse name="humanoid_2x2" harmless="cloaked_brown_2x2" width="2" height="2"/>
     <drops>
-      <item value="mega potion" quantity="[1,4]" probability="20.0"/>
+      <item value="强治疗剂" quantity="[1,4]" probability="20.0"/>
       <item value="黑戟" quantity="[1,1]" probability="0.25"/>
       <item value="都灵之斧" quantity="[1,1]" probability="1.0"/>
-      <item value="pie" quantity="[2,4]" probability="10.0"/>
+      <item value="馅饼" quantity="[2,4]" probability="10.0"/>
       <item value="money" quantity="[3000,8000]" probability="100.0"/>
     </drops>
     <equips>
@@ -679,7 +679,7 @@
       <item value="魔法双刃斧" quantity="[1,1]" probability="0.0050"/>
       <item value="火山之锤" quantity="[1,1]" probability="0.0050"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.035"/>
-      <item value="greater potion" quantity="[2,4]" probability="3.0"/>
+      <item value="大治疗剂" quantity="[2,4]" probability="3.0"/>
       <item value="附魔钢盾" quantity="[1,1]" probability="0.5"/>
       <item value="dwarvish legs" quantity="[1,1]" probability="0.1"/>
     </drops>

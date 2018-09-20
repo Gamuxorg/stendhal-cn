@@ -54,8 +54,8 @@ public class AdminMaker extends ScriptImpl {
 			"hunter crossbow");
 
 	private final List<String> itemsStack = Arrays.asList("money",
-			"greater potion", "大瓶抗毒药济", "加强箭",
-			"deadly poison");
+			"大治疗剂", "大瓶抗毒药济", "加强箭",
+			"极毒");
 
 
 	protected class UpgradeAction implements ChatAction {

@@ -114,7 +114,7 @@ public class IcecreamForAnnieTest {
 
 		en.step(player, "offer");
 		assertEquals("I sell ice cream.", getReply(npc));
-		assertTrue(en.step(player, "buy 0 icecreams"));
+		assertTrue(en.step(player, "buy 0 冰淇淋s"));
 		assertEquals("Sorry, how many ice creams do you want to buy?!", getReply(npc));
 		en.step(player, "buy ice cream");
 		assertEquals("An ice cream will cost 30. Do you want to buy it?", getReply(npc));
@@ -122,7 +122,7 @@ public class IcecreamForAnnieTest {
 		assertEquals("Congratulations! Here is your ice cream!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye, enjoy your day!", getReply(npc));
-		assertTrue(player.isEquipped("icecream"));
+		assertTrue(player.isEquipped("冰淇淋"));
 
 		npc = SingletonRepository.getNPCList().get("安妮琼斯");
 		en = npc.getEngine();
@@ -150,7 +150,7 @@ public class IcecreamForAnnieTest {
 		assertEquals("Yummy! Is that ice cream for me?", getReply(npc));
 		en.step(player, "yes");
 		// [15:06] kymara earns 500 experience points.
-		assertFalse(player.isEquipped("icecream"));
+		assertFalse(player.isEquipped("冰淇淋"));
 		assertTrue(player.isEquipped("present"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getKarma(), greaterThan(karma));

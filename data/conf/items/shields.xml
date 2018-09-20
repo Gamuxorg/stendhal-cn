@@ -408,9 +408,9 @@
     </equipable>
   </item>
   
-  <item name="异域盾">
+  <item name="异界盾">
     <type class="shield" subclass="xeno_shield" tileid="-1"/>
-    <description>一面轻盈而牢固的异域盾, 从上面的徽章看应该是从外地抢来的.</description>
+    <description>一面轻盈而牢固的异界盾, 从上面的徽章看应该是从外地抢来的.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="41"/>

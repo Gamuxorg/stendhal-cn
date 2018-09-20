@@ -249,7 +249,7 @@ public abstract class RPEntity extends GuidedEntity {
 		 * Set the official killer. If the killer was already on the list, move
 		 * it first. Otherwise prepend the list with the official killer. This
 		 * means that a creature can appear before players if it is the official
-		 * killer. Also an item "poison" can be the first on the list this way.
+		 * killer. Also an item "毒药" can be the first on the list this way.
 		 * (And, as of this writing (2015-04-01) it is the only way anything but
 		 * RPEntities can be shown on the killer list).
 		 *
@@ -1855,8 +1855,8 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 //			 * Prettify the killer name for the corpse. Should be done only
 //			 * after the more plain version has been used for the killer list.
 //			 * Players are unique, so they should not get an article. Also
-//			 * statuses should not, so that "killed by poison" does not become
-//			 * "killed by a bottle of poison".
+//			 * statuses should not, so that "killed by 毒药" does not become
+//			 * "killed by a bottle of 毒药".
 //			 */
 //			killerName = Grammar.a_noun(killerName);
 //		}

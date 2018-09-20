@@ -74,7 +74,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 100 XP </li>
  * <li> some karma (5 + (5 | -5)) </li>
- * <li> 3 potions </li>
+ * <li> 3 治疗济s </li>
  * </ul>
  *
  * REPEATABLE:
@@ -198,7 +198,7 @@ public class WaterForXhiphin extends AbstractQuest {
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		// make sure we drop the checked water not any other water
 		reward.add(new DropInfostringItemAction("水", CLEAN_WATER_INFOSTRING));
-		reward.add(new EquipItemAction("potion", 3));
+		reward.add(new EquipItemAction("治疗济", 3));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new IncrementQuestAction(QUEST_SLOT, 2, 1) );
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT,1));
@@ -212,7 +212,7 @@ public class WaterForXhiphin extends AbstractQuest {
 						new QuestActiveCondition(QUEST_SLOT),
 						new PlayerHasInfostringItemWithHimCondition("水", CLEAN_WATER_INFOSTRING)),
 				ConversationStates.ATTENDING,
-				"Thank you ever so much! That's just what I wanted! Here, take these potions that Sarzina gave me - I hardly have use for them here.",
+				"Thank you ever so much! That's just what I wanted! Here, take these 治疗济s that Sarzina gave me - I hardly have use for them here.",
 				new MultipleActions(reward));
 
         // player returns with no water at all.
@@ -280,7 +280,7 @@ public class WaterForXhiphin extends AbstractQuest {
             if (isRepeatable(player)) {
                 res.add("I took the water to Xhiphin Zohos a while ago.");
             } else {
-                res.add("I took the water to Xhiphin Zohos recently and he gave me some potions.");
+                res.add("I took the water to Xhiphin Zohos recently and he gave me some 治疗济s.");
             }
 		}
 		return res;

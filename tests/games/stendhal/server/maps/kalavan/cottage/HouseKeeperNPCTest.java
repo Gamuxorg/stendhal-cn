@@ -87,10 +87,10 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("I have such a headache and little Annie shrieking every time she goes down the slide doesn't help. Maybe you could give her something to keep her occupied? ... like a gag ...", getReply(npc));
 
 		assertTrue(en.step(player, "茶"));
-		assertEquals("It's the very best drink of all. I sweeten mine with #honey. Just ask if you'd like a #brew.", getReply(npc));
+		assertEquals("It's the very best drink of all. I sweeten mine with #蜂蜜. Just ask if you'd like a #brew.", getReply(npc));
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I can only brew a cup of 茶 if you bring me a #'bottle of 牛奶' and a #'jar of honey'.", getReply(npc));
+		assertEquals("I can only brew a cup of 茶 if you bring me a #'bottle of 牛奶' and a #'jar of 蜂蜜'.", getReply(npc));
 
 		assertTrue(en.step(player, "牛奶"));
 		assertEquals("Well my dear, I expect you can get 牛奶 from a farm.", getReply(npc));
@@ -98,25 +98,25 @@ public class HouseKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue(en.step(player, "bottle of 牛奶"));
 		assertEquals("Well my dear, I expect you can get 牛奶 from a farm.", getReply(npc));
 
-		assertTrue(en.step(player, "honey"));
+		assertTrue(en.step(player, "蜂蜜"));
 		assertEquals("Don't you know the beekeeper of Fado Forest?", getReply(npc));
 
-		assertTrue(en.step(player, "jar of honey"));
+		assertTrue(en.step(player, "jar of 蜂蜜"));
 		assertEquals("Don't you know the beekeeper of Fado Forest?", getReply(npc));
 
 		assertFalse(player.isEquipped("茶"));
 
 		PlayerTestHelper.equipWithItem(player, "牛奶");
-		PlayerTestHelper.equipWithItem(player, "honey");
+		PlayerTestHelper.equipWithItem(player, "蜂蜜");
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of 蜂蜜' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
 
 		assertTrue(en.step(player, "no"));
 		assertEquals("OK, no problem.", getReply(npc));
 
 		assertTrue(en.step(player, "brew"));
-		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of honey' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 牛奶' and a #'jar of 蜂蜜' for this job, which will take 3 minutes. Do you have what I need?", getReply(npc));
 
 		assertTrue(en.step(player, "yes"));
 		assertEquals("OK, I will brew a cup of 茶for you, but that will take some time. Please come back in 3 minutes.", getReply(npc));

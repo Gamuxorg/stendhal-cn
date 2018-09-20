@@ -21,7 +21,7 @@
     <drops>
       <item value="money" quantity="[10,70]" probability="100.0"/>
       <item value="板甲" quantity="[1,1]" probability="5.0"/>
-      <item value="mainio helmet" quantity="[1,1]" probability="0.1"/>
+      <item value="奇妙头盔" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -227,8 +227,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-      <item value="potion" quantity="[1,2]" probability="10.0"/>
-      <item value="很棒的靴子" quantity="[1,1]" probability="0.2"/>
+      <item value="治疗济" quantity="[1,2]" probability="10.0"/>
+      <item value="奇妙靴子" quantity="[1,1]" probability="0.2"/>
       <item value="双刃剑" quantity="[1,1]" probability="2.0"/>
        <item value="blue helmet" quantity="[1,1]" probability="2.5"/>
        <item value="蓝色盔甲" quantity="[1,1]" probability="4.0"/>
@@ -263,7 +263,7 @@
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
       <item value="dagger" quantity="[1,1]" probability="3.0"/>
-      <item value="很棒的靴子" quantity="[1,1]" probability="0.05"/>
+      <item value="奇妙靴子" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>

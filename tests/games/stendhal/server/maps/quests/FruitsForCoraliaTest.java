@@ -255,8 +255,8 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 		// -----------------------------------------------
 
 		// [19:05] pinch earns 50 experience points.
-		assertTrue(player.isEquipped("crepes suzette"));
-		assertTrue(player.isEquipped("minor potion"));
+		assertTrue(player.isEquipped("可丽饼"));
+		assertTrue(player.isEquipped("小治疗剂"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getKarma(), greaterThan(karma));
 
@@ -293,7 +293,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		// -----------------------------------------------
 
-		// [19:05] Removed contained minor potion item with ID 6 from bag
+		// [19:05] Removed contained 小治疗剂 item with ID 6 from bag
 
 		// -----------------------------------------------
 

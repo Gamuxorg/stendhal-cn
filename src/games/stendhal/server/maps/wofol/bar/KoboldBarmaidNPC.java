@@ -80,7 +80,7 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 					}
 
 					/**
-					  * Wrviliza will sell her mild or strong koboldish torcibud
+					  * Wrviliza will sell her mild or 康复药
 					  * only when the player can afford the price and carries as many empty bottles
 					  * as the requested amount in his inventory.
 					  */
@@ -91,9 +91,9 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						int amount = res.getAmount();
 						String requiredContainer = "";
 
-						if ("mild koboldish torcibud".equals(chosenItemName)) {
+						if ("轻康复药".equals(chosenItemName)) {
 							requiredContainer = "细瓶子";
-						} else if ("strong koboldish torcibud".equals(chosenItemName)) {
+						} else if ("康复药".equals(chosenItemName)) {
 							requiredContainer = "耳瓶";
 						}
 
@@ -153,8 +153,8 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 				//啤酒 and 红酒 have higher than average prices here.
 				items.put("啤酒", 18);
 				items.put("红酒", 25);
-				items.put("mild koboldish torcibud", MILD_KOBOLDISH_TORCIBUD_PRICE);
-				items.put("strong koboldish torcibud", STRONG_KOBOLDISH_TORCIBUD_PRICE);
+				items.put("轻康复药", MILD_KOBOLDISH_TORCIBUD_PRICE);
+				items.put("康复药", STRONG_KOBOLDISH_TORCIBUD_PRICE);
 
 				new SellerAdder().addSeller(this, new TorcibudSellerBehaviour(items));
 

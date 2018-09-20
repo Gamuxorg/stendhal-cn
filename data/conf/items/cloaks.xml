@@ -267,9 +267,9 @@
     </equipable>
   </item>
   
-  <item name="华丽的斗篷">
+  <item name="奇妙斗篷">
     <type class="cloak" subclass="mainio_cloak" tileid="-1"/>
-    <description>这是一件华丽的斗篷. 闪闪发光, 令人晕眩！但是因为它制造精良, 所以现在你穿着它. </description>
+    <description>这是一件奇妙斗篷. 闪闪发光, 令人晕眩！但是因为它制造精良, 所以现在你穿着它. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="21"/>
@@ -422,9 +422,9 @@
     </equipable>
   </item>
 
-  <item name="异种元素斗篷">
+  <item name="异界斗篷">
     <type class="cloak" subclass="xeno_cloak" tileid="-1"/>
-    <description>这是一件异种元素斗篷, 非常厚实, 可以为你提供很好的保护. </description>
+    <description>这是一件异界斗篷, 非常厚实, 可以为你提供很好的保护. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>

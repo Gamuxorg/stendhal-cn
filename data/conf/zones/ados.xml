@@ -324,7 +324,7 @@
     
     <entity x="43" y="17">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Are you hungry? I can cook a lovely fish soup for you. Visit me at the east side of the market!
+      <attribute name="text">Are you hungry? I can cook a lovely 鱼汤 for you. Visit me at the east side of the market!
 - Florence Boullabaisse -</attribute>
     </entity>
     
@@ -2678,7 +2678,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="4" y="1">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-To make 1 sausage:
+To make 1 香肠:
 
 1 meat
 1 bat entrails
@@ -2694,7 +2694,7 @@ My fee:
     <entity x="11" y="1">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-To make 1 cheese sausage:
+To make 1 起司香肠:
 
 1 cheese
 1 chicken

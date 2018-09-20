@@ -390,14 +390,14 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
 		testPluralisationAndSingularisation("pieces of ham", "火腿");
 		testPluralisationAndSingularisation("三明治es", "三明治");
-		testPluralisationAndSingularisation("pies", "pie");
+		testPluralisationAndSingularisation("pies", "馅饼");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");
 		testPluralisationAndSingularisation("大脚菇", "porcino");
 		testPluralisationAndSingularisation("toadstools", "toadstool");
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
-		testPluralisationAndSingularisation("bottles of minor potion", "minor potion");
+		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
 		testPluralisationAndSingularisation("bottles of greater potion",

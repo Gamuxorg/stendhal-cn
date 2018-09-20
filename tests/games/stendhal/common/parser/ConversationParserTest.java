@@ -226,13 +226,13 @@ public class ConversationParserTest {
 		assertEquals("sell poison", sentence.getNormalized());
 		assertEquals("sell/VER poison/OBJ-FOO-FLU", sentence.toString());
 
-		sentence = ConversationParser.parse("sell 10 bottles of mega poison");
+		sentence = ConversationParser.parse("sell 10 bottles of 剧毒");
 		assertFalse(sentence.hasError());
 		assertEquals("sell", sentence.getVerbString());
 		assertEquals(10, sentence.getObject(0).getAmount());
-		assertEquals("mega poison", sentence.getObject(0).getNormalized());
-		assertEquals("sell mega poison", sentence.getNormalized());
-		assertThat(sentence.toString(), anyOf(equalTo("sell/VER mega poison/OBJ"), equalTo("sell/VER mega poison/OBJ-FOO-FLU")));
+		assertEquals("剧毒", sentence.getObject(0).getNormalized());
+		assertEquals("sell 剧毒", sentence.getNormalized());
+		assertThat(sentence.toString(), anyOf(equalTo("sell/VER 剧毒/OBJ"), equalTo("sell/VER 剧毒/OBJ-FOO-FLU")));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class ConversationParserTest {
 		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("冰淇淋", sentence.getObjectName());
 		assertEquals("i buy 冰淇淋!", sentence.getNormalized());
-		assertEquals("i/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());
+		assertEquals("i/SUB-PRO buy/VER-CON 冰淇淋/OBJ!", sentence.toString());
 
 		sentence = ConversationParser.parse("would you like to have an ice cream?");
 		assertFalse(sentence.hasError());
@@ -311,7 +311,7 @@ public class ConversationParserTest {
 		assertEquals("buy", sentence.getVerbString());
 		assertEquals(1, sentence.getSubjectCount());
 		assertEquals(1, sentence.getObject(0).getAmount());
-		assertEquals("icecream", sentence.getObject(0).getMainWord());
+		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("icecream", sentence.getObjectName());
 		assertEquals("you buy icecream!", sentence.getNormalized());
 		assertEquals("you/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());

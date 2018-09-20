@@ -114,18 +114,18 @@ public class HungryJoshuaTest {
 		npc = SingletonRepository.getNPCList().get("约书亚");
 		en = npc.getEngine();
 
-		Item item = ItemTestHelper.createItem("sandwich", 5);
+		Item item = ItemTestHelper.createItem("三明治", 5);
 		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 
 		en.step(player, "hi");
 		assertEquals("Hi! I'm the local goldsmith. If you require me to #cast you a #'gold bar' just tell me!", getReply(npc));
 		en.step(player, "food");
-		assertEquals("Oh great! Did my brother 艾克德罗斯 send you with those sandwiches?", getReply(npc));
+		assertEquals("Oh great! Did my brother 艾克德罗斯 send you with those 三明治es?", getReply(npc));
 		en.step(player, "yes");
 		// [07:28] kymara earns 150 experience points.
 		assertEquals("Thank you! Please let 艾克德罗斯 know that I am fine. Say my name, 约书亚, so he knows that you saw me. He will probably give you something in return.", getReply(npc));
-		assertFalse(player.isEquipped("sandwich"));
+		assertFalse(player.isEquipped("三明治"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getQuest(questSlot), is("约书亚"));
 		en.step(player, "bye");

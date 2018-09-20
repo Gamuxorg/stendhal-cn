@@ -445,12 +445,12 @@ public class KoboldishTorcibud extends AbstractQuest {
                 final StackableItem
                     koboldish_torcibud_vsop = (StackableItem)
                         SingletonRepository
-                            .getEntityManager().getItem("vsop koboldish torcibud");
+                            .getEntityManager().getItem("强康复药");
                 final int torcibud_bottles = 1 + Rand.roll1D6();
                 koboldish_torcibud_vsop.setQuantity(torcibud_bottles);
                 koboldish_torcibud_vsop.setBoundTo(player.getName());
                 // vsop torcibud will heal up to 75% of the player's base HP he has when getting rewarded
-                // all vsop koboldish torcibud is persistent (set in the xml for this item) so this value will last
+                // all 强康复药 is persistent (set in the xml for this item) so this value will last
                 koboldish_torcibud_vsop.put("amount", player.getBaseHP()*75/100);
 
                 //player.equipOrPutOnGround(koboldish_torcibud_vsop);

@@ -62,7 +62,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 	private static final int COST = 3000;
 	private static final String QUEST_SLOT = "borrow_kitchen_equipment";
 
-	private static final List<String> ITEMS = Arrays.asList("sugar mill", "pestle and mortar");
+	private static final List<String> ITEMS = Arrays.asList("制糖机", "杵和臼");
 
 
 	@Override
@@ -216,15 +216,15 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 						});
 				}
 
-				// additionally add "sugar" as trigger word
+				// additionally add "糖块" as trigger word
 				add(ConversationStates.ATTENDING,
-					    "sugar",
+					    "糖块",
 					    new AndCondition(
 					        new LevelGreaterThanCondition(5),
 					        new QuestCompletedCondition("pizza_delivery"),
 					        new QuestNotActiveCondition(QUEST_SLOT)),
 					    ConversationStates.ATTENDING,
-					    "抱歉, 我不能借给你糖 sugar, 只有 #sugar #mill.",
+					    "抱歉, 我不能借给你糖 糖块, 只有 #sugar #mill.",
 					    null);
 
 				// too low level

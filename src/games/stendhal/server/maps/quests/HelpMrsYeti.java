@@ -58,17 +58,17 @@ import games.stendhal.server.maps.Region;
  * </ul>
  *
  * STEPS:
- * Mrs. Yeti lifes in a cave somewhere in semos mountain. She is mournful, because Mr. Yeti turn away from her. Thats why she ask the player for help. She like to have a special potion and some other stuff as a present for her husband.
+ * Mrs. Yeti lifes in a cave somewhere in semos mountain. She is mournful, because Mr. Yeti turn away from her. Thats why she ask the player for help. She like to have a special 治疗济 and some other stuff as a present for her husband.
  *
- * There is only one witch who, who can make the special potion. Mrs. Yeti tell the player where she lives. The player go for the witch. Once he found her, she tell the player, that she will help, but need some ingriedents.
+ * There is only one witch who, who can make the special 治疗济. Mrs. Yeti tell the player where she lives. The player go for the witch. Once he found her, she tell the player, that she will help, but need some ingriedents.
  *
  * When the player is bringing in the collected stuff, she has to tell him, that her magic knife is damaged and she need a new one and send the player to a blacksmith. He has to craft a new magic knife for the witch.
  *
  * The blacksmith is willing to help. But need some stuff too, to craft the magic knife. He sends the player to collect it. The player brings in the needed items and the blacksmith could start make the knife, but he is too hungry to start it right now. Player has to bring him some food and he starts crafting the knife. But the player has to wait a bit until he is ready with it.
  *
- * After bring the knife to the witch, he tell the player that she forgot an important item. The player has to get it and bring it to here. After a while the special potion is ready. And the player can bring it to Mrs. Yeti.
+ * After bring the knife to the witch, he tell the player that she forgot an important item. The player has to get it and bring it to here. After a while the special 治疗济 is ready. And the player can bring it to Mrs. Yeti.
  *
- * Mrs. Yeti is very happy about the special potion. But she needs some other things to make her husband happy. The player has to collect a baby dragon for her. After player bring the baby dragon to her, she is happy as never befor.
+ * Mrs. Yeti is very happy about the special 治疗济. But she needs some other things to make her husband happy. The player has to collect a baby dragon for her. After player bring the baby dragon to her, she is happy as never befor.
  *
  * REWARD:
  * <ul>
@@ -102,7 +102,7 @@ import games.stendhal.server.maps.Region;
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I am mournful, because Mr Yeti turns away from me. I need a special potion to make him happy and some present to please him. Will you help?",
+				"I am mournful, because Mr Yeti turns away from me. I need a special 治疗济 to make him happy and some present to please him. Will you help?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -116,7 +116,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Thank you for your help! You need to go to Salva Mattori in the magic city for the #potion.",
+				"Thank you for your help! You need to go to Salva Mattori in the magic city for the #治疗济.",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		// Player says no, they've lost karma.
@@ -127,7 +127,7 @@ import games.stendhal.server.maps.Region;
 	}
 
 	private void makePotion() {
-	// player needs to bring some items to make the potion:
+	// player needs to bring some items to make the 治疗济:
 	// a 'magic' knife from a blacksmith
 	// 3 lilia flowers
 	// sclaria
@@ -135,9 +135,9 @@ import games.stendhal.server.maps.Region;
 	// 黑珍珠
 	final SpeakerNPC npc = npcs.get("Salva Mattori");
 
-    	npc.add(ConversationStates.ATTENDING, "potion",
+    	npc.add(ConversationStates.ATTENDING, "治疗济",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
-			    ConversationStates.ATTENDING, "I will help you make this potion, Mrs Yeti is an old friend of mine. But the blade on "
+			    ConversationStates.ATTENDING, "I will help you make this 治疗济, Mrs Yeti is an old friend of mine. But the blade on "
 				+ "my magic knife has snapped yet again. I need another. I get mine from Hackim Easso of 塞门镇, will you go to him and "
 				+ "ask him to make another knife? Just say my name: #salva",
 				new SetQuestAction(QUEST_SLOT, "hackim"));
@@ -149,13 +149,13 @@ import games.stendhal.server.maps.Region;
 			"You need to go to Hackim Easso and ask him about a magic knife for #salva before I can help you.",
 			null);
 
-	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
+	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗济"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
 				new PlayerHasItemWithHimCondition("knife")),
-				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #potion. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #potion.",
-				new MultipleActions(new SetQuestAction(QUEST_SLOT, "potion"), new DropItemAction("knife")));
+				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #治疗济. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #治疗济.",
+				new MultipleActions(new SetQuestAction(QUEST_SLOT, "治疗济"), new DropItemAction("knife")));
 
-	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
+	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗济"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
 				new NotCondition(new PlayerHasItemWithHimCondition("knife"))),
 				ConversationStates.ATTENDING, "I see you have been to Hackim, but where is the magic knife?",
@@ -166,28 +166,28 @@ import games.stendhal.server.maps.Region;
 		potionactions.add(new DropItemAction("kokuda"));
 		potionactions.add(new DropItemAction("红酒"));
 		potionactions.add(new DropItemAction("黑珍珠"));
-		potionactions.add(new EquipItemAction("love potion"));
+		potionactions.add(new EquipItemAction("爱之治疗济"));
 		potionactions.add(new IncreaseXPAction(100));
 		potionactions.add(new SetQuestAction(QUEST_SLOT, "gotpotion"));
 
-		// don't make player wait for potion - could add this in later if wanted
-		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","potion"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "potion"),
+		// don't make player wait for 治疗济 - could add this in later if wanted
+		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","治疗济"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "治疗济"),
 								 new PlayerHasItemWithHimCondition("紫丁香",3),
 								 new PlayerHasItemWithHimCondition("kokuda"),
 								 new PlayerHasItemWithHimCondition("红酒"),
 								 new PlayerHasItemWithHimCondition("黑珍珠")),
-				ConversationStates.ATTENDING, "I see you have all the items for the potion. *mutters magic words* And now, ta da! You have the love potion. Wish Mrs Yeti good luck from me!",
+				ConversationStates.ATTENDING, "I see you have all the items for the 治疗济. *mutters magic words* And now, ta da! You have the 爱之治疗济. Wish Mrs Yeti good luck from me!",
 				new MultipleActions(potionactions));
 
-		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","potion"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "potion"),
+		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","治疗济"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "治疗济"),
 								 new NotCondition(
 												  new AndCondition(new PlayerHasItemWithHimCondition("紫丁香",3),
 																   new PlayerHasItemWithHimCondition("kokuda"),
 																   new PlayerHasItemWithHimCondition("红酒"),
 																   new PlayerHasItemWithHimCondition("黑珍珠")))),
-				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the love potion. Please bring them all together at once. Thanks!", null);
+				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the 爱之治疗济. Please bring them all together at once. Thanks!", null);
 
 
 	}
@@ -199,20 +199,20 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.ATTENDING, "salva",
 				new QuestInStateCondition(QUEST_SLOT, "hackim"),
 			    ConversationStates.ATTENDING, "Salva needs another magic knife does she? Ok, I can help you but not while I am so hungry. "
-				+ "I need food! Bring me 5 #pies and I will help you!",
+				+ "I need food! Bring me 5  #馅饼 s and I will help you!",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "pies", 1.0));
 
 	    npc.add(ConversationStates.ATTENDING, Arrays.asList("salva", "pies"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "pies"),
-				new PlayerHasItemWithHimCondition("pie",5)),
+				new PlayerHasItemWithHimCondition("馅饼",5)),
 				ConversationStates.ATTENDING, "Ah, thank you very much! Now I will tell you a little secret of mine. I am not a blacksmith, "
 				+ "only an assistant. I can't make knives at all! But I sell Salva a normal knife and is happy enough with that! So just take her "
 				+ "a plain knife like you could buy from 辛布兰卡 in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
-				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "knife", 1.0), new DropItemAction("pie",5)));
+				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "knife", 1.0), new DropItemAction("馅饼",5)));
 
 	    npc.add(ConversationStates.ATTENDING, Arrays.asList("salva", "pies"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "pies"),
-				new NotCondition(new PlayerHasItemWithHimCondition("pie",5))),
+				new NotCondition(new PlayerHasItemWithHimCondition("馅饼",5))),
 				ConversationStates.ATTENDING, "Arlindo from Ados makes the best meat and vegetable pies. Please remember to bring me 5, I am hungry!",
 				null);
 
@@ -220,28 +220,28 @@ import games.stendhal.server.maps.Region;
 
 	private void bringPotion() {
 	final SpeakerNPC npc = npcs.get("Mrs. Yeti");
-		final String extraTrigger = "potion";
+		final String extraTrigger = "治疗济";
 	    List<String> questTrigger;
 	    questTrigger = new LinkedList<String>(ConversationPhrases.QUEST_MESSAGES);
 		questTrigger.add(extraTrigger);
 
 	    final List<ChatAction> tookpotionactions = new LinkedList<ChatAction>();
-		tookpotionactions.add(new DropItemAction("love potion"));
+		tookpotionactions.add(new DropItemAction("爱之治疗济"));
 		tookpotionactions.add(new IncreaseKarmaAction(10.0));
 		tookpotionactions.add(new IncreaseXPAction(1000));
 		tookpotionactions.add(new SetQuestAction(QUEST_SLOT, "dragon"));
 
 		npc.add(ConversationStates.ATTENDING, questTrigger,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"),
-				new PlayerHasItemWithHimCondition("love potion")),
+				new PlayerHasItemWithHimCondition("爱之治疗济")),
 				ConversationStates.ATTENDING, "Thank you! That looks so powerful I almost love you from smelling it! But don't worry I will save it for my husband. But he won't take it without some other temptation. I think he'd like a baby #dragon, if you'd be so kind as to bring one.",
 				new MultipleActions(tookpotionactions));
 
 		npc.add(
 			ConversationStates.ATTENDING, questTrigger,
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"), new NotCondition(new PlayerHasItemWithHimCondition("love potion"))),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"), new NotCondition(new PlayerHasItemWithHimCondition("爱之治疗济"))),
 			ConversationStates.ATTENDING,
-			"What did you do with the love potion?",
+			"What did you do with the 爱之治疗济?",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -250,7 +250,7 @@ import games.stendhal.server.maps.Region;
 								new QuestInStateCondition(QUEST_SLOT, "pies"),
 								new QuestInStateCondition(QUEST_SLOT, "knife")),
 				ConversationStates.ATTENDING,
-				"I am waiting for you to return with a love potion. Please ask Salva Mattori in the magic city about: #potion.",
+				"I am waiting for you to return with a 爱之治疗济. Please ask Salva Mattori in the magic city about: #治疗济.",
 				null);
 	}
 
@@ -340,7 +340,7 @@ import games.stendhal.server.maps.Region;
 	public void addToWorld() {
 		fillQuestInfo(
 				"Help Mrs Yeti",
-				"Mrs Yeti is really unhappy with her current lovelife because her husband turned away from her. Now the couple is in deep trouble. Just a special love potion can help Mrs Yeti to get her husband back.",
+				"Mrs Yeti is really unhappy with her current lovelife because her husband turned away from her. Now the couple is in deep trouble. Just a special 爱之治疗济 can help Mrs Yeti to get her husband back.",
 				true);
 		startQuest();
 		makePotion();
@@ -358,7 +358,7 @@ import games.stendhal.server.maps.Region;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			res.add("I met Mrs. Yeti in icy caves below 塞门镇 Mountain.");
-			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special love potion for her husband.");
+			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special 爱之治疗济 for her husband.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help with soppy love stories..");
 				return res;
@@ -366,7 +366,7 @@ import games.stendhal.server.maps.Region;
 			if ("start".equals(questState)) {
 				return res;
 			}
-			res.add("Salva Mattori needs a magic knife from Hackim Easso to make her potion.");
+			res.add("Salva Mattori needs a magic knife from Hackim Easso to make her 治疗济.");
 			if ("hackim".equals(questState)) {
 				return res;
 			}
@@ -378,11 +378,11 @@ import games.stendhal.server.maps.Region;
 			if ("knife".equals(questState)) {
 				return res;
 			}
-			res.add("The love potion requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
-			if ("potion".equals(questState)) {
+			res.add("The 爱之治疗济 requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
+			if ("治疗济".equals(questState)) {
 				return res;
 			}
-			res.add("I must take the love potion in its heart shaped bottle, to Mrs. Yeti.");
+			res.add("I must take the 爱之治疗济 in its heart shaped bottle, to Mrs. Yeti.");
 			if ("gotpotion".equals(questState)) {
 				return res;
 			}

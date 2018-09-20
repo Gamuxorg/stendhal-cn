@@ -57,7 +57,7 @@ public class MotherNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hello. I'm sorry I don't have much time as my boy is ill.");
 				addJob("My brother runs this farm. I just look after my son here.");
-				addHelp("Philomena can sell you 牛奶 and butter.");
+				addHelp("Philomena can sell you 牛奶 and 奶油.");
 				addGoodbye("Goodbye.");
 			}
 		};

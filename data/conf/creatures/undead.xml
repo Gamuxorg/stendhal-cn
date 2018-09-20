@@ -21,7 +21,7 @@
     <drops>
       <item value="money" quantity="[3,10]" probability="100.0"/>
       <item value="干酪" quantity="[2,5]" probability="50.0"/>
-      <item value="deadly poison" quantity="[1,1]" probability="8.0"/>
+      <item value="极毒" quantity="[1,1]" probability="8.0"/>
     </drops>
     <equips>
     </equips>
@@ -30,7 +30,7 @@
         <noise state="idle follow fight" value="SHREEAK!!"/>
         <noise state="idle follow fight" value="SHAAAAAAA!!"/>
       </says>
-      <profile name="poisonous" params="5,deadly poison"/>
+      <profile name="poisonous" params="5,极毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -94,7 +94,7 @@
     <respawn value="1650"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="greater potion" quantity="[1,1]" probability="30.0"/>
+      <item value="大治疗剂" quantity="[1,1]" probability="30.0"/>
       <item value="money" quantity="[10,70]" probability="100.0"/>
       <item value="shadow legs" quantity="[1,1]" probability="0.5"/>
       <item value="影盾" quantity="[1,1]" probability="0.05"/>
@@ -125,7 +125,7 @@
     <respawn value="2460"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="greater potion" quantity="[1,2]" probability="40.0"/>
+      <item value="大治疗剂" quantity="[1,2]" probability="40.0"/>
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.5"/>
       <item value="影盾" quantity="[1,1]" probability="0.5"/>
@@ -156,7 +156,7 @@
     <respawn value="3610"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="mega potion" quantity="[1,1]" probability="10.0"/>
+      <item value="强治疗剂" quantity="[1,1]" probability="10.0"/>
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="附魔甲" quantity="[1,1]" probability="0.005"/>
       <item value="黄金双刃斧" quantity="[1,1]" probability="2.5"/>
@@ -191,7 +191,7 @@
     <respawn value="1800"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="greater potion" quantity="[1,1]" probability="40.0"/>
+      <item value="大治疗剂" quantity="[1,1]" probability="40.0"/>
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.0"/>
@@ -224,7 +224,7 @@
     <respawn value="2950"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="greater potion" quantity="[1,1]" probability="40.0"/>
+      <item value="大治疗剂" quantity="[1,1]" probability="40.0"/>
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.5"/>
@@ -256,7 +256,7 @@
     <respawn value="5950"/>
     <corpse name="humanoid"/>
     <drops>
-      <item value="mega potion" quantity="[1,1]" probability="20.0"/>
+      <item value="强治疗剂" quantity="[1,1]" probability="20.0"/>
       <item value="money" quantity="[40,100]" probability="100.0"/>
       <item value="影盾" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="2.0"/>
@@ -325,12 +325,12 @@
     <respawn value="3000"/>
     <corpse name="animal_4x4" width="4" height="4" />
     <drops>
-      <item value="mega potion" quantity="[1,2]" probability="50.0"/>
+      <item value="强治疗剂" quantity="[1,2]" probability="50.0"/>
       <item value="money" quantity="[500,4000]" probability="100.0"/>
-      <item value="华丽的斗篷" quantity="[1,1]" probability="2.5"/>
-      <item value="mainio helmet" quantity="[1,1]" probability="2.0"/>
+      <item value="奇妙斗篷" quantity="[1,1]" probability="2.5"/>
+      <item value="奇妙头盔" quantity="[1,1]" probability="2.0"/>
       <item value="mainio legs" quantity="[1,1]" probability="2.5"/>
-      <item value="很棒的靴子" quantity="[1,1]" probability="2.5"/>
+      <item value="奇妙靴子" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙之盾" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙甲" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -491,7 +491,7 @@
       <profile name="offensive"/>
       <profile name="human"/>
       <profile name="patrolling"/>
-      <profile name="poisonous" params="5,poison"/>
+      <profile name="poisonous" params="5,毒药"/>
     </ai>
   </creature>
   
@@ -805,7 +805,7 @@
     <respawn value="70000"/>
     <corpse name="humanoid_3x2" width="3" height="2"/>
     <drops>
-      <item value="mega potion" quantity="[2,4]" probability="50.0"/>
+      <item value="强治疗剂" quantity="[2,4]" probability="50.0"/>
       <item value="money" quantity="[3000,10000]" probability="100.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="1.0"/>
       <item value="black legs" quantity="[1,1]" probability="2.0"/>
@@ -851,7 +851,7 @@
     <respawn value="240000"/>
     <corpse name="humanoid_3x2" width="3" height="2"/>
     <drops>
-      <item value="mega potion" quantity="[5,20]" probability="80.0"/>
+      <item value="强治疗剂" quantity="[5,20]" probability="80.0"/>
       <item value="gold bar" quantity="[2,10]" probability="30.0"/>
       <item value="money" quantity="[8000,40000]" probability="100.0"/>
       <item value="翡翠戒指" quantity="[1,1]" probability="2.0"/>
@@ -900,7 +900,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,30]" probability="75.0"/>
-      <item value="potion" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
       <item value="大瓶抗毒药济" quantity="[1,2]" probability="50.0"/>
     </drops>
     <equips>
@@ -931,7 +931,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="potion" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
       <item value="vampirette entrails" quantity="[1,1]" probability="100.0"/>
       <item value="吸血鬼斗篷" quantity="[1,1]" probability="0.05"/>
     </drops>
@@ -963,7 +963,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[15,100]" probability="100.0"/>
-      <item value="mega potion" quantity="[1,2]" probability="55.0"/>
+      <item value="强治疗剂" quantity="[1,2]" probability="55.0"/>
       <item value="吸血鬼斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="vampire sword" quantity="[1,1]" probability="0.1"/>
     </drops>

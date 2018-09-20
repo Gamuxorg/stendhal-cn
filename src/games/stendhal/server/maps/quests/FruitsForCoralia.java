@@ -51,8 +51,8 @@ import games.stendhal.server.util.ItemCollection;
  * REWARD:
  * <ul>
  * <li>XP: 300</li>
- * <li><1-5> Crepes Suzettes</li>
- * <li><2-8> Minor Potions</li>
+ * <li><1-5> 可丽饼s</li>
+ * <li><2-8> 小治疗剂s</li>
  * <li>Karma: 6 total (5 + 1)</li>
  * </ul>
  *
@@ -321,8 +321,8 @@ public class FruitsForCoralia extends AbstractQuest {
 			new SayTextAction("我的帽子从未如此可爱! 非常感谢! 请收下这些报酬"),
 			new IncreaseXPAction(300),
 			new IncreaseKarmaAction(5),
-			new EquipRandomAmountOfItemAction("crepes suzette", 1, 5),
-			new EquipRandomAmountOfItemAction("minor potion", 2, 8),
+			new EquipRandomAmountOfItemAction("可丽饼", 1, 5),
+			new EquipRandomAmountOfItemAction("小治疗剂", 2, 8),
 			new SetQuestToTimeStampAction(QUEST_SLOT, 1)
 		);
 

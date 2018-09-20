@@ -29,12 +29,12 @@ public class FeederFactoryTest {
 	@Test
 	public final void testGetEaterForSoup() {
 		ItemTestHelper.generateRPClasses();
-		final String name = "soup";
+		final String name = "蔬菜汤";
 		final String clazz = "drink";
 		final String subclass = "soup";
 		final Map<String, String> map = new HashMap<String, String>();
 		map.put("description",
-				"You see a bowl of soup. Its contents fill you up.");
+				"You see a bowl of 蔬菜汤. Its contents fill you up.");
 		map.put("amount", "2500");
 		map.put("frequency", "10");
 		map.put("quantity", "1");

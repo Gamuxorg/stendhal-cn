@@ -55,13 +55,13 @@ public class BlacksheepBobNPC implements ZoneConfigurator {
 
 		@Override
 		protected void createDialog() {
-			addJob("I'm proud to say I #make some absolutely delicious sausage.");
-			addHelp("I only #make sausage. My brothers here make canned tuna and cheese sausage.");
-			addOffer("Check the blackboard to see what I need to #make you some sausage.");
+			addJob("I'm proud to say I #make some absolutely delicious 香肠.");
+			addHelp("I only #make 香肠. My brothers here make canned tuna and 起司香肠.");
+			addOffer("Check the blackboard to see what I need to #make you some 香肠.");
 			addQuest("I don't need any help.");
 			addGoodbye("Good bye. Be sure to tell your friends about us.");
 
-			// Blacksheep Bob makes you sausages if you supply his ingredients
+			// Blacksheep Bob makes you 香肠s if you supply his ingredients
 			// (uses sorted TreeMap instead of HashMap)
 			final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 			requiredResources.put("vampirette entrails", Integer.valueOf(1));
@@ -69,18 +69,18 @@ public class BlacksheepBobNPC implements ZoneConfigurator {
 			requiredResources.put("肉", Integer.valueOf(1));
 			requiredResources.put("红酒", Integer.valueOf(2));
 
-			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepbob_make_sausage", "make", "sausage",
+			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepbob_make_香肠", "make", "香肠",
 			        requiredResources, 2 * 60);
 
 			new ProducerAdder().addProducer(this, behaviour,
-			        "Hey there. Welcome to Blacksheep Meat Market. Can I #make you some sausage?");
+			        "Hey there. Welcome to Blacksheep Meat Market. Can I #make you some 香肠?");
 		}
 	};
 
 	blacksheepbob.setEntityClass("blacksheepnpc");
 	blacksheepbob.setPosition(2, 13);
 	blacksheepbob.initHP(100);
-	blacksheepbob.setDescription("You see Blacksheep Bob. He is popular for his sausage.");
+	blacksheepbob.setDescription("You see Blacksheep Bob. He is popular for his 香肠.");
 	zone.add(blacksheepbob);
 
 	}

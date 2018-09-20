@@ -35,7 +35,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Quest to get a fishing rod
+ * QUEST: Quest to get a 钓鱼杆
  * <p>
  *
  * PARTICIPANTS: <ul><li> Pequod the fisherman</ul>
@@ -51,7 +51,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 750 XP
  * <li> some karma (10)
- * <li> A fishing rod
+ * <li> A 钓鱼杆
  * </ul>
  *
  * REPETITIONS: <ul><li> no repetitions</ul>
@@ -95,7 +95,7 @@ public class LookUpQuote extends AbstractQuest {
 		if (!player.isQuestCompleted(QUEST_SLOT)) {
 			res.add("The quote I must find is by " + player.getQuest(QUEST_SLOT) + ".");
 		} else {
-			res.add("I got the quote for Pequod and he gave me a fishing rod.");
+			res.add("I got the quote for Pequod and he gave me a 钓鱼杆.");
 		}
 		return res;
 	}
@@ -181,8 +181,8 @@ public class LookUpQuote extends AbstractQuest {
 					final Sentence expected = ConversationParser.parse(quote, new SimilarExprMatcher());
 
 					if (answer.matchesFull(expected)) {
-						npc.say("Oh right, that's it! How could I forget this? Here, take this handy fishing rod as an acknowledgement of my gratitude!");
-						final Item fishingRod = SingletonRepository.getEntityManager().getItem("fishing rod");
+						npc.say("Oh right, that's it! How could I forget this? Here, take this handy 钓鱼杆 as an acknowledgement of my gratitude!");
+						final Item fishingRod = SingletonRepository.getEntityManager().getItem("钓鱼杆");
 						fishingRod.setBoundTo(player.getName());
 						player.equipOrPutOnGround(fishingRod);
 						player.addXP(750);

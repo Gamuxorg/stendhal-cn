@@ -66,7 +66,7 @@ public class FishSoupTest {
 		en.step(player, "hi");
 		assertEquals("Hello and welcome on Ados market! I have something really tasty and know what would #revive you.", getReply(npc));
 		en.step(player, "revive");
-		assertEquals("My special fish soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
+		assertEquals("My special 鱼汤 has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
 		assertEquals("I need 11 ingredients before I make the soup: #surgeonfish, #cod, #char, #roach, #clownfish, #洋葱, #mackerel, #大蒜, #韭菜, #perch, and #西红柿. Will you collect them?", getReply(npc));
 		en.step(player, "no");
@@ -76,7 +76,7 @@ public class FishSoupTest {
 		en.step(player, "hi");
 		assertEquals("Hello and welcome on Ados market! I have something really tasty and know what would #revive you.", getReply(npc));
 		en.step(player, "revive");
-		assertEquals("My special fish soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
+		assertEquals("My special 鱼汤 has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
 		assertEquals("I need 11 ingredients before I make the soup: #surgeonfish, #cod, #char, #roach, #clownfish, #洋葱, #mackerel, #大蒜, #韭菜, #perch, and #西红柿. Will you collect them?", getReply(npc));
 		en.step(player, "yes");
@@ -99,13 +99,13 @@ public class FishSoupTest {
 		PlayerTestHelper.equipWithItem(player, "大蒜");
 		PlayerTestHelper.equipWithItem(player, "char");
 		en.step(player, "hi");
-		assertEquals("Welcome back! I hope you collected some #ingredients for the fish soup, or #everything.", getReply(npc));
+		assertEquals("Welcome back! I hope you collected some #ingredients for the 鱼汤, or #everything.", getReply(npc));
 		en.step(player, "everything");
 		assertEquals("You didn't have all the ingredients I need. I still need 2 ingredients: #roach and #洋葱. You'll get bad karma if you keep making mistakes like that!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 		en.step(player, "hi");
-		assertEquals("Welcome back! I hope you collected some #ingredients for the fish soup, or #everything.", getReply(npc));
+		assertEquals("Welcome back! I hope you collected some #ingredients for the 鱼汤, or #everything.", getReply(npc));
 		en.step(player, "ingredients");
 		assertEquals("I still need 2 ingredients: #roach and #洋葱. Did you bring anything I need?", getReply(npc));
 		PlayerTestHelper.equipWithItem(player, "roach");
@@ -125,7 +125,7 @@ public class FishSoupTest {
 		//Test when player has everything
 		player.setQuest(QUEST_SLOT, "done;0");
 		en.step(player, "hi");
-		assertEquals("Hello again. Have you returned for more of my special fish soup?", getReply(npc));
+		assertEquals("Hello again. Have you returned for more of my special 鱼汤?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("You made a good choice and I bet you'll not be disappointed. Do you have anything I need already?", getReply(npc));
 		en.step(player, "yes");
@@ -148,7 +148,7 @@ public class FishSoupTest {
 		PlayerTestHelper.equipWithItem(player, "洋葱");
 		PlayerTestHelper.equipWithItem(player, "roach");
 		en.step(player, "hi");
-		assertEquals("Welcome back! I hope you collected some #ingredients for the fish soup, or #everything.", getReply(npc));
+		assertEquals("Welcome back! I hope you collected some #ingredients for the 鱼汤, or #everything.", getReply(npc));
 		en.step(player, "everything");
 		assertEquals("The soup's on the market table for you, it will heal you. Tell me if I can help you with anything else.", getReply(npc));
 		en.step(player, "bye");
@@ -157,9 +157,9 @@ public class FishSoupTest {
 		en.step(player, "hi");
 		assertEquals("Oh I am sorry, I have to wash my cooking pots first before making more soup for you. Please come back in 20 minutes.", getReply(npc));
 		en.step(player, "job");
-		assertEquals("I am a trained cook but specialized into soups. My most favourite soup is a fish soup but I also like normal ones...", getReply(npc));
+		assertEquals("I am a trained cook but specialized into soups. My most favourite soup is a 鱼汤 but I also like normal ones...", getReply(npc));
 		en.step(player, "offer");
-		assertEquals("If you are really hungry or need some food for your travels, I can cook a really tasty fish soup for you after a selfmade receipe.", getReply(npc));
+		assertEquals("If you are really hungry or need some food for your travels, I can cook a really tasty 鱼汤 for you after a selfmade receipe.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Have a nice stay and day on Ados market!", getReply(npc));
 

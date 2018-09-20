@@ -203,7 +203,7 @@ public class ToysCollector extends AbstractQuest implements
 	@Override
 	public void rewardPlayer(final Player player) {
 		final StackableItem pie = (StackableItem) SingletonRepository.getEntityManager().getItem(
-				"pie");
+				"馅饼");
 		pie.setQuantity(3);
 		player.equipOrPutOnGround(pie);
 		player.addXP(100);

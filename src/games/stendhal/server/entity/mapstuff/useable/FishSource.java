@@ -26,7 +26,7 @@ import games.stendhal.server.events.SoundEvent;
 import marauroa.common.game.RPClass;
 
 /**
- * A fish source is a spot where a player can fish. He needs a fishing rod, time
+ * A fish source is a spot where a player can fish. He needs a 钓鱼杆, time
  * and luck. Before he catches fish he needs to make a license.
  *
  * Fishing takes 5-9 seconds; during this time, the player keep standing next to
@@ -44,7 +44,7 @@ public class FishSource extends PlayerActivityEntity {
 	/**
 	 * The equipment needed.
 	 */
-	private static final String NEEDED_EQUIPMENT = "fishing rod";
+	private static final String NEEDED_EQUIPMENT = "钓鱼杆";
 
 	/**
 	 * The name of the item to be caught.

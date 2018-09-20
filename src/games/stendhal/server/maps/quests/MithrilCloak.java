@@ -209,7 +209,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("twilight_zone")) {
 			return res;
 		}
-		res.add("我给I gave Ida the twilight elixir to restore her health. But she got behind on her other jobs. Now I must go and find a 蓝色条纹斗篷 to take Josephine before Ida can work for me.");
+		res.add("我给I gave Ida the 莹光药剂 to restore her health. But she got behind on her other jobs. Now I must go and find a 蓝色条纹斗篷 to take Josephine before Ida can work for me.");
 		res.add("我给了 Ida twilight 药剂恢复她的神智, 但她不敢再去工作, 在 ida 可以工作之前, 我必须离开并找到蓝色丝带斗篷带给 Josephine .");
 		if (questState.equals("taking_striped_cloak")) {
 			return res;

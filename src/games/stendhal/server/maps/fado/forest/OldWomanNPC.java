@@ -121,7 +121,7 @@ public class OldWomanNPC implements ZoneConfigurator {
 				addReply("杰夫", "Such a gentle and nice young boy. I know that he waits for my return but I'm not ready yet.");
 				addQuest("I don't have any quest for you at the moment.");
 				addHelp("Visit some of my new #friends here. They are so nice and gentle!");
-				addReply("friend", "Aldrin makes really tasty honey and his bees are hard workers for keeping the quality safe.");
+				addReply("friend", "Aldrin makes really tasty 蜂蜜 and his bees are hard workers for keeping the quality safe.");
 				addOffer("Sorry but I don't have anything to sell.");
 				addGoodbye("Bye and please be gentle to my son.");
 			}

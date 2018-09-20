@@ -271,22 +271,22 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("木头", "没有东西, 希望上面木头能掉下来. ");
+			passiveEntityrespawnPoint = new VegetableGrower("木头", "没有东西, 希望上面木头能掉下来.");
 			passiveEntityrespawnPoint.put("menu", "Pick|Use");
-			passiveEntityrespawnPoint.setDescription("一根木头倒在地下. ");
+			passiveEntityrespawnPoint.setDescription("一根木头倒在地下.");
 			break;
 		case 1:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("iron ore", 3000);
-			passiveEntityrespawnPoint.setDescription("你发现这些矿脉中可能存在铁矿. ");
+			passiveEntityrespawnPoint.setDescription("你发现这些矿脉中可能存在铁矿.");
 			break;
 
 		case 2:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("gold bar", 9000);
-			passiveEntityrespawnPoint.setDescription("这里金光闪烁. ");
+			passiveEntityrespawnPoint.setDescription("这里金光闪烁.");
 			break;
 		case 3:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("mithril bar", 16000);
-			passiveEntityrespawnPoint.setDescription("这里银光闪闪. ");
+			passiveEntityrespawnPoint.setDescription("这里银光闪闪.");
 			break;
 		case 4:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("gold nugget", 6000);
@@ -294,7 +294,7 @@ public class PassiveEntityRespawnPointFactory {
 			break;
 		case 5:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("mithril nugget", 12000);
-			passiveEntityrespawnPoint.setDescription("我是一小块mithril nugget矿. ");
+			passiveEntityrespawnPoint.setDescription("我是一小块mithril nugget矿.");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;
@@ -357,11 +357,11 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new GrainField("小麦", Arrays.asList("镰刀", "旧的大镰刀", "镰刀", "黑镰刀"));
+			passiveEntityrespawnPoint = new GrainField("小麦", Arrays.asList("镰刀", "旧的大镰刀", "大镰刀", "黑镰刀"));
 			break;
 
 		case 1:
-			passiveEntityrespawnPoint = new GrainField("sugar cane", Arrays.asList("镰刀", "旧的大镰刀", "镰刀", "黑镰刀"));
+			passiveEntityrespawnPoint = new GrainField("甘蔗", Arrays.asList("镰刀", "旧的大镰刀", "大镰刀", "黑镰刀"));
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

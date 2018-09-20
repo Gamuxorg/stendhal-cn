@@ -58,7 +58,7 @@ public class ConfectionerApplePieNPC implements ZoneConfigurator {
 
 				addReply("gertha",
 					"She's my twin sister and we live here together... Like me, she also likes to #bake fruit pies!");
-				addReply("honey",
+				addReply("蜂蜜",
 					"You should look for the local beekeeper a little north and then west of here...");
 				addReply("牛奶",
 					"Perhaps you should visit some farm where you see they have cows...");
@@ -82,7 +82,7 @@ public class ConfectionerApplePieNPC implements ZoneConfigurator {
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", Integer.valueOf(2));
-				requiredResources.put("honey", Integer.valueOf(1));
+				requiredResources.put("蜂蜜", Integer.valueOf(1));
 				requiredResources.put("牛奶", Integer.valueOf(1));
 				requiredResources.put("egg", Integer.valueOf(1));
 				requiredResources.put("苹果", Integer.valueOf(1));

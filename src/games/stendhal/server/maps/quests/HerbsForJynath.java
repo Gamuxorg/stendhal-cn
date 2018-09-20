@@ -152,7 +152,7 @@ public class HerbsForJynath extends AbstractQuest {
             ConversationPhrases.QUEST_MESSAGES,
             new QuestCompletedCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
-            "谢谢你的药草. 现在我可以制作魔法药水了!",
+            "谢谢你的药草. 现在我可以制作魔力药水了!",
             null);
     }
 
@@ -180,7 +180,7 @@ public class HerbsForJynath extends AbstractQuest {
             ConversationPhrases.GREETING_MESSAGES,
             new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT)),
             ConversationStates.ATTENDING,
-            "欢迎! 需要我的帮助吗? 你带来我要的 #药草 了吧. 我要用它们制作魔法药水.",
+            "欢迎! 需要我的帮助吗? 你带来我要的 #药草 了吧. 我要用它们制作魔力药水.",
             null);
 
         // add a yes response to the above

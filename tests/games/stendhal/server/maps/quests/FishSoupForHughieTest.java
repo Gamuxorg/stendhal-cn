@@ -74,9 +74,9 @@ public class FishSoupForHughieTest {
 		en.step(player, "hi");
 		assertEquals("Goeden dag!", getReply(npc));
 		en.step(player, "offer");
-		assertEquals("I sell butter and 牛奶.", getReply(npc));
+		assertEquals("I sell 奶油 and 牛奶.", getReply(npc));
 		en.step(player, "help");
-		assertEquals("I can sell you a bottle of 牛奶 or some butter from our dairy cows if you like.", getReply(npc));
+		assertEquals("I can sell you a bottle of 牛奶 or some 奶油 from our dairy cows if you like.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("If you can write Junit tests then my daughter needs you. Just ask 迪金斯 how to help the project.", getReply(npc));
 		en.step(player, "job");
@@ -97,32 +97,32 @@ public class FishSoupForHughieTest {
 		en.step(player, "hi");
 		assertEquals("Hi, I really could do with a #favor, please.", getReply(npc));
 		en.step(player, "favor");
-		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some fish soup?", getReply(npc));
+		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some 鱼汤?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Oh no, please, he's so sick.", getReply(npc));
 
 		assertEquals(player.getQuest(questSlot), "rejected");
 
 		en.step(player, "task");
-		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some fish soup?", getReply(npc));
+		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some 鱼汤?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Thank you! You can ask Florence Bouillabaisse to make you fish soup. I think she's in Ados market somewhere.", getReply(npc));
+		assertEquals("Thank you! You can ask Florence Bouillabaisse to make you 鱼汤. I think she's in Ados market somewhere.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye.", getReply(npc));
 
 		assertEquals(player.getQuest(questSlot), "start");
 
 		en.step(player, "hi");
-		assertEquals("You're back already? Hughie is getting sicker! Don't forget the fish soup for him, please. I promise to reward you.", getReply(npc));
+		assertEquals("You're back already? Hughie is getting sicker! Don't forget the 鱼汤 for him, please. I promise to reward you.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("You already promised me to bring me some fish soup for Hughie! Please hurry!", getReply(npc));
+		assertEquals("You already promised me to bring me some 鱼汤 for Hughie! Please hurry!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye.", getReply(npc));
 
-		PlayerTestHelper.equipWithItem(player, "fish soup");
+		PlayerTestHelper.equipWithItem(player, "鱼汤");
 
 		en.step(player, "hi");
-		assertEquals("Hi, you've got fish soup, I see, is that for Hughie?", getReply(npc));
+		assertEquals("Hi, you've got 鱼汤, I see, is that for Hughie?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Oh...but my poor boy ... ", getReply(npc));
 		en.step(player, "bye");
@@ -133,7 +133,7 @@ public class FishSoupForHughieTest {
 		final double karma  = player.getKarma();
 
 		en.step(player, "hi");
-		assertEquals("Hi, you've got fish soup, I see, is that for Hughie?", getReply(npc));
+		assertEquals("Hi, you've got 鱼汤, I see, is that for Hughie?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Thank you! I will always be in your favour. I will feed it to Hughie when he wakes. Please take these potions, they did nothing for him.", getReply(npc));
 		// [17:37] kymara earns 200 experience points.
@@ -144,7 +144,7 @@ public class FishSoupForHughieTest {
 		assertEquals(xp + 200, player.getXP());
 		assertThat(player.getKarma(), greaterThan(karma));
 		assertTrue(player.isEquipped("potion", 10));
-		assertFalse(player.isEquipped("fish soup"));
+		assertFalse(player.isEquipped("鱼汤"));
 		assertTrue(quest.isCompleted(player));
 
 		en.step(player, "hi");
@@ -156,7 +156,7 @@ public class FishSoupForHughieTest {
 		en.step(player, "job");
 		assertEquals("My brother runs this farm. I just look after my son here.", getReply(npc));
 		en.step(player, "help");
-		assertEquals("Philomena can sell you 牛奶 and butter.", getReply(npc));
+		assertEquals("Philomena can sell you 牛奶 and 奶油.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye.", getReply(npc));
 
@@ -176,7 +176,7 @@ public class FishSoupForHughieTest {
 		en.step(player, "hi");
 		assertEquals("Hello again.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("My Hughie is getting sick again! Please could you bring another bowl of fish soup? It helped last time.", getReply(npc));
+		assertEquals("My Hughie is getting sick again! Please could you bring another bowl of 鱼汤? It helped last time.", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Oh no, please, he's so sick.", getReply(npc));
 		en.step(player, "bye");
@@ -185,9 +185,9 @@ public class FishSoupForHughieTest {
 		en.step(player, "hi");
 		assertEquals("Hi, I really could do with a #favor, please.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some fish soup?", getReply(npc));
+		assertEquals("My poor boy is sick and the potions I give him aren't working! Please could you fetch him some 鱼汤?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Thank you! You can ask Florence Bouillabaisse to make you fish soup. I think she's in Ados market somewhere.", getReply(npc));
+		assertEquals("Thank you! You can ask Florence Bouillabaisse to make you 鱼汤. I think she's in Ados market somewhere.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye.", getReply(npc));
 	}
