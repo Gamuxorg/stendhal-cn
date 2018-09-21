@@ -32,13 +32,13 @@ import games.stendhal.server.maps.Region;
 /**
  * QUEST: McPegleg's IOU
  *
- * PARTICIPANTS: - a corpse in kanmararn - McPegleg
+ * PARTICIPANTS: - a corpse in 卡梅伦 - McPegleg
  *
- * NOTE: The corpse with contains the IOU is created in KanmararnSoldiers.java
+ * NOTE: The corpse with contains the IOU is created in 卡梅伦Soldiers.java
  * Without it this quest cannot be started (so the player won't notice the
  * problem at all).
  *
- * STEPS: - find IOU in a corpse in kanmararn - bring it to McPegleg
+ * STEPS: - find IOU in a corpse in 卡梅伦 - bring it to McPegleg
  *
  * REWARD: - 250 money
  *
@@ -53,7 +53,7 @@ public class McPeglegIOU extends AbstractQuest {
 		return QUEST_SLOT;
 	}
 	private void step_1() {
-		// find the IOU in a corpse in kanmararn.
+		// find the IOU in a corpse in 卡梅伦.
 		// this is implemented in KanmararnSoldiers
 	}
 

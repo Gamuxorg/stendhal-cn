@@ -60,7 +60,7 @@ public class ZoneNotifier {
             process(player, ZoneEventType.VISIT_SUB2_SEMOS_CATACOMBS);
         } else if (destinationZone.equals("1_kikareukin_cave")) {
             process(player, ZoneEventType.VISIT_KIKAREUKIN_CAVE);
-        } else if (destinationZone.equals("-7_kanmararn_prison")) {
+        } else if (destinationZone.equals("-7_卡梅伦_监狱")) {
             process(player, ZoneEventType.VISIT_KANMARARN_PRISON);
         } else if (destinationZone.equals("-1_fado_great_cave_w2")) {
             process(player, ZoneEventType.VISIT_IMPERIAL_CAVES);

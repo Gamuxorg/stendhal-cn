@@ -57,7 +57,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: The Obsidian Knife.
+ * QUEST: The 黑曜石刀.
  *
  * PARTICIPANTS:
  * <ul>
@@ -71,15 +71,15 @@ import games.stendhal.server.maps.Region;
  * <li>Then, Alrak is bored and asks for a book</li>
  * <li>Get the book from Ceryl, and remember the name of who it is for</li>
  * <li>Bring the book to Alrak - he reads it for 3 days</li>
- * <li>After 3 days Alrak has learned how to make a knife from obsidian</li>
+ * <li>After 3 days Alrak has learned how to make a knife from 黑曜石</li>
  * <li>Provided you have high enough level, you can continue</li>
- * <li>Get obsidian for the blade and a fish for the fish bone handle</li>
+ * <li>Get 黑曜石 for the blade and a fish for the fish bone handle</li>
  * <li>Alrak makes the knife for you</li>
  * </ul>
  *
  * REWARD:
  * <ul>
- * <li>Obsidian Knife</li>
+ * <li>黑曜石刀</li>
  * <li>11500 XP</li>
  * <li> lots of karma (total 85 + (5 | -5))
  * </ul>
@@ -159,7 +159,7 @@ public class ObsidianKnife extends AbstractQuest {
 		if (questState.equals("book_read")) {
 			return res;
 		}
-		res.add("Alrak 说如果我杀了一条黑龙, 并找到一个 cod 和一个 obsidian , 他会给我制作一把刀. ");
+		res.add("Alrak 说如果我杀了一条黑龙, 并找到一个 cod 和一个 黑曜石 , 他会给我制作一把刀. ");
 		if (questState.equals("knife_offered")
 		&& !player.hasKilled("black dragon")) {
 			return res;
@@ -169,17 +169,17 @@ public class ObsidianKnife extends AbstractQuest {
 				&& player.hasKilled("black dragon")) {
 			return res;
 		}
-		res.add("我拿到了 cod 和 obsidian.");
+		res.add("我拿到了 cod 和 黑曜石.");
 		if (questState.equals("knife_offered")
-				&& player.isEquipped("obsidian")
+				&& player.isEquipped("黑曜石")
 				&& player.isEquipped(FISH))  {
 			return res;
 		}
-		res.add("我把 cod 和 obsidian 带给 Alrak. 他现在正在给我打造一把刀. ");
+		res.add("我把 cod 和 黑曜石 带给 Alrak. 他现在正在给我打造一把刀. ");
 		if (questState.startsWith("forging")) {
 			return res;
 		}
-		res.add("我有了自已的obsidian knife! 这太帅了!");
+		res.add("我有了自已的黑曜石刀! 这太帅了!");
 		if (questState.equals("done")) {
 			return res;
 		}
@@ -410,28 +410,28 @@ public class ObsidianKnife extends AbstractQuest {
 						new QuestStateStartsWithCondition(QUEST_SLOT, "reading;"),
 						new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_DAYS * MINUTES_IN_DAYS)),
 				ConversationStates.QUEST_2_OFFERED,
-				"I've finished reading! That was really interesting. I learned how to make a special #knife from #obsidian.",
+				"I've finished reading! That was really interesting. I learned how to make a special #knife from #黑曜石.",
 				new SetQuestAction(QUEST_SLOT, "book_read"));
 
 
 		npc.add(ConversationStates.QUEST_2_OFFERED,
-				"obsidian",
+				"黑曜石",
 				new LevelGreaterThanCondition(REQUIRED_LEVEL),
 				ConversationStates.QUEST_2_OFFERED,
-				"That book says that the black gem, obsidian, can be used to make a very sharp cutting edge. Fascinating! If you slay a black dragon to bring it, I'll make a #knife for you.",
+				"That book says that the black gem, 黑曜石, can be used to make a very sharp cutting edge. Fascinating! If you slay a black dragon to bring it, I'll make a #knife for you.",
 				new SetQuestAction(QUEST_SLOT, "knife_offered"));
 
 		npc.add(ConversationStates.QUEST_2_OFFERED,
 				"knife",
 				new LevelGreaterThanCondition(REQUIRED_LEVEL),
 				ConversationStates.QUEST_2_OFFERED,
-				"I'll make an obsidian knife if you can slay a black dragon and get the gem which makes the blade. Bring a "
+				"I'll make an 黑曜石刀 if you can slay a black dragon and get the gem which makes the blade. Bring a "
 						+ FISH
 						+ " so that I can make the bone handle, too.",
 				new SetQuestAction(QUEST_SLOT, "knife_offered"));
 
 		npc.add(ConversationStates.QUEST_2_OFFERED,
-				Arrays.asList("obsidian", "knife"),
+				Arrays.asList("黑曜石", "knife"),
 				new NotCondition(new LevelGreaterThanCondition(REQUIRED_LEVEL)),
 				ConversationStates.ATTENDING,
 				"Well, I don't think you're quite ready for such a dangerous weapon yet. How about you come back when you're above level " + Integer.toString(REQUIRED_LEVEL) + "?",
@@ -452,13 +452,13 @@ public class ObsidianKnife extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "knife_offered"),
 						new KilledCondition("black dragon"),
-						new PlayerHasItemWithHimCondition("obsidian"),
+						new PlayerHasItemWithHimCondition("黑曜石"),
 						new PlayerHasItemWithHimCondition(FISH)),
 				ConversationStates.IDLE,
 				"You found the gem for the blade and the fish bone to make the handle! I'll start work right away. Come back in "
 				+ REQUIRED_MINUTES + " minutes.",
 				new MultipleActions(
-				new DropItemAction("obsidian"),
+				new DropItemAction("黑曜石"),
 				new DropItemAction(FISH),
 				new SetQuestAction(QUEST_SLOT, "forging;"),
 				new SetQuestToTimeStampAction(QUEST_SLOT, 1)));
@@ -470,10 +470,10 @@ public class ObsidianKnife extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "knife_offered"),
 						new NotCondition(new KilledCondition("black dragon")),
-						new PlayerHasItemWithHimCondition("obsidian"),
+						new PlayerHasItemWithHimCondition("黑曜石"),
 						new PlayerHasItemWithHimCondition(FISH)),
 				ConversationStates.ATTENDING,
-				"Didn't you hear me properly? I told you to go slay a black dragon for the obsidian, not buy it! How do I know this isn't a fake gem? *grumble* I'm not making a special knife for someone who is scared to face a dragon.",
+				"Didn't you hear me properly? I told you to go slay a black dragon for the 黑曜石, not buy it! How do I know this isn't a fake gem? *grumble* I'm not making a special knife for someone who is scared to face a dragon.",
 				null);
 
 		// player says hi to NPC when not equipped with the fish and the gem
@@ -483,12 +483,12 @@ public class ObsidianKnife extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "knife_offered"),
 						new NotCondition(
 								new AndCondition(
-										new PlayerHasItemWithHimCondition("obsidian"),
+										new PlayerHasItemWithHimCondition("黑曜石"),
 										new PlayerHasItemWithHimCondition(FISH)))),
 				ConversationStates.ATTENDING,
-				"Hello again. Don't forget I offered to make that obsidian knife, if you bring me a "
+				"Hello again. Don't forget I offered to make that 黑曜石刀, if you bring me a "
 					+ FISH
-					+ " and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.",
+					+ " and a piece of 黑曜石 from a black dragon you killed. In the meantime if I can #help you, just say the word.",
 				null);
 
 		npc.add(ConversationStates.IDLE,
@@ -504,7 +504,7 @@ public class ObsidianKnife extends AbstractQuest {
 		reward.add(new IncreaseXPAction(10000));
 		reward.add(new IncreaseKarmaAction(40));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
-		reward.add(new EquipItemAction("obsidian knife", 1, true));
+		reward.add(new EquipItemAction("黑曜石刀", 1, true));
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
@@ -519,7 +519,7 @@ public class ObsidianKnife extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Obsidian Knife",
+				"黑曜石刀",
 				"A skilled dwarf blacksmith in Wo'fol is getting hungry, and bored...",
 				false);
 		prepareQuestOfferingStep();

@@ -21,9 +21,9 @@
     </equipable>
   </item>
 
-  <item name="kokuda">
+  <item name="科科达">
     <type class="herb" subclass="kokuda" tileid="-1"/>
-    <description>You see a kokuda. It has medicinal properties, if the right person uses it.</description>
+    <description>You see a 科科达. It has medicinal properties, if the right person uses it.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -41,9 +41,9 @@
     </equipable>
   </item>
 
-  <item name="kekik">
+  <item name="百里香">
     <type class="herb" subclass="kekik" tileid="-1"/>
-    <description>You see a kekik. It is a herb which can have healing properties.</description>
+    <description>You see a 百里香. It is a herb which can have healing properties.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -61,9 +61,9 @@
     </equipable>
   </item>
 
-  <item name="mandragora">
+  <item name="曼德拉草">
     <type class="herb" subclass="mandragora" tileid="-1"/>
-    <description>You see a root of mandragora. It has medicinal properties, if the right person uses it.</description>
+    <description>You see a root of 曼德拉草. It has medicinal properties, if the right person uses it.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -81,9 +81,9 @@
     </equipable>
   </item>
 
-  <item name="sclaria">
+  <item name="鼠尾草">
     <type class="herb" subclass="sclaria" tileid="-1"/>
-    <description>You see the herb sclaria. The smell is calming.</description>
+    <description>You see the herb 鼠尾草. The smell is calming.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -101,9 +101,9 @@
     </equipable>
   </item>
 
-  <item name="reindeer moss">
+  <item name="石蕊">
     <type class="herb" subclass="reindeer_moss" tileid="-1"/>
-    <description>You see reindeer moss, something that grows only around 塞门镇. It is quite a delicacy to reindeer, but extremely bitter to humans.</description>
+    <description>You see 石蕊, something that grows only around 塞门镇. It is quite a delicacy to reindeer, but extremely bitter to humans.</description>
 	<implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1"/>

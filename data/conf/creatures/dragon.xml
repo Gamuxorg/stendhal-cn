@@ -23,7 +23,7 @@
       <item value="大治疗剂" quantity="[1,2]" probability="50.0"/>
       <item value="绿龙斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="绿龙盾" quantity="[1,1]" probability="2.0"/>
-      <item value="emerald" quantity="[1,2]" probability="10.0"/>
+      <item value="翡翠" quantity="[1,2]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -63,7 +63,7 @@
       <item value="money" quantity="[90,200]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,3]" probability="50.0"/>
       <item value="赤魔剑" quantity="[1,1]" probability="0.02"/>
-      <item value="carbuncle" quantity="[1,2]" probability="10.0"/>
+      <item value="红宝石" quantity="[1,2]" probability="10.0"/>
       <item value="红龙斗篷" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
@@ -107,7 +107,7 @@
       <item value="money" quantity="[10,60]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,1]" probability="50.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
-      <item value="emerald" quantity="[1,4]" probability="5.0"/>
+      <item value="翡翠" quantity="[1,4]" probability="5.0"/>
       <item value="绿龙盾" quantity="[1,1]" probability="0.25"/>
       <item value="绿龙斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>
@@ -180,7 +180,7 @@
     <drops>
       <item value="大治疗剂" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[20,100]" probability="100.0"/>
-      <item value="sapphire" quantity="[1,4]" probability="10.0"/>
+      <item value="蓝宝石" quantity="[1,4]" probability="10.0"/>
       <item value="蓝龙斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="蓝色盔甲" quantity ="[1,1]" probability="7.0"/>
       <item value="蓝盾" quantity ="[1,1]" probability ="4.5"/>
@@ -206,7 +206,7 @@
   
   <creature name="red dragon">
     <type class="huge_animal" subclass="red_dragon" tileid="huge_animal.png:7"/>
-    <description>You see into the emerald eyes of a red dragon. With these it can spot prey in the darkness. It's red scales serve it well, reflecting any light that shines on them blinding enemies. The scales are prized for their beauty, and difficult to obtain from such a ferocious beast.</description>
+    <description>You see into the 翡翠 eyes of a red dragon. With these it can spot prey in the darkness. It's red scales serve it well, reflecting any light that shines on them blinding enemies. The scales are prized for their beauty, and difficult to obtain from such a ferocious beast.</description>
     <attributes>
       <atk value="777"/>
       <def value="115"/>
@@ -221,7 +221,7 @@
     <drops>
       <item value="大治疗剂" quantity="[2,4]" probability="80.0"/>
       <item value="money" quantity="[60,160]" probability="100.0"/>
-      <item value="carbuncle" quantity="[1,4]" probability="10.0"/>
+      <item value="红宝石" quantity="[1,4]" probability="10.0"/>
       <item value="红龙斗篷" quantity="[1,1]" probability="1.5"/>
     </drops>
     <equips>
@@ -259,7 +259,7 @@
     <drops>
       <item value="大治疗剂" quantity="[1,3]" probability="70.0"/>
       <item value="money" quantity="[300,1000]" probability="100.0"/>
-      <item value="obsidian" quantity="[1,4]" probability="10.0"/>
+      <item value="黑曜石" quantity="[1,4]" probability="10.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0050"/>
       <item value="黑龙斗篷" quantity="[1,1]" probability="1.5"/>
     </drops>
@@ -305,7 +305,7 @@
       <item value="强治疗剂" quantity="[1,1]" probability="50.0"/>
       <item value="money" quantity="[30,100]" probability="100.0"/>
       <item value="gold nugget" quantity="[2,5]" probability="10.0"/>
-      <item value="diamond" quantity="[1,1]" probability="2.0"/>
+      <item value="钻石" quantity="[1,1]" probability="2.0"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>
@@ -345,7 +345,7 @@
     <drops>
       <item value="强治疗剂" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[30,200]" probability="100.0"/>
-      <item value="sapphire" quantity="[2,5]" probability="10.0"/>
+      <item value="蓝宝石" quantity="[2,5]" probability="10.0"/>
       <item value="蓝龙斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>

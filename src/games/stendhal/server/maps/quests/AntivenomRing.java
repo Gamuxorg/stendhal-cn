@@ -64,7 +64,7 @@ import games.stendhal.server.util.ItemCollection;
  * <ul>
  * <li>Bring note to apothecary to 詹姆森.</li>
  * <li>As a favor to 克拉丝, 詹姆森 will help you to strengthen your medicinal ring.</li>
- * <li>Bring 詹姆森 a medicinal ring, venom gland, 2 mandragora and 5 fairycakes.</li>
+ * <li>Bring 詹姆森 a medicinal ring, venom gland, 2 曼德拉草 and 5 fairycakes.</li>
  * <li>詹姆森 requires a bottle big enough to hold venom extracted from gland.</li>
  * <li>Bring 詹姆森 a giant bottle.</li>
  * <li>詹姆森 realizes he doesn't have a way to extract the venom.</li>
@@ -94,13 +94,13 @@ public class AntivenomRing extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "antivenom_ring";
 
-	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;mandragora=2;仙女蛋糕=5";
+	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;曼德拉草=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create cobra venom */
 	public static final String EXTRACTION_ITEMS = "venom gland=1;vial=1";
 
 	/* Items taken to apothecary to create antivenom */
-	public static final String MIX_ITEMS = "cobra venom=1;mandragora=2;仙女蛋糕=5";
+	public static final String MIX_ITEMS = "cobra venom=1;曼德拉草=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create antivenom ring */
 	public static final int REQUIRED_MONEY = 10000;
@@ -312,7 +312,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 
 		npc.add(ConversationStates.QUESTION_1,
-				Arrays.asList("mandragora", "mandragoras", "root of mandragora", "roots of mandragora", "root of mandragoras", "roots of mandragoras"),
+				Arrays.asList("曼德拉草", "曼德拉草s", "root of 曼德拉草", "roots of 曼德拉草", "root of 曼德拉草s", "roots of 曼德拉草s"),
 				null,
 				ConversationStates.QUESTION_1,
 				"This is my favorite of all herbs and one of the most rare. Out past Kalavan there is a hidden path in the trees. At the end you will find what you are looking for.",
@@ -371,7 +371,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("mandragora", "mandragoras", "root of mandragora", "roots of mandragora", "root of mandragoras", "roots of mandragoras"),
+				Arrays.asList("曼德拉草", "曼德拉草s", "root of 曼德拉草", "roots of 曼德拉草", "root of 曼德拉草s", "roots of 曼德拉草s"),
 				null,
 				ConversationStates.ATTENDING,
 				"This is my favorite of all herbs and one of the most rare. Out past Kalavan there is a hidden path in the trees. At the end you will find what you are looking for.",

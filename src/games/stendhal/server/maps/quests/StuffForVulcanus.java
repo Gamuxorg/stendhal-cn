@@ -266,7 +266,7 @@ public class StuffForVulcanus extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("I met Vulcanus in Kotoch.");
+		res.add("I met Vulcanus in 科多奇.");
 		if (questState.equals("rejected")) {
 			res.add("I don't want an immortal sword.");
 			return res;

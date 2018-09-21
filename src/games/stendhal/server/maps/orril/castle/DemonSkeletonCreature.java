@@ -40,7 +40,7 @@ public class DemonSkeletonCreature implements ZoneConfigurator {
 
 	private void buildLichPalace(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
-		final Creature creature = new ItemGuardCreature(manager.getCreature("demon skeleton"), "lich gold key");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("demon skeleton"), "巫妖金钥匙");
 
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 54, 48, creature, 1);
 

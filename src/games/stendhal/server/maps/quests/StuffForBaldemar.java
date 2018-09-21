@@ -85,15 +85,15 @@ public class StuffForBaldemar extends AbstractQuest {
 	public StuffForBaldemar() {
 		itemCollector.require().item("mithril bar").pieces(20)
 				.bySaying("I cannot #forge it without the missing %s. After all, this IS a 密银盾.");
-		itemCollector.require().item("obsidian")
+		itemCollector.require().item("黑曜石")
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
-		itemCollector.require().item("diamond")
+		itemCollector.require().item("钻石")
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
-		itemCollector.require().item("emerald").pieces(5)
+		itemCollector.require().item("翡翠").pieces(5)
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
-		itemCollector.require().item("carbuncle").pieces(10)
+		itemCollector.require().item("红宝石").pieces(10)
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
-		itemCollector.require().item("sapphire").pieces(10)
+		itemCollector.require().item("蓝宝石").pieces(10)
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
 		itemCollector.require().item("黑盾").bySaying("I need %s to form the framework for your new shield.");
 		itemCollector.require().item("附魔钢盾")

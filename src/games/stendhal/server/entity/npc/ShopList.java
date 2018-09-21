@@ -139,11 +139,11 @@ public final class ShopList {
 		shops.add("sellrings", "订婚戒指", 5000);
 		// gold and gemstones
 		shops.add("buyprecious", "gold bar", 250);
-		shops.add("buyprecious", "emerald", 200);
-		shops.add("buyprecious", "sapphire", 400);
-		shops.add("buyprecious", "carbuncle", 600);
-		shops.add("buyprecious", "diamond", 800);
-		shops.add("buyprecious", "obsidian", 1000);
+		shops.add("buyprecious", "翡翠", 200);
+		shops.add("buyprecious", "蓝宝石", 400);
+		shops.add("buyprecious", "红宝石", 600);
+		shops.add("buyprecious", "钻石", 800);
+		shops.add("buyprecious", "黑曜石", 1000);
 		shops.add("buyprecious", "mithril bar", 2500);
 
 		// rare weapons shop
@@ -337,9 +337,9 @@ public final class ShopList {
 		shops.add("buyveggiesandherbs", "西红柿", 20);
 		shops.add("buyveggiesandherbs", "洋葱", 20);
 		shops.add("buyveggiesandherbs", "海芋", 10);
-		shops.add("buyveggiesandherbs", "kokuda", 200);
-		shops.add("buyveggiesandherbs", "kekik", 25);
-		shops.add("buyveggiesandherbs", "sclaria", 25);
+		shops.add("buyveggiesandherbs", "科科达", 200);
+		shops.add("buyveggiesandherbs", "百里香", 25);
+		shops.add("buyveggiesandherbs", "鼠尾草", 25);
 
 		// gnome village buyer in 0 ados mountain n2 w2)
 		shops.add("buy4gnomes", "皮甲", 25);

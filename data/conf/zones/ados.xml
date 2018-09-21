@@ -704,7 +704,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
         
@@ -713,7 +713,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -722,7 +722,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -731,7 +731,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -740,7 +740,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -2273,7 +2273,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="5" y="11">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buychaos</parameter>
-        <parameter name="title">Hunel (Kanmararn) suspected to buy:</parameter>
+        <parameter name="title">Hunel (卡梅伦) suspected to buy:</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">transparent</attribute>
@@ -2703,7 +2703,7 @@ To make 1 起司香肠:
 
 My fee:
 
-1 black pearl (to make necklace for the little woman)
+1 黑珍珠 (to make necklace for the little woman)
       </attribute>
       <attribute name="class">blackboard</attribute>
     </entity> 

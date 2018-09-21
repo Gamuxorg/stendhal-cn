@@ -49,7 +49,7 @@
     <point-of-interest x="62" y="40">
       <name>Kotoch Entrance</name>
       <type>dungeon</type>
-      <description>Kotoch is a Dungeon which lies in an area of the Orril Mountains. There are lots of routes which you can choose but be careful and keep your eyes open for danger. (Player Level 20 - 65)</description>
+      <description>科多奇 is a Dungeon which lies in an area of the Orril Mountains. There are lots of routes which you can choose but be careful and keep your eyes open for danger. (Player Level 20 - 65)</description>
       <url>https://stendhalgame.org/dungeon/kotoch.html</url>
     </point-of-interest>
 
@@ -844,7 +844,7 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
   </zone>
   <!-- Level -1 -->
 
-  <zone name="-1_kotoch_entrance" level="-1" x="499744" y="500128"
+  <zone name="-1_科多奇_入口" level="-1" x="499744" y="500128"
     file="Level -1/kotoch/entrance.tmx">
   </zone>
 
@@ -874,7 +874,7 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.LockedDoor">
         <parameter name="class">skulldoor_s</parameter>
-        <parameter name="key">dungeon silver key</parameter>
+        <parameter name="key">龙之银钥匙</parameter>
       </implementation>
     </portal>
 
@@ -903,7 +903,7 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
 
   <!-- Level -2 -->
 
-  <zone name="-2_kotoch_entrance" level="-2" x="499744" y="500128"
+  <zone name="-2_科多奇_入口" level="-2" x="499744" y="500128"
     file="Level -2/kotoch/entrance.tmx">
     <configurator class-name="games.stendhal.server.maps.kotoch.OrcSamanNPC" />
   </zone>
@@ -941,7 +941,7 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.LockedDoor">
         <parameter name="class">skulldoor_n</parameter>
-        <parameter name="key">lich gold key</parameter>
+        <parameter name="key">巫妖金钥匙</parameter>
       </implementation>
     </portal>
 
@@ -1031,13 +1031,13 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
 
   <!-- Level -3 -->
 
-  <zone name="-3_kotoch_prison" level="-3" x="499744" y="500224"
+  <zone name="-3_科多奇_监狱" level="-3" x="499744" y="500224"
     file="Level -3/kotoch/prison.tmx">
     <portal x="15" y="10" ref="kotoch_lock_outside">
-      <destination zone="-3_kotoch_prison" ref="kotoch_lock_inside" />
+      <destination zone="-3_科多奇_监狱" ref="kotoch_lock_inside" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kotoch prison key</parameter>
+        <parameter name="key">科多奇监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
@@ -1046,7 +1046,7 @@ You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and so
         class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
     </portal>
     <portal x="15" y="9" ref="kotoch_exit_inside">
-      <destination zone="-3_kotoch_prison" ref="kotoch_exit_outside" />
+      <destination zone="-3_科多奇_监狱" ref="kotoch_exit_outside" />
     </portal>
     <portal x="15" y="11" ref="kotoch_exit_outside">
       <implementation

@@ -45,7 +45,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
 
@@ -54,7 +54,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
 
@@ -600,7 +600,7 @@ where panning for gold is possible. this spot is south of Or'ril castle.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
   </zone>

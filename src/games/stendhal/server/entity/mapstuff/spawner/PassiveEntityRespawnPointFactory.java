@@ -198,16 +198,16 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("carbuncle", 6000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("红宝石", 6000);
 			passiveEntityrespawnPoint.setDescription("这里的矿脉有一些红色水晶的纹路. ");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("sapphire", 6000);
-			passiveEntityrespawnPoint.setDescription("这里的矿脉显示有sapphire存在的迹象. ");
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("蓝宝石", 6000);
+			passiveEntityrespawnPoint.setDescription("这里的矿脉显示有蓝宝石存在的迹象. ");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("emerald", 6000);
-			passiveEntityrespawnPoint.setDescription("这些石头里有emerald存在的迹象. ");
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("翡翠", 6000);
+			passiveEntityrespawnPoint.setDescription("这些石头里有翡翠存在的迹象. ");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;
@@ -333,18 +333,18 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new VegetableGrower("海芋");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("kekik");
+			passiveEntityrespawnPoint = new VegetableGrower("百里香");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new VegetableGrower("sclaria");
+			passiveEntityrespawnPoint = new VegetableGrower("鼠尾草");
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new VegetableGrower("mandragora");
+			passiveEntityrespawnPoint = new VegetableGrower("曼德拉草");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("reindeer moss", 300);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("石蕊", 300);
 			passiveEntityrespawnPoint
-					.setDescription("这里是reindeer moss生长的地方. ");
+					.setDescription("这里是石蕊生长的地方. ");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

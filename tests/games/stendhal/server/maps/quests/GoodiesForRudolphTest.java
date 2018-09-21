@@ -42,7 +42,7 @@ public class GoodiesForRudolphTest extends ZonePlayerAndNPCTestImpl {
 	private static final String ITEM_APPLE = "苹果";
 	private static final String ITEM_CARROT = "carrot";
 	private static final String ITEM_MONEY = "money";
-	private static final String ITEM_REINDEER_MOSS = "reindeer moss";
+	private static final String ITEM_REINDEER_MOSS = "石蕊";
 	private static final String ITEM_SNOWGLOBE = "snowglobe";
 
 	private static final String RUDOLPH_TALK_GREETING_DEFAULT = "Hi, my jolly friend. What a wonderful time of year this is!";
@@ -50,7 +50,7 @@ public class GoodiesForRudolphTest extends ZonePlayerAndNPCTestImpl {
 	private static final String RUDOLPH_TALK_GREETING_WITH_GOODIES = "Excuse me, please! I see you have delicious goodies. Are they for me?";
 	private static final String RUDOLPH_TALK_QUEST_OFFER = "I want some delicious goodies only you can help me get. Do you think you can help me?";
 	private static final String RUDOLPH_TALK_QUEST_REJECT = "Well, then I guess I'll just ask someone else for them. Woe is me.";
-	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in Semos. If you get 5 reindeer moss, 10 苹果s and 10 carrots, I'll give you a reward.";
+	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in Semos. If you get 5 石蕊, 10 苹果s and 10 carrots, I'll give you a reward.";
 	private static final String RUDOLPH_TALK_QUEST_GOODIES_REFUSED = "Well then, I certainly hope you find those goodies before I pass out from hunger.";
 	private static final String RUDOLPH_TALK_QUEST_GOODIES_OFFERED = "Oh, I am so excited! I have wanted to eat these things for so long. Thanks so much. And to borrow a phrase, Ho Ho Ho, Merry Christmas.";
 	private static final String RUDOLPH_TALK_QUEST_TOO_SOON = "Thank you very much for the goodies, but I don't have any other task for you this year. Have a wonderful holiday season.";

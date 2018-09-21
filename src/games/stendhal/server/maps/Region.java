@@ -31,7 +31,7 @@ public final class Region {
 	public static final String NALWOR_CITY = "纳尔沃城";
 	public static final String KIRDNEH = "Kirdneh";
 	public static final String KALAVAN = "Kalavan";
-	public static final String KOTOCH = "Kotoch";
+	public static final String KOTOCH = "科多奇";
 	public static final String ORRIL = "Or'ril";
 	public static final String ORRIL_DUNGEONS = "Or'ril Dungeons";
 	public static final String ORRIL_MINES = "Or'ril Mines";

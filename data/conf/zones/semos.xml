@@ -52,7 +52,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁上.</parameter>
+        <parameter name="message">门锁住了.</parameter>
       </implementation>
 	</entity>
 
@@ -84,7 +84,7 @@
     <point-of-interest x="65" y="85">
       <name>塞门雪人洞</name>
       <type>dungeon</type>
-      <description>进放这里之前最好换一身厚点的衣服. (Player Level 80 - 200)</description>
+      <description>进放这里之前最好换一身厚点的衣服. (建议等级 80 - 200)</description>
       <url>https://stendhalgame.org/dungeon/semos_yeti_cave.html</url>
     </point-of-interest>
 
@@ -217,8 +217,8 @@
     <entity x="15" y="10">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Reader" />
-      <attribute name="text">Kokuda 炖汤食谱:
-1 kokuda
+      <attribute name="text">科科达 炖汤食谱:
+1 科科达
 3 eggs
 2 数瓶水</attribute>
     </entity>
@@ -626,7 +626,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the first step of the test and the domain of Malleus."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是Malleus领域测试的第一步."</parameter>
       </implementation>
     </entity>
 
@@ -635,7 +635,7 @@
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="width">3</parameter>
         <parameter name="height">2</parameter>
-        <parameter name="enterMessage">You step onto a sparkling corner of the hexagram, this must be what Zekiel the guardian was talking about.</parameter>
+        <parameter name="enterMessage">你走到六角星其一的闪光的角, 这个角必须是 Zekiel the guardian 指定的.</parameter>
       </implementation>
     </entity>
 
@@ -644,7 +644,7 @@
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="width">2</parameter>
         <parameter name="height">3</parameter>
-        <parameter name="enterMessage">This looks like a creature matching the theme of Malleus ... perhaps this is the one to select.</parameter>
+        <parameter name="enterMessage">Malleus说的东西好像是一种生物...可能是要我选择一个.</parameter>
       </implementation>
     </entity>
 
@@ -668,8 +668,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","first_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Malleus. Now use the candle at the shimmering spot of the hexagram.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Malleus. Now use the candle at the shimmering spot of the hexagram.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "second_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Malleus 的问题. 现在去六角星发光的一角使用蜡烛.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Malleus 的问题. 现在去六角星发光的一角使用蜡烛.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "second_step")])</parameter>
       </implementation>
     </portal>
 
@@ -689,7 +689,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手拿蜡烛站到那里, 然后拿着蜡烛走过来, 它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -712,7 +712,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the second step of the test and the domain of Jaer."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是第二步Jear领域的测试."</parameter>
       </implementation>
     </entity>
 
@@ -746,8 +746,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","second_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Jaer. Now use the candle at the next shimmering spot of the hexagram.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Jaer. Now use the candle at the next shimmering spot of the hexagram.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "third_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你已选中 Jaer 问题的正确答案. 现在去六角形的下个发光角使用蜡烛.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已选中 Jaer 问题的正确答案. 现在去六角形的下个发光角使用蜡烛.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "third_step")])</parameter>
       </implementation>
     </portal>
 
@@ -762,7 +762,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -785,7 +785,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the third step of the test and the domain of 拉瓦夏克."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是第三步 拉瓦夏克 领域的测试."</parameter>
       </implementation>
     </entity>
 
@@ -824,8 +824,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","third_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of 拉瓦夏克. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of 拉瓦夏克. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你正确的选择了 拉瓦夏克 的问题. 这是全部测试的一小半. 去找找六角形的下个闪光角吧.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你正确的选择了 拉瓦夏克 的问题. 这是全部测试的一小半. 去找找六角形的下个闪光角吧.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -835,7 +835,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -858,7 +858,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the fourth step of the test and the domain of Cassandra."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是第四步 Cassandra 领域的测试."</parameter>
       </implementation>
     </entity>
 
@@ -887,8 +887,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fourth_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Cassandra. One triangle is ready. Use the candle at the shimmering spot of the other triangle.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Cassandra. One triangle is ready. Use the candle at the shimmering spot of the other triangle.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fifth_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Cassandra 的问题. 又一个角亮了. 在另一个三角形的一个发光的角使用蜡烛吧.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Cassandra 的问题. 又一个角亮了. 在另一个三角形的一个发光的角使用蜡烛吧.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fifth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -908,7 +908,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -931,7 +931,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the fifth step of the test and the domain of Silvanus."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是第五步 Silvanus 领域的测试."</parameter>
       </implementation>
     </entity>
 
@@ -970,8 +970,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fifth_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Silvanus. The next shimmering spot awaits you and the last step of the test too.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Silvanus. The next shimmering spot awaits you and the last step of the test too.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "sixth_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Silvanus 的问题. 去下个闪光角吧, 然后是最后一项测试.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Silvanus 的问题. 去下个闪光角吧, 然后是最后一项测试.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "sixth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -981,7 +981,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
         <parameter name="key">candle</parameter>
-        <parameter name="rejected">You must hold your candle over this spot, walk here with a candle and it will float.</parameter>
+        <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
     </portal>
@@ -1004,7 +1004,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the sixth and last step of the test and the domain of Elana."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "这是第六项, 也是最后一项Elana领域的测试."</parameter>
       </implementation>
     </entity>
 
@@ -1028,8 +1028,8 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","sixth_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Elana. Complete the hexagram and I will wait for you at the next stage. Please talk to me there to finish the quest.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Elana. Complete the hexagram and I will wait for you at the next stage. Please talk to me there to finish the quest.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "last_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Elana 的问题. 完成六角魔法阵, 然后我等你进入下一环节. 与我对话后完成任务.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Elana 的问题. 完成六角魔法阵, 然后我等你进入下一环节. 与我对话后完成任务.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "last_step")])</parameter>
       </implementation>
     </portal>
 
@@ -1291,7 +1291,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
 
@@ -1308,7 +1308,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestStartedCondition("vs_quest")</parameter>
-        <parameter name="rejected">You find it hard to enter. Perhaps you're not prepared for what is below.</parameter>
+        <parameter name="rejected">这里很难进入. 可能你还没有为下到墓室准备好.</parameter>
       </implementation>
     </portal>
 
@@ -1345,17 +1345,16 @@
 如果你种下一朵花, 你应该不是为了自已, 而是为了送给其他人. 人们常说：“噢, 那是我的花, 其他人不能碰！”...这让想摘走花的人常常感到很失望. 你需要用花给其他玩家制作礼物, 那么某一天你也会收到一些作为回报的花, 而其他人也会为别人种一些花作为礼物. :)
 如果你都种下和你摘走一样多的花, 世界将会多么美好. 所以你种下的花比采走的多一些, 那么最终你会得到比你的需求更多的花. :)
 如果每个人都这么想, 我们会得到一个更加美好的世界. 
-If everybody would think so, we were on the way to a better world...
 
- - signed by S.</attribute>
+ - S 提议.</attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="82" y="63">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-北: Old mine
-东: Mill
+北: 旧矿区
+东: 磨坊
 南: 塞门镇
     </attribute>
       <attribute name="class">signpost</attribute>
@@ -1387,7 +1386,7 @@ If everybody would think so, we were on the way to a better world...
       <attribute name="text">
 西南: 塞门镇
 东: 阿多斯 (路坏了)
-东南: Farmhouse
+东南: 农舍
     </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -1545,7 +1544,7 @@ If everybody would think so, we were on the way to a better world...
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
 
@@ -1604,21 +1603,21 @@ If everybody would think so, we were on the way to a better world...
     <entity x="43" y="40">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-和 赛特 说话卖出人的羊. 他出的价不很高, 但不幸的是没有买家市场...他只收购大个的羊(一般只收体重达到100的羊).
+要卖羊要和赛特谈. 虽然他出的价不很高, 但不幸的是没有其他卖家...而且他只收购大个的羊(体重达到100的羊).
    </attribute>
     </entity>
 
     <entity x="55" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-卖羊在 塞门, 就找 赛特 谈.
+在塞门售羊, 请与赛特讲.
    </attribute>
     </entity>
 
     <entity x="55" y="48">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-卖羊在 塞门, 就找 赛特 谈.
+在塞门售羊, 请与赛特讲.
    </attribute>
     </entity>
 
@@ -1683,7 +1682,7 @@ If everybody would think so, we were on the way to a better world...
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
 
@@ -1791,7 +1790,7 @@ If everybody would think so, we were on the way to a better world...
     </portal>
 
     <point-of-interest x="18" y="21">
-      <name>Semos 银行</name>
+      <name>塞门银库</name>
       <type>bank</type>
       <description>自由存取物品处</description>
       <url>https://stendhalgame.org/player-guide/faq.html#Banking</url>
@@ -1906,9 +1905,9 @@ If everybody would think so, we were on the way to a better world...
     <entity x="6" y="49">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-向西： Semos Village
-向东： Ados Rock
-向南： Nalwor forest and Or'ril castle
+向西： 塞门村庄
+向东： 阿多斯 巨石
+向南： 纳尔沃森林 与 Or'ril 城
             </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -1917,7 +1916,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="28" y="43">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a statue of birds.</attribute>
+      <attribute name="text">一只大鸟的雕像.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
     </entity>
@@ -1925,7 +1924,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="15" y="23">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">Outside Semos Bank, you see a huge, but fake, chest. It seems to be an advertisement.</attribute>
+      <attribute name="text">塞门银库的门口, 有一只很大的箱子, 但是假的, 只是作为宣传用.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
     </entity>
@@ -1933,7 +1932,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="5" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This huge book looks like a sign for Semos Library.</attribute>
+      <attribute name="text">塞门图书馆门上有个书本状的标志.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">3</attribute>
       <attribute name="height">2</attribute>
@@ -1955,24 +1954,24 @@ If everybody would think so, we were on the way to a better world...
     <entity x="6" y="42">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-TO OLD SEMOS VILLAGE WEST
+向西去塞门旧村庄
 
-Shepherds wanted: please ask 尼世亚
+牧羊人须知: 请找尼世亚
    </attribute>
     </entity>
 
     <entity x="26" y="40">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-DUNGEONS
+地牢
 
-Caution: These dungeons contain many rats, and more dangerous creatures. Enter at own risk.
+警告: 地牢中有很多老鼠和很多危险的怪物, 要量力而行.
    </attribute>
     </entity>
 
     <entity x="41" y="20">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Assistance needed, to help with 比萨 deliveries.</attribute>
+      <attribute name="text">本店招工  需要比萨外卖员.</attribute>
     </entity>
 
 
@@ -2004,8 +2003,8 @@ Caution: These dungeons contain many rats, and more dangerous creatures. Enter a
     <entity x="42" y="35">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You read: "The Old Semos Tavern" 
-This sounds like a very nice place to meet some interesting people and have a nice evening together.</attribute>
+      <attribute name="text">上面写着: "老塞门酒馆" 
+这里是偶遇其他人, 开始夜生活的地方.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2014,7 +2013,7 @@ This sounds like a very nice place to meet some interesting people and have a ni
     <entity x="53" y="34">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">According to the cross on the roof, this must be the Semos temple. You have the strange feeling that someone in there is already waiting for you...</attribute>
+      <attribute name="text">看屋顶上面的十字架就知道一定是教堂. 你感到一丝不安, 也许里面有人正等着你...</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2023,8 +2022,8 @@ This sounds like a very nice place to meet some interesting people and have a ni
     <entity x="44" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">The sign says: "Bakery and 比萨 delivery. Daily fresh 面包!"
-Ahh nice, you can already smell it. And in small letters below is added: "New! Leander's tasty 三明治s!"</attribute>
+      <attribute name="text">上面写着: "面包和比萨外卖. 刚出炉的面包!"
+哈, 真好闻. 下面还有行小字: "最新!烘焙大师Leander亲手制作三明治!"</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2032,7 +2031,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 
     <entity x="18" y="21">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos Bank! Proprietor: Semos Bank Merchants Ltd.</attribute>
+      <attribute name="text">欢迎来到塞门银库! 至顾客:塞门银库有限公司.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2040,7 +2039,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 
     <entity x="15" y="40">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Blacksmith's - Weapons and Tools</attribute>
+      <attribute name="text">铁匠铺 - 工具和武器</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2050,7 +2049,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <!-- START MINE TOWN WEEKS signs -->
     <entity x="53" y="3" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#Mine #Town #Revival #Weeks! Enjoy the #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门镇 #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2059,7 +2058,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 
     <entity x="14" y="4" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#Mine #Town #Revival #Weeks! Enjoy the #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门镇 #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2068,7 +2067,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 
     <entity x="16" y="48" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#Mine #Town #Revival #Weeks! Enjoy the #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门镇 #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2150,7 +2149,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="14" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table, sticky with splashes of old 啤酒.</attribute>
+      <attribute name="description">一张未清理的桌子, 上面还有一些没喝完的啤酒.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">4</attribute>
     </entity>
@@ -2159,7 +2158,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="19" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table, ideal for gathering round with friends.</attribute>
+      <attribute name="description">一张干净的桌子, 约朋友来这里应该不错.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">4</attribute>
     </entity>
@@ -2168,7 +2167,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="26" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a sturdy wooden table.</attribute>
+      <attribute name="description">一张完好的木桌.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">4</attribute>
     </entity>
@@ -2183,9 +2182,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellstuff</parameter>
-        <parameter name="title">辛布兰卡's shop (selling)</parameter>
+        <parameter name="title">辛布兰卡的商店(销售处)</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">You can buy these things from 辛布兰卡.</parameter>
+        <parameter name="caption">可以向辛布兰卡买些东西.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2195,9 +2194,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buystuff</parameter>
-        <parameter name="title">辛布兰卡's shop (buying)</parameter>
+        <parameter name="title">辛布兰卡的商店(进货处)</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">You can sell these things to 辛布兰卡.</parameter>
+        <parameter name="caption">在这可以给辛布兰卡供货.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2216,9 +2215,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">food&amp;drinks</parameter>
-        <parameter name="title">Semos Tavern's menu</parameter>
+        <parameter name="title">塞门酒馆的菜单</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">You can buy these things by asking 玛格丽特.</parameter>
+        <parameter name="caption">可以向玛格丽特买些东西.</parameter>
       </implementation>
 
       <attribute name="class">book_red</attribute>
@@ -2227,7 +2226,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="24" y="3">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This is a gambling table. The green top looks like many games have been played on it.</attribute>
+      <attribute name="text">这是张赌桌. 上面铺着绿色的布, 应该可以玩游戏.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">5</attribute>
@@ -2236,7 +2235,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="10" y="1">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a fireplace filled with wood, but it isn't lit.</attribute>
+      <attribute name="text">填满木头的壁炉, 但没有生火.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">1</attribute>
@@ -2265,9 +2264,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buyrare</parameter>
-        <parameter name="title">McPegleg's shop</parameter>
+        <parameter name="title">McPegleg的商店</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">You can sell these things to McPegleg.</parameter>
+        <parameter name="caption">可以卖给 McPegleg 点东西.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2277,9 +2276,9 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellrangedstuff</parameter>
-        <parameter name="title">奥斯特's shop</parameter>
+        <parameter name="title">奥斯特的店</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">奥斯特 sells bows and arrows.</parameter>
+        <parameter name="caption">奥斯特销售弓和箭.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -2305,7 +2304,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.QuestCheckingPortal">
         <parameter name="quest">learn_scrying</parameter>
-        <parameter name="rejected">If 伊丽莎 asks, say #yes you have a message from the ball.</parameter>
+        <parameter name="rejected">如果伊丽莎问你, 回答 #是 ,就可以在这个球里出现一条消息.</parameter>
       </implementation>
       <attribute name="use" />
     </portal>
@@ -2315,7 +2314,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.QuestCheckingPortal">
         <parameter name="quest">learn_scrying</parameter>
-        <parameter name="rejected">If 伊丽莎 asks, say #yes you have a message from the ball.</parameter>
+        <parameter name="rejected">如果伊丽莎问你, 回答 #是 ,就可以在这个球里出现一条消息.</parameter>
       </implementation>
       <attribute name="use" />
     </portal>
@@ -2384,7 +2383,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
         <parameter name="shop">selltools</parameter>
         <parameter name="title">Tool shop</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">艾克德罗斯 sells useful tools.</parameter>
+        <parameter name="caption">艾克德罗斯销售工具.</parameter>
       </implementation>
 
       <attribute name="class">book_blue</attribute>
@@ -2393,7 +2392,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="6" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">In this fireplace the smith heats the iron until it is glowing.</attribute>
+      <attribute name="text">铁匠在这个炉子里把铁烧化.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">3</attribute>
@@ -2402,7 +2401,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="9" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">In this fireplace the smith heats the iron until it is glowing.</attribute>
+      <attribute name="text">铁匠在这个炉子里把铁烧化.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">3</attribute>
       <attribute name="height">2</attribute>
@@ -2411,7 +2410,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="2" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This is the water for cooling the hot iron bars.</attribute>
+      <attribute name="text">这是让刚出炉的铁块冷却的水池.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">3</attribute>
       <attribute name="height">3</attribute>
@@ -2420,7 +2419,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="4" y="9">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This is the water for cooling the hot iron bars.</attribute>
+      <attribute name="text">这是让刚出炉的铁块冷却的水池.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">3</attribute>
       <attribute name="height">3</attribute>
@@ -2429,7 +2428,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="18" y="5">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">Here are some almost finished weapons which are not ready to be used yet.</attribute>
+      <attribute name="text">这是一些快完工的武器, 但现在还不能用</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">2</attribute>
@@ -2440,7 +2439,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="18" y="3">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">Here are some almost finished weapons which are not ready to be used yet.</attribute>
+      <attribute name="text">这是一些快完工的武器, 但现在还不能用.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">3</attribute>
       <attribute name="height">2</attribute>
@@ -2450,7 +2449,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="20" y="1">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">Some pincers to hold the glowing iron while heating and forging it.</attribute>
+      <attribute name="text">钳子用来夹住铁块放在火炉煅造.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">1</attribute>
@@ -2459,7 +2458,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="22" y="1">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This seems to be a hammer which is used to forge iron bars.</attribute>
+      <attribute name="text">一把用来敲铁块的锤子.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">1</attribute>
@@ -2468,7 +2467,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="7" y="6">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a massive anvil for forging tools with. </attribute>
+      <attribute name="text">一件重型铁钻用以煅造各种工具.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2477,7 +2476,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="9" y="10">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a massive anvil for forging tools with. </attribute>
+      <attribute name="text">一件重型铁钻用以煅造各种工具.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2501,30 +2500,30 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="25" y="18">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-QUOTES OF FAMOUS FISHERMEN
+著名渔民名言：
 
-Fisherman Bully:
-Clownfish are always good for a laugh.
+渔民 Bully:
+Clownfish 总是很好笑.
 
-Fisherman Jacky:
-Don't mistake your trout for your old trout, she wouldn't taste so good.
+渔民 Jacky:
+不要把trout和old trout搞混, 搞混就不好吃了.
 
-Fisherman Tommy:
+渔民 Tommy:
 I wouldn't trust a surgeonfish in a hospital, there's something fishy about them.
 
-Fisherman Sody:
+渔民 Sody:
 Devout Crustaceans believe in the One True Cod.
 
-Fisherman Humphrey:
+渔民 Humphrey:
 I don't understand why no-one buys my fish. The sign says 'Biggest Roaches in town'.
 
-Fisherman Monty:
+渔民 Monty:
 My parrot doesn't like to sit on a perch. He says it smells fishy.
 
-Fisherman Charby:
+渔民 Charby:
 That fish restaurant really overcooks everything. It even advertises char fish.
 
-Fisherman Ally:
+渔民 Ally:
 Holy mackerel! These chips are tasty.
       	</attribute>
       <attribute name="class">book_red</attribute>
@@ -2543,7 +2542,7 @@ Holy mackerel! These chips are tasty.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.PopupImage">
         <parameter name="image">map-semos-ados.png</parameter>
-        <parameter name="title">The route to 阿多斯城</parameter>
+        <parameter name="title">到阿多斯城的大路</parameter>
       </implementation>
       <attribute name="class">map-semos-ados</attribute>
       <attribute name="width">3</attribute>
@@ -2553,7 +2552,7 @@ Holy mackerel! These chips are tasty.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.PopupImage">
         <parameter name="image">map-wofol.png</parameter>
-        <parameter name="title">塞门矿山 and the Kobold city of Wofol</parameter>
+        <parameter name="title">塞门矿山 和 Wofol 的 Kobold 城</parameter>
       </implementation>
       <attribute name="class">map-wofol</attribute>
     </entity>
@@ -2561,7 +2560,7 @@ Holy mackerel! These chips are tasty.
     <entity x="26" y="5">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-       The island of Athor is famous for its golden beaches. Having long been an untouched piece of nature, it has become a holiday paradise since a ferry service was installed. Little do the tourists know about the dangers that lurk under the surface...
+       阿托尔岛因它的金色海滩而闻名. 长久以来一直是未被开发的一片天然盛地, 自从建立了渡口后它已变成渡假天堂. 虽然观光者也知道有龙住在地下...
             </attribute>
       <attribute name="class">book_red</attribute>
     </entity>
@@ -2569,7 +2568,7 @@ Holy mackerel! These chips are tasty.
     <entity x="27" y="5">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-       The dwarf mine west of Or'ril castle is one of the main iron ore resources of Faiumoni. Even rumors of a dragon living under the earth cannot stop the industrious dwarves from digging further and further into the mountain.
+       Or'ril城堡西面的矮人矿山是 Faiumoni 大陆的铁矿的主产地. 传言那里的地下住着龙, 但也不能阻止勤奋的矮人的步步向前的挖掘工作.
      </attribute>
       <attribute name="class">book_blue</attribute>
     </entity>
@@ -2577,7 +2576,7 @@ Holy mackerel! These chips are tasty.
     <entity x="4" y="28">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-       Adventurers have described the effects of poisonous creatures and mushrooms as not only unhealthy, but also as confusing for the orientation. They recommend always to take an 抗毒药济 with you.
+       冒险者描述了一些有毒的生物和蘑菇, 不但危险, 还让人神智不清, 建议你最好随身带着抗毒药济.
      </attribute>
       <attribute name="class">book_blue</attribute>
     </entity>
@@ -2637,7 +2636,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a proclamation from Mayor Sakhs stating that the citizens of Semos are doing a really great job in preventing monsters from taking over the streets.  Keep up the good work.</attribute>
+      <attribute name="text">来自镇长 Sakhs 的公告, 塞门镇的市民为抵抗怪物做了大量的工作, 请継做好街道的清理工作.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2646,7 +2645,7 @@ Holy mackerel! These chips are tasty.
     <entity x="21" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This is 卡蔓's fan.  She dropped it last time she was in here.  Hopefully she will see it next time and remove it.</attribute>
+      <attribute name="text">卡蔓的粉丝. 她上次来时扔在这. 希望她下次来时去掉它.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2655,7 +2654,7 @@ Holy mackerel! These chips are tasty.
     <entity x="22" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a scrap of paper with nonsense on it.  Perhaps someone's attempt at humor... You know those people who work at banks ;)</attribute>
+      <attribute name="text">一些没用的废纸屑. 可能是某人的发泄...可能是一些银行的员工, 你明白的 ;)</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2664,7 +2663,7 @@ Holy mackerel! These chips are tasty.
     <entity x="23" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see an announcement for next month's meeting of Rat Killers Anonymous.</attribute>
+      <attribute name="text">一张关于下个月要消灭老鼠的没有属名的公告.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2673,7 +2672,7 @@ Holy mackerel! These chips are tasty.
     <entity x="24" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a sock belonging to Starkad.  迪金斯 is pranking him.  :D</attribute>
+      <attribute name="text">一个贴着星星的丝祙, 迪金斯的杰作. :D</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2682,7 +2681,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a wanted poster for a dragon which is pestering citizens of Semos.</attribute>
+      <attribute name="text">一张杀龙的公告, 是为了保护塞门镇而发布的.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2691,7 +2690,7 @@ Holy mackerel! These chips are tasty.
     <entity x="21" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a letter to Eonna from Ados Exterminators, Inc.  Wonder why she had to get help from another town?</attribute>
+      <attribute name="text">这是一封来自阿多斯农药公司的信, 是送给Eonna的, 不知道为何她要帮助其他城市?</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2700,7 +2699,7 @@ Holy mackerel! These chips are tasty.
     <entity x="22" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see an ad to sell armor to 辛布兰卡.</attribute>
+      <attribute name="text">这是一份辛布兰卡的销售广告.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2709,7 +2708,7 @@ Holy mackerel! These chips are tasty.
     <entity x="23" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see 里卡多's license for gambling.  Why would it be hanging here?</attribute>
+      <attribute name="text">里卡多的游戏规则. 怎么会挂在这?</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2718,7 +2717,7 @@ Holy mackerel! These chips are tasty.
     <entity x="24" y="19">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a ticket to next year's SUPERSESSION</attribute>
+      <attribute name="text">一张明年作废的票</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2727,7 +2726,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a locket.  Wonder who it belongs to?</attribute>
+      <attribute name="text">一个金属盒. 这是谁的?</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2736,7 +2735,7 @@ Holy mackerel! These chips are tasty.
     <entity x="21" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You can't see what is behind the plant.</attribute>
+      <attribute name="text">从后面什么都看不到.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2745,7 +2744,7 @@ Holy mackerel! These chips are tasty.
     <entity x="22" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">哥尔丹, I miss you so.  Please come to see me sometime.  Sorry to have this put up on the bank bulletin board, but I don't have your address. Femme Fatale</attribute>
+      <attribute name="text">哥尔丹, 我想你了. 请抽空来看看我. 很抱歉把这些岾在银库的公告栏, 因为我没有你的地圵. Femme Fatale</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2754,7 +2753,7 @@ Holy mackerel! These chips are tasty.
     <entity x="23" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a map of far off Athor.  You long for a vacation.  You are thinking of visiting Athor.</attribute>
+      <attribute name="text">这是一份远方的阿托尔岛的地图. 你旅行这么久, 是不是该去阿托尔岛看看.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2763,7 +2762,7 @@ Holy mackerel! These chips are tasty.
     <entity x="24" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a shopping list, dropped by 海云那冉.  Funny, most of the items are different kinds of 啤酒 and ale.</attribute>
+      <attribute name="text">这是一张购物清单, 是海云那冉扔掉的. 有意思的是, 清单里面写的都是各种啤酒和麦芽酒.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2776,7 +2775,7 @@ Holy mackerel! These chips are tasty.
     <entity x="3" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
     <entity x="2" y="2">
       <implementation
@@ -2793,7 +2792,7 @@ Holy mackerel! These chips are tasty.
     <entity x="8" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="8" y="2">
@@ -2811,7 +2810,7 @@ Holy mackerel! These chips are tasty.
     <entity x="15" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="14" y="2">
@@ -2824,7 +2823,7 @@ Holy mackerel! These chips are tasty.
 
     <entity x="14" y="0">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">When you open your chest, others may inspect its contents. If you want privacy, ask Dagobert for access to a vault.
+      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向Dagobert申请私人仓库.
      </attribute>
       <attribute name="class">transparent</attribute>
     </entity>
@@ -2836,7 +2835,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
     <entity x="20" y="2">
       <implementation
@@ -2848,7 +2847,7 @@ Holy mackerel! These chips are tasty.
 
     <entity x="21" y="0">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">When you open your chest, others may inspect its contents. If you want privacy, ask Dagobert for access to a vault.
+      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向Dagobert申请私人仓库.
      </attribute>
       <attribute name="class">transparent</attribute>
     </entity>
@@ -2860,7 +2859,7 @@ Holy mackerel! These chips are tasty.
     <entity x="3" y="15">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="2" y="12">
@@ -2878,7 +2877,7 @@ Holy mackerel! These chips are tasty.
     <entity x="8" y="15">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="8" y="12">
@@ -2896,7 +2895,7 @@ Holy mackerel! These chips are tasty.
     <entity x="15" y="15">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="14" y="12">
@@ -2914,7 +2913,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="15">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a conveniently placed table.</attribute>
+      <attribute name="description">一张适宜的桌子.</attribute>
     </entity>
 
     <entity x="20" y="12">
@@ -3014,7 +3013,7 @@ Holy mackerel! These chips are tasty.
     <entity x="15" y="2">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a fireplace filled with wood, but it isn't lit.</attribute>
+      <attribute name="text">填满木材的壁炉, 但没有生火.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">1</attribute>
@@ -3049,32 +3048,32 @@ Holy mackerel! These chips are tasty.
     <entity x="2" y="6">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
     <entity x="2" y="7">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
     <entity x="2" y="8">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
     <entity x="16" y="8">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
     <entity x="16" y="9">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
     <entity x="16" y="10">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table which looks clean enough to eat from.</attribute>
+      <attribute name="description">一张干净的桌子, 可以在这里吃东西.</attribute>
     </entity>
   </zone>
 
@@ -3093,7 +3092,7 @@ Holy mackerel! These chips are tasty.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
 
@@ -3243,10 +3242,9 @@ Holy mackerel! These chips are tasty.
     <entity x="118" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-TO THE FOREST
+去森林
 
-Shepherds please note: keep watch for
-the wolves while searching for 树莓 here
+请注意: 放羊时要常注意狼群
    </attribute>
     </entity>
 
@@ -3255,16 +3253,16 @@ the wolves while searching for 树莓 here
       <attribute name="text">
 TO OLD SEMOS VILLAGE
 
-Shepherds wanted: please ask 尼世亚
+牧羊人须知: 买羊请联系尼世亚
    </attribute>
     </entity>
 
     <entity x="113" y="3">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-TO SEMOS
+去塞门镇
 
-Mature sheep wanted: please speak to 赛特
+牧羊人须知: 卖羊请联系赛特
    </attribute>
     </entity>
 
@@ -3304,7 +3302,7 @@ Mature sheep wanted: please speak to 赛特
 向南： Kirdneh City
 向东： 纳尔沃城
 西南： Or'ril Castle and 法多城
-                         </attribute>
+      </attribute>
     </entity>
 
 
@@ -3686,7 +3684,7 @@ Mature sheep wanted: please speak to 赛特
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellstuff2</parameter>
-        <parameter name="title">Wrvil's shop (selling)</parameter>
+        <parameter name="title">Wrvil商店(销售)</parameter>
         <parameter name="seller">true</parameter>
         <parameter name="caption">You can buy these things from Wrvil.</parameter>
       </implementation>
@@ -3698,9 +3696,9 @@ Mature sheep wanted: please speak to 赛特
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buystuff2</parameter>
-        <parameter name="title">Wrvil's shop (buying)</parameter>
+        <parameter name="title">Wrvil商店(收购)</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">You can sell these things to Wrvil.</parameter>
+        <parameter name="caption">可以销售物品给 Wrvil.</parameter>
       </implementation>
 
       <attribute name="class">blackboard</attribute>
@@ -3918,7 +3916,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_kotoch_entrance_n" level="-1" x="499744" y="500000"
+  <zone name="-1_科多奇_入口_n" level="-1" x="499744" y="500000"
     file="Level -1/kotoch/entrance_n.tmx">
     <configurator class-name="games.stendhal.server.maps.kotoch.SmithNPC" />
 
@@ -3948,7 +3946,7 @@ Mature sheep wanted: please speak to 赛特
     <configurator class-name="games.stendhal.server.maps.semos.jail.GuardNPC" />
     <configurator class-name="games.stendhal.server.maps.semos.jail.InmateNPC" />
     <configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
-      <parameter name="message">For security reasons, items may not be moved around in jail.</parameter>
+      <parameter name="message">因为安全原因, 监狱不允许在地上放东西.</parameter>
     </configurator>
     <!--for the admin house -->
     <portal x="15" y="7" ref="house_exit_4">
@@ -4076,7 +4074,7 @@ Mature sheep wanted: please speak to 赛特
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="width">51</parameter>
         <parameter name="height">25</parameter>
-        <parameter name="enterMessage">Your ears are ringing. Something is really wrong here.</parameter>
+        <parameter name="enterMessage">你的耳朵开始嗡鸣. 这里有些不正常.</parameter>
         <parameter name="warnPlayer">true</parameter>
       </implementation>
     </entity>
@@ -4400,7 +4398,7 @@ Mature sheep wanted: please speak to 赛特
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
   </zone>
@@ -4408,14 +4406,14 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- Level -5 -->
 
-  <zone name="-5_kanmararn_entrance" level="-5" x="500096" y="500064"
+  <zone name="-5_卡梅伦_入口" level="-5" x="500096" y="500064"
     file="Level -5/kanmararn/entrance.tmx">
   </zone>
 
 
   <!-- Level -6 -->
 
-  <zone name="-6_kanmararn_city" level="-6" x="500160" y="500064"
+  <zone name="-6_卡梅伦_城" level="-6" x="500160" y="500064"
     file="Level -6/kanmararn/city.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.CowardSoldierNPC" />
@@ -4429,63 +4427,63 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- If we call it _jail, players can't move items around in it for security 
     reasons. This issue is fixed now. -->
-  <zone name="-7_kanmararn_prison" level="-7" x="500160" y="500064"
+  <zone name="-7_卡梅伦_监狱" level="-7" x="500160" y="500064"
     file="Level -7/kanmararn/jail.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.DwarfGuardNPC" />
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.DuergarKingCreature" />
     <portal x="11" y="18" ref="jail_lock_outside">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="11" y="22" ref="jail_lock_inside">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside" />
     </portal>
     <portal x="19" y="9" ref="jail_lock_inside2">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside2" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside2" />
     </portal>
     <portal x="19" y="13" ref="jail_lock_outside2">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside2" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside2" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="36" y="18" ref="jail_lock_outside3">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside3" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="36" y="22" ref="jail_lock_inside3">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside3" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="44" y="9" ref="jail_lock_inside4">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside4" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside4" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="44" y="13" ref="jail_lock_outside4">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside4" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside4" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>

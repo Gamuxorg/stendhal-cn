@@ -188,34 +188,34 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 				add(ConversationStates.ATTENDING,
 				    Arrays.asList("裂缝斗篷"),
 				    ConversationStates.INFORMATION_2,
-				    "I will create a 裂缝斗篷 for you, but I have to fuse a carbuncle and a sapphire in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
+				    "I will create a 裂缝斗篷 for you, but I have to fuse a 红宝石 and a 蓝宝石 in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
 					" The rift disintegrates the cloak instead of you. There is no way to get the cloak back. If you want to enter the rift again, you will need a new 裂缝斗篷. Shall I create one for you?",
 				     null);
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.YES_MESSAGES,
 					new AndCondition(
-							new NotCondition(new PlayerHasItemWithHimCondition("carbuncle", 1)),
-							new PlayerHasItemWithHimCondition("sapphire", 1)),
+							new NotCondition(new PlayerHasItemWithHimCondition("红宝石", 1)),
+							new PlayerHasItemWithHimCondition("蓝宝石", 1)),
 					ConversationStates.ATTENDING,
-					"You don't have a carbuncle, I will need a sapphire and a carbuncle.",
+					"You don't have a 红宝石, I will need a 蓝宝石 and a 红宝石.",
 					null);
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.YES_MESSAGES,
 					new AndCondition(
-							new NotCondition(new PlayerHasItemWithHimCondition("sapphire", 1)),
-							new PlayerHasItemWithHimCondition("carbuncle", 1)),
+							new NotCondition(new PlayerHasItemWithHimCondition("蓝宝石", 1)),
+							new PlayerHasItemWithHimCondition("红宝石", 1)),
 					ConversationStates.ATTENDING,
-					"You don't have a sapphire, I will need a carbuncle and a sapphire.",
+					"You don't have a 蓝宝石, I will need a 红宝石 and a 蓝宝石.",
 					null);
 				add(ConversationStates.INFORMATION_2, ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
-								new PlayerHasItemWithHimCondition("sapphire", 1),
-								new PlayerHasItemWithHimCondition("carbuncle", 1)),
+								new PlayerHasItemWithHimCondition("蓝宝石", 1),
+								new PlayerHasItemWithHimCondition("红宝石", 1)),
 					ConversationStates.ATTENDING,
 					"There is your 裂缝斗篷. Don't forget that it protects you only one time, before it is destroyed. So be sure that you are ready for what awaits you in the rift.",
 					new MultipleActions(
-							new DropItemAction("carbuncle", 1),
-							new DropItemAction("sapphire", 1),
+							new DropItemAction("红宝石", 1),
+							new DropItemAction("蓝宝石", 1),
 							new EquipItemAction("裂缝斗篷", 1, true),
 							new IncreaseXPAction(5000)));
 				add(ConversationStates.INFORMATION_2,

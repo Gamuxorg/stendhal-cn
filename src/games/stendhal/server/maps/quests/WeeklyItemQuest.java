@@ -144,8 +144,8 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("shadow helmet",1);
 
 		// jewellery
-		items.put("diamond",1);
-		items.put("obsidian",1);
+		items.put("钻石",1);
+		items.put("黑曜石",1);
 
 		// legs
 		items.put("chaos legs",1);

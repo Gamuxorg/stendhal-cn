@@ -56,7 +56,7 @@ public class ZonesXMLLoaderTest {
 		ZonesXMLLoader loader = new ZonesXMLLoader(new URI("testsemos.xml"));
 		loader.load();
 		StendhalRPWorld world = SingletonRepository.getRPWorld();
-		Collection<StendhalRPZone> regionKanmararn = world.getAllZonesFromRegion("kanmararn", Boolean.TRUE, Boolean.FALSE, Boolean.TRUE);
+		Collection<StendhalRPZone> regionKanmararn = world.getAllZonesFromRegion("卡梅伦", Boolean.TRUE, Boolean.FALSE, Boolean.TRUE);
 		assertThat(regionKanmararn.isEmpty(), is(Boolean.FALSE));
 		assertThat(regionKanmararn.size(), is(3));
 		Collection<StendhalRPZone> regionWofolExteriors = world.getAllZonesFromRegion("wofol city", Boolean.TRUE, Boolean.FALSE, Boolean.TRUE);

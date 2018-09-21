@@ -1266,7 +1266,7 @@ J, Q, K和大小王的点计10点. A 计11点, 但如果你的手牌超过21点�
       <destination zone="-1_athor_island_e" ref="labyrinth2" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LockedDoor">
         <parameter name="class">skulldoor_w</parameter>
-        <parameter name="key">minotaur key</parameter>
+        <parameter name="key">牛头人钥匙</parameter>
       </implementation>
     </portal>
     

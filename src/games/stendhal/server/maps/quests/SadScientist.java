@@ -96,7 +96,7 @@ public class SadScientist extends AbstractQuest {
 	private static final String LETTER_DESCRIPTION = "这是一封寄给 Vasi Elos 的信.";
 	private static final String QUEST_SLOT = "sad_scientist";
 	private static final int REQUIRED_MINUTES = 20;
-	private static final String NEEDED_ITEMS = "emerald=1;obsidian=1;sapphire=1;carbuncle=2;gold bar=20;mithril bar=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;黑曜石=1;蓝宝石=1;红宝石=2;gold bar=20;mithril bar=1";
 
 	@Override
 	public String getName() {
@@ -519,7 +519,7 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("gem","gems"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				"我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
 				" 你能为了我妻子弄到这些吗?",
 				null);
 
@@ -528,7 +528,7 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("leg","legs"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"宝石腿, 我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				"宝石腿, 我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
 				" 你能为了我妻子弄到这些吗?",
 				null);
 

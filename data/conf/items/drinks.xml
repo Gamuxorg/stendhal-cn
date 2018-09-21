@@ -142,7 +142,7 @@
   </item>
   
   <item name="红酒">
-    <type class="drink" subclass="红酒" tileid="-1"/>
+    <type class="drink" subclass="wine" tileid="-1"/>
     <description>口渴了来杯红酒就够了.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>

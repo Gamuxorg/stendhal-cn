@@ -78,7 +78,7 @@ public class JailedDwarf extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotCompletedCondition(QUEST_SLOT),
-						new NotCondition(new PlayerHasItemWithHimCondition("kanmararn prison key"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("卡梅伦监狱钥匙"))),
 				ConversationStates.IDLE,
 				"Help! The duergars have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.",
 				new SetQuestAction(QUEST_SLOT, "start"));
@@ -86,7 +86,7 @@ public class JailedDwarf extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotCompletedCondition(QUEST_SLOT),
-						new PlayerHasItemWithHimCondition("kanmararn prison key")),
+						new PlayerHasItemWithHimCondition("卡梅伦监狱钥匙")),
 				ConversationStates.ATTENDING,
 				"You got the key to unlock me! *mumble*  Errrr ... it doesn't look too safe out there for me ... I think I'll just stay here ... perhaps someone could #offer me some good equipment ... ",
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, "done"),
@@ -98,7 +98,7 @@ public class JailedDwarf extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Jailed Dwarf",
-				"Down in Kanmararn is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but duergars have raided the prison. He might need some armor to survive once out of it.",
+				"Down in 卡梅伦 is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but duergars have raided the prison. He might need some armor to survive once out of it.",
 				true);
 		step_1();
 	}

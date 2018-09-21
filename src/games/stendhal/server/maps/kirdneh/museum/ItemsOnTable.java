@@ -31,35 +31,35 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 	private void buildBasementArea(final StendhalRPZone zone) {
 
-		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("emerald", 4000);
+		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("翡翠", 4000);
 		plantGrower.setPosition(26, 38);
 		plantGrower.setDescription("A space for a gem to be displayed is here.");
 		zone.add(plantGrower);
 
 		plantGrower.setToFullGrowth();
 
-		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("sapphire", 4000);
+		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("蓝宝石", 4000);
 		plantGrower2.setPosition(26, 39);
 		plantGrower2.setDescription("A space for a gem to be displayed is here.");
 		zone.add(plantGrower2);
 
 		plantGrower2.setToFullGrowth();
 
-		final PassiveEntityRespawnPoint plantGrower3 = new PassiveEntityRespawnPoint("carbuncle", 4000);
+		final PassiveEntityRespawnPoint plantGrower3 = new PassiveEntityRespawnPoint("红宝石", 4000);
 		plantGrower3.setPosition(26, 40);
 		plantGrower3.setDescription("A space for a gem to be displayed is here.");
 		zone.add(plantGrower3);
 
 		plantGrower3.setToFullGrowth();
 
-		final PassiveEntityRespawnPoint plantGrower4 = new PassiveEntityRespawnPoint("obsidian", 4000);
+		final PassiveEntityRespawnPoint plantGrower4 = new PassiveEntityRespawnPoint("黑曜石", 4000);
 		plantGrower4.setPosition(26, 41);
 		plantGrower4.setDescription("A space for a gem to be displayed is here.");
 		zone.add(plantGrower4);
 
 		plantGrower4.setToFullGrowth();
 
-		final PassiveEntityRespawnPoint plantGrower5 = new PassiveEntityRespawnPoint("diamond", 4000);
+		final PassiveEntityRespawnPoint plantGrower5 = new PassiveEntityRespawnPoint("钻石", 4000);
 		plantGrower5.setPosition(26, 42);
 		plantGrower5.setDescription("A space for a gem to be displayed is here.");
 		zone.add(plantGrower5);

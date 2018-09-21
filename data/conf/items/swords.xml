@@ -582,9 +582,9 @@
     </equipable>
   </item>
 
-  <item name="obsidian knife">
+  <item name="黑曜石刀">
     <type class="sword" subclass="obsidian_knife" tileid="-1"/>
-    <description>You see a knife whose blade is crafted to a lethal edge from finest obsidian.</description>
+    <description>You see a knife whose blade is crafted to a lethal edge from finest 黑曜石.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="4"/>

@@ -87,7 +87,7 @@ public class RingMaker extends AbstractQuest {
 
 	void fixRingStep(final SpeakerNPC npc) {
 
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("翡翠戒指", "life", "emerald"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("翡翠戒指", "life", "翡翠"),
 			new AndCondition(new PlayerHasItemWithHimCondition("翡翠戒指"),
 					         new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
@@ -110,7 +110,7 @@ public class RingMaker extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("翡翠戒指", "life", "emerald"),
+				Arrays.asList("翡翠戒指", "life", "翡翠"),
 				new AndCondition(new NotCondition(new PlayerHasItemWithHimCondition("翡翠戒指")),
 				         new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING))),
 
@@ -119,7 +119,7 @@ public class RingMaker extends AbstractQuest {
 				, null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("翡翠戒指", "life", "emerald"),
+				Arrays.asList("翡翠戒指", "life", "翡翠"),
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING),
 						new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING + "unbound")),
 						new TimePassedCondition(QUEST_SLOT,1,REQUIRED_MINUTES)),
@@ -131,7 +131,7 @@ public class RingMaker extends AbstractQuest {
 						new EquipItemAction("翡翠戒指", 1, true)));
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("翡翠戒指", "life", "emerald"),
+				Arrays.asList("翡翠戒指", "life", "翡翠"),
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING),
 						new QuestStateStartsWithCondition(QUEST_SLOT, FORGING + "unbound"),
 						new TimePassedCondition(QUEST_SLOT,1,REQUIRED_MINUTES)),
@@ -143,7 +143,7 @@ public class RingMaker extends AbstractQuest {
 						new EquipItemAction("翡翠戒指", 1, false)));
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("翡翠戒指", "life", "emerald"),
+				Arrays.asList("翡翠戒指", "life", "翡翠"),
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, FORGING),
 						new NotCondition(new TimePassedCondition(QUEST_SLOT,1,REQUIRED_MINUTES))),
 				ConversationStates.IDLE, null,
@@ -157,7 +157,7 @@ public class RingMaker extends AbstractQuest {
 				"The charge for my service is " + REQUIRED_MONEY
 					+ " money, and I need " + REQUIRED_GOLD
 					+ " gold bars and " + REQUIRED_GEM
-					+ " emerald to fix the ring. Do you want to pay now?",
+					+ " 翡翠 to fix the ring. Do you want to pay now?",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
@@ -165,14 +165,14 @@ public class RingMaker extends AbstractQuest {
 				new AndCondition(
 						new PlayerHasItemWithHimCondition("gold bar", REQUIRED_GOLD),
 						new PlayerHasItemWithHimCondition("money", REQUIRED_MONEY),
-						new PlayerHasItemWithHimCondition("emerald", REQUIRED_GEM)),
+						new PlayerHasItemWithHimCondition("翡翠", REQUIRED_GEM)),
 				ConversationStates.IDLE,
 				"Okay, that's all I need to fix the ring. Come back in "
 						+ REQUIRED_MINUTES
 						+ " minutes and it will be ready. Bye for now.",
 				new MultipleActions(
 						new DropItemAction("gold bar", REQUIRED_GOLD),
-						new DropItemAction("emerald", REQUIRED_GEM),
+						new DropItemAction("翡翠", REQUIRED_GEM),
 						new DropItemAction("money", REQUIRED_MONEY),
 						new ChatAction() {
 							@Override
@@ -197,7 +197,7 @@ public class RingMaker extends AbstractQuest {
 				new NotCondition(new  AndCondition(
 						new PlayerHasItemWithHimCondition("gold bar", REQUIRED_GOLD),
 						new PlayerHasItemWithHimCondition("money", REQUIRED_MONEY),
-						new PlayerHasItemWithHimCondition("emerald", REQUIRED_GEM))),
+						new PlayerHasItemWithHimCondition("翡翠", REQUIRED_GEM))),
 				ConversationStates.IDLE,
 				"Come back when you have the money, the gem and the gold. Goodbye.",
 				null);
@@ -206,7 +206,7 @@ public class RingMaker extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"No problem, just come back when you have the money, the emerald, and the gold.",
+			"No problem, just come back when you have the money, the 翡翠, and the gold.",
 			null);
 	}
 
@@ -232,7 +232,7 @@ public class RingMaker extends AbstractQuest {
 			return res;
 		}
 		// Note: this will not be seen till the forging stage starts as no quest slot is set before then.
-		res.add("Ognir said he can fix my ring of life by bringing him an emerald, 80000 money and 2 gold bars.");
+		res.add("Ognir said he can fix my ring of life by bringing him an 翡翠, 80000 money and 2 gold bars.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.startsWith(FORGING) && new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES).fire(player,null, null)) {
 				res.add("My fixed ring is ready to collect from Ognir! I must ask about \"life\" to get it back.");

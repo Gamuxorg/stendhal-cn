@@ -97,26 +97,27 @@ public class TimeUtil {
 			sbuf.append(count);
 		} else if (remainder >= (size * 3 / 4)) {
 			count++;
-			sbuf.append("只剩不到 ");
-			sbuf.append(count);
+			sbuf.append("还剩大约不到 ");
+			sbuf.append(count+1);
+			sbuf.append(name);
 		} else if (remainder >= (size * 1 / 4)) {
-			sbuf.append("大约 ");
-			sbuf.append(count);
-			sbuf.append(" 个多");
-
+			sbuf.append("还剩大约 ");
+			sbuf.append(count);		
+			sbuf.append(name);
+			sbuf.append(" 多");
 			/*
 			 * Force plural context (e.g. "1 and a half moments")
 			 */
 			count = 2;
 		} else if (remainder >= (size * 5 / 100)) {
-			sbuf.append("还要多于 ");
+			sbuf.append("还要 ");
 			sbuf.append(count);
+			sbuf.append(name);
 		} else {
 			sbuf.append(count);
+			sbuf.append(name);
 		}
-
 		sbuf.append(' ');
-		sbuf.append(name);
 		return true;
 	}
 
@@ -212,7 +213,6 @@ public class TimeUtil {
 
 			sbuf.append(count);
 			sbuf.append(" 小时");
-//			sbuf.append(" 时"));
 		}
 		count = seconds / SECONDS_IN_MINUTE;
 		if (count != 0) {

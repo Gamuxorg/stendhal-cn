@@ -223,9 +223,9 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// herb
 		items.put("海芋",5);
-		items.put("sclaria",5);
-		items.put("mandragora",3);
-		items.put("kekik",5);
+		items.put("鼠尾草",5);
+		items.put("曼德拉草",3);
+		items.put("百里香",5);
 
 		// legs
         items.put("blue legs",1);

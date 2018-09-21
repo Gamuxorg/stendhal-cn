@@ -69,7 +69,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("海芋", 1);
-				requiredResources.put("kokuda", 1);
+				requiredResources.put("科科达", 1);
 				requiredResources.put("小治疗剂", 1);
 
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("david_mix_cream",
@@ -84,8 +84,8 @@ public class LifeguardNPC implements ZoneConfigurator {
 				addReply("海芋", "海芋 is a herb which is growing around 塞门镇.");
 
 				addReply(
-						"kokuda",
-				"We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
+						"科科达",
+				"We can't find the 科科达 herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
 
 				addReply("小治疗剂", "It's a small bottle full of 治疗济. You can buy it at several places.");
 

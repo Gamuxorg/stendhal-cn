@@ -160,7 +160,7 @@ public class ImperialPrincess extends AbstractQuest {
 						raiser.say("I need "
 								+ Integer.toString(1 + player.getLevel()
 										/ ARANDULA_DIVISOR)
-								+ " 海芋, 1 kokuda, 1 sclaria, 1 kekik, "
+								+ " 海芋, 1 科科达, 1 鼠尾草, 1 百里香, "
 								+ Integer.toString(1 + player.getLevel()
 										/ POTION_DIVISOR)
 								+ " 治疗济s and "
@@ -195,15 +195,15 @@ public class ImperialPrincess extends AbstractQuest {
 
 		// give some hints of where to find herbs. No warranties!
 		npc.addReply(
-				"kokuda",
+				"科科达",
 				"I believe that herb can only be found on Athor, though they guard their secrets" +
 				" closely over there.");
 		npc.addReply(
-				"sclaria",
-				"Healers who use sclaria gather it in all sorts of places - around Or'ril, in Nalwor" +
+				"鼠尾草",
+				"Healers who use 鼠尾草 gather it in all sorts of places - around Or'ril, in Nalwor" +
 				" forest, I am sure you will find that without trouble.");
 		npc.addReply(
-				"kekik",
+				"百里香",
 				"My maid's friend 詹妮 has a source not far from her. The wooded areas at the eastern" +
 				" end of Nalwor river may have it. too.");
 	}
@@ -230,18 +230,18 @@ public class ImperialPrincess extends AbstractQuest {
 								+ level / ANTIDOTE_DIVISOR;
 							final int required_potion = 1
 								+ level	/ POTION_DIVISOR;
-							if (player.isEquipped("kekik")
-								&& player.isEquipped("kokuda")
-								&& player.isEquipped("sclaria")
+							if (player.isEquipped("百里香")
+								&& player.isEquipped("科科达")
+								&& player.isEquipped("鼠尾草")
 								&& player.isEquipped("海芋",
 										required_arandula)
 								&& player.isEquipped("治疗济", required_potion)
 								&& player.isEquipped("抗毒药济",
 										required_antidote))
 							{
-								player.drop("kekik");
-								player.drop("kokuda");
-								player.drop("sclaria");
+								player.drop("百里香");
+								player.drop("科科达");
+								player.drop("鼠尾草");
 								player.drop("抗毒药济", required_antidote);
 								player.drop("治疗济", required_potion);
 								player.drop("海芋", required_arandula);
@@ -255,7 +255,7 @@ public class ImperialPrincess extends AbstractQuest {
 								//reminder of the items to bring
 								raiser.say("Shh! Don't say it till you have the "
 									+ required_arandula
-									+ " 海芋, 1 #kokuda, 1 #sclaria, 1 #kekik, "
+									+ " 海芋, 1 #科科达, 1 #鼠尾草, 1 #百里香, "
 									+ required_potion
 									+ " 治疗济s and "
 									+ required_antidote

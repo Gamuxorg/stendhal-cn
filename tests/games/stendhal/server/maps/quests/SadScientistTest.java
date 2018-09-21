@@ -39,7 +39,7 @@ import utilities.QuestHelper;
 public class SadScientistTest {
 	private static final String QUEST_SLOT = "sad_scientist";
 	// better: use the one from quest and make it visible
-	private static final String NEEDED_ITEMS = "emerald=1;obsidian=1;sapphire=1;carbuncle=2;gold bar=20;mithril bar=1;shadow legs=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;obsidian=1;蓝宝石=1;carbuncle=2;gold bar=20;mithril bar=1;shadow legs=1";
 	private Player player = null;
 	private SpeakerNPC npc = null;
 	private Engine en = null;
@@ -108,9 +108,9 @@ public class SadScientistTest {
 		en.step(player, "yes");
 		assertEquals("My wife is living in Semos City. She loves gems. Can you bring me some #gems that I need to make a pair of precious #legs?", getReply(npc));
 		en.step(player, "gems");
-		assertEquals("I need an emerald, an obsidian, a sapphire, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife?", getReply(npc));
+		assertEquals("I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife?", getReply(npc));
 		en.step(player, "legs");
-		assertEquals("Jewelled legs. I need an emerald, an obsidian, a sapphire, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife? Can you bring what I need?", getReply(npc));
+		assertEquals("Jewelled legs. I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife? Can you bring what I need?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("I am waiting, Semos man.", getReply(npc));
 
@@ -123,14 +123,14 @@ public class SadScientistTest {
 		// but not all the gold bar
 		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 10);
 		PlayerTestHelper.equipWithItem(player, "mithril bar");
-		PlayerTestHelper.equipWithItem(player, "emerald");
+		PlayerTestHelper.equipWithItem(player, "翡翠");
 		PlayerTestHelper.equipWithItem(player, "obsidian");
-		PlayerTestHelper.equipWithItem(player, "sapphire");
+		PlayerTestHelper.equipWithItem(player, "蓝宝石");
 		PlayerTestHelper.equipWithStackableItem(player, "carbuncle", 2);
 
 		assertFalse(player.isEquipped("gold bar", 20));
 
-		final String[] triggers = { "obsidian", "gold bar", "carbuncle", "sapphire", "emerald", "mithril bar" };
+		final String[] triggers = { "obsidian", "gold bar", "carbuncle", "蓝宝石", "翡翠", "mithril bar" };
 
 		for (final String playerSays : triggers) {
 

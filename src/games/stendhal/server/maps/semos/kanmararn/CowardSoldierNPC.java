@@ -57,8 +57,8 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 				addHelp("我需要自救, 我与队友分散了 #group , 现在只剩我一个人.");
 				addReply(Arrays.asList("dwarf", "dwarves"),
 					"到处都有矮人！他们的王国 #kingdom 一定在附近.");
-				addReply(Arrays.asList("kingdom", "Kanmararn"),
-					"Kanmararn, 传说是矮人们 #dwarves 居住的城市.");
+				addReply(Arrays.asList("kingdom", "卡梅伦"),
+					"卡梅伦, 传说是矮人们 #dwarves 居住的城市.");
 				addReply("group",
 					"一般会派一组5个人到这个地区探寻财宝 #treasure.");
 				addReply("treasure",

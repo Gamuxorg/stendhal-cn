@@ -98,7 +98,7 @@ public class ClubOfThorns extends AbstractQuest {
 
 
 		final List<ChatAction> start = new LinkedList<ChatAction>();
-		start.add(new EquipItemAction("kotoch prison key", 1, true));
+		start.add(new EquipItemAction("科多奇监狱钥匙", 1, true));
 		start.add(new IncreaseKarmaAction(6.0));
 		start.add(new SetQuestAction(QUEST_SLOT, 0, "start"));
 		start.add(new StartRecordingKillsAction(QUEST_SLOT, 1, "mountain orc chief", 0, 1));
@@ -144,7 +144,7 @@ public class ClubOfThorns extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, "kill",
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "start"), new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 			ConversationStates.ATTENDING,
-			"kill Mountain Orc Chief! Kotoch orcs nid revenge!",
+			"kill Mountain Orc Chief! 科多奇 orcs nid revenge!",
 			null);
 	}
 
@@ -165,7 +165,7 @@ public class ClubOfThorns extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met the Orc Saman in Kotoch.");
+		res.add("I met the Orc Saman in 科多奇.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("I do not want to kill anyone for the Orc Saman.");
@@ -174,7 +174,7 @@ public class ClubOfThorns extends AbstractQuest {
 			res.add("I like a challenge and want to try kill the captive mountain orc chief. I was given the prison key.");
 		}
 		if (questState.startsWith("start") && new KilledForQuestCondition(QUEST_SLOT, 1).fire(player,null,null) || questState.equals("done")) {
-			res.add("I killed the mountain orc chief in Kotoch Prison.");
+			res.add("I killed the mountain orc chief in 科多奇 Prison.");
 		}
 		if (questState.equals("done")) {
 			res.add("I told the Orc Saman about the kill and he gave me a powerful 类牙棍 to use.");

@@ -198,7 +198,7 @@ public class CrownForTheWannaBeKingTest {
 			assertThat(playerSays, npcEngine.getCurrentState(), is(ConversationStates.QUESTION_1));
 			assertThat(playerSays, bob.hasQuest(QUEST_SLOT), is(true));
 			assertEquals(
-					"I want my crown to be beautiful and shiny. I need 2 #carbuncles, 2 #diamonds, 4 #emeralds, 2 #'gold bars', an #obsidian, and 3 #sapphires."
+					"I want my crown to be beautiful and shiny. I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'gold bars', an #黑曜石, and 3 #蓝宝石s."
 					+ " Do you have some of those now with you?",
 					getReply(npc));
 		}
@@ -270,7 +270,7 @@ public class CrownForTheWannaBeKingTest {
 		assertThat(
 				"items",
 				getReply(npc),
-				is("I need 2 #carbuncles, 2 #diamonds, 4 #emeralds, 2 #'gold bars', an #obsidian, and 3 #sapphires. Did you bring something?"));
+				is("I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'gold bars', an #黑曜石, and 3 #蓝宝石s. Did you bring something?"));
 	}
 
 	/**
@@ -297,7 +297,7 @@ public class CrownForTheWannaBeKingTest {
 	 */
 	@Test
 	public void testQuestion1ToQuestion1Itembrought() {
-		final String[] triggers = { "obsidian", "diamond", "carbuncle", "sapphire", "emerald", "gold bar" };
+		final String[] triggers = { "黑曜石", "钻石", "carbuncle", "蓝宝石", "翡翠", "gold bar" };
 
 		for (final String playerSays : triggers) {
 			final Player bob = PlayerTestHelper.createPlayer("bob");
@@ -366,10 +366,10 @@ public class CrownForTheWannaBeKingTest {
 		final Player bob = PlayerTestHelper.createPlayer("bob");
 		bob.setQuest(QUEST_SLOT, CrownForTheWannaBeKing.NEEDED_ITEMS);
 
-		// is("I need 2 #gold bar, 4 #emerald, 3 #sapphire, 2 #carbuncle,
-		// 2 #diamond, and 1 #obsidian. Did you bring something?"));
-		final String[] triggers = { "obsidian", "diamond", "diamond", "carbuncle", "carbuncle", "sapphire", "sapphire",
-				"sapphire", "emerald", "emerald", "emerald", "emerald", "gold bar" };
+		// is("I need 2 #gold bar, 4 #翡翠, 3 #蓝宝石, 2 #carbuncle,
+		// 2 #钻石, and 1 #黑曜石. Did you bring something?"));
+		final String[] triggers = { "黑曜石", "钻石", "钻石", "carbuncle", "carbuncle", "蓝宝石", "蓝宝石",
+				"蓝宝石", "翡翠", "翡翠", "翡翠", "翡翠", "gold bar" };
 		npcEngine.setCurrentState(ConversationStates.QUESTION_1);
 		for (final String playerSays : triggers) {
 			PlayerTestHelper.equipWithItem(bob, playerSays);

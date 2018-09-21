@@ -130,7 +130,7 @@ import games.stendhal.server.maps.Region;
 	// player needs to bring some items to make the 治疗济:
 	// a 'magic' knife from a blacksmith
 	// 3 lilia flowers
-	// sclaria
+	// 鼠尾草
 	// wine
 	// 黑珍珠
 	final SpeakerNPC npc = npcs.get("Salva Mattori");
@@ -152,7 +152,7 @@ import games.stendhal.server.maps.Region;
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗济"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
 				new PlayerHasItemWithHimCondition("knife")),
-				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #治疗济. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #治疗济.",
+				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #治疗济. I need 3 紫丁香 flowers, 1 sprig of 科科达, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #治疗济.",
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, "治疗济"), new DropItemAction("knife")));
 
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗济"),
@@ -163,7 +163,7 @@ import games.stendhal.server.maps.Region;
 
 		final List<ChatAction> potionactions = new LinkedList<ChatAction>();
 		potionactions.add(new DropItemAction("紫丁香",3));
-		potionactions.add(new DropItemAction("kokuda"));
+		potionactions.add(new DropItemAction("科科达"));
 		potionactions.add(new DropItemAction("红酒"));
 		potionactions.add(new DropItemAction("黑珍珠"));
 		potionactions.add(new EquipItemAction("爱之治疗济"));
@@ -174,7 +174,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","治疗济"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "治疗济"),
 								 new PlayerHasItemWithHimCondition("紫丁香",3),
-								 new PlayerHasItemWithHimCondition("kokuda"),
+								 new PlayerHasItemWithHimCondition("科科达"),
 								 new PlayerHasItemWithHimCondition("红酒"),
 								 new PlayerHasItemWithHimCondition("黑珍珠")),
 				ConversationStates.ATTENDING, "I see you have all the items for the 治疗济. *mutters magic words* And now, ta da! You have the 爱之治疗济. Wish Mrs Yeti good luck from me!",
@@ -184,10 +184,10 @@ import games.stendhal.server.maps.Region;
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "治疗济"),
 								 new NotCondition(
 												  new AndCondition(new PlayerHasItemWithHimCondition("紫丁香",3),
-																   new PlayerHasItemWithHimCondition("kokuda"),
+																   new PlayerHasItemWithHimCondition("科科达"),
 																   new PlayerHasItemWithHimCondition("红酒"),
 																   new PlayerHasItemWithHimCondition("黑珍珠")))),
-				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the 爱之治疗济. Please bring them all together at once. Thanks!", null);
+				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of 科科达, 1 glass of 红酒 and 1 黑珍珠 to make the 爱之治疗济. Please bring them all together at once. Thanks!", null);
 
 
 	}
@@ -378,7 +378,7 @@ import games.stendhal.server.maps.Region;
 			if ("knife".equals(questState)) {
 				return res;
 			}
-			res.add("The 爱之治疗济 requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
+			res.add("The 爱之治疗济 requires 3 紫丁香 flowers, 1 sprig of 科科达, 1 glass of 红酒 and 1 黑珍珠.");
 			if ("治疗济".equals(questState)) {
 				return res;
 			}

@@ -54,7 +54,7 @@ import games.stendhal.server.util.ItemCollection;
  *
  * STEPS:
  * <ul>
- * <li> Ivan Abe wants you to bring him 2 carbuncles, 2 diamonds, 4 emeralds, 2 gold bars, 1 obsidian, and 3 sapphires for his crown which he
+ * <li> Ivan Abe wants you to bring him 2 红宝石s, 2 钻石s, 4 翡翠s, 2 gold bars, 1 黑曜石, and 3 蓝宝石s for his crown which he
  *      believes will help him to become the new king.</li>
  * <li> Kendra Mattori gives the reward after player brought all required items.</li>
  * </ul>
@@ -76,7 +76,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "gold bar=2;emerald=4;sapphire=3;carbuncle=2;diamond=2;obsidian=1";
+	protected static final String NEEDED_ITEMS = "gold bar=2;翡翠=4;蓝宝石=3;红宝石=2;钻石=2;黑曜石=1";
 
 	/**
 	 * Name of the main NPC for this quest.

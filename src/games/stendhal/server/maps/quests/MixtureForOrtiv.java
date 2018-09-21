@@ -80,7 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;kokuda=1;红伞菇=12;甘草=2;苹果=10;红酒=30;大蒜=2;杵和臼=1";
+	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;科科达=1;红伞菇=12;甘草=2;苹果=10;红酒=30;大蒜=2;杵和臼=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -171,7 +171,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			npc.addReply("red lionfish","Red lionfish 很难找到, 它们体外有红白相门的条纹, 红是紫红色 " +
 					"或棕色. 我曾听说在Faiumoni的一个地方, 你可以钓到它们, 但要小心, 每条 lionfish  都有毒!");
 
-			npc.addReply("kokuda","Kokuda 相当难找. 如果你在别的岛能抓住一条我会很开心...");
+			npc.addReply("科科达","科科达 相当难找. 如果你在别的岛能抓住一条我会很开心...");
 
 			npc.addReply("甘草", "在魔法城市有一个好看的小酒吧, 里面年轻的女孩销售这种好吃的甜品.");
 

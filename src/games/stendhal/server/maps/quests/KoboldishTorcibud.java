@@ -114,11 +114,11 @@ public class KoboldishTorcibud extends AbstractQuest {
     private static final String REQUIRED_ITEMS_TEMPLATE =
         "耳瓶=0;" +
         "细瓶子=0;" +
-        "mandragora=0;" +
+        "曼德拉草=0;" +
         "洋蓟=0;" +
         "海芋=0;" +
-        "sclaria=0;" +
-        "kekik=0;" +
+        "鼠尾草=0;" +
+        "百里香=0;" +
         "沸水=0";
 
     @Override
@@ -241,11 +241,11 @@ public class KoboldishTorcibud extends AbstractQuest {
         return
             "耳瓶=" + required_bottle_eared + ";" +
             "细瓶子=" + required_bottle_slim + ";" +
-            "mandragora=" + required_mandragora + ";" +
+            "曼德拉草=" + required_mandragora + ";" +
             "洋蓟=" + Rand.roll1D6() + ";" +
             "海芋=" + Rand.roll1D6() + ";" +
-            "sclaria=" + Rand.roll1D6() + ";" +
-            "kekik=" + Rand.roll1D6() + ";" +
+            "鼠尾草=" + Rand.roll1D6() + ";" +
+            "百里香=" + Rand.roll1D6() + ";" +
             "沸水=" + Rand.roll1D6() + ";";
     }
 
@@ -398,15 +398,15 @@ public class KoboldishTorcibud extends AbstractQuest {
 
         // Player is curious about herbs
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("海芋","sclaria","kekik"),
+            Arrays.asList("海芋","鼠尾草","百里香"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Common herb that grow outside in the plains or woods... Easy to spot!",
             null);
 
-        // Player is curious about mandragora
+        // Player is curious about 曼德拉草
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("mandragora"),
+            Arrays.asList("曼德拉草"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! All I know is that it is rare root that grows better outside in the woods,"

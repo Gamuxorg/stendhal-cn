@@ -92,7 +92,7 @@ public class ImperialPrincessTest {
 		en.step(player, "favour");
 		assertEquals("I cannot free the captives in the basement but I could do one thing: ease their pain. I need #herbs for this.", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
+		assertEquals("I need 7 海芋, 1 科科达, 1 鼠尾草, 1 百里香, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("So you'll just let them suffer! How despicable.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("rejected"));
@@ -109,17 +109,17 @@ public class ImperialPrincessTest {
 		en.step(player, "hi");
 		assertEquals("How do you do?", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("I need 7 海芋, 1 kokuda, 1 sclaria, 1 kekik, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
+		assertEquals("I need 7 海芋, 1 科科达, 1 鼠尾草, 1 百里香, 28 potions and 14 抗毒药济s. Will you get these items?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Thank you! We must be subtle about this, I do not want the scientists suspecting I interfere. When you return with the items, please say codeword #herbs.", getReply(npc));
 		en.step(player, "herbs");
-		assertEquals("Shh! Don't say it till you have the 7 海芋, 1 #kokuda, 1 #sclaria, 1 #kekik, 28 potions and 14 抗毒药济s. I don't want anyone suspecting our code.", getReply(npc));
-		en.step(player, "kokuda");
+		assertEquals("Shh! Don't say it till you have the 7 海芋, 1 #科科达, 1 #鼠尾草, 1 #百里香, 28 potions and 14 抗毒药济s. I don't want anyone suspecting our code.", getReply(npc));
+		en.step(player, "科科达");
 		assertEquals("I believe that herb can only be found on Athor, though they guard their secrets closely over there.", getReply(npc));
-		en.step(player, "kekik");
+		en.step(player, "百里香");
 		assertEquals("My maid's friend Jenny has a source not far from her. The wooded areas at the eastern end of Nalwor river may have it. too.", getReply(npc));
-		en.step(player, "sclaria");
-		assertEquals("Healers who use sclaria gather it in all sorts of places - around Or'ril, in Nalwor forest, I am sure you will find that without trouble.", getReply(npc));
+		en.step(player, "鼠尾草");
+		assertEquals("Healers who use 鼠尾草 gather it in all sorts of places - around Or'ril, in Nalwor forest, I am sure you will find that without trouble.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye, and good luck.", getReply(npc));
 		// she should have stored the player level in the quest slot.
@@ -128,11 +128,11 @@ public class ImperialPrincessTest {
 
 		Item item = ItemTestHelper.createItem("海芋", 7);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("kokuda", 1);
+		item = ItemTestHelper.createItem("科科达", 1);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("sclaria", 1);
+		item = ItemTestHelper.createItem("鼠尾草", 1);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("kekik", 1);
+		item = ItemTestHelper.createItem("百里香", 1);
 		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("抗毒药济", 14);
 		player.getSlot("背包").add(item);
@@ -151,8 +151,8 @@ public class ImperialPrincessTest {
 		assertFalse(player.isEquipped("potion"));
 		assertFalse(player.isEquipped("抗毒药济"));
 		assertFalse(player.isEquipped("海芋"));
-		assertFalse(player.isEquipped("sclaria"));
-		assertFalse(player.isEquipped("kekik"));
+		assertFalse(player.isEquipped("鼠尾草"));
+		assertFalse(player.isEquipped("百里香"));
 		assertFalse(player.isEquipped("kokoda"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getQuest(questSlot), is("recommended"));

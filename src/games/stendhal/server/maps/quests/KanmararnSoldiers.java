@@ -327,7 +327,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 	 * add corpses of ex-NPCs.
 	 */
 	private void prepareCorpses() {
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-6_kanmararn_city");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-6_卡梅伦_城");
 
 		// Now we create the corpse of the second NPC
 		final Corpse tom = new Corpse("youngsoldiernpc", 5, 47);
@@ -393,8 +393,8 @@ public class KanmararnSoldiers extends AbstractQuest {
 			"They are strong enemies! We're in their #kingdom.");
 		james.addReply(Arrays.asList("peter", "tom", "charles"),
 			"He was a good soldier and fought bravely.");
-		james.addReply(Arrays.asList("kingdom", "kanmararn"),
-			"Kanmararn, the legendary kingdom of the #dwarves.");
+		james.addReply(Arrays.asList("kingdom", "卡梅伦"),
+			"卡梅伦, the legendary kingdom of the #dwarves.");
 		james.addReply("dreamscape",
 			"There's a man east of town. He knows the way.");
 
@@ -440,8 +440,8 @@ public class KanmararnSoldiers extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Kanmararn Soldiers",
-				"Some time ago, Sergeant James started with his crew of four brave soldiers to their adventure of finding a treasure in Kanmararn, the city of dwarves. They didn't return yet.",
+				"卡梅伦 Soldiers",
+				"Some time ago, Sergeant James started with his crew of four brave soldiers to their adventure of finding a treasure in 卡梅伦, the city of dwarves. They didn't return yet.",
 				true);
 		prepareCowardSoldier();
 		prepareCorpses();
@@ -455,7 +455,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				return res;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
-			res.add("I met a scared soldier in Kanmararn City. He asked me to find his friends, Peter, Charles, and Tom.");
+			res.add("I met a scared soldier in 卡梅伦 City. He asked me to find his friends, Peter, Charles, and Tom.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help Henry.");
 				return res;

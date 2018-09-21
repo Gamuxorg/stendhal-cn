@@ -39,7 +39,7 @@ public class MinotaurCreature implements ZoneConfigurator {
 	private void buildQuicksandArea(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = new ItemGuardCreature(manager.getCreature("minotaur"), "minotaur key");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("minotaur"), "牛头人钥匙");
 
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 121, 121, creature, 1);
 

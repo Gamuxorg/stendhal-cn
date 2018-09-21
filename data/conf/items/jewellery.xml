@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
-  <item name="emerald">
+  <item name="翡翠">
     <type class="jewellery" subclass="emerald" tileid="-1"/>
-    <description>You see an emerald, a precious gemstone.</description>
+    <description>You see an 翡翠, a precious gemstone.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -21,9 +21,9 @@
     </equipable>
   </item>
 
-  <item name="sapphire">
+  <item name="蓝宝石">
     <type class="jewellery" subclass="sapphire" tileid="-1"/>
-    <description>You see a sapphire, a precious gemstone.</description>
+    <description>You see a 蓝宝石, a precious gemstone.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -41,9 +41,9 @@
     </equipable>
   </item>
 
-  <item name="carbuncle">
+  <item name="红宝石">
     <type class="jewellery" subclass="carbuncle" tileid="-1"/>
-    <description>You see a carbuncle, a precious gemstone related to the garnet.</description>
+    <description>You see a 红宝石, a precious gemstone related to the garnet.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -61,9 +61,9 @@
     </equipable>
   </item>
 
-  <item name="obsidian">
+  <item name="黑曜石">
     <type class="jewellery" subclass="obsidian" tileid="-1"/>
-   <description>You see a piece of obsidian, it's known as volcanic glass because it forms when lava cools rapidly. When used as a gemstone it may look jet black or silvery grey, depending on how it is cut.</description>
+   <description>You see a piece of 黑曜石, it's known as volcanic glass because it forms when lava cools rapidly. When used as a gemstone it may look jet black or silvery grey, depending on how it is cut.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -81,9 +81,9 @@
     </equipable>
   </item>
 
-  <item name="diamond">
+  <item name="钻石">
     <type class="jewellery" subclass="greater_brilliant" tileid="-1"/>
-    <description>You see a diamond, not just a beautiful gem but also the hardest naturally occurring material .</description>
+    <description>You see a 钻石, not just a beautiful gem but also the hardest naturally occurring material .</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

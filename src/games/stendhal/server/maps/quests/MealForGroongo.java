@@ -509,16 +509,16 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_consomme.put("胡萝卜", new Pair<Integer, Integer>(1,4));
         requiredIngredients_consomme.put("鸡腿", new Pair<Integer, Integer>(1,4));
         requiredIngredients_consomme.put("肉", new Pair<Integer, Integer>(2,4));
-        requiredIngredients_consomme.put("sclaria", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_consomme.put("kekik", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_consomme.put("鼠尾草", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_consomme.put("百里香", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_paidakia = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_paidakia.put("肉", new Pair<Integer, Integer>(1,5));
         requiredIngredients_paidakia.put("vinegar", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_paidakia.put("sclaria", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_paidakia.put("鼠尾草", new Pair<Integer, Integer>(1,4));
         requiredIngredients_paidakia.put("橄榄油", new Pair<Integer, Integer>(1,2));
         requiredIngredients_paidakia.put("potato", new Pair<Integer, Integer>(1,6));
-        requiredIngredients_paidakia.put("kekik", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_paidakia.put("百里香", new Pair<Integer, Integer>(1,2));
         requiredIngredients_paidakia.put("lemon", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_kushari = new HashMap<String, Pair<Integer, Integer>>();
