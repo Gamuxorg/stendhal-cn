@@ -117,12 +117,21 @@ public class HerbsForCarmenTest {
 		en.step(player, "quest");
 		assertEquals("Hey, are you going to help me yet?", getReply(npc));
 		en.step(player, "yes");
+<<<<<<< HEAD
+		assertEquals("Oh how nice. Please bring me those ingredients: 3 #苹果s, 5 #'sprigs of arandula', a #'纽扣菇', a #porcino, and 2 #'pieces of wood'.", getReply(npc));
+		en.step(player, "苹果s");
+		assertEquals("苹果s have many vitamins, I saw some 苹果 trees on the east of semos.", getReply(npc));
+		en.step(player, "sprigs of arandula");
+		assertEquals("North of Semos, near the tree grove, grows a herb called arandula. Here is a picture so you know what to look for.", getReply(npc));
+		en.step(player, "纽扣菇");
+=======
 		assertEquals("Oh how nice. Please bring me those ingredients: 3 #苹果s, 5 #'sprigs of 海芋', a #'小圆菇', a #porcino, and 2 #'pieces of wood'.", getReply(npc));
 		en.step(player, "苹果s");
 		assertEquals("苹果s have many vitamins, I saw some 苹果 trees on the east of semos.", getReply(npc));
 		en.step(player, "sprigs of 海芋");
 		assertEquals("North of Semos, near the tree grove, grows a herb called 海芋. Here is a picture so you know what to look for.", getReply(npc));
 		en.step(player, "小圆菇");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		assertEquals("Someone told me there are many different mushrooms in the Semos forest, follow the path south from here.", getReply(npc));
 		en.step(player, "大脚菇");
 		assertEquals("Someone told me there are many different mushrooms in the Semos forest, follow the path south from here.", getReply(npc));
@@ -136,7 +145,11 @@ public class HerbsForCarmenTest {
 		en.step(player, "hi");
 		assertEquals("Hi again. I can #heal you, or if you brought me #ingredients I'll happily take those!", getReply(npc));
 		en.step(player, "ingredients");
+<<<<<<< HEAD
+		assertEquals("I need 3 #苹果s, 5 #'sprigs of arandula', a #'纽扣菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+=======
 		assertEquals("I need 3 #苹果s, 5 #'sprigs of 海芋', a #'小圆菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "no");
 		assertEquals("Ok, well just let me know if I can #help you with anything else.", getReply(npc));
 		en.step(player, "bye");
@@ -147,7 +160,11 @@ public class HerbsForCarmenTest {
 		en.step(player, "hi");
 		assertEquals("Hi again. I can #heal you, or if you brought me #ingredients I'll happily take those!", getReply(npc));
 		en.step(player, "ingredients");
+<<<<<<< HEAD
+		assertEquals("I need 3 #苹果s, 5 #'sprigs of arandula', a #'纽扣菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+=======
 		assertEquals("I need 3 #苹果s, 5 #'sprigs of 海芋', a #'小圆菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "yes");
 		assertEquals("Great, what did you bring?", getReply(npc));
 		en.step(player, "苹果");
@@ -177,7 +194,11 @@ public class HerbsForCarmenTest {
 		en.step(player, "hi");
 		assertEquals("Hi again. I can #heal you, or if you brought me #ingredients I'll happily take those!", getReply(npc));
 		en.step(player, "ingredients");
+<<<<<<< HEAD
+		assertEquals("I need 3 #苹果s, 5 #'sprigs of arandula', a #'纽扣菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+=======
 		assertEquals("I need 3 #苹果s, 5 #'sprigs of 海芋', a #'小圆菇', a #porcino, and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "wood");
 		assertEquals("You don't have a piece of wood with you!", getReply(npc));
 		en.step(player, "woos"); // misspelled "wood"
@@ -203,23 +224,37 @@ public class HerbsForCarmenTest {
 		Item arandula2 = ItemTestHelper.createItem("海芋", 2);
 		player.getSlot("背包").add(arandula2);
 		Item wood = ItemTestHelper.createItem("wood", 2);
+<<<<<<< HEAD
+		player.getSlot("bag").add(wood);
+		Item mushroom = ItemTestHelper.createItem("纽扣菇", 1);
+		player.getSlot("bag").add(mushroom);
+=======
 		player.getSlot("背包").add(wood);
 		Item mushroom = ItemTestHelper.createItem("小圆菇", 1);
 		player.getSlot("背包").add(mushroom);
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		// ----------------------------------------------------------
 		// bring remaining ingredients and check reward
 		en.step(player, "hi");
 		assertEquals("Hi again. I can #heal you, or if you brought me #ingredients I'll happily take those!", getReply(npc));
 		en.step(player, "ingredients");
+<<<<<<< HEAD
+		assertEquals("I need 2 #苹果s, 2 #'sprigs of arandula', a #'纽扣菇', and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+=======
 		assertEquals("I need 2 #苹果s, 2 #'sprigs of 海芋', a #'小圆菇', and 2 #'pieces of wood'. Did you bring something?", getReply(npc));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "苹果");
 		assertEquals("Good, do you have anything else?", getReply(npc));
 		en.step(player, "海芋");
 		assertEquals("Good, do you have anything else?", getReply(npc));
 		en.step(player, "wood");
 		assertEquals("Good, do you have anything else?", getReply(npc));
+<<<<<<< HEAD
+		en.step(player, "纽扣菇");
+=======
 		en.step(player, "小圆菇");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		// [08:23] kymara earns 50 experience points.
 		assertEquals("Great! Now I can heal many people for free. Thanks a lot. Take this for your work.", getReply(npc));
 		assertThat(player.getXP(), greaterThan(xp));
@@ -234,6 +269,10 @@ public class HerbsForCarmenTest {
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
+<<<<<<< HEAD
 		assertTrue(player.isEquipped("小治疗剂", 5));
+=======
+		assertTrue(player.isEquipped("小治疗剂", 5));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 }

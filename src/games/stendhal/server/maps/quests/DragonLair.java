@@ -98,7 +98,7 @@ public class DragonLair extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple chaos dragonriders exercising our dragons. Don't get in their way!",
+				"Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple 混沌龙骑士s exercising our dragons. Don't get in their way!",
 				new SetQuestAction(QUEST_SLOT, "start")); // Portal closes quest
 
 		npc.add(ConversationStates.QUEST_OFFERED,

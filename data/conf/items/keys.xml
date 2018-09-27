@@ -106,9 +106,9 @@
     </equipable>
   </item>
 
-  <item name="sedah gate key">
+  <item name="西大城门钥匙">
     <type class="key" subclass="square" tileid="-1"/>
-    <description>You see a key for the gate to the imperial city of Sedah.</description>
+    <description>You see a key for the gate to the imperial city of 西大.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -124,7 +124,7 @@
   </item>
 
  <!-- this is unused as yet but we create the key object so the door can reject properly-->
-  <item name="pet sanctuary key">
+  <item name="宠物圣堂钥匙">
     <type class="key" subclass="rat" tileid="-1"/>
     <description>You see a key for the pet sanctuary in Ados.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
@@ -141,7 +141,7 @@
     </equipable>
   </item>
 
-  <item name="house key">
+  <item name="房间钥匙">
     <type class="key" subclass="purple" tileid="-1"/>
     <description>You should not see this description</description>
     <implementation class-name="games.stendhal.server.entity.item.HouseKey" />
@@ -159,7 +159,7 @@
     </equipable>
   </item>
   
-  <item name="gate key">
+  <item name="大门钥匙">
     <type class="key" subclass="purple" tileid="-1"/>
     <description>You should not see this description</description>
     <implementation class-name="games.stendhal.server.entity.item.GateKey"/>
@@ -177,7 +177,7 @@
   </item>
 
   <!-- admin only item. *nothing* should drop this -->
-  <item name="master key">
+  <item name="万能钥匙">
     <type class="key" subclass="rat" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.MasterKey"/>
@@ -330,9 +330,9 @@
     </equipable>
   </item>-->
 
-  <item name="small key">
+  <item name="小钥匙">
     <type class="key" subclass="common" tileid="-1"/>
-    <description>You see the key for Zara's row house in Ados.</description>
+    <description>阿多斯的Zara房间的钥匙</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>

@@ -35,7 +35,7 @@ public class GateKeeperNPCTest extends ZonePlayerAndNPCTestImpl {
 	private static final String NPC_NAME = "Revi Borak";
 
 	private static final String ITEM_MONEY = "money";
-	private static final String ITEM_KEY = "sedah gate key";
+	private static final String ITEM_KEY = "西大城门钥匙";
 
 	private static final String REPLY_HELLO = "What do you want?";
 	private static final String REPLY_BRIBE_NOT_ENOUGH = "You think that amount will persuade me?! That's more than my job is worth!";

@@ -135,7 +135,11 @@ public class BarMaidNPCTest {
 		Sentence sentence = new SentenceImplementation(new Expression("offer", ExpressionType.VERB));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.ATTENDING));
+<<<<<<< HEAD
+		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, 菠菜es, pieces of ham, sacks of flour, and porcini."));
+=======
 		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, 菠菜es, pieces of ham, sacks of flour, and 大脚菇."));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		final Expression sell = new Expression("sell", ExpressionType.VERB);
 

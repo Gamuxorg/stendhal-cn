@@ -80,9 +80,9 @@ public class BeeKeeperNPC implements ZoneConfigurator {
 				addHelp("Bees make 蜂蜜 and wax. I can sell you some if you like. 蜂蜜 and wax that is, not bees!");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
 				offerings.put("蜂蜜", 50);
-				offerings.put("beeswax", 80);
+				offerings.put("蜂蜡", 80);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
-				addOffer("I sell sweet 蜂蜜 and beeswax which I harvest myself.");
+				addOffer("I sell sweet 蜂蜜 and 蜂蜡 which I harvest myself.");
 				addGoodbye("Goodbye and be careful around the hives!");
 			}
 		};

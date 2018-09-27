@@ -316,7 +316,7 @@ the huge task of creating & replacing sprite & tileset images.
 *world*
 - A new fish swimming along the coast in Ados City
 - Different "elf" head for players and NPCs
-- New corpse for bone dragon
+- New corpse for 骨龙
 - Added to Daily Item Quest list:
 -- 5 olives, 2 marbles
 - Varying weather at outside zones
@@ -1269,13 +1269,13 @@ read https://stendhalgame.org/wiki/Automatic_Software_Updater
 *world*
 - new NPC Andy in Ados near the church
 - new NPC Haunchy Meatoch on Ados market with a new quest
-- new NPC Florence Boullabaisse on Ados market who will make a tasty Fish Soup for you
+- new NPC Florence Boullabaisse on Ados market who will make a tasty 鱼汤 for you
 - new NPC Fritz on Ados market
 - new NPC Barbarus in Semos Mine
 - new NPC Ortiv Milquetoast in Kirdneh River House with a new quest
-- new fish soup maker on Ados market (Florence Boullabaisse)
+- new 鱼汤 maker on Ados market (Florence Boullabaisse)
 - new music in Orril Castle
-- new items fish soup, garlic, grilled steak, coal, pick, red lionfish
+- new items 鱼汤, garlic, grilled steak, coal, pick, red lionfish
 - coal sources for extracting coal
 - added garlic to Sues sales list
 - new game for Semos Mine Town Revival Weeks: 9 switches

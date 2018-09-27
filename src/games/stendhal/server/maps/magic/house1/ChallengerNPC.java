@@ -40,7 +40,7 @@ import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.IRPZone;
 
 /**
- * The Chaos Sorcerer controlling entry to the adventure island
+ * The 混沌巫师 controlling entry to the adventure island
  *
  * @author kymara
  */
@@ -246,7 +246,7 @@ public class ChallengerNPC implements ZoneConfigurator  {
 			npc.setPosition(14, 4);
 			npc.setEntityClass("chaos_sorcerornpc");
 			npc.setDirection(Direction.DOWN);
-			npc.setDescription("You see Haastaja, the Challenger. He is a mighty Chaos Sorcerer.");
+			npc.setDescription("You see Haastaja, the Challenger. He is a mighty 混沌巫师.");
 			npc.setLevel(600);
 			npc.initHP(75);
 			zone.add(npc);

@@ -148,21 +148,21 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("黑曜石",1);
 
 		// legs
-		items.put("chaos legs",1);
-		items.put("dwarvish legs",1);
-		items.put("golden legs",1);
-		items.put("mainio legs",1);
-		items.put("shadow legs",1);
-		items.put("xeno legs",1);
+		items.put("混沌护腿",1);
+		items.put("矮人护腿",1);
+		items.put("黄金护腿",1);
+		items.put("奇妙裤子",1);
+		items.put("影子护腿",1);
+		items.put("异界护腿",1);
 
 		// misc
-		items.put("giant heart",5);
-		items.put("venom gland",1);
+		items.put("巨人心脏",5);
+		items.put("毒腺",1);
 
 		// resource
-		items.put("mithril bar",1);
-		items.put("mithril nugget",1);
-		items.put("silk gland",7);
+		items.put("密银锭",1);
+		items.put("密银矿石",1);
+		items.put("蜘蛛丝腺",7);
 
 		// special
 		items.put("幸运石",1);
@@ -188,9 +188,9 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("巨剑",1);
 		items.put("地狱匕首",1);
 		items.put("冰剑",1);
-		items.put("immortal sword",1);
-		items.put("night dagger",1);
-		items.put("xeno sword",1);
+		items.put("永恒之剑",1);
+		items.put("暗之匕首",1);
+		items.put("异界之剑",1);
 
 	}
 

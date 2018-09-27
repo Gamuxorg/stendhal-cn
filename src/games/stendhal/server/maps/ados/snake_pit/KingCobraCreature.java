@@ -39,7 +39,7 @@ public class KingCobraCreature implements ZoneConfigurator {
 	private void buildSnakePit(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = new ItemGuardCreature(manager.getCreature("眼镜蛇王"), "venom gland");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("眼镜蛇王"), "毒腺");
 
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 34, 51, creature, 1);
 

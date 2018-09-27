@@ -4,7 +4,7 @@
   
   <item name="沸水">
     <type class="drink" subclass="fierywater" tileid="-1"/>
-    <description>You see a bottle of 沸水. Do not drink it pure, you would evaporate!</description>
+    <description>一瓶沸水. 一口喝下肯定被烫死!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-1000"/>
@@ -27,7 +27,7 @@
   
   <item name="轻康复药">
     <type class="drink" subclass="koboldish_torcibud_mild" tileid="-1"/>
-    <description>You see a bottle of 轻康复药. It will help you recover when you're all bruised and battered.</description>
+    <description>轻康复药. 可以恢复一些轻伤.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="90"/>
@@ -50,7 +50,7 @@
   
   <item name="康复药">
     <type class="drink" subclass="koboldish_torcibud_strong" tileid="-1"/>
-    <description>You see a bottle of 康复药. It will help you recover when you're all bruised and battered.</description>
+    <description>康复药. 当你被打伤时可以帮助恢复.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="180"/>
@@ -73,7 +73,7 @@
   
   <item name="强康复药">
     <type class="drink" subclass="koboldish_torcibud_vsop" tileid="-1"/>
-    <description>You see a bottle of 强康复药, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
+    <description>强康复药, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="270"/>
@@ -329,7 +329,7 @@
   
   <item name="毒药">
     <type class="drink" subclass="poison" tileid="-1"/>
-    <description>You see a bottle of 毒药. Don't drink it!</description>
+    <description>一瓶毒药. 不要喝!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-40"/>
@@ -352,7 +352,7 @@
   
   <item name="特级毒药">
     <type class="drink" subclass="greater_poison" tileid="-1"/>
-    <description>You see a 特级毒药. Don't drink it!</description>
+    <description>特级毒药. 不要喝!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-60"/>
@@ -375,7 +375,7 @@
   
   <item name="极毒">
     <type class="drink" subclass="deadly_poison" tileid="-1"/>
-    <description>You see a 极毒. Don't drink it!</description>
+    <description>极毒. 千万不要喝!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-100"/>
@@ -398,7 +398,7 @@
   
   <item name="痍毒">
     <type class="drink" subclass="disease_poison" tileid="-1"/>
-    <description>You see a 痍毒.  Be careful, it's wicked.</description>
+    <description>痍毒. 要小心, 会传染.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-2000"/>
@@ -421,7 +421,7 @@
   
   <item name="剧毒">
     <type class="drink" subclass="mega_poison" tileid="-1"/>
-    <description>You see a 剧毒. This is some wicked poison.</description>
+    <description>剧毒. 喝下无法抢救.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-500"/>
@@ -444,7 +444,7 @@
   
   <item name="莹光药剂">
     <type class="drink" subclass="twilight_elixir" tileid="-1"/>
-    <description>You see a bottle of medicinal elixir.</description>
+    <description>包治百病的莹光药剂.</description>
     <implementation class-name="games.stendhal.server.entity.item.TwilightElixir"/>
     <attributes>
       <amount value="-1000"/>
@@ -467,7 +467,7 @@
   
   <item name="小治疗剂">
     <type class="drink" subclass="minor_potion" tileid="-1"/>
-    <description>You see a 小治疗剂. It's not much but may save you in a tight spot.</description>
+    <description>一瓶小治疗剂. 关健时刻可以救急.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="50"/>
@@ -490,7 +490,7 @@
   
   <item name="蔬菜汤">
     <type class="drink" subclass="soup" tileid="-1"/>
-    <description>You see a bowl of 蔬菜汤. Its contents fill you up.</description>
+    <description>一碗蔬菜汤. 可以填饱肚子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="2500"/>
@@ -514,7 +514,7 @@
   
   <item name="鱼汤">
     <type class="drink" subclass="fish_soup" tileid="-1"/>
-    <description>You see a bowl of 鱼汤. Its contents fill you up.</description>
+    <description>一碗鱼汤. 可以充饥.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="3500"/>
@@ -536,9 +536,9 @@
     </equipable>
   </item>
   
-  <item name="治疗济">
+  <item name="治疗剂">
     <type class="drink" subclass="potion" tileid="-1"/>
-    <description>You see a 治疗济. Take it to battle and you may survive longer.</description>
+    <description>一瓶治疗剂. 想活久一点最好带着它.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="100"/>
@@ -561,7 +561,7 @@
   
   <item name="大治疗剂">
     <type class="drink" subclass="greater_potion" tileid="-1"/>
-    <description>You see a 大治疗剂, invaluable in battle.</description>
+    <description>一瓶大治疗剂, 战斗中的无价之宝.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="300"/>
@@ -584,7 +584,7 @@
   
   <item name="强治疗剂">
     <type class="drink" subclass="mega_potion" tileid="-1"/>
-    <description>You see a 强治疗剂. It strengthens greatly.</description>
+    <description>一瓶强治疗剂. 疗效极好.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="800"/>
@@ -605,9 +605,9 @@
     </equipable>
   </item>
   
-  <item name="爱之治疗济">
+  <item name="爱之治疗剂">
     <type class="drink" subclass="love_potion" tileid="-1"/>
-    <description>You see a 爱之治疗济. It looks powerful so take care to use it carefully!</description>
+    <description>爱之治疗剂. 效果不错, 但要小心使用!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="400"/>
@@ -628,9 +628,9 @@
     </equipable>
   </item>
   
-  <item name="sedative">
+  <item name="镇静剂">
     <type class="drink" subclass="sedative" tileid="-1" />
-    <description>You see a sedative. It's effects can protect you from a shocked state.</description>
+    <description>一瓶镇静剂. 治疗震摄状态.</description>
     <implementation class-name="games.stendhal.server.entity.item.StatusHealer" />
     <attributes>
       <immunization value="shocked" />

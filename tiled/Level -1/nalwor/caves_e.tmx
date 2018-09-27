@@ -46,7 +46,7 @@
  <tileset firstgid="71" name="assassins" tilewidth="32" tileheight="32">
   <image source="../../tileset/logic/creature/human_evil.png"/>
  </tileset>
- <tileset firstgid="81" name="red dragon" tilewidth="32" tileheight="32">
+ <tileset firstgid="81" name="红龙" tilewidth="32" tileheight="32">
   <image source="../../tileset/logic/creature/huge_animal.png"/>
  </tileset>
  <tileset firstgid="95" name="obsidian" tilewidth="32" tileheight="32">

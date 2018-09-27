@@ -157,7 +157,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("牛奶",5);
 		items.put("小治疗剂",5);
 		items.put("毒药",5);
-		items.put("治疗济",5);
+		items.put("治疗剂",5);
 		items.put("茶",3);
 		items.put("水",5);
 		items.put("红酒",10);
@@ -228,15 +228,15 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("百里香",5);
 
 		// legs
-        items.put("blue legs",1);
-		items.put("chain legs",1);
-		items.put("leather legs",1);
-		items.put("studded legs",1);
+        items.put("蓝裤子",1);
+		items.put("索链护腿",1);
+		items.put("皮裤",1);
+		items.put("镶嵌护腿",1);
 
 		// misc
 		items.put("dice",1);
-		items.put("marbles", 2);
-		items.put("rodent trap",5);
+		items.put("玻璃球", 2);
+		items.put("捕兽夹",5);
 		items.put("teddy",1);
 
 		// money
@@ -248,13 +248,13 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("木弓",1);
 
 		// resource
-		items.put("coal",10);
+		items.put("煤炭",10);
 		items.put("面粉",5);
 		items.put("小麦",20);
-		items.put("gold bar",5);
-		items.put("gold nugget",10);
-		items.put("iron",5);
-		items.put("iron ore",10);
+		items.put("金条",5);
+		items.put("金砂",10);
+		items.put("铁锭",5);
+		items.put("铁矿石",10);
 		items.put("木头",10);
 
 		// shield
@@ -275,9 +275,9 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("双刃剑",1);
 		items.put("dagger",1);
 		items.put("精灵之剑",1);
-		items.put("katana",1);
-		items.put("knife",1);
-		items.put("scimitar",1);
+		items.put("太刀",1);
+		items.put("小刀",1);
+		items.put("半月弯刀",1);
 		items.put("短剑",1);
 		items.put("sword",1);
 

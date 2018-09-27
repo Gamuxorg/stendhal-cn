@@ -25,17 +25,17 @@ public class ChaosRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("chaos warrior", 4);
-		attackArmy.put("chaos soldier", 3);
-		attackArmy.put("chaos commander", 4);
-		attackArmy.put("chaos lord", 3);
-		attackArmy.put("chaos sorcerer", 3);
-		attackArmy.put("chaos overlord", 3);
-		attackArmy.put("chaos dragonrider", 3);
-		attackArmy.put("chaos red dragonrider", 2);
-		attackArmy.put("chaos green dragonrider", 2);
+		attackArmy.put("混沌勇士", 4);
+		attackArmy.put("混沌士兵", 3);
+		attackArmy.put("混沌司令", 4);
+		attackArmy.put("混沌领主", 3);
+		attackArmy.put("混沌巫师", 3);
+		attackArmy.put("混沌君主", 3);
+		attackArmy.put("混沌龙骑士", 3);
+		attackArmy.put("混沌红龙骑士", 2);
+		attackArmy.put("混沌绿龙骑士", 2);
 		attackArmy.put("黑巨人", 1);
-		attackArmy.put("black dragon", 1);
+		attackArmy.put("黑龙", 1);
 		return attackArmy;
 	}
 

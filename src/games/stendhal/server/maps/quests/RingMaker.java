@@ -156,14 +156,14 @@ public class RingMaker extends AbstractQuest {
 				ConversationStates.QUEST_ITEM_BROUGHT,
 				"The charge for my service is " + REQUIRED_MONEY
 					+ " money, and I need " + REQUIRED_GOLD
-					+ " gold bars and " + REQUIRED_GEM
+					+ " 金条s and " + REQUIRED_GEM
 					+ " 翡翠 to fix the ring. Do you want to pay now?",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(
-						new PlayerHasItemWithHimCondition("gold bar", REQUIRED_GOLD),
+						new PlayerHasItemWithHimCondition("金条", REQUIRED_GOLD),
 						new PlayerHasItemWithHimCondition("money", REQUIRED_MONEY),
 						new PlayerHasItemWithHimCondition("翡翠", REQUIRED_GEM)),
 				ConversationStates.IDLE,
@@ -171,7 +171,7 @@ public class RingMaker extends AbstractQuest {
 						+ REQUIRED_MINUTES
 						+ " minutes and it will be ready. Bye for now.",
 				new MultipleActions(
-						new DropItemAction("gold bar", REQUIRED_GOLD),
+						new DropItemAction("金条", REQUIRED_GOLD),
 						new DropItemAction("翡翠", REQUIRED_GEM),
 						new DropItemAction("money", REQUIRED_MONEY),
 						new ChatAction() {
@@ -195,7 +195,7 @@ public class RingMaker extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.YES_MESSAGES,
 				new NotCondition(new  AndCondition(
-						new PlayerHasItemWithHimCondition("gold bar", REQUIRED_GOLD),
+						new PlayerHasItemWithHimCondition("金条", REQUIRED_GOLD),
 						new PlayerHasItemWithHimCondition("money", REQUIRED_MONEY),
 						new PlayerHasItemWithHimCondition("翡翠", REQUIRED_GEM))),
 				ConversationStates.IDLE,
@@ -232,7 +232,7 @@ public class RingMaker extends AbstractQuest {
 			return res;
 		}
 		// Note: this will not be seen till the forging stage starts as no quest slot is set before then.
-		res.add("Ognir said he can fix my ring of life by bringing him an 翡翠, 80000 money and 2 gold bars.");
+		res.add("Ognir said he can fix my ring of life by bringing him an 翡翠, 80000 money and 2 金条s.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.startsWith(FORGING) && new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES).fire(player,null, null)) {
 				res.add("My fixed ring is ready to collect from Ognir! I must ask about \"life\" to get it back.");

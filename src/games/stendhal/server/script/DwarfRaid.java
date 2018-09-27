@@ -25,14 +25,14 @@ public class DwarfRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("dwarf", 7);
-		attackArmy.put("dwarf guardian", 6);
-		attackArmy.put("elder dwarf", 6);
-		attackArmy.put("leader dwarf", 4);
-		attackArmy.put("hero dwarf", 5);
-		attackArmy.put("duergar", 3);
-		attackArmy.put("elder duergar", 3);
-		attackArmy.put("duergar axeman", 3);
+		attackArmy.put("矮人", 7);
+		attackArmy.put("矮人守卫", 6);
+		attackArmy.put("矮人壮士", 6);
+		attackArmy.put("矮人统领", 4);
+		attackArmy.put("矮人英雄", 5);
+		attackArmy.put("杜加矮人", 3);
+		attackArmy.put("杜加壮士", 3);
+		attackArmy.put("杜加斧手", 3);
 
 		return attackArmy;
 	}

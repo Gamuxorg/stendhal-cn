@@ -99,20 +99,20 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(100,"Drows, or dark elves as they are commonly called, can be found under Nalwor. They use poison in battles, gathering it from different poisonous creatures."));
 		enemyForces.put("chaos",
 				new Pair<Integer, String>(150,"They are strong and crazy. Only my elite archers hold them from expanding more."));
-		enemyForces.put("mountain dwarf",
+		enemyForces.put("山地矮人",
 				new Pair<Integer, String>(150,"They are my historical neighbors, living in 塞门矿山."));
 		enemyForces.put("mountain orc",
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
 		enemyForces.put("imperial",
-				new Pair<Integer, String>(200,"They come from their castle in the underground Sedah city, ruled by their Emperor Dalmung."));
-		enemyForces.put("barbarian",
-				new Pair<Integer, String>(200,"Different barbarian tribes live on the surface in the North West area of Ados Mountains. Not dangerous but noisy."));
+				new Pair<Integer, String>(200,"They come from their castle in the underground 西大城, ruled by their 帝国大梦."));
+		enemyForces.put("蛮人",
+				new Pair<Integer, String>(200,"Different 蛮人 tribes live on the surface in the North West area of Ados Mountains. Not dangerous but noisy."));
 		enemyForces.put("oni",
 				new Pair<Integer, String>(200,"Very strange race, living in their castle in Fado forest. There are rumors that they have agreed an alliance with the Magic city wizards."));
 
 		/*
 		 * those are not interesting
-		enemyForces.put("dwarf",
+		enemyForces.put("矮人",
 				new Pair<Integer, String>(275,""));
 		enemyForces.put("elf",
 				new Pair<Integer, String>(300,""));
@@ -145,63 +145,63 @@ import marauroa.common.Pair;
 							  "黑暗精灵大师",
 							  "黑暗精灵妈妈"));
 		enemys.put("chaos",
-				Arrays.asList("chaos soldier",
-							  "chaos warrior",
-							  "chaos commander",
-							  "chaos sorcerer",
-							  "chaos dragonrider",
-							  "chaos lord",
-							  "chaos green dragonrider",
-							  "chaos overlord",
-							  "chaos red dragonrider"));
-		enemys.put("mountain dwarf",
-				Arrays.asList("mountain dwarf",
+				Arrays.asList("混沌士兵",
+							  "混沌勇士",
+							  "混沌司令",
+							  "混沌巫师",
+							  "混沌龙骑士",
+							  "混沌领主",
+							  "混沌绿龙骑士",
+							  "混沌君主",
+							  "混沌红龙骑士"));
+		enemys.put("山地矮人",
+				Arrays.asList("山地矮人",
 							  "mountain elder dwarf",
-							  "mountain dwarf guardian",
-							  "mountain hero dwarf",
-							  "mountain leader dwarf",
-							  "Dhohr Nuggetcutter",
-							  "giant dwarf",
-							  "dwarf golem"));
+							  "山地矮人守卫",
+							  "山地矮人英雄",
+							  "山地矮人首领",
+							  "钳工都尔",
+							  "巨型都尔",
+							  "矮人傀儡"));
 		enemys.put("mountain orc",
 				Arrays.asList("mountain orc",
 							  "mountain orc warrior",
 							  "mountain orc hunter",
 							  "mountain orc chief"));
 		enemys.put("imperial",
-				Arrays.asList("imperial defender",
-							  "imperial veteran",
-							  "imperial archer",
-							  "imperial priest",
-							  "imperial elite guardian",
-							  "imperial scientist",
-							  "imperial high priest",
-							  "imperial archer leader",
-							  "imperial elite archer",
-							  "imperial leader",
-							  "imperial chief",
-							  "imperial knight",
-							  "imperial commander",
-							  "imperial experiment",
-							  "imperial demon servant",
-							  "imperial mutant",
-							  "imperial general",
-							  "imperial demon lord",
-							  "emperor dalmung",
+				Arrays.asList("帝国守卫",
+							  "帝国精英士兵",
+							  "帝国弩手",
+							  "帝国牧师",
+							  "帝国精英守卫",
+							  "帝国科学家",
+							  "帝国高级僧侣",
+							  "帝国弩手统领",
+							  "帝国弩手精英",
+							  "帝国指挥官",
+							  "帝国首领",
+							  "帝国骑士",
+							  "帝国司令",
+							  "帝国试验体",
+							  "帝国魔佣军",
+							  "帝国生化人",
+							  "帝国将军",
+							  "帝国魔鬼统领",
+							  "帝国大梦",
 							  "帝国巨人将军"));
 		enemys.put("madaram",
-				Arrays.asList("madaram peasant",
-							  "madaram trooper",
-							  "madaram soldier",
-							  "madaram healer",
-							  "madaram axeman",
-							  "madaram queen",
-							  "madaram hero",
-							  "madaram cavalry",
-							  "madaram stalker",
+				Arrays.asList("马德拉弓箭手",
+							  "马德拉骑士",
+							  "马德拉士兵",
+							  "马德拉医师",
+							  "马德拉斧手",
+							  "马德拉女王",
+							  "马德拉英雄",
+							  "马德拉骑兵",
+							  "马德拉杀手",
 							  "madaram buster blader",
-							  "madaram archer",
-							  "madaram windwalker",
+							  "马德拉弓箭手",
+							  "马德拉风行者",
 							  "卡萨库木蝠"));
 		/*
 		 * exclude amazoness ( because they dont want to leave their island? )
@@ -224,14 +224,14 @@ import marauroa.common.Pair;
 							  "oni priest",
 							  "oni king",
 							  "oni queen"));
-		enemys.put("barbarian",
-				Arrays.asList("barbarian",
+		enemys.put("蛮人",
+				Arrays.asList("蛮人",
 						      "蛮族人狼",
 						      "蛮族精英",
 						      "蛮族牧师",
 						      "野蛮夏曼人",
 						      "蛮族首领",
-						      "野蛮人王"));
+						      "蛮人王"));
 	}
 
 	/**

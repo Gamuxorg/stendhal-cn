@@ -25,7 +25,7 @@ import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.RPClass;
 
 /**
- * A gold source is a spot where a player can prospect for gold nuggets. He
+ * A gold source is a spot where a player can prospect for 金砂s. He
  * needs a 淘金盘, time, and luck.
  *
  * Prospecting takes 7-11 seconds; during this time, the player keep standing
@@ -60,7 +60,7 @@ public class GoldSource extends PlayerActivityEntity {
 	 * Create a gold source.
 	 */
 	public GoldSource() {
-		this("gold nugget");
+		this("金砂");
 	}
 
 	/**

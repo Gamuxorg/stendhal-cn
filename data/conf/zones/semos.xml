@@ -669,7 +669,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","first_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Malleus 的问题. 现在去六角星发光的一角使用蜡烛.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Malleus 的问题. 现在去六角星发光的一角使用蜡烛.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "second_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Malleus 的问题. 现在去六角星发光的一角使用蜡烛.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "second_step")])</parameter>
       </implementation>
     </portal>
 
@@ -688,7 +688,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手拿蜡烛站到那里, 然后拿着蜡烛走过来, 它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -747,7 +747,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","second_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你已选中 Jaer 问题的正确答案. 现在去六角形的下个发光角使用蜡烛.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已选中 Jaer 问题的正确答案. 现在去六角形的下个发光角使用蜡烛.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "third_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已选中 Jaer 问题的正确答案. 现在去六角形的下个发光角使用蜡烛.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "third_step")])</parameter>
       </implementation>
     </portal>
 
@@ -761,7 +761,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -825,7 +825,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","third_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你正确的选择了 拉瓦夏克 的问题. 这是全部测试的一小半. 去找找六角形的下个闪光角吧.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你正确的选择了 拉瓦夏克 的问题. 这是全部测试的一小半. 去找找六角形的下个闪光角吧.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你正确的选择了 拉瓦夏克 的问题. 这是全部测试的一小半. 去找找六角形的下个闪光角吧.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -834,7 +834,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -888,7 +888,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fourth_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Cassandra 的问题. 又一个角亮了. 在另一个三角形的一个发光的角使用蜡烛吧.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Cassandra 的问题. 又一个角亮了. 在另一个三角形的一个发光的角使用蜡烛吧.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fifth_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Cassandra 的问题. 又一个角亮了. 在另一个三角形的一个发光的角使用蜡烛吧.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "fifth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -907,7 +907,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -971,7 +971,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fifth_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Silvanus 的问题. 去下个闪光角吧, 然后是最后一项测试.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Silvanus 的问题. 去下个闪光角吧, 然后是最后一项测试.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "sixth_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Silvanus 的问题. 去下个闪光角吧, 然后是最后一项测试.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "sixth_step")])</parameter>
       </implementation>
     </portal>
 
@@ -980,7 +980,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手拿蜡烛走到那个地点, 手拿蜡烛它才会升起.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -1029,7 +1029,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","sixth_step")</parameter>
         <parameter name="rejected">Zekiel the guardian: '你已正确的选择了 Elana 的问题. 完成六角魔法阵, 然后我等你进入下一环节. 与我对话后完成任务.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Elana 的问题. 完成六角魔法阵, 然后我等你进入下一环节. 与我对话后完成任务.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "last_step")])</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: '你已正确的选择了 Elana 的问题. 完成六角魔法阵, 然后我等你进入下一环节. 与我对话后完成任务.'"), new EquipItemAction("蜡烛"), new SetQuestAction("zekiels_practical_test", "last_step")])</parameter>
       </implementation>
     </portal>
 
@@ -1053,7 +1053,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
-        <parameter name="key">candle</parameter>
+        <parameter name="key">蜡烛</parameter>
         <parameter name="rejected">你必须手持蜡烛站在它上面, 然后它会飘起来.</parameter>
       </implementation>
       <attribute name="hidden" />
@@ -4100,7 +4100,7 @@ TO OLD SEMOS VILLAGE
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">150</parameter>
-        <parameter name="rejected">Aenihata's barrier is strong. The balrog would kill you instantly, run away!</parameter>
+        <parameter name="rejected">Aenihata's barrier is strong. The 巴洛克 would kill you instantly, run away!</parameter>
       </implementation>
     </portal>
     <portal x="42" y="44" ref="exit_balrog" replacing="true">
@@ -4242,7 +4242,7 @@ TO OLD SEMOS VILLAGE
       <destination zone="-3_塞门_墓室" ref="upstairs" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">vampirette entrails</parameter>
+        <parameter name="key">吸血鬼内脏</parameter>
         <parameter name="quantity">7</parameter>
         <parameter name="rejected">
      Prove that you killed all vampirettes before you face their lord.
@@ -4507,7 +4507,7 @@ TO OLD SEMOS VILLAGE
       </implementation>
     </entity>
 
-    <!-- Don't allow teleporting in as we don't want marked scrolls made 
+    <!-- Don't allow teleporting in as we don't want 标记卷轴s made 
       or ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <portal x="43" y="49" ref="exit1">

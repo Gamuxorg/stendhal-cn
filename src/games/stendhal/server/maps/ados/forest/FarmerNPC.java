@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
  * Builds 卡尔, the farmer NPC.
- * He gives 马尾鬃 needed for the BowsForOuchit quest
+ * He gives 鬃毛 needed for the BowsForOuchit quest
  * He gives help to newcomers about the area
  * He suggests you can buy 牛奶 from his wife Philomena
  * @author kymara

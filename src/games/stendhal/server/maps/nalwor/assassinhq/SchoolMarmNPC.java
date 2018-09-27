@@ -26,7 +26,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 
 /**
- * Builds a Teacher NPC who tries to make disciple assassins behave.
+ * Builds a Teacher NPC who tries to make 刺客门徒s behave.
  *
  * @author kymara with modifications by tigertoes
  */

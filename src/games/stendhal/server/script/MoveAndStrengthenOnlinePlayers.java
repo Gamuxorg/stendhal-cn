@@ -99,7 +99,7 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				}
 
 				private void fillBag(Player player) {
-					String[] items = {"韭菜", "大脚菇", "治疗济", "抗毒药济", "啤酒", "小治疗剂", "home scroll", "阿多斯城回城卷", "空白卷轴"};
+					String[] items = {"韭菜", "大脚菇", "治疗剂", "抗毒药济", "啤酒", "小治疗剂", "回城卷", "阿多斯城回城卷", "空白卷轴"};
 					for(String item : items) {
 						StackableItem stackable = (StackableItem) SingletonRepository.getEntityManager().getItem(item);
 						stackable.setQuantity(50);
@@ -132,10 +132,10 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 						Item helmet = SingletonRepository.getEntityManager().getItem("黑头盔");
 						player.equip("head", helmet);
 					}
-					if(!player.isEquipped("elvish legs")) {
+					if(!player.isEquipped("精灵护腿")) {
 						Item first = (Item) player.getSlot("legs").getFirst();
 						player.drop(first);
-						Item legs = SingletonRepository.getEntityManager().getItem("elvish legs");
+						Item legs = SingletonRepository.getEntityManager().getItem("精灵护腿");
 						player.equip("legs", legs);
 					}
 					if(!player.isEquipped("杀手之靴")) {

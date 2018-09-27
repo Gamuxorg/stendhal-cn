@@ -26,7 +26,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.BuyerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 
 /**
- * Builds the storage NPC in Sedah City.
+ * Builds the storage NPC in 西大城.
  *
  * @author Teiv
  */

@@ -23,7 +23,7 @@ import games.stendhal.server.entity.creature.ItemGuardCreature;
 import games.stendhal.server.entity.mapstuff.spawner.CreatureRespawnPoint;
 
 /**
- * Configure 卡梅伦 Prison to include a Duergar King Creature who carries a key.
+ * Configure 卡梅伦 Prison to include a 杜加王 Creature who carries a key.
  * Then it should give a key that is bound to the player.
  */
 public class DuergarKingCreature implements ZoneConfigurator {
@@ -42,7 +42,7 @@ public class DuergarKingCreature implements ZoneConfigurator {
 	}
 
 	private void buildPrisonArea(final StendhalRPZone zone) {
-		final Creature creature = new ItemGuardCreature(manager.getCreature("duergar king"), "卡梅伦监狱钥匙");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("杜加王"), "卡梅伦监狱钥匙");
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 50, 15, creature, 1);
 		zone.add(point);
 	}

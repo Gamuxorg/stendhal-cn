@@ -17,7 +17,7 @@ class MithrilCloakQuestInfo {
 
 	private static final String MITHRIL_SHIELD_SLOT = "mithrilshield_quest";
 
-	private static final String FABRIC = "mithril fabric";
+	private static final String FABRIC = "密银布";
 
 	public String getQuestSlot() {
 		return QUEST_SLOT;

@@ -116,7 +116,7 @@ public class HandToHandTest {
 	public void testCanAttackNowBigCreature() {
 		final StendhalRPZone zone = new StendhalRPZone("hthtest");
 		final HandToHand hth = new HandToHand();
-		final Creature creature = SingletonRepository.getEntityManager().getCreature("balrog");
+		final Creature creature = SingletonRepository.getEntityManager().getCreature("巴洛克");
 		assertNotNull(creature);
 		assertThat(creature.getWidth(), is(6.0));
 		assertThat(creature.getHeight(), is(6.0));

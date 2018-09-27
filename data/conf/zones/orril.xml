@@ -73,7 +73,7 @@
       <name>Orril Dwarf Mine North Entrance</name>
       <title>Orril Dwarf Mine</title>
       <type>dungeon</type>
-      <description>The tunnelsystem of Orril Dwarf Mine is guarded by lots of dwarves and their pet, a green dragon. But it also contains one of the most precious materials of whole Faiumoni, iron ore. (Player Level 30 - 65)</description>
+      <description>The tunnelsystem of Orril Dwarf Mine is guarded by lots of dwarves and their pet, a 绿龙. But it also contains one of the most precious materials of whole Faiumoni, 铁矿. (Player Level 30 - 65)</description>
       <url>https://stendhalgame.org/dungeon/orril_dwarf_mine.html</url>
     </point-of-interest>
 
@@ -81,7 +81,7 @@
       <name>Orril Dwarf Mine South Entrance</name>
       <title>Orril Dwarf Mine</title>
       <type>dungeon</type>
-      <description>The tunnelsystem of Orril Dwarf Mine is guarded by lots of dwarves and their pet, a green dragon. But it also contains one of the most precious materials of whole Faiumoni, iron ore. (Player Level 30 - 65)</description>
+      <description>The tunnelsystem of Orril Dwarf Mine is guarded by lots of dwarves and their pet, a 绿龙. But it also contains one of the most precious materials of whole Faiumoni, 铁矿. (Player Level 30 - 65)</description>
       <url>https://stendhalgame.org/dungeon/orril_dwarf_mine.html</url>
     </point-of-interest>
 
@@ -770,9 +770,9 @@ As a mighty warrior, you always need to wear a powerful armor in fights.
     <entity x="3" y="27">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Wooooza! Magic and its powerful 治疗济s
+Wooooza! Magic and its powerful 治疗剂s
 -By Salva Mattori-
-You don't believe in magic? The 治疗济 of love, made from a magician's hand, even works for Yetis.
+You don't believe in magic? The 治疗剂 of love, made from a magician's hand, even works for Yetis.
 	 	</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_green</attribute>
@@ -805,7 +805,7 @@ And there they were: two strangers, alone in the tunnel of Amazon island, headin
       <attribute name="text">
 Diaries of a warrior
 -By Lieutenant Drilenun-
-Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge it's powerful, it has a hard forehand...Could that be it? It is a balrog!"		
+Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge it's powerful, it has a hard forehand...Could that be it? It is a 巴洛克!"		
 			</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_turquoise</attribute>

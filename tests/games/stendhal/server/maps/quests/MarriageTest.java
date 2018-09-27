@@ -134,7 +134,7 @@ public class MarriageTest {
 		assertTrue(en.step(player, "task"));
 		assertEquals("Well, you could consider getting married to be a quest! Ask me about #'wedding rings' if you need one.", getReply(npc));
 		assertTrue(en.step(player, "wedding"));
-		assertEquals("I need 10 gold bars and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
+		assertEquals("I need 10 金条s and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
 		assertTrue(en.step(player, "yes"));
 		assertEquals("Come back when you have both the money and the gold.", getReply(npc));
 		assertTrue(en.step(player, "bye"));
@@ -143,14 +143,14 @@ public class MarriageTest {
 
 		Item item = ItemTestHelper.createItem("money", 5000);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("gold bar", 10);
+		item = ItemTestHelper.createItem("金条", 10);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		en.step(player, "task");
 		assertEquals("Well, you could consider getting married to be a quest! Ask me about #'wedding rings' if you need one.", getReply(npc));
 		en.step(player, "wedding");
-		assertEquals("I need 10 gold bars and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
+		assertEquals("I need 10 金条s and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Good, come back in 10 minutes and it will be ready. Goodbye until then.", getReply(npc));
 		en.step(player, "bye");
@@ -162,7 +162,7 @@ public class MarriageTest {
 
 		item = ItemTestHelper.createItem("money", 5000);
 		player2.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("gold bar", 10);
+		item = ItemTestHelper.createItem("金条", 10);
 		player2.getSlot("背包").add(item);
 
 		en.step(player2, "hi");
@@ -170,7 +170,7 @@ public class MarriageTest {
 		en.step(player2, "help");
 		assertEquals("I am an expert on #'wedding rings' and #'emerald rings', sometimes called the ring of #life.", getReply(npc));
 		en.step(player2, "wedding");
-		assertEquals("I need 10 gold bars and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
+		assertEquals("I need 10 金条s and a fee of 500 money, to make a wedding ring for your fiancee. Do you have it?", getReply(npc));
 		en.step(player2, "yes");
 		assertEquals("Good, come back in 10 minutes and it will be ready. Goodbye until then.", getReply(npc));
 		en.step(player2, "bye");

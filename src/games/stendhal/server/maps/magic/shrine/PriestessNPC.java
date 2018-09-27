@@ -63,7 +63,7 @@ public class PriestessNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 			    addGreeting(null, new SayTextAction("Hello, [name]."));
-				addJob("As a priestess I can #offer you a number of 治疗济s and 抗毒药济s.");
+				addJob("As a priestess I can #offer you a number of 治疗剂s and 抗毒药济s.");
 				addHelp("My sister Salva has the gift of healing. She is out for a walk by the aqueduct, you should find her there if you need her.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("superhealing")), true);
  				addGoodbye("Bye, for now.");

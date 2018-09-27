@@ -132,12 +132,12 @@ public class CleanAthorsUnderground extends AbstractQuest {
 		toKill.put("monk",new Pair<Integer, Integer>(0,1));
 		toKill.put("darkmonk",new Pair<Integer, Integer>(0,1));
 		toKill.put("蝙蝠",new Pair<Integer, Integer>(0,1));
-		toKill.put("brown slime",new Pair<Integer, Integer>(0,1));
-		toKill.put("green slime",new Pair<Integer, Integer>(0,1));
-		toKill.put("black slime",new Pair<Integer, Integer>(0,1));
+		toKill.put("棕色史莱姆",new Pair<Integer, Integer>(0,1));
+		toKill.put("绿色史莱姆",new Pair<Integer, Integer>(0,1));
+		toKill.put("黑色史莱姆",new Pair<Integer, Integer>(0,1));
 		toKill.put("minotaur",new Pair<Integer, Integer>(0,1));
-		toKill.put("blue dragon",new Pair<Integer, Integer>(0,1));
-		toKill.put("stone golem",new Pair<Integer, Integer>(0,1));
+		toKill.put("蓝龙",new Pair<Integer, Integer>(0,1));
+		toKill.put("石傀儡",new Pair<Integer, Integer>(0,1));
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 1.0));

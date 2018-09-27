@@ -118,21 +118,21 @@ public class MithrilCloakTest {
 		assertEquals(en.getCurrentState(), ConversationStates.QUEST_OFFERED);
 		en.step(player, "yes");
 		assertThat(getReply(npc) , is(oneOf("Thank you! To fix it, it needs a #'can of oil'. I'm ever so grateful for your help.",
-				"Thank you! To fix it, it needs a #bobbin. I'm ever so grateful for your help.",
+				"Thank you! To fix it, it needs a #线轴. I'm ever so grateful for your help.",
 				"Thank you! To fix it, it needs a #'suit of leather armor'. I'm ever so grateful for your help.")));
 
-		player.setQuest(questSlot, "machine;bobbin=1");
+		player.setQuest(questSlot, "machine;线轴=1");
 		assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
-		en.step(player, "bobbin");
-		assertEquals("Only dwarf smiths make bobbins, no-one else has nimble enough fingers. Try #Alrak.", getReply(npc));
+		en.step(player, "线轴");
+		assertEquals("Only dwarf smiths make 线轴s, no-one else has nimble enough fingers. Try #Alrak.", getReply(npc));
 		en.step(player, "ok");
 		en.step(player, "bye");
 		assertEquals("Bye, thanks for stepping in.", getReply(npc));
 
-		final Item bobbin = ItemTestHelper.createItem("bobbin");
+		final Item bobbin = ItemTestHelper.createItem("线轴");
 		bobbin.setEquipableSlots(Arrays.asList("背包"));
 		player.equipToInventoryOnly(bobbin);
-		assertTrue(player.isEquipped("bobbin"));
+		assertTrue(player.isEquipped("线轴"));
 
 		final Item oil = ItemTestHelper.createItem("oil");
 		oil.setEquipableSlots(Arrays.asList("背包"));
@@ -146,7 +146,7 @@ public class MithrilCloakTest {
 
 		en.step(player, "hi");
 		assertEquals("Hello there.", getReply(npc));
-		en.step(player, "bobbin");
+		en.step(player, "线轴");
 		assertEquals("Only dwarf smiths make bobbins, no-one else has nimble enough fingers. Try #Alrak.", getReply(npc));
 		en.step(player, "alrak");
 		assertEquals("I thought you kids all knew Alrak, the only dwarf that kobolds have ever liked. Or maybe he's the only dwarf to ever like kobolds, I've never been sure which ...", getReply(npc));
@@ -160,7 +160,7 @@ public class MithrilCloakTest {
 		// [22:05] jammyjam earns 100 experience points.
 		player.setQuest(questSlot, "fixed_machine");
 		en.step(player, "yes");
-		assertEquals("I will make you the most amazing cloak of mithril. You just need to get me the fabric and any tools I need! First please bring me a couple yards of mithril fabric. The expert on fabrics is the wizard #Kampusch.", getReply(npc));
+		assertEquals("I will make you the most amazing cloak of mithril. You just need to get me the fabric and any tools I need! First please bring me a couple yards of 密银布. The expert on fabrics is the wizard #Kampusch.", getReply(npc));
 		player.setQuest(questSlot, "need_fabric");
 		en.step(player, "kampusch");
 		assertEquals("He is obsessed with antiques so look for him in an antiques shop or a museum.", getReply(npc));
@@ -184,11 +184,11 @@ public class MithrilCloakTest {
 		en.step(player, "offer");
 		assertEquals("I will teach you about #thread, and #fabric, and how wizards can fuse #mithril onto textiles.", getReply(npc));
 		en.step(player, "fuse");
-		assertEquals("I can only create mithril thread when you have got some silk #thread. And remember, I will know if you really need the magic performed or not.", getReply(npc));
+		assertEquals("I can only create 密银线 when you have got some silk #thread. And remember, I will know if you really need the magic performed or not.", getReply(npc));
 		en.step(player, "mithril");
-		assertEquals("Should you need it, I can #fuse mithril nuggets and silk thread together. But I don't perform this magic for just anyone... Once you have the mithril thread, it can be woven into fabric by #Whiggins.", getReply(npc));
+		assertEquals("Should you need it, I can #fuse 密银矿石s and 丝线 together. But I don't perform this magic for just anyone... Once you have the 密银线, it can be woven into fabric by #Whiggins.", getReply(npc));
 		en.step(player, "threads");
-		assertEquals("The best thread of all is light and strong, it is called #silk and it comes from the silk glands of spiders. Making the thread from the glands is a job which is messy. Wizards will not stoop so low. #Scientists are most likely to make thread if you need it.", getReply(npc));
+		assertEquals("The best thread of all is light and strong, it is called #silk and it comes from the 蜘蛛丝腺s of spiders. Making the thread from the glands is a job which is messy. Wizards will not stoop so low. #Scientists are most likely to make thread if you need it.", getReply(npc));
 		en.step(player, "whiggins");
 		assertEquals("Find the wizard Whiggins inside his house in the magic city.", getReply(npc));
 		en.step(player, "bye");
@@ -197,11 +197,11 @@ public class MithrilCloakTest {
 		npc = SingletonRepository.getNPCList().get("Vincento Price");
 		en = npc.getEngine();
 
-		Item item = ItemTestHelper.createItem("silk gland", 40);
+		Item item = ItemTestHelper.createItem("蜘蛛丝腺", 40);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("mithril nugget", 7);
+		item = ItemTestHelper.createItem("密银矿石", 7);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("silk thread", 40);
+		item = ItemTestHelper.createItem("丝线", 40);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
@@ -211,30 +211,30 @@ public class MithrilCloakTest {
 		en.step(player, "make");
 		assertEquals("Do you really want so few? I'm not wasting my time with that! Any decent sized pieces of fabric needs at least 40 spools of thread! You should at least #make #40.", getReply(npc));
 		en.step(player, "make 40");
-		assertEquals("I need you to fetch me 40 #'silk glands' for this job, which will take about 6 and a half hours. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me 40 #'蜘蛛丝腺s' for this job, which will take about 6 and a half hours. Do you have what I need?", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.PRODUCTION_OFFERED);
 		en.step(player, "yes");
-		assertEquals("It's unorthodox, but I will make 40 silk thread for you. Please be discreet and come back in about 6 and a half hours.", getReply(npc));
+		assertEquals("It's unorthodox, but I will make 40 丝线 for you. Please be discreet and come back in about 6 and a half hours.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Ta ta!", getReply(npc));
 
 		en.step(player, "hi");
-		assertTrue(getReply(npc).startsWith("Shhhh, I'm still working on your request to make silk thread for you. I'll be done in about"));
+		assertTrue(getReply(npc).startsWith("Shhhh, I'm still working on your request to make 丝线 for you. I'll be done in about"));
 		en.step(player, "bye");
 		assertEquals("Ta ta!", getReply(npc));
 
-		player.setQuest(questSlot, "makingthread;40;silk thread;0");
-		assertEquals("makingthread;40;silk thread;0", player.getQuest(questSlot));
+		player.setQuest(questSlot, "makingthread;40;丝线;0");
+		assertEquals("makingthread;40;丝线;0", player.getQuest(questSlot));
 		en.step(player, "hi");
-		assertEquals("Oh, I gave your 40 spools of silk thread to my research student Boris Karlova. Go collect them from him.", getReply(npc));
+		assertEquals("Oh, I gave your 40 spools of 丝线 to my research student Boris Karlova. Go collect them from him.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Ta ta!", getReply(npc));
 
 		npc = SingletonRepository.getNPCList().get("Boris Karlova");
 		en = npc.getEngine();
-		player.setQuest(questSlot, "makingthread;40;silk thread;0");
+		player.setQuest(questSlot, "makingthread;40;丝线;0");
 		en.step(player, "hi");
-		assertEquals("The boss gave me these 40 spools of silk thread. Price gets his students to do his dirty work for him.", getReply(npc));
+		assertEquals("The boss gave me these 40 spools of 丝线. Price gets his students to do his dirty work for him.", getReply(npc));
 		player.setQuest(questSlot, "got_thread");
 
 
@@ -245,30 +245,30 @@ public class MithrilCloakTest {
 		assertEquals("Greetings, can I #offer you anything?", getReply(npc));
 		// say fuse without all the items
 		en.step(player, "fuse");
-		assertEquals("For 40 spools of mithril thread to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #balloon.", getReply(npc));
+		assertEquals("For 40 spools of 密银线 to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #balloon.", getReply(npc));
 		// add the item
 		item = ItemTestHelper.createItem("balloon", 1);
 		player.getSlot("背包").add(item);
 		en.step(player, "fuse");
-		assertEquals("I will fuse 40 mithril thread for you. Please come back in 4 hours.", getReply(npc));
+		assertEquals("I will fuse 40 密银线 for you. Please come back in 4 hours.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Farewell.", getReply(npc));
 
 		en.step(player, "hi");
-		assertEquals("Welcome. I'm still working on your request to fuse mithril thread for you. Come back in 4 hours.", getReply(npc));
+		assertEquals("Welcome. I'm still working on your request to fuse 密银线 for you. Come back in 4 hours.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Farewell.", getReply(npc));
 
 		player.setQuest(questSlot, "fusingthread;1");
 
 		en.step(player, "hi");
-		assertEquals("Hello again. The magic is completed. Here you have your 40 spools of mithril thread. Now, you must go to #Whiggins to get the #fabric made.", getReply(npc));
+		assertEquals("Hello again. The magic is completed. Here you have your 40 spools of 密银线. Now, you must go to #Whiggins to get the #fabric made.", getReply(npc));
 		player.setQuest(questSlot, "got_mithril_thread");
 		// [22:08] jammyjam earns 100 experience points.
 		en.step(player, "whiggins");
 		assertEquals("Find the wizard Whiggins inside his house in the magic city.", getReply(npc));
 		en.step(player, "fabric");
-		assertEquals("Cloth has different standards, which I'm sure you'll notice in your own cloaks. #Mithril fabric is the very finest and strongest of all. But then, I would say that, being from Mithrilbourgh... So, you need to find plenty of silk glands, then take them to a #scientist to make the thread. Once you have silk thread bring it to me to #fuse mithril into it. Finally, you will need to take the mithril thread to #Whiggins to get the fabric woven.", getReply(npc));
+		assertEquals("Cloth has different standards, which I'm sure you'll notice in your own cloaks. #密银布 is the very finest and strongest of all. But then, I would say that, being from Mithrilbourgh... So, you need to find plenty of 蜘蛛丝腺s, then take them to a #scientist to make the thread. Once you have 丝线 bring it to me to #fuse mithril into it. Finally, you will need to take the 密银线 to #Whiggins to get the fabric woven.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Farewell.", getReply(npc));
 
@@ -291,7 +291,7 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 
 		en.step(player, "hi");
-		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
+		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.", getReply(npc));
 		en.step(player, "letter");
 		assertEquals("*reads* ... *reads* ... Well, I must say, that is a weight off my mind. Thank you ever so much. Please convey my warmest regards to Whiggins. All is forgiven.", getReply(npc));
 		player.setQuest(questSlot, "took_letter");
@@ -305,7 +305,7 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Welcome, warmly", getReply(npc));
 		en.step(player, "task");
-		assertEquals("Thank you so much for taking that letter! Now, do you have the 40 spools of mithril thread so that I may weave you a couple yards of fabric?", getReply(npc));
+		assertEquals("Thank you so much for taking that letter! Now, do you have the 40 spools of 密银线 so that I may weave you a couple yards of fabric?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Lovely. In 2 hours your fabric will be ready.", getReply(npc));
 		en.step(player, "bye");
@@ -341,7 +341,7 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Hello there.", getReply(npc));
 		en.step(player, "fabric");
-		assertEquals("Wow you got the mithril fabric , that took longer than I expected! Now, to cut it I need magical #scissors, if you would go get them from #Hogart. I will be waiting for you to return.", getReply(npc));
+		assertEquals("Wow you got the 密银布 , that took longer than I expected! Now, to cut it I need magical #scissors, if you would go get them from #Hogart. I will be waiting for you to return.", getReply(npc));
 		en.step(player, "hogart");
 		assertEquals("He's that grumpy old dwarf in the Or'ril mines. I already sent him a message saying I wanted some new scissors but he didn't respond. Well, what he lacks in people skills he makes up for in his metal work.", getReply(npc));
 		en.step(player, "bye");
@@ -360,7 +360,7 @@ public class MithrilCloakTest {
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "scissors");
 		// Hogart asks for random number of eggshells (2-4? 1-3?) so only test starts with
-		assertTrue(getReply(npc).startsWith("Ah yes, Ida sent me a message about some magical scissors. I need one each of an iron bar and a mithril bar, and also "));
+		assertTrue(getReply(npc).startsWith("Ah yes, Ida sent me a message about some 魔法剪刀. I need one each of an 铁锭 and a 密银锭, and also "));
 		en.step(player, "eggshells");
 		assertEquals("They must be from dragon eggs. I guess you better find someone who dares to hatch dragons!", getReply(npc));
 		en.step(player, "bye");
@@ -369,9 +369,9 @@ public class MithrilCloakTest {
 		npc = SingletonRepository.getNPCList().get("Terry");
 		en = npc.getEngine();
 		player.setQuest(questSlot, "need_eggshells;4");
-		Item item = ItemTestHelper.createItem("mithril bar", 1);
+		Item item = ItemTestHelper.createItem("密银锭", 1);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("iron", 1);
+		item = ItemTestHelper.createItem("铁锭", 1);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
@@ -395,7 +395,7 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "scissors");
-		assertEquals("So, did you bring the items I need for the magical scissors?", getReply(npc));
+		assertEquals("So, did you bring the items I need for the 魔法剪刀?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Good. It will take me some time to make these, come back in 10 minutes to get your scissors.", getReply(npc));
 		// [22:17] jammyjam earns 100 experience points.
@@ -417,7 +417,7 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Hello there.", getReply(npc));
 		en.step(player, "scissors");
-		assertEquals("You brought those magical scissors! Excellent! Now that I can cut the fabric I need a magical needle. You can buy one from a trader in the abandoned keep of Ados mountains, #Ritati Dragon something or other. Just go to him and ask for his 'specials'.", getReply(npc));
+		assertEquals("You brought those 魔法剪刀! Excellent! Now that I can cut the fabric I need a 魔法针. You can buy one from a trader in the abandoned keep of Ados mountains, #Ritati Dragon something or other. Just go to him and ask for his 'specials'.", getReply(npc));
 		// [22:19] jammyjam earns 100 experience points.
 		en.step(player, "ritati");
 		assertEquals("He's somewhere in the abandoned keep in the mountains north east from here.", getReply(npc));
@@ -431,18 +431,18 @@ public class MithrilCloakTest {
 //		en.step(player, "hi");
 	//	assertEquals("What do you want?", getReply(npc));
 	//	en.step(player, "specials");
-	//	assertEquals("I have some magical needles but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
+	//	assertEquals("I have some 魔法针s but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
 	//	en.step(player, "yes");
 	//	assertEquals("What the ... you don't have enough money! Get outta here!", getReply(npc));
 	//	en.step(player, "specials");
-	//	assertEquals("I have some magical needles but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
+	//	assertEquals("I have some 魔法针s but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
 	//	en.step(player, "yes");
 	//	assertEquals("Ok, here you are. Be careful with them, they break easy.", getReply(npc));
 
 		npc = SingletonRepository.getNPCList().get("Ida");
 		en = npc.getEngine();
 		player.setQuest(questSlot, "told_joke;1");
-		item = ItemTestHelper.createItem("magical needle", 1);
+		item = ItemTestHelper.createItem("魔法针", 1);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
@@ -457,7 +457,7 @@ public class MithrilCloakTest {
 		assertEquals("Hello there.", getReply(npc));
 		en.step(player, "needle");
 		en.step(player, "task");
-		assertEquals("These magical needles are so fragile, I'm sorry but you're going to have to get me another, the last one broke. Hopefully Ritati still has plenty.", getReply(npc));
+		assertEquals("These 魔法针s are so fragile, I'm sorry but you're going to have to get me another, the last one broke. Hopefully Ritati still has plenty.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye, thanks for stepping in.", getReply(npc));
 
@@ -467,14 +467,14 @@ public class MithrilCloakTest {
 //		en.step(player, "hi");
 	//	assertEquals("What do you want?", getReply(npc));
 	//	en.step(player, "specials");
-	//	assertEquals("I have some magical needles but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
+	//	assertEquals("I have some 魔法针s but they cost a pretty penny, 1500 pieces of money to be precise. Do you want to buy one?", getReply(npc));
 	//	en.step(player, "yes");
 	//	assertEquals("Ok, here you are. Be careful with them, they break easy.", getReply(npc));
 
 		npc = SingletonRepository.getNPCList().get("Ida");
 		en = npc.getEngine();
 
-		item = ItemTestHelper.createItem("magical needle", 1);
+		item = ItemTestHelper.createItem("魔法针", 1);
 		player.getSlot("背包").add(item);
 		player.setQuest(questSlot, "told_joke;1;1");
 
@@ -535,7 +535,7 @@ public class MithrilCloakTest {
 
 		en.step(player, "hi");
 		assertEquals("I'm sick .. so sick .. only some powerful medicine will fix me.", getReply(npc));
-		// [22:22] twilight slime has been killed by jammyjam
+		// [22:22] 荧光光史莱姆 has been killed by jammyjam
 		// [22:22] jammyjam earns 14580 experience points.
 		// [22:22] You see a bottle of medicinal elixir. It is a special quest reward for jammyjam, and cannot be used by others.
 
@@ -624,30 +624,30 @@ public class MithrilCloakTest {
 		en = npc.getEngine();
 
 		en.step(player, "hi");
-		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
+		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.", getReply(npc));
 		en.step(player, "clasp");
-		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?", getReply(npc));
+		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one 密银锭. Do you have it?", getReply(npc));
 		en.step(player, "no");
-		assertEquals("Well, if you should like me to cast any mithril bars just say.", getReply(npc));
+		assertEquals("Well, if you should like me to cast any 密银锭s just say.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
 		en.step(player, "hi");
-		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
+		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.", getReply(npc));
 		en.step(player, "clasp");
-		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?", getReply(npc));
+		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one 密银锭. Do you have it?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("You can't fool an old wizard, and I'd know mithril when I see it. Come back when you have at least one bar.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
 		en.step(player, "hi");
-		Item item = ItemTestHelper.createItem("mithril bar", 1);
+		Item item = ItemTestHelper.createItem("密银锭", 1);
 		player.getSlot("背包").add(item);
 
-		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
+		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.", getReply(npc));
 		en.step(player, "clasp");
-		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?", getReply(npc));
+		assertEquals("A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one 密银锭. Do you have it?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("What a lovely piece of mithril that is, even if I do say so myself ... Good, please come back in 60 minutes and hopefully your clasp will be ready!", getReply(npc));
 		en.step(player, "bye");
@@ -655,7 +655,7 @@ public class MithrilCloakTest {
 
 		player.setQuest(questSlot, "forgingclasp;0");
 		en.step(player, "hi");
-		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.", getReply(npc));
+		assertEquals("Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.", getReply(npc));
 		en.step(player, "clasp");
 		assertEquals("Here, your clasp is ready!", getReply(npc));
 		// [22:27] jammyjam earns 100 experience points.

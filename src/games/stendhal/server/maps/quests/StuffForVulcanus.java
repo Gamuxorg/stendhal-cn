@@ -81,10 +81,10 @@ public class StuffForVulcanus extends AbstractQuest {
 	private final BringOrderedListOfItemsQuestLogic questLogic = new BringOrderedListOfItemsQuestLogic();
 
 	public StuffForVulcanus() {
-		itemCollector.require().item("iron").pieces(15).bySaying("I cannot #forge it without the missing %s.");
+		itemCollector.require().item("铁锭").pieces(15).bySaying("I cannot #forge it without the missing %s.");
 		itemCollector.require().item("木头").pieces(26).bySaying("How do you expect me to #forge it without missing %s for the fire?");
-		itemCollector.require().item("gold bar").pieces(12).bySaying("I must pay a bill to spirits in order to cast the enchantment over the sword. I need %s more.");
-		itemCollector.require().item("giant heart").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
+		itemCollector.require().item("金条").pieces(12).bySaying("I must pay a bill to spirits in order to cast the enchantment over the sword. I need %s more.");
+		itemCollector.require().item("巨人心脏").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
 
 		questLogic.setItemCollector(itemCollector);
 		questLogic.setQuest(this);
@@ -132,7 +132,7 @@ public class StuffForVulcanus extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"Oh, well forget it then, if you don't want an immortal sword...",
+			"Oh, well forget it then, if you don't want an 永恒之剑...",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 
 		npc.addReply("exact",
@@ -157,13 +157,13 @@ public class StuffForVulcanus extends AbstractQuest {
 					boolean missingSomething = questLogic.proceedItems(player, raiser);
 
 					if (player.hasKilled("giant") && !missingSomething) {
-						raiser.say("You've brought everything I need to make the immortal sword, and what is more, you are strong enough to handle it. Come back in "
+						raiser.say("You've brought everything I need to make the 永恒之剑, and what is more, you are strong enough to handle it. Come back in "
 							+ REQUIRED_MINUTES
 							+ " minutes and it will be ready.");
 						player.setQuest(QUEST_SLOT, "forging;" + System.currentTimeMillis());
 					} else {
 						if (!player.hasKilled("giant") && !missingSomething) {
-							raiser.say("Did you really get those giant hearts yourself? I don't think so! This powerful sword can only be given to those that are strong enough to kill a #giant.");
+							raiser.say("Did you really get those 巨人心脏s yourself? I don't think so! This powerful sword can only be given to those that are strong enough to kill a #giant.");
 						}
 
 						questLogic.updateQuantitiesInQuestStatus(player);
@@ -191,10 +191,10 @@ public class StuffForVulcanus extends AbstractQuest {
 						return;
 					}
 
-					raiser.say("I have finished forging the mighty immortal sword. You deserve this. Now I'm going to have a long rest, so, goodbye!");
+					raiser.say("I have finished forging the mighty 永恒之剑. You deserve this. Now I'm going to have a long rest, so, goodbye!");
 					player.addXP(15000);
 					player.addKarma(25);
-					final Item magicSword = SingletonRepository.getEntityManager().getItem("immortal sword");
+					final Item magicSword = SingletonRepository.getEntityManager().getItem("永恒之剑");
 					magicSword.setBoundTo(player.getName());
 					player.equipOrPutOnGround(magicSword);
 					player.notifyWorldAboutChanges();
@@ -218,10 +218,10 @@ public class StuffForVulcanus extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ANY,
-				"iron",
+				"铁锭",
 				null,
 				ConversationStates.ATTENDING,
-				"Collect some iron ore from the mines which are rich in minerals.",
+				"Collect some 铁矿石 from the mines which are rich in minerals.",
 				null);
 		npc.add(ConversationStates.ANY,
 				"木头",
@@ -230,13 +230,13 @@ public class StuffForVulcanus extends AbstractQuest {
 				"The forest is full of wood logs.",
 				null);
 		npc.add(ConversationStates.ANY,
-				Arrays.asList("gold", "gold bar"),
+				Arrays.asList("gold", "金条"),
 				null,
 				ConversationStates.ATTENDING,
-				"A smith in Ados can forge the gold into gold bars for you.",
+				"A smith in Ados can forge the gold into 金条s for you.",
 				null);
 		npc.add(ConversationStates.ANY,
-				Arrays.asList("giant", "giant heart"),
+				Arrays.asList("giant", "巨人心脏"),
 				null,
 				ConversationStates.ATTENDING,
 				"There are ancient stories of giants living in the mountains at the north of 塞门镇 and Ados.",
@@ -268,10 +268,10 @@ public class StuffForVulcanus extends AbstractQuest {
 		final String questState = player.getQuest(QUEST_SLOT);
 		res.add("I met Vulcanus in 科多奇.");
 		if (questState.equals("rejected")) {
-			res.add("I don't want an immortal sword.");
+			res.add("I don't want an 永恒之剑.");
 			return res;
 		}
-		res.add("To forge the immortal sword I must bring several things to Vulcanus.");
+		res.add("To forge the 永恒之剑 I must bring several things to Vulcanus.");
 		if (questState.startsWith("start") && !broughtAllItems(questState)) {
 			String suffix = ".";
 			if (questLogic.neededItemsWithAmounts(player).size() > 1) {
@@ -285,10 +285,10 @@ public class StuffForVulcanus extends AbstractQuest {
 			res.add("I must prove my worth and kill a giant, before I am worthy of this prize.");
 		}
 		if (questState.startsWith("forging")) {
-			res.add("Vulcanus, son of gods himself, now forges my immortal sword.");
+			res.add("Vulcanus, son of gods himself, now forges my 永恒之剑.");
 		}
 		if (isCompleted(player)) {
-			res.add("Gold bars and giant hearts together with the forging from a god's son made me a sword of which I can be proud.");
+			res.add("金条s and 巨人心脏s together with the forging from a god's son made me a sword of which I can be proud.");
 		}
 		return res;
 	}
@@ -297,7 +297,7 @@ public class StuffForVulcanus extends AbstractQuest {
 		return "start;15;26;12;6".equals(questState);
 	}
 
-	// match to the min level of the immortal sword
+	// match to the min level of the 永恒之剑
 	@Override
 	public int getMinLevel() {
 		return 80;

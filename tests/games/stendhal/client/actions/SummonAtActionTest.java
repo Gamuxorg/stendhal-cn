@@ -157,10 +157,18 @@ public class SummonAtActionTest {
 				assertEquals("memem", action.get("target"));
 				assertEquals("背包", action.get("slot"));
 				assertEquals(3, action.getInt("amount"));
+<<<<<<< HEAD
 				assertEquals("大治疗剂", action.get("item"));
 			}
 		};
 		SlashActionRepository.register();
 		ChatLineParser.parseAndHandle("/summonat memem bag 3 大治疗剂");
+=======
+				assertEquals("大治疗剂", action.get("item"));
+			}
+		};
+		SlashActionRepository.register();
+		ChatLineParser.parseAndHandle("/summonat memem bag 3 大治疗剂");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 }

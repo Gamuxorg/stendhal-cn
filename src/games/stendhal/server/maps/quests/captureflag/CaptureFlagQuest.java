@@ -112,13 +112,13 @@ public class CaptureFlagQuest extends AbstractQuest {
 
 				// TODO: just use a compound action for all types of ammo
 				add(ConversationStates.ATTENDING,
-					"snowballs",
+					"雪球",
 					new PlayingCTFCondition(),
 					ConversationStates.ATTENDING,
 					"Here you go.  Sorry all the arrows look the same right now.  You'll have to look at them to see which type they are.",
 					new EquipItemAction("fumble arrow", 100));
 				add(ConversationStates.ATTENDING,
-						"snowballs",
+						"雪球",
 						new NotCondition(new PlayingCTFCondition()),
 						ConversationStates.ATTENDING,
 						"You must #play to be able to get more arrows.",
@@ -126,13 +126,13 @@ public class CaptureFlagQuest extends AbstractQuest {
 
 				// TODO: just use a compound action for all types of ammo
 				add(ConversationStates.ATTENDING,
-					"snowballs",
+					"雪球",
 					new PlayingCTFCondition(),
 					ConversationStates.ATTENDING,
-					"Here you go.  Sorry all the snowballs look the same right now.  You'll have to look at them to see which type they are.",
+					"Here you go.  Sorry all the 雪球 look the same right now.  You'll have to look at them to see which type they are.",
 					new EquipItemAction("fumble snowball", 100));
 				add(ConversationStates.ATTENDING,
-						"snowballs",
+						"雪球",
 						new NotCondition(new PlayingCTFCondition()),
 						ConversationStates.ATTENDING,
 						"You must #play to be able to get more arrows.",

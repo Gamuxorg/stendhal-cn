@@ -45,7 +45,7 @@ public class PlayerMinedNumberOfItemsConditionTest {
 		PlayerMinedNumberOfItemsCondition condition = new PlayerMinedNumberOfItemsCondition(5, "gold");
 		Player player = PlayerTestHelper.createPlayer("miner");
 		assertThat(condition.fire(player, null, null), is(false));
-		player.incMinedForItem("iron", 12);
+		player.incMinedForItem("铁锭", 12);
 		assertThat(condition.fire(player, null, null), is(false));
 		player.incMinedForItem("gold", 4);
 		assertThat(condition.fire(player, null, null), is(false));

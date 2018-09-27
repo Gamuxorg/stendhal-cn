@@ -48,7 +48,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:<ul>
  * <li> Talk with Grafindle to activate the quest.
  * <li> Talk with Lorithien for the money.
- * <li> Return the gold bars to Grafindle</ul>
+ * <li> Return the 金条s to Grafindle</ul>
  *
  * REWARD:<ul>
  * <li> 200 XP
@@ -77,22 +77,22 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 		res.add("I went to the Nalwor bank and met Grafindle.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("The responsibility I would have with the gold bars was too high for me and I had to reject Grafindle's request.");
+			res.add("The responsibility I would have with the 金条s was too high for me and I had to reject Grafindle's request.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "lorithien", "done")) {
 			res.add("Because I'm a trustworthy person, I promised Grafindle to get the gold from Lorithien.");
 		}
-		if (questState.equals("lorithien") && player.isEquipped("gold bar",
+		if (questState.equals("lorithien") && player.isEquipped("金条",
 				GOLD_AMOUNT)
 				|| questState.equals("done")) {
-			res.add("Wohoo! I collected the gold bars Grafindle needs!");
+			res.add("Wohoo! I collected the 金条s Grafindle needs!");
 		}
 		if (questState.equals("lorithien")
-				&& !player.isEquipped("gold bar", GOLD_AMOUNT)) {
-			res.add("Oh no! I lost the gold bars which I had to bring Grafindle!");
+				&& !player.isEquipped("金条", GOLD_AMOUNT)) {
+			res.add("Oh no! I lost the 金条s which I had to bring Grafindle!");
 		}
 		if (questState.equals("done")) {
-			res.add("I gave the gold bars to Grafindle and he rewarded me with a key to the customer bank room.");
+			res.add("I gave the 金条s to Grafindle and he rewarded me with a key to the customer bank room.");
 		}
 		return res;
 	}
@@ -126,7 +126,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 			"gold",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"One of our customers needs to bank their gold bars here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.",
+			"One of our customers needs to bank their 金条s here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.",
 			null);
 
 		npc.add(
@@ -134,7 +134,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"Thank you. I hope to see you soon with the gold bars ... unless you are tempted to keep them.",
+			"Thank you. I hope to see you soon with the 金条s ... unless you are tempted to keep them.",
 			new SetQuestAction(QUEST_SLOT,"start"));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -148,7 +148,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 			"Lorithien",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"She works in the post office here in Nalwor. It's a big responsibility, as those gold bars could be sold for a lot of money. Can you be trusted?",
+			"She works in the post office here in Nalwor. It's a big responsibility, as those 金条s could be sold for a lot of money. Can you be trusted?",
 			null);
 
 		/** Remind player about the quest */
@@ -170,10 +170,10 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 
 		/**
 		 * If player has quest and is in the correct state, just give him the
-		 * gold bars.
+		 * 金条s.
 		 */
 		final List<ChatAction> givegold = new LinkedList<ChatAction>();
-		givegold.add(new EquipItemAction("gold bar",GOLD_AMOUNT, true));
+		givegold.add(new EquipItemAction("金条",GOLD_AMOUNT, true));
 		givegold.add(new SetQuestAction(QUEST_SLOT, "lorithien"));
 
 		npc.add(
@@ -215,7 +215,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 
 		/** Complete the quest */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("gold bar", GOLD_AMOUNT));
+		reward.add(new DropItemAction("金条", GOLD_AMOUNT));
 		reward.add(new EquipItemAction("纳尔沃银库钥匙", 1, true));
 		reward.add(new IncreaseXPAction(200));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -224,7 +224,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(getName()),
 						new QuestInStateCondition(QUEST_SLOT, "lorithien"),
-						new PlayerHasItemWithHimCondition("gold bar", GOLD_AMOUNT)),
+						new PlayerHasItemWithHimCondition("金条", GOLD_AMOUNT)),
 				ConversationStates.ATTENDING,
 				"Oh, you brought the gold! Wonderful, I knew I could rely on you. Please, have this key to our customer room.",
 				new MultipleActions(reward));
@@ -232,9 +232,9 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(getName()),
 						new QuestInStateCondition(QUEST_SLOT, "lorithien"),
-						new NotCondition(new PlayerHasItemWithHimCondition("gold bar", GOLD_AMOUNT))),
+						new NotCondition(new PlayerHasItemWithHimCondition("金条", GOLD_AMOUNT))),
 				ConversationStates.ATTENDING,
-				"Haven't you got the gold bars from #Lorithien yet? Please go get them, quickly!",
+				"Haven't you got the 金条s from #Lorithien yet? Please go get them, quickly!",
 				null);
 	}
 

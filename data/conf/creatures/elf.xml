@@ -384,7 +384,7 @@
     <drops>
       <item value="money" quantity="[50,100]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="1.0"/>
+      <item value="影子护腿" quantity="[1,1]" probability="1.0"/>
       <item value="浑沌护甲" quantity="[1,1]" probability="0.0050"/>
       <item value="混沌靴" quantity="[1,1]" probability="0.05"/>
       <item value="金斗篷" quantity="[1,1]" probability="0.2"/>
@@ -540,7 +540,7 @@
       <item value="特级毒药" quantity="[1,1]" probability="50.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
       <item value="空白卷轴" quantity="[1,2]" probability="25.0"/>
-      <item value="jewelled legs" quantity="[1,1]" probability="0.0050"/>
+      <item value="宝石护腿" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
       <slot name="rhand" item="dagger"/>
@@ -660,7 +660,7 @@
       <item value="money" quantity="[100,400]" probability="100.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0050"/>
       <item value="黑斗篷" quantity="[1,1]" probability="0.05"/>
-      <item value="jewelled legs" quantity="[1,1]" probability="0.05"/>
+      <item value="宝石护腿" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -709,7 +709,7 @@
       <item value="铁鳞甲" quantity="[1,1]" probability="0.5"/>
       <item value="cloak" quantity="[1,1]" probability="0.5"/>
       <item value="钢盾" quantity="[1,1]" probability="1.0"/>
-      <item value="elvish legs" quantity="[1,1]" probability="0.05"/>
+      <item value="精灵护腿" quantity="[1,1]" probability="0.05"/>
       <item value="elvish hat" quantity="[1,1]" probability="1.0" />
     </drops>
     <equips>
@@ -744,7 +744,7 @@
       <item value="精灵靴" quantity="[1,1]" probability="0.25"/>
       <item value="精灵之盾" quantity="[1,1]" probability="0.02"/>
       <item value="狮盾" quantity="[1,1]" probability="0.5"/>
-      <item value="scimitar" quantity="[1,1]" probability="1.0"/>
+      <item value="半月弯刀" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -772,11 +772,11 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[15,20]" probability="100.0"/>
-      <item value="elvish legs" quantity="[1,1]" probability="5.0"/>
+      <item value="精灵护腿" quantity="[1,1]" probability="5.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="0.5"/>
       <item value="木箭" quantity="[10,20]" probability="5.0"/>
       <item value="木弓" quantity="[1,1]" probability="2.5"/>
-      <item value="scimitar" quantity="[1,1]" probability="5.0"/>
+      <item value="半月弯刀" quantity="[1,1]" probability="5.0"/>
       <item value="苹果" quantity="[1,3]" probability="20.0"/>
     </drops>
     <equips>
@@ -813,7 +813,7 @@
       <item value="护肩铁胸甲" quantity="[1,1]" probability="1.0"/>
       <item value="精灵靴" quantity="[1,1]" probability="0.35"/>
       <item value="精灵披风" quantity="[1,1]" probability="0.5"/>
-      <item value="katana" quantity="[1,1]" probability="1.0"/>
+      <item value="太刀" quantity="[1,1]" probability="1.0"/>
       <item value="精灵之盾" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
@@ -843,9 +843,9 @@
     <drops>
       <item value="money" quantity="[4,30]" probability="100.0"/>
       <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
-      <item value="katana" quantity="[1,1]" probability="5.0"/>
+      <item value="太刀" quantity="[1,1]" probability="5.0"/>
       <item value="阔剑" quantity="[1,1]" probability="2.0"/>
-      <item value="治疗济" quantity="[2,4]" probability="20.0"/>
+      <item value="治疗剂" quantity="[2,4]" probability="20.0"/>
       <item value="elvish hat" quantity="[1,1]" probability="2.0" />
     </drops>
     <equips>
@@ -912,7 +912,7 @@
       <item value="money" quantity="[4,45]" probability="100.0"/>
       <item value="蓝灵斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="阔剑" quantity="[1,1]" probability="3.0"/>
-      <item value="scimitar" quantity="[1,1]" probability="6.0"/>
+      <item value="半月弯刀" quantity="[1,1]" probability="6.0"/>
       <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
       <item value="精灵之盾" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -980,7 +980,7 @@
       <item value="money" quantity="[8,43]" probability="100.0"/>
       <item value="纳尔沃城回城卷" quantity="[1,1]" probability="5.0"/>
       <item value="精灵靴" quantity="[1,1]" probability="5.0"/>
-      <item value="elvish legs" quantity="[1,1]" probability="5.0"/>
+      <item value="精灵护腿" quantity="[1,1]" probability="5.0"/>
       <item value="elvish hat" quantity="[1,1]" probability="10.0" />
     </drops>
     <equips>

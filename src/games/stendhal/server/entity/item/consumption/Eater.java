@@ -40,7 +40,7 @@ class Eater implements Feeder {
 			int chokingDamage = damage(2 * playerHP / 3);
 			player.setHP(playerHP - chokingDamage);
 			player.sendPrivateText(NotificationType.NEGATIVE, "你吃了太多东西, 以致呕吐了一地, 并失去 " + Integer.toString(chokingDamage) + " 生命值.");
-			final Item sick = SingletonRepository.getEntityManager().getItem("vomit");
+			final Item sick = SingletonRepository.getEntityManager().getItem("呕吐物");
 			player.getZone().add(sick);
 			sick.setPosition(player.getX(), player.getY() + 1);
 			player.getStatusList().removeAll(EatStatus.class);

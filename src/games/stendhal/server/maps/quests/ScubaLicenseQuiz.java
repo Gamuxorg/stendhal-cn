@@ -39,21 +39,21 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Quest to get the scuba gear.
+ * QUEST: Quest to get the 潜水装.
  * <p>
  *
  * PARTICIPANTS: <ul><li> Edward the diving instructor</ul>
  *
  *
  * STEPS: <ul><li> This quest is about players getting the ability to dive and earn the necessary equipment.
- *  The instructor will as a question and once the player answers correctly will reward them with scuba gear.</ul>
+ *  The instructor will as a question and once the player answers correctly will reward them with 潜水装.</ul>
  *
  *
  * REWARD:
  * <ul>
  * <li> 100 XP
  * <li> some karma (5)
- * <li> The Scuba Gear
+ * <li> The 潜水装
  * </ul>
  *
  * REPETITIONS: <ul><li> no repetitions</ul>
@@ -231,7 +231,7 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 
         @Override
         public boolean fire(Player player, Sentence sentence, Entity npc) {
-            return player.isEquippedItemInSlot("armor", "scuba gear") && player.isQuestCompleted("get_diving_license");
+            return player.isEquippedItemInSlot("armor", "潜水装") && player.isQuestCompleted("get_diving_license");
         }
 
         @Override

@@ -48,7 +48,7 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li> Zekiel the guardian asks you to bring him 6 beeswax and 2 iron to make magic candles with. </li>
+ * <li> Zekiel the guardian asks you to bring him 6 蜂蜡 and 2 iron to make magic 蜡烛s with. </li>
  * <li> Bring the items to Zekiel. </li>
  * <li> You can start the practical test. </li>
  * <li> Zekiel informs you about the test and wizards. </li>
@@ -88,8 +88,8 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"First you need six magic candles. Bring me six pieces of #beeswax and two pieces of #iron, " +
-				"then I will summon the candles for you. After this you can start the practical test.",
+				"First you need six magic 蜡烛s. Bring me six pieces of #蜂蜡 and two pieces of #iron, " +
+				"then I will summon the 蜡烛s for you. After this you can start the practical test.",
 				new SetQuestAction(QUEST_SLOT,"start"));
 
 		// player asks about quest when he has already completed it
@@ -101,12 +101,12 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			"to the spire, or I can #help you some other way.",
 			null);
 
-		// player asks about quest when he is in the initial bringing candles stage
+		// player asks about quest when he is in the initial bringing 蜡烛s stage
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"You haven't brought me the #ingredients for the magic candles.",
+				"You haven't brought me the #ingredients for the magic 蜡烛s.",
 				null);
 
 		// player asks about quest when he is in the practical test stage
@@ -118,72 +118,72 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 				"more about the #wizards before you begin.",
 				null);
 
-		// we should only answer to these ingredients questions if the candles stage is not yet done
+		// we should only answer to these ingredients questions if the 蜡烛s stage is not yet done
 		npc.add(ConversationStates.ATTENDING,
-				"beeswax",
+				"蜂蜡",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-			    "I will summon magic candles for you, but I will need beeswax for that. Beekeepers usually sell beeswax.",
+			    "I will summon magic 蜡烛s for you, but I will need 蜂蜡 for that. Beekeepers usually sell 蜂蜡.",
 			    null);
 
-		// we should only answer to these ingredients questions if the candles stage is not yet done
+		// we should only answer to these ingredients questions if the 蜡烛s stage is not yet done
 		npc.add(ConversationStates.ATTENDING,
-				"iron",
+				"铁锭",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"The candlestick needs to be made of iron. The blacksmith in 塞门镇 can help you.",
+				"The 蜡烛stick needs to be made of iron. The blacksmith in 塞门镇 can help you.",
 				null);
 
-		// we should only answer to these ingredients questions if the candles stage is not yet done
+		// we should only answer to these ingredients questions if the 蜡烛s stage is not yet done
 		npc.add(ConversationStates.ATTENDING,
 				"ingredients",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"I will need six pieces of #beeswax and two pieces of #iron to summon the candles.",
+				"I will need six pieces of #蜂蜡 and two pieces of #iron to summon the 蜡烛s.",
 				null);
 	}
 
 	private void bringItemsStep() {
 		final SpeakerNPC npc = npcs.get("Zekiel the guardian");
 
-		// player returns with iron but no beeswax
+		// player returns with iron but no 蜂蜡
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new NotCondition(new PlayerHasItemWithHimCondition("beeswax",REQUIRED_BEESWAX)),
-					new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON)),
+					new NotCondition(new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
+					new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON)),
 			ConversationStates.ATTENDING,
-			"Greetings, I see you have the iron, but I still need six pieces of beeswax. Please come back when you " +
+			"Greetings, I see you have the iron, but I still need six pieces of 蜂蜡. Please come back when you " +
 			"have all #ingredients with you.",
 			null);
 
-		// player returns with beeswax but no iron
+		// player returns with 蜂蜡 but no iron
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new NotCondition(new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON)),
-					new PlayerHasItemWithHimCondition("beeswax",REQUIRED_BEESWAX)),
+					new NotCondition(new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON)),
+					new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
 			ConversationStates.ATTENDING,
-			"Greetings, I see you have the beeswax, but I still need two pieces of iron. Please come back when you " +
+			"Greetings, I see you have the 蜂蜡, but I still need two pieces of iron. Please come back when you " +
 			"have all #ingredients with you.",
 			null);
 
-		//player returns with beeswax and iron
+		//player returns with 蜂蜡 and iron
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON),
-					new PlayerHasItemWithHimCondition("beeswax",REQUIRED_BEESWAX)),
+					new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON),
+					new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
 			ConversationStates.ATTENDING,
-			"Greetings, finally you have brought me all ingredients that I need to summon the magic candles. Now you " +
+			"Greetings, finally you have brought me all ingredients that I need to summon the magic 蜡烛s. Now you " +
 			"can #start with the practical test.",
 			new MultipleActions(
 					new SetQuestAction(QUEST_SLOT,"candles_done"),
-					new DropItemAction("beeswax", 6),
-					new DropItemAction("iron", 2),
+					new DropItemAction("蜂蜡", 6),
+					new DropItemAction("铁锭", 2),
 					new IncreaseXPAction(4000),
 					new IncreaseKarmaAction(10)));
 
@@ -254,7 +254,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			"send",
 			new AndCondition(
 					new QuestInStateCondition(QUEST_SLOT,"candles_done"),
-					new PlayerHasItemWithHimCondition("candle")),
+					new PlayerHasItemWithHimCondition("蜡烛")),
 			ConversationStates.ATTENDING,
 			"Before I can send you on the first step, you have to drop any candles you are carrying.",
 			null);
@@ -264,7 +264,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			"send",
 			new AndCondition(
 					new QuestInStateCondition(QUEST_SLOT,"candles_done"),
-					new NotCondition(new PlayerHasItemWithHimCondition("candle"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("蜡烛"))),
 			ConversationStates.IDLE,
 			null,
 			new MultipleActions(
@@ -358,9 +358,9 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
 		history.add("I entered the Wizards Circle tower. Zekiel the guardian asked me for items to make magic candles.");
-		if (questState.equals("start") && player.isEquipped("beeswax", REQUIRED_BEESWAX) && player.isEquipped("iron", REQUIRED_IRON)
+		if (questState.equals("start") && player.isEquipped("蜂蜡", REQUIRED_BEESWAX) && player.isEquipped("铁锭", REQUIRED_IRON)
 				|| questState.equals("candles_done") || questState.endsWith("_step") || questState.equals("done")) {
-			history.add("I collected beeswax and iron for the magic candles which I will find on the next steps, if I pass each test.");
+			history.add("I collected 蜂蜡 and iron for the magic candles which I will find on the next steps, if I pass each test.");
 		}
 		if (questState.endsWith("_step")) {
 			history.add("I have reached the " + questState.replace("_", " ") + " of the Wizards Circle Tower. Zekiel will teach me what I have to do here.");

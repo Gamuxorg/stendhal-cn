@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a mad scientist NPC who takes your silk glands makes thread, then gives them to another NPC.
+ * Builds a mad scientist NPC who takes your 蜘蛛丝腺s makes thread, then gives them to another NPC.
  *
  * @author kymara with modifications by tigertoes
  */
@@ -47,8 +47,8 @@ public class MadScientist1NPC implements ZoneConfigurator {
 			@Override
 			    protected void createDialog() {
 				addHelp("Ha ha ha ha!");
-				addOffer("I am only saying this because I can see you need it, but I will #make #40 spools of #silk thread for you.");
-				addQuest("Ha! You need 40 spools of #silk thread, I see! I can #make it. If I feel like it ...");
+				addOffer("I am only saying this because I can see you need it, but I will #make #40 spools of #丝线 for you.");
+				addQuest("Ha! You need 40 spools of #丝线, I see! I can #make it. If I feel like it ...");
 				addJob("What does it look like?");
 				addGoodbye("Ta ta!");
 				// remaining behaviour defined in maps.quests.MithrilCloak

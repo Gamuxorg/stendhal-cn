@@ -58,7 +58,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li>100 XP</li>
  * <li>5 阿多斯城 scrolls</li>
- * <li>2 home scrolls</li>
+ * <li>2 回城卷s</li>
  * <li>Karma: 50</li>
  * </ul>
  *
@@ -213,7 +213,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		reward.add(new DropItemAction("苹果", 5));
 		reward.add(new DropItemAction("樱桃",5));
 		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
-		reward.add(new EquipItemAction("home scroll", 2));
+		reward.add(new EquipItemAction("回城卷", 2));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(50));

@@ -21,7 +21,7 @@
     <drops>
       <item value="money" quantity="[1,30]" probability="100.0"/>
       <item value="铁箭" quantity="[3,8]" probability="40.5"/>
-      <item value="hunter crossbow" quantity="[1,1]" probability="1.0"/>
+      <item value="猎人十字弓" quantity="[1,1]" probability="1.0"/>
       <item value="红靴子" quantity="[1,1]" probability="5.0"/>
       <item value="红铠甲" quantity="[1,1]" probability="0.5"/>
     </drops>
@@ -54,7 +54,7 @@
     <drops>
       <item value="money" quantity="[1,30]" probability="100.0"/>
       <item value="加强箭" quantity="[4,10]" probability="30.0"/>
-      <item value="red legs" quantity="[1,1]" probability="2.5"/>
+      <item value="红裤子" quantity="[1,1]" probability="2.5"/>
       <item value="红靴子" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>
@@ -113,7 +113,7 @@
     <drops>
       <item value="money" quantity="[1,30]" probability="100.0"/>
       <item value="红盾" quantity="[1,1]" probability="1.0"/>
-      <item value="red legs" quantity="[1,1]" probability="2.5"/>
+      <item value="红裤子" quantity="[1,1]" probability="2.5"/>
       <item value="三明治" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>      
@@ -230,8 +230,8 @@
     <drops>
       <item value="money" quantity="[1,30]" probability="100.0"/>
       <item value="木矛" quantity="[2,5]" probability="10.0"/>
-      <item value="hunter crossbow" quantity="[1,1]" probability="2.0"/>
-      <item value="red legs" quantity="[1,1]" probability="3.0"/>
+      <item value="猎人十字弓" quantity="[1,1]" probability="2.0"/>
+      <item value="红裤子" quantity="[1,1]" probability="3.0"/>
       <item value="红斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>      
@@ -288,7 +288,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,70]" probability="100.0"/>
-      <item value="imperator sword" quantity="[1,1]" probability="1.0"/>
+      <item value="将军配剑" quantity="[1,1]" probability="1.0"/>
       <item value="红斗篷" quantity="[1,1]" probability="8.5"/>
       <item value="red helmet" quantity="[1,1]" probability="6.0"/>
      </drops>
@@ -337,9 +337,9 @@
     </ai>
   </creature>
 
-  <creature name="弟子刺客">
+  <creature name="刺客门徒">
     <type class="human" subclass="little_assassin" tileid="human_evil.png:6"/>
-    <description>这是一个弟子刺客. 他很年轻, 但他已经学会了战斗和杀戮. </description>
+    <description>这是一个刺客门徒. 他很年轻, 但他已经学会了战斗和杀戮. </description>
     <attributes>
       <atk value="344"/>
       <def value="77"/>
@@ -353,8 +353,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,40]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="10.5"/>
-      <item value="marbles" quantity="[1,1]" probability="40.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="10.5"/>
+      <item value="玻璃球" quantity="[1,1]" probability="40.0"/>
       <item value="巧克力棒" quantity="[1,2]" probability="30.0"/>
       <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
     </drops>
@@ -389,7 +389,7 @@
     <corpse name="humanoid" harmless="cloaked_black" />
     <drops>
       <item value="money" quantity="[20,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="15.5"/>
+      <item value="治疗剂" quantity="[1,1]" probability="15.5"/>
       <item value="黑珍珠" quantity="[1,1]" probability="30.0"/>
       <item value="啤酒" quantity="[1,2]" probability="20.0"/>
       <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
@@ -429,8 +429,8 @@
       <item value="longbow" quantity="[1,1]" probability="0.5"/>
       <item value="木箭" quantity="[5,15]" probability="10.0"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.25"/>
-      <item value="crossbow" quantity="[1,1]" probability="3.5"/>
-      <item value="hunter crossbow" quantity="[1,1]" probability="0.0005"/>
+      <item value="十字弩" quantity="[1,1]" probability="3.5"/>
+      <item value="猎人十字弓" quantity="[1,1]" probability="0.0005"/>
     </drops>
     <equips>
       <slot name="lhand" item="金箭" quantity="10000"/>
@@ -499,13 +499,13 @@
       <item value="money" quantity="[30,100]" probability="100.0"/>
       <item value="金箭" quantity="[1,10]" probability="1.0"/>
       <item value="composite bow" quantity="[1,1]" probability="0.5"/>
-      <item value="shuriken" quantity="[5,20]" probability="10.0"/>
+      <item value="忍者镖" quantity="[5,20]" probability="10.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.0050"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.0"/>
-      <item value="katana" quantity="[1,1]" probability="1.0"/>
+      <item value="太刀" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
-      <slot name="rhand" item="shuriken" quantity="10000"/>
+      <slot name="rhand" item="忍者镖" quantity="10000"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -533,8 +533,8 @@
       <item value="money" quantity="[30,100]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.0050"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.0030"/>
-      <item value="katana" quantity="[1,1]" probability="2.0"/>
-      <item value="nihonto" quantity="[1,1]" probability="0.05"/>
+      <item value="太刀" quantity="[1,1]" probability="2.0"/>
+      <item value="武士刀" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -602,7 +602,7 @@
       <item value="money" quantity="[60,340]" probability="100.0"/>
       <item value="大治疗剂" quantity="[2,4]" probability="35"/>
       <item value="刺客匕首" quantity="[1,1]" probability="0.5"/>
-      <item value="fire shuriken" quantity="[5,20]" probability="5.0"/>
+      <item value="忍者炎镖" quantity="[5,20]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -621,9 +621,9 @@
   
   <!-- END: assassin -->
   
-  <!-- START: barbarian -->
+  <!-- START: 蛮人 -->
   
-  <creature name="barbarian">
+  <creature name="蛮人">
     <type class="human" subclass="barbarian" tileid="human_barbarian.png:3"/>
     <description></description>
     <attributes>
@@ -669,7 +669,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="2.5"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
       <item value="大战锤" quantity="[1,1]" probability="1.0"/>
@@ -700,7 +700,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="5.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="金靴子" quantity="[1,1]" probability="1.0"/>
@@ -733,7 +733,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -765,7 +765,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.25"/>
     </drops>
     <equips>
@@ -815,7 +815,7 @@
     </ai>
   </creature>
   
-  <creature name="野蛮人王">
+  <creature name="蛮人王">
     <type class="human" subclass="barbarian_king" tileid="human_barbarian.png:6"/>
     <description></description>
     <attributes>
@@ -847,7 +847,7 @@
     </ai>
   </creature>
   
-  <!-- END: barbarian -->
+  <!-- END: 蛮人 -->
   
   <!-- START: blordrough -->
   
@@ -868,7 +868,7 @@
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,2]" probability="10.0"/>
-      <item value="chaos legs" quantity="[1,1]" probability="2.0"/>
+      <item value="混沌护腿" quantity="[1,1]" probability="2.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑头盔" quantity="[1,1]" probability="0.05"/>
     </drops>
@@ -901,7 +901,7 @@
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,2]" probability="20.0"/>
-      <item value="chaos legs" quantity="[1,1]" probability="2.5"/>
+      <item value="混沌护腿" quantity="[1,1]" probability="2.5"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.25"/>
       <item value="黑戟" quantity="[1,1]" probability="0.01"/>
@@ -940,7 +940,7 @@
       <item value="大治疗剂" quantity="[2,4]" probability="30.0"/>
       <item value="鱼肉派" quantity="[1,2]" probability="20.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.5"/>
-      <item value="black legs" quantity="[1,1]" probability="0.1"/>
+      <item value="黑护腿" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -1040,7 +1040,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[7,48]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,3]" probability="20.0"/>
+      <item value="治疗剂" quantity="[1,3]" probability="20.0"/>
       <item value="西红柿" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
@@ -1060,9 +1060,9 @@
   
   <!-- START: chaos -->
   
-  <creature name="chaos soldier">
+  <creature name="混沌士兵">
     <type class="chaos" subclass="chaos_soldier" tileid="chaos.png:4"/>
-    <description>You see a chaos soldier. Chaos soldiers are servants of the evil. Killing you is one of their evil plans.</description>
+    <description>You see a 混沌士兵. 混沌士兵s are servants of the evil. Killing you is one of their evil plans.</description>
     <attributes>
       <atk value="543"/>
       <def value="81"/>
@@ -1092,9 +1092,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos warrior">
+  <creature name="混沌勇士">
     <type class="chaos" subclass="chaos_warrior" tileid="chaos.png:5"/>
-    <description>You see a chaos warrior. This chaotic creature is fighting with a big blade to slay his enemies.</description>
+    <description>You see a 混沌勇士. This chaotic creature is fighting with a big blade to slay his enemies.</description>
     <attributes>
       <atk value="604"/>
       <def value="81"/>
@@ -1108,8 +1108,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,60]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
-      <item value="chaos legs" quantity="[1,1]" probability="0.5"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
+      <item value="混沌护腿" quantity="[1,1]" probability="0.5"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="1.5"/>
       <item value="混沌头盔" quantity="[1,1]" probability="0.2"/>
@@ -1128,9 +1128,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos commander">
+  <creature name="混沌司令">
     <type class="chaos" subclass="chaos_commander" tileid="chaos.png:0"/>
-    <description>You see a chaos commander who is working on an evil plan. You should take care of him before he fulfills his duty.</description>
+    <description>You see a 混沌司令 who is working on an evil plan. You should take care of him before he fulfills his duty.</description>
     <attributes>
       <atk value="654"/>
       <def value="91"/>
@@ -1165,9 +1165,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos sorcerer">
+  <creature name="混沌巫师">
     <type class="chaos" subclass="chaos_sorceror" tileid="chaos.png:6"/>
-    <description>You see a chaos sorcerer. Chaos sorcerers will cast some evil spells on you if you don't obey them.</description>
+    <description>You see a 混沌巫师. 混沌巫师s will cast some evil spells on you if you don't obey them.</description>
     <attributes>
       <atk value="670"/>
       <def value="123"/>
@@ -1200,9 +1200,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos dragonrider">
+  <creature name="混沌龙骑士">
     <type class="chaos" subclass="chaos_dragonrider" tileid="chaos.png:1"/>
-    <description>You see a chaos dragonrider. He is very well trained in dragon riding, but he can also fight well on the ground.</description>
+    <description>You see a 混沌龙骑士. He is very well trained in dragon riding, but he can also fight well on the ground.</description>
     <attributes>
       <atk value="706"/>
       <def value="89"/>
@@ -1216,8 +1216,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
-      <item value="chaos legs" quantity="[1,1]" probability="2.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
+      <item value="混沌护腿" quantity="[1,1]" probability="2.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑头盔" quantity="[1,1]" probability="0.01"/>
     </drops>
@@ -1230,9 +1230,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos lord">
+  <creature name="混沌领主">
     <type class="chaos" subclass="chaos_lord" tileid="chaos.png:2"/>
-    <description>You see a chaos lord who is one of the strongest chaos creatures in Faiumoni. You should prepare well before attacking him.</description>
+    <description>You see a 混沌领主 who is one of the strongest chaos creatures in Faiumoni. You should prepare well before attacking him.</description>
     <attributes>
       <atk value="807"/>
       <def value="92"/>
@@ -1267,9 +1267,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos overlord">
+  <creature name="混沌君主">
     <type class="chaos" subclass="chaos_overlord" tileid="chaos.png:3"/>
-    <description>You see a chaos overlord. It is him who directs the creation of evil plans and gives orders to all chaotic creatures which exist.</description>
+    <description>You see a 混沌君主. It is him who directs the creation of evil plans and gives orders to all chaotic creatures which exist.</description>
     <attributes>
       <atk value="1042"/>
       <def value="113"/>
@@ -1314,7 +1314,7 @@
     (doesn't have to push it away, say.) The AI profiles ensure they do not
     move except when pushed by player. -->
   
-  <creature name="chaos pawn">
+  <creature name="黑方卒">
     <type class="chaos" subclass="chaos_soldier" tileid="chess.png:0"/>
     <hidden/>
     <description>You see a pawn for a game of chess. He will drop nothing if you kill him.</description>
@@ -1339,7 +1339,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos rook">
+  <creature name="黑方车">
     <type class="chaos" subclass="chaos_commander" tileid="chess.png:1"/>
     <hidden/>
     <description>You see a rook for a game of chess. He will drop nothing if you kill him.</description>
@@ -1364,7 +1364,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos knight">
+  <creature name="黑方马">
     <type class="chaos" subclass="chaos_dragonrider" tileid="chess.png:2"/>
     <hidden/>
     <description>You see a knight for a game of chess. He will drop nothing if you kill him.</description>
@@ -1389,7 +1389,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos bishop">
+  <creature name="黑方象">
     <type class="chaos" subclass="chaos_sorceror" tileid="chess.png:3"/>
     <hidden/>
     <description>You see a bishop for a game of chess. He will not reward you if you kill him.</description>
@@ -1414,7 +1414,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos king">
+  <creature name="黑方帅">
     <type class="chaos" subclass="chaos_lord" tileid="chess.png:4"/>
     <hidden/>
     <description>You see a king of a game of chess. He will reward nothing if you kill him.</description>
@@ -1439,7 +1439,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos queen">
+  <creature name="黑方女皇">
     <type class="chaos" subclass="chaos_overlord" tileid="chess.png:5"/>
     <hidden/>
     <description>You see a queen piece for a game of chess. She will reward nothing if you kill her.</description>
@@ -1469,7 +1469,7 @@
   
   <!-- START: imperial -->
   
-  <creature name="imperial defender">
+  <creature name="帝国守卫">
     <type class="human" subclass="imperial_defender" tileid="human_imperial.png:5"/>
     <description></description>
     <attributes>
@@ -1500,9 +1500,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial veteran">
+  <creature name="帝国精英士兵">
     <type class="human" subclass="imperial_veteran" tileid="human_kalavan.png:0"/>
-    <description>You see an imperial veteran. He fought in many battles and wars. Now he is old, but over the years he always looked for a new enemy to fight against.</description>
+    <description>You see an 帝国精英士兵. He fought in many battles and wars. Now he is old, but over the years he always looked for a new enemy to fight against.</description>
     <attributes>
       <atk value="330"/>
       <def value="57"/>
@@ -1529,7 +1529,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial archer">
+  <creature name="帝国弩手">
     <type class="human" subclass="imperial_archer" tileid="human_imperial.png:2"/>
     <description></description>
     <attributes>
@@ -1561,9 +1561,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial priest">
+  <creature name="帝国牧师">
     <type class="human" subclass="imperial_priest" tileid="human_imperial.png:12"/>
-    <description>You see an imperial priest. The church has fallen out of favor with the citizens as of late, but this imperial priest still clings to the faith.</description>
+    <description>You see an 帝国牧师. The church has fallen out of favor with the citizens as of late, but this 帝国牧师 still clings to the faith.</description>
     <attributes>
       <atk value="368"/>
       <def value="57"/>
@@ -1577,7 +1577,7 @@
     <corpse name="humanoid" harmless="cloaked_blue" />
     <drops>
       <item value="money" quantity="[5,40]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="10.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="10.0"/>
       <item value="抗毒药济" quantity="[1,2]" probability="2.0"/>
       <item value="法杖" quantity="[1,1]" probability="3.0"/>
     </drops>
@@ -1596,9 +1596,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial elite guardian">
+  <creature name="帝国精英守卫">
     <type class="human" subclass="imperial_elite_guardian" tileid="human_imperial.png:7"/>
-    <description>You see an Imperial Elite Guardian. He is a very well trained guardian and he will protect his environment until the end.</description>
+    <description>You see an 帝国精英守卫. He is a very well trained guardian and he will protect his environment until the end.</description>
     <attributes>
       <atk value="376"/>
       <def value="52"/>
@@ -1627,9 +1627,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial scientist">
+  <creature name="帝国科学家">
     <type class="human" subclass="imperial_scientist" tileid="human_imperial.png:13"/>
-    <description>You see an imperial scientist. He is quite clever but also a little bit crazy and unfortunately he uses his intelligence for evil experiments.</description>
+    <description>You see an 帝国科学家. He is quite clever but also a little bit crazy and unfortunately he uses his intelligence for evil experiments.</description>
     <attributes>
       <atk value="393"/>
       <def value="49"/>
@@ -1643,7 +1643,7 @@
     <corpse name="humanoid" harmless="cloaked_white" />
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[2,4]" probability="8.0"/>
+      <item value="治疗剂" quantity="[2,4]" probability="8.0"/>
       <item value="石斗篷" quantity="[1,1]" probability="2.0"/>
 
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
@@ -1659,9 +1659,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial high priest">
+  <creature name="帝国高级僧侣">
     <type class="human" subclass="imperial_high_priest" tileid="human_imperial.png:9"/>
-    <description>You see an imperial high priest who's troubled by the actions of the imperial science department. Be careful, he might take those frustrations out on you!</description>
+    <description>You see an 帝国高级僧侣 who's troubled by the actions of the imperial science department. Be careful, he might take those frustrations out on you!</description>
     <attributes>
       <atk value="437"/>
       <def value="52"/>
@@ -1675,7 +1675,7 @@
     <corpse name="humanoid" harmless="cloaked_blue" />
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="10.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="10.0"/>
       <item value="大瓶抗毒药济" quantity="[1,2]" probability="2.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.7"/>
       <item value="暗之匕首" quantity="[1,1]" probability="0.1"/>
@@ -1695,7 +1695,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial archer leader">
+  <creature name="帝国弩手统领">
     <type class="human" subclass="imperial_archer_leader" tileid="human_imperial.png:1"/>
     <description></description>
     <attributes>
@@ -1727,7 +1727,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial elite archer">
+  <creature name="帝国弩手精英">
     <type class="human" subclass="imperial_elite_archer" tileid="human_imperial.png:6"/>
     <description></description>
     <attributes>
@@ -1744,7 +1744,7 @@
     <drops>
       <item value="money" quantity="[5,53]" probability="100.0"/>
       <item value="加强箭" quantity="[3,10]" probability="5.0"/>
-      <item value="crossbow" quantity="[1,1]" probability="1.75"/>
+      <item value="十字弩" quantity="[1,1]" probability="1.75"/>
     </drops>
     <equips>
       <slot name="lhand" item="加强箭" quantity="10000"/>
@@ -1759,9 +1759,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial leader">
+  <creature name="帝国指挥官">
     <type class="human" subclass="imperial_leader" tileid="human_imperial.png:11"/>
-    <description>You see a well dressed imperial leader. It's troops will try to dash you.</description>
+    <description>You see a well dressed 帝国指挥官. It's troops will try to dash you.</description>
     <attributes>
       <atk value="493"/>
       <def value="64"/>
@@ -1790,7 +1790,7 @@
     </ai>
   </creature>
   
-   <creature name="imperial knight">
+   <creature name="帝国骑士">
     <type class="human" subclass="imperial_knight" tileid="human_imperial.png:10"/>
     <description></description>
     <attributes>
@@ -1821,7 +1821,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial chief">
+  <creature name="帝国首领">
     <type class="human" subclass="imperial_chief" tileid="human_imperial.png:3"/>
     <description></description>
     <attributes>
@@ -1852,7 +1852,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial commander">
+  <creature name="帝国司令">
     <type class="human" subclass="imperial_commander" tileid="human_imperial.png:4"/>
     <description></description>
     <attributes>
@@ -1888,9 +1888,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial general">
+  <creature name="帝国将军">
     <type class="human" subclass="imperial_general" tileid="human_imperial.png:8"/>
-    <description>You see an imperial general with a huge scar above his eye. He is still strong, don't think that he will not see you!</description>
+    <description>You see an 帝国将军 with a huge scar above his eye. He is still strong, don't think that he will not see you!</description>
     <attributes>
       <atk value="631"/>
       <def value="102"/>
@@ -1922,9 +1922,9 @@
     </ai>
   </creature>
   
-  <creature name="emperor dalmung">
+  <creature name="帝国大梦">
     <type class="human" subclass="emperor_dalmung" tileid="human_imperial.png:0"/>
-    <description>You see an emperor dalmung who stands before you. Once a powerful warlock trained by a mighty magician, but he disappeared decades ago. Now it seems he's in league with Ivan Abe!</description>
+    <description>You see an 帝国大梦 who stands before you. Once a powerful warlock trained by a mighty magician, but he disappeared decades ago. Now it seems he's in league with Ivan Abe!</description>
     <attributes>
       <atk value="705"/>
       <def value="91"/>
@@ -1966,9 +1966,9 @@
   
   <!-- START: kalavan -->
   
-  <creature name="kalavan housewife">
+  <creature name="卡拉文家庭主妇">
     <type class="human" subclass="kalavan_housewife" tileid="human_kalavan.png:2"/>
-    <description>You see a kalavan housewife. She lives in Kalavan city and she is very angry with rude people who want to steal her food out of the kitchen and destroy her beautiful flower garden!</description>
+    <description>You see a 卡拉文家庭主妇. She lives in Kalavan city and she is very angry with rude people who want to steal her food out of the kitchen and destroy her beautiful flower garden!</description>
     <attributes>
       <atk value="274"/>
       <def value="42"/>
@@ -1994,9 +1994,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan peasant">
+  <creature name="卡拉文农夫">
     <type class="human" subclass="kalavan_peasant" tileid="human_kalavan.png:3"/>
-    <description>You see a kalavan peasant. He works in the fields around Kalavan city. As he heard there were strangers in the city he came to help the kalavan citizens in fighting the enemies!</description>
+    <description>You see a 卡拉文农夫. He works in the fields around Kalavan city. As he heard there were strangers in the city he came to help the 卡拉文居民s in fighting the enemies!</description>
     <attributes>
       <atk value="296"/>
       <def value="44"/>
@@ -2024,9 +2024,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan wisewoman">
+  <creature name="卡拉文女白领">
     <type class="human" subclass="kalavan_wisewoman" tileid="human_kalavan.png:4"/>
-    <description>You see a kalavan wisewoman. Normally she sits in her small room and does some handworking but now she wants to have some action!</description>
+    <description>You see a 卡拉文女白领. Normally she sits in her small room and does some handworking but now she wants to have some action!</description>
     <attributes>
       <atk value="301"/>
       <def value="46"/>
@@ -2054,9 +2054,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan citizen">
+  <creature name="卡拉文居民">
     <type class="human" subclass="kalavan_citizen" tileid="human_kalavan.png:1"/>
-    <description>You see a kalavan citizen. He lives in kalavan city and tries to protect it from invaders!</description>
+    <description>You see a 卡拉文居民. He lives in kalavan city and tries to protect it from invaders!</description>
     <attributes>
       <atk value="310"/>
       <def value="56"/>
@@ -2087,7 +2087,7 @@
   
   <!-- START: madaram -->
   
-  <creature name="madaram archer">
+  <creature name="马德拉弓箭手">
     <type class="madaram" subclass="madaram_archer" tileid="madaram.png:1"/>
     <description></description>
     <attributes>
@@ -2119,7 +2119,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram peasant">
+  <creature name="马德拉弓箭手">
     <type class="madaram" subclass="madaram_peasant" tileid="madaram.png:7"/>
     <description></description>
     <attributes>
@@ -2148,7 +2148,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram trooper">
+  <creature name="马德拉骑士">
     <type class="madaram" subclass="madaram_trooper" tileid="madaram.png:11"/>
     <description></description>
     <attributes>
@@ -2177,7 +2177,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram soldier">
+  <creature name="马德拉骑士">
     <type class="madaram" subclass="madaram_soldier" tileid="madaram.png:9"/>
     <description></description>
     <attributes>
@@ -2206,7 +2206,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram healer">
+  <creature name="马德拉医师">
     <type class="madaram" subclass="madaram_healer" tileid="madaram.png:5"/>
     <description></description>
     <attributes>
@@ -2222,9 +2222,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="5.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="5.0"/>
       <item value="抗毒药济" quantity="[2,5]" probability="20.0"/>
-      <item value="sedative" quantity="[1,2]" probability="5.0"/>
+      <item value="镇静剂" quantity="[1,2]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -2236,7 +2236,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram axeman">
+  <creature name="马德拉斧手">
     <type class="madaram" subclass="madaram_axeman" tileid="madaram.png:2"/>
     <description></description>
     <attributes>
@@ -2265,7 +2265,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram queen">
+  <creature name="马德拉女王">
     <type class="madaram" subclass="madaram_queen" tileid="madaram.png:8"/>
     <description></description>
     <attributes>
@@ -2281,7 +2281,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="jewelled legs" quantity="[1,1]" probability="0.0001"/>
+      <item value="宝石护腿" quantity="[1,1]" probability="0.0001"/>
       <item value="自由头盔" quantity="[1,1]" probability="0.0001"/>
       <!-- The queen is having an affair with someone in ados...? -->
       <item value="阿多斯城回城卷" quantity="[1,1]" probability="3.0"/>
@@ -2296,7 +2296,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram hero">
+  <creature name="马德拉英雄">
     <type class="madaram" subclass="madaram_hero" tileid="madaram.png:6"/>
     <description></description>
     <attributes>
@@ -2312,7 +2312,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,53]" probability="100.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="1.0"/>
+      <item value="影子护腿" quantity="[1,1]" probability="1.0"/>
       <item value="馅饼" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
@@ -2325,7 +2325,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram windwalker">
+  <creature name="马德拉风行者">
     <type class="madaram" subclass="madaram_windwalker" tileid="madaram.png:12"/>
     <description></description>
     <attributes>
@@ -2341,7 +2341,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,53]" probability="100.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="1.0"/>
+      <item value="影子护腿" quantity="[1,1]" probability="1.0"/>
       <item value="馅饼" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
@@ -2354,7 +2354,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram cavalry">
+  <creature name="马德拉骑兵">
     <type class="madaram" subclass="madaram_cavalry" tileid="madaram.png:4"/>
     <description></description>
     <attributes>
@@ -2385,7 +2385,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram stalker">
+  <creature name="马德拉杀手">
     <type class="madaram" subclass="madaram_stalker" tileid="madaram.png:10"/>
     <description></description>
     <attributes>
@@ -2403,7 +2403,7 @@
       <item value="money" quantity="[5,53]" probability="100.0"/>
       <item value="影盾" quantity="[1,1]" probability="2.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="1.25"/>
-      <item value="shadow legs" quantity="[1,1]" probability="2.0"/>
+      <item value="影子护腿" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
     </equips>
@@ -2430,7 +2430,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="buster" quantity="[1,1]" probability="2.5"/>
+      <item value="屠刀" quantity="[1,1]" probability="2.5"/>
       <item value="加强狮盾" quantity="[1,1]" probability="20.0"/>
     </drops>
     <equips>
@@ -2450,7 +2450,7 @@
     (doesn't have to push it away, say.) The AI profiles ensure they do not
     move except when pushed by player. -->
   
-  <creature name="madaram pawn">
+  <creature name="红方兵">
     <type class="madaram" subclass="madaram_peasant" tileid="chess.png:6"/>
     <hidden />
     <description>You see a pawn for a game of chess. It will reward nothing if killed.</description>
@@ -2475,7 +2475,7 @@
      </ai>
   </creature>
   
-  <creature name="madaram rook">
+  <creature name="红方车">
     <type class="madaram" subclass="madaram_axeman" tileid="chess.png:7"/>
     <hidden/>
     <description>You see a rook for a game of chess. It will scarcely reward you to kill it.</description>
@@ -2500,7 +2500,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram knight">
+  <creature name="红方马">
     <type class="madaram" subclass="madaram_cavalry" tileid="chess.png:8"/>
     <hidden/>
     <description>You see a knight, a chess piece. He won't reward you if you kill him.</description>
@@ -2525,7 +2525,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram bishop">
+  <creature name="红方相">
     <type class="madaram" subclass="madaram_healer" tileid="chess.png:9"/>
     <hidden/>
     <description>You see a bishop for a game of chess. It will reward you nothing if you slay it.</description>
@@ -2550,7 +2550,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram king">
+  <creature name="红方将">
     <type class="madaram" subclass="madaram_buster_blader" tileid="chess.png:10"/>
     <hidden/>
     <description>You see a king to play chess with, he will reward you nothing if you kill him.</description>
@@ -2575,7 +2575,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram queen ">
+  <creature name="红方女王">
     <type class="madaram" subclass="madaram_queen" tileid="chess.png:11"/>
     <hidden/>
     <description>You see a queen piece for a game of chess. She will reward nothing if you kill her.</description>
@@ -2903,7 +2903,7 @@
     <corpse name="humanoid" harmless="cloaked_brown" />
     <drops>
       <item value="money" quantity="[3,30]" probability="80.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="50.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="50.0"/>
       <item value="黄金战锤" quantity="[1,1]" probability="3.0"/>
       <item value="法杖" quantity="[1,1]" probability="3.0"/>
     </drops>
@@ -3122,7 +3122,7 @@
     <drops>
       <item value="money" quantity="[40,75]" probability="80.0"/>
       <item value="红酒" quantity="[3,6]" probability="40.0"/>
-      <item value="gold bar" quantity="[1,1]" probability="5.0"/>
+      <item value="金条" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -3153,7 +3153,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[40,155]" probability="80.0"/>
-      <item value="iron" quantity="[1,3]" probability="5.0"/>
+      <item value="铁锭" quantity="[1,3]" probability="5.0"/>
       <item value="黑曜石" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -3187,7 +3187,7 @@
     <drops>
       <item value="money" quantity="[40,155]" probability="80.0"/>
       <item value="红酒" quantity="[3,10]" probability="40.0"/>
-      <item value="gold bar" quantity="[1,1]" probability="5.0"/>
+      <item value="金条" quantity="[1,1]" probability="5.0"/>
       <item value="馅饼" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
@@ -3226,7 +3226,7 @@
     <drops>
       <item value="money" quantity="[3,20]" probability="90.0"/>
       <item value="链甲" quantity="[1,1]" probability="8.0"/>
-      <item value="chain legs" quantity="[1,1]" probability="12.0"/>
+      <item value="索链护腿" quantity="[1,1]" probability="12.0"/>
       <item value="加固锁子甲" quantity="[1,1]" probability="1.3"/>
       <item value="三明治" quantity="[1,1]" probability="1.5"/>
       <item value="链靴" quantity="[1,1]" probability="1.0"/>
@@ -3334,7 +3334,7 @@
       <item value="链靴" quantity="[1,1]" probability="6.0"/>
       <item value="cloak" quantity="[1,1]" probability="5.0"/>
       <item value="aventail" quantity="[1,1]" probability="1.0"/>
-      <item value="scimitar" quantity="[1,1]" probability="1.5"/>
+      <item value="半月弯刀" quantity="[1,1]" probability="1.5"/>
     </drops>
     <equips>
     </equips>
@@ -3395,7 +3395,7 @@
     <corpse name="tiny_humanoid"/>
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
-      <item value="home scroll" quantity="[1,1]" probability="10.0"/> 
+      <item value="回城卷" quantity="[1,1]" probability="10.0"/> 
     </drops>
     <equips>
     </equips>

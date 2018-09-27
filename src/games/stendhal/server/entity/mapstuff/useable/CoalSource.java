@@ -61,11 +61,11 @@ public class CoalSource extends PlayerActivityEntity {
 	 * Create a gold source.
 	 */
 	public CoalSource() {
-		this("coal");
+		this("煤炭");
 	}
 
 	/**
-	 * Create a coal source.
+	 * Create a 煤炭 source.
 	 *
 	 * @param itemName
 	 *            The name of the item to be prospected.

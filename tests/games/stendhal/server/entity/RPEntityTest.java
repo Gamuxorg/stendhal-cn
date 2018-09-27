@@ -274,7 +274,7 @@ public class RPEntityTest {
 		entity.getSlot("lhand").add(lefthanditem);
 		assertThat(entity.getItemAtk(), is(0f));
 
-		final Item righthanditem = SingletonRepository.getEntityManager().getItem("r hand sword");
+		final Item righthanditem = SingletonRepository.getEntityManager().getItem("左手剑");
 		entity.getSlot("rhand").add(righthanditem);
 		assertThat(entity.getItemAtk(),
 				is((float) (lefthanditem.getAttack() + righthanditem.getAttack())));
@@ -310,7 +310,7 @@ public class RPEntityTest {
 		entity.getSlot("rhand").add(lefthanditem);
 		assertThat(entity.getItemAtk(), is(0f));
 
-		final Item righthanditem = SingletonRepository.getEntityManager().getItem("r hand sword");
+		final Item righthanditem = SingletonRepository.getEntityManager().getItem("左手剑");
 		entity.getSlot("lhand").add(righthanditem);
 		assertThat(entity.getItemAtk(), is(0f));
 

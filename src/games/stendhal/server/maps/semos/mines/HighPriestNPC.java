@@ -52,10 +52,10 @@ public class HighPriestNPC implements ZoneConfigurator {
 				addGreeting(null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						String reply = "我正架起一排栅栏, 不让 #balrog 靠近.";
+						String reply = "我正架起一排栅栏, 不让 #巴洛克 靠近.";
 
 						if (player.getLevel() < 150) {
-							reply += " balrog 可能会秒杀你, 快跑!";
+							reply += " 巴洛克 可能会秒杀你, 快跑!";
 						} else {
 							reply += " 我会尽量维持栅栏的防护力, 用以保卫 Faiumoni. 杀了它.";
 						}
@@ -63,8 +63,8 @@ public class HighPriestNPC implements ZoneConfigurator {
 					}
 				});
 
-				addReply("balrog",
-						"Bolrogh 军团是最恐怖的野兽.");
+				addReply("巴洛克",
+						"巴洛克军团是最恐怖的野兽.");
 				addGoodbye();
 			}
 

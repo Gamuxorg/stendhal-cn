@@ -176,7 +176,7 @@ public class AllotmentUtilities implements TurnListener {
 			ExpirationTracker tracker = (ExpirationTracker) e;
 			if (tracker.getPlayerName().equals(player)) {
 
-				final GateKey key = (GateKey) SingletonRepository.getEntityManager().getItem("gate key");
+				final GateKey key = (GateKey) SingletonRepository.getEntityManager().getItem("大门钥匙");
 				key.setup(ALLOTMENT_PREFIX + tracker.getIdentifier(), tracker.getExpirationTime());
 
 				return key;

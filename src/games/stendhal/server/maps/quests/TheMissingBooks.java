@@ -34,7 +34,7 @@ import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * QUEST: Quest to get a recipe for a 治疗济 for Imorgen
+ * QUEST: Quest to get a recipe for a 治疗剂 for Imorgen
  * <p>
  *
  * PARTICIPANTS:
@@ -54,7 +54,7 @@ import games.stendhal.server.entity.player.Player;
  *
  * REWARD:
  *  <ul>
- *  <li>A recipe which Imorgen needs for her 治疗济</li>
+ *  <li>A recipe which Imorgen needs for her 治疗剂</li>
  *  </ul>
  *
  * REPETITIONS:
@@ -74,14 +74,14 @@ public class TheMissingBooks extends AbstractQuest {
 						"it lays, hidden under soft sand - the mighty treasure of Faiumoni.");
 		quotes.put("As a mighty warrior,...",
 						"you always need to wear a powerful armor in fights.");
-		quotes.put("You don't believe in magic? The 治疗济...",
+		quotes.put("You don't believe in magic? The 治疗剂...",
 						"of love, made made from a magician's hand, even works for Yetis.");
 		quotes.put("Hungry? Thirsty? Tired?...",
 						"A break might help. Take a look around the lovely nature of Faiumoni and find relaxing places to make a stop at. Even when you are busy during tasks, a healthy snack will power you up.");
 		quotes.put("And there they were: two strangers, alone in the tunnel...",
 						"of 阿多斯城, heading out for reaching the right entrance to a life full of joy and peace - at least they hoped for that.");
 		quotes.put("Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge,...",
-						"it's powerful, it has a hard forehand...Could that be it? It is a balrog!");
+						"it's powerful, it has a hard forehand...Could that be it? It is a 巴洛克!");
 		quotes.put("You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and some 牛奶...",
 						"a hot drink for the winter, some rat to make it silk. Now after waiting for some time and after the job is done: a 可丽饼 that is you hold, enjoy it and have fun!");
 	}

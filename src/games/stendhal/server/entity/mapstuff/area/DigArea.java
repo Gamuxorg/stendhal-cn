@@ -27,7 +27,7 @@ public class DigArea extends ConditionAndActionArea {
     }
 
     /**
-     * Override so area cannot be used without a shovel
+     * Override so area cannot be used without a 铲子
      *
      * @param player
      *      Player taking the action
@@ -36,12 +36,12 @@ public class DigArea extends ConditionAndActionArea {
      */
     @Override
     public boolean use(Player player) {
-        // Player did not use a shovel
+        // Player did not use a 铲子
         return false;
     }
 
     /**
-     * Action to take when player uses a shovel
+     * Action to take when player uses a 铲子
      *
      * @param player
      *      Player taking action
@@ -51,8 +51,8 @@ public class DigArea extends ConditionAndActionArea {
      *      Player can dig
      */
     public boolean use(Player player, Item tool) {
-        // Make sure player used a shovel
-        if (tool.getName() == "shovel") {
+        // Make sure player used a 铲子
+        if (tool.getName() == "铲子") {
             return super.use(player);
         }
         return false;

@@ -63,8 +63,8 @@ public abstract class UpdateConverter {
 	);
 	private static final List<String> ITEM_NAMES_NEW_0_66 = Arrays.asList(
 			"golden key", "silver key", "黑色的书", "蓝色的书",
-			"elder duergar", "black duergar", "大巨头",
-			"chaos sorcerer"
+			"杜加壮士", "黑暗杜加", "大巨头",
+			"混沌巫师"
 	);
 	/**
 	 * quest name, quest index, creatures to kill.
@@ -87,11 +87,11 @@ public abstract class UpdateConverter {
 
 		KILL_QUEST_NAMES.put("kill_dhohr_nuggetcutter",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"Dhohr Nuggetcutter",
-					"mountain dwarf",
-					"mountain elder dwarf",
-					"mountain hero dwarf",
-					"mountain leader dwarf")));
+					"钳工都尔",
+					"山地矮人",
+					"山地矮人壮士",
+					"山地矮人英雄",
+					"山地矮人首领")));
 
 		KILL_QUEST_NAMES.put("kill_gnomes",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
@@ -156,8 +156,8 @@ public abstract class UpdateConverter {
 						zoneName = "ados";
 					}
 					doorId = zoneName + " house " + Integer.toString(id);
-					// now set the infostring of the house key to doorId;number;
-					item = SingletonRepository.getEntityManager().getItem("house key");
+					// now set the infostring of the 房间钥匙 to doorId;number;
+					item = SingletonRepository.getEntityManager().getItem("房间钥匙");
 					((HouseKey) item).setup(doorId, number, null);
 				} catch (final NumberFormatException e) {
 					// shouldn't happen - give up and this will generate a warning
@@ -372,7 +372,7 @@ public abstract class UpdateConverter {
 		final EntityManager entityMgr = SingletonRepository.getEntityManager();
 
 		// rename old quest slot "Valo_concoct_potion" to "valo_concoct_potion"
-		// We avoid to lose 治疗济 in case there is an entry with the old and the new name at the same
+		// We avoid to lose 治疗剂 in case there is an entry with the old and the new name at the same
 		// time by combining them by calculating the minimum of the two times and the sum of the two amounts.
 		migrateSumTimedQuestSlot(player, "Valo_concoct_potion", "valo_concoct_potion");
 

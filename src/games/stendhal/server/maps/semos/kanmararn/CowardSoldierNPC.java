@@ -55,7 +55,7 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 				addJob("我是军队的一名士兵.");
 				addGoodbye("要小心周围的矮人, 再见!");
 				addHelp("我需要自救, 我与队友分散了 #group , 现在只剩我一个人.");
-				addReply(Arrays.asList("dwarf", "dwarves"),
+				addReply(Arrays.asList("矮人", "dwarves"),
 					"到处都有矮人！他们的王国 #kingdom 一定在附近.");
 				addReply(Arrays.asList("kingdom", "卡梅伦"),
 					"卡梅伦, 传说是矮人们 #dwarves 居住的城市.");

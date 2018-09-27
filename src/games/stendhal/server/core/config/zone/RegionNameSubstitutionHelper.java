@@ -29,7 +29,7 @@ public class RegionNameSubstitutionHelper {
 	private RegionNameSubstitutionHelper() {
 		replacements.put("magic", "magic city");
 		replacements.put("wofol", "wofol city");
-		replacements.put("sedah", "sedah city");
+		replacements.put("西大", "西大城");
 		replacements.put("adventure", getDefaultRegion());
 		replacements.put("admin", getDefaultRegion());
 		replacements.put("hell", getDefaultRegion());

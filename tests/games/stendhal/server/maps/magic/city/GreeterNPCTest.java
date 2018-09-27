@@ -163,23 +163,23 @@ public class GreeterNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("Congratulations! Here are your summon scrolls!", getReply(npc));
 		assertTrue(player.isEquipped("summon scroll"));
 
-		assertTrue(en.step(player, "buy home scroll"));
-		assertEquals("A home scroll will cost 375. Do you want to buy it?", getReply(npc));
+		assertTrue(en.step(player, "buy 回城卷"));
+		assertEquals("A 回城卷 will cost 375. Do you want to buy it?", getReply(npc));
 
 		assertTrue(equipWithMoney(player, 300));
 		assertTrue(en.step(player, "yes"));
 		assertEquals("Sorry, you don't have enough money!", getReply(npc));
 
-		assertTrue(en.step(player, "buy home scroll"));
-		assertEquals("A home scroll will cost 375. Do you want to buy it?", getReply(npc));
+		assertTrue(en.step(player, "buy 回城卷"));
+		assertEquals("A 回城卷 will cost 375. Do you want to buy it?", getReply(npc));
 
 		// add another 75 coins to be able to buy the scroll
 		assertTrue(equipWithMoney(player, 75));
 
-		assertFalse(player.isEquipped("home scroll"));
+		assertFalse(player.isEquipped("回城卷"));
 		assertTrue(en.step(player, "yes"));
-		assertEquals("Congratulations! Here is your home scroll!", getReply(npc));
-		assertTrue(player.isEquipped("home scroll"));
+		assertEquals("Congratulations! Here is your 回城卷!", getReply(npc));
+		assertTrue(player.isEquipped("回城卷"));
 	}
 
 	/**

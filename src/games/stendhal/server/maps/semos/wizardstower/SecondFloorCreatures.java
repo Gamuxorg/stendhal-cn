@@ -39,9 +39,9 @@ public class SecondFloorCreatures implements ZoneConfigurator {
 	private void buildSecondFloor(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = manager.getCreature("air elemental");
-		final Creature creature1 = manager.getCreature("madaram windwalker");
-		final Creature creature2 = manager.getCreature("djinn");
+		final Creature creature = manager.getCreature("气元素");
+		final Creature creature1 = manager.getCreature("马德拉风行者");
+		final Creature creature2 = manager.getCreature("神灯");
 		final Creature creature3 = manager.getCreature("invisible man");
 
 		creature1.setName("cloudwalker");

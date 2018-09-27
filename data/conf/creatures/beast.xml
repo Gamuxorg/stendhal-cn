@@ -75,7 +75,7 @@
     <corpse name="small_boneless"/>
     <drops>
       <item value="money" quantity="[5,22]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -90,9 +90,9 @@
   
   <!-- START: gargoyle -->
   
-  <creature name="gargoyle">
+  <creature name="石像鬼">
     <type class="gargoyle" subclass="gargoyle" tileid="gargoyle.png:2"/>
-    <description>You see a gargoyle, You should think that it is a statue, but no, it is alive!</description>
+    <description>You see a 石像鬼, You should think that it is a statue, but no, it is alive!</description>
     <attributes>
       <atk value="98"/>
       <def value="16"/>
@@ -121,9 +121,9 @@
     </ai>
   </creature>
   
-  <creature name="elder gargoyle">
+  <creature name="高级石像鬼">
     <type class="gargoyle" subclass="elder_gargoyle" tileid="gargoyle.png:1"/>
-    <description>You see an elder gargoyle, it is wise...</description>
+    <description>You see an 高级石像鬼, it is wise...</description>
     <attributes>
       <atk value="114"/>
       <def value="16"/>
@@ -151,9 +151,9 @@
     </ai>
   </creature>
   
-  <creature name="dark gargoyle">
+  <creature name="黑暗石像鬼">
     <type class="gargoyle" subclass="dark_gargoyle" tileid="gargoyle.png:0"/>
-    <description>You see a dark gargoyle, do you feel the fear?</description>
+    <description>You see a 黑暗石像鬼, do you feel the fear?</description>
     <attributes>
       <atk value="134"/>
       <def value="22"/>
@@ -185,9 +185,9 @@
     </ai>
   </creature>  
   
-  <creature name="venom gargoyle">
+  <creature name="毒液石像鬼">
     <type class="gargoyle" subclass="venom_gargoyle" tileid="gargoyle.png:3"/>
-    <description>You see a venom gargoyle, a hideous and poisonous creature.</description>
+    <description>You see a 毒液石像鬼, a hideous and poisonous creature.</description>
     <attributes>
       <atk value="188"/>
       <def value="61"/>
@@ -226,9 +226,9 @@
   
   <!-- START: misc -->
   
-  <creature name="mimic">
+  <creature name="宝箱怪">
     <type class="hybrid" subclass="mimic_idle" tileid="hybrid.png:14"/>
-    <description>You see a mimic. Its content might be different from what you expect.</description>
+    <description>You see a 宝箱怪. Its content might be different from what you expect.</description>
     <attributes>
       <atk value="240"/>
       <def value="41"/>
@@ -244,7 +244,7 @@
       <item value="money" quantity="[45,85]" probability="50.0" />
       <item value="阔剑" quantity="[1,1]" probability="4.0" />
       <item value="dagger" quantity="[1,1]" probability="3.5" />
-      <item value="golden legs" quantity="[1,1]" probability="0.5" />
+      <item value="黄金护腿" quantity="[1,1]" probability="0.5" />
       <item value="黄金锁子甲" quantity="[1,1]" probability="7.0" />
     </drops>
     <equips>
@@ -258,9 +258,9 @@
     </ai>
   </creature>
   
-  <creature name="snarfkin">
+  <creature name="暴食兽">
     <type class="hybrid" subclass="snarfkin" tileid="hybrid.png:11"/>
-    <description>You see a snarfkin, the favourite pet of wizards. Be careful, its claws are poisonous!</description>
+    <description>You see a 暴食兽, the favourite pet of wizards. Be careful, its claws are poisonous!</description>
     <attributes>
       <atk value="472"/>
       <def value="74"/>
@@ -292,7 +292,7 @@
   
   <!-- START: mutant -->
   
-  <creature name="glow monster">
+  <creature name="赤热精">
     <type class="mutant" subclass="glow_monster" tileid="mutant.png:1"/>
     <description></description>
     <attributes>
@@ -323,7 +323,7 @@
     </ai>
   </creature>
   
-  <creature name="dark mutant">
+  <creature name="暗黑异种">
     <type class="mutant" subclass="blacky" tileid="mutant.png:0"/>
     <description></description>
     <attributes>
@@ -355,9 +355,9 @@
     </ai>
   </creature>
   
-  <creature name="googon">
+  <creature name="古刚">
     <type class="hybrid" subclass="googon" tileid="hybrid.png:10"/>
-    <description>You see a googon that comes from the worst place in this world...Be careful this creature is a deadly killer.</description>
+    <description>You see a 古刚 that comes from the worst place in this world...Be careful this creature is a deadly killer.</description>
     <attributes>
       <atk value="430"/>
       <def value="128"/>
@@ -384,7 +384,7 @@
     </ai>
   </creature>
   
-  <creature name="grobble monster">
+  <creature name="怨鸣兽">
     <type class="hybrid" subclass="grobble_monster" tileid="hybrid.png:12"/>
     <description></description>
     <attributes>
@@ -419,7 +419,7 @@
     </ai>
   </creature>
 
-  <creature name="winged blurble">
+  <creature name="鸦天狗">
     <type class="hybrid" subclass="winged_blurble" tileid="hybrid.png:5"/>
     <description></description>
     <attributes>
@@ -437,7 +437,7 @@
       <item value="money" quantity="[20,110]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,2]" probability="80.0"/>
       <item value="奇妙之盾" quantity="[1,1]" probability="1.5"/>
-      <item value="mainio legs" quantity="[1,1]" probability="0.5"/>
+      <item value="奇妙裤子" quantity="[1,1]" probability="0.5"/>
       <item value="斑点蛋" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
@@ -450,9 +450,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial experiment">
+  <creature name="帝国试验体">
     <type class="mutant" subclass="imperial_experiment" tileid="mutant.png:4"/>
-    <description>You see an imperial experiment which mirrors the fate of many of science departments test subjects. It's skin glows and standing before it taxes your body.</description>
+    <description>You see an 帝国试验体 which mirrors the fate of many of science departments test subjects. It's skin glows and standing before it taxes your body.</description>
     <attributes>
       <atk value="572"/>
       <def value="71"/>
@@ -468,7 +468,7 @@
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="shadow helmet" quantity="[1,1]" probability="0.6"/>
       <item value="混沌头盔" quantity="[1,1]" probability="0.2"/>
-      <item value="sedative" quantity="[2,4]" probability="8.0"/>
+      <item value="镇静剂" quantity="[2,4]" probability="8.0"/>
     </drops>
     <equips>
     </equips>
@@ -480,7 +480,7 @@
     </ai>
   </creature>
   
-  <creature name="imperial mutant">
+  <creature name="帝国生化人">
     <type class="mutant" subclass="imperial_mutant" tileid="mutant.png:3"/>
     <description></description>
     <attributes>
@@ -548,9 +548,9 @@
   
   <!-- START: slime -->
   
-  <creature name="green slime">
+  <creature name="绿色史莱姆">
     <type class="animal" subclass="green_slime" tileid="animal.png:12"/>
-    <description>You see a green slime, sticky and shiny.</description>
+    <description>You see a 绿色史莱姆, sticky and shiny.</description>
     <attributes>
       <atk value="114"/>
       <def value="18"/>
@@ -578,9 +578,9 @@
     </ai>
   </creature>
   
-  <creature name="brown slime">
+  <creature name="棕色史莱姆">
     <type class="animal" subclass="brown_slime" tileid="animal.png:5"/>
-    <description>You see a brown slime, sticky and hungry.</description>
+    <description>You see a 棕色史莱姆, sticky and hungry.</description>
     <attributes>
       <atk value="184"/>
       <def value="26"/>
@@ -608,9 +608,9 @@
     </ai>
   </creature>
   
-  <creature name="black slime">
+  <creature name="黑色史莱姆">
     <type class="animal" subclass="black_slime" tileid="animal.png:3"/>
-    <description>You see a black slime, with a sticky trail behind it.</description>
+    <description>You see a 黑色史莱姆, with a sticky trail behind it.</description>
     <attributes>
       <atk value="250"/>
       <def value="36"/>
@@ -638,9 +638,9 @@
     </ai>
   </creature>
   
-  <creature name="twilight slime">
+  <creature name="荧光光史莱姆">
     <type class="animal" subclass="twilight_slime" tileid="animal.png:-1"/>
-    <description>You see a twilight slime, so strange and beautiful. Why is it coming towards you? Runnnnnnnnn!</description>
+    <description>You see a 荧光光史莱姆, so strange and beautiful. Why is it coming towards you? Runnnnnnnnn!</description>
     <attributes>
       <atk value="718"/>
       <def value="88"/>

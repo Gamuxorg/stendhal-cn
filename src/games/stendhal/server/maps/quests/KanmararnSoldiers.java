@@ -271,7 +271,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(2500));
-		actions.add(new DropInfostringItemAction("leather legs","tom"));
+		actions.add(new DropInfostringItemAction("皮裤","tom"));
 		actions.add(new DropInfostringItemAction("鳞甲","peter"));
 		actions.add(new IncreaseKarmaAction(15.0));
 		actions.add(new GiveMapAction(false));
@@ -280,7 +280,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(henry.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
+						new PlayerHasInfostringItemWithHimCondition("皮裤", "tom"),
 						new PlayerHasInfostringItemWithHimCondition("笔记", "charles"),
 						new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")),
 				ConversationStates.ATTENDING,
@@ -293,7 +293,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new NotCondition(
 								new AndCondition(
-										new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
+										new PlayerHasInfostringItemWithHimCondition("皮裤", "tom"),
 										new PlayerHasInfostringItemWithHimCondition("笔记", "charles"),
 										new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")))),
 				ConversationStates.ATTENDING,
@@ -339,8 +339,8 @@ public class KanmararnSoldiers extends AbstractQuest {
 		zone.add(tom);
 
 		// Add a refiller to automatically fill the corpse of unlucky Tom
-		final CorpseRefiller tomRefiller = new CorpseRefiller(tom, "leather legs",
-				"You see torn leather legs that are heavily covered with blood.");
+		final CorpseRefiller tomRefiller = new CorpseRefiller(tom, "皮裤",
+				"You see torn 皮裤 that are heavily covered with blood.");
 		tomRefiller.start();
 
 		// Now we create the corpse of the third NPC
@@ -389,7 +389,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 			"The #treasure map that leads into the heart of the #dwarven #kingdom.");
 		james.addReply("treasure",
 			"A big treasure is rumored to be somewhere in this dungeon.");
-		james.addReply(Arrays.asList("dwarf", "dwarves", "dwarven", "dwarven kingdom"),
+		james.addReply(Arrays.asList("矮人", "dwarves", "dwarven", "dwarven kingdom"),
 			"They are strong enemies! We're in their #kingdom.");
 		james.addReply(Arrays.asList("peter", "tom", "charles"),
 			"He was a good soldier and fought bravely.");

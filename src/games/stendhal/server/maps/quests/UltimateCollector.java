@@ -74,7 +74,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** 黑曜石刀 quest: Alrak is the NPC */
 	private static final String OBSIDIAN_KNIFE_QUEST_SLOT = "obsidian_knife"; // dwarf blacksmith
 
-	/** Immortal Sword Quest in Kotoch: Vulcanus is the NPC */
+	/** 永恒之剑 Quest in Kotoch: Vulcanus is the NPC */
 	private static final String IMMORTAL_SWORD_QUEST_SLOT = "immortalsword_quest"; // kotoch
 
 	/** 密银斗篷 quest: Ida is the NPC */
@@ -210,12 +210,12 @@ public class UltimateCollector extends AbstractQuest {
 
 		// the numbers are based on depo's metric for rarity (bigger number = more rare) which may be out of date https://sourceforge.net/tracker/?func=detail&aid=2066597&group_id=1111&atid=973767
 		// nothing rarer than a 赤魔剑, and not included items which are quest rewards elsewhere
-		items.put("nihonto",1); // 5169
+		items.put("武士刀",1); // 5169
 		items.put("魔法双刃斧",1); // 1010
-		items.put("imperator sword",1); // 2393
+		items.put("将军配剑",1); // 2393
 		items.put("都灵之斧",1); // 4331
 		items.put("vulcano hammer",1); // 4474
-		items.put("xeno sword",1); // 1347
+		items.put("异界之剑",1); // 1347
 		items.put("黑镰刀",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
 		items.put("混沌匕首",1); // 1691
 		items.put("black sword",1); // 6285

@@ -72,13 +72,13 @@ public class LifeguardNPC implements ZoneConfigurator {
 				requiredResources.put("小治疗剂", 1);
 
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("pamela_mix_cream",
-						"mix", "suntan cream", requiredResources, 10 * 60);
+						"mix", "防晒油", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, mixerBehaviour, "Hallo!");
 
 				addReply(
-				        Arrays.asList("suntan", "cream", "suntan cream"),
-				        "David's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.");
+				        Arrays.asList("suntan", "cream", "防晒油"),
+				        "David's and mine 防晒油 is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special 防晒油 for you.");
 
 				addReply("海芋", "海芋 is a herb which is growing around 塞门镇.");
 
@@ -86,7 +86,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				        "科科达",
 				        "We can't find the 科科达 herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
 
-				addReply("小治疗剂", "It's a small bottle full of 治疗济. You can buy it at several places.");
+				addReply("小治疗剂", "It's a small bottle full of 治疗剂. You can buy it at several places.");
 			}
 		};
 

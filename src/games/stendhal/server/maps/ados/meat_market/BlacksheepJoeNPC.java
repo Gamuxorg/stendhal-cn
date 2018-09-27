@@ -56,7 +56,7 @@ public class BlacksheepJoeNPC implements ZoneConfigurator {
 		@Override
 		protected void createDialog() {
 			addJob("I supply 起司香肠s for the whole world.");
-			addHelp("I only #make 起司香肠s. My brothers here make 香肠 and canned tuna.");
+			addHelp("I only #make 起司香肠s. My brothers here make 香肠 and 金枪鱼罐头.");
 			addOffer("Just check the blackboard in the back, I will #make you some 起司香肠s.");
 			addQuest("I don't need any help right now. Thanks.");
 			addGoodbye("Good bye. Tell all your friends about us.");
@@ -64,8 +64,8 @@ public class BlacksheepJoeNPC implements ZoneConfigurator {
 			// Blacksheep Joe creates you some 起司香肠s
 			// (uses sorted TreeMap instead of HashMap)
 			final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-			requiredResources.put("vampirette entrails", Integer.valueOf(1));
-			requiredResources.put("bat entrails", Integer.valueOf(1));
+			requiredResources.put("吸血鬼内脏", Integer.valueOf(1));
+			requiredResources.put("蝙蝠内脏", Integer.valueOf(1));
 			requiredResources.put("鸡腿", Integer.valueOf(1));
 			requiredResources.put("黑珍珠", Integer.valueOf(1));
 			requiredResources.put("干酪", Integer.valueOf(1));

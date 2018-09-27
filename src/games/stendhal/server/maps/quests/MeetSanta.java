@@ -50,7 +50,7 @@ import games.stendhal.server.entity.player.Player;
  * STEPS: <ul><li> Find Santa <li>Say hi <li> Get reward <li> Get hat</ul>
  *
  * REWARD: <ul><li> a stocking which can be opened to obtain a random good reward: food,
- * money, 治疗济s, items, etc... </ul>
+ * money, 治疗剂s, items, etc... </ul>
  *
  * REPETITIONS:None
  */

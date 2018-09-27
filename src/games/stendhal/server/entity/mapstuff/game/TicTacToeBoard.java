@@ -36,14 +36,14 @@ public class TicTacToeBoard extends GameBoard implements TokenMoveListener<Board
 		super(3, 3);
 		put("class", "tictactoe");
 		board = new BoardToken[3][3];
-		tokenTypes = Arrays.asList("x board token", "o board token");
+		tokenTypes = Arrays.asList("十字游戏币", "圆形游戏币");
 		setDescription("这是 Tic Tac Toe 的游戏面板");
 	}
 
 	public void addToWorld() {
 		for (int i = 0; i < 5; i++) {
-			addTokenToWorld("x board token", getX() - 2, getY() + 1);
-			addTokenToWorld("o board token", getX() + (int) getWidth() + 1, getY() + 1);
+			addTokenToWorld("十字游戏币", getX() - 2, getY() + 1);
+			addTokenToWorld("圆形游戏币", getX() + (int) getWidth() + 1, getY() + 1);
 		}
 	}
 

@@ -139,7 +139,7 @@ public class BalanceRPGame {
 		final Item shield = em.getItem("wooden shield");
 		final Item armor = em.getItem("dress");
 		final Item helmet = em.getItem("leather helmet");
-		final Item legs = em.getItem("leather legs");
+		final Item legs = em.getItem("皮裤");
 		final Item boots = em.getItem("leather boots");
 
 		player = (Player) new PlayerTransformer().transform(new RPObject());

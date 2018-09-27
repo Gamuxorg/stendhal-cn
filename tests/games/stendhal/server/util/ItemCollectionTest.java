@@ -55,9 +55,9 @@ public class ItemCollectionTest {
         assertTrue(coll.removeItem("火腿", 3));
         assertEquals("", coll.toStringForQuestState());
 
-        coll.addItem("shadow legs", 1);
-        assertEquals("shadow legs=1",coll.toStringForQuestState());
-        assertTrue(coll.removeItem("shadow legs",1));
+        coll.addItem("影子护腿", 1);
+        assertEquals("影子护腿=1",coll.toStringForQuestState());
+        assertTrue(coll.removeItem("影子护腿",1));
         assertEquals("", coll.toStringForQuestState());
 	}
 
@@ -65,9 +65,9 @@ public class ItemCollectionTest {
 	public void testAddFromQuestStateString() {
 		final ItemCollection coll = new ItemCollection();
 		assertEquals("", coll.toStringForQuestState());
-		coll.addFromQuestStateString("cheese=6;ham=3;shadow legs=1");
-		assertEquals("cheese=6;ham=3;shadow legs=1", coll.toStringForQuestState());
-		assertTrue(coll.removeItem("shadow legs",1));
+		coll.addFromQuestStateString("cheese=6;ham=3;影子护腿=1");
+		assertEquals("cheese=6;ham=3;影子护腿=1", coll.toStringForQuestState());
+		assertTrue(coll.removeItem("影子护腿",1));
 		assertEquals("cheese=6;ham=3", coll.toStringForQuestState());
 	}
 

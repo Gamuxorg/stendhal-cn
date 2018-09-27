@@ -78,33 +78,33 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 				add(ConversationStates.ATTENDING,
 						Arrays.asList("加强狮盾", "shields", "shield"),
 						ConversationStates.INFORMATION_1,
-					    "I can turn a 钢盾 into an 加强狮盾 with iron, but I need eight pieces of iron and the shield to do that. Do you want an 加强狮盾?",
+					    "I can turn a 钢盾 into an 加强狮盾 with 铁锭, but I need eight pieces of 铁锭 and the shield to do that. Do you want an 加强狮盾?",
 					    null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
-								new NotCondition(new PlayerHasItemWithHimCondition("iron", 8)),
+								new NotCondition(new PlayerHasItemWithHimCondition("铁锭", 8)),
 								new PlayerHasItemWithHimCondition("钢盾", 1)),
 						ConversationStates.ATTENDING,
-						"You don't have enough Iron, I will need 8 iron bars and a 钢盾.",
+						"You don't have enough 铁锭, I will need 8 铁锭s and a 钢盾.",
 						null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
 								new NotCondition(new PlayerHasItemWithHimCondition("钢盾", 1)),
-								new PlayerHasItemWithHimCondition("iron", 8)),
+								new PlayerHasItemWithHimCondition("铁锭", 8)),
 						ConversationStates.ATTENDING,
-						"You do not have a shield for me to enhance, I will need 8 iron bars and a 钢盾.",
+						"You do not have a shield for me to enhance, I will need 8 铁锭s and a 钢盾.",
 						null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
-								new PlayerHasItemWithHimCondition("iron", 8),
+								new PlayerHasItemWithHimCondition("铁锭", 8),
 								new PlayerHasItemWithHimCondition("钢盾", 1)),
 						ConversationStates.ATTENDING,
 						"There is your 加强狮盾.",
 						new MultipleActions(
-							new DropItemAction("iron", 8),
+							new DropItemAction("铁锭", 8),
 							new DropItemAction("钢盾", 1),
 							new EquipItemAction("加强狮盾", 1, true),
 							new IncreaseXPAction(250)));

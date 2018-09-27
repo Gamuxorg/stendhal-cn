@@ -101,7 +101,7 @@ public class StendhalRPActionTest {
 
 		// weak player, strong monster
 		player.setLevel(0);
-		victim = SingletonRepository.getEntityManager().getCreature("dark angel");
+		victim = SingletonRepository.getEntityManager().getCreature("黑暗天使");
 		zone.add(victim);
 		StendhalRPAction.startAttack(player, victim);
 		assertSame(player.getAttackTarget(), victim);

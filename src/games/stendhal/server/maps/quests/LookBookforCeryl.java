@@ -174,7 +174,7 @@ public class LookBookforCeryl extends AbstractQuest {
 			"book",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Sssh! I'm concentrating on this 治疗济 recipe... it's a tricky one.",
+			"Sssh! I'm concentrating on this 治疗剂 recipe... it's a tricky one.",
 			null);
 	}
 

@@ -72,7 +72,7 @@ public class KillBlordroughsTest {
 		PlayerTestHelper.equipWithItem(player, "golden blade");
 		PlayerTestHelper.equipWithItem(player, "mithril cloak");
 		PlayerTestHelper.equipWithItem(player, "mithril boots");
-		PlayerTestHelper.equipWithItem(player, "mithril legs");
+		PlayerTestHelper.equipWithItem(player, "密银护腿");
 		PlayerTestHelper.equipWithItem(player, "mithril armor");
 		PlayerTestHelper.equipWithItem(player, "黑头盔");
 		PlayerTestHelper.equipWithItem(player, "money");

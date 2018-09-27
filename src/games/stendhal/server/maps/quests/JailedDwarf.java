@@ -39,7 +39,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> You see Hunel locked in the cell. </li>
- * <li> Gget the key by killing the duergar king. </li>
+ * <li> Gget the key by killing the 杜加王. </li>
  * <li> Speak to Hunel when you have the key. </li>
  * <li> Hunel wants to stay in, he is afraid. </li>
  * <li> You can then sell chaos equipment to Hunel. </li>
@@ -80,7 +80,7 @@ public class JailedDwarf extends AbstractQuest {
 						new QuestNotCompletedCondition(QUEST_SLOT),
 						new NotCondition(new PlayerHasItemWithHimCondition("卡梅伦监狱钥匙"))),
 				ConversationStates.IDLE,
-				"Help! The duergars have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.",
+				"Help! The 杜加矮人s have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -98,7 +98,7 @@ public class JailedDwarf extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Jailed Dwarf",
-				"Down in 卡梅伦 is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but duergars have raided the prison. He might need some armor to survive once out of it.",
+				"Down in 卡梅伦 is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but 杜加矮人s have raided the prison. He might need some armor to survive once out of it.",
 				true);
 		step_1();
 	}
@@ -111,7 +111,7 @@ public class JailedDwarf extends AbstractQuest {
 			}
 			res.add("I need to get a key to unlock Hunel.");
 			if (isCompleted(player)) {
-				res.add("I killed the Duergar King and got the key to unlock Hunel. But now he's too afraid to leave, wanting to buy more and more armor before he feels safe. Poor Hunel.");
+				res.add("I killed the 杜加王 and got the key to unlock Hunel. But now he's too afraid to leave, wanting to buy more and more armor before he feels safe. Poor Hunel.");
 			}
 			return res;
 	}

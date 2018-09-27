@@ -20,13 +20,13 @@ public class BarbarianRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("barbarian", 30);
+		attackArmy.put("蛮人", 30);
 		attackArmy.put("蛮族人狼", 15);
 		attackArmy.put("蛮族精英", 12);
 		attackArmy.put("蛮族牧师", 7);
 		attackArmy.put("野蛮夏曼人", 5);
 		attackArmy.put("蛮族首领", 3);
-		attackArmy.put("野蛮人王", 1);
+		attackArmy.put("蛮人王", 1);
 
 		return attackArmy;
 	}

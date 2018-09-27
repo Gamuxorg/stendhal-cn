@@ -92,14 +92,14 @@ public class HousePortalTest {
 		assertFalse(portal.isAllowed(player));
 
 		// wrong key. should not be allowed in
-		key = SingletonRepository.getEntityManager().getItem("house key");
+		key = SingletonRepository.getEntityManager().getItem("房间钥匙");
 		player.equipToInventoryOnly(key);
 		assertFalse(portal.isAllowed(player));
 
 		// add a new key with the right qualities
 		// adding a new one on purpose rather than changing the old one
 		// to ensure that a wrong key is not enough to deny entrance
-		key = SingletonRepository.getEntityManager().getItem("house key");
+		key = SingletonRepository.getEntityManager().getItem("房间钥匙");
 		((HouseKey) key).setup("henhouse", 0, null);
 		player.equipToInventoryOnly(key);
 		assertTrue(portal.isAllowed(player));

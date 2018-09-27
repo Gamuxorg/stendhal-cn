@@ -80,7 +80,7 @@ public class JailedBarbNPC implements ZoneConfigurator {
 		JailedBarbNPC.setPosition(11, 12);
 		JailedBarbNPC.setCollisionAction(CollisionAction.STOP);
 		JailedBarbNPC.initHP(100);
-		JailedBarbNPC.setDescription("You see the jailed Barbarian Lorenz. What did he do to the Amazonesses?");
+		JailedBarbNPC.setDescription("You see the jailed 蛮人 Lorenz. What did he do to the Amazonesses?");
 		zone.add(JailedBarbNPC);
 	}
 }

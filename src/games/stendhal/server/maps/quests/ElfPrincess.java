@@ -74,7 +74,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>5000 XP</li>
- * <li>Some gold bars, random between 5,10,15,20,25,30.</li>
+ * <li>Some 金条s, random between 5,10,15,20,25,30.</li>
  * <li>Karma: 15</li>
  * </ul>
  *
@@ -240,14 +240,14 @@ public class ElfPrincess extends AbstractQuest {
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				//add random number of goldbars
 				final StackableItem goldbars = (StackableItem) SingletonRepository.getEntityManager()
-						.getItem("gold bar");
+						.getItem("金条");
 				int goldamount;
 				goldamount = 5 * Rand.roll1D6();
 				goldbars.setQuantity(goldamount);
 				// goldbars.setBoundTo(player.getName()); <- not sure
 				// if these should get bound or not.
 				player.equipOrPutOnGround(goldbars);
-				npc.say("Thank you! Take these " + Integer.toString(goldamount) + " gold bars, I have plenty. And, listen: If you'd ever like to get me another, be sure to ask me first. 罗斯莉 is superstitious, she won't give the bloom unless she senses you need it.");
+				npc.say("Thank you! Take these " + Integer.toString(goldamount) + " 金条s, I have plenty. And, listen: If you'd ever like to get me another, be sure to ask me first. 罗斯莉 is superstitious, she won't give the bloom unless she senses you need it.");
 			}
 		};
 		npc.add(ConversationStates.ATTENDING,
@@ -302,7 +302,7 @@ public class ElfPrincess extends AbstractQuest {
 			res.add("I found 罗斯莉 and got the flower to take Princess Tywysoga.");
 		}
         if (isRepeatable(player)) {
-            res.add("I took the flower to the Princess and she gave me gold bars. If I want to make her happy again, I can ask her for another task.");
+            res.add("I took the flower to the Princess and she gave me 金条s. If I want to make her happy again, I can ask her for another task.");
         }
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {

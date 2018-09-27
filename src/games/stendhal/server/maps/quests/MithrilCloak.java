@@ -31,7 +31,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * PARTICIPANTS:
  * <ul>
  * <li>Ida, a seamstress in Ados.</li>
- * <li>Imperial scientists, in kalavan basement</li>
+ * <li>帝国科学家s, in kalavan basement</li>
  * <li>Mithrilbourgh wizards, in kirdneh and magic city</li>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
@@ -47,9 +47,9 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
  * <li>Once machine fixed and if you have done 密银盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
- * <li>Imperial scientists take silk glands and make silk thread</li>
- * <li>Kampusch fuses mithril nuggets into the silk thread</li>
- * <li>Whiggins weaves mithril thread into mithril fabric</li>
+ * <li>帝国科学家s take 蜘蛛丝腺s and make 丝线</li>
+ * <li>Kampusch fuses 密银矿石s into the 丝线</li>
+ * <li>Whiggins weaves 密银线 into 密银布</li>
  * <li>Ida takes fabric then asks for scissors</li>
  * <li>Hogart makes the scissors which need eggshells</li>
  * <li>Terry swaps eggshells for poisons</li>
@@ -136,7 +136,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("fixed_machine")) {
 			return res;
 		}
-		res.add("我的斗蓬还需要密银丝线 mithril fabric, Kampusch 会帮我弄到, 他知道我需要的东西. ");
+		res.add("我的斗蓬还需要密银丝线 密银布, Kampusch 会帮我弄到, 他知道我需要的东西. ");
 		if (questState.equals("need_fabric")) {
 			return res;
 		}
@@ -166,12 +166,12 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("took_letter")) {
 			return res;
 		}
-		res.add("Whiggins 为我的斗蓬正在编织 mithril fabric!.");
+		res.add("Whiggins 为我的斗蓬正在编织 密银布!.");
 		if (questState.startsWith("weavingfabric;")) {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("我从 Whiggins 那里拿到了 mithril fabric, 然后我要带着它去见Ida. ");
+		res.add("我从 Whiggins 那里拿到了 密银布, 然后我要带着它去见Ida. ");
 		if (questState.equals("got_fabric")) {
 			return res;
 		}
@@ -179,7 +179,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("need_scissors")) {
 			return res;
 		}
-		res.add("Hogart 需要我带给他一块铁块 iron bar, 一块密银块 amithril bar, 和一点魔法蛋壳 附魔蛋壳.");
+		res.add("Hogart 需要我带给他一块铁块 铁锭, 一块密银块 a密银锭, 和一点魔法蛋壳 附魔蛋壳.");
 		if (questState.startsWith("need_eggshells;")) {
 			// the quest slot knows how many eggshells were needed.
 			return res;
@@ -189,7 +189,7 @@ public class MithrilCloak extends AbstractQuest {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("我应该把魔法剪刀 magical scissors带给 Ida.");
+		res.add("我应该把魔法剪刀 魔法剪刀带给 Ida.");
 		if (questState.equals("got_scissors")) {
 			return res;
 		}

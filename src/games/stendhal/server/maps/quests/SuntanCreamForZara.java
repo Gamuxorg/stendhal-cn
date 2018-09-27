@@ -41,17 +41,17 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Suntan Cream for Zara
+ * QUEST: 防晒油 for Zara
  * <p>
  * PARTICIPANTS:
  * <li> Zara, a woman at the Athos beach
  * <li> David or Pam, the lifeguards.
  * <p>
  * STEPS:
- * <li> Zara asks you to bring her some suntan cream from the lifeguards.
+ * <li> Zara asks you to bring her some 防晒油 from the lifeguards.
  * <li> Pam or David want to have some ingredients. After you brought it to them
  * they mix a cream.
- * <li> Zara sees your suntan cream and asks for it and then thanks you.
+ * <li> Zara sees your 防晒油 and asks for it and then thanks you.
  * <p>
  * REWARD:
  * <li> 1000 XP
@@ -82,14 +82,14 @@ public class SuntanCreamForZara extends AbstractQuest {
 			res.add("I do not want to help Zara. She can burn.");
 		}
 		if (questState.equals("start") ||  questState.equals("done")) {
-			res.add("I want to help Zara soothe her skin. I need to get suntan cream from the lifeguards.");
+			res.add("I want to help Zara soothe her skin. I need to get 防晒油 from the lifeguards.");
 		}
-		if (player.isEquipped("suntan cream") && questState.equals("start")
+		if (player.isEquipped("防晒油") && questState.equals("start")
 				|| questState.equals("done")) {
-			res.add("I got the suntan cream.");
+			res.add("I got the 防晒油.");
 		}
 		if (questState.equals("done")) {
-			res.add("I took the suntan cream to Zara and she let me have a key to her house in 阿多斯城 North. She says it is the one at the far end of the lower row.");
+			res.add("I took the 防晒油 to Zara and she let me have a key to her house in 阿多斯城 North. She says it is the one at the far end of the lower row.");
 		}
 		return res;
 	}
@@ -101,7 +101,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"I don't have a new task for you. But thank you for the suntan cream. I feel my skin is getting better already!",
+			"I don't have a new task for you. But thank you for the 防晒油. I feel my skin is getting better already!",
 			null);
 
 		zara.add(ConversationStates.ATTENDING,
@@ -109,21 +109,21 @@ public class SuntanCreamForZara extends AbstractQuest {
 				new QuestInStateCondition(QUEST_SLOT, "rejected"),
 				ConversationStates.QUEST_OFFERED,
 				"You refused to help me last time and my skin is getting worse. "
-				+ "Please can you bring me the magic #'suntan cream' that the #lifeguards produce?",
+				+ "Please can you bring me the magic #'防晒油' that the #lifeguards produce?",
 				null);
 
 		zara.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Did you forget that you promised me to ask the #lifeguards for #'suntan cream'?",
+				"Did you forget that you promised me to ask the #lifeguards for #'防晒油'?",
 				null);
 
 		zara.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestNotStartedCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
 				ConversationStates.QUEST_OFFERED,
-				"I fell asleep in the sun and now my skin is burnt. Can you bring me the magic #'suntan cream' that the #lifeguards produce?",
+				"I fell asleep in the sun and now my skin is burnt. Can you bring me the magic #'防晒油' that the #lifeguards produce?",
 				null);
 
 		zara.add(ConversationStates.QUEST_OFFERED,
@@ -140,7 +140,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 
 		zara.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("suntan cream", "suntan", "cream"),
+			Arrays.asList("防晒油", "suntan", "cream"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"The #lifeguards make a great cream to protect from the sun and to heal sunburns at the same time. Now, will you get it for me?",
@@ -155,7 +155,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 			null);
 
 		zara.addReply(
-			Arrays.asList("suntan cream", "suntan", "cream"),
+			Arrays.asList("防晒油", "suntan", "cream"),
 			"The #lifeguards make a great cream to protect from the sun and to heal sunburns at the same time.");
 
 		zara.addReply(
@@ -171,23 +171,23 @@ public class SuntanCreamForZara extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(zara.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "start"),
-					new PlayerHasItemWithHimCondition("suntan cream")),
+					new PlayerHasItemWithHimCondition("防晒油")),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Great! You got the suntan cream! Is it for me?",
+			"Great! You got the 防晒油! Is it for me?",
 			null);
 
 		zara.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(zara.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new NotCondition(new PlayerHasItemWithHimCondition("suntan cream"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("防晒油"))),
 				ConversationStates.ATTENDING,
-				"I know that the #'suntan cream' is hard to get, but I hope that you didn't forget my painful problem...",
+				"I know that the #'防晒油' is hard to get, but I hope that you didn't forget my painful problem...",
 				null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("suntan cream"));
-		reward.add(new EquipItemAction("small key", 1, true));
+		reward.add(new DropItemAction("防晒油"));
+		reward.add(new EquipItemAction("小钥匙", 1, true));
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(15));
@@ -197,7 +197,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			// make sure the player isn't cheating by putting the
 			// cream away and then saying "yes"
-			new PlayerHasItemWithHimCondition("suntan cream"),
+			new PlayerHasItemWithHimCondition("防晒油"),
 			ConversationStates.ATTENDING,
 			"Thank you! I feel much better immediately! Here, take this key to my row house in Ados. Feel at home as long as I'm still here!",
 			new MultipleActions(reward));
@@ -212,7 +212,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Suntan Cream For Zara",
+				"防晒油 For Zara",
 				"Zara is burning under the hot Athor sun.",
 				false);
 		createRequestingStep();

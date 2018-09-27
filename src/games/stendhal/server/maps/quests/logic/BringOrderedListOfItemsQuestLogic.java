@@ -78,7 +78,7 @@ public class BringOrderedListOfItemsQuestLogic {
 
 	/**
 	 * Gets a list of items that still need to be brought. Each item is prefixed
-	 * by the quantity still needed. An example list element: "5 iron bars". For
+	 * by the quantity still needed. An example list element: "5 铁锭s". For
 	 * a sentence that groups the list items, see
 	 * {@link #itemsStillNeeded(Player)}.
 	 *

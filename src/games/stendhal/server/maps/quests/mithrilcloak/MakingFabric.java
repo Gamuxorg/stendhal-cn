@@ -75,11 +75,11 @@ class MakingFabric {
 	private void makeThreadStep() {
     	final SpeakerNPC npc = npcs.get("Vincento Price");
 
-		npc.addReply("silk", "Keep this quiet, ok? I'll spin silk thread from the silk glands of a 巨型蜘蛛. Just ask me to #make it.");
-		npc.addReply("silk gland", "Like I said, they come from 巨型蜘蛛.");
+		npc.addReply("silk", "Keep this quiet, ok? I'll spin 丝线 from the 蜘蛛丝腺s of a 巨型蜘蛛. Just ask me to #make it.");
+		npc.addReply("蜘蛛丝腺", "Like I said, they come from 巨型蜘蛛.");
 
 		final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-		requiredResources.put("silk gland", Integer.valueOf(1));
+		requiredResources.put("蜘蛛丝腺", Integer.valueOf(1));
 
 
 		// we want to add something to the beginning of quest slot so override classes using it.
@@ -162,7 +162,7 @@ class MakingFabric {
 			}
 		}
 
-		final ProducerBehaviour behaviour = new SpecialProducerBehaviour("make", "silk thread",
+		final ProducerBehaviour behaviour = new SpecialProducerBehaviour("make", "丝线",
 																		 requiredResources, REQUIRED_MINUTES_THREAD * MathHelper.SECONDS_IN_ONE_MINUTE);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -284,10 +284,10 @@ class MakingFabric {
 							npc.say("Haaaa heee woooo hoo!");
 						} else {
 							npc.say("The boss gave me these "
-									+ numberOfProductItems + "silk thread"
+									+ numberOfProductItems + "丝线"
 									+ ". Price gets his students to do his dirty work for him.");
 							final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(
-																														  "silk thread");
+																														  "丝线");
 
 							player.addXP(100);
 							products.setQuantity(numberOfProductItems);
@@ -313,10 +313,10 @@ class MakingFabric {
 	private void makeMithrilThreadStep() {
 		final SpeakerNPC npc = npcs.get("Kampusch");
 
-		npc.addReply("气球", "Ah! They are dropped by the charming little baby angels who dwell in Kikareukin Islands. I want one for my daughter.");
-		npc.addReply("silk thread", "That is from the silk glands of 巨型蜘蛛. You need 40 spools of silk thread to make something as large as a cloak, say.");
-		npc.addReply("silk", "That is from the silk glands of 巨型蜘蛛.");
-		npc.addReply("mithril nuggets", "You can find them for yourself.");
+		npc.addReply("气球", "Ah! They are dropped by the charming little 小天使s who dwell in Kikareukin Islands. I want one for my daughter.");
+		npc.addReply("丝线", "That is from the 蜘蛛丝腺s of 巨型蜘蛛. You need 40 spools of 丝线 to make something as large as a cloak, say.");
+		npc.addReply("silk", "That is from the 蜘蛛丝腺s of 巨型蜘蛛.");
+		npc.addReply("密银矿石s", "You can find them for yourself.");
 		npc.addReply("Whiggins", "Find the wizard Whiggins inside his house in the magic city.");
 		npc.addReply("scientists", "I hear of experiments deep in Kalavan Castle. The scientists are a crazy bunch, but look for the lead researcher, Vincento Price, he may be sane enough to help you.");
 
@@ -332,20 +332,20 @@ class MakingFabric {
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-					if (player.isEquipped("silk thread", 40)
-						&& player.isEquipped("mithril nugget", 7)
+					if (player.isEquipped("丝线", 40)
+						&& player.isEquipped("密银矿石", 7)
 						&& player.isEquipped("气球")) {
-						player.drop("silk thread", 40);
-					    player.drop("mithril nugget", 7);
+						player.drop("丝线", 40);
+					    player.drop("密银矿石", 7);
 						player.drop("气球");
 						final long timeNow = new Date().getTime();
 						player.setQuest(mithrilcloak.getQuestSlot(), "fusingthread;" + timeNow);
-						npc.say("I will fuse 40 mithril thread for you. Please come back in "
+						npc.say("I will fuse 40 密银线 for you. Please come back in "
 								+ TimeUtil.approxTimeUntil((int) (REQUIRED_HOURS_MITHRIL_THREAD * MathHelper.MILLISECONDS_IN_ONE_HOUR / 1000L))
 								+ ".");
 						player.notifyWorldAboutChanges();
 					} else {
-						npc.say("For 40 spools of mithril thread to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #气球.");
+						npc.say("For 40 spools of 密银线 to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #气球.");
 					}
 				}
 			});
@@ -364,18 +364,18 @@ class MakingFabric {
 						final long timeRemaining = (Long.parseLong(order[1]) + delay)
 							- System.currentTimeMillis();
 						if (timeRemaining > 0L) {
-							npc.say("Welcome. I'm still working on your request to fuse mithril thread"
+							npc.say("Welcome. I'm still working on your request to fuse 密银线"
 									+ " for you. Come back in "
 									+ TimeUtil.approxTimeUntil((int) (timeRemaining / 1000L)) + ".");
 						} else {
 							final StackableItem products = (StackableItem) SingletonRepository.
-										getEntityManager().getItem("mithril thread");
+										getEntityManager().getItem("密银线");
 
 							products.setQuantity(40);
 
 							products.setBoundTo(player.getName());
 							player.equipOrPutOnGround(products);
-							npc.say("Hello again. The magic is completed. Here you have your 40 spools of mithril thread. Now, you must go to #Whiggins to get the #fabric made.");
+							npc.say("Hello again. The magic is completed. Here you have your 40 spools of 密银线. Now, you must go to #Whiggins to get the #fabric made.");
 							player.setQuest(mithrilcloak.getQuestSlot(), "got_mithril_thread");
 							// give some XP as a little bonus for industrious workers
 							player.addXP(100);
@@ -390,7 +390,7 @@ class MakingFabric {
 				ConversationStates.ATTENDING,
 				"fuse",
 				new NotCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_thread")),
-				ConversationStates.ATTENDING, "I can only create mithril thread when you have got some silk #thread. And remember, I will know if you really need the magic performed or not.", null);
+				ConversationStates.ATTENDING, "I can only create 密银线 when you have got some silk #thread. And remember, I will know if you really need the magic performed or not.", null);
 
 		// player returns and hasn't got thread yet/got thread already and
 		npc.add(ConversationStates.IDLE,
@@ -420,7 +420,7 @@ class MakingFabric {
 
 		// player asks about fabric/quest
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "密银布", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 				ConversationStates.QUEST_OFFERED,
 				"I would love to weave you some fabric but I'm afraid my mind is full of other things. I have offended a fellow wizard. I was up all night writing him an apology letter, but I have no-one to deliver it to him. Unless ... that is ... would YOU deliver this letter for me?",
@@ -446,23 +446,23 @@ class MakingFabric {
 
 		// player returns without having taking letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest", "letter", "笔记"),
+				Arrays.asList("weave", "fabric", "magical", "密银布", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest", "letter", "笔记"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
 				ConversationStates.ATTENDING,
 				"Please don't forget to take that letter to Pedinghaus. It means a lot to me.", null);
 
 		// player returns having taking letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak",
+				Arrays.asList("weave", "fabric", "magical", "密银布", "ida", "mithril", "cloak",
 							  "密银斗篷", "pedinghaus", "regards", "forgiven", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "took_letter"),
 				ConversationStates.SERVICE_OFFERED,
-				"Thank you so much for taking that letter! Now, do you have the 40 spools of mithril thread "
+				"Thank you so much for taking that letter! Now, do you have the 40 spools of 密银线 "
 				+ "so that I may weave you a couple yards of fabric?", null);
 
 		// player's quest state is in nothing to do with the letter, thread or weaving.
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "密银布", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest"),
 				new NotCondition(
 								 new OrCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 												 new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
@@ -485,15 +485,15 @@ class MakingFabric {
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-					if (player.isEquipped("mithril thread", 40)) {
+					if (player.isEquipped("密银线", 40)) {
 
-							player.drop("mithril thread", 40);
+							player.drop("密银线", 40);
 							npc.say("Lovely. In "
 									   + REQUIRED_HOURS_FABRIC + " hours your fabric will be ready.");
 							player.setQuest(mithrilcloak.getQuestSlot(), "weavingfabric;" + System.currentTimeMillis());
 							player.notifyWorldAboutChanges();
 						} else {
-							npc.say("You don't appear to have 40 spools of mithril thread with you. Sorry, I can't do anything without it.");
+							npc.say("You don't appear to have 40 spools of 密银线 with you. Sorry, I can't do anything without it.");
 						}
 				}
 			});
@@ -509,7 +509,7 @@ class MakingFabric {
 
 		// player returns while fabric is still being woven, or is ready
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
+			Arrays.asList("weave", "fabric", "magical", "密银布", "ida", "mithril", "cloak", "密银斗篷", "task", "quest"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "weavingfabric;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override

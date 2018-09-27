@@ -96,7 +96,7 @@
     <drops>
       <item value="大治疗剂" quantity="[1,1]" probability="30.0"/>
       <item value="money" quantity="[10,70]" probability="100.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="0.5"/>
+      <item value="影子护腿" quantity="[1,1]" probability="0.5"/>
       <item value="影盾" quantity="[1,1]" probability="0.05"/>
       <item value="暗之匕首" quantity="[1,1]" probability="0.050"/>
     </drops>
@@ -196,7 +196,7 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="金盾" quantity="[1,1]" probability="0.5"/>
-      <item value="soul dagger" quantity="[1,1]" probability="0.0050"/>
+      <item value="灵魂匕首" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
     </equips>
@@ -229,7 +229,7 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.5"/>
       <item value="金盾" quantity="[1,1]" probability="1.5"/>
-      <item value="soul dagger" quantity="[1,1]" probability="0.0080"/>
+      <item value="灵魂匕首" quantity="[1,1]" probability="0.0080"/>
     </drops>
     <equips>
     </equips>
@@ -261,7 +261,7 @@
       <item value="影盾" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="2.0"/>
       <item value="黑盾" quantity="[1,1]" probability="0.0010"/>
-      <item value="soul dagger" quantity="[1,1]" probability="0.020"/>
+      <item value="灵魂匕首" quantity="[1,1]" probability="0.020"/>
     </drops>
     <equips>
     </equips>
@@ -298,7 +298,7 @@
       <item value="影子靴子" quantity="[1,1]" probability="1.5"/>
       <item value="shadow helmet" quantity="[1,1]" probability="0.35"/>
       <item value="烈火剑" quantity="[1,1]" probability="0.5"/>
-      <item value="night dagger" quantity="[1,1]" probability="1.0"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -329,7 +329,7 @@
       <item value="money" quantity="[500,4000]" probability="100.0"/>
       <item value="奇妙斗篷" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙头盔" quantity="[1,1]" probability="2.0"/>
-      <item value="mainio legs" quantity="[1,1]" probability="2.5"/>
+      <item value="奇妙裤子" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙靴子" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙之盾" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙甲" quantity="[1,1]" probability="1.0"/>
@@ -441,7 +441,7 @@
       <item value="护肩皮胸甲" quantity="[1,1]" probability="10.0"/>
       <item value="权杖" quantity="[1,1]" probability="1.0"/>
       <item value="木盾" quantity="[1,1]" probability="0.5"/>
-      <item value="studded legs" quantity="[1,1]" probability="1.0"/>
+      <item value="镶嵌护腿" quantity="[1,1]" probability="1.0"/>
       <item value="dagger" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -550,7 +550,7 @@
       <item value="money" quantity="[3,10]" probability="90.0"/>
       <item value="权杖" quantity="[1,1]" probability="5.0"/>
       <item value="骷髅盾" quantity="[1,1]" probability="3.0"/> 
-      <item value="studded legs" quantity="[1,1]" probability="10.0"/>
+      <item value="镶嵌护腿" quantity="[1,1]" probability="10.0"/>
       <item value="dagger" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>
@@ -746,9 +746,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,40]" probability="100.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="0.3"/>
-      <item value="scimitar" quantity="[1,1]" probability="2.0"/>
-      <item value="orc sword" quantity="[1,1]" probability="2.0"/>
+      <item value="影子护腿" quantity="[1,1]" probability="0.3"/>
+      <item value="半月弯刀" quantity="[1,1]" probability="2.0"/>
+      <item value="兽人重剑" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
     </equips>
@@ -808,7 +808,7 @@
       <item value="强治疗剂" quantity="[2,4]" probability="50.0"/>
       <item value="money" quantity="[3000,10000]" probability="100.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="1.0"/>
-      <item value="black legs" quantity="[1,1]" probability="2.0"/>
+      <item value="黑护腿" quantity="[1,1]" probability="2.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="1.0"/>
       <item value="黑盾" quantity="[1,1]" probability="1.0"/>
       <item value="黑镰刀" quantity="[1,1]" probability="0.5"/>
@@ -852,7 +852,7 @@
     <corpse name="humanoid_3x2" width="3" height="2"/>
     <drops>
       <item value="强治疗剂" quantity="[5,20]" probability="80.0"/>
-      <item value="gold bar" quantity="[2,10]" probability="30.0"/>
+      <item value="金条" quantity="[2,10]" probability="30.0"/>
       <item value="money" quantity="[8000,40000]" probability="100.0"/>
       <item value="翡翠戒指" quantity="[1,1]" probability="2.0"/>
       <item value="黄金匕首" quantity="[1,1]" probability="0.5"/>
@@ -900,7 +900,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,30]" probability="75.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="大瓶抗毒药济" quantity="[1,2]" probability="50.0"/>
     </drops>
     <equips>
@@ -931,8 +931,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
-      <item value="vampirette entrails" quantity="[1,1]" probability="100.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
+      <item value="吸血鬼内脏" quantity="[1,1]" probability="100.0"/>
       <item value="吸血鬼斗篷" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
@@ -965,7 +965,7 @@
       <item value="money" quantity="[15,100]" probability="100.0"/>
       <item value="强治疗剂" quantity="[1,2]" probability="55.0"/>
       <item value="吸血鬼斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="vampire sword" quantity="[1,1]" probability="0.1"/>
+      <item value="吸血鬼之刃" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>

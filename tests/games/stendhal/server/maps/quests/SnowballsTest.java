@@ -75,7 +75,7 @@ public class SnowballsTest {
 		en.step(player, "favor");
 		assertEquals("I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some snowballs? I need twenty five of them.", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Fine. You can loot the snowballs from the ice golem in this cavern, but be careful there is something huge nearby! Come back when you get twenty five snowballs.", getReply(npc));
+		assertEquals("Fine. You can loot the snowballs from the 冰傀儡 in this cavern, but be careful there is something huge nearby! Come back when you get twenty five snowballs.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
@@ -147,7 +147,7 @@ public class SnowballsTest {
 		en.step(player, "favor");
 		assertEquals("I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some snowballs? I need twenty five of them.", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Fine. You can loot the snowballs from the ice golem in this cavern, but be careful there is something huge nearby! Come back when you get twenty five snowballs.", getReply(npc));
+		assertEquals("Fine. You can loot the snowballs from the 冰傀儡 in this cavern, but be careful there is something huge nearby! Come back when you get twenty five snowballs.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 	}

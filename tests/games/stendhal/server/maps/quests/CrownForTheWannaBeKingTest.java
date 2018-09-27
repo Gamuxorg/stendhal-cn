@@ -198,7 +198,7 @@ public class CrownForTheWannaBeKingTest {
 			assertThat(playerSays, npcEngine.getCurrentState(), is(ConversationStates.QUESTION_1));
 			assertThat(playerSays, bob.hasQuest(QUEST_SLOT), is(true));
 			assertEquals(
-					"I want my crown to be beautiful and shiny. I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'gold bars', an #黑曜石, and 3 #蓝宝石s."
+					"I want my crown to be beautiful and shiny. I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'金条s', an #黑曜石, and 3 #蓝宝石s."
 					+ " Do you have some of those now with you?",
 					getReply(npc));
 		}
@@ -270,7 +270,7 @@ public class CrownForTheWannaBeKingTest {
 		assertThat(
 				"items",
 				getReply(npc),
-				is("I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'gold bars', an #黑曜石, and 3 #蓝宝石s. Did you bring something?"));
+				is("I need 2 #carbuncles, 2 #钻石s, 4 #翡翠s, 2 #'金条s', an #黑曜石, and 3 #蓝宝石s. Did you bring something?"));
 	}
 
 	/**
@@ -297,7 +297,7 @@ public class CrownForTheWannaBeKingTest {
 	 */
 	@Test
 	public void testQuestion1ToQuestion1Itembrought() {
-		final String[] triggers = { "黑曜石", "钻石", "carbuncle", "蓝宝石", "翡翠", "gold bar" };
+		final String[] triggers = { "黑曜石", "钻石", "carbuncle", "蓝宝石", "翡翠", "金条" };
 
 		for (final String playerSays : triggers) {
 			final Player bob = PlayerTestHelper.createPlayer("bob");
@@ -366,10 +366,10 @@ public class CrownForTheWannaBeKingTest {
 		final Player bob = PlayerTestHelper.createPlayer("bob");
 		bob.setQuest(QUEST_SLOT, CrownForTheWannaBeKing.NEEDED_ITEMS);
 
-		// is("I need 2 #gold bar, 4 #翡翠, 3 #蓝宝石, 2 #carbuncle,
+		// is("I need 2 #金条, 4 #翡翠, 3 #蓝宝石, 2 #carbuncle,
 		// 2 #钻石, and 1 #黑曜石. Did you bring something?"));
 		final String[] triggers = { "黑曜石", "钻石", "钻石", "carbuncle", "carbuncle", "蓝宝石", "蓝宝石",
-				"蓝宝石", "翡翠", "翡翠", "翡翠", "翡翠", "gold bar" };
+				"蓝宝石", "翡翠", "翡翠", "翡翠", "翡翠", "金条" };
 		npcEngine.setCurrentState(ConversationStates.QUESTION_1);
 		for (final String playerSays : triggers) {
 			PlayerTestHelper.equipWithItem(bob, playerSays);
@@ -382,11 +382,11 @@ public class CrownForTheWannaBeKingTest {
 			assertThat(bob.getQuest(QUEST_SLOT), not((is(CrownForTheWannaBeKing.NEEDED_ITEMS))));
 		}
 
-		PlayerTestHelper.equipWithItem(bob, "gold bar");
+		PlayerTestHelper.equipWithItem(bob, "金条");
 		assertThat(bob.isQuestCompleted(QUEST_SLOT), is(false));
 		assertThat(bob.getQuest(QUEST_SLOT), not((is("reward"))));
 
-		npcEngine.step(bob, "gold bar");
+		npcEngine.step(bob, "金条");
 		assertEquals(
 				"You have served me well, my crown will be the mightiest of them all! Go to see Kendra Mattori in the Wizard City to get your #reward.",
 				getReply(npc));

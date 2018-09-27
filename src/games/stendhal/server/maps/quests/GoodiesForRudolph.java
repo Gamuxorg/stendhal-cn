@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  * <li>100 XP</li>
  * <li>50 gold</li>
  * <li>Karma: 60</li>
- * <li>snowglobe</li>
+ * <li>雪珠</li>
  * </ul>
  *
  * REPETITIONS:
@@ -194,7 +194,7 @@ public class GoodiesForRudolph extends AbstractQuest {
         reward.add(new DropItemAction("胡萝卜", 10));
         reward.add(new DropItemAction("苹果", 10));
 		reward.add(new EquipItemAction("money", 50));
-		reward.add(new EquipItemAction("snowglobe"));
+		reward.add(new EquipItemAction("雪珠"));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(60));

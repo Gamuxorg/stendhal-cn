@@ -64,7 +64,7 @@ public class ElvishArmorTest {
 	private static final String QUEST_SLOT = "elvish_armor";
 
 	private static final List<String> NEEDEDITEMS = Arrays.asList(
-			"elvish armor", "elvish legs", "elvish boots", "elvish sword",
+			"elvish armor", "精灵护腿", "elvish boots", "elvish sword",
 			"elvish cloak", "elvish shield");
 
 	private static SpeakerNPC npc;

@@ -20,7 +20,7 @@
     <corpse name="animal_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[2000,10000]" probability="80.0"/>
-      <item value="silk gland" quantity="[1,3]" probability="20.0"/>
+      <item value="蜘蛛丝腺" quantity="[1,3]" probability="20.0"/>
       <item value="剧毒" quantity="[1,2]" probability="10.0"/>
       <item value="medicinal ring" quantity="[1,1]" probability="1.0" />
     </drops>
@@ -56,10 +56,10 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,3]" probability="10.0"/>
+      <item value="治疗剂" quantity="[1,3]" probability="10.0"/>
       <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="perch" quantity="[1,1]" probability="1.0"/>
-      <item value="night dagger" quantity="[1,1]" probability="0.05"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -130,7 +130,7 @@
       <item value="trout" quantity="[1,1]" probability="10.0"/>
       <item value="蓝盾" quantity="[1,1]" probability="2.0"/>
       <item value="蓝色条纹斗篷" quantity="[1,1]" probability="2.0"/>
-       <item value="blue legs" quantity="[1,1]" probability="1.5"/>
+       <item value="蓝裤子" quantity="[1,1]" probability="1.5"/>
     </drops>
     <equips>
     </equips>
@@ -200,13 +200,13 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[2,6]" probability="90.0"/>
-      <item value="leather legs" quantity="[1,1]" probability="10.0"/>
+      <item value="皮裤" quantity="[1,1]" probability="10.0"/>
       <item value="皮甲" quantity="[1,1]" probability="10.0"/>
       <item value="皮胸甲" quantity="[1,1]" probability="2.0"/>
       <item value="小斧头" quantity="[1,1]" probability="1.3"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
       <item value="小圆盾" quantity="[1,1]" probability="0.5"/>
-      <item value="knife" quantity="[1,1]" probability="0.5"/>
+      <item value="小刀" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -243,7 +243,7 @@
       <item value="money" quantity="[3,11]" probability="90.0"/>
       <item value="皮鳞甲" quantity="[1,1]" probability="10.0"/>
       <item value="镶嵌甲" quantity="[1,1]" probability="6.0"/>
-      <item value="studded legs" quantity="[1,1]" probability="8.0"/>
+      <item value="镶嵌护腿" quantity="[1,1]" probability="8.0"/>
       <item value="手斧" quantity="[1,1]" probability="1.4"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
       <item value="leather helmet" quantity="[1,1]" probability="1.0"/>
@@ -557,7 +557,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,60]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="medicinal ring" quantity="[1,1]" probability="0.75"/>
     </drops>
     <equips>
@@ -783,7 +783,7 @@
       <item value="肉" quantity="[1,5]" probability="10.0"/>
       <item value="护肩皮胸甲" quantity="[1,1]" probability="2.5"/>
       <item value="特级毒药" quantity="[1,1]" probability="7.0"/>
-      <item value="studded legs" quantity="[1,1]" probability="10.5"/>
+      <item value="镶嵌护腿" quantity="[1,1]" probability="10.5"/>
     </drops>
     <equips>
     </equips>
@@ -956,9 +956,9 @@
       <item value="异界盾" quantity="[1,1]" probability="1.0" />
       <item value="异界斗篷" quantity="[1,1]" probability="1.5" />
       <item value="异界靴子" quantity="[1,1]" probability="2.5" />
-      <item value="xeno sword" quantity="[1,1]" probability="0.5" />
+      <item value="异界之剑" quantity="[1,1]" probability="0.5" />
       <item value="异界甲" quantity="[1,1]" probability="1.5" />
-      <item value="xeno legs" quantity="[1,1]" probability="1.5" />
+      <item value="异界护腿" quantity="[1,1]" probability="1.5" />
       <item value="xeno helmet" quantity="[1,1]" probability="1.5" />
     </drops>
     <equips>

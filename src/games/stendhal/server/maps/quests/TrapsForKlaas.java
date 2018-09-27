@@ -49,7 +49,7 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>克拉丝 asks you to bring him rodent traps.</li>
+ * <li>克拉丝 asks you to bring him 捕兽夹s.</li>
  * </ul>
  *
  * REWARD:
@@ -57,7 +57,7 @@ import games.stendhal.server.maps.Region;
  * <li>1000 XP</li>
  * <li>5 大瓶抗毒药济
  * <li>note to apothecary (disabled until Antivenom Ring quest is ready)
- * <li>Can sell rodent traps to 克拉丝</li>
+ * <li>Can sell 捕兽夹s to 克拉丝</li>
  * <li>Karma: 10</li>
  * </ul>
  *
@@ -88,10 +88,10 @@ public class TrapsForKlaas extends AbstractQuest {
 			res.add("I do not care to deal with rodents.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I promised to gather " + REQUIRED_TRAPS + " rodent traps and bring them to 克拉丝.");
+			res.add("I promised to gather " + REQUIRED_TRAPS + " 捕兽夹s and bring them to 克拉丝.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, 0, "done")) {
-			res.add("I gave the rodent traps to 克拉丝. I got some experience and 抗毒药济s.");
+			res.add("I gave the 捕兽夹s to 克拉丝. I got some experience and 抗毒药济s.");
 		}
 		if (isRepeatable(player)) {
 		    res.add("I should check if 克拉丝 needs my help again.");
@@ -126,7 +126,7 @@ public class TrapsForKlaas extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I believe I already asked you to get me " + REQUIRED_TRAPS + " rodent traps.",
+				"I believe I already asked you to get me " + REQUIRED_TRAPS + " 捕兽夹s.",
 				null);
 
 		// Player accepts quest
@@ -148,10 +148,10 @@ public class TrapsForKlaas extends AbstractQuest {
 			"Don't waste my time. I've got to protect the cargo.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		// Player asks about rodent traps
+		// Player asks about 捕兽夹s
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("rodent trap", "trap", "rodent traps", "traps"),
+			Arrays.asList("捕兽夹", "trap", "捕兽夹s", "traps"),
 			new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
 			"I don't know of anyone who sells 'em. But I did hear a story once about a fella who killed a large rat and discovered a trap snapped shut on its foot.",
@@ -164,7 +164,7 @@ public class TrapsForKlaas extends AbstractQuest {
 
 		// Reward
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("rodent trap", 20));
+		reward.add(new DropItemAction("捕兽夹", 20));
 		// Replacing "not to apothecary" reward with 抗毒药济s until Antivenom Ring quest is done.
 		//reward.add(new EquipItemAction("note to apothecary", 1, true));
 		reward.add(new EquipItemAction("大瓶抗毒药济", 5));
@@ -178,7 +178,7 @@ public class TrapsForKlaas extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT),
-						new PlayerHasItemWithHimCondition("rodent trap")),
+						new PlayerHasItemWithHimCondition("捕兽夹")),
 				ConversationStates.QUEST_ITEM_BROUGHT,
 				"Did you bring any traps?",
 				null);
@@ -188,7 +188,7 @@ public class TrapsForKlaas extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT),
-						new NotCondition(new PlayerHasItemWithHimCondition("rodent trap"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("捕兽夹"))),
 			ConversationStates.ATTENDING,
 			"I could really use those #traps. How can I help you?",
 			null);
@@ -196,15 +196,15 @@ public class TrapsForKlaas extends AbstractQuest {
 		// Player is not carrying 20 traps
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.YES_MESSAGES,
-				new AndCondition(new PlayerHasItemWithHimCondition("rodent trap"),
-						new NotCondition(new PlayerHasItemWithHimCondition("rodent trap", 20))),
+				new AndCondition(new PlayerHasItemWithHimCondition("捕兽夹"),
+						new NotCondition(new PlayerHasItemWithHimCondition("捕兽夹", 20))),
 				ConversationStates.ATTENDING,
 				"I'm sorry but I need 20 #rodent #traps",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.YES_MESSAGES,
-				new PlayerHasItemWithHimCondition("rodent trap", 20),
+				new PlayerHasItemWithHimCondition("捕兽夹", 20),
 				ConversationStates.ATTENDING,
 				// Not mentioning apothecary until Antivenom Ring quest is ready
 				"Thanks! I've got to get these set up as quickly as possible. Take these 抗毒药济s as a reward.",// I used to know an old #apothecary. Take this note to him. Maybe he can help you out with something.",
@@ -245,7 +245,7 @@ public class TrapsForKlaas extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Traps for 克拉丝",
-				"克拉丝, the cargo caretaker on the Athor ferry, is in need of some rodent traps.",
+				"克拉丝, the cargo caretaker on the Athor ferry, is in need of some 捕兽夹s.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

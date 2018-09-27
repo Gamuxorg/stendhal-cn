@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  *
  * REWARD:
  * <ul>
- * <li>You get 20 gold bars</li>
+ * <li>You get 20 金条s</li>
  * <li>Karma: 15</li>
  * <li>You get 52,000 experience points in all</li>
  * </ul>
@@ -265,7 +265,7 @@ import games.stendhal.server.maps.Region;
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("野蛮人护甲"));
 		reward.add(new IncreaseXPAction(50000));
-		reward.add(new EquipItemAction("gold bar", 20));
+		reward.add(new EquipItemAction("金条", 20));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(15));
 
@@ -287,15 +287,15 @@ import games.stendhal.server.maps.Region;
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, "armor"),
 				ConversationStates.ATTENDING,
-				"I am waiting for you to bring me a barbarian #armor so I am strong enough to escape.",
+				"I am waiting for you to bring me a 蛮人 #armor so I am strong enough to escape.",
 				null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Jailed Barbarian",
-				"Lorenz is a jailed Barbarian on 亚马孙岛. It's a mystery why he is jailed there, but perhaps he needs help.",
+				"Jailed 蛮人",
+				"Lorenz is a jailed 蛮人 on 亚马孙岛. It's a mystery why he is jailed there, but perhaps he needs help.",
 				true);
 		step1();
 		step2();
@@ -339,7 +339,7 @@ import games.stendhal.server.maps.Region;
 		if ("jailed".equals(questState)) {
 			return res;
 		}
-		res.add("Princess Ylflia begged me to send that barbarian her greetings.");
+		res.add("Princess Ylflia begged me to send that 蛮人 her greetings.");
 		if ("spoken".equals(questState)) {
 			return res;
 		}

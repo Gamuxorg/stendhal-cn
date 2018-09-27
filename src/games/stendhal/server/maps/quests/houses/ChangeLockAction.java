@@ -35,7 +35,7 @@ final class ChangeLockAction extends HouseChatAction implements ChatAction {
 				portal.changeLock();
 				// make a new key for the player, with the new locknumber
 				final String doorId = portal.getDoorId();
-				final Item key = SingletonRepository.getEntityManager().getItem("house key");
+				final Item key = SingletonRepository.getEntityManager().getItem("房间钥匙");
 				final int locknumber = portal.getLockNumber();
 
 				((HouseKey) key).setup(doorId, locknumber, player.getName());

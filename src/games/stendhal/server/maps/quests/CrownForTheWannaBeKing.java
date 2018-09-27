@@ -48,13 +48,13 @@ import games.stendhal.server.util.ItemCollection;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Ivan Abe, the wannabe king who lives in Sedah</li>
+ * <li> Ivan Abe, the wannabe king who lives in 西大</li>
  * <li> Kendra Mattori, priestess living in Magic City</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Ivan Abe wants you to bring him 2 红宝石s, 2 钻石s, 4 翡翠s, 2 gold bars, 1 黑曜石, and 3 蓝宝石s for his crown which he
+ * <li> Ivan Abe wants you to bring him 2 红宝石s, 2 钻石s, 4 翡翠s, 2 金条s, 1 黑曜石, and 3 蓝宝石s for his crown which he
  *      believes will help him to become the new king.</li>
  * <li> Kendra Mattori gives the reward after player brought all required items.</li>
  * </ul>
@@ -76,7 +76,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "gold bar=2;翡翠=4;蓝宝石=3;红宝石=2;钻石=2;黑曜石=1";
+	protected static final String NEEDED_ITEMS = "金条=2;翡翠=4;蓝宝石=3;红宝石=2;钻石=2;黑曜石=1";
 
 	/**
 	 * Name of the main NPC for this quest.

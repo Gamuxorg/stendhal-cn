@@ -66,19 +66,19 @@ public class HealerNPC implements ZoneConfigurator {
 				addJob("Long ago I was a priest of this church. But my #ideas were not approved of by all.");
 				addReply("ideas",
 				"I have read many texts and learnt of strange ways. My healing powers became so strong I can now #concoct a special #'强治疗剂' for warriors like you.");
-				addReply("giant heart",
+				addReply("巨人心脏",
 				"Giants dwell in caves west of here. Good luck slaying those beasts ...");
-				addOffer("I can #concoct a #'强治疗剂' for you. I will need a #'giant heart' for this.");
+				addOffer("I can #concoct a #'强治疗剂' for you. I will need a #'巨人心脏' for this.");
 				addReply("强治疗剂", "It is a powerful elixir. If you want one, ask me to #'concoct 1 强治疗剂'.");
 				addReply("money", "That is your own concern. We of the cloth need not scurry around to make cash.");
 				addHelp("If you want to become wise like me, you should visit a library. There is much to learn and #ideas to explore.");
 				addGoodbye("Fare thee well.");
 
-				// Valo makes 强治疗剂s if you bring giant heart and money
+				// Valo makes 强治疗剂s if you bring 巨人心脏 and money
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("money", 20);
-				requiredResources.put("giant heart", 1);
+				requiredResources.put("巨人心脏", 1);
 				final ProducerBehaviour behaviour = new ProducerBehaviour("valo_concoct_potion",
 						"concoct", "强治疗剂", requiredResources, 2 * 60);
 

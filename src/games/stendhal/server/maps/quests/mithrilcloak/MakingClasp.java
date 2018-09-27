@@ -58,7 +58,7 @@ class MakingClasp {
 
 	private void getClaspStep() {
 
-		// don't overlap with any states from producer adder since he is a mithril bar producer
+		// don't overlap with any states from producer adder since he is a 密银锭 producer
 
 		final SpeakerNPC npc = npcs.get("Pedinghaus");
 
@@ -67,7 +67,7 @@ class MakingClasp {
 			Arrays.asList("clasp", "密银胸针", "ida", "cloak", "密银斗篷"),
 			new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 			ConversationStates.SERVICE_OFFERED,
-			"A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?",
+			"A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one 密银锭. Do you have it?",
 			null);
 
 		// player says yes they want a clasp made and claim they have the mithril
@@ -80,8 +80,8 @@ class MakingClasp {
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-					if (player.isEquipped("mithril bar")) {
-						player.drop("mithril bar");
+					if (player.isEquipped("密银锭")) {
+						player.drop("密银锭");
 							npc.say("What a lovely piece of mithril that is, even if I do say so myself ... Good, please come back in "
 									   + REQUIRED_MINUTES_CLASP + " minutes and hopefully your clasp will be ready!");
 							player.setQuest(mithrilcloak.getQuestSlot(), "forgingclasp;" + System.currentTimeMillis());
@@ -98,7 +98,7 @@ class MakingClasp {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Well, if you should like me to cast any mithril bars just say.",
+			"Well, if you should like me to cast any 密银锭s just say.",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,

@@ -45,14 +45,14 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> Hackim asks you to give a message to 辛布兰卡. </li>
- * <li> 辛布兰卡 thanks you with a pair of leather legs. </li>
+ * <li> 辛布兰卡 thanks you with a pair of 皮裤. </li>
  * </ul>
  *
  * REWARD:
  * <ul>
  * <li> 10 XP </li>
  * <li> some karma (2) </li>
- * <li> a pair of leather legs </li>
+ * <li> a pair of 皮裤 </li>
  * </ul>
  *
  * REPETITIONS: - None
@@ -81,7 +81,7 @@ public class NewsFromHackim extends AbstractQuest {
 		}
 		res.add("It can't be that bad to just collect a message to 辛布兰卡. What will happen? I'll do it.");
 		if (isCompleted(player)) {
-			res.add("I brought 辛布兰卡 the message by Hackim. That brought me some nice leather legs.");
+			res.add("I brought 辛布兰卡 the message by Hackim. That brought me some nice 皮裤.");
 		}
 		return res;
 	}
@@ -141,7 +141,7 @@ public class NewsFromHackim extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					String answer;
-					if (player.isEquipped("leather legs")) {
+					if (player.isEquipped("皮裤")) {
 						answer = "Take this set of brand new... oh, you already have leather leg armor. Well, maybe you can sell them off or something.";
 					} else {
 						answer = "Take this set of brand new leather leg armor! Let me know if you want anything else.";
@@ -153,7 +153,7 @@ public class NewsFromHackim extends AbstractQuest {
 									+ answer);
 					player.setQuest(QUEST_SLOT, "done");
 
-					final Item item = SingletonRepository.getEntityManager().getItem("leather legs");
+					final Item item = SingletonRepository.getEntityManager().getItem("皮裤");
 					player.equipOrPutOnGround(item);
 					player.addXP(10);
 					player.addKarma(2);

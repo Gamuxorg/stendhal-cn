@@ -184,28 +184,28 @@ public class SuppliesForPhalkTest {
 		en.step(player, "phalk");
 		assertEquals("Ooops, his armor...wait.. where is it.. aah here it is. Did he give you the #payment for me too?", getReply(npc));
 		en.step(player, "payment");
-		assertEquals("Well.. the armor will cost 20 gold bars. Do you have them?", getReply(npc));
+		assertEquals("Well.. the armor will cost 20 金条s. Do you have them?", getReply(npc));
 
 		// say no
 		en.step(player, "no");
 		assertEquals("Bah! I will not give you the armor without payment!", getReply(npc));
 		en.step(player, "payment");
-		assertEquals("The armor will cost 20 gold bars. Do you have them?", getReply(npc));
+		assertEquals("The armor will cost 20 金条s. Do you have them?", getReply(npc));
 
 		// lie
 		en.step(player, "yes");
 		assertEquals("Army disciplinary actions are pretty serious, so don't lie to me.", getReply(npc));
 
-		// get the gold bars
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 20);
+		// get the 金条s
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 20);
 		final int xp = player.getXP();
 
 		en.step(player, "payment");
-		assertEquals("The armor will cost 20 gold bars. Do you have them?", getReply(npc));
+		assertEquals("The armor will cost 20 金条s. Do you have them?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Ok, here you are.", getReply(npc));
 		// [16:27] redlads earns 200 experience points.
-		assertFalse(player.isEquipped("gold bar"));
+		assertFalse(player.isEquipped("金条"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getQuest(questSlot), is("clothes;none;armor"));
 		assertTrue(player.isEquipped("golden armor"));

@@ -53,7 +53,7 @@ import games.stendhal.server.util.ItemCollection;
  *
  * STEPS:
  * <ul>
- * <li>Ortiv asks you for some ingredients for a mixture which will help him to keep the assassins and bandits in the cellar</li>
+ * <li>Ortiv asks you for some ingredients for a mixture which will help him to keep the assassins and 强盗s in the cellar</li>
  * <li>Find the ingredients</li>
  * <li>Take the ingredients back to Ortiv</li>
  * <li>Ortiv gives you a reward</li>

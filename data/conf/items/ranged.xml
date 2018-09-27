@@ -61,9 +61,9 @@
     </equipable>
   </item>
 
-  <item name="crossbow">
+  <item name="十字弩">
     <type class="ranged" subclass="crossbow" tileid="-1"/>
- <description>You see a crossbow. The attack is high but it has a very short range, what do you prefer?</description>
+ <description>You see a 十字弩. The attack is high but it has a very short range, what do you prefer?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="17"/>
@@ -81,9 +81,9 @@
     </equipable>
   </item>
 
-  <item name="hunter crossbow">
-    <type class="ranged" subclass="hunter_crossbow" tileid="-1"/>
- <description>You see a hunter crossbow. You must decide if the high attack is worth the short range it has.</description>
+  <item name="猎人十字弓">
+    <type class="ranged" subclass="hunter_十字弩" tileid="-1"/>
+ <description>You see a 猎人十字弓. You must decide if the high attack is worth the short range it has.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="21"/>
@@ -101,9 +101,9 @@
     </equipable>
   </item>
   
-    <item name="mithril bow">
+    <item name="密银弓">
     <type class="ranged" subclass="mithril_bow" tileid="-1"/>
-   <description>You see a light and strong mithril bow. Its impeccable workmanship affords incredible accuracy.</description>
+   <description>You see a light and strong 密银弓. Its impeccable workmanship affords incredible accuracy.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="28"/>

@@ -72,7 +72,7 @@ public class KillGnomesTest {
 		en.step(player, "hi");
 		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("Some gnomes have been stealing carrots from the farms North of Semos. They need to be taught a lesson, will you help?", getReply(npc));
+		assertEquals("Some gnomes have been stealing 胡萝卜s from the farms North of Semos. They need to be taught a lesson, will you help?", getReply(npc));
 
 		// Accept quest
 		en.step(player, "yes");
@@ -115,7 +115,7 @@ public class KillGnomesTest {
 		en.step(player, "hi");
 		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "done");
-		assertEquals("I see you have killed the gnomes as I asked. I hope they will stay away from the carrots for a while! Please take these potions as a reward.", getReply(npc));
+		assertEquals("I see you have killed the gnomes as I asked. I hope they will stay away from the 胡萝卜s for a while! Please take these potions as a reward.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 		assertThat(player.getQuest(questSlot, 0), equalTo("killed"));

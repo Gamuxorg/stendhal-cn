@@ -50,13 +50,13 @@ import marauroa.common.Pair;
  *
  * STEPS:
  * <ul>
- * <li> Gnomes have been stealing carrots so 詹妮 asks you to kill some.
+ * <li> Gnomes have been stealing 胡萝卜s so 詹妮 asks you to kill some.
  * <li> You go kill the Gnomes in the gnome village and you get the reward from 詹妮
  * </ul>
  * <p>
  * REWARD:
  * <ul>
- * <li> 3 治疗济s
+ * <li> 3 治疗剂s
  * <li> 100 XP
  * <li> No karma (deliberately. Killing gnomes is mean!)
  * </ul>
@@ -138,7 +138,7 @@ public class KillGnomes extends AbstractQuest {
 
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-	    actions.add(new EquipItemAction("治疗济", 3));
+	    actions.add(new EquipItemAction("治疗剂", 3));
 		actions.add(new IncreaseXPAction(100));
 		actions.add(new SetQuestAction(QUEST_SLOT, "killed;1"));
 		actions.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));

@@ -4,9 +4,9 @@
   
   <!-- START: air -->
   
-  <creature name="air elemental">
+  <creature name="气元素">
     <type class="elemental" subclass="air_elemental" tileid="elemental.png:4"/>
-    <description>You see an air elemental and feel a fresh breeze past you.</description>
+    <description>You see an 气元素 and feel a fresh breeze past you.</description>
     <attributes>
       <atk value="409"/>
       <def value="68"/>
@@ -33,9 +33,9 @@
     </ai>
   </creature>
   
-  <creature name="djinn">
+  <creature name="神灯">
     <type class="elemental" subclass="djinn" tileid="elemental.png:0"/>
-    <description>You see a djinn. He isn't caught in a bottle or lamp so someone must have let him free and gave him the order to kill you.</description>
+    <description>You see a 神灯. He isn't caught in a bottle or lamp so someone must have let him free and gave him the order to kill you.</description>
     <attributes>
       <atk value="460"/>
       <def value="74"/>
@@ -69,9 +69,9 @@
   
   <!-- START: earth -->
   
-  <creature name="nymph">
-    <type class="elemental" subclass="nymph" tileid="elemental.png:6"/>
-    <description>You see a nymph. She loves nature very much! As you take a look at her she feels disturbed in sun-bathing and talking to the birds, perhaps she was best left alone.</description>
+  <creature name="泽地仙女">
+    <type class="elemental" subclass="泽地仙女" tileid="elemental.png:6"/>
+    <description>You see a 泽地仙女. She loves nature very much! As you take a look at her she feels disturbed in sun-bathing and talking to the birds, perhaps she was best left alone.</description>
     <attributes>
       <atk value="368"/>
       <def value="61"/>
@@ -101,9 +101,9 @@
     </ai>
   </creature>
   
-  <creature name="earth elemental">
+  <creature name="土元素">
     <type class="elemental" subclass="earth_elemental" tileid="elemental.png:1"/>
-    <description>You see an earth elemental. The earth is quaking as it moves over the surface.</description>
+    <description>You see an 土元素. The earth is quaking as it moves over the surface.</description>
     <attributes>
       <atk value="407"/>
       <def value="66"/>
@@ -134,9 +134,9 @@
   
   <!-- START: fire -->
   
-  <creature name="fire elemental">
+  <creature name="火元素">
     <type class="elemental" subclass="fire_elemental" tileid="elemental.png:2"/>
-    <description>You see a fire elemental and hardly can stand the heat.</description>
+    <description>You see a 火元素 and hardly can stand the heat.</description>
     <attributes>
       <atk value="411"/>
       <def value="67"/>
@@ -172,9 +172,9 @@
   
   <!-- START: ice -->
   
-  <creature name="ice elemental">
+  <creature name="冰元素">
     <type class="elemental" subclass="ice_elemental" tileid="elemental.png:5"/>
-    <description>You see an ice elemental and sense a shiver on your spine.</description>
+    <description>You see an 冰元素 and sense a shiver on your spine.</description>
     <attributes>
       <atk value="400"/>
       <def value="61"/>
@@ -207,9 +207,9 @@
     </ai>
   </creature>
   
-  <creature name="ice golem">
+  <creature name="冰傀儡">
     <type class="golem" subclass="ice_golem" tileid="golem.png:2"/>
-    <description>You see an Ice golem. Ice Golems are elementals made out of ice. You should watch out for its icy fists or you might get hurt.</description>
+    <description>You see an 冰傀儡. 冰傀儡s are elementals made out of ice. You should watch out for its icy fists or you might get hurt.</description>
     <attributes>
       <atk value="381"/>
       <def value="53"/>
@@ -223,7 +223,7 @@
     <corpse name="puddle_light_blue" harmless="puddle_light_blue" />
     <drops>
       <item value="money" quantity="[5,27]" probability="100.0"/>
-      <item value="snowball" quantity="[1,4]" probability="75"/>
+      <item value="雪球" quantity="[1,4]" probability="75"/>
       <item value="冰剑" quantity="[1,1]" probability="0.05"/>
       <item value="冰护甲" quantity="[1,1]" probability="0.005"/>
     </drops>
@@ -243,9 +243,9 @@
     </ai>
   </creature>    
   
-  <creature name="ice giant">
+  <creature name="冰巨人">
     <type class="giant_human" subclass="ice_giant" tileid="giant_human.png:2"/>
-    <description>You see an ice giant. His skin is covered with frozen hoarfrost and his breath feels like the cold north wind.</description>
+    <description>You see an 冰巨人. His skin is covered with frozen hoarfrost and his breath feels like the cold north wind.</description>
     <attributes>
       <atk value="934"/>
       <def value="102"/>
@@ -259,7 +259,7 @@
     <corpse name="humanoid_2x2" harmless="puddle_light_blue_2x2" width="2" height="2"/>
     <drops>
       <item value="大治疗剂" quantity="[1,4]" probability="50.0"/>
-      <item value="giant heart" quantity="[1,1]" probability="85.0"/>
+      <item value="巨人心脏" quantity="[1,1]" probability="85.0"/>
       <item value="money" quantity="[30,350]" probability="100.0"/>
       <item value="冰护甲" quantity="[1,1]" probability="1.5"/>
       <item value="寒冰战锤" quantity="[1,1]" probability="0.5"/>
@@ -283,9 +283,9 @@
   
   <!-- START: stone -->
   
-  <creature name="stone golem">
+  <creature name="石傀儡">
     <type class="golem" subclass="stone_golem" tileid="golem.png:0"/>
-    <description>You see a stone golem, it only exists to protect. What was it crafted for to protect, and what would one do if it lost its purpose?</description>
+    <description>You see a 石傀儡, it only exists to protect. What was it crafted for to protect, and what would one do if it lost its purpose?</description>
     <attributes>
       <atk value="297"/>
       <def value="85"/>
@@ -320,9 +320,9 @@
     </ai>
   </creature>
   
-  <creature name="dwarf golem">
+  <creature name="矮人傀儡">
     <type class="giant_animal" subclass="dwarf_golem" tileid="giant_human.png:5"/>
-    <description>You see a dwarf golem. A long time ago a dwarf got turned into a big rock by some mystical forces. To save their friend the other dwarves created a golem out of this rock! From this day the dwarf golem lives together with them.</description>
+    <description>You see a 矮人傀儡. A long time ago a dwarf got turned into a big rock by some mystical forces. To save their friend the other dwarves created a golem out of this rock! From this day the 矮人傀儡 lives together with them.</description>
     <attributes>
       <atk value="939"/>
       <def value="99"/>
@@ -340,7 +340,7 @@
       <item value="石甲" quantity="[1,1]" probability="2.0"/>
       <item value="都灵之斧" quantity="[1,1]" probability="0.25"/>
       <item value="魔法双刃斧" quantity="[1,1]" probability="1.0"/>
-      <item value="dwarvish legs" quantity="[1,1]" probability="1.5" />
+      <item value="矮人护腿" quantity="[1,1]" probability="1.5" />
     </drops>
     <equips>
     </equips>
@@ -358,7 +358,7 @@
   
   <creature name="水元素">
     <type class="elemental" subclass="water_elemental" tileid="elemental.png:3"/>
-    <description>You see a Water elemental which is made of water and various other liquids.</description>
+    <description>You see a 水元素 which is made of water and various other liquids.</description>
     <attributes>
       <atk value="403"/>
       <def value="64"/>

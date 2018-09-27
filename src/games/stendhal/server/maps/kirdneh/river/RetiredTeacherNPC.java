@@ -78,10 +78,10 @@ public class RetiredTeacherNPC implements ZoneConfigurator {
 				addGreeting("Ohh, a stranger found my hidden house, welcome!");
 				addHelp("Never ever get into trouble with #assassins when they are stronger than you!");
 				addReply("assassins", "They will come and get you if you don't take care! Some of them are waiting downstairs under my basement!");
-				addJob("I was a teacher of alchemy once but some of my #students turned into ugly bandits and assassins...");
+				addJob("I was a teacher of alchemy once but some of my #students turned into ugly 强盗s and assassins...");
 				addReply("students", "I don't know what happens in Faiumoni at the moment, because I just stay in my safe house the whole day long...");
 				addOffer("Sorry, but I can't offer you anything. I have some major problems in my basement at the moment!");
-				addQuest("I want to prepare a mixture to keep the assassins and bandits in my cellar.");
+				addQuest("I want to prepare a mixture to keep the assassins and 强盗s in my cellar.");
 				addGoodbye("Take care of yourself and please return soon to visit me again, I'm scared alone!");
 			}
 		};

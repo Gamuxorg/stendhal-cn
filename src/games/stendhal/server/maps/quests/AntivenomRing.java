@@ -64,7 +64,7 @@ import games.stendhal.server.util.ItemCollection;
  * <ul>
  * <li>Bring note to apothecary to 詹姆森.</li>
  * <li>As a favor to 克拉丝, 詹姆森 will help you to strengthen your medicinal ring.</li>
- * <li>Bring 詹姆森 a medicinal ring, venom gland, 2 曼德拉草 and 5 fairycakes.</li>
+ * <li>Bring 詹姆森 a medicinal ring, 毒腺, 2 曼德拉草 and 5 fairycakes.</li>
  * <li>詹姆森 requires a bottle big enough to hold venom extracted from gland.</li>
  * <li>Bring 詹姆森 a giant bottle.</li>
  * <li>詹姆森 realizes he doesn't have a way to extract the venom.</li>
@@ -94,10 +94,10 @@ public class AntivenomRing extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "antivenom_ring";
 
-	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;曼德拉草=2;仙女蛋糕=5";
+	//public static final String NEEDED_ITEMS = "medicinal ring=1;毒腺=1;曼德拉草=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create cobra venom */
-	public static final String EXTRACTION_ITEMS = "venom gland=1;vial=1";
+	public static final String EXTRACTION_ITEMS = "毒腺=1;vial=1";
 
 	/* Items taken to apothecary to create antivenom */
 	public static final String MIX_ITEMS = "cobra venom=1;曼德拉草=2;仙女蛋糕=5";
@@ -305,7 +305,7 @@ public class AntivenomRing extends AbstractQuest {
 		/*
         // Player asks about required items
 		mixer.add(ConversationStates.QUESTION_1,
-				Arrays.asList("gland", "venom gland", "glands", "venom glands"),
+				Arrays.asList("gland", "毒腺", "glands", "毒腺s"),
 				null,
 				ConversationStates.QUESTION_1,
 				"Some #snakes have a gland in which their venom is stored.",
@@ -364,7 +364,7 @@ public class AntivenomRing extends AbstractQuest {
 
         // Player asks about required items
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("gland", "venom gland", "glands", "venom glands"),
+				Arrays.asList("gland", "毒腺", "glands", "毒腺s"),
 				null,
 				ConversationStates.ATTENDING,
 				"Some #snakes have a gland in which their venom is stored.",

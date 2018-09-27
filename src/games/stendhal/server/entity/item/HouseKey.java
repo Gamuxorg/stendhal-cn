@@ -61,7 +61,7 @@ public class HouseKey extends Item {
 			return "你发现一把钥匙 to " + info[0] + ".";
 		}
 	}
-	/* useful so that the list of thems lost on death is more specific than just 'house key' */
+	/* useful so that the list of thems lost on death is more specific than just '房间钥匙' */
 	@Override
 	public String getName() {
 		final String[] info = getInfoString().split(";", -1);

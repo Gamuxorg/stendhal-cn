@@ -63,7 +63,7 @@ public class TraderNPC implements ZoneConfigurator {
 				addGreeting("Welcome to the Kobold City of Wofol. I hope you come in peace.");
 				addJob("I run a buying and selling #trade with kobolds - or whoever else passes by. I am one of the few Kobolds who can speak with non-Kobolds.");
 				addHelp("I #deal in all sorts of items.");
-				addQuest("Try Alrak the mountain dwarf who lives here with the kobolds. He'd probably have more than one task to give you.");
+				addQuest("Try Alrak the 山地矮人 who lives here with the kobolds. He'd probably have more than one task to give you.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellstuff2")), false);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buystuff2")), false);
 				addOffer("Please look at the each blackboard on the wall to see what I buy and sell at the moment.");

@@ -111,10 +111,10 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				Item helmet = SingletonRepository.getEntityManager().getItem("黑头盔");
 				player.equip("head", helmet);
 			}
-			if(!player.isEquipped("elvish legs")) {
+			if(!player.isEquipped("精灵护腿")) {
 				Item first = (Item) player.getSlot("legs").getFirst();
 				player.drop(first);
-				Item legs = SingletonRepository.getEntityManager().getItem("elvish legs");
+				Item legs = SingletonRepository.getEntityManager().getItem("精灵护腿");
 				player.equip("legs", legs);
 			}
 			if(!player.isEquipped("杀手之靴")) {

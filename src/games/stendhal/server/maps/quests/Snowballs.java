@@ -51,7 +51,7 @@ import games.stendhal.server.maps.Region;
  * <p>
  * STEPS:
  * <li> Mr. Yeti asks for some snow, and wants you to get 25 snowballs.
- * <li> You collect 25 snowballs from ice golems.
+ * <li> You collect 25 snowballs from 冰傀儡s.
  * <li> You give the snowballs to Mr. Yeti.
  * <li> Mr. Yeti gives you 20 cod or perch.
  * <p>
@@ -67,7 +67,7 @@ public class Snowballs extends AbstractQuest {
 
 	private static final int REQUIRED_MINUTES = 120;
 
-	private static final String QUEST_SLOT = "snowballs";
+	private static final String QUEST_SLOT = "雪球";
 
 	@Override
 	public String getSlotName() {
@@ -98,15 +98,15 @@ public class Snowballs extends AbstractQuest {
 			res.add("I didn't want to help Mr. Yeti out this time and he harshly send me away...");
 			return res;
 		}
-		res.add("Mr. Yeti asked me to collect some snowballs for him and I promised it.");
-		if (player.isEquipped("snowball", REQUIRED_SNOWBALLS) || isCompleted(player)) {
-			res.add("I found some snowballs after killing some ice golems.");
+		res.add("Mr. Yeti asked me to collect some 雪球 for him and I promised it.");
+		if (player.isEquipped("雪球", REQUIRED_SNOWBALLS) || isCompleted(player)) {
+			res.add("I found some 雪球 after killing some 冰傀儡s.");
 		}
 		if (isCompleted(player)) {
-			res.add("I made Mr. Yeti happy when I gave him the snowballs he wanted.");
+			res.add("I made Mr. Yeti happy when I gave him the 雪球 he wanted.");
 		}
 		if(isRepeatable(player)){
-			res.add("Mr. Yeti needs snowballs again!");
+			res.add("Mr. Yeti needs 雪球s again!");
 		}
 		return res;
 	}
@@ -128,9 +128,9 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new PlayerHasItemWithHimCondition("snowball", REQUIRED_SNOWBALLS)),
+						new PlayerHasItemWithHimCondition("雪球", REQUIRED_SNOWBALLS)),
 				ConversationStates.QUEST_ITEM_BROUGHT,
-				"Greetings stranger! I see you have the snow I asked for. Are these snowballs for me?",
+				"Greetings stranger! I see you have the snow I asked for. Are these 雪球s for me?",
 				null);
 
 		// says hi - didn't get the snow yeti asked for
@@ -138,9 +138,9 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new NotCondition(new PlayerHasItemWithHimCondition("snowball", REQUIRED_SNOWBALLS))),
+						new NotCondition(new PlayerHasItemWithHimCondition("雪球", REQUIRED_SNOWBALLS))),
 				ConversationStates.ATTENDING,
-				"You're back already? Don't forget that you promised to collect a bunch of snowballs for me!",
+				"You're back already? Don't forget that you promised to collect a bunch of 雪球 for me!",
 				null);
 
 		// says hi - quest was done before and is now repeatable
@@ -171,7 +171,7 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some snowballs? I need twenty five of them.",
+				"I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some 雪球? I need twenty five of them.",
 				null);
 
 		// asks about quest but already on it
@@ -179,7 +179,7 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"You already promised me to bring some snowballs! Twenty five pieces, remember ...",
+				"You already promised me to bring some 雪球! Twenty five pieces, remember ...",
 				null);
 
 		// asks about quest - has done it but it's repeatable now
@@ -187,7 +187,7 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestStartedCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "start"), new TimePassedCondition(QUEST_SLOT, REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some snowballs? I need twenty five of them.",
+				"I like to make snow sculptures, but the snow in this cavern is not good enough. Would you help me and get some 雪球? I need twenty five of them.",
 				null);
 
 		// asks about quest - has done it and it's too soon to do again
@@ -203,7 +203,7 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Fine. You can loot the snowballs from the ice golem in this cavern, but be careful there is something huge nearby! Come back when you get twenty five snowballs.",
+				"Fine. You can loot the 雪球 from the 冰傀儡 in this cavern, but be careful there is something huge nearby! Come back when you get twenty five 雪球.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2.0));
 
 		// player is not willing to help
@@ -220,7 +220,7 @@ public class Snowballs extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("Mr. Yeti");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("snowball", REQUIRED_SNOWBALLS));
+		reward.add(new DropItemAction("雪球", REQUIRED_SNOWBALLS));
 		reward.add(new IncreaseXPAction(50));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT));
 		// player gets either cod or perch, which we don't have a standard action for
@@ -245,16 +245,16 @@ public class Snowballs extends AbstractQuest {
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("snowball", REQUIRED_SNOWBALLS),
+			new PlayerHasItemWithHimCondition("雪球", REQUIRED_SNOWBALLS),
 			ConversationStates.ATTENDING,
 			null,
 			new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new NotCondition(new PlayerHasItemWithHimCondition("snowball", REQUIRED_SNOWBALLS)),
+			new NotCondition(new PlayerHasItemWithHimCondition("雪球", REQUIRED_SNOWBALLS)),
 			ConversationStates.ATTENDING,
-			"Hey! Where did you put the snowballs?",
+			"Hey! Where did you put the 雪球?",
 			null);
 
 		npc.add(
@@ -269,8 +269,8 @@ public class Snowballs extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Snowballs for Mr. Yeti",
-				"The inhabitant of the icy region in Faiumoni needs your help to collect some snowballs for him.",
+				"雪球s for Mr. Yeti",
+				"The inhabitant of the icy region in Faiumoni needs your help to collect some 雪球 for him.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -278,10 +278,10 @@ public class Snowballs extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "Snowballs";
+		return "雪球";
 	}
 
-	// the djinns, ice golems and ice elementals on the way to yeti caves are quite dangerous
+	// the djinns, 冰傀儡s and 冰元素s on the way to yeti caves are quite dangerous
 	@Override
 	public int getMinLevel() {
 		return 60;

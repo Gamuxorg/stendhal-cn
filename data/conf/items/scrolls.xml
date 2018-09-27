@@ -125,9 +125,9 @@
     </equipable>
   </item>
 
-  <item name="kirdneh city scroll">
+  <item name="克德内回城卷">
     <type class="scroll" subclass="kirdneh" tileid="-1"/>
-    <description>You see a kirdneh city scroll, it will take you back to kirdneh city.</description>
+    <description>You see a 克德内回城卷, it will take you back to kirdneh city.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_kirdneh_city 63 85"/>
@@ -146,9 +146,9 @@
     </equipable>
   </item>
 
-  <item name="kalavan city scroll">
+  <item name="卡拉文回城卷">
     <type class="scroll" subclass="kalavan" tileid="-1"/>
-    <description>You see a kalavan city scroll, it will take you back to kalavan city.</description>
+    <description>You see a 卡拉文回城卷, it will take you back to kalavan city.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_kalavan_city 64 17"/>
@@ -207,9 +207,9 @@
     </equipable>
   </item>
 
-  <item name="home scroll">
+  <item name="回城卷">
     <type class="scroll" subclass="home" tileid="-1"/>
-    <description>You see a home scroll, it will take you back to 塞门镇.</description>
+    <description>You see a 回城卷, it will take you back to 塞门镇.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_塞门_镇 30 40"/>

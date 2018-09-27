@@ -93,10 +93,10 @@ public class CoalForHaunchy extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.QUEST_OFFERED,
-				Arrays.asList("coal"),
+				Arrays.asList("煤炭"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"Coal 煤炭不易找到, 通常可以在地下的某处找到, 但也有可能在 塞门镇 的旧矿区通道内找到...",
+				"煤炭 煤炭不易找到, 通常可以在地下的某处找到, 但也有可能在 塞门镇 的旧矿区通道内找到...",
 				null);
 
         // player has completed the quest (doesn't happen here)
@@ -127,7 +127,7 @@ public class CoalForHaunchy extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"谢谢你！如果你找到 25 块煤炭, 请对我说 #coal 我就收到了, 我会给你相当不错的奖励.",
+				"谢谢你！如果你找到 25 块煤炭, 请对我说 #煤炭 我就收到了, 我会给你相当不错的奖励.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 5));
 
 		// Player says no, they've lost karma.
@@ -146,18 +146,18 @@ public class CoalForHaunchy extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("Haunchy Meatoch");
 
 		final List<String> triggers = new ArrayList<String>();
-		triggers.add("coal");
-		triggers.add("stone coal");
+		triggers.add("煤炭");
+		triggers.add("煤");
 		triggers.addAll(ConversationPhrases.QUEST_MESSAGES);
 
-		// player asks about quest or says coal when they are supposed to bring some coal and they have it
+		// player asks about quest or says 煤炭 when they are supposed to bring some 煤炭 and they have it
 		npc.add(
 				ConversationStates.ATTENDING, triggers,
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("coal",25)),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("煤炭",25)),
 				ConversationStates.ATTENDING,
 				null,
 				new MultipleActions(
-						new DropItemAction("coal",25),
+						new DropItemAction("煤炭",25),
 						new IncreaseXPAction(200),
 						new IncreaseKarmaAction(20),
 						new ChatAction() {
@@ -177,14 +177,14 @@ public class CoalForHaunchy extends AbstractQuest {
 		// player asks about quest or says coal when they are supposed to bring some coal and they don't have it
 		npc.add(
 				ConversationStates.ATTENDING, triggers,
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("coal",25))),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("煤炭",25))),
 				ConversationStates.ATTENDING,
 				"你给的煤不够我用的. 还请再去捡点回来！",
 				null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("coal","stone coal"),
+				Arrays.asList("煤炭","煤"),
 				new QuestNotInStateCondition(QUEST_SLOT,"start"),
 				ConversationStates.ATTENDING,
 				"有时你真是我的 #最爱 ...", null);
@@ -215,14 +215,14 @@ public class CoalForHaunchy extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
 			res.add("烧烤大餐的铁架温度不够, 我答应为 Haunchy 去找 25 块煤炭. ");
 		}
-		if ("start".equals(questState) && player.isEquipped("coal",25) || isCompleted(player)) {
+		if ("start".equals(questState) && player.isEquipped("煤炭",25) || isCompleted(player)) {
 			res.add("我找到了 25 块煤炭, 我想 Haunchy 一定会很高兴");
 		}
 		if (isCompleted(player)) {
 			if (isRepeatable(player)) {
 				res.add("我带着 25 块煤炭给了 Haunchy, 但我but I'd bet his amount is low again and needs more. Maybe I'll get more grilled tasty steaks.");
 			} else {
-				res.add("Haunchy Meatoch was really happy when I gave him the coal, he has enough for now. He gave me some of the best steaks which I ever ate!");
+				res.add("Haunchy Meatoch was really happy when I gave him the 煤炭, he has enough for now. He gave me some of the best steaks which I ever ate!");
 			}
 		}
 		return res;

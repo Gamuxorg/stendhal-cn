@@ -74,33 +74,33 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("木头",
 						"我需要一些木头保持炉子的火力. 你可以去森林里找到一些.");
 
-				addReply(Arrays.asList("ore", "iron", "iron ore"),
-				"你能到 Or'ril 西面的山上, 矮人矿附近的地方找到铁矿, 但去那要小心!");
+				addReply(Arrays.asList("铁矿", "铁矿石"),
+				"你能到 Or'ril 西面的山上, 矮人矿附近的地方找到铁矿石, 但去那要小心!");
 
 				addReply("淘金盘",
-				"带着这个工具, 你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖. 我以前在那里发现过金块 #'gold nugget' . 也许你也可以.");
+				"带着这个工具, 你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖. 我以前在那里发现过 #'金砂' . 也许你也可以.");
 
-				addReply("gold nugget",
-				"我兄弟住在 Ados. 他能把金块重铸成纯金条.");
+				addReply("金砂",
+				"我兄弟住在阿多斯. 他能把金块重铸成纯金条.");
 
-				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
+				addReply("线轴", "虽然我做工具 #生意 ,但我不做 ＃线轴 , 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
 				addReply(Arrays.asList("oil", "can of oil"), "Oh, 这些是由渔夫 fishermen 给我们供应.");
 
-				addHelp("如果你给我带来木头 #wood 和铁矿 #'iron ore', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
-				addJob("我是一个铁匠, 工作是鋳铁 #cast , 也 #销售 点工具.");
+				addHelp("如果你给我带来 #木头 和 #'铁矿石', 我能为你 #鋳铁 . 然后把它卖给矮人, 就可以为自已赚些钱.");
+				addJob("我是一个铁匠, 工作是 #鋳铁 , 也 #销售 点工具.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SellerBehaviour(SingletonRepository.getShopList().get("selltools")));
 
-				// 艾克德罗斯 casts iron if you bring him wood and iron ore.
+				// 艾克德罗斯 casts iron if you bring him wood and 铁矿石.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("木头", 1);
-				requiredResources.put("iron ore", 1);
+				requiredResources.put("铁矿石", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("xoderos_cast_iron",
-						"cast", "iron", requiredResources, 5 * 60);
+						"鋳铁", "铁锭", requiredResources, 5 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"欢迎, 很抱歉, 由于战争不允许我卖给你任何武器, 不过我可以给你铸铁 #cast , 也 #销售 一些工具.");
+				"欢迎, 很抱歉, 由于战争不允许我卖给你任何武器, 不过我可以给你 #铸铁 , 也 #销售 一些工具.");
 			}};
 			npc.setPosition(23, 12);
 			npc.setEntityClass("blacksmithnpc");

@@ -55,8 +55,8 @@ public class WeaponsCollector extends AbstractQuest implements
 		BringListOfItemsQuest {
 
 	private static final List<String> neededWeapons = Arrays.asList("大砍刀",
-			"战斧", "阔剑", "连枷", "战戟", "katana",
-			"黄金权杖", "scimitar", "大镰刀", "大战锤");
+			"战斧", "阔剑", "连枷", "战戟", "太刀",
+			"黄金权杖", "半月弯刀", "大镰刀", "大战锤");
 
 	private static final String QUEST_SLOT = "weapons_collector";
 

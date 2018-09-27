@@ -29,7 +29,7 @@ public class LichRaid extends CreateRaid {
 		attackArmy.put("warrior skeleton", 3);
 		attackArmy.put("elder skeleton", 4);
 		attackArmy.put("demon skeleton", 3);
-		attackArmy.put("bone dragon", 3);
+		attackArmy.put("骨龙", 3);
 		attackArmy.put("fallen warrior", 5);
 		attackArmy.put("fallen priest", 3);
 		attackArmy.put("fallen high priest", 2);

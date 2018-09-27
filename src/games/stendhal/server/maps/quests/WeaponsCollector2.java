@@ -240,11 +240,11 @@ public class WeaponsCollector2 extends AbstractQuest {
 									raiser.say("Thank you very much! Do you have anything more for me?");
 								} else {
 									final Item lhandsword = SingletonRepository.getEntityManager().getItem(
-											"l hand sword");
+											"右手剑");
 									lhandsword.setBoundTo(player.getName());
 									player.equipOrPutOnGround(lhandsword);
 									final Item rhandsword = SingletonRepository.getEntityManager().getItem(
-											"r hand sword");
+											"左手剑");
 									rhandsword.setBoundTo(player.getName());
 									player.equipOrPutOnGround(rhandsword);
 									player.addXP(3000);

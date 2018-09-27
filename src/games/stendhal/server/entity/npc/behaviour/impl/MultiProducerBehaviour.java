@@ -248,7 +248,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
      * Return a nicely formulated string that describes the amounts and names of
      * the resources that are required to produce <i>amount</i> units of the
      * choosen product, with hashes prepended to the resource names in order to
-     * highlight them, e.g. "4 #wood, 2 #iron, and 6 #leather".
+     * highlight them, e.g. "4 #wood, 2 #铁锭, and 6 #leather".
      *
      * @param productName
      *            The requested product name

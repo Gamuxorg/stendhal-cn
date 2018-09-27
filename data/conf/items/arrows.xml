@@ -69,7 +69,7 @@
   
   <item name="火箭">
     <type class="ammunition" subclass="fire_arrow" tileid="-1"/>
-    <description>You see a 火箭. The tip burns brightly.</description>
+    <description>尖端可以燃烧的火箭.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -92,7 +92,7 @@
   
     <item name="冰箭">
     <type class="ammunition" subclass="ice_arrow" tileid="-1"/>
-    <description>You see an ice arrow. It can deliver a bitter sting.</description>
+    <description>一支冰箭, 可以严重刺痛敌人.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -115,7 +115,7 @@
   
     <item name="电箭">
     <type class="ammunition" subclass="light_arrow" tileid="-1"/>
-    <description>You see a 电箭. It shines with a holy radiance.</description>
+    <description>一支闪着神圣光芒的电箭.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -136,9 +136,9 @@
     </equipable>
   </item>
   
-  <item name="dark arrow">
+  <item name="暗之箭">
     <type class="ammunition" subclass="dark_arrow" tileid="-1"/>
-    <description>You see a dark arrow. It's hard to describe.</description>
+    <description>暗之箭. 很难描述.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>

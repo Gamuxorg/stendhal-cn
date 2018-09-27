@@ -55,14 +55,14 @@ public class ScubaNPC implements ZoneConfigurator  {
 				addJob("I'm an assistant on this ship.");
 
 				//scuba gear phrases
-				addReply("scuba gear","You need scuba gear to explore the beautiful world below the sea.");
-				addReply("scuba","You need scuba gear to explore the beautiful world below the sea.");
-				addReply("gear","You need scuba gear to explore the beautiful world below the sea.");
+				addReply("潜水装","You need 潜水装 to explore the beautiful world below the sea.");
+				addReply("scuba","You need 潜水装 to explore the beautiful world below the sea.");
+				addReply("gear","You need 潜水装 to explore the beautiful world below the sea.");
 				//clue for the player.
 				addReply("study","Go to a library and check out the Diver's Handbook.");
 
 				//quest phrases;
-				addReply("license","Scuba diving can be dangerous before I can give you scuba gear you need to pass an #exam.");
+				addReply("license","Scuba diving can be dangerous before I can give you 潜水装 you need to pass an #exam.");
 				addReply("Mizuno","Do I know that name? Hmm... why yes! Come to think of it we sometimes see a man by that name wandering the #swamp during our breaks on the mainland.");
 				addReply("swamp","Ai it lies just north of the dock but, beware that marsh has been haunted since the days of #Blordrough.");
 				addReply("Blordrough","The demon lord Blordrough waged war in these lands some years ago until the day his army was routed by a coalition of the wood elves and Deniran forces. The three armies fought tooth and nail but, in the end, the demon lord flooded the lake and fled out to sea.");

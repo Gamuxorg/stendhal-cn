@@ -147,12 +147,12 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("int_kalavan_castle_basement", 150, 30,103)); // kalavan castle
 		locations.add(new Location("int_oni_palace_1", 150, 28, 28));		// oni palace
 		locations.add(new Location("-4_阿多斯_废弃_要塞", 150, 11, 27));	// -4 abandoned keep
-		locations.add(new Location("-2_塞门_矿山_w2", 150, 22, 39));		// balrog 塞门矿山
+		locations.add(new Location("-2_塞门_矿山_w2", 150, 22, 39));		// 巴洛克 塞门矿山
 		locations.add(new Location("-1_纳尔沃_昏暗_遂道_n", 170, 58, 44)); // nalwor drow tunnel (main)
 		locations.add(new Location("-6_阿多斯_废弃_要塞", 170, 15, 19));	// -6 ados abandoned keep
 		locations.add(new Location("int_mithrilbourgh_stores", 170, 6, 5));	// mithrilbourgh stores
 		locations.add(new Location("hell", 200, 66, 77));					// hell
-		locations.add(new Location("-1_fado_great_cave_w2", 200, 90, 57));  // sedah
+		locations.add(new Location("-1_fado_great_cave_w2", 200, 90, 57));  // 西大
 		locations.add(new Location("4_kikareukin_cave", 200, 10, 10)); 		// 4 kika
 		locations.add(new Location("5_kikareukin_cave", 200, 31, 100)); 	// 5 kika
 		locations.add(new Location("-2_塞门_矿山_e2", 200, 4, 5));			// chaos mines

@@ -30,7 +30,7 @@ import games.stendhal.server.entity.player.Player;
 
 /**
  * Builds a gatekeeper NPC Bribe him with at least 300 money to get the key for
- * the Sedah city walls. He stands in the doorway of the gatehouse till the
+ * the 西大城 walls. He stands in the doorway of the gatehouse till the
  * interior is made.
  *
  * @author kymara
@@ -65,11 +65,11 @@ public class GateKeeperNPC implements ZoneConfigurator {
 				addGreeting(null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						if (player.isEquipped("sedah gate key")) {
+						if (player.isEquipped("西大城门钥匙")) {
 							// toss a coin to see if he notices player still has
-							// the gate key
+							// the 大门钥匙
 							if (Rand.throwCoin() == 1) {
-								player.drop("sedah gate key");
+								player.drop("西大城门钥匙");
 								raiser.say("You shouldn't still have that key! I'll take that right back.");
 							} else {
 								raiser.say("Hi, again.");
@@ -81,8 +81,8 @@ public class GateKeeperNPC implements ZoneConfigurator {
 				});
 				addReply("nothing", "Good.");
 				addReply("key", "I'm open to bribery...");
-				addJob("I am the gatekeeper for the imperial city of Sedah. I am not supposed to let anyone pass, but perhaps you can make me an #offer.");
-				addHelp("You can't get into the imperial city of Sedah without a key.");
+				addJob("I am the gatekeeper for the imperial city of 西大. I am not supposed to let anyone pass, but perhaps you can make me an #offer.");
+				addHelp("You can't get into the imperial city of 西大 without a key.");
 				addQuest("The only favour I need is cold hard cash.");
 				addOffer("Only a #bribe could persuade me to hand over the key to that gate.");
 
@@ -109,7 +109,7 @@ public class GateKeeperNPC implements ZoneConfigurator {
 										player.drop("money", amount);
 										raiser.say("Ok, I got your money, here's the key.");
 										final Item key = SingletonRepository.getEntityManager().getItem(
-												"sedah gate key");
+												"西大城门钥匙");
 										player.equipOrPutOnGround(key);
 									} else {
 										// player bribed enough but doesn't have

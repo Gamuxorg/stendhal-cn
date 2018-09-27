@@ -39,7 +39,7 @@ import utilities.QuestHelper;
 public class SadScientistTest {
 	private static final String QUEST_SLOT = "sad_scientist";
 	// better: use the one from quest and make it visible
-	private static final String NEEDED_ITEMS = "翡翠=1;obsidian=1;蓝宝石=1;carbuncle=2;gold bar=20;mithril bar=1;shadow legs=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;obsidian=1;蓝宝石=1;carbuncle=2;金条=20;密银锭=1;影子护腿=1";
 	private Player player = null;
 	private SpeakerNPC npc = null;
 	private Engine en = null;
@@ -108,29 +108,29 @@ public class SadScientistTest {
 		en.step(player, "yes");
 		assertEquals("My wife is living in Semos City. She loves gems. Can you bring me some #gems that I need to make a pair of precious #legs?", getReply(npc));
 		en.step(player, "gems");
-		assertEquals("I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife?", getReply(npc));
+		assertEquals("I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 金条s and one 密银锭. Can you do that for my wife?", getReply(npc));
 		en.step(player, "legs");
-		assertEquals("Jewelled legs. I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife? Can you bring what I need?", getReply(npc));
+		assertEquals("宝石护腿. I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 金条s and one 密银锭. Can you do that for my wife? Can you bring what I need?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("I am waiting, Semos man.", getReply(npc));
 
 		// -----------------------------------------------
 
 		en.step(player, "hi");
-		assertEquals("Hello. Do you have any #items I need for the jewelled legs?", getReply(npc));
+		assertEquals("Hello. Do you have any #items I need for the 宝石护腿?", getReply(npc));
 
 		// summon all the items needed:
-		// but not all the gold bar
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 10);
-		PlayerTestHelper.equipWithItem(player, "mithril bar");
+		// but not all the 金条
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 10);
+		PlayerTestHelper.equipWithItem(player, "密银锭");
 		PlayerTestHelper.equipWithItem(player, "翡翠");
 		PlayerTestHelper.equipWithItem(player, "obsidian");
 		PlayerTestHelper.equipWithItem(player, "蓝宝石");
 		PlayerTestHelper.equipWithStackableItem(player, "carbuncle", 2);
 
-		assertFalse(player.isEquipped("gold bar", 20));
+		assertFalse(player.isEquipped("金条", 20));
 
-		final String[] triggers = { "obsidian", "gold bar", "carbuncle", "蓝宝石", "翡翠", "mithril bar" };
+		final String[] triggers = { "obsidian", "金条", "carbuncle", "蓝宝石", "翡翠", "密银锭" };
 
 		for (final String playerSays : triggers) {
 
@@ -143,24 +143,24 @@ public class SadScientistTest {
 			assertEquals("Good, do you have anything else?", getReply(npc));
 			assertThat(player.getQuest(QUEST_SLOT), not((is(NEEDED_ITEMS))));
 		}
-		// now bring the remaining gold bar
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 10);
+		// now bring the remaining 金条
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 10);
 
 		// -----------------------------------------------
-		en.step(player, "gold bar");
+		en.step(player, "金条");
 		assertEquals("I am a stupid fool too much in love with my wife Vera to remember, of course these legs also need a base to add " +
-		"the jewels to. Please return with a pair of shadow legs. Bye.", getReply(npc));
+		"the jewels to. Please return with a pair of 影子护腿. Bye.", getReply(npc));
 
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 
 		// return with no legs
 		en.step(player, "hi");
-		assertEquals("Hello again. Please return when you have the shadow legs, a base for me to add jewels to make jewelled legs for Vera.", getReply(npc));
+		assertEquals("Hello again. Please return when you have the 影子护腿, a base for me to add jewels to make 宝石护腿 for Vera.", getReply(npc));
 
-		PlayerTestHelper.equipWithItem(player, "shadow legs");
+		PlayerTestHelper.equipWithItem(player, "影子护腿");
 
 		en.step(player, "hi");
-		assertEquals("The shadow legs! Wonderful! I will start my work. I can do this in very little time with the help of technology! " +
+		assertEquals("The 影子护腿! Wonderful! I will start my work. I can do this in very little time with the help of technology! " +
 		"Please come back in 20 minutes.", getReply(npc));
 
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
@@ -179,7 +179,7 @@ public class SadScientistTest {
 		player.setQuest(QUEST_SLOT, "making;1");
 
 		en.step(player, "hi");
-		assertEquals("I finished the legs. But I cannot trust you. Before I give the jewelled legs to you, I need a message from my darling. Ask Mayor Sakhs for Vera. Can you do that for me?", getReply(npc));
+		assertEquals("I finished the legs. But I cannot trust you. Before I give the 宝石护腿 to you, I need a message from my darling. Ask Mayor Sakhs for Vera. Can you do that for me?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Oh, thank you. I am waiting.", getReply(npc));
 
@@ -216,7 +216,7 @@ public class SadScientistTest {
 		en.step(player, "hi");
 		assertEquals("Hello! Do you have anything for me?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Oh no! I feel the pain. I do not need to create those beautiful jewelled legs now. I want to transform them. I want to make them a symbol of pain. You! Go kill my brother, the Imperial Scientist Sergej Elos. Give me his blood.", getReply(npc));
+		assertEquals("Oh no! I feel the pain. I do not need to create those beautiful 宝石护腿 now. I want to transform them. I want to make them a symbol of pain. You! Go kill my brother, the 帝国科学家 Sergej Elos. Give me his blood.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Do it!", getReply(npc));
 		// i don't understand this. it doesn't always do it. but no error. weird.
@@ -239,9 +239,9 @@ public class SadScientistTest {
 		player.setSharedKill("Sergej Elos");
 
 		en.step(player, "hi");
-		assertEquals("Ha, ha, ha! I will cover those jewelled legs with this blood and they will transform into a #symbol of pain.", getReply(npc));
+		assertEquals("Ha, ha, ha! I will cover those 宝石护腿 with this blood and they will transform into a #symbol of pain.", getReply(npc));
 		en.step(player, "symbol");
-		assertEquals("I am going to create a pair of black legs. Come back in 5 minutes.", getReply(npc));
+		assertEquals("I am going to create a pair of 黑护腿. Come back in 5 minutes.", getReply(npc));
 
 		assertFalse(player.isEquipped("盛血高脚杯"));
 
@@ -265,12 +265,12 @@ public class SadScientistTest {
 		final double karma = player.getKarma();
 
 		en.step(player, "hi");
-		assertEquals("Here are the black legs. Now I beg you to wear them. The symbol of my pain is done. Fare thee well.", getReply(npc));
+		assertEquals("Here are the 黑护腿. Now I beg you to wear them. The symbol of my pain is done. Fare thee well.", getReply(npc));
 		// [23:05] kymara earns 10000 experience points.
 
 		// -----------------------------------------------
 		assertTrue(player.getQuest(QUEST_SLOT).equals("done"));
-		assertTrue(player.isEquipped("black legs"));
+		assertTrue(player.isEquipped("黑护腿"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getKarma(), greaterThan(karma));
 

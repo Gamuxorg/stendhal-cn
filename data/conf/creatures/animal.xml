@@ -21,7 +21,7 @@
     <drops>
       <item value="大治疗剂" quantity="[2,6]" probability="75.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="90.0"/>
-      <item value="orcish sword" quantity="[1,1]" probability="0.3"/>
+      <item value="兽人大剑" quantity="[1,1]" probability="0.3"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
     </drops>
     <equips>
@@ -154,7 +154,7 @@
       <item value="大治疗剂" quantity="[1,4]" probability="70.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
-      <item value="silk gland" quantity="[1,1]" probability="30.0"/>
+      <item value="蜘蛛丝腺" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -1221,7 +1221,7 @@
   
   <creature name="毒液鼠">
     <type class="small_animal" subclass="venomrat" tileid="small_animal.png:3"/>
-    <description>Y这是一只毒液鼠, 它有剧毒. </description>
+    <description>Y这是一只毒液鼠, 它有强毒. </description>
     <attributes>
       <atk value="89"/>
       <def value="14"/>
@@ -1269,7 +1269,7 @@
     <corpse name="small_winged" harmless="winged_bat" />
     <drops>
       <item value="肉" quantity="[1,2]" probability="80.0"/>
-      <item value="bat entrails" quantity="[1,1]" probability="60.0"/>
+      <item value="蝙蝠内脏" quantity="[1,1]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
@@ -1366,7 +1366,7 @@
     <drops>
       <item value="money" quantity="[7,20]" probability="100.0"/>
       <item value="干酪" quantity="[3,7]" probability="80.0"/>
-      <item value="rodent trap" quantity="[1,1]" probability="15.0" />
+      <item value="捕兽夹" quantity="[1,1]" probability="15.0" />
     </drops>
     <equips>
     </equips>
@@ -1648,7 +1648,7 @@
   
   <creature name="眼镜蛇王">
     <type class="huge_animal" subclass="king_cobra" tileid="huge_animal.png:9"/>
-    <description>这是一只眼镜蛇王, 他的剧毒让人不寒而栗. </description>
+    <description>这是一只眼镜蛇王, 他的强毒让人不寒而栗. </description>
     <attributes>
       <atk value="750"/>
       <def value="102"/>

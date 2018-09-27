@@ -77,7 +77,7 @@ public class RingSmithNPC implements ZoneConfigurator {
 				addOffer("I sell 订婚戒指s which I make myself. I also buy gems and gold, see the red catalogue on the table.");
 				addReply(
 						"gold",
-						"It's cast from gold nuggets which you can pan for on Or'ril river. I don't cast it myself, but a smith in Ados does.");
+						"It's cast from 金砂s which you can pan for on Or'ril river. I don't cast it myself, but a smith in Ados does.");
 				addHelp("I am an expert on #'婚戒s' and #'翡翠戒指s', sometimes called the ring of #life.");
 				addQuest("Well, you could consider getting married to be a quest! Ask me about #'婚戒s' if you need one.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellrings")), false);

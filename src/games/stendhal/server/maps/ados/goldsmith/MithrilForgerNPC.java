@@ -52,24 +52,24 @@ public class MithrilForgerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Greetings.");
 				addJob("I forge mithril. But magically, mind you. 约书亚 has kindly allowed me space to work here, despite the fact that I am so different from the others in Ados.");
-				addHelp("If you're here for gold bars, you must speak with 约书亚. I #cast the rare and precious #mithril #bar.");
+				addHelp("If you're here for 金条s, you must speak with 约书亚. I #cast the rare and precious #mithril #bar.");
 				addGoodbye("Bye.");
 
-				// Pedinghaus makes mithril if you bring him mithril nugget and wood
+				// Pedinghaus makes mithril if you bring him 密银矿石 and wood
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("木头", 20);
-				requiredResources.put("mithril nugget", 1);
+				requiredResources.put("密银矿石", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("Pedinghaus_cast_mithril",
-						"cast", "mithril bar", requiredResources, 18 * 60);
+						"cast", "密银锭", requiredResources, 18 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.");
+				        "Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'密银锭', just say the word.");
 				addReply("木头",
 		        		"The wood is for the fire. I hope you collect yours from the forest, and not the barbaric practise of killing ents.");
-				addReply(Arrays.asList("mithril ore", "mithril nugget"),
+				addReply(Arrays.asList("mithril ore", "密银矿石"),
 				        "Nowadays these rare nuggets are only likely to be found in the Ados mountains. I have no idea if that area is still civilised...");
-				addReply(Arrays.asList("mithril bar", "mithril", "bar"),
+				addReply(Arrays.asList("密银锭", "mithril", "bar"),
 				        "Mithril is an incredibly valuable commodity, as it makes armor of astounding strength, yet remains featherlight. Guard any mithril stash you own with great care.");
 			}
 		};

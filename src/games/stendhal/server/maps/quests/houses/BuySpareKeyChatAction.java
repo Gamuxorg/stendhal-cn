@@ -37,7 +37,7 @@ final class BuySpareKeyChatAction extends HouseChatAction implements ChatAction 
 
 			final String housenumber = player.getQuest(questslot);
 			final Item key = SingletonRepository.getEntityManager().getItem(
-																			"house key");
+																			"房间钥匙");
 			final int number = MathHelper.parseInt(housenumber);
 			final HousePortal houseportal = HouseUtilities.getHousePortal(number);
 

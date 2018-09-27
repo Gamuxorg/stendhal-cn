@@ -40,9 +40,9 @@ public class FourthFloorCreatures implements ZoneConfigurator {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
 		final Creature creature = manager.getCreature("水元素");
-		final Creature creature1 = manager.getCreature("ice elemental");
-		final Creature creature2 = manager.getCreature("ice giant");
-		final Creature creature3 = manager.getCreature("ice golem");
+		final Creature creature1 = manager.getCreature("冰元素");
+		final Creature creature2 = manager.getCreature("冰巨人");
+		final Creature creature3 = manager.getCreature("冰傀儡");
 
 		creature.setAIProfiles(new HashMap<String, String>());
 		creature1.setAIProfiles(new HashMap<String, String>());

@@ -68,7 +68,7 @@ class MakeRings {
 							// says you'll need a ring
 							npc.say("I need "
 									+ REQUIRED_GOLD
-									+ " gold bars and a fee of "
+									+ " 金条s and a fee of "
 									+ REQUIRED_MONEY
 									+ " money, to make a 婚戒 for your fiancee. Do you have it?");
 						}
@@ -97,7 +97,7 @@ class MakeRings {
 				new AndCondition(new QuestCompletedCondition(marriage.getQuestSlot()), new NotCondition(new PlayerHasItemWithHimCondition("婚戒"))),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Uh oh! You haven't got your 婚戒 on! I can forge you another for " + REQUIRED_GOLD
-									+ " gold bars and a fee of "
+									+ " 金条s and a fee of "
 									+ REQUIRED_MONEY
 									+ " money, do you want another?",
 				null);
@@ -166,9 +166,9 @@ class MakeRings {
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-						if ((player.isEquipped("gold bar", REQUIRED_GOLD))
+						if ((player.isEquipped("金条", REQUIRED_GOLD))
 								&& (player.isEquipped("money", REQUIRED_MONEY))) {
-							player.drop("gold bar", REQUIRED_GOLD);
+							player.drop("金条", REQUIRED_GOLD);
 							player.drop("money", REQUIRED_MONEY);
 							npc.say("Good, come back in "
 									+ REQUIRED_MINUTES

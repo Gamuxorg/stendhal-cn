@@ -57,19 +57,19 @@ public class WordListTest {
 		assertTrue(w.isPlural());
 		assertEquals("man", w.getPlurSing());
 
-		w = wl.find("carrot");
+		w = wl.find("胡萝卜");
 		assertNotNull(w);
 		assertTrue(w.getType().isObject());
 		assertEquals(ExpressionType.OBJECT + ExpressionType.SUFFIX_FOOD, w.getTypeString());
 		assertFalse(w.isPlural());
-		assertEquals("carrots", w.getPlurSing());
+		assertEquals("胡萝卜s", w.getPlurSing());
 
-		w = wl.find("carrots");
+		w = wl.find("胡萝卜s");
 		assertNotNull(w);
 		assertTrue(w.getType().isObject());
 		assertEquals(ExpressionType.OBJECT + ExpressionType.SUFFIX_FOOD + ExpressionType.SUFFIX_PLURAL, w.getTypeString());
 		assertTrue(w.isPlural());
-		assertEquals("carrot", w.getPlurSing());
+		assertEquals("胡萝卜", w.getPlurSing());
 
 		w = wl.find("水");
 		assertNotNull(w);

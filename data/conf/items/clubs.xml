@@ -149,7 +149,7 @@
   
   <item name="铁锤">
     <type class="club" subclass="hammer" tileid="-1"/>
-    <description>You see a common 铁锤. It is heavy enough that you should be able to bludgeon your enemies with it, but only slowly</description>
+    <description>一把铁锤. 很重足以重伤敌人, 但速度慢.在</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="31"/>
@@ -192,7 +192,7 @@
 
   <item name="权杖">
     <type class="club" subclass="mace" tileid="-1"/>
-    <description>You see a 权杖, much neglected in years of use.</description>
+    <description>一根权杖, 这些年很少使用了.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="16"/>
@@ -212,7 +212,7 @@
   
   <item name="破晓之星">
     <type class="club" subclass="golden_flail" tileid="-1"/>
-    <description>You see a 破晓之星.  This is a very rare item indeed.</description>
+    <description>一把破晓之星.  很常稀有的武器.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="25"/>
@@ -233,7 +233,7 @@
   
   <item name="巫师法杖">
     <type class="club" subclass="wizard_staff" tileid="-1"/>
-    <description>You see a cunningly beautiful 法杖. If you listen carefully you can hear its previous owners' souls screaming from within it.</description>
+    <description>做工精巧的巫师法杖. 如果仔细听, 可以听见它的前主人的灵魂在里面的尖叫声.</description>
     <implementation class-name="games.stendhal.server.entity.item.NecroStaff"/>
     <attributes>
       <atk value="8"/>
@@ -254,7 +254,7 @@
   
   <item name="GM自慰棒">
     <type class="club" subclass="rod_of_the_gm" tileid="-1"/>
-    <description>You see a GM自慰棒.  This rod is reserved for those with special powers, be careful not to let it fall into the wrong hands.</description>
+    <description>一根 GM自慰棒.  有种特殊的能量, 但要小心不要落入其他人手中.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="100"/>
@@ -275,7 +275,7 @@
   
   <item name="骨玉法杖">
     <type class="club" subclass="skull_staff" tileid="-1"/>
-    <description>You see a rare 骨玉法杖. It appears mystical but will work like any other staff.</description>
+    <description>一根罕见的骨玉法杖. 它具有神秘的力量但也可像其他魔杖一样使用.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="22"/>
@@ -297,7 +297,7 @@
   
   <item name="法杖">
     <type class="club" subclass="staff" tileid="-1"/>
-    <description>You see a 法杖. This is a seldom seen or used weapon.</description>
+    <description>一根法杖. 不常用作近战武器.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="9"/>
@@ -317,7 +317,7 @@
   
   <item name="巨棍">
     <type class="club" subclass="ugmash" tileid="-1"/>
-    <description>You see a huge 巨棍. It can attack with a faster rate than many other clubs.</description>
+    <description>一根巨棍. 可以比其它类型的棍子更快速打击敌人.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -338,7 +338,7 @@
 
   <item name="火山之锤">
     <type class="club" subclass="vulcano_hammer" tileid="-1"/>
-    <description>You see a 火山之锤. It's said to be a weapon of a God, but attacks with a snail like pace.</description>
+    <description>一反火山之锤. 据说是天神的武器, 但使用速度像蜗牛一样.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="48"/>

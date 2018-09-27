@@ -246,13 +246,13 @@ public class StackableItemTest {
 	    stackables.add(adosStack);
 	    final StackableItem fadoStack = (StackableItem) SingletonRepository.getEntityManager().getItem("fado city scroll");
 	    stackables.add(fadoStack);
-	    final StackableItem kirdnehStack = (StackableItem) SingletonRepository.getEntityManager().getItem("kirdneh city scroll");
+	    final StackableItem kirdnehStack = (StackableItem) SingletonRepository.getEntityManager().getItem("克德内回城卷");
 	    stackables.add(kirdnehStack);
         final StackableItem kalavanStack = (StackableItem) SingletonRepository.getEntityManager().getItem("kalavan city scroll");
         stackables.add(kalavanStack);
         final StackableItem markedStack = (StackableItem) SingletonRepository.getEntityManager().getItem("marked scroll");
         stackables.add(markedStack);
-        final StackableItem homeStack = (StackableItem) SingletonRepository.getEntityManager().getItem("home scroll");
+        final StackableItem homeStack = (StackableItem) SingletonRepository.getEntityManager().getItem("回城卷");
         stackables.add(homeStack);
         final StackableItem emptyStack = (StackableItem) SingletonRepository.getEntityManager().getItem("empty scroll");
         stackables.add(emptyStack);

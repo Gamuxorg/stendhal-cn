@@ -165,7 +165,7 @@ public class ObsidianKnifeTest {
 		// [09:29] Changed the state of quest 'obsidian_knife' from 'reading;1219829318495' to 'reading;0'
 		en.step(player, "hi");
 		assertEquals("I've finished reading! That was really interesting. I learned how to make a special #knife from #obsidian.", getReply(npc));
-		en.step(player, "knife");
+		en.step(player, "小刀");
 		assertEquals("Well, I don't think you're quite ready for such a dangerous weapon yet. How about you come back when you're above level 50?", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
@@ -175,8 +175,8 @@ public class ObsidianKnifeTest {
 		assertThat(player.getLevel(), greaterThan(50));
 
 		en.step(player, "hi");
-		assertEquals("Hi! Perhaps you have come to ask about that #knife again ... ", getReply(npc));
-		en.step(player, "knife");
+		assertEquals("Hi! Perhaps you have come to ask about that #小刀 again ... ", getReply(npc));
+		en.step(player, "小刀");
 		assertEquals("I'll make an 黑曜石刀 if you can slay a black dragon and get the gem which makes the blade. Bring a cod so that I can make the bone handle, too.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("knife_offered"));
 		en.step(player, "bye");

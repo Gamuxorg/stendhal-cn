@@ -194,7 +194,7 @@ public class SevenCherubs extends AbstractQuest {
 								 * because you already get that from the
 								 * CloaksForBario quest.
 								 *
-								 * Golden legs was disabled because it can
+								 * 黄金护腿 was disabled because it can
 								 * be won in DiceGambling.
 								 *
 								 * 烈火剑 was disabled because it can be

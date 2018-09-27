@@ -124,15 +124,15 @@ public class DiceGambling extends AbstractQuest {
 				"你赢了一杯可口的红酒！"));
 		map.put(9, new Pair<String, String>("镶嵌盾",
 				"这个简单的盾是给你的奖励"));
-		map.put(10, new Pair<String, String>("chain legs",
-				"我希望你能用到这些 chain legs."));
+		map.put(10, new Pair<String, String>("索链护腿",
+				"我希望你能用到这些 索链护腿."));
 		map.put(11,	new Pair<String, String>("抗毒药济",
 			   "当你在野外中毒时, 这瓶解毒济可帮上大忙"));
 		map.put(12, new Pair<String, String>("三明治",
 				"你赢了一块美味的三明治！"));
 		map.put(13, new Pair<String, String>("芝士狗",
 				"把这个好吃的 cheesydog 带走吧！"));
-		map.put(14, new Pair<String, String>("home scroll",
+		map.put(14, new Pair<String, String>("回城卷",
 		"你赢到了这个好用的回城卷！"));
 		map.put(15,	new Pair<String, String>("大治疗剂",
 				"你赢了一瓶大生命药济, 但你以前或许从来没用过这个!"));

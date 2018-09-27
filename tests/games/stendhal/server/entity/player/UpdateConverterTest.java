@@ -124,6 +124,7 @@ public class UpdateConverterTest {
 		final Player player = PlayerTestHelper.createPlayer("player");
 
 		// First we use only the old quest slot name.
+<<<<<<< HEAD
 		player.setQuest("Valo_concoct_potion", "3;强治疗剂;1200000000000");
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
@@ -134,6 +135,18 @@ public class UpdateConverterTest {
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
 		assertEquals("11;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
+=======
+		player.setQuest("Valo_concoct_potion", "3;强治疗剂;1200000000000");
+		UpdateConverter.updateQuests(player);
+		assertNull(player.getQuest("Valo_concoct_potion"));
+		assertEquals("3;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
+
+		// Now add the old name to the existing new one and see if they are accumulated correct.
+		player.setQuest("Valo_concoct_potion", "8;强治疗剂;1300000000000");
+		UpdateConverter.updateQuests(player);
+		assertNull(player.getQuest("Valo_concoct_potion"));
+		assertEquals("11;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 
 	/**
@@ -148,7 +161,7 @@ public class UpdateConverterTest {
 		UpdateConverter.updateQuests(player);
 		assertEquals(player.getQuest("clean_storage"), "start;rat,0,1,0,0,caverat,0,1,0,0,snake,0,1,0,0");
 		assertEquals(player.getQuest("kill_gnomes"), "start;gnome,0,1,0,0,infantry gnome,0,1,0,0,cavalryman gnome,0,1,0,0");
-		assertEquals(player.getQuest("kill_dhohr_nuggetcutter"), "start;Dhohr Nuggetcutter,0,1,0,0,mountain dwarf,0,1,0,0,mountain elder dwarf,0,1,0,0,mountain hero dwarf,0,1,0,0,mountain leader dwarf,0,1,0,0");
+		assertEquals(player.getQuest("kill_dhohr_nuggetcutter"), "start;钳工都尔,0,1,0,0,mountain dwarf,0,1,0,0,mountain elder dwarf,0,1,0,0,mountain hero dwarf,0,1,0,0,mountain leader dwarf,0,1,0,0");
 	}
 
 	/**

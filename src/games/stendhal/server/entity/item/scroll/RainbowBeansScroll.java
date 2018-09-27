@@ -68,7 +68,7 @@ public class RainbowBeansScroll extends TimedTeleportScroll {
 				// so are not allowed to go yet. but don't reset the last time taken.
 				// the private text doesn't get sent because events are lost on zone change. (marauroa bug)
 				player.sendPrivateText("You were just sick from overuse of the 彩虹豆. Classy!");
-				final Item sick = SingletonRepository.getEntityManager().getItem("vomit");
+				final Item sick = SingletonRepository.getEntityManager().getItem("呕吐物");
 				player.getZone().add(sick);
 				sick.setPosition(player.getX(), player.getY() + 1);
 				// Success, so that the beans still gets used up, even though
@@ -84,7 +84,7 @@ public class RainbowBeansScroll extends TimedTeleportScroll {
 			// so if they didn't have the quest slot they got the beans ''illegally''
 			player.sendPrivateText("Those dodgy beans made you sick. Next time buy them from Pdiddi.");
 			this.removeOne();
-			final Item sick = SingletonRepository.getEntityManager().getItem("vomit");
+			final Item sick = SingletonRepository.getEntityManager().getItem("呕吐物");
 			player.getZone().add(sick);
 			sick.setPosition(player.getX(), player.getY() + 1);
 			return false;

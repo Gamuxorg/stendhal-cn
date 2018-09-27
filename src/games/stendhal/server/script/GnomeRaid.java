@@ -29,7 +29,7 @@ public class GnomeRaid extends CreateRaid {
 		attackArmy.put("法师侏儒", 7);
 		attackArmy.put("步兵侏儒", 10);
 		attackArmy.put("骑兵侏儒", 10);
-		attackArmy.put("dark gargoyle", 2);
+		attackArmy.put("黑暗石像鬼", 2);
 
 		return attackArmy;
 	}

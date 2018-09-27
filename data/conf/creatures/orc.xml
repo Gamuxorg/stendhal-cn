@@ -161,7 +161,7 @@
       <item value="鳞甲" quantity="[1,1]" probability="9.0"/>
       <item value="铁鳞甲" quantity="[1,1]" probability="2.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="0.2"/>
-      <item value="治疗济" quantity="[1,1]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="30.0"/>
       <item value="铁靴" quantity="[1,1]" probability="0.5"/>
       <item value="cloak" quantity="[1,1]" probability="10.0"/>
     </drops>

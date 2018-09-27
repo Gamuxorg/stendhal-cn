@@ -200,12 +200,12 @@ public class AdosHouseSellerTest {
 		StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
 		money.setQuantity(120000);
 		george.equipToInventoryOnly(money);
-		assertFalse(george.isEquipped("house key"));
+		assertFalse(george.isEquipped("房间钥匙"));
 		assertTrue(george.isEquipped("money", 120000));
 		en.step(george, "51");
 		assertThat(getReply(seller), containsString("Congratulations"));
 		assertFalse(george.isEquipped("money", 120000));
-		assertTrue(george.isEquipped("george's house key"));
+		assertTrue(george.isEquipped("george's 房间钥匙"));
 
 	}
 

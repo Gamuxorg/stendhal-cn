@@ -49,17 +49,17 @@ public class ItemGuardCreatureTest {
 	public void testOnDead() {
 		StendhalRPZone zone = new StendhalRPZone("test zone");
 		Creature copy = SingletonRepository.getEntityManager().getCreature("rat");
-		ItemGuardCreature creature = new ItemGuardCreature(copy, "knife", "test_quest", "start", 0);
+		ItemGuardCreature creature = new ItemGuardCreature(copy, "小刀", "test_quest", "start", 0);
 		zone.add(creature);
 		Player player = PlayerTestHelper.createPlayer("bob");
 		creature.onDead(player);
-		assertTrue(player.getFirstEquipped("knife") == null);
+		assertTrue(player.getFirstEquipped("小刀") == null);
 		player.setQuest("test_quest","notStarted");
 		creature.onDead(player);
-		assertTrue(player.getFirstEquipped("knife") == null);
+		assertTrue(player.getFirstEquipped("小刀") == null);
 		player.setQuest("test_quest","start");
 		creature.onDead(player);
-		assertTrue(player.getFirstEquipped("knife") != null);
+		assertTrue(player.getFirstEquipped("小刀") != null);
 	}
 
 }

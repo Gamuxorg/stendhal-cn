@@ -42,7 +42,7 @@ public class SixthFloorCreatures implements ZoneConfigurator {
 		final Creature creature = manager.getCreature("littlefairy");
 		final Creature creature1 = manager.getCreature("飞马");
 		final Creature creature2 = manager.getCreature("独角兽");
-		final Creature creature3 = manager.getCreature("archangel");
+		final Creature creature3 = manager.getCreature("天使长");
 
 		creature.setAIProfiles(new HashMap<String, String>());
 		creature1.setAIProfiles(new HashMap<String, String>());

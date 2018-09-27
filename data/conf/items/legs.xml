@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 
-  <item name="black legs">
+  <item name="黑护腿">
     <type class="legs" subclass="black_legs" tileid="-1"/>
-    <description>You see a pair of black legs.</description>
+    <description>You see a pair of 黑护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="15"/>
@@ -23,9 +23,9 @@
     </equipable>
   </item>
 	
-  <item name="blue legs">
+  <item name="蓝裤子">
     <type class="legs" subclass="blue_legs" tileid="-1"/>
-    <description>You see a pair of shiny new blue legs.</description>
+    <description>You see a pair of shiny new 蓝裤子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -42,9 +42,9 @@
     </equipable>
   </item>
 	
-  <item name="chain legs">
+  <item name="索链护腿">
     <type class="legs" subclass="chain_legs" tileid="-1"/>
-    <description>You see a pair of well made chain legs. They should protect you against any attacks aimed low.</description>
+    <description>You see a pair of well made 索链护腿. They should protect you against any attacks aimed low.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -60,9 +60,9 @@
     </equipable>
   </item>
 	
-  <item name="chaos legs">
+  <item name="混沌护腿">
     <type class="legs" subclass="chaos_legs" tileid="-1"/>
-    <description>You see a pair of chaos legs. The strange colours confuse you.</description>
+    <description>You see a pair of 混沌护腿. The strange colours confuse you.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -79,9 +79,9 @@
     </equipable>
   </item>
   
-  <item name="dwarvish legs">
+  <item name="矮人护腿">
     <type class="legs" subclass="dwarvish_legs" tileid="-1"/>
-    <description>You see a pair of dwarvish legs, designed by master craftsmen.</description>
+    <description>You see a pair of 矮人护腿, designed by master craftsmen.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -98,9 +98,9 @@
     </equipable>
   </item>
   
-  <item name="elvish legs">
+  <item name="精灵护腿">
     <type class="legs" subclass="elvish_legs" tileid="-1"/>
-    <description>You see a pair of elvish legs.</description>
+    <description>You see a pair of 精灵护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -117,9 +117,9 @@
     </equipable>
   </item>
   
-  <item name="golden legs">
+  <item name="黄金护腿">
     <type class="legs" subclass="golden_legs" tileid="-1"/>
-    <description>You see a pair of shining, strong golden legs.</description>
+    <description>You see a pair of shining, strong 黄金护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="8"/>
@@ -136,9 +136,9 @@
     </equipable>
   </item>
   
-  <item name="jewelled legs">
+  <item name="宝石护腿">
     <type class="legs" subclass="jewelled_legs" tileid="-1"/>
-    <description>You see a beautiful pair of jewelled legs. A large red gem glints at you and they're encrusted all over with sapphires.</description>
+    <description>You see a beautiful pair of 宝石护腿. A large red gem glints at you and they're encrusted all over with sapphires.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -155,9 +155,9 @@
     </equipable>
   </item>
   
-  <item name="leather legs">
+  <item name="皮裤">
     <type class="legs" subclass="leather_legs" tileid="-1"/>
-    <description>You see a pair of leather legs. They look new but they're poor quality.</description>
+    <description>You see a pair of 皮裤. They look new but they're poor quality.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -173,9 +173,9 @@
     </equipable>
   </item>
   
-  <item name="mainio legs">
+  <item name="奇妙裤子">
     <type class="legs" subclass="mainio_legs" tileid="-1"/>
-    <description>You see a pair of odd looking mainio legs. They are somewhat startling but they give you a good protection.</description>
+    <description>You see a pair of odd looking 奇妙裤子. They are somewhat startling but they give you a good protection.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -192,9 +192,9 @@
     </equipable>
   </item>
   
-  <item name="mithril legs">
+  <item name="密银护腿">
     <type class="legs" subclass="mithril_legs" tileid="-1"/>
-    <description>You see a pair of mithril legs. They will serve you well.</description>
+    <description>You see a pair of 密银护腿. They will serve you well.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -213,9 +213,9 @@
     </equipable>
   </item>
   
-  <item name="red legs">
+  <item name="红裤子">
     <type class="legs" subclass="red_legs" tileid="-1"/>
-    <description>A pair of red legs are in your grasp.</description>
+    <description>A pair of 红裤子 are in your grasp.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -231,9 +231,9 @@
     </equipable>
   </item>
   
-  <item name="shadow legs">
+  <item name="影子护腿">
     <type class="legs" subclass="shadow_legs" tileid="-1"/>
-    <description>You see a pair of shadow legs. The weight of them is incredible.</description>
+    <description>You see a pair of 影子护腿. The weight of them is incredible.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -252,9 +252,9 @@
     </equipable>
   </item>
 
-  <item name="stone legs">
+  <item name="石护腿">
     <type class="legs" subclass="stone_legs" tileid="-1"/>
-    <description>You see a pair of stone legs, heavy and durable.</description>
+    <description>You see a pair of 石护腿, heavy and durable.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -273,9 +273,9 @@
     </equipable>
   </item>
   
-  <item name="studded legs">
+  <item name="镶嵌护腿">
     <type class="legs" subclass="studded_legs" tileid="-1"/>
-    <description>You see a pair of blood stained studded legs. You're not sure if the blood came from their last owner ... or his enemies.</description>
+    <description>You see a pair of blood stained 镶嵌护腿. You're not sure if the blood came from their last owner ... or his enemies.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -291,9 +291,9 @@
     </equipable>
   </item>
 
-  <item name="xeno legs">
+  <item name="异界护腿">
     <type class="legs" subclass="xeno_legs" tileid="-1"/>
-    <description>You see a pair of xeno legs. They're very strong and look brand new.</description>
+    <description>You see a pair of 异界护腿. They're very strong and look brand new.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>

@@ -83,7 +83,7 @@ public class StuffForBaldemar extends AbstractQuest {
 	private final BringOrderedListOfItemsQuestLogic questLogic = new BringOrderedListOfItemsQuestLogic();
 
 	public StuffForBaldemar() {
-		itemCollector.require().item("mithril bar").pieces(20)
+		itemCollector.require().item("密银锭").pieces(20)
 				.bySaying("I cannot #forge it without the missing %s. After all, this IS a 密银盾.");
 		itemCollector.require().item("黑曜石")
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
@@ -98,15 +98,15 @@ public class StuffForBaldemar extends AbstractQuest {
 		itemCollector.require().item("黑盾").bySaying("I need %s to form the framework for your new shield.");
 		itemCollector.require().item("附魔钢盾")
 				.bySaying("I need %s for the pieces and parts for your new shield.");
-		itemCollector.require().item("gold bar").pieces(10)
-				.bySaying("I need %s to melt down with the mithril and iron.");
-		itemCollector.require().item("iron").pieces(20).bySaying("I need %s to melt down with the mithril and gold.");
+		itemCollector.require().item("金条").pieces(10)
+				.bySaying("I need %s to melt down with the mithril and 铁锭.");
+		itemCollector.require().item("铁锭").pieces(20).bySaying("I need %s to melt down with the mithril and gold.");
 		itemCollector.require().item("黑珍珠").pieces(10)
 				.bySaying("I need %s to crush into fine powder to sprinkle onto shield to give it a nice sheen.");
-		itemCollector.require().item("shuriken").pieces(20).bySaying(
-				"I need %s to melt down with the mithril, gold and iron. It is a 'secret' ingredient that only you and I know about. ;)");
-		itemCollector.require().item("marbles").pieces(15).bySaying("My son wants some new toys. I need %s still.");
-		itemCollector.require().item("snowglobe").bySaying("I just LOVE those trinkets from Athor. I need %s still.");
+		itemCollector.require().item("忍者镖").pieces(20).bySaying(
+				"I need %s to melt down with the mithril, gold and 铁锭. It is a 'secret' ingredient that only you and I know about. ;)");
+		itemCollector.require().item("玻璃球").pieces(15).bySaying("My son wants some new toys. I need %s still.");
+		itemCollector.require().item("雪珠").bySaying("I just LOVE those trinkets from Athor. I need %s still.");
 
 		questLogic.setItemCollector(itemCollector);
 		questLogic.setQuest(this);

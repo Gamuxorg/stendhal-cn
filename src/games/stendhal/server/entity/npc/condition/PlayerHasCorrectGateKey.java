@@ -27,8 +27,8 @@ public class PlayerHasCorrectGateKey implements ChatCondition {
 			return false;
 		}
 
-		// get all gate keys and check if one matches
-		List<Item> keys = player.getAllEquipped("gate key");
+		// get all 大门钥匙s and check if one matches
+		List<Item> keys = player.getAllEquipped("大门钥匙");
 		for (Item key : keys) {
 			if (((GateKey) key).matches(raiser.get("identifier"))) {
 				return true;

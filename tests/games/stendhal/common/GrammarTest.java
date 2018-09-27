@@ -183,8 +183,8 @@ public class GrammarTest {
 		assertEquals("piece of cheese", Grammar.fullForm("Cheese"));
 		assertEquals("piece of wood", Grammar.fullForm("wood"));
 		assertEquals("piece of paper", Grammar.fullForm("paper"));
-		assertEquals("piece of iron", Grammar.fullForm("iron"));
-		assertEquals("nugget of iron ore", Grammar.fullForm("iron ore"));
+		assertEquals("piece of iron", Grammar.fullForm("铁锭"));
+		assertEquals("nugget of 铁矿", Grammar.fullForm("铁矿石"));
 		assertEquals("sack of flour", Grammar.fullForm("面粉"));
 		assertEquals("sheaf of grain", Grammar.fullForm("grain"));
 		assertEquals("loaf of bread", Grammar.fullForm("bread"));
@@ -264,7 +264,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("fire swords", "fire sword");
 		testPluralisationAndSingularisation("ice swords", "ice sword");
 		testPluralisationAndSingularisation("great swords", "great sword");
-		testPluralisationAndSingularisation("r hand swords", "r hand sword");
+		testPluralisationAndSingularisation("左手剑s", "左手剑");
 		testPluralisationAndSingularisation("l hand swords", "l hand sword");
 		testPluralisationAndSingularisation("small axes", "small axe");
 		testPluralisationAndSingularisation("hand axes", "hand axe");
@@ -351,10 +351,10 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("trophy helmets", "trophy helmet");
 		testPluralisationAndSingularisation("pairs of leather legs",
 				"pair of leather legs");
-		testPluralisationAndSingularisation("pairs of studded legs",
-				"pair of studded legs");
-		testPluralisationAndSingularisation("pairs of chain legs",
-				"pair of chain legs");
+		testPluralisationAndSingularisation("pairs of 镶嵌护腿",
+				"pair of 镶嵌护腿");
+		testPluralisationAndSingularisation("pairs of 索链护腿",
+				"pair of 索链护腿");
 		testPluralisationAndSingularisation("pairs of golden legs",
 				"pair of golden legs");
 		testPluralisationAndSingularisation("pairs of leather boots",
@@ -379,11 +379,11 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("black dragon cloaks",
 				"black dragon cloak");
 		testPluralisationAndSingularisation("golden cloaks", "golden cloak");
-		testPluralisationAndSingularisation("cherries", "cherry");
+		testPluralisationAndSingularisation("cherries", "樱桃");
 		testPluralisationAndSingularisation("pieces of cheese",
 				"piece of cheese");
-		testPluralisationAndSingularisation("carrots", "carrot");
-		testPluralisationAndSingularisation("salads", "salad");
+		testPluralisationAndSingularisation("胡萝卜s", "胡萝卜");
+		testPluralisationAndSingularisation("色拉s", "色拉");
 		testPluralisationAndSingularisation("apples", "apple");
 		testPluralisationAndSingularisation("loaves of bread",
 				"loaf of bread");
@@ -400,11 +400,11 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
-		testPluralisationAndSingularisation("bottles of greater potion",
-				"greater potion");
+		testPluralisationAndSingularisation("bottles of 大治疗剂",
+				"大治疗剂");
 		testPluralisationAndSingularisation("bottles of poison", "poison");
-		testPluralisationAndSingularisation("bottles of greater poison",
-				"greater poison");
+		testPluralisationAndSingularisation("bottles of 强毒",
+				"强毒");
 		testPluralisationAndSingularisation("bottles of deadly poison",
 				"deadly poison");
 		testPluralisationAndSingularisation("flasks", "flask");
@@ -416,8 +416,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("sheaves of grain",
 				"sheaf of grain");
 		testPluralisationAndSingularisation("bags of flour", "bag of flour");
-		testPluralisationAndSingularisation("nuggets of iron ore",
-				"nugget of iron ore");
+		testPluralisationAndSingularisation("nuggets of 铁矿石",
+				"nugget of 铁矿石");
 		testPluralisationAndSingularisation("bars of iron", "bar of iron");
 		testPluralisationAndSingularisation("golden gm tokens",
 				"golden gm token");
@@ -433,7 +433,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("maps", "map");
 		testPluralisationAndSingularisation("summon scrolls", "summon scroll");
 		testPluralisationAndSingularisation("empty scrolls", "empty scroll");
-		testPluralisationAndSingularisation("home scrolls", "home scroll");
+		testPluralisationAndSingularisation("回城卷s", "回城卷");
 		testPluralisationAndSingularisation("marked scrolls", "marked scroll");
 		testPluralisationAndSingularisation("presents", "present");
 		testPluralisationAndSingularisation("rods of the gm", "rod of the gm");
@@ -457,7 +457,7 @@ public class GrammarTest {
         testPluralisationAndSingularisation("men", "man");
         testPluralisationAndSingularisation("humans", "human");
 
-        testPluralisationAndSingularisation("tomatoes", "tomato");
+        testPluralisationAndSingularisation("西红柿es", "西红柿");
 		testPluralisationAndSingularisation("algae", "alga");
 		testPluralisationAndSingularisation("larvae", "larva");
 		testPluralisationAndSingularisation("hyphae", "hypha");
@@ -554,7 +554,7 @@ public class GrammarTest {
 				"veteran kobold");
 		testPluralisationAndSingularisation("trolls", "troll");
 		testPluralisationAndSingularisation("orcs", "orc");
-		testPluralisationAndSingularisation("dark gargoyles", "dark gargoyle");
+		testPluralisationAndSingularisation("黑暗石像鬼s", "黑暗石像鬼");
 		testPluralisationAndSingularisation("ogres", "ogre");
 		testPluralisationAndSingularisation("mummies", "mummy");
 		testPluralisationAndSingularisation("leader kobolds", "leader kobold");
@@ -563,7 +563,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("ghosts", "ghost");
 		testPluralisationAndSingularisation("giantrats", "giantrat");
 		testPluralisationAndSingularisation("elves", "elf");
-		testPluralisationAndSingularisation("dwarves", "dwarf");
+		testPluralisationAndSingularisation("dwarves", 矮人);
 		testPluralisationAndSingularisation("ratmen", "ratman");
 		testPluralisationAndSingularisation("ratwomen", "ratwoman");
 		testPluralisationAndSingularisation("elder beholders",
@@ -571,8 +571,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation(
 				"plural of slime is slime but this is a creature....",
 				"brown slimes", "brown slime");
-		testPluralisationAndSingularisation("venom gargoyles",
-				"venom gargoyle");
+		testPluralisationAndSingularisation("毒液石像鬼s",
+				"毒液石像鬼");
 		testPluralisationAndSingularisation("elder ogres", "elder ogre");
 		testPluralisationAndSingularisation("dwarf guardians",
 				"dwarf guardian");
@@ -597,7 +597,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("deaths", "death");
 		testPluralisationAndSingularisation("commander elves",
 				"commander elf");
-		testPluralisationAndSingularisation("stone golems", "stone golem");
+		testPluralisationAndSingularisation("石傀儡s", "石傀儡");
 		testPluralisationAndSingularisation("archmage elves", "archmage elf");
 		testPluralisationAndSingularisation("leader dwarves", "leader dwarf");
 		testPluralisationAndSingularisation("demon skeletons",
@@ -613,7 +613,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("green dragons", "green dragon");
 		testPluralisationAndSingularisation("death knights", "death knight");
 		testPluralisationAndSingularisation("liches", "lich");
-		testPluralisationAndSingularisation("blue dragons", "blue dragon");
+		testPluralisationAndSingularisation("蓝龙s", "蓝龙");
 		testPluralisationAndSingularisation("black dragons", "black dragon");
 	}
 
@@ -667,14 +667,14 @@ public class GrammarTest {
 	@Test
 	public void testQuantityPlNoun() {
 		int cnt = 0;
-		assertEquals("these 0 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("these 0 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 		++cnt;
-		assertEquals("this grilled steak", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("this 烤排", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 		++cnt;
-		assertEquals("these 2 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("these 2 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 	}
 
 	/**
@@ -683,23 +683,23 @@ public class GrammarTest {
 	@Test
 	public void testQuantityNumberStrNoun() {
 		int cnt = 0;
-		assertEquals("these 0 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these 0 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("this grilled steak", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("this 烤排", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("these two grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these two 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("these three grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these three 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		cnt = 12;
-		assertEquals("these twelve grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these twelve 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		cnt = 13;
-		assertEquals("these 13 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these 13 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 	}
 
 	/**

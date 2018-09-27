@@ -80,7 +80,7 @@ public abstract class CroupierNPC extends SpeakerNPC {
 			final String text = prizeAndText.second();
 			final Item prize = SingletonRepository.getEntityManager().getItem(
 					prizeName);
-			if (prizeName.equals("golden legs")) {
+			if (prizeName.equals("黄金护腿")) {
 				prize.setBoundTo(player.getName());
 			}
 

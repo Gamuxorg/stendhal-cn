@@ -62,7 +62,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>2000 XP</li>
- * <li>stone legs</li>
+ * <li>石护腿</li>
  * <li>Karma: 15</li>
  * </ul>
  *
@@ -124,7 +124,7 @@ public class EmotionCrystals extends AbstractQuest {
 		}
 
 		if (player.isQuestInState(QUEST_SLOT, 0, "done")) {
-			res.add("我把水晶递给 Julius 的妻子. 我得到一些经验值、运气值和有用的石腿 stone legs.");
+			res.add("我把水晶递给 Julius 的妻子. 我得到一些经验值、运气值和有用的石腿 石护腿.");
 		}
 		return res;
 	}
@@ -368,7 +368,7 @@ public class EmotionCrystals extends AbstractQuest {
 		for (String color : crystalColors) {
 			rewardAction.add(new DropItemAction(color + " emotion crystal"));
 		}
-		rewardAction.add(new EquipItemAction("stone legs", 1, true));
+		rewardAction.add(new EquipItemAction("石护腿", 1, true));
 		rewardAction.add(new IncreaseXPAction(2000));
 		rewardAction.add(new IncreaseKarmaAction(15));
 		rewardAction.add(new SetQuestAction(QUEST_SLOT, 0, "done"));

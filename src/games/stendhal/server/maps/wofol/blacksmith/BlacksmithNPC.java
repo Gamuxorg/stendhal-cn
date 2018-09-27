@@ -86,24 +86,24 @@ public class BlacksmithNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("How did you get down here? I usually only see #kobolds.");
-				addJob("I am a blacksmith. I was a mountain dwarf but I left that lot behind me. Good riddance, I say!");
+				addJob("I am a blacksmith. I was a 山地矮人 but I left that lot behind me. Good riddance, I say!");
 				addHelp("I've heard rumours of a fearsome creature living below these mines, and his small minions, evil imps. I wouldn't go down there even to look, if I were you. It's very dangerous.");
-				addOffer("#Wrvil is the one who runs a shop, not me. I still #make the occasional #bobbin if you need one, though.");
+				addOffer("#Wrvil is the one who runs a shop, not me. I still #make the occasional #线轴 if you need one, though.");
 				addReply("kobolds", "You know, those odd furry creatures. Don't get much conversation out of any except #Wrvil.");
 				addReply("Wrvil", "He runs a trading business not far from here. I used to make the odd item for him, but don't have any energy left.");
 				addGoodbye();
 
-				addReply("bobbin", "Ask me to #make you a bobbin if you have some iron with you, and some cash. I'm a bit forgetful so when you return please say 'remind' to prompt me.");
+				addReply("线轴", "Ask me to #make you a 线轴 if you have some 铁锭 with you, and some cash. I'm a bit forgetful so when you return please say 'remind' to prompt me.");
 
 				/* @author kymara */
 
 				// bobbin from iron
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("iron", Integer.valueOf(1));
+				requiredResources.put("铁锭", Integer.valueOf(1));
 				requiredResources.put("money", Integer.valueOf(100));
 
-				// make sure alrak tells player to remind him to get bobbin back by overriding transactAgreedDeal
+				// make sure alrak tells player to remind him to get 线轴 back by overriding transactAgreedDeal
 				// override giveProduct so that he doesn't say 'welcome back', which is a greeting,
 				// in the middle of an active conversation.
 				class SpecialProducerBehaviour extends ProducerBehaviour {
@@ -147,7 +147,7 @@ public class BlacksmithNPC implements ZoneConfigurator {
 									+ getProductName()
 									+ " for you, but that will take some time. Please come back in "
 									+ getApproximateRemainingTime(player) + ". "
-									+ "And, this is IMPORTANT - I am very forgetful so you MUST #remind me to give you your bobbin when you return!");
+									+ "And, this is IMPORTANT - I am very forgetful so you MUST #remind me to give you your 线轴 when you return!");
 							return true;
 						}
 					}
@@ -193,7 +193,7 @@ public class BlacksmithNPC implements ZoneConfigurator {
 					}
 				}
 
-				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("make", "bobbin",
+				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("make", "线轴",
 				        requiredResources, 10 * 60);
 
 				// we are not using producer adder at all here because that uses Conversations states IDLE and saying 'hi' heavily.

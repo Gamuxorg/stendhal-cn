@@ -45,7 +45,7 @@ public class DistilleryCustomerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hey there! How you're doin'?");
 				addHelp("I don't think I can help you, I'm just having a little #drink here at #Uncle #Dag's pretty distillery. But maybe you would like to join me? We could #talk you about some interesting things, too.");
-				addJob("I worked as a miner in the coal #mine north of #塞门 镇 #City. But then that digging stopped and I moved to 阿多斯城 with my #family, trying to get a new job here.");
+				addJob("I worked as a miner in the 煤炭 #mine north of #塞门 镇 #City. But then that digging stopped and I moved to 阿多斯城 with my #family, trying to get a new job here.");
 				addOffer("I'd offer you a #drink but all my small change is already gone.");
 				addGoodbye("Bye then! Always take care!");
 				addReply(ConversationPhrases.QUEST_MESSAGES,

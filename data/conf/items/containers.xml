@@ -26,7 +26,7 @@
   
   <item name="空布袋">
     <type class="container" subclass="empty_sack" tileid="-1"/>
-    <description>You see an 空布袋. It will not stand up, unless you fill it first.</description>
+    <description>一个空布袋. 除非装满东西, 否则不能立起来.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -44,7 +44,7 @@
   
   <item name="瓶子">
     <type class="container" subclass="flask" tileid="-1"/>
-    <description>You see a 瓶子. This 瓶子 is good for storing medicine.</description>
+    <description>一个瓶子. 是盛药的好工具.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -118,7 +118,7 @@
   
   <item name="耳瓶">
     <type class="container" subclass="bottle_eared" tileid="-1"/>
-    <description>You see an 耳瓶. It is empty, someone drank the contents.</description>
+    <description>一个空的双耳瓶. 谁把里面的东西喝掉了.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -136,7 +136,7 @@
   
   <item name="大瓶子">
     <type class="container" subclass="bottle_fat" tileid="-1"/>
-    <description>You see a 大瓶子. It is empty, someone drank the contents.</description>
+    <description>一个空的大瓶子. 谁把里面的东西喝掉了.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -192,7 +192,7 @@
   
   <item name="细瓶子">
     <type class="container" subclass="bottle_slim" tileid="-1"/>
-    <description>You see a 细瓶子. It is empty, someone drank the contents.</description>
+    <description>一个细瓶子. 谁把里面的东西喝掉了.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -266,7 +266,7 @@
   
   <item name="高脚杯">
     <type class="container" subclass="empty_goblet" tileid="-1"/>
-    <description>You see an 高脚杯.  You wonder what could it hold.</description>
+    <description>一个高脚杯.  你应该知道怎么端起它.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -282,7 +282,7 @@
   
   <item name="盛血高脚杯">
     <type class="container" subclass="full_goblet" tileid="-1"/>
-    <description>You see a 盛血高脚杯.  You look at its contents, and shiver at the blood inside.</description>
+    <description>盛血高脚杯. 你看了看里面的东西, 里面是颤动的鲜血.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -300,7 +300,7 @@
   
   <item name="钥匙环">
     <type class="container" subclass="keyring" tileid="-1"/>
-    <description>You see a 钥匙环.</description>
+    <description>钥匙环.</description>
     <implementation class-name="games.stendhal.server.entity.item.Container"/>
     <attributes>
       <slot_name value="钥匙环"/>

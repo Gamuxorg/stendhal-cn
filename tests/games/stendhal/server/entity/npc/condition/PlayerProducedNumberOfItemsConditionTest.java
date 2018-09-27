@@ -37,7 +37,7 @@ public class PlayerProducedNumberOfItemsConditionTest {
 		assertThat(actual.hashCode(), is(actual.hashCode()));
 		assertThat(actual, is(new PlayerProducedNumberOfItemsCondition(1, "面粉")));
 		assertThat(actual.hashCode(), is(new PlayerProducedNumberOfItemsCondition(1, "面粉").hashCode()));
-		assertThat(actual, not(is(new PlayerProducedNumberOfItemsCondition(1, "iron"))));
+		assertThat(actual, not(is(new PlayerProducedNumberOfItemsCondition(1, "铁锭"))));
 	}
 
 	@Test
@@ -45,7 +45,7 @@ public class PlayerProducedNumberOfItemsConditionTest {
 		PlayerProducedNumberOfItemsCondition condition = new PlayerProducedNumberOfItemsCondition(5, "flour");
 		Player player = PlayerTestHelper.createPlayer("producer");
 		assertThat(condition.fire(player, null, null), is(false));
-		player.incProducedCountForItem("iron", 12);
+		player.incProducedCountForItem("铁锭", 12);
 		assertThat(condition.fire(player, null, null), is(false));
 		player.incProducedCountForItem("flour", 4);
 		assertThat(condition.fire(player, null, null), is(false));

@@ -119,7 +119,7 @@ public class HungryJoshuaTest {
 		final int xp = player.getXP();
 
 		en.step(player, "hi");
-		assertEquals("Hi! I'm the local goldsmith. If you require me to #cast you a #'gold bar' just tell me!", getReply(npc));
+		assertEquals("Hi! I'm the local goldsmith. If you require me to #cast you a #'金条' just tell me!", getReply(npc));
 		en.step(player, "food");
 		assertEquals("Oh great! Did my brother 艾克德罗斯 send you with those 三明治es?", getReply(npc));
 		en.step(player, "yes");

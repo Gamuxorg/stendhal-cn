@@ -121,7 +121,7 @@ public class RingMakerTest {
 		assertTrue(en.step(player, "emerald"));
 		assertEquals("What a pity, your emerald ring is broken. I can fix it, for a #price.", getReply(npc));
 		assertTrue(en.step(player, "price"));
-		assertEquals("The charge for my service is 80000 money, and I need 2 gold bars and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
+		assertEquals("The charge for my service is 80000 money, and I need 2 金条s and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
 		assertTrue(en.step(player, "yes"));
 		assertEquals("Come back when you have the money, the gem and the gold. Goodbye.", getReply(npc));
 		assertEquals(ConversationStates.IDLE, en.getCurrentState());
@@ -147,7 +147,7 @@ public class RingMakerTest {
 		assertTrue(en.step(player, "emerald"));
 		assertEquals("What a pity, your emerald ring is broken. I can fix it, for a #price.", getReply(npc));
 		assertTrue(en.step(player, "price"));
-		assertEquals("The charge for my service is 80000 money, and I need 2 gold bars and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
+		assertEquals("The charge for my service is 80000 money, and I need 2 金条s and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
 		assertTrue(en.step(player, "no"));
 		assertEquals("No problem, just come back when you have the money, the emerald, and the gold.", getReply(npc));
 		en.step(player, "bye");
@@ -166,7 +166,7 @@ public class RingMakerTest {
 		player.equipToInventoryOnly(ring);
 
 		PlayerTestHelper.equipWithMoney(player, 80000);
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 2);
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 2);
 		PlayerTestHelper.equipWithStackableItem(player, "emerald", 1);
 
 
@@ -177,7 +177,7 @@ public class RingMakerTest {
 		assertTrue(en.step(player, "emerald"));
 		assertEquals("What a pity, your emerald ring is broken. I can fix it, for a #price.", getReply(npc));
 		assertTrue(en.step(player, "price"));
-		assertEquals("The charge for my service is 80000 money, and I need 2 gold bars and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
+		assertEquals("The charge for my service is 80000 money, and I need 2 金条s and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
 		assertTrue(en.step(player, "yes"));
 		assertEquals("Okay, that's all I need to fix the ring. Come back in 10 minutes and it will be ready. Bye for now.", getReply(npc));
 
@@ -303,7 +303,7 @@ public class RingMakerTest {
 
 	private void orderfixandfetchordered(final Player testplayer) {
 		PlayerTestHelper.equipWithMoney(testplayer, 80000);
-		PlayerTestHelper.equipWithStackableItem(testplayer, "gold bar", 2);
+		PlayerTestHelper.equipWithStackableItem(testplayer, "金条", 2);
 		PlayerTestHelper.equipWithStackableItem(testplayer, "emerald", 1);
 
 		assertTrue(en.step(testplayer, "hi"));
@@ -313,7 +313,7 @@ public class RingMakerTest {
 		assertTrue(en.step(testplayer, "emerald"));
 		assertEquals("What a pity, your emerald ring is broken. I can fix it, for a #price.", getReply(npc));
 		assertTrue(en.step(testplayer, "price"));
-		assertEquals("The charge for my service is 80000 money, and I need 2 gold bars and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
+		assertEquals("The charge for my service is 80000 money, and I need 2 金条s and 1 emerald to fix the ring. Do you want to pay now?", getReply(npc));
 		assertTrue(en.step(testplayer, "yes"));
 		assertEquals("Okay, that's all I need to fix the ring. Come back in 10 minutes and it will be ready. Bye for now.", getReply(npc));
 

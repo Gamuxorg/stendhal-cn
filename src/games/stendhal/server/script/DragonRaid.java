@@ -25,15 +25,15 @@ public class DragonRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("red dragon", 2);
-		attackArmy.put("green dragon", 2);
-		attackArmy.put("bone dragon", 3);
-		attackArmy.put("twin headed dragon", 2);
+		attackArmy.put("红龙", 2);
+		attackArmy.put("绿龙", 2);
+		attackArmy.put("骨龙", 3);
+		attackArmy.put("双头飞龙", 2);
 		attackArmy.put("blue dragon", 3);
-		attackArmy.put("chaos red dragonrider", 2);
-		attackArmy.put("chaos green dragonrider", 2);
-		attackArmy.put("flying golden dragon", 2);
-		attackArmy.put("black dragon", 1);
+		attackArmy.put("混沌红龙骑士", 2);
+		attackArmy.put("混沌绿龙骑士", 2);
+		attackArmy.put("金龙", 2);
+		attackArmy.put("黑龙", 1);
 		return attackArmy;
 	}
 	@Override

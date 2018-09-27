@@ -35,7 +35,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Sarzina, the friendly wizardess who also sells 治疗济s in Fado</li>
+ * <li>Sarzina, the friendly wizardess who also sells 治疗剂s in Fado</li>
  * </ul>
  *
  * STEPS:

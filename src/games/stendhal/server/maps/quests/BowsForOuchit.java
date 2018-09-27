@@ -47,7 +47,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> 奥斯特 asks for wood for his bows and arrows. </li>
- * <li> Puchit asks you to fetch 马尾鬃 from 卡尔 also.</li>
+ * <li> Puchit asks you to fetch 鬃毛 from 卡尔 also.</li>
  * <li> Return and you get some equipment as reward.<li>
  * </ul>
  *
@@ -55,7 +55,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 1 XP<li>
  * <li> 鳞甲</li>
- * <li> Chain legs</li>
+ * <li> 索链护腿</li>
  * <li> Karma: 14<li>
  * </ul>
  *
@@ -168,14 +168,14 @@ public class BowsForOuchit extends AbstractQuest {
 
 		/*
 		 * Player asks about wood, and has collected some - take it and
-ask for 马尾鬃.
+ask for 鬃毛.
 		 */
 		npc.add(ConversationStates.ATTENDING,
 				"木头",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"木头"),
 								new PlayerHasItemWithHimCondition("木头",10)),
 				ConversationStates.ATTENDING,
-				"太好了, 现在我可以制作箭了. 但制作弓还需要弓弦. 还请找到 #Karl, 他养了很多马, 如果你把我的名字告诉他, 他会从马尾上剪些 #'马尾鬃' 给你. ",
+				"太好了, 现在我可以制作箭了. 但制作弓还需要弓弦. 还请找到 #Karl, 他养了很多马, 如果你把我的名字告诉他, 他会从马尾上剪些 #'鬃毛' 给你. ",
 				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "hair", 2.0), new DropItemAction("木头", 10)));
 
 		/*
@@ -194,10 +194,10 @@ ask for 马尾鬃.
 		npc.add(ConversationStates.ATTENDING,
 				"奥斯特",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃",1))),
+								new NotCondition (new PlayerHasItemWithHimCondition("鬃毛",1))),
 				ConversationStates.ATTENDING,
-				"你好, 你好！Ouchit要些 马尾鬃？没问题, 拿去吧. 顺便带我向 奥斯特 问个好. ",
-				new EquipItemAction("马尾鬃"));
+				"你好, 你好！Ouchit要些 鬃毛？没问题, 拿去吧. 顺便带我向 奥斯特 问个好. ",
+				new EquipItemAction("鬃毛"));
 
 	}
 
@@ -215,40 +215,40 @@ ask for 马尾鬃.
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT,"hair"),
 				ConversationStates.ATTENDING,
-				"我正等着你带来 #'马尾鬃'.",
+				"我正等着你带来 #'鬃毛'.",
 				null);
 
 		/*
-		 * Player asks about 马尾鬃, but hasn't collected any - remind them.
+		 * Player asks about 鬃毛, but hasn't collected any - remind them.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "马尾", "马尾鬃"),
+				Arrays.asList("hair", "马尾", "鬃毛"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃"))),
+								new NotCondition (new PlayerHasItemWithHimCondition("鬃毛"))),
 				ConversationStates.ATTENDING,
-				"马尾鬃可以制作弓弦. 请代我找 #卡尔 取一些过来. ",
+				"鬃毛可以制作弓弦. 请代我找 #卡尔 取一些过来. ",
 				null);
 
 		/*
 		 * These actions are part of the reward
 		 */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("马尾鬃"));
+		reward.add(new DropItemAction("鬃毛"));
 		reward.add(new EquipItemAction("鳞甲", 1, true));
-		reward.add(new EquipItemAction("chain legs", 1, true));
+		reward.add(new EquipItemAction("索链护腿", 1, true));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 10.0));
 
 		/*
-		 * Player asks about 马尾鬃, and has collected some - take it
-and ask for 马尾鬃.
+		 * Player asks about 鬃毛, and has collected some - take it
+and ask for 鬃毛.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "马尾", "马尾鬃"),
+				Arrays.asList("hair", "马尾", "鬃毛"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new PlayerHasItemWithHimCondition("马尾鬃")),
+								new PlayerHasItemWithHimCondition("鬃毛")),
 				ConversationStates.ATTENDING,
-				"呀！你把 马尾鬃 带来了, 非常感谢. Karl 真是好人. 这是之前有人落下的东西, 放我这没用, 送给你了, 这是你应得的. ",
+				"呀！你把 鬃毛 带来了, 非常感谢. Karl 真是好人. 这是之前有人落下的东西, 放我这没用, 送给你了, 这是你应得的. ",
 				new MultipleActions(reward));
 
 		/*
@@ -290,10 +290,10 @@ and ask for 马尾鬃.
 			res.add("我集齐了木头, 并交给 奥斯特.");
 		}
 		if(player.isQuestInState(QUEST_SLOT, "hair", "done")) {
-			res.add("然后我需要拿一些 马尾鬃,Ouchit要用它做弓弦. 他告诉我找到农夫 卡尔 可以弄到.");
+			res.add("然后我需要拿一些 鬃毛,Ouchit要用它做弓弦. 他告诉我找到农夫 卡尔 可以弄到.");
 		}
-		if(player.isEquipped("马尾鬃") && "hair".equals(questState) || isCompleted(player)) {
-			res.add("卡尔 真是好人, 直接给了我一些 马尾鬃.");
+		if(player.isEquipped("鬃毛") && "hair".equals(questState) || isCompleted(player)) {
+			res.add("卡尔 真是好人, 直接给了我一些 鬃毛.");
 		}
 		if (isCompleted(player)) {
 			res.add("作为谢礼, Ouchit 给了我一个新装备");

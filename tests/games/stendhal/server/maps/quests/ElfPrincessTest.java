@@ -115,7 +115,7 @@ public class ElfPrincessTest {
 		assertEquals("I do so love those pretty flowers from Rose Leigh ...", getReply(npc));
 		en.step(player, "flower");
 		assertTrue(getReply(npc).startsWith("Thank you! Take these "));
-		assertTrue(player.isEquipped("gold bar"));
+		assertTrue(player.isEquipped("金条"));
 		// [00:09] superkym earns 5000 experience points.
 		en.step(player, "bye");
 		assertEquals("Goodbye, strange one.", getReply(npc));

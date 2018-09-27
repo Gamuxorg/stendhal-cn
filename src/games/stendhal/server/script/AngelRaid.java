@@ -25,10 +25,10 @@ public class AngelRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("baby angel", 20);
-		attackArmy.put("angel", 6);
-		attackArmy.put("dark angel", 2);
-		attackArmy.put("archangel", 1);
+		attackArmy.put("小天使", 20);
+		attackArmy.put("天使", 6);
+		attackArmy.put("黑暗天使", 2);
+		attackArmy.put("天使长", 1);
 		// no dark archangel here as archers can still hit you as you run from them
 		return attackArmy;
 	}

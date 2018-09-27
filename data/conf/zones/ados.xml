@@ -416,7 +416,7 @@
     
     <entity x="45" y="99">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Formal arrangement of bulbs and foxgloves surrounding a special golden tree. These rare trees are sometimes believed to have mystical significance due to their striking golden colour.</attribute>
+      <attribute name="text">Formal arrangement of 根茎s and foxgloves surrounding a special golden tree. These rare trees are sometimes believed to have mystical significance due to their striking golden colour.</attribute>
     </entity>
     
     <entity x="48" y="110">
@@ -603,7 +603,7 @@
     
     <entity x="126" y="107">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Beware of bandits beyond!</attribute>
+      <attribute name="text">Beware of 强盗s beyond!</attribute>
       <attribute name="class">danger_sign</attribute>
     </entity>
     
@@ -619,7 +619,7 @@
     
     <entity x="126" y="115">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
-      <attribute name="text">Beware of bandits beyond!</attribute>
+      <attribute name="text">Beware of 强盗s beyond!</attribute>
       <attribute name="class">danger_sign</attribute>
     </entity>
     
@@ -814,7 +814,7 @@ Home for endangered animals
            now, we lock the door into the pet area -->
       <destination zone="int_阿多斯_宠物_医院" ref="door_left" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">pet sanctuary key</parameter>
+        <parameter name="key">宠物圣堂钥匙</parameter>
         <parameter name="rejected">Restricted access: animal keepers and vets only.</parameter>
       </implementation>
     </portal>
@@ -1192,7 +1192,7 @@ Home for endangered animals
     <portal x="14" y="85" ref="zaras_house_entrance">
       <destination zone="int_ados_zaras_house_0" ref="entrance_zaras_house" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">small key</parameter>
+        <parameter name="key">小钥匙</parameter>
         <parameter name="rejected">门锁住了</parameter>
       </implementation>
     </portal>
@@ -1724,7 +1724,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <portal x="8" y="14" ref="entrance_zaras_house">
       <destination zone="0_阿多斯_城_n" ref="zaras_house_entrance" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">small key</parameter>
+        <parameter name="key">小钥匙</parameter>
         <parameter name="rejected">Zara would be angry if you forgot the key inside her house.</parameter>
       </implementation>
     </portal>
@@ -2148,7 +2148,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <entity x="10" y="5">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">This is Ida's sewing machine. It looks quite old but even mithril thread can be sewn with it.</attribute>
+      <attribute name="text">This is Ida's sewing machine. It looks quite old but even 密银线 can be sewn with it.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
     </entity> 
@@ -2455,7 +2455,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="2" y="15">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buyred</parameter>
-        <parameter name="title">-- Pjotr Yearl (Sedah) buys --</parameter>
+        <parameter name="title">-- Pjotr Yearl (西大) buys --</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">book_red</attribute>
@@ -2681,8 +2681,8 @@ You should never dive with a cold or severe allergy because, you may not be able
 To make 1 香肠:
 
 1 meat
-1 bat entrails
-1 vampirette entrails
+1 蝙蝠内脏
+1 吸血鬼内脏
 
 My fee: 
 
@@ -2698,8 +2698,8 @@ To make 1 起司香肠:
 
 1 cheese
 1 chicken
-1 bat entrails
-1 vampirette entrails
+1 蝙蝠内脏
+1 吸血鬼内脏
 
 My fee:
 
@@ -2711,14 +2711,14 @@ My fee:
     <entity x="8" y="1">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
       <attribute name="text">
-To make 1 canned tuna:
+To make 1 金枪鱼罐头:
 
 1 perch
 1 mackerel
 
 My fee:
 
-2 marbles (for my daughter)
+2 玻璃球 (for my daughter)
       </attribute>
       <attribute name="class">blackboard</attribute>
     </entity>

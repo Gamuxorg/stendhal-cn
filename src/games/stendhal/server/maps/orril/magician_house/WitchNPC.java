@@ -78,7 +78,7 @@ public class WitchNPC implements ZoneConfigurator {
 				addJob("I'm a witch, since you ask. I grow #甘蓝 as a hobby.");
 				addReply("甘蓝",	"That cabbage in the pot. Be careful of it!");
 				/*
-				 * addHelp("You may want to buy some 治疗济s or do some #task
+				 * addHelp("You may want to buy some 治疗剂s or do some #task
 				 * for me.");
 				 */
 				addHelp("I can #heal you, and I can #offer you powerful #scrolls that are #magic.");
@@ -89,11 +89,11 @@ public class WitchNPC implements ZoneConfigurator {
 				        Arrays.asList("magic", "scroll", "scrolls"),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "I #offer scrolls that help you to travel faster: #'home scrolls' and the #markable #'空白卷轴s'. For the more advanced customer, I also have #'召唤卷轴s'!",
+				        "I #offer scrolls that help you to travel faster: #'回城卷s' and the #markable #'空白卷轴s'. For the more advanced customer, I also have #'召唤卷轴s'!",
 				        null);
-				add(ConversationStates.ATTENDING, Arrays.asList("home", "home scroll"), null,
+				add(ConversationStates.ATTENDING, Arrays.asList("home", "回城卷"), null,
 				        ConversationStates.ATTENDING,
-				        "Home scrolls take you home immediately, a good way to escape danger!", null);
+				        "回城卷s take you home immediately, a good way to escape danger!", null);
 				add(
 				        ConversationStates.ATTENDING,
 				        Arrays.asList("empty", "marked", "空白卷轴", "markable", "标记卷轴"),

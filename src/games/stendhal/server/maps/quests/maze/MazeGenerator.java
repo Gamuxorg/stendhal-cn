@@ -69,11 +69,11 @@ public class MazeGenerator {
 	private static final int WALL_THICKNESS = 2;
 	private static final String[] prizes = {
 		"召唤卷轴",
-		"home scroll",
+		"回城卷",
 		"阿多斯城回城卷",
 		"纳尔沃城回城卷",
-		"kirdneh city scroll",
-		"kalavan city scroll",
+		"克德内回城卷",
+		"卡拉文回城卷",
 		"空白卷轴"
 	};
 

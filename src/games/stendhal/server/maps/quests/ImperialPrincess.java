@@ -163,7 +163,7 @@ public class ImperialPrincess extends AbstractQuest {
 								+ " 海芋, 1 科科达, 1 鼠尾草, 1 百里香, "
 								+ Integer.toString(1 + player.getLevel()
 										/ POTION_DIVISOR)
-								+ " 治疗济s and "
+								+ " 治疗剂s and "
 								+ Integer.toString(1 + player.getLevel()
 										/ ANTIDOTE_DIVISOR)
 								+ " 抗毒药济s. Will you get these items?");
@@ -235,7 +235,7 @@ public class ImperialPrincess extends AbstractQuest {
 								&& player.isEquipped("鼠尾草")
 								&& player.isEquipped("海芋",
 										required_arandula)
-								&& player.isEquipped("治疗济", required_potion)
+								&& player.isEquipped("治疗剂", required_potion)
 								&& player.isEquipped("抗毒药济",
 										required_antidote))
 							{
@@ -243,7 +243,7 @@ public class ImperialPrincess extends AbstractQuest {
 								player.drop("科科达");
 								player.drop("鼠尾草");
 								player.drop("抗毒药济", required_antidote);
-								player.drop("治疗济", required_potion);
+								player.drop("治疗剂", required_potion);
 								player.drop("海芋", required_arandula);
 								raiser.say("Perfect! I will recommend you to my father, as a fine, " +
 										"helpful person. He will certainly agree you are eligible for " +
@@ -257,7 +257,7 @@ public class ImperialPrincess extends AbstractQuest {
 									+ required_arandula
 									+ " 海芋, 1 #科科达, 1 #鼠尾草, 1 #百里香, "
 									+ required_potion
-									+ " 治疗济s and "
+									+ " 治疗剂s and "
 									+ required_antidote
 									+ " 抗毒药济s. I don't want anyone suspecting our code.");
 							}

@@ -190,7 +190,7 @@ public class BowsForOuchitTest {
 		// check quest slot and rewards
 		assertTrue(player.getQuest(QUEST_SLOT).equals("done"));
 		assertTrue(player.isEquipped("scale armor"));
-		assertTrue(player.isEquipped("chain legs"));
+		assertTrue(player.isEquipped("索链护腿"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getKarma(), greaterThan(karma));
 

@@ -54,7 +54,7 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 			// it's available, so take money
 			if (player.isEquipped("money", cost)) {
 				final Item key = SingletonRepository.getEntityManager().getItem(
-																				"house key");
+																				"房间钥匙");
 
 				final String doorId = houseportal.getDoorId();
 

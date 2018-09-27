@@ -84,7 +84,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		greetings.put("Hazel", "Oh hello, so nice that you found me here. Come and join me again soon to let me cook some nice soup for you. ");
 		greetings.put("Captain Brownbeard", "The museum really is a lovely place to work at. Wonderful that you found me here. ");
 		greetings.put("Jane", "Yaaarrrr! My boatey will bring you over the sea, the sea! *sing* ");
-		greetings.put("Seremela", "It's hot here at the beach, hope you used some suntan cream. ");
+		greetings.put("Seremela", "It's hot here at the beach, hope you used some 防晒油. ");
 		greetings.put("Phalk", "Beautiful flowers in this city here! Unfortunately those elves don't appreciate them much. ");
 		greetings.put("Fidorea", "Young warrior, you did great things on your journey! Now return to finish it. You must be thirsty! ");
 	}

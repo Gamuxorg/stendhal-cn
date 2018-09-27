@@ -310,7 +310,7 @@ public class ReverseArrow extends AbstractQuest implements
 	 *            y-position
 	 */
 	private void addTokenToWorld(final int x, final int y) {
-		final Token token = (Token) SingletonRepository.getEntityManager().getItem("arrow game token");
+		final Token token = (Token) SingletonRepository.getEntityManager().getItem("箭形游戏币");
 		token.setPosition(x, y);
 		token.setTokenMoveListener(this);
 		zone.add(token, false);

@@ -81,9 +81,9 @@ public class VampireSwordTest {
 	}
 
 	public VampireSwordTest() {
-		requiredForFilling.put("vampirette entrails", 7);
-		requiredForFilling.put("bat entrails", 7);
-		requiredForFilling.put("skull ring", 1);
+		requiredForFilling.put("吸血鬼内脏", 7);
+		requiredForFilling.put("蝙蝠内脏", 7);
+		requiredForFilling.put("骷髅戒指", 1);
 		requiredForFilling.put("高脚杯", 1);
 	}
 
@@ -307,7 +307,7 @@ public class VampireSwordTest {
 	 */
 	@Test
 	public void testBloodMaterialDescription() {
-		for (String material : Arrays.asList("blood", "vampirette entrails", "bat entrails")) {
+		for (String material : Arrays.asList("blood", "吸血鬼内脏", "蝙蝠内脏")) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
 			final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
@@ -325,7 +325,7 @@ public class VampireSwordTest {
 	 */
 	@Test
 	public void testVampireLordDescription() {
-		for (String word : Arrays.asList("lord", "vampire", "skull ring")) {
+		for (String word : Arrays.asList("lord", "vampire", "骷髅戒指")) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
 			final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
@@ -333,7 +333,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, word);
-			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #盛血高脚杯.", getReply(npc));
+			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his 骷髅戒指 with the #盛血高脚杯.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -383,11 +383,11 @@ public class VampireSwordTest {
 
 		Item item = SingletonRepository.getEntityManager().getItem("高脚杯");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("skull ring");
+		item = SingletonRepository.getEntityManager().getItem("骷髅戒指");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("bat entrails");
+		item = SingletonRepository.getEntityManager().getItem("蝙蝠内脏");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("vampirette entrails");
+		item = SingletonRepository.getEntityManager().getItem("吸血鬼内脏");
 		player.equipToInventoryOnly(item);
 
 		en.step(player, "fill");
@@ -438,7 +438,7 @@ public class VampireSwordTest {
 			}
 
 			en.step(player, "fill");
-			assertEquals("I need you to fetch me 7 #'bat entrails', 7 #'vampirette entrails', a #'skull ring', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
+			assertEquals("I need you to fetch me 7 #'蝙蝠内脏', 7 #'吸血鬼内脏', a #'骷髅戒指', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
 
 			en.step(player, yes);
 			assertEquals("answer to '" + yes + "'", "OK, I will fill a 盛血高脚杯 for you, but that will take some time. Please come back in 5 minutes.", getReply(npc));
@@ -587,7 +587,7 @@ public class VampireSwordTest {
 		player.setQuest(questSlot, "start");
 
 		en.step(player, "forge");
-		assertEquals("Bring me 10 #iron bars to forge the sword with. Don't forget to bring the 盛血高脚杯 too.", getReply(npc));
+		assertEquals("Bring me 10 #铁锭s to forge the sword with. Don't forget to bring the 盛血高脚杯 too.", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.QUEST_ITEM_BROUGHT);
 	}
 
@@ -600,8 +600,8 @@ public class VampireSwordTest {
 		en.setCurrentState(ConversationStates.QUEST_ITEM_BROUGHT);
 		player.setQuest(questSlot, "start");
 
-		en.step(player, "iron");
-		assertEquals("You know, collect the iron ore lying around and get it cast! Bye!", getReply(npc));
+		en.step(player, "铁锭");
+		assertEquals("You know, collect the 铁矿 lying around and get it cast! Bye!", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 	}
 
@@ -618,14 +618,14 @@ public class VampireSwordTest {
 			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
 
-			PlayerTestHelper.equipWithStackableItem(player, "iron", 10);
+			PlayerTestHelper.equipWithStackableItem(player, "铁锭", 10);
 
 			player.setSharedKill("vampire lord");
 
 			en.step(player, hello);
 			assertEquals("You've brought everything I need to make the vampire sword. Come back in 10 minutes and it will be ready", getReply(npc));
 			assertFalse("dwarf took the 盛血高脚杯", player.isEquipped("盛血高脚杯"));
-			assertFalse("dwarf took the iron", player.isEquipped("iron"));
+			assertFalse("dwarf took the iron", player.isEquipped("铁锭"));
 			assertTrue("in forging state", player.getQuest(questSlot).startsWith("forging;"));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 		}

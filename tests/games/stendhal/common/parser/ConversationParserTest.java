@@ -232,7 +232,11 @@ public class ConversationParserTest {
 		assertEquals(10, sentence.getObject(0).getAmount());
 		assertEquals("剧毒", sentence.getObject(0).getNormalized());
 		assertEquals("sell 剧毒", sentence.getNormalized());
+<<<<<<< HEAD
+		assertThat(sentence.toString(), anyOf(equalTo("sell/VER mega poison/OBJ"), equalTo("sell/VER mega poison/OBJ-FOO-FLU")));
+=======
 		assertThat(sentence.toString(), anyOf(equalTo("sell/VER 剧毒/OBJ"), equalTo("sell/VER 剧毒/OBJ-FOO-FLU")));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 
 	/**

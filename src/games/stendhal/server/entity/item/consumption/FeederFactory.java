@@ -27,7 +27,7 @@ public final class FeederFactory {
 			return immunizer;
 		}
 
-		if (item.getName().contains("治疗济")) {
+		if (item.getName().contains("治疗剂")) {
 			return stuffer;
 		}
 

@@ -83,9 +83,9 @@ public class TakeGoldforGrafindleTest {
 		en.step(player, "task");
 		assertEquals("I need someone who can be trusted with #gold.", getReply(npc));
 		en.step(player, "gold");
-		assertEquals("One of our customers needs to bank their gold bars here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.", getReply(npc));
+		assertEquals("One of our customers needs to bank their 金条s here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.", getReply(npc));
 		en.step(player, "Lorithien");
-		assertEquals("She works in the post office here in Nalwor. It's a big responsibility, as those gold bars could be sold for a lot of money. Can you be trusted?", getReply(npc));
+		assertEquals("She works in the post office here in Nalwor. It's a big responsibility, as those 金条s could be sold for a lot of money. Can you be trusted?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Well, at least you are honest and told me from the start.", getReply(npc));
 		en.step(player, "bye");
@@ -98,12 +98,12 @@ public class TakeGoldforGrafindleTest {
 		en.step(player, "quest");
 		assertEquals("I need someone who can be trusted with #gold.", getReply(npc));
 		en.step(player, "gold");
-		assertEquals("One of our customers needs to bank their gold bars here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.", getReply(npc));
+		assertEquals("One of our customers needs to bank their 金条s here for safety. It's #Lorithien, she cannot close the Post Office so she never has time.", getReply(npc));
 		// note we spelt this wrong but it was understood
 		en.step(player, "Lorithiten");
-		assertEquals("She works in the post office here in Nalwor. It's a big responsibility, as those gold bars could be sold for a lot of money. Can you be trusted?", getReply(npc));
+		assertEquals("She works in the post office here in Nalwor. It's a big responsibility, as those 金条s could be sold for a lot of money. Can you be trusted?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Thank you. I hope to see you soon with the gold bars ... unless you are tempted to keep them.", getReply(npc));
+		assertEquals("Thank you. I hope to see you soon with the 金条s ... unless you are tempted to keep them.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("start"));
 
 		en.step(player, "hi");
@@ -129,7 +129,7 @@ public class TakeGoldforGrafindleTest {
 
 		en.step(player, "hi");
 		assertEquals("I'm so glad you're here! I'll be much happier when this gold is safely in the bank.", getReply(npc));
-		assertTrue(player.isEquipped("gold bar", 25));
+		assertTrue(player.isEquipped("金条", 25));
 		assertThat(player.getQuest(questSlot), is("lorithien"));
 		en.step(player, "bye");
 		assertEquals("Bye - nice to meet you!", getReply(npc));
@@ -153,15 +153,15 @@ public class TakeGoldforGrafindleTest {
 
 		player.setQuest(questSlot, "lorithien");
 
-		// the player in this case hasn't got the gold bars (we started a new test) so it's like he did get them but he put them on the ground
+		// the player in this case hasn't got the 金条s (we started a new test) so it's like he did get them but he put them on the ground
 
 		en.step(player, "hi");
-		assertEquals("Haven't you got the gold bars from #Lorithien yet? Please go get them, quickly!", getReply(npc));
+		assertEquals("Haven't you got the 金条s from #Lorithien yet? Please go get them, quickly!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Goodbye, young human.", getReply(npc));
 
 		// the player did actually get them before so lets now equip him with them
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 25);
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 25);
 
 		final int xp = player.getXP();
 		final double karma3 = player.getKarma();
@@ -174,7 +174,7 @@ public class TakeGoldforGrafindleTest {
 		assertThat(player.getXP(), greaterThan(xp));
 		assertTrue(player.isQuestCompleted(questSlot));
 		assertThat(player.getKarma(), greaterThan(karma3));
-		assertFalse(player.isEquipped("gold bar"));
+		assertFalse(player.isEquipped("金条"));
 		assertTrue(player.isEquipped("nalwor bank key"));
 
 		en.step(player, "hi");

@@ -28,7 +28,7 @@ import utilities.QuestHelper;
 import utilities.ZonePlayerAndNPCTestImpl;
 
 /**
- * Test for DwarfGuardNPC: sell chaos legs.
+ * Test for DwarfGuardNPC: sell 混沌护腿.
  *
  * @author Martin Fuchs
  */
@@ -66,7 +66,7 @@ public class DwarfGuardNPCTest extends ZonePlayerAndNPCTestImpl {
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi Hunel"));
-		assertEquals("Help! The duergars have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.", getReply(npc));
+		assertEquals("Help! The 杜加矮人s have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.", getReply(npc));
 
 		// Hunel doesn't listen to us until we get the prison key.
 		assertFalse(en.step(player, "bye"));
@@ -100,26 +100,26 @@ public class DwarfGuardNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("I'm too scared to leave here yet... I'm waiting for someone to #offer me some better equipment.", getReply(npc));
 
 		assertTrue(en.step(player, "offer"));
-		assertEquals("I buy pairs of chaos legs, chaos swords, chaos shields, and suits of chaos armor.", getReply(npc));
+		assertEquals("I buy pairs of 混沌护腿, chaos swords, chaos shields, and suits of chaos armor.", getReply(npc));
 
 		assertTrue(en.step(player, "sell chocolate"));
 		assertEquals("Sorry, I don't buy chocolates.", getReply(npc));
 
-		assertTrue(en.step(player, "sell chaos legs"));
-		assertEquals("A pair of chaos legs is worth 8000. Do you want to sell it?", getReply(npc));
+		assertTrue(en.step(player, "sell 混沌护腿"));
+		assertEquals("A pair of 混沌护腿 is worth 8000. Do you want to sell it?", getReply(npc));
 
 		assertTrue(en.step(player, "no"));
 		assertEquals("Ok, then how else may I help you?", getReply(npc));
 
-		assertTrue(en.step(player, "sell two chaos legs"));
-		assertEquals("2 pairs of chaos legs are worth 16000. Do you want to sell them?", getReply(npc));
+		assertTrue(en.step(player, "sell two 混沌护腿"));
+		assertEquals("2 pairs of 混沌护腿 are worth 16000. Do you want to sell them?", getReply(npc));
 
 		assertTrue(en.step(player, "yes"));
-		assertEquals("Sorry! You don't have that many pairs of chaos legs.", getReply(npc));
+		assertEquals("Sorry! You don't have that many pairs of 混沌护腿.", getReply(npc));
 
-		assertTrue(equipWithItem(player, "chaos legs"));
+		assertTrue(equipWithItem(player, "混沌护腿"));
 		assertTrue(en.step(player, "sell chaos leg"));
-		assertEquals("A pair of chaos legs is worth 8000. Do you want to sell it?", getReply(npc));
+		assertEquals("A pair of 混沌护腿 is worth 8000. Do you want to sell it?", getReply(npc));
 
 		assertFalse(player.isEquipped("money", 8000));
 		assertTrue(en.step(player, "yes"));

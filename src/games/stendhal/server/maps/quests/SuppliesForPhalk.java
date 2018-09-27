@@ -60,7 +60,7 @@ import games.stendhal.server.maps.Region;
  * <li>1. Phalk asks for some food and drink</li>
  * <li>2. Once you brought him the food and drink, Phalk asks you to collect his clothes from Wrvil and Mrotho</li>
  * <li>3. Wrvil gives you Phalk's special 矮人斗篷 but you must pay for it in arrows</li>
- * <li>4. Mrotho gives you Phalk's special 黄金铠甲 but you must pay for it in gold bars</li>
+ * <li>4. Mrotho gives you Phalk's special 黄金铠甲 but you must pay for it in 金条s</li>
  * <li>5. Phalk accepts only the special items from Wrvil and Mrotho with his name on</li>
  * </ul>
  *
@@ -306,14 +306,14 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION, "payment",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "clothes"),new QuestInStateCondition(QUEST_SLOT, 2, "none")),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Well.. the armor will cost 20 gold bars. Do you have them?",
+				"Well.. the armor will cost 20 金条s. Do you have them?",
 				null);
 
 		// incase player goes on to ask something else, accept payment from attending too.
 		npc.add(ConversationStates.ATTENDING, "payment",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "clothes"),new QuestInStateCondition(QUEST_SLOT, 2, "none")),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"The armor will cost 20 gold bars. Do you have them?",
+				"The armor will cost 20 金条s. Do you have them?",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION,
@@ -325,7 +325,7 @@ import games.stendhal.server.maps.Region;
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(200));
-		actions.add(new DropItemAction("gold bar",20));
+		actions.add(new DropItemAction("金条",20));
 		actions.add(new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
@@ -344,7 +344,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION, ConversationPhrases.YES_MESSAGES,
 				new AndCondition(
 						new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "clothes"),new QuestInStateCondition(QUEST_SLOT, 2, "none")),
-						new PlayerHasItemWithHimCondition("gold bar",20)),
+						new PlayerHasItemWithHimCondition("金条",20)),
 				ConversationStates.ATTENDING,
 				"Ok, here you are.",
 				new MultipleActions(actions)
@@ -352,7 +352,7 @@ import games.stendhal.server.maps.Region;
 
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION, ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "clothes"),new QuestInStateCondition(QUEST_SLOT, 2, "none"),
-				new NotCondition(new PlayerHasItemWithHimCondition("gold bar",20))),
+				new NotCondition(new PlayerHasItemWithHimCondition("金条",20))),
 				ConversationStates.ATTENDING,
 				"Army disciplinary actions are pretty serious, so don't lie to me.",
 				null);

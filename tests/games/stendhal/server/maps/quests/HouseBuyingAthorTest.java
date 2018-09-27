@@ -164,9 +164,9 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("Congratulations, here is your key to athor apartment 101! Make sure you change the locks if you ever lose it. Do you want to buy a spare key, at a price of 1000 money?", getReply(npc));
 		en.step(player, "yes");
 
-		assertTrue(player.isEquipped("player's house key"));
+		assertTrue(player.isEquipped("player's 房间钥匙"));
 
-		Item item = player.getFirstEquipped("player's house key");
+		Item item = player.getFirstEquipped("player's 房间钥匙");
 		assertNotNull(item);
 		assertEquals("athor apartment 101;0;player", item.get("infostring"));
 		assertFalse(item.isBound());

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
   <item name="翡翠">
     <type class="jewellery" subclass="emerald" tileid="-1"/>
-    <description>You see an 翡翠, a precious gemstone.</description>
+    <description>翡翠, 贵重的宝石.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -23,7 +23,7 @@
 
   <item name="蓝宝石">
     <type class="jewellery" subclass="sapphire" tileid="-1"/>
-    <description>You see a 蓝宝石, a precious gemstone.</description>
+    <description>蓝宝石, 很珍贵.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -43,7 +43,7 @@
 
   <item name="红宝石">
     <type class="jewellery" subclass="carbuncle" tileid="-1"/>
-    <description>You see a 红宝石, a precious gemstone related to the garnet.</description>
+    <description>红宝石, 深红色的珍宝.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -63,7 +63,7 @@
 
   <item name="黑曜石">
     <type class="jewellery" subclass="obsidian" tileid="-1"/>
-   <description>You see a piece of 黑曜石, it's known as volcanic glass because it forms when lava cools rapidly. When used as a gemstone it may look jet black or silvery grey, depending on how it is cut.</description>
+   <description>黑曜石, 火山喷发再迅速冷却而形成, 外表看起来是深黑且带有银灰色, 不太容易切割.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -83,7 +83,7 @@
 
   <item name="钻石">
     <type class="jewellery" subclass="greater_brilliant" tileid="-1"/>
-    <description>You see a 钻石, not just a beautiful gem but also the hardest naturally occurring material .</description>
+    <description>钻石, 不仅漂亮而且是自然界最硬的石头.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -103,7 +103,7 @@
   
    <item name="黑珍珠">
     <type class="jewellery" subclass="blackpearl" tileid="-1"/>
-    <description>You see a 黑珍珠, so dark and shiny.</description>
+    <description>黑珍珠, 虽黑却发光.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

@@ -64,7 +64,7 @@ import marauroa.common.game.IRPZone;
  *
  * REWARD:
  * <ul>
- * <li> 10 治疗济s</li>
+ * <li> 10 治疗剂s</li>
  * <li> xp </li>
  * <li> Karma: 5</li>
  * </ul>
@@ -112,7 +112,7 @@ public class FishSoupForHughie extends AbstractQuest {
 			res.add("I have fetched the 鱼汤 needed to heal Hughie.");
 		}
 		if (isCompleted(player)) {
-			res.add("Hughie ate his soup and Anastasia gave me 治疗济s.");
+			res.add("Hughie ate his soup and Anastasia gave me 治疗剂s.");
 		}
 		if(isRepeatable(player)){
 			res.add("Its been a while since I checked on Hughie and Anastasia, I should remember to go see them again.");
@@ -174,7 +174,7 @@ public class FishSoupForHughie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"My poor boy is sick and the 治疗济s I give him aren't working! Please could you fetch him some 鱼汤?",
+				"My poor boy is sick and the 治疗剂s I give him aren't working! Please could you fetch him some 鱼汤?",
 				null);
 
 		// player returns - enough time has passed
@@ -219,7 +219,7 @@ public class FishSoupForHughie extends AbstractQuest {
 		reward.add(new IncreaseXPAction(200));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT));
 		reward.add(new IncreaseKarmaAction(5));
-		reward.add(new EquipItemAction("治疗济",10));
+		reward.add(new EquipItemAction("治疗剂",10));
 		reward.add(new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
@@ -237,7 +237,7 @@ public class FishSoupForHughie extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("鱼汤"),
-			ConversationStates.ATTENDING, "Thank you! I will always be in your favour. I will feed it to Hughie when he wakes. Please take these 治疗济s, they did nothing for him.",
+			ConversationStates.ATTENDING, "Thank you! I will always be in your favour. I will feed it to Hughie when he wakes. Please take these 治疗剂s, they did nothing for him.",
 			new MultipleActions(reward));
 
 		//player said the 鱼汤 was for her but has dropped it from his bag or hands

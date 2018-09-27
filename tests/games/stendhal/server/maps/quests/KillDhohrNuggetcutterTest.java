@@ -70,7 +70,7 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "hi");
 		assertEquals("Hello my fine fellow. Welcome to our humble dwelling.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("We are unable to rid our area of dwarves. Especially one mighty one named Dhohr Nuggetcutter. Would you please kill them?", getReply(npc));
+		assertEquals("We are unable to rid our area of dwarves. Especially one mighty one named 钳工都尔. Would you please kill them?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Ok, I will await someone with enough backbone to do the job.", getReply(npc));
 		assertEquals("rejected", player.getQuest(questSlot));
@@ -82,7 +82,7 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "hi");
 		assertEquals("Hello my fine fellow. Welcome to our humble dwelling.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("We are unable to rid our area of dwarves. Especially one mighty one named Dhohr Nuggetcutter. Would you please kill them?", getReply(npc));
+		assertEquals("We are unable to rid our area of dwarves. Especially one mighty one named 钳工都尔. Would you please kill them?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Great! Please find them somewhere in this level of the keep and make them pay for their tresspassing!", getReply(npc));
 		assertEquals("start", player.getQuest(questSlot, 0));
@@ -92,18 +92,18 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 		// -----------------------------------------------
 
 		en.step(player, "hi");
-		assertEquals("Just go kill Dhohr Nuggetcutter and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
+		assertEquals("Just go kill 钳工都尔 and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("I already asked you to kill Dhohr Nuggetcutter!", getReply(npc));
+		assertEquals("I already asked you to kill 钳工都尔!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("I wish you well on your journeys.", getReply(npc));
 
-		// kill Dhohr Nuggetcutter
-		player.setSoloKill("Dhohr Nuggetcutter");
+		// kill 钳工都尔
+		player.setSoloKill("钳工都尔");
 		en.step(player, "hi");
-		assertEquals("Just go kill Dhohr Nuggetcutter and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
+		assertEquals("Just go kill 钳工都尔 and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("I already asked you to kill Dhohr Nuggetcutter!", getReply(npc));
+		assertEquals("I already asked you to kill 钳工都尔!", getReply(npc));
 		en.step(player, "done");
 		en.step(player, "bye");
 		assertEquals("I wish you well on your journeys.", getReply(npc));
@@ -111,19 +111,19 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 		// -----------------------------------------------
 
 		en.step(player, "hi");
-		assertEquals("Just go kill Dhohr Nuggetcutter and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
+		assertEquals("Just go kill 钳工都尔 and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("I already asked you to kill Dhohr Nuggetcutter!", getReply(npc));
+		assertEquals("I already asked you to kill 钳工都尔!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("I wish you well on your journeys.", getReply(npc));
 
 		// kill some other of the enemies
-		player.setSoloKill("mountain leader dwarf");
-		player.setSoloKill("mountain leader dwarf");
+		player.setSoloKill("山地矮人首领");
+		player.setSoloKill("山地矮人首领");
 		en.step(player, "hi");
-		assertEquals("Just go kill Dhohr Nuggetcutter and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
+		assertEquals("Just go kill 钳工都尔 and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("I already asked you to kill Dhohr Nuggetcutter!", getReply(npc));
+		assertEquals("I already asked you to kill 钳工都尔!", getReply(npc));
 		player.setSoloKill("mountain orc");
 		player.setSoloKill("mountain orc");
 		en.step(player, "bye");
@@ -137,8 +137,8 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 		player.setSoloKill("mountain hero dwarf");
 		player.setSoloKill("mountain elder dwarf");
 		player.setSoloKill("mountain elder dwarf");
-		player.setSoloKill("mountain leader dwarf");
-		player.setSoloKill("mountain leader dwarf");
+		player.setSoloKill("山地矮人首领");
+		player.setSoloKill("山地矮人首领");
 		player.setSoloKill("mountain dwarf");
 		player.setSoloKill("mountain dwarf");
 

@@ -32,7 +32,7 @@ public class ElfRaid extends CreateRaid {
 		attackArmy.put("精灵大法师", 3);
 		attackArmy.put("精灵法师", 6);
 		attackArmy.put("精灵弓箭手", 6);
-		attackArmy.put("nymph", 5);
+		attackArmy.put("泽地仙女", 5);
 		attackArmy.put("ent", 3);
 
 		return attackArmy;

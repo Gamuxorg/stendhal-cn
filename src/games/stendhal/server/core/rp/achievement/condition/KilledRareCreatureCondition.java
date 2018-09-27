@@ -31,8 +31,8 @@ public class KilledRareCreatureCondition implements ChatCondition {
 		final Collection<Creature> creatures = SingletonRepository.getEntityManager().getCreatures();
 		for (Creature creature : creatures) {
 			// explicitly exclude the wolf as this was possible to summon with a 召唤卷轴 once
-			// and the twilight slime isn't what we mean by rare
-			if (creature.isRare() && !"大灰狼".equals(creature.getName()) && !"twilight slime".equals(creature.getName())) {
+			// and the 荧光光史莱姆 isn't what we mean by rare
+			if (creature.isRare() && !"大灰狼".equals(creature.getName()) && !"荧光光史莱姆".equals(creature.getName())) {
 				if (player.hasKilled(creature.getName())) {
 					return true;
 				}

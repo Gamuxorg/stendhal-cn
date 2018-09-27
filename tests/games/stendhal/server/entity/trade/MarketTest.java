@@ -135,7 +135,7 @@ public class MarketTest {
 		george.equipToInventoryOnly(item);
 		Offer offer = market.createOffer(george, item, 10, 1);
 
-		item = SingletonRepository.getEntityManager().getItem("carrot");
+		item = SingletonRepository.getEntityManager().getItem("胡萝卜");
 		george.equipToInventoryOnly(item);
 		Offer offer2 = market.createOffer(george, item, 11, 1);
 
@@ -281,7 +281,11 @@ public class MarketTest {
 		StendhalRPZone zone = new StendhalRPZone("shop");
 		Market market = Market.createShop();
 		zone.add(market);
+<<<<<<< HEAD
 		Item item = SingletonRepository.getEntityManager().getItem("大治疗剂");
+=======
+		Item item = SingletonRepository.getEntityManager().getItem("大治疗剂");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		((StackableItem) item).setQuantity(6);
 		StackableItem erniesMoney = (StackableItem) SingletonRepository
 				.getEntityManager().getItem("money");
@@ -290,7 +294,11 @@ public class MarketTest {
 		george.equipToInventoryOnly(item);
 		Integer number = Integer.valueOf(5);
 		Offer offer = market.createOffer(george, item, price, number);
+<<<<<<< HEAD
 		assertThat(offer.getItem().getName(), is("大治疗剂"));
+=======
+		assertThat(offer.getItem().getName(), is("大治疗剂"));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		assertThat(((StackableItem) offer.getItem()).getQuantity(), is(5));
 		assertThat(offer.getPrice(), is(price));
 		assertThat(Boolean.valueOf(george.isEquipped(item.getName(), 1)),
@@ -301,7 +309,11 @@ public class MarketTest {
 		ernie.equipToInventoryOnly(erniesMoney);
 		assertThat(ernie.isEquipped("money", price), is(Boolean.TRUE));
 		market.acceptOffer(offer, ernie);
+<<<<<<< HEAD
 		assertThat(Boolean.valueOf(ernie.isEquipped("大治疗剂", 5)), is(Boolean.TRUE));
+=======
+		assertThat(Boolean.valueOf(ernie.isEquipped("大治疗剂", 5)), is(Boolean.TRUE));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		assertThat(ernie.isEquipped("money", price), is(Boolean.FALSE));
 		assertThat(Boolean.valueOf(george.isEquipped("money")), is(Boolean.FALSE));
 		market.fetchEarnings(george);
@@ -504,7 +516,7 @@ public class MarketTest {
 		george.equipToInventoryOnly(item);
 		Offer offer = market.createOffer(george, item, 10, 1);
 
-		item = SingletonRepository.getEntityManager().getItem("carrot");
+		item = SingletonRepository.getEntityManager().getItem("胡萝卜");
 		george.equipToInventoryOnly(item);
 		Offer offer2 = market.createOffer(george, item, 11, 1);
 

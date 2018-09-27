@@ -56,9 +56,9 @@ public class BlacksheepHarryNPC implements ZoneConfigurator {
 
 		@Override
 		protected void createDialog() {
-			addJob("I supply canned tuna for the whole world.");
-			addHelp("I only #make canned tuna. My brothers here make 香肠 and 起司香肠.");
-			addOffer("Just give me some mackerel, I will #make you some canned tuna.");
+			addJob("I supply 金枪鱼罐头 for the whole world.");
+			addHelp("I only #make 金枪鱼罐头. My brothers here make 香肠 and 起司香肠.");
+			addOffer("Just give me some mackerel, I will #make you some 金枪鱼罐头.");
 			addQuest("I don't really think I should ask for help right now.");
 			addGoodbye("Good bye. Tell all your friends about us.");
 
@@ -67,13 +67,13 @@ public class BlacksheepHarryNPC implements ZoneConfigurator {
 			final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 			requiredResources.put("mackerel", Integer.valueOf(1));
 			requiredResources.put("perch", Integer.valueOf(1));
-			requiredResources.put("marbles", Integer.valueOf(2));
+			requiredResources.put("玻璃球", Integer.valueOf(2));
 
-			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepharry_make_tuna", "make", "canned tuna",
+			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepharry_make_tuna", "make", "金枪鱼罐头",
 			        requiredResources, 2 * 60);
 
 			new ProducerAdder().addProducer(this, behaviour,
-			        "Welcome to Blacksheep Meat Market. Can I #make you some canned tuna?");
+			        "Welcome to Blacksheep Meat Market. Can I #make you some 金枪鱼罐头?");
 		}
 	};
 

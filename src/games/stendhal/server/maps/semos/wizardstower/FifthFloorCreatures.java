@@ -39,10 +39,10 @@ public class FifthFloorCreatures implements ZoneConfigurator {
 	private void buildFifthFloor(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = manager.getCreature("stone golem");
+		final Creature creature = manager.getCreature("石傀儡");
 		final Creature creature1 = manager.getCreature("木质傀儡");
-		final Creature creature2 = manager.getCreature("nymph");
-		final Creature creature3 = manager.getCreature("earth elemental");
+		final Creature creature2 = manager.getCreature("泽地仙女");
+		final Creature creature3 = manager.getCreature("土元素");
 
 		creature.setAIProfiles(new HashMap<String, String>());
 		creature1.setAIProfiles(new HashMap<String, String>());

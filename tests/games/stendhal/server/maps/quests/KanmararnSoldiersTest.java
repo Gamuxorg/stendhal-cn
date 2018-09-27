@@ -135,9 +135,9 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 		PlayerTestHelper.equipWithItem(player, "scale armor", "peter");
 
 		// You see the rotten corpse of Tom. You can inspect it to see its contents.
-		// take leather legs with me
-		// You see torn leather legs that are heavily covered with blood. Stats are (DEF: 1).
-		PlayerTestHelper.equipWithItem(player, "leather legs", "tom");
+		// take 皮裤 with me
+		// You see torn 皮裤 that are heavily covered with blood. Stats are (DEF: 1).
+		PlayerTestHelper.equipWithItem(player, "皮裤", "tom");
 
 
 		// now talk with James
@@ -170,8 +170,8 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 		PlayerTestHelper.equipWithItem(player, "笔记", "charles");
 		en2.step(player, "hi");
 
-		// drop leather legs for testing
-		player.drop("leather legs");
+		// drop 皮裤 for testing
+		player.drop("皮裤");
 
 		en1.step(player, "hi");
 		assertEquals("You didn't prove that you have found them all!", getReply(henry));
@@ -179,7 +179,7 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("Bye and be careful with all those dwarves around!", getReply(henry));
 
 		// take legs up again
-		PlayerTestHelper.equipWithItem(player, "leather legs", "tom");
+		PlayerTestHelper.equipWithItem(player, "皮裤", "tom");
 
 		assertFalse(player.isEquipped("map"));
 		assertEquals(0, player.getXP());

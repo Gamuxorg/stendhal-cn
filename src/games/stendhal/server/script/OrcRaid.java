@@ -33,7 +33,7 @@ public class OrcRaid extends CreateRaid {
 		attackArmy.put("troll", 4);
 		attackArmy.put("red troll", 7);
 		attackArmy.put("cave troll", 2);
-   		attackArmy.put("green dragon", 3);
+   		attackArmy.put("绿龙", 3);
 
 		return attackArmy;
 	}

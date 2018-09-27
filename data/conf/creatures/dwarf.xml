@@ -2,11 +2,11 @@
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
   
-  <!-- START: duergar -->
+  <!-- START: 杜加矮人 -->
   
-  <creature name="duergar">
+  <creature name="杜加矮人">
     <type class="dwarf" subclass="duergar" tileid="dwarf_duergar.png:6"/>
-    <description>You see a duergar. It is a close relative to dwarves but with a diabolically tainted blood.</description>
+    <description>You see a 杜加矮人. It is a close relative to dwarves but with a diabolically tainted blood.</description>
     <attributes>
       <atk value="278"/>
       <def value="49"/>
@@ -33,7 +33,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar axeman">
+  <creature name="杜加斧手">
     <type class="dwarf" subclass="duergar_axe" tileid="dwarf_duergar.png:0"/>
     <description></description>
     <attributes>
@@ -52,7 +52,7 @@
       <item value="板甲" quantity="[1,1]" probability="7.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
       <item value="战斧" quantity="[1,1]" probability="4.5"/>
-      <item value="治疗济" quantity="[1,2]" probability="1.5"/>
+      <item value="治疗剂" quantity="[1,2]" probability="1.5"/>
       <item value="王冠之盾" quantity="[1,1]" probability="4.5"/>
     </drops>
     <equips>
@@ -64,7 +64,7 @@
     </ai>
   </creature>
   
-  <creature name="elder duergar">
+  <creature name="杜加壮士">
     <type class="dwarf" subclass="duergar_elder" tileid="dwarf_duergar.png:2"/>
     <description></description>
     <attributes>
@@ -91,7 +91,7 @@
     </ai>
   </creature>  
   
-  <creature name="duergar elite">
+  <creature name="杜加精英">
     <type class="dwarf" subclass="duergar_elite" tileid="dwarf_duergar.png:3"/>
     <description></description>
     <attributes>
@@ -120,7 +120,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar hero">
+  <creature name="杜加英雄">
     <type class="dwarf" subclass="duergar_hero" tileid="dwarf_duergar.png:4"/>
     <description></description>
     <attributes>
@@ -152,7 +152,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar wizard">
+  <creature name="杜加巫师">
     <type class="dwarf" subclass="duergar_wizard" tileid="dwarf_duergar.png:7"/>
     <description></description>
     <attributes>
@@ -180,7 +180,7 @@
     </ai>
   </creature>
   
-  <creature name="black duergar">
+  <creature name="黑暗杜加">
     <type class="dwarf" subclass="duergar_black" tileid="dwarf_duergar.png:1"/>
     <description></description>
     <attributes>
@@ -197,7 +197,7 @@
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>      
       <item value="矮人护甲" quantity="[1,1]" probability="0.5"/>
-      <item value="black legs" quantity="[1,1]" probability="0.0010"/>
+      <item value="黑护腿" quantity="[1,1]" probability="0.0010"/>
       <item value="战戟" quantity="[1,1]" probability="0.5"/>
       <item value="黄金双刃斧" quantity="[1,1]" probability="0.01"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.0010"/>
@@ -214,7 +214,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar king">
+  <creature name="杜加王">
     <type class="dwarf" subclass="duergar_king" tileid="dwarf_duergar.png:5"/>
     <description></description>
     <attributes>
@@ -233,7 +233,7 @@
       <item value="石甲" quantity="[1,1]" probability="0.1"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0001"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="dwarvish legs" quantity="[1,1]" probability="1.0" />
+      <item value="矮人护腿" quantity="[1,1]" probability="1.0" />
     </drops>
     <equips>
     </equips>
@@ -244,13 +244,13 @@
     </ai>
   </creature>
   
-  <!-- END: duergar -->
+  <!-- END: 杜加矮人 -->
   
-  <!-- START: dwarf -->
+  <!-- START: 矮人 -->
   
-  <creature name="dwarf">
+  <creature name="矮人">
     <type class="dwarf" subclass="dwarf" tileid="dwarf.png:1"/>
-    <description>You see a dwarf who works in the mine to find some iron for us.</description>
+    <description>You see a 矮人 who works in the mine to find some iron for us.</description>
     <attributes>
       <atk value="168"/>
       <def value="26"/>
@@ -281,9 +281,9 @@
     </ai>
   </creature>
   
-  <creature name="dwarf guardian">
+  <creature name="矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="dwarf.png:0"/>
-    <description>You see a dwarf guardian who fights against the humans.</description>
+    <description>You see a 矮人守卫 who fights against the humans.</description>
     <attributes>
       <atk value="200"/>
       <def value="31"/>
@@ -315,9 +315,9 @@
     </ai>
   </creature>
   
-  <creature name="elder dwarf">
+  <creature name="矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="dwarf.png:2"/>
-    <description>You see an elder dwarf, a mighty warrior tired of fighting.</description>
+    <description>You see an 矮人壮士, a mighty warrior tired of fighting.</description>
     <attributes>
       <atk value="214"/>
       <def value="33"/>
@@ -349,9 +349,9 @@
     </ai>
   </creature>
   
-  <creature name="hero dwarf">
+  <creature name="矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="dwarf.png:3"/>
-    <description>You see a hero dwarf. He is an old dwarf warrior who became a hero for fighting in many dwarf wars and he is very famous for his strength and brutality.</description>
+    <description>You see a 矮人英雄. He is an old dwarf warrior who became a hero for fighting in many dwarf wars and he is very famous for his strength and brutality.</description>
     <attributes>
       <atk value="244"/>
       <def value="43"/>
@@ -382,9 +382,9 @@
     </ai>
   </creature>
   
-  <creature name="leader dwarf">
+  <creature name="矮人统领">
     <type class="dwarf" subclass="leader_dwarf" tileid="dwarf.png:4"/>
-    <description>You see a leader dwarf. He is the most mighty dwarf of his tribe so he enjoys much popularity there.</description>
+    <description>You see a 矮人统领. He is the most mighty dwarf of his tribe so he enjoys much popularity there.</description>
     <attributes>
       <atk value="311"/>
       <def value="111"/>
@@ -404,7 +404,7 @@
       <item value="大战锤" quantity="[1,1]" probability="5.25"/>
       <item value="石靴" quantity="[1,1]" probability="0.0050"/>
       <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
-      <item value="治疗济" quantity="[1,2]" probability="1.5"/>
+      <item value="治疗剂" quantity="[1,2]" probability="1.5"/>
       <item value="王冠之盾" quantity="[1,1]" probability="4.5"/>
     </drops>
     <equips>
@@ -417,13 +417,13 @@
     </ai>
   </creature>
   
-  <!-- END: dwarf -->
+  <!-- END: 矮人 -->
   
-  <!-- START: giant dwarf -->
+  <!-- START: 巨型都尔 -->
   
-  <creature name="giant dwarf">
+  <creature name="巨型都尔">
     <type class="dwarf" subclass="giant_dwarf" tileid="dwarf.png:5"/>
-    <description>You see a giant dwarf. It is very hard for him to be a giant dwarf because some of the other dwarves don't really see him as one of them because of his height... But in his big heart he is a dwarf and in a battle he will fight against each enemy!</description>
+    <description>You see a 巨型都尔. It is very hard for him to be a 巨型都尔 because some of the other dwarves don't really see him as one of them because of his height... But in his big heart he is a dwarf and in a battle he will fight against each enemy!</description>
     <attributes>
       <atk value="616"/>
       <def value="99"/>
@@ -454,7 +454,7 @@
     </ai>
   </creature>
   
-  <creature name="Dhohr Nuggetcutter">
+  <creature name="钳工都尔">
     <type class="dwarf" subclass="giant_dwarf" tileid="dwarf.png:6"/>
     <description></description>
     <attributes>
@@ -470,11 +470,11 @@
     <corpse name="humanoid_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[50,200]" probability="100.0"/>
-      <item value="mithril bar" quantity="[1,1]" probability="0.0010"/>
+      <item value="密银锭" quantity="[1,1]" probability="0.0010"/>
       <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
-      <item value="mithril nugget" quantity="[1,1]" probability="0.2"/>
+      <item value="密银矿石" quantity="[1,1]" probability="0.2"/>
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
-      <item value="snowglobe" quantity="[1,1]" probability="15.0"/>
+      <item value="雪珠" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
     </equips>
@@ -487,9 +487,9 @@
     </ai>
   </creature>
   
-  <creature name="Lord Durin">
+  <creature name="都林之主">
     <type class="dwarf" subclass="lord_durin" tileid="dwarf.png:7"/>
-    <description>You see the mighty Lord Durin, an ancient dwarf who has led his race through countless battles.</description>
+    <description>You see the mighty 都林之主, an ancient dwarf who has led his race through countless battles.</description>
     <attributes>
       <atk value="1855"/>
       <def value="180"/>
@@ -521,13 +521,13 @@
     </ai>
   </creature>
   
-  <!-- END: giant dwarf -->
+  <!-- END: 巨型都尔 -->
   
-  <!-- START: mountain dwarf -->
+  <!-- START: 山地矮人 -->
   
-  <creature name="mountain dwarf">
+  <creature name="山地矮人">
     <type class="dwarf" subclass="dwarf" tileid="mountain_dwarf.png:1"/>
-    <description>You see a mountain dwarf. He likes earth, stones and rocks. Deep within the mountain, where no animal and no human has ever been, you can hear the sound of his pickaxe as he searches for gold and ore.</description>
+    <description>You see a 山地矮人. He likes earth, stones and rocks. Deep within the mountain, where no animal and no human has ever been, you can hear the sound of his pickaxe as he searches for gold and ore.</description>
     <attributes>
       <atk value="437"/>
       <def value="72"/>
@@ -557,9 +557,9 @@
     </ai>
   </creature>
   
-  <creature name="mountain dwarf guardian">
+  <creature name="山地矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="mountain_dwarf.png:0"/>
-    <description>You see a mountain dwarf guardian. He has to watch out for enemies and guards the mountain dwarfs while they are doing their work.</description>
+    <description>You see a 山地矮人守卫. He has to watch out for enemies and guards the 山地矮人s while they are doing their work.</description>
     <attributes>
       <atk value="461"/>
       <def value="70"/>
@@ -589,9 +589,9 @@
     </ai>
   </creature>  
   
-  <creature name="mountain elder dwarf">
+  <creature name="山地矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="mountain_dwarf.png:2"/>
-    <description>You see a mountain elder dwarf. For many years he worked deep in the mountain and found much gold and ore in his life. Soon he will be too old to do this work but at the moment he is still a strong dwarf.</description>
+    <description>You see a 山地矮人壮士. For many years he worked deep in the mountain and found much gold and ore in his life. Soon he will be too old to do this work but at the moment he is still a strong dwarf.</description>
     <attributes>
       <atk value="484"/>
       <def value="75"/>
@@ -623,9 +623,9 @@
     </ai>
   </creature> 
   
-  <creature name="mountain hero dwarf">
+  <creature name="山地矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="mountain_dwarf.png:3"/>
-    <description>You see a mountain hero dwarf. Many, many dwarves admire him! He was a member of a dwarvish group which discovered a very big gold deposit!</description>
+    <description>You see a 山地矮人英雄. Many, many dwarves admire him! He was a member of a dwarvish group which discovered a very big gold deposit!</description>
     <attributes>
       <atk value="503"/>
       <def value="72"/>
@@ -641,11 +641,11 @@
       <item value="money" quantity="[5,43]" probability="100.0"/>
       <item value="矮人护甲" quantity="[1,1]" probability="1.2"/>
       <item value="石甲" quantity="[1,1]" probability="0.05"/>
-      <item value="black legs" quantity="[1,1]" probability="0.0050"/>
+      <item value="黑护腿" quantity="[1,1]" probability="0.0050"/>
       <item value="战戟" quantity="[1,1]" probability="1.5"/>
       <item value="黄金双刃斧" quantity="[1,1]" probability="0.05"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.0050"/>
-      <item value="dwarvish legs" quantity="[1,1]" probability="0.05"/>
+      <item value="矮人护腿" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -657,9 +657,9 @@
     </ai>
   </creature>
   
-  <creature name="mountain leader dwarf">
+  <creature name="山地矮人首领">
     <type class="dwarf" subclass="leader_dwarf" tileid="mountain_dwarf.png:4"/>
-    <description>You see a mountain leader dwarf. He is responsible for the mountain dwarves and their work, and also for the organization of the guardian troops. But in serious cases he will also fight on his own!</description>
+    <description>You see a 山地矮人首领. He is responsible for the mountain dwarves and their work, and also for the organization of the guardian troops. But in serious cases he will also fight on his own!</description>
     <attributes>
       <atk value="560"/>
       <def value="83"/>
@@ -681,7 +681,7 @@
       <item value="黑靴子" quantity="[1,1]" probability="0.035"/>
       <item value="大治疗剂" quantity="[2,4]" probability="3.0"/>
       <item value="附魔钢盾" quantity="[1,1]" probability="0.5"/>
-      <item value="dwarvish legs" quantity="[1,1]" probability="0.1"/>
+      <item value="矮人护腿" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -694,6 +694,6 @@
     </ai>
   </creature>
   
-  <!-- END: mountain dwarf -->
+  <!-- END: 山地矮人 -->
   
 </creatures>

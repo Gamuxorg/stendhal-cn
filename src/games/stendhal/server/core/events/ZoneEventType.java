@@ -26,7 +26,7 @@ public enum ZoneEventType {
 	VISIT_KIKAREUKIN_CAVE(
 			"随着传门把你抛向高空, 穿过小鸟和白云, 你晕头转向, 然后被吸进一座空中群岛, 你被拉进层层的山石之中, 最终到达了网状的巨大石洞中. "),
 	VISIT_KANMARARN_PRISON(
-			"脱狱！你被暗算并遭到抢劫, 而这些 duergars 却从矮人看管的监狱中救出了他们的领袖和英雄. "),
+			"脱狱！你被暗算并遭到抢劫, 而这些 杜加矮人s 却从矮人看管的监狱中救出了他们的领袖和英雄. "),
 	VISIT_IMPERIAL_CAVES(
 			"远处传来了号令声和列队的声音. 你知道这肯定是很接近某一支部队, 你还听到一些重重的脚步声, 这真让人头疼."),
 	VISIT_MAGIC_CITY_N(

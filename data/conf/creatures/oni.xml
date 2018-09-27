@@ -20,7 +20,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="90.0"/>
-      <item value="shadow legs" quantity="[1,1]" probability="0.8"/>
+      <item value="影子护腿" quantity="[1,1]" probability="0.8"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.0"/> 
       <item value="馅饼" quantity="[1,2]" probability="5.0"/>
     </drops>
@@ -49,7 +49,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,70]" probability="100.0"/>
-      <item value="golden legs" quantity="[1,1]" probability="2.0"/>
+      <item value="黄金护腿" quantity="[1,1]" probability="2.0"/>
       <item value="金箭" quantity="[8,15]" probability="5.0"/>
       <item value="金靴子" quantity="[1,1]" probability="2.0"/> 
     </drops>
@@ -112,7 +112,7 @@
     <drops>
       <item value="money" quantity="[10,70]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,1]" probability="30.0"/>
-      <item value="gold bar" quantity="[1,1]" probability="3.0"/>
+      <item value="金条" quantity="[1,1]" probability="3.0"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -143,7 +143,7 @@
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
-      <item value="gold bar" quantity="[1,2]" probability="5.0"/>
+      <item value="金条" quantity="[1,2]" probability="5.0"/>
       <item value="金斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="自由头盔" quantity="[1,1]" probability="0.1"/>
       <item value="aventail" quantity="[1,1]" probability="10.0"/>

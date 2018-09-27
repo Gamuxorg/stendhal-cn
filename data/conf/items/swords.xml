@@ -434,9 +434,9 @@
     </equipable>
   </item>
 
-  <item name="imperator sword">
+  <item name="将军配剑">
     <type class="sword" subclass="imperator_sword" tileid="-1"/>
-    <description>You see a an imperator sword, crafted from you know not what.</description>
+    <description>You see a an 将军配剑, crafted from you know not what.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="14"/>
@@ -455,9 +455,9 @@
     </equipable>
   </item>
 
-  <item name="immortal sword">
+  <item name="永恒之剑">
     <type class="sword" subclass="magic_sword" tileid="-1"/>
-    <description>This immortal sword is a gift of gods to the chosen one. It is heavy and of exquisite craftsmanship.</description>
+    <description>This 永恒之剑 is a gift of gods to the chosen one. It is heavy and of exquisite craftsmanship.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="35"/>
@@ -477,9 +477,9 @@
     </equipable>
   </item>
 
-  <item name="katana">
+  <item name="太刀">
     <type class="sword" subclass="katana" tileid="-1"/>
-    <description>You see a valuable katana, with a lethal looking blade.</description>
+    <description>You see a valuable 太刀, with a lethal looking blade.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="15"/>
@@ -498,9 +498,9 @@
     </equipable>
   </item>
 
-  <item name="knife">
+  <item name="小刀">
     <type class="sword" subclass="knife" tileid="-1"/>
-    <description>You see a blunt knife which looks capable of little damage.</description>
+    <description>You see a blunt 小刀 which looks capable of little damage.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="7"/>
@@ -518,9 +518,9 @@
     </equipable>
   </item>
 
-  <item name="l hand sword">
+  <item name="右手剑">
     <type class="sword" subclass="l_hand_sword" tileid="-1"/>
-    <description>You see l hand sword. It must be used with right hand sword.</description>
+    <description>You see 右手剑. It must be used with right hand sword.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -539,9 +539,9 @@
     </equipable>
   </item>
 
-  <item name="night dagger">
+  <item name="暗之匕首">
     <type class="sword" subclass="black_dagger" tileid="-1"/>
-    <description>You see a night dagger, to be used with stealth.</description>
+    <description>You see a 暗之匕首, to be used with stealth.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -561,9 +561,9 @@
     </equipable>
   </item>
 
-  <item name="nihonto">
+  <item name="武士刀">
     <type class="sword" subclass="nihonto" tileid="-1"/>
-    <description>You see a 武士's nihonto sword with a razor sharp blade.</description>
+    <description>You see a 武士's 武士刀 sword with a razor sharp blade.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="20"/>
@@ -604,9 +604,9 @@
     </equipable>
   </item>
 
-  <item name="orc sword">
+  <item name="兽人重剑">
     <type class="sword" subclass="orc_sword" tileid="-1"/>
-    <description>You see an orc sword which has a heavy and deadly appearance.</description>
+    <description>You see an 兽人重剑 which has a heavy and deadly appearance.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="24"/>
@@ -624,9 +624,9 @@
     </equipable>
   </item>
 
-  <item name="orcish sword">
+  <item name="兽人大剑">
     <type class="sword" subclass="orcish_sword" tileid="-1"/>
-    <description>This orcish sword is badly done and weighs a lot.</description>
+    <description>This 兽人大剑 is badly done and weighs a lot.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="38"/>
@@ -645,9 +645,9 @@
     </equipable>
   </item>
 
-  <item name="r hand sword">
+  <item name="左手剑">
     <type class="sword" subclass="r_hand_sword" tileid="-1"/>
-    <description>You see r hand sword. It must be used with a left hand sword.</description>
+    <description>You see 左手剑. It must be used with a left hand sword.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -666,9 +666,9 @@
     </equipable>
   </item>
 
-  <item name="scimitar">
+  <item name="半月弯刀">
     <type class="sword" subclass="scimitar" tileid="-1"/>
-    <description>This scimitar catches the light as you look at it, it will be a powerful weapon.</description>
+    <description>This 半月弯刀 catches the light as you look at it, it will be a powerful weapon.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="14"/>
@@ -707,9 +707,9 @@
     </equipable>
   </item>
 
-  <item name="soul dagger">
+  <item name="灵魂匕首">
     <type class="sword" subclass="soul_dagger" tileid="-1"/>
-    <description>You see a soul dagger. It's so light and sharp that you can stab at a very fast rate.</description>
+    <description>You see a 灵魂匕首. It's so light and sharp that you can stab at a very fast rate.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="5"/>
@@ -749,9 +749,9 @@
     </equipable>
   </item>
 
-  <item name="vampire sword">
+  <item name="吸血鬼之刃">
     <type class="sword" subclass="vampire_sword" tileid="-1"/>
-    <description>You see the vampire sword, which will suck life from those you attack with it.</description>
+    <description>You see the 吸血鬼之刃, which will suck life from those you attack with it.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="28"/>
@@ -771,9 +771,9 @@
     </equipable>
   </item>
 
-  <item name="xeno sword">
+  <item name="异界之剑">
     <type class="sword" subclass="xeno_sword" tileid="-1"/>
-    <description>You wield a xeno sword. Despite the great strength it is strangely light.</description>
+    <description>You wield a 异界之剑. Despite the great strength it is strangely light.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="38"/>

@@ -76,7 +76,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 			outfitTypes.put("thing face", THING_FACE);
 			outfitTypes.put("umbrella", Umbrella);
 			outfitTypes.put("purple slime", PURPLE_SLIME);
-			outfitTypes.put("green slime", GREEN_SLIME);
+			outfitTypes.put("绿色史莱姆", GREEN_SLIME);
 			outfitTypes.put("red slime", RED_SLIME);
 			outfitTypes.put("blue slime", BLUE_SLIME);
 			outfitTypes.put("gingerbread man", GINGERBREAD_MAN);
@@ -165,7 +165,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 				priceList.put("purple slime", (int) (N * 3000));
 				priceList.put("red slime", (int) (N * 3000));
 				priceList.put("blue slime", (int) (N * 3000));
-				priceList.put("green slime", (int) (N * 3000));
+				priceList.put("绿色史莱姆", (int) (N * 3000));
 				priceList.put("gingerbread man", (int) (N * 1200));
 				priceList.put("umbrella", (int) (N * 300));
 			    //addGreeting("Hello, I hope you are enjoying looking around our gorgeous boutique.");

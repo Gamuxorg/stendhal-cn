@@ -26,7 +26,7 @@ public class BeholderRaid extends CreateRaid {
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
 		attackArmy.put("小邪眼怪", 7);
-		attackArmy.put("green slime", 4);
+		attackArmy.put("绿色史莱姆", 4);
 		attackArmy.put("邪眼怪", 5);
 		attackArmy.put("大邪眼怪", 1);
 		attackArmy.put("蛇", 3);

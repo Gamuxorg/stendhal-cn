@@ -43,7 +43,7 @@ import games.stendhal.server.util.TimeUtil;
 import marauroa.common.Pair;
 
 /**
- * QUEST: Kill Dhohr Nuggetcutter
+ * QUEST: Kill 钳工都尔
  * <p>
  * PARTICIPANTS:
  * <ul>
@@ -53,12 +53,12 @@ import marauroa.common.Pair;
  * STEPS:
  * <ul>
  * <li> Zogfang asks you to kill remaining dwarves from area
- * <li> You go kill Dhohr Nuggetcutter and you get the reward from Zogfang
+ * <li> You go kill 钳工都尔 and you get the reward from Zogfang
  * </ul>
  * <p>
  * REWARD:
  * <ul>
- * <li> mithril nugget
+ * <li> 密银矿石
  * <li> 4000 XP
  * <li>35 karma in total
  * </ul>
@@ -90,9 +90,9 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 						if (!player.hasQuest(QUEST_SLOT) || player.getQuest(QUEST_SLOT).equals("rejected")) {
-							raiser.say("We are unable to rid our area of dwarves. Especially one mighty one named Dhohr Nuggetcutter. Would you please kill them?");
+							raiser.say("We are unable to rid our area of dwarves. Especially one mighty one named 钳工都尔. Would you please kill them?");
 						}  else if (player.getQuest(QUEST_SLOT, 0).equals("start")) {
-							raiser.say("I already asked you to kill Dhohr Nuggetcutter!");
+							raiser.say("I already asked you to kill 钳工都尔!");
 							raiser.setCurrentState(ConversationStates.ATTENDING);
 						}  else if (player.getQuest(QUEST_SLOT).startsWith("killed;")) {
 							final String[] tokens = player.getQuest(QUEST_SLOT).split(";");
@@ -112,11 +112,11 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 				});
 
 		final HashMap<String, Pair<Integer, Integer>> toKill = new HashMap<String, Pair<Integer, Integer>>();
-		toKill.put("Dhohr Nuggetcutter", new Pair<Integer, Integer>(0,1));
-		toKill.put("mountain dwarf", new Pair<Integer, Integer>(0,2));
-		toKill.put("mountain elder dwarf", new Pair<Integer, Integer>(0,2));
-		toKill.put("mountain hero dwarf", 	new Pair<Integer, Integer>(0,2));
-		toKill.put("mountain leader dwarf", new Pair<Integer, Integer>(0,2));
+		toKill.put("钳工都尔", new Pair<Integer, Integer>(0,1));
+		toKill.put("山地矮人", new Pair<Integer, Integer>(0,2));
+		toKill.put("山地矮人壮士", new Pair<Integer, Integer>(0,2));
+		toKill.put("山地矮人英雄", 	new Pair<Integer, Integer>(0,2));
+		toKill.put("山地矮人首领", new Pair<Integer, Integer>(0,2));
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new SetQuestAction(QUEST_SLOT, 0, "start"));
@@ -154,7 +154,7 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						raiser.say("Just go kill Dhohr Nuggetcutter and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.");
+						raiser.say("Just go kill 钳工都尔 and his minions; the mountain leader, hero and elder dwarves. Even the simple mountain dwarves are a danger to us, kill them too.");
 				}
 		});
 
@@ -169,7 +169,7 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 						raiser.say("Thank you so much. You are a warrior, indeed! Here, have one of these. We have found them scattered about. We have no idea what they are.");
 							final Item mithrilnug = SingletonRepository.getEntityManager()
-									.getItem("mithril nugget");
+									.getItem("密银矿石");
 							player.equipOrPutOnGround(mithrilnug);
 							player.addKarma(25.0);
 							player.addXP(4000);
@@ -181,7 +181,7 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Kill Dhohr Nuggetcutter",
+				"Kill 钳工都尔",
 				"Zogfang, the orc who guards the entrance of Abandoned Keep, isn't feeling safe while some dwarves still remain in the Keep.",
 				false);
 		step_1();
@@ -196,7 +196,7 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I must kill the Dhohr Nuggetcutter and his cronies to satisfy Zogfang.");
+				res.add("I must kill the 钳工都尔 and his cronies to satisfy Zogfang.");
 			} else if(isRepeatable(player)){
 				res.add("Zogfang is anxious again and will reward me if I help him.");
 			} else {

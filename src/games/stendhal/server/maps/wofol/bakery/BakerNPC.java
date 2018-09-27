@@ -90,7 +90,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addHelp("I have work with #Leander, I #make #比萨.");
 				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #比萨.");
 				addQuest("#Leander need 比萨 send. I #make #比萨, you have ingredients.");
-				addGoodbye("You no take candle!");
+				addGoodbye("You no take 蜡烛!");
 
 				// makes a 比萨 if you bring 面粉 cheese mushroom 大脚菇 and ham
 				// (uses sorted TreeMap instead of HashMap)

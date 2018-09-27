@@ -39,7 +39,7 @@ public class DiscipleAssassinCreature implements ZoneConfigurator {
 	private void buildAssassinIdGuy(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = new ItemGuardCreature(manager.getCreature("弟子刺客"), "刺客编号");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("刺客门徒"), "刺客编号");
 
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 242, 41, creature, 1);
 

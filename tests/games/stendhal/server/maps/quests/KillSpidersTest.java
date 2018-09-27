@@ -137,13 +137,13 @@ public class KillSpidersTest extends SpidersCreatures {
 		assertEquals("spider", player.getQuest(questSlot, 1));
 		questHistory.add("I have killed a spider in the basement.");
 		assertEquals(questHistory, quest.getHistory(player));
-		killSpider("poisonous spider");
-		assertEquals("poisonous spider",player.getQuest(questSlot, 2));
-		questHistory.add("I have killed a poisonous spider in the basement.");
+		killSpider("毒蜘蛛");
+		assertEquals("毒蜘蛛",player.getQuest(questSlot, 2));
+		questHistory.add("I have killed a 毒蜘蛛 in the basement.");
 		assertEquals(questHistory, quest.getHistory(player));
-		killSpider("giant spider");
-		assertEquals("giant spider",player.getQuest(questSlot, 3));
-		questHistory.add("I have killed a giant spider in the basement.");
+		killSpider("巨型蜘蛛");
+		assertEquals("巨型蜘蛛",player.getQuest(questSlot, 3));
+		questHistory.add("I have killed a 巨型蜘蛛 in the basement.");
 		questHistory.add("I have killed all 3 spiders in the basement. Now I go back to Morgrin to fetch my reward.");
 		assertEquals(questHistory, quest.getHistory(player));
 		final int xp = player.getXP();
@@ -217,16 +217,16 @@ public class KillSpidersTest extends SpidersCreatures {
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
-		player.setSharedKill("poisonous spider");
-		questHistory.add("I have killed a poisonous spider in the basement.");
+		player.setSharedKill("毒蜘蛛");
+		questHistory.add("I have killed a 毒蜘蛛 in the basement.");
 		assertEquals(questHistory, quest.getHistory(player));
 		en.step(player, "hi");
 		assertEquals("Go down and kill the creatures, no time left.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
-		player.setSharedKill("giant spider");
-		questHistory.add("I have killed a giant spider in the basement.");
+		player.setSharedKill("巨型蜘蛛");
+		questHistory.add("I have killed a 巨型蜘蛛 in the basement.");
 		questHistory.add("I have killed all 3 spiders in the basement. Now I go back to Morgrin to fetch my reward.");
 		assertEquals(questHistory, quest.getHistory(player));
 		en.step(player, "hi");

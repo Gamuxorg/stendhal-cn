@@ -76,7 +76,7 @@ public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 		haunchyEng.step(player, "hi");
 		assertEquals("Hey! Nice day for a BBQ!", getReply(haunchy));
 		haunchyEng.step(player, "task");
-		assertEquals("I cannot use wood for this huge BBQ. To keep the heat I need some really old stone coal but there isn't much left. The problem is, that I can't fetch it myself because my steaks would burn then so I have to stay here. Can you bring me 25 pieces of #coal for my BBQ please?", getReply(haunchy));
+		assertEquals("I cannot use wood for this huge BBQ. To keep the heat I need some really old 煤 but there isn't much left. The problem is, that I can't fetch it myself because my steaks would burn then so I have to stay here. Can you bring me 25 pieces of #coal for my BBQ please?", getReply(haunchy));
 		haunchyEng.step(player, "coal");
 		assertEquals("Coal isn't easy to find. You normally can find it somewhere in the ground but perhaps you are lucky and find some in the old Semos Mine tunnels...", getReply(haunchy));
 		haunchyEng.step(player, "yes");

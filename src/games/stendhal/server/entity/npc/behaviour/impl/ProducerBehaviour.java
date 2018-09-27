@@ -74,7 +74,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	private final boolean productBound;
 
 	/**
-	 * A mapping which maps the name of each required resource (e.g. "iron ore")
+	 * A mapping which maps the name of each required resource (e.g. "铁矿石")
 	 * to the amount of this resource that is required for one unit of the
 	 * product.
 	 */
@@ -97,7 +97,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.
-	 *            "iron ore") to the amount of this resource that is required
+	 *            "铁矿石") to the amount of this resource that is required
 	 *            for one unit of the product.
 	 * @param productionTimePerItem
 	 *            the number of seconds required to produce one unit of the
@@ -122,7 +122,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.
-	 *            "iron ore") to the amount of this resource that is required
+	 *            "铁矿石") to the amount of this resource that is required
 	 *            for one unit of the product.
 	 * @param productionTimePerItem
 	 *            the number of seconds required to produce one unit of the
@@ -194,7 +194,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 * Gets a nicely formulated string that describes the amounts and names of
 	 * the resources that are required to produce <i>amount</i> units of the
 	 * product, with hashes before the resource names in order to highlight
-	 * them, e.g. "4 #wood, 2 #iron, and 6 #leather".
+	 * them, e.g. "4 #wood, 2 #铁锭, and 6 #leather".
 	 *
 	 * @param amount
 	 *            The amount of products that were requested
