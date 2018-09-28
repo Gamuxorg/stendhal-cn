@@ -139,7 +139,7 @@
   
   <item name="斗蓬">
     <type class="cloak" subclass="cloak" tileid="-1"/>
-    <description>You see a simple cloth 斗蓬.</description>
+    <description>简易的布斗蓬.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>

@@ -106,7 +106,7 @@ public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 		barbarusEng.step(player, "yes");
 		assertEquals("Congratulations! Here is your pick!", getReply(barbarus));
 		// You see a pick. It is a tool which helps you to get some coal.
-		assertTrue(player.isEquipped("pick"));
+		assertTrue(player.isEquipped("鹤嘴锄"));
 		barbarusEng.step(player, "bye");
 		assertEquals("Nice to meet you. Good luck!", getReply(barbarus));
 

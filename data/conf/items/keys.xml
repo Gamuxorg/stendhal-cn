@@ -4,7 +4,7 @@
   
   <item name="龙之银钥匙">
     <type class="key" subclass="silver" tileid="-1"/>
-    <description>You see a silver dungeon key. Use it only if you are brave.</description>
+    <description>龙之银钥匙. Use it only if you are brave.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     	<autobind value="" />
@@ -22,7 +22,7 @@
 
   <item name="巫妖金钥匙">
     <type class="key" subclass="gold" tileid="-1"/>
-    <description>You see a golden lich key. It will open the door to terrible things.</description>
+    <description>巫妖金钥匙. It will open the door to terrible things.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     	<autobind value="" />
@@ -40,7 +40,7 @@
 
   <item name="牛头人钥匙">
     <type class="key" subclass="bronze" tileid="-1"/>
-    <description>You see a fancy bronze key. It smells faintly of 牛头人, perhaps one dropped it?</description>
+    <description>牛头人钥匙. It smells faintly of 牛头人, perhaps one dropped it?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -74,7 +74,7 @@
 
   <item name="科多奇监狱钥匙">
     <type class="key" subclass="copper" tileid="-1"/>
-    <description>You see an ancient copper key, enscribed with something in Orcish.</description>
+    <description>科多奇监狱钥匙, enscribed with something in Orcish.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -91,7 +91,7 @@
 
   <item name="卡梅伦监狱钥匙">
     <type class="key" subclass="blue" tileid="-1"/>
-    <description>You see a key which matches the locks in the 卡梅伦 prison.</description>
+    <description>卡梅伦监狱钥匙 which matches the locks in the 卡梅伦 prison.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -108,7 +108,7 @@
 
   <item name="西大城门钥匙">
     <type class="key" subclass="square" tileid="-1"/>
-    <description>You see a key for the gate to the imperial city of 西大.</description>
+    <description>西大城门钥匙for the gate to the imperial city of 西大.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -126,7 +126,7 @@
  <!-- this is unused as yet but we create the key object so the door can reject properly-->
   <item name="宠物圣堂钥匙">
     <type class="key" subclass="rat" tileid="-1"/>
-    <description>You see a key for the pet sanctuary in Ados.</description>
+    <description>宠物圣堂钥匙for the pet sanctuary in Ados.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -143,7 +143,7 @@
 
   <item name="房间钥匙">
     <type class="key" subclass="purple" tileid="-1"/>
-    <description>You should not see this description</description>
+    <description>房间钥匙</description>
     <implementation class-name="games.stendhal.server.entity.item.HouseKey" />
     <attributes>
       <undroppableondeath value="1" />
@@ -161,7 +161,7 @@
   
   <item name="大门钥匙">
     <type class="key" subclass="purple" tileid="-1"/>
-    <description>You should not see this description</description>
+    <description>大门钥匙</description>
     <implementation class-name="games.stendhal.server.entity.item.GateKey"/>
     <attributes>
     </attributes>

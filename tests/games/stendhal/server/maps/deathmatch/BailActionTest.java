@@ -129,9 +129,9 @@ public class BailActionTest {
 		final Engine en = th.getEngine();
 		final Player player = PlayerTestHelper.createPlayer("bob");
 		en.setCurrentState(ConversationStates.ATTENDING);
-		final Item helmet = SingletonRepository.getEntityManager().getItem("trophy helmet");
+		final Item helmet = SingletonRepository.getEntityManager().getItem("奖品头盔");
 		player.equipToInventoryOnly(helmet);
-		assertTrue(player.isEquipped("trophy helmet"));
+		assertTrue(player.isEquipped("奖品头盔"));
 		helmet.put("def", 2);
 		assertThat(helmet.getInt("def"), greaterThan(1));
 		player.setQuest("deathmatch", "start");

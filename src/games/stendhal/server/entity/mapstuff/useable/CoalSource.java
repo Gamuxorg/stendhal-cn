@@ -43,7 +43,7 @@ public class CoalSource extends PlayerActivityEntity {
 	/**
 	 * The equipment needed.
 	 */
-	private static final String NEEDED_EQUIPMENT = "pick";
+	private static final String NEEDED_EQUIPMENT = "鹤嘴锄";
 
 	/**
 	 * The name of the item to be found.

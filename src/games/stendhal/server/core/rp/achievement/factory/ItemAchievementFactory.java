@@ -55,7 +55,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.elvish", "Nalwor's Bane", "Loot a complete elvish equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "精灵护甲", "elvish hat", "精灵披风", "精灵护腿",
+				new PlayerLootedNumberOfItemsCondition(1, "精灵护甲", "精灵帽", "精灵披风", "精灵护腿",
 						"精灵靴", "精灵之盾")));
 
 		itemAchievements.add(createAchievement("item.set.shadow", "Shadow Dweller", "Loot a complete shadow equipment set",
@@ -85,7 +85,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.xeno", "A Bit Xenophobic?", "Loot a complete xeno equipment set",
 				Achievement.HARD_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "异界甲", "xeno helmet", "异界斗篷", "异界护腿",
+				new PlayerLootedNumberOfItemsCondition(1, "异界甲", "异界头盔", "异界斗篷", "异界护腿",
 						"异界靴子", "异界盾")));
 
 		itemAchievements.add(createAchievement("item.cloak.dragon", "Dragon Slayer", "Loot all dragon cloaks",

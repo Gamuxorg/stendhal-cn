@@ -63,7 +63,7 @@
     </equipable>
   </item>
   
-  <item name="chaos shield">
+  <item name="混乱之盾">
     <type class="shield" subclass="chaos_shield" tileid="-1"/>
     <description>一面混乱之盾, 上面特殊的花纹可以迷惑敌人. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -370,7 +370,7 @@
   
   <item name="独角盾">
     <type class="shield" subclass="unicorn_shield" tileid="-1"/>
-    <description>You see a 独角盾. It's beautifully crafted and will give you excellent protection.</description>
+    <description>一面独角盾. 制作工艺优良, 可能提供良好的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -391,7 +391,7 @@
   
   <item name="木盾">
     <type class="shield" subclass="wooden_shield" tileid="-1"/>
-    <description>You see a 木盾. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.</description>
+    <description>一面木盾. 虽然使用便宜的木头制成, 但也能提供一些基本防护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>

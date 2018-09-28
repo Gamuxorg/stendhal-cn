@@ -63,8 +63,8 @@ import games.stendhal.server.util.ItemCollection;
  * STEPS:
  * <ul>
  * <li>Bring note to apothecary to 詹姆森.</li>
- * <li>As a favor to 克拉丝, 詹姆森 will help you to strengthen your medicinal ring.</li>
- * <li>Bring 詹姆森 a medicinal ring, 毒腺, 2 曼德拉草 and 5 fairycakes.</li>
+ * <li>As a favor to 克拉丝, 詹姆森 will help you to strengthen your 医疗戒指.</li>
+ * <li>Bring 詹姆森 a 医疗戒指, 毒腺, 2 曼德拉草 and 5 fairycakes.</li>
  * <li>詹姆森 requires a bottle big enough to hold venom extracted from gland.</li>
  * <li>Bring 詹姆森 a giant bottle.</li>
  * <li>詹姆森 realizes he doesn't have a way to extract the venom.</li>
@@ -94,7 +94,7 @@ public class AntivenomRing extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "antivenom_ring";
 
-	//public static final String NEEDED_ITEMS = "medicinal ring=1;毒腺=1;曼德拉草=2;仙女蛋糕=5";
+	//public static final String NEEDED_ITEMS = "医疗戒指=1;毒腺=1;曼德拉草=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create cobra venom */
 	public static final String EXTRACTION_ITEMS = "毒腺=1;vial=1";
@@ -104,7 +104,7 @@ public class AntivenomRing extends AbstractQuest {
 
 	/* Items taken to ??? to create antivenom ring */
 	public static final int REQUIRED_MONEY = 10000;
-	public static final String FUSION_ITEMS = "antivenom=1;medicinal ring=1";
+	public static final String FUSION_ITEMS = "antivenom=1;医疗戒指=1";
 
 	//private static final int REQUIRED_MINUTES = 30;
 
@@ -334,7 +334,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 
 		mixer.add(ConversationStates.QUESTION_1,
-				Arrays.asList("medicinal ring", "medicinal rings"),
+				Arrays.asList("医疗戒指", "医疗戒指s"),
 				null,
 				ConversationStates.QUESTION_1,
 				"在一些毒物体内存在. ",
@@ -393,7 +393,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 
 		mixer.add(ConversationStates.ATTENDING,
-				Arrays.asList("medicinal ring", "medicinal rings"),
+				Arrays.asList("医疗戒指", "医疗戒指s"),
 				null,
 				ConversationStates.ATTENDING,
 				"一些生物身上带着毒.",
@@ -609,7 +609,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationStates.QUESTION_1,
 				null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 2, FUSION_ITEMS),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 2, "你需要一个强力抗毒的物品使你免受毒害吗？我可以把抗毒液混入医疗戒指 medicinal ring 医疗戒指中, 让它的抗毒性更强, 当然代价不低, 我需要 [items]. 然后你还需要付 " + Integer.toString(REQUIRED_MONEY) + " 钱币, 你能把这些全都找来吗？")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 2, "你需要一个强力抗毒的物品使你免受毒害吗？我可以把抗毒液混入医疗戒指 医疗戒指 医疗戒指中, 让它的抗毒性更强, 当然代价不低, 我需要 [items]. 然后你还需要付 " + Integer.toString(REQUIRED_MONEY) + " 钱币, 你能把这些全都找来吗？")
 				)
 		);
 
@@ -633,7 +633,7 @@ public class AntivenomRing extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Antivenom Ring",
-				"作为送给老朋友的礼物, 药济师 詹姆森 能够加强医疗戒指 medicinal ring.",
+				"作为送给老朋友的礼物, 药济师 詹姆森 能够加强医疗戒指 医疗戒指.",
 				false);
 		prepareHintNPCs();
 		requestAntivenom();

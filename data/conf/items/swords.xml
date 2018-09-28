@@ -175,7 +175,7 @@
 
   <item name="匕首">
     <type class="sword" subclass="dagger" tileid="-1"/>
-    <description>You see a 匕首, it is little more than decorative but you can jab pretty fast with it.</description>
+    <description>一把匕首, 虽然小且攻击不高, 但可能快速攻击.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="8"/>
@@ -392,7 +392,7 @@
 
   <item name="地狱匕首">
     <type class="sword" subclass="hell_dagger" tileid="-1"/>
-    <description>You see a 地狱匕首. Is the colour that of the burning fires of Hell?</description>
+    <description>地狱匕首. 涂着地狱火的色彩?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="9"/>
@@ -414,7 +414,7 @@
 
   <item name="冰剑">
     <type class="sword" subclass="ice_sword" tileid="-1"/>
-    <description>You see an 冰剑, the blade is lethally cold to the touch, and you know it is one of the best weapons you'll find.</description>
+    <description>一把冰剑, the blade is lethally cold to the touch, and you know it is one of the best weapons you'll find.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="29"/>
@@ -563,7 +563,7 @@
 
   <item name="武士刀">
     <type class="sword" subclass="nihonto" tileid="-1"/>
-    <description>You see a 武士's 武士刀 sword with a razor sharp blade.</description>
+    <description>日本武士用的武士刀.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="20"/>

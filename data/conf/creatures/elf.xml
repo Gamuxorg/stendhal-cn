@@ -710,7 +710,7 @@
       <item value="斗蓬" quantity="[1,1]" probability="0.5"/>
       <item value="钢盾" quantity="[1,1]" probability="1.0"/>
       <item value="精灵护腿" quantity="[1,1]" probability="0.05"/>
-      <item value="elvish hat" quantity="[1,1]" probability="1.0" />
+      <item value="精灵帽" quantity="[1,1]" probability="1.0" />
     </drops>
     <equips>
     </equips>
@@ -846,7 +846,7 @@
       <item value="太刀" quantity="[1,1]" probability="5.0"/>
       <item value="阔剑" quantity="[1,1]" probability="2.0"/>
       <item value="治疗剂" quantity="[2,4]" probability="20.0"/>
-      <item value="elvish hat" quantity="[1,1]" probability="2.0" />
+      <item value="精灵帽" quantity="[1,1]" probability="2.0" />
     </drops>
     <equips>
     </equips>
@@ -981,7 +981,7 @@
       <item value="纳尔沃城回城卷" quantity="[1,1]" probability="5.0"/>
       <item value="精灵靴" quantity="[1,1]" probability="5.0"/>
       <item value="精灵护腿" quantity="[1,1]" probability="5.0"/>
-      <item value="elvish hat" quantity="[1,1]" probability="10.0" />
+      <item value="精灵帽" quantity="[1,1]" probability="10.0" />
     </drops>
     <equips>
     </equips>

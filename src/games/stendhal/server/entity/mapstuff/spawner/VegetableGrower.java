@@ -57,7 +57,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
      */
 	public VegetableGrower(final RPObject object, final String name,
 			final int maxRipeness, final int growthRate) {
-		super(object, "items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", maxRipeness, growthRate);
+		super(object, "items/grower/" + name + "_grower", "items/grower/" + name + " grower", "pick", maxRipeness, growthRate);
 		vegetableName = name;
 		setDescription("好像这些 "
 				+ name + " 正在发芽.");
@@ -70,7 +70,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 	 * @param name item name
 	 */
 	public VegetableGrower(final String name) {
-		super("items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", 1, 1, 1);
+		super("items/grower/" + name + "_grower", "items/grower/" + name + " grower", "pick", 1, 1, 1);
 		vegetableName = name;
 		setDescription("好像这些 "
 				+ name + " 正在发芽.");

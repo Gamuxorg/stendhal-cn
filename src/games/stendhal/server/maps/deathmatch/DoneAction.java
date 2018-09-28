@@ -31,13 +31,13 @@ import marauroa.server.db.command.DBCommandQueue;
 public class DoneAction implements ChatAction {
 
 	/**
-	 * Creates the player bound special trophy helmet and equips it.
+	 * Creates the player bound special 奖品头盔 and equips it.
 	 *
 	 * @param player Player object
 	 * @return Helmet
 	 */
 	private Item createTrophyHelmet(final Player player) {
-		final Item helmet = SingletonRepository.getEntityManager().getItem("trophy helmet");
+		final Item helmet = SingletonRepository.getEntityManager().getItem("奖品头盔");
 		helmet.setBoundTo(player.getName());
 		helmet.put("def", 1);
 		helmet.setInfoString(player.getName());
@@ -68,11 +68,11 @@ public class DoneAction implements ChatAction {
 
 		updatePoints(player);
 
-		// We assume that the player only carries one trophy helmet.
-		final Item helmet = player.getFirstEquipped("trophy helmet");
+		// We assume that the player only carries one 奖品头盔.
+		final Item helmet = player.getFirstEquipped("奖品头盔");
 		if (helmet == null) {
 			createTrophyHelmet(player);
-			raiser.say("Here is your special trophy helmet. Keep it, as the defense will increase by 1 "
+			raiser.say("Here is your special 奖品头盔. Keep it, as the defense will increase by 1 "
 				+ "for every deathmatch you complete. Now, tell me if you want to #leave.");
 		} else {
 			int defense = 1;

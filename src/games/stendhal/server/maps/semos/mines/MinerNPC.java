@@ -72,7 +72,7 @@ public class MinerNPC implements ZoneConfigurator {
 				addOffer("我可以卖给你一些有用的挖矿工具, 是以前和我一起工作的朋友留下的, 所以只要付费, 就可以选一把鹤嘴锄 #picks 带走. 我还可以为你提供一些食品和饮料, 但剩余不多了.... 我还要工作一段时间, 所以还得给自已留一点, 抱歉...但如果你需要, 我能给你一份矿山的地图 #map . ");
 				addReply("picks", "你需要一把鹤嘴锄才能在矿山的墙壁上采矿. ");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-                offerings.put("pick", 400);
+                offerings.put("鹤嘴锄", 400);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
 				addQuest("抱歉, 但如你所见, 弄了一身灰我也没有完成工作. 我没空想你的问题, 除非你能帮我弄一些煤.");
 				addJob("我是个矿工. 在这个矿洞努力工作着, 如果你往下走得越深, 环境就会变越热, 并且灰尘越多, 光线条件也差,你很难看清路...");

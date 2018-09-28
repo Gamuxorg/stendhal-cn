@@ -22,7 +22,7 @@
       <item value="money" quantity="[2000,10000]" probability="80.0"/>
       <item value="蜘蛛丝腺" quantity="[1,3]" probability="20.0"/>
       <item value="剧毒" quantity="[1,2]" probability="10.0"/>
-      <item value="medicinal ring" quantity="[1,1]" probability="1.0" />
+      <item value="医疗戒指" quantity="[1,1]" probability="1.0" />
     </drops>
     <equips>      
       <slot name="rhand" item="暗之匕首"/>
@@ -524,7 +524,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,33]" probability="100.0"/>
-      <item value="medicinal ring" quantity="[1,1]" probability="0.5" />
+      <item value="医疗戒指" quantity="[1,1]" probability="0.5" />
     </drops>
     <equips>
     </equips>
@@ -558,7 +558,7 @@
     <drops>
       <item value="money" quantity="[10,60]" probability="100.0"/>
       <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
-      <item value="medicinal ring" quantity="[1,1]" probability="0.75"/>
+      <item value="医疗戒指" quantity="[1,1]" probability="0.75"/>
     </drops>
     <equips>
     </equips>
@@ -627,7 +627,7 @@
     <corpse name="humanoid_2x2" width="2" height="2" />
     <drops>
       <item value="money" quantity="[5,60]" probability="100.0" />
-      <item value="medicinal ring" quantity="[1,1]" probability="1.5" />
+      <item value="医疗戒指" quantity="[1,1]" probability="1.5" />
     </drops>
     <equips>
     </equips>
@@ -959,7 +959,7 @@
       <item value="异界之剑" quantity="[1,1]" probability="0.5" />
       <item value="异界甲" quantity="[1,1]" probability="1.5" />
       <item value="异界护腿" quantity="[1,1]" probability="1.5" />
-      <item value="xeno helmet" quantity="[1,1]" probability="1.5" />
+      <item value="异界头盔" quantity="[1,1]" probability="1.5" />
     </drops>
     <equips>
     </equips>

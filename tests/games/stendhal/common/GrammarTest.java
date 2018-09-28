@@ -348,7 +348,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("golden helmets", "golden helmet");
 		testPluralisationAndSingularisation("golden helmets +3",
 				"golden helmet +3");
-		testPluralisationAndSingularisation("trophy helmets", "trophy helmet");
+		testPluralisationAndSingularisation("奖品头盔s", "奖品头盔");
 		testPluralisationAndSingularisation("pairs of leather legs",
 				"pair of leather legs");
 		testPluralisationAndSingularisation("pairs of 镶嵌护腿",

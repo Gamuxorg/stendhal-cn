@@ -46,7 +46,7 @@ public class BailAction implements ChatAction {
 		new IncrementQuestAction("deathmatch", 7, 1).fire(player, sentence, raiser);
 
 		// TODO: fix race condition until bail is processed in DeathmatchEngine
-		final Item helmet = player.getFirstEquipped("trophy helmet");
+		final Item helmet = player.getFirstEquipped("奖品头盔");
 		if ((helmet != null) && helmet.has("def") && (helmet.getInt("def") > 1)) {
 			raiser.say("Coward! I'm sorry to inform you, for this your helmet has been magically weakened.");
 		} else {

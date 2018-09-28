@@ -123,7 +123,7 @@ public final class ShopList {
 		shops.add("selltools", "手斧", 25);
 		shops.add("selltools", "重斧", 40);
 		// enable these if you need them for a quest or something
-		// shops.add("selltools", "pick", 50);
+		// shops.add("selltools", "鹤嘴锄", 50);
 		// shops.add("selltools", "铲子", 50);
 		shops.add("selltools", "铁锤", 60);
 		// used for harvest 小麦.
@@ -223,7 +223,7 @@ public final class ShopList {
 		shops.add("boots&helm", "混沌靴", 4000);
         shops.add("boots&helm", "绿了吧唧的靴子", 6000);
         shops.add("boots&helm", "异界靴子", 8000);
-        shops.add("boots&helm", "xeno helmet", 8000);
+        shops.add("boots&helm", "异界头盔", 8000);
 
 		// helmet shop (mithrilbourgh)
 		// Note the shop sign is done by hand in

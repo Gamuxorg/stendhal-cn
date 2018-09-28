@@ -4,7 +4,7 @@
 
   <item name="天使雕像">
     <type class="relic" subclass="angel_figurine" tileid="-1"/>
-    <description>You see a sparkling 天使雕像.</description>
+    <description>闪闪发光的天使雕像.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
        <quantity value="1"/>
@@ -23,7 +23,7 @@
   
   <item name="骷髅戒指">
     <type class="relic" subclass="skull_ring" tileid="-1"/>
-    <description>You see a 骷髅戒指.</description>
+    <description>一个骷髅戒指.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

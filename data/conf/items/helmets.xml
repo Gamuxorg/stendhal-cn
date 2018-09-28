@@ -4,7 +4,7 @@
   
   <item name="皮帽">
     <type class="helmet" subclass="leather_helmet" tileid="-1"/>
-    <description>You see a 皮帽, it seems more like a hat than a defensive item.</description>
+    <description>一顶皮帽, 与其它护具相比, 就是普通帽子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -20,9 +20,9 @@
     </equipable>
   </item>
   
-  <item name="trophy helmet">
+  <item name="奖品头盔">
     <type class="helmet" subclass="golden_horned_barbute" tileid="-1"/>
-    <description>You see a Trophy Helmet. Those who were brave and finished the death match, win this helmet.</description>
+    <description>一顶奖品头盔. 完成死亡比赛的奖品.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -41,7 +41,7 @@
   
   <item name="罗宾帽">
     <type class="helmet" subclass="robins_hat" tileid="-1"/>
-    <description>You see a 罗宾帽. It's cute but that's about it.</description>
+    <description>一顶罗宾帽. 戴上后看着很可爱.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -59,7 +59,7 @@
   
   <item name="镶嵌头盔">
     <type class="helmet" subclass="studded_helmet" tileid="-1"/>
-    <description>You see a 镶嵌头盔, it should protect your head against cuts but perhaps not hard blows.</description>
+    <description>一顶 镶嵌头盔, 可以保护头部不受利剑伤害, 但可能防不住重击.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -75,9 +75,9 @@
     </equipable>
   </item>
   
-  <item name="elvish hat">
+  <item name="精灵帽">
     <type class="helmet" subclass="elvish_hat" tileid="-1"/>
-    <description>You see an elvish hat. The elf craftmanship has made the leafy material stronger than one would think.</description>
+    <description>一顶精灵帽. 使用精灵技术把枝条缝制在一起, 比想像中结实.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <def value="3"/>
@@ -95,7 +95,7 @@
   
   <item name="索链头盔">
     <type class="helmet" subclass="chain_helmet" tileid="-1"/>
-    <description>You see a solid 索链头盔, it will be excellent protection for your head.</description>
+    <description>一顶坚固的索链头盔, 它给你的头部提供了优良的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -113,7 +113,7 @@
   
   <item name="海盗帽">
     <type class="helmet" subclass="horned_helmet" tileid="-1"/>
-    <description>You see a 海盗帽. The previous owner wore it to many battles.</description>
+    <description>一顶海盗帽. 上个穿着它的人一定经受了很多战斗.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -131,7 +131,7 @@
   
   <item name="护面头盔">
     <type class="helmet" subclass="aventail" tileid="-1"/>
-    <description>You see a 护面头盔. It's a clever design.</description>
+    <description>一顶护面头盔. 很聪明的设计.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -150,7 +150,7 @@
   
   <item name="蓝头盔">
     <type class="helmet" subclass="blue_helmet" tileid="-1"/>
-    <description>You see a brand new 蓝头盔.</description>
+    <description>一顶刻标的 蓝头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -169,7 +169,7 @@
   
   <item name="红头盔">
     <type class="helmet" subclass="red_helmet" tileid="-1"/>
-    <description>You see a 红头盔, it reminds you of a jester's hat but you can be sure it has better protection than that.</description>
+    <description>红头盔, 戴上时像个小丑, 但却给你良好的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -188,7 +188,7 @@
   
   <item name="黄金头盔">
     <type class="helmet" subclass="golden_helmet" tileid="-1"/>
-    <description>You see a heavy 黄金头盔. The thick metal should protect you against almost anything.</description>
+    <description>一顶沉重的黄金头盔. 厚重的材料保护你免受几乎任何伤害.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -207,7 +207,7 @@
   
   <item name="黄金角盔">
     <type class="helmet" subclass="enhanced_golden_helmet" tileid="-1"/>
-    <description>You see a 黄金角盔.</description>
+    <description>一顶黄金角盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>
@@ -226,7 +226,7 @@
   
   <item name="影子头盔">
     <type class="helmet" subclass="shadow_helmet" tileid="-1"/>
-    <description>You see a heavy 影子头盔. Instead of shining, it darkly gleams.</description>
+    <description>一顶沉重的影子头盔. 发出黑暗的光芒.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -259,9 +259,9 @@ Possible drops:
 
 Possibly add to weekly item quest. -->
   
-  <item name="xeno helmet">
+  <item name="异界头盔">
     <type class="helmet" subclass="xeno_helmet" tileid="-1" />
-    <description>You see a xeno helmet.</description>
+    <description>一顶异界头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <def value="13" />
@@ -280,7 +280,7 @@ Possibly add to weekly item quest. -->
   
   <item name="混沌头盔">
     <type class="helmet" subclass="chaos_helmet" tileid="-1"/>
-    <description>You see a 混沌头盔.</description>
+    <description>一顶混沌头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -299,7 +299,7 @@ Possibly add to weekly item quest. -->
   
   <item name="奇妙头盔">
     <type class="helmet" subclass="lion_clan_helmet" tileid="-1"/>
-    <description>You see a strange 奇妙头盔. You can barely see when wearing it, but it protects your head very well.</description>
+    <description>一顶奇特的奇妙头盔. 穿好时才能看到外面, 但可以完美的保护你的头部.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="16"/>
@@ -318,7 +318,7 @@ Possibly add to weekly item quest. -->
   
   <item name="附魔索链头盔">
     <type class="helmet" subclass="magic_chain_helmet" tileid="-1"/>
-    <description>You see a 附魔索链头盔.</description>
+    <description>一个 附魔索链头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>
@@ -341,7 +341,7 @@ Possibly add to weekly item quest. -->
   
   <item name="自由头盔">
     <type class="helmet" subclass="liberty_helmet" tileid="-1"/>
-    <description>You see the 自由头盔. It's light and strong, you feel free wearing it.</description>
+    <description>一个 自由头盔. 轻但结实, 戴上时觉得很轻.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="24"/>
@@ -360,7 +360,7 @@ Possibly add to weekly item quest. -->
   
   <item name="黑头盔">
     <type class="helmet" subclass="black_helmet" tileid="-1"/>
-    <description>You see a 黑头盔.</description>
+    <description>黑头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="26"/>
@@ -381,7 +381,7 @@ Possibly add to weekly item quest. -->
   
   <item name="密银头盔">
     <type class="helmet" subclass="mithril_helmet" tileid="-1"/>
-    <description>You see a 密银头盔.</description>
+    <description>密银头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="29"/>
