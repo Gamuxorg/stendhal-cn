@@ -123,7 +123,7 @@ class InitialSteps {
 
 		npc.addReply(Arrays.asList("oil", "can of oil", "can"), "The only oil I have ever had is very fishy smelling. I expect a fisherman made it.");
 		npc.addReply("线轴", "Only dwarf smiths make 线轴s, no-one else has nimble enough fingers. Try #Alrak.");
-		npc.addReply("Alrak", "I thought you kids all knew Alrak, the only dwarf that kobolds have ever liked. Or maybe he's the only dwarf to ever like kobolds, I've never been sure which ...");
+		npc.addReply("Alrak", "I thought you kids all knew Alrak, the only dwarf that 狗头人s have ever liked. Or maybe he's the only dwarf to ever like 狗头人s, I've never been sure which ...");
 		npc.addReply(Arrays.asList("皮甲", "suit of 皮甲", "suit"), "Yes, well, it needs a piece of leather for the mechanism, so I can cut a piece from that.");
 	}
 

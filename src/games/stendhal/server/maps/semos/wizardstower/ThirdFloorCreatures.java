@@ -39,10 +39,10 @@ public class ThirdFloorCreatures implements ZoneConfigurator {
 	private void buildThirdFloor(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = manager.getCreature("fallen warrior");
-		final Creature creature1 = manager.getCreature("high lich");
-		final Creature creature2 = manager.getCreature("elder skeleton");
-		final Creature creature3 = manager.getCreature("fallen high priest");
+		final Creature creature = manager.getCreature("堕落武士");
+		final Creature creature1 = manager.getCreature("大巫妖");
+		final Creature creature2 = manager.getCreature("资深骷髅");
+		final Creature creature3 = manager.getCreature("堕落高僧");
 
 		creature1.setName("archlich");
 

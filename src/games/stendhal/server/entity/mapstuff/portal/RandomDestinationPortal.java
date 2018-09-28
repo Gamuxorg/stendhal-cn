@@ -129,7 +129,7 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("0_orril_castle", 20, 62, 75));          // orril castle
 		locations.add(new Location("int_阿多斯_闹鬼_小屋", 25, 4, 27));	// haunted house
 		locations.add(new Location("-2_orril_dungeon", 25, 106, 21));		// rat dungeon
-		locations.add(new Location("-1_塞门_矿山_nw", 30, 22, 75));		// kobold city
+		locations.add(new Location("-1_塞门_矿山_nw", 30, 22, 75));		// 狗镇
 		locations.add(new Location("0_athor_island", 30, 77, 73));          // 阿托尔岛
         locations.add(new Location("-1_阿多斯_城墙", 30, 91, 62));			// ados sewers
         locations.add(new Location("-2_科多奇_入口", 30, 20, 111));     // orc dungeons

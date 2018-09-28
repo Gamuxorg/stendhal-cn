@@ -25,11 +25,11 @@ public class OniRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("oni warrior", 7);
-		attackArmy.put("oni archer", 5);
-		attackArmy.put("oni queen", 3);
-		attackArmy.put("oni king", 3);
-		attackArmy.put("oni priest", 6);
+		attackArmy.put("欧尼武士", 7);
+		attackArmy.put("欧尼弓箭手", 5);
+		attackArmy.put("欧尼女王", 3);
+		attackArmy.put("欧尼国王", 3);
+		attackArmy.put("欧尼祭司", 6);
 
 
 		return attackArmy;

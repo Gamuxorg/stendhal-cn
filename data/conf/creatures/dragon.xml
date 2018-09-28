@@ -184,7 +184,7 @@
       <item value="蓝龙斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="蓝色盔甲" quantity ="[1,1]" probability="7.0"/>
       <item value="蓝盾" quantity ="[1,1]" probability ="4.5"/>
-       <item value="blue helmet" quantity="[1,1]" probability="6.0"/>
+       <item value="蓝头盔" quantity="[1,1]" probability="6.0"/>
     </drops>
     <equips>
     </equips>

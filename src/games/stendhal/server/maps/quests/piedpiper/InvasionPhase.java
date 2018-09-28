@@ -156,7 +156,7 @@ public class InvasionPhase extends TPPQuest {
 				rat.registerObjectsForNotification(ratsObserver);
 				/* -- commented because of these noises reflects on all archrats in game -- */
 				// add unique noises to humanoids
-				if (tempCreature.getName().equals("archrat")) {
+				if (tempCreature.getName().equals("鼠人弓箭手")) {
 					final LinkedList<String> ll = new LinkedList<String>(
 							Arrays.asList("我们会占领Ados!",
 							"我们的报复会很可怕!"));

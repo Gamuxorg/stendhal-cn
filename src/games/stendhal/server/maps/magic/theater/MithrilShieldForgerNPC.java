@@ -49,12 +49,12 @@ public class MithrilShieldForgerNPC implements ZoneConfigurator {
 				addJob("I am a wizard. I have studied long and hard to perfect the art of #mithril forging.");
 				addHelp("I can forge a shield for you, the likes of which you have only dreamed.");
 				addOffer("I offer you advice. Seek to gather all I require to make a shield for you. You will be eternally grateful.");
-				addReply("mithril", "Mithril was once stored by the Mithrilbourgh soldiers in a vault within their keep. Since they moved, I don't know what has become of it.");
+				addReply("mithril", "Mithril was once stored by the 白银堡士兵s in a vault within their keep. Since they moved, I don't know what has become of it.");
 				addGoodbye("Farewell. Try some of the 甘草 Trillium has. It is to die for.");
 			} //remaining behaviour defined in quest
 		};
 
-		baldemar.setDescription("You see Baldemar, a Mithrilbourgh Wizard well studied in the craft of forging mithril.");
+		baldemar.setDescription("You see Baldemar, a 白银堡法师 well studied in the craft of forging mithril.");
 		baldemar.setEntityClass("mithrilforgernpc");
 		baldemar.setPosition(4, 6);
 		baldemar.initHP(100);

@@ -680,7 +680,7 @@ final public class WordList {
 			return true;
 		}
 
-		// Ignore words like "chicken", "cat" and "incorporeal armor", which are
+		// Ignore words like "chicken", "cat" and "无人盔甲", which are
 		// registered as objects, but also used as subjects.
 		if (lastType.isObject() && typeString.startsWith(ExpressionType.SUBJECT)) {
 			return true;

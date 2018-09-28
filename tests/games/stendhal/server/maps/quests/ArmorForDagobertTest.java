@@ -105,7 +105,7 @@ public class ArmorForDagobertTest {
 		en.step(player, "leather");
 		assertEquals(questHistory, quest.getHistory(player));
 		assertEquals(
-				"A leather cuirass is the traditional cyclops armor. Some cyclopes are living in the dungeon deep under the city.",
+				"A leather cuirass is the traditional 独眼巨人 armor. Some cyclopes are living in the dungeon deep under the city.",
 				getReply(npc));
 		en.step(player, "bye");
 		assertEquals(questHistory, quest.getHistory(player));

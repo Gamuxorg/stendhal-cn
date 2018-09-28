@@ -255,7 +255,7 @@ public final class ItemListImageViewerEvent extends ViewPanel {
 	 * @return new table
 	 */
 	private JTable createTable(int maxPreferredWidth) {
-		String[] columnNames = { "Item", "Price", "Description" };
+		String[] columnNames = { "物品", "价格", "说明" };
 		Object[][] data = new Object[event.getSlot("content").size()][];
 		RPSlot slot = event.getSlot("content");
 		int i = 0;

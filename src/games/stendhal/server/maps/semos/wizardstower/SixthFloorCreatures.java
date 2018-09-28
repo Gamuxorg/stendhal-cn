@@ -39,7 +39,7 @@ public class SixthFloorCreatures implements ZoneConfigurator {
 	private void buildSixthFloor(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
-		final Creature creature = manager.getCreature("littlefairy");
+		final Creature creature = manager.getCreature("仙子");
 		final Creature creature1 = manager.getCreature("飞马");
 		final Creature creature2 = manager.getCreature("独角兽");
 		final Creature creature3 = manager.getCreature("天使长");

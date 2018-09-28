@@ -137,7 +137,7 @@ public class HttpClient {
 									connection = (HttpURLConnection) new URL(newUrl).openConnection();
 									redirect = isRedirect(connection.getResponseCode());
 								} else {
-									System.err.println(String.format("The URL '%s' leads into a circular redirect.", url));
+									System.err.println(String.format("URL地圵 '%s' 进入地圵环路.", url));
 									connection = null;
 								}
 							}
@@ -156,7 +156,7 @@ public class HttpClient {
 						}
 					}
 				} catch (final SocketTimeoutException e) {
-					System.err.println("Timeout (" + urlString + "): " + " "
+					System.err.println("超时 (" + urlString + "): " + " "
 							+ e.toString());
 				}
 				myTimeout = myTimeout * 2;
@@ -165,7 +165,7 @@ public class HttpClient {
 				}
 			}
 		} catch (final Exception e) {
-			System.err.println("Error connecting to http-Server (" + urlString
+			System.err.println("连接http服务器错误 (" + urlString
 					+ "): ");
 			e.printStackTrace(System.err);
 		}

@@ -545,7 +545,7 @@
   
   <item name="异界甲">
     <type class="armor" subclass="xeno_armor" tileid="-1"/>
-    <description>这是一件异界甲. 穿上它之后看起来就与 Xenocium 一样了. </description>
+    <description>这是一件异界甲. 穿上它之后看起来就与 异界人 一样了. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="21"/>

@@ -43,6 +43,7 @@ import games.stendhal.common.Debug;
 import games.stendhal.common.Direction;
 import games.stendhal.common.constants.Nature;
 import marauroa.common.game.RPAction;
+import marauroa.common.game.RPObject;
 
 /**
  * The 2D view of an RP entity.
@@ -103,6 +104,7 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	/** Status icon managers. */
 	private final List<AbstractStatusIconManager> iconManagers = new ArrayList<AbstractStatusIconManager>();
 	private HealthBar healthBar;
+	private int statusBarYOffset;
 
 	/**
 	 * Flag for detecting if any of the icon manager managed icons have
@@ -369,14 +371,22 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	 * @param width
 	 *            The drawn width.
 	 */
-	protected void drawStatusBar(final Graphics2D g2d, final int x,
-			final int y, final int width) {
+	protected void drawStatusBar(Graphics2D g2d, int x, int y, int width) {
 		if (showTitle) {
 			drawTitle(g2d, x, y, width);
 		}
 		if (showHP) {
 			drawHPbar(g2d, x, y, width);
 		}
+	}
+
+	private int getStatusBarHeight() {
+		if (titleSprite != null) {
+			return 3 + titleSprite.getHeight();
+		} else if (healthBar != null) {
+			return healthBar.getHeight();
+		}
+		return 0;
 	}
 
 	/**
@@ -393,8 +403,8 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	 */
 	protected void drawTitle(final Graphics2D g2d, final int x, final int y, final int width) {
 		if (titleSprite != null) {
-			final int tx = x + ((width - titleSprite.getWidth()) / 2);
-			final int ty = y - 3 - titleSprite.getHeight();
+			int tx = x + ((width - titleSprite.getWidth()) / 2);
+			int ty = y - getStatusBarHeight();
 
 			titleSprite.draw(g2d, tx, ty);
 		}
@@ -724,19 +734,24 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	protected void buildActions(final List<String> list) {
 		super.buildActions(list);
 
-		/*
-		 * Menu is used to provide an alternate action for some entities (like
-		 * puppies - and they should not be attackable).
-		 *
-		 * For now normally attackable entities get a menu only in Capture The
-		 * Flag, and then they don't need attack. If that changes, this code
-		 * will need to be adjusted.
-		 */
-		if (!entity.getRPObject().has("menu")) {
-			if (entity.isAttackedBy(User.get())) {
-				list.add(ActionType.STOP_ATTACK.getRepresentation());
-			} else {
-				list.add(ActionType.ATTACK.getRepresentation());
+		final RPObject obj = entity.getRPObject();
+		if (!obj.has("no_attack")) {
+			/* FIXME: PassiveNPC no longer has "Attack" option in menu. Should this
+			 *        code be changed?
+			 *
+			 * Menu is used to provide an alternate action for some entities (like
+			 * puppies - and they should not be attackable).
+			 *
+			 * For now normally attackable entities get a menu only in Capture The
+			 * Flag, and then they don't need attack. If that changes, this code
+			 * will need to be adjusted.
+			 */
+			if (!entity.getRPObject().has("menu")) {
+				if (entity.isAttackedBy(User.get())) {
+					list.add(ActionType.STOP_ATTACK.getRepresentation());
+				} else {
+					list.add(ActionType.ATTACK.getRepresentation());
+				}
 			}
 		}
 
@@ -789,7 +804,7 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	@Override
 	protected void drawTop(final Graphics2D g2d, final int x, final int y,
 			final int width, final int height) {
-		drawStatusBar(g2d, x, y, width);
+		drawStatusBar(g2d, x, y + statusBarYOffset, width);
 	}
 
 	/**
@@ -848,6 +863,14 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 	}
 
 	@Override
+	public void setVisibleScreenArea(Rectangle area) {
+		Rectangle drawingArea = getDrawingArea();
+		int drawTop = drawingArea.y - getStatusBarHeight();
+		int visibleTop = area.y;
+		statusBarYOffset = Math.max(0, visibleTop - drawTop);
+	}
+
+	@Override
 	protected void update() {
 		super.update();
 
@@ -899,7 +922,7 @@ abstract class RPEntity2DView<T extends RPEntity> extends ActiveEntity2DView<T> 
 				isAttacking = false;
 			} else {
 				rangedAttack = entity.isDoingRangedAttack();
-				if (attackPainter == null || !attackPainter.hasNatureAndWeapon(nature, weapon) || attackPainter.natureChanged(nature)) {
+				if (attackPainter == null || !attackPainter.hasNatureAndWeapon(nature, weapon)) {
 					attackPainter = AttackPainter.get(nature, weapon, (int) Math.min(entity.getWidth(), entity.getHeight()));
 				}
 				attackPainter.prepare(getState(entity));

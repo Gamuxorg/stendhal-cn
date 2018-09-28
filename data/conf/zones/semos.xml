@@ -2552,7 +2552,7 @@ Holy mackerel! These chips are tasty.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.PopupImage">
         <parameter name="image">map-wofol.png</parameter>
-        <parameter name="title">塞门矿山 和 Wofol 的 Kobold 城</parameter>
+        <parameter name="title">塞门矿山 和 Wofol 的 狗头人 城</parameter>
       </implementation>
       <attribute name="class">map-wofol</attribute>
     </entity>
@@ -4245,7 +4245,7 @@ TO OLD SEMOS VILLAGE
         <parameter name="key">吸血鬼内脏</parameter>
         <parameter name="quantity">7</parameter>
         <parameter name="rejected">
-     Prove that you killed all vampirettes before you face their lord.
+     Prove that you killed all 吸血女郎s before you face their lord.
     </parameter>
       </implementation>
     </portal>
@@ -4498,7 +4498,6 @@ TO OLD SEMOS VILLAGE
       <parameter name="color_method">softlight</parameter>
       <parameter name="color">#22ffdd</parameter>
     </attributes>
-    
     <!-- Music -->
     <entity x="0" y="0">
       <implementation

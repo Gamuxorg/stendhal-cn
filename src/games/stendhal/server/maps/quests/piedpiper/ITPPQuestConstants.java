@@ -105,7 +105,7 @@ public interface ITPPQuestConstants {
 			"毒液鼠",
 			"利齿鼠",
 			"巨型鼠",
-			"archrat");
+			"鼠人弓箭手");
 
 	/**
 	 * List of reward moneys quantities for each type of killed rats.

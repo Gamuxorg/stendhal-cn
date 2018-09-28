@@ -44,7 +44,7 @@ public class MrsYetiNPC implements ZoneConfigurator {
 	}
 
 	private void buildYeti(final StendhalRPZone zone) {
-		final SpeakerNPC yetifemale = new SpeakerNPC("Mrs. Yeti") {
+		final SpeakerNPC yetifemale = new SpeakerNPC("耶提女士") {
 
 			@Override
 			protected void createPath() {
@@ -90,7 +90,7 @@ public class MrsYetiNPC implements ZoneConfigurator {
 		};
 
 		yetifemale.setEntityClass("yetifemalenpc");
-		yetifemale.setDescription("你遇见了 Mrs. Yeti, 有着一双大脚的她身上长满白色毛发！");
+		yetifemale.setDescription("你遇见了 耶提女士, 有着一双大脚的她身上长满白色毛发！");
 		yetifemale.setPosition(102, 19);
 		yetifemale.setCollisionAction(CollisionAction.STOP);
 		yetifemale.initHP(100);

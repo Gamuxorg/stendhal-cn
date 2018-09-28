@@ -61,7 +61,7 @@ public class MithrilbourghTraitorNPC implements ZoneConfigurator {
 			} //remaining behaviour defined in quest
 		};
 
-		Xavkas.setDescription("Xavkas, a Mithrilbourgh Wizard, once a mighty elder, then a traitor, now, a common prisoner.  Woe, is he.");
+		Xavkas.setDescription("Xavkas, a 白银堡法师, once a mighty elder, then a traitor, now, a common prisoner.  Woe, is he.");
 		Xavkas.setEntityClass("mithrilforgernpc");
 		Xavkas.setPosition(101, 141);
 		Xavkas.initHP(100);

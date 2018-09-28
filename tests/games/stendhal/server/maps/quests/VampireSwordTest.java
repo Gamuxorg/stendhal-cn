@@ -99,7 +99,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, request);
-			assertEquals(request, "I can forge a powerful life stealing sword for you. You will need to go to the Catacombs below Semos Graveyard and fight the Vampire Lord. Are you interested?", getReply(npc));
+			assertEquals(request, "I can forge a powerful life stealing sword for you. You will need to go to the Catacombs below Semos Graveyard and fight the 吸血鬼王. Are you interested?", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.QUEST_OFFERED);
 		}
 	}
@@ -333,7 +333,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, word);
-			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his 骷髅戒指 with the #盛血高脚杯.", getReply(npc));
+			assertEquals("answer to '" + word + "'", "The 吸血鬼王 rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his 骷髅戒指 with the #盛血高脚杯.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -554,7 +554,7 @@ public class VampireSwordTest {
 			player.equipToInventoryOnly(item);
 
 			en.step(player, hello);
-			assertEquals("Hm, that 盛血高脚杯 is not filled with vampire blood; it can't be, you have not killed the vampire lord. You must slay him.", getReply(npc));
+			assertEquals("Hm, that 盛血高脚杯 is not filled with vampire blood; it can't be, you have not killed the 吸血鬼王. You must slay him.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 		}
 	}
@@ -570,7 +570,7 @@ public class VampireSwordTest {
 			player.setQuest(questSlot, "start");
 			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
-			player.setSharedKill("vampire lord");
+			player.setSharedKill("吸血鬼王");
 
 			en.step(player, hello);
 			assertEquals("You have battled hard to bring that 盛血高脚杯. I will use it to #forge the vampire sword", getReply(npc));
@@ -620,7 +620,7 @@ public class VampireSwordTest {
 
 			PlayerTestHelper.equipWithStackableItem(player, "铁锭", 10);
 
-			player.setSharedKill("vampire lord");
+			player.setSharedKill("吸血鬼王");
 
 			en.step(player, hello);
 			assertEquals("You've brought everything I need to make the vampire sword. Come back in 10 minutes and it will be ready", getReply(npc));

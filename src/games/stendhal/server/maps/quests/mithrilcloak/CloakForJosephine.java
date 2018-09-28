@@ -107,7 +107,7 @@ class CloakForJosephine {
 
 		// acknowledge that player took cloak and ask for clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("thanks", "josephine", "mithril", "cloak", "密银斗篷", "task", "quest"),
+				Arrays.asList("thanks", "josephine", "mithril", "斗蓬", "密银斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "gave_striped_cloak"),
 				ConversationStates.ATTENDING,
 				"Aw, Josephine is so sweet. I'm glad she liked her 蓝色条纹斗篷. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.",

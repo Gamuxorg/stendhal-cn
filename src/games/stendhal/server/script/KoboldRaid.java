@@ -25,12 +25,12 @@ public class KoboldRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("kobold", 7);
-		attackArmy.put("archer kobold", 3);
-		attackArmy.put("leader kobold", 7);
-		attackArmy.put("soldier kobold", 7);
+		attackArmy.put("狗头人", 7);
+		attackArmy.put("狗头人弓箭手", 3);
+		attackArmy.put("狗头人队长", 7);
+		attackArmy.put("狗头人士兵", 7);
 		attackArmy.put("巨型狗头人", 2);
-		attackArmy.put("veteran kobold", 7);
+		attackArmy.put("狗头人老兵", 7);
 		return attackArmy;
 	}
 	@Override

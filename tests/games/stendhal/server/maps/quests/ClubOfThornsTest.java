@@ -35,7 +35,7 @@ public class ClubOfThornsTest {
 	private static final String NPC = "Orc Saman";
 	private static final String KEY_NAME = "kotoch prison key";
 	private static final String QUEST_NAME = "club_thorns";
-	private static final String VICTIM = "mountain orc chief";
+	private static final String VICTIM = "山岭兽族首领";
 
 	@BeforeClass
 	public static void setupBeforeClass() throws Exception {
@@ -61,7 +61,7 @@ public class ClubOfThornsTest {
 		en.setCurrentState(ConversationStates.ATTENDING);
 
 		en.stepTest(player, ConversationPhrases.QUEST_MESSAGES.get(0));
-		assertEquals("Make revenge! Kill de Mountain Orc Chief! unnerstand? ok?", getReply(npc));
+		assertEquals("Make revenge! Kill de 山岭兽族首领! unnerstand? ok?", getReply(npc));
 
 		en.stepTest(player, "no");
 		assertEquals("Answer to refusal", "Ugg! i want hooman make #task, kill!", getReply(npc));
@@ -78,13 +78,13 @@ public class ClubOfThornsTest {
 		final Player player = PlayerTestHelper.createPlayer("player");
 		double karma = player.getKarma();
 
-		// Kill a mountain orc chief to to allow checking the slot gets cleaned
+		// Kill a 山岭兽族首领 to to allow checking the slot gets cleaned
 		player.setSoloKill(VICTIM);
 		// Greetings missing. Jump straight to attending
 		en.setCurrentState(ConversationStates.ATTENDING);
 
 		en.stepTest(player, ConversationPhrases.QUEST_MESSAGES.get(0));
-		assertEquals("Make revenge! Kill de Mountain Orc Chief! unnerstand? ok?", getReply(npc));
+		assertEquals("Make revenge! Kill de 山岭兽族首领! unnerstand? ok?", getReply(npc));
 
 		// test the stuff that should be done at the quest start
 		en.stepTest(player, ConversationPhrases.YES_MESSAGES.get(0));
@@ -96,22 +96,22 @@ public class ClubOfThornsTest {
 		assertEquals("start", player.getQuest(QUEST_NAME, 0));
 		//assertFalse("Cleaning kill slot", player.hasKilled(VICTIM));
 		final String[] questTokens = player.getQuest(QUEST_NAME, 1).split(",");
-		assertEquals(questTokens[0],"mountain orc chief");
+		assertEquals(questTokens[0],"山岭兽族首领");
 		assertEquals(questTokens[1],"0");
 		assertEquals(questTokens[2],"1");
 		assertEquals(Arrays.asList(questTokens).size(), 5);
 
 		en.stepTest(player, ConversationPhrases.QUEST_MESSAGES.get(0));
-		assertEquals("Make revenge! #Kill Mountain Orc Chief!", getReply(npc));
+		assertEquals("Make revenge! #Kill 山岭兽族首领!", getReply(npc));
 
 		en.stepTest(player, "kill");
-		assertEquals("kill Mountain Orc Chief! Kotoch orcs nid revenge!", getReply(npc));
+		assertEquals("kill 山岭兽族首领! Kotoch orcs nid revenge!", getReply(npc));
 
-		// Kill a mountain orc chief
-		player.setSoloKill("mountain orc chief");
+		// Kill a 山岭兽族首领
+		player.setSoloKill("山岭兽族首领");
 		// Try restarting the task in the middle
 		en.stepTest(player, ConversationPhrases.QUEST_MESSAGES.get(0));
-		assertEquals("Make revenge! #Kill Mountain Orc Chief!", getReply(npc));
+		assertEquals("Make revenge! #Kill 山岭兽族首领!", getReply(npc));
 		assertTrue("Keeping the kill slot, while the quest is active", player.hasKilled(VICTIM));
 
 		// completion and rewards

@@ -83,17 +83,17 @@ public final class ShopList {
 
 		shops.add("sellstuff", "小刀", 15);
 		shops.add("sellstuff", "木棍", 10);
-		shops.add("sellstuff", "dagger", 25);
+		shops.add("sellstuff", "匕首", 25);
 		shops.add("sellstuff", "木盾", 25);
 		shops.add("sellstuff", "布衣", 25);
-		shops.add("sellstuff", "leather helmet", 25);
-		shops.add("sellstuff", "cloak", 30);
+		shops.add("sellstuff", "皮帽", 25);
+		shops.add("sellstuff", "斗蓬", 30);
 		shops.add("sellstuff", "皮裤", 35);
 
 		shops.add("sellbetterstuff1", "蓝色盔甲", 14000);
 		shops.add("sellbetterstuff1", "蓝靴子", 3000);
 		shops.add("sellbetterstuff1", "蓝色条纹斗篷", 5000);
-		shops.add("sellbetterstuff1", "blue helmet", 6000);
+		shops.add("sellbetterstuff1", "蓝头盔", 6000);
 		shops.add("sellbetterstuff1", "蓝裤子", 6000);
 		shops.add("sellbetterstuff1", "蓝盾", 20000);
 		shops.add("sellbetterstuff1", "刺客匕首", 12000);
@@ -101,7 +101,7 @@ public final class ShopList {
 		shops.add("sellbetterstuff2", "影子铠甲", 18000);
 		shops.add("sellbetterstuff2", "影子靴子", 4000);
 		shops.add("sellbetterstuff2", "影子斗篷", 7000);
-		shops.add("sellbetterstuff2", "shadow helmet", 8000);
+		shops.add("sellbetterstuff2", "影子头盔", 8000);
 		shops.add("sellbetterstuff2", "影子护腿", 10000);
 		shops.add("sellbetterstuff2", "影盾", 30000);
 		shops.add("sellbetterstuff2", "地狱匕首", 20000);
@@ -110,13 +110,13 @@ public final class ShopList {
 		shops.add("sellrangedstuff", "木箭", 2);
 
 		shops.add("buystuff", "短剑", 15);
-		shops.add("buystuff", "sword", 60);
+		shops.add("buystuff", "铁剑", 60);
 		shops.add("buystuff", "镶嵌盾", 20);
 		shops.add("buystuff", "镶嵌甲", 22);
-		shops.add("buystuff", "studded helmet", 17);
+		shops.add("buystuff", "镶嵌头盔", 17);
 		shops.add("buystuff", "镶嵌护腿", 20);
 		shops.add("buystuff", "链甲", 29);
-		shops.add("buystuff", "chain helmet", 25);
+		shops.add("buystuff", "索链头盔", 25);
 		shops.add("buystuff", "索链护腿", 27);
 
 		shops.add("selltools", "小斧头", 15);
@@ -185,7 +185,7 @@ public final class ShopList {
 		shops.add("buyrare3", "金盾", 10000);
 		shops.add("buyrare3", "影盾", 15000);
 
-		// less rare armor shop (kobold city - kobolds drop some of these
+		// less rare armor shop (狗镇 - kobolds drop some of these
 		// things)
 		shops.add("buystuff2", "鳞甲", 65);
 		shops.add("buystuff2", "镶嵌护腿", 70);
@@ -193,12 +193,12 @@ public final class ShopList {
 		shops.add("buystuff2", "链靴", 100);
 		shops.add("buystuff2", "骷髅盾", 100);
 		shops.add("buystuff2", "独角盾", 125);
-		shops.add("buystuff2", "viking helmet", 250);
+		shops.add("buystuff2", "海盗帽", 250);
 
 		shops.add("sellstuff2", "皮靴", 50);
-		shops.add("sellstuff2", "studded helmet", 60);
+		shops.add("sellstuff2", "镶嵌头盔", 60);
 		shops.add("sellstuff2", "镶嵌盾", 80);
-		shops.add("sellstuff2", "sword", 90);
+		shops.add("sellstuff2", "铁剑", 90);
 		shops.add("sellstuff2", "矮人斗篷", 230);
 
 		// cloaks shop
@@ -228,9 +228,9 @@ public final class ShopList {
 		// helmet shop (mithrilbourgh)
 		// Note the shop sign is done by hand in
 		// games.stendhal.server.maps.mithrilbourgh.stores
-		shops.add("boots&helm", "golden helmet", 3000);
-		shops.add("boots&helm", "shadow helmet", 4000);
-		shops.add("boots&helm", "horned golden helmet", 5000);
+		shops.add("boots&helm", "黄金头盔", 3000);
+		shops.add("boots&helm", "影子头盔", 4000);
+		shops.add("boots&helm", "黄金角盔", 5000);
 		shops.add("boots&helm", "混沌头盔", 6000);
 		shops.add("boots&helm", "附魔索链头盔", 8000);
 		shops.add("boots&helm", "黑头盔", 10000);
@@ -272,7 +272,7 @@ public final class ShopList {
 		shops.add("buyred", "红铠甲", 300);
 		shops.add("buyred", "红靴子", 200);
 		shops.add("buyred", "红斗篷", 250);
-		shops.add("buyred", "red helmet", 200);
+		shops.add("buyred", "红头盔", 200);
 		shops.add("buyred", "红裤子", 200);
 		shops.add("buyred", "红盾", 750);
 
@@ -286,8 +286,8 @@ public final class ShopList {
 
 		// assassinhq principal Femme Fatale)
 		shops.add("buy4assassins", "小圆盾", 20);
-		shops.add("buy4assassins", "aventail", 25);
-		shops.add("buy4assassins", "robins hat", 30);
+		shops.add("buy4assassins", "护面头盔", 25);
+		shops.add("buy4assassins", "罗宾帽", 30);
 		shops.add("buy4assassins", "皮靴", 30);
 		shops.add("buy4assassins", "矮人斗篷", 60);
 		shops.add("buy4assassins", "矮人护甲", 17000);
@@ -300,7 +300,7 @@ public final class ShopList {
 		shops.add("buyoddsandends", "黑珍珠", 100);
 		shops.add("buyoddsandends", "幸运石", 60);
 		shops.add("buyoddsandends", "小刀", 5);
-		shops.add("buyoddsandends", "dagger", 20);
+		shops.add("buyoddsandends", "匕首", 20);
 		shops.add("buyoddsandends", "骷髅戒指", 250);
 		shops.add("buyoddsandends", "大瓶抗毒药济", 80);
 		shops.add("buyoddsandends", "玻璃球", 80);
@@ -315,8 +315,8 @@ public final class ShopList {
 		shops.add("buyarcherstuff", "加强箭", 35);
 		shops.add("buyarcherstuff", "木弓", 250);
 		shops.add("buyarcherstuff", "十字弩", 400);
-		shops.add("buyarcherstuff", "longbow", 300);
-		shops.add("buyarcherstuff", "composite bow", 350);
+		shops.add("buyarcherstuff", "长弓", 300);
+		shops.add("buyarcherstuff", "复合弓", 350);
 		shops.add("buyarcherstuff", "猎人十字弓", 800);
 		shops.add("buyarcherstuff", "密银弓", 2000);
 
@@ -344,8 +344,8 @@ public final class ShopList {
 		// gnome village buyer in 0 ados mountain n2 w2)
 		shops.add("buy4gnomes", "皮甲", 25);
 		shops.add("buy4gnomes", "木棍", 3);
-		shops.add("buy4gnomes", "leather helmet", 15);
-		shops.add("buy4gnomes", "cloak", 25);
+		shops.add("buy4gnomes", "皮帽", 15);
+		shops.add("buy4gnomes", "斗蓬", 25);
 		shops.add("buy4gnomes", "苹果", 5);
 		shops.add("buy4gnomes", "玻璃球", 50);
 		shops.add("buy4gnomes", "木盾", 20);
@@ -409,7 +409,7 @@ public final class ShopList {
 		shops.add("buyfishes", "cod", 10);
 
 		// semos trading - swords)
-		shops.add("tradeswords", "dagger", 10);
+		shops.add("tradeswords", "匕首", 10);
 
 		// party time! For maria for example. Bit more expensive than normal
 		shops.add("sellparty", "椰林飘香", 100);
@@ -429,7 +429,7 @@ public final class ShopList {
 		shops.add("buyblack", "黑头盔", 15000);
 		shops.add("buyblack", "黑护腿", 40000);
 		shops.add("buyblack", "黑盾", 75000);
-		shops.add("buyblack", "black sword", 20000);
+		shops.add("buyblack", "黑刃剑", 20000);
 		shops.add("buyblack", "黑镰刀", 40000);
 		shops.add("buyblack", "黑戟", 30000);
 

@@ -25,14 +25,14 @@ public class OrcRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("orc warrior", 7);
-		attackArmy.put("orc hunter", 5);
-		attackArmy.put("orc chief", 3);
-		attackArmy.put("orc", 6);
-		attackArmy.put("mountain orc", 3);
-		attackArmy.put("troll", 4);
-		attackArmy.put("red troll", 7);
-		attackArmy.put("cave troll", 2);
+		attackArmy.put("兽族战士", 7);
+		attackArmy.put("兽族猎手", 5);
+		attackArmy.put("兽族首领", 3);
+		attackArmy.put("兽人", 6);
+		attackArmy.put("山岭兽人", 3);
+		attackArmy.put("巨魔", 4);
+		attackArmy.put("红巨魔", 7);
+		attackArmy.put("穴居巨魔", 2);
    		attackArmy.put("绿龙", 3);
 
 		return attackArmy;

@@ -13,9 +13,9 @@ package games.stendhal.server.maps.quests;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
+import games.stendhal.common.MathHelper;
 //import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -77,21 +77,20 @@ public class RestockFlowerShop extends AbstractQuest {
 	// Different types of flowers needed in quest
 	private static final List<String> flowerTypes = Arrays.asList(
 			"雏菊", "紫丁香", "三色堇", "玫瑰", "马蹄莲");
-	public static List<Integer> requestedQuantities = Arrays.asList();
 
-	private final int MAX_FLOWERS = flowerTypes.size() * 10;
+	private static final int MAX_FLOWERS = flowerTypes.size() * 10;
 
 	private static final int REQ_WATER = 15;
 
 	// Time player must wait to repeat quest (3 days)
-	private static final int WAIT_TIME = 60 * 24 * 3;
+	private static final int WAIT_TIME = 3 * MathHelper.MINUTES_IN_ONE_DAY;
 
 	// Quest NPC
 	private final SpeakerNPC npc = npcs.get("Seremela");
 
 	@Override
 	public List<String> getHistory(final Player player) {
-		final List<String> res = new ArrayList<String>();
+		final List<String> res = new ArrayList<>();
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
@@ -105,9 +104,9 @@ public class RestockFlowerShop extends AbstractQuest {
 			final ItemCollection remaining = new ItemCollection();
 			remaining.addFromQuestStateString(questState);
 
-			// Check to avoid ArrayIndexOutOfBoundsException
-			if (remaining.size() > 0) {
+			if (!remaining.isEmpty()) {
 				String requestedFlowers = "我还需要带来以下种类的花: " + remaining.toStringList() + ".";
+				//String requestedFlowers = "I still need to bring the following flowers: " + Grammar.enumerateCollection(remaining.toStringList()) + ".";
 				res.add(requestedFlowers);
 			}
 		} else {
@@ -176,16 +175,16 @@ public class RestockFlowerShop extends AbstractQuest {
 				Arrays.asList("弗乐尔"),
 				Arrays.asList("瓶子"),
 				ConversationPhrases.HELP_MESSAGES);
-		List<String> responses = new ArrayList<String>();
-		responses.add("#詹妮 带着这种花的种子");
-		responses.add("#弗乐尔 有最好的 玫瑰. ");
-		responses.add("#马蹄莲 是我最喜欢的花. 一些人叫它海芋或是叫它丁香, 然而它不是真正的丁香. 可以去向 #詹妮 要一些马蹄莲球茎. ");
-		responses.add("我需要用水为这些 #花 保鲜.你要找些源, 然后装到这个 #瓶子 里. 也可以去买些水. ");
-		responses.add("#詹妮 懂得很多花的知识, 也可以找他问关于 #弗乐尔 的消息.");
-		responses.add("詹妮常常呆在磨坊, 可以在挨着塞门镇的大风车旁边找找. ");
-		responses.add("弗乐尔 在 Kirdneh 的市场工作");
-		responses.add("去塞门镇 的酒吧打听一下.");
-		responses.add("我还 #记得 你要带给我的 #花 !也帮你指出 #去哪里 可以找到");
+		List<String> responses = Arrays.asList(
+			"#詹妮 带着这种花的种子",
+			"#弗乐尔 有最好的 玫瑰.",
+			"#马蹄莲 是我最喜欢的花. 一些人叫它海芋或是叫它丁香, 然而它不是真正的丁香. 可以去向 #詹妮 要一些马蹄莲球茎.",
+			"我需要用水为这些 #花 保鲜.你要找些源, 然后装到这个 #瓶子 里. 也可以去买些水.",
+			"#詹妮 懂得很多花的知识, 也可以找他问关于 #弗乐尔 的消息.",
+			"詹妮常常呆在磨坊, 可以在挨着塞门镇的大风车旁边找找.",
+			"弗乐尔 在 Kirdneh 的市场工作",
+			"去塞门镇 的酒吧打听一下.",
+			"我还 #记得 你要带给我的 #花 !也帮你指出 #去哪里 可以找到");
 
 		for (int f = 0; f < responses.size(); f++) {
 			npc.add(ConversationStates.ANY,
@@ -248,21 +247,16 @@ public class RestockFlowerShop extends AbstractQuest {
 
 
 	private void prepareBringingStep() {
-		List<String> requestedItems = new ArrayList<String>();
-		for (String f : flowerTypes) {
-			requestedItems.add(f);
-		}
+		List<String> requestedItems = new ArrayList<>(flowerTypes);
 		requestedItems.add("水");
 
-		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new IncreaseXPAction(1000));
-		reward.add(new IncreaseKarmaAction(25.0));
-		reward.add(new EquipItemAction("纳尔沃城回城卷", 5));
-		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
-		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
-		reward.add(new SayTextAction("非常感谢! 现在我要开始工作了, 这些纳尔沃回卷就算是给你的谢礼."));
-
-		ChatAction rewardAction = new MultipleActions(reward);
+		ChatAction rewardAction = new MultipleActions(
+				new IncreaseXPAction(1000),
+				new IncreaseKarmaAction(25.0),
+				new EquipItemAction("纳尔沃城回城卷", 5),
+				new SetQuestAction(QUEST_SLOT, "done"),
+				new SetQuestToTimeStampAction(QUEST_SLOT, 1),
+				new SayTextAction("非常感谢! 现在我要开始工作了, 这些纳尔沃回卷就算是给你的谢礼."));
 
 		/* add triggers for the item names */
 		for (String item : requestedItems) {
@@ -314,13 +308,9 @@ public class RestockFlowerShop extends AbstractQuest {
 				null);
 
 		// Player says "bye" or "no" while listing flowers
-		List<String> endDiscussionPhrases = new ArrayList<String>();
-		for (String phrase : ConversationPhrases.NO_MESSAGES) {
-			endDiscussionPhrases.add(phrase);
-		}
-		for (String phrase : ConversationPhrases.GOODBYE_MESSAGES) {
-			endDiscussionPhrases.add(phrase);
-		}
+		List<String> endDiscussionPhrases = new ArrayList<>(ConversationPhrases.NO_MESSAGES);
+		endDiscussionPhrases.addAll(ConversationPhrases.GOODBYE_MESSAGES);
+		
 		npc.add(ConversationStates.QUESTION_1,
 				endDiscussionPhrases,
 				null,
@@ -329,6 +319,12 @@ public class RestockFlowerShop extends AbstractQuest {
 				null);
 	}
 
+	@Override
+	public boolean isRepeatable(Player player) {
+		return new AndCondition(
+				new NotCondition(new QuestActiveCondition(QUEST_SLOT)),
+				new TimePassedCondition(QUEST_SLOT, 1, WAIT_TIME)).fire(player, null, null);
+	}
 
 	@Override
 	public String getNPCName() {

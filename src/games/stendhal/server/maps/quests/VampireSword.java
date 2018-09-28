@@ -63,7 +63,7 @@ import games.stendhal.server.maps.Region;
  * <li>Hogart tells you the story of the Vampire Lord.</li>
  * <li>He offers to forge a 吸血鬼之刃 for you if you bring him what it
  * needs.</li>
- * <li>Go to the catacombs, kill 7 vampirettes to get to the 3rd level, kill 7
+ * <li>Go to the catacombs, kill 7 吸血女郎s to get to the 3rd level, kill 7
  * killer bats and the vampire lord to get the required items to fill the
  * 盛血高脚杯.</li>
  * <li>Fill the 盛血高脚杯 and come back.</li>

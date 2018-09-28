@@ -159,15 +159,15 @@ public class LeaderNPCTest {
 		assertEquals("I see you use twin swords. They have a superb damage capability but as you cannot wear a shield with them, you will find it harder to defend yourself if attacked.", getReply(npc));
 		player.drop(weapon5);
 
-		final Item weapon6 = new Item("black sword", "sword", "subclass", null);
+		final Item weapon6 = new Item("黑刃剑", "sword", "subclass", null);
 		weapon6.setEquipableSlots(Arrays.asList("lhand"));
 		weapon6.put("atk", 40);
 		weapon6.put("rate", 7);
 		player.equipToInventoryOnly(weapon6);
-		assertTrue(player.isEquipped("black sword"));
+		assertTrue(player.isEquipped("黑刃剑"));
 
 		assertTrue(en.step(player, "weapon"));
-		assertEquals("That black sword is a powerful weapon, it has a good damage to rate ratio. It should be useful against strong creatures. Remember though that something weaker but faster may suffice against lower level creatures.", getReply(npc));
+		assertEquals("That 黑刃剑 is a powerful weapon, it has a good damage to rate ratio. It should be useful against strong creatures. Remember though that something weaker but faster may suffice against lower level creatures.", getReply(npc));
 		player.drop(weapon6);
 
 		final Item weapon7 = new Item("黑曜石刀", "sword", "subclass", null);

@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="leather helmet">
+  <item name="皮帽">
     <type class="helmet" subclass="leather_helmet" tileid="-1"/>
-    <description>You see a leather helmet, it seems more like a hat than a defensive item.</description>
+    <description>You see a 皮帽, it seems more like a hat than a defensive item.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -39,9 +39,9 @@
     </equipable>
   </item>
   
-  <item name="robins hat">
+  <item name="罗宾帽">
     <type class="helmet" subclass="robins_hat" tileid="-1"/>
-    <description>You see a robins hat. It's cute but that's about it.</description>
+    <description>You see a 罗宾帽. It's cute but that's about it.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -57,9 +57,9 @@
     </equipable>
   </item>
   
-  <item name="studded helmet">
+  <item name="镶嵌头盔">
     <type class="helmet" subclass="studded_helmet" tileid="-1"/>
-    <description>You see a studded helmet, it should protect your head against cuts but perhaps not hard blows.</description>
+    <description>You see a 镶嵌头盔, it should protect your head against cuts but perhaps not hard blows.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -93,9 +93,9 @@
     </equipable>
   </item>
   
-  <item name="chain helmet">
+  <item name="索链头盔">
     <type class="helmet" subclass="chain_helmet" tileid="-1"/>
-    <description>You see a solid chain helmet, it will be excellent protection for your head.</description>
+    <description>You see a solid 索链头盔, it will be excellent protection for your head.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -111,9 +111,9 @@
     </equipable>
   </item>
   
-  <item name="viking helmet">
+  <item name="海盗帽">
     <type class="helmet" subclass="horned_helmet" tileid="-1"/>
-    <description>You see a viking helmet. The previous owner wore it to many battles.</description>
+    <description>You see a 海盗帽. The previous owner wore it to many battles.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -129,9 +129,9 @@
     </equipable>
   </item>
   
-  <item name="aventail">
+  <item name="护面头盔">
     <type class="helmet" subclass="aventail" tileid="-1"/>
-    <description>You see a aventail. It's a clever design.</description>
+    <description>You see a 护面头盔. It's a clever design.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -148,9 +148,9 @@
     </equipable>
   </item>
   
-  <item name="blue helmet">
+  <item name="蓝头盔">
     <type class="helmet" subclass="blue_helmet" tileid="-1"/>
-    <description>You see a brand new blue helmet.</description>
+    <description>You see a brand new 蓝头盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -167,9 +167,9 @@
     </equipable>
   </item>
   
-  <item name="red helmet">
+  <item name="红头盔">
     <type class="helmet" subclass="red_helmet" tileid="-1"/>
-    <description>You see a red helmet, it reminds you of a jester's hat but you can be sure it has better protection than that.</description>
+    <description>You see a 红头盔, it reminds you of a jester's hat but you can be sure it has better protection than that.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -186,9 +186,9 @@
     </equipable>
   </item>
   
-  <item name="golden helmet">
+  <item name="黄金头盔">
     <type class="helmet" subclass="golden_helmet" tileid="-1"/>
-    <description>You see a heavy golden helmet. The thick metal should protect you against almost anything.</description>
+    <description>You see a heavy 黄金头盔. The thick metal should protect you against almost anything.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -205,9 +205,9 @@
     </equipable>
   </item>
   
-  <item name="horned golden helmet">
+  <item name="黄金角盔">
     <type class="helmet" subclass="enhanced_golden_helmet" tileid="-1"/>
-    <description>You see a horned golden helmet.</description>
+    <description>You see a 黄金角盔.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>
@@ -224,9 +224,9 @@
     </equipable>
   </item>
   
-  <item name="shadow helmet">
+  <item name="影子头盔">
     <type class="helmet" subclass="shadow_helmet" tileid="-1"/>
-    <description>You see a heavy shadow helmet. Instead of shining, it darkly gleams.</description>
+    <description>You see a heavy 影子头盔. Instead of shining, it darkly gleams.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -255,7 +255,7 @@ Some other possible DEF : LVL values:
 27-28 : 155-195
 
 Possible drops:
-xenocium at 1.5%
+异界人 at 1.5%
 
 Possibly add to weekly item quest. -->
   

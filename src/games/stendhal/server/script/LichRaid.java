@@ -25,17 +25,17 @@ public class LichRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("tiny skelly", 5);
-		attackArmy.put("warrior skeleton", 3);
-		attackArmy.put("elder skeleton", 4);
-		attackArmy.put("demon skeleton", 3);
+		attackArmy.put("小骷髅", 5);
+		attackArmy.put("骷髅战士", 3);
+		attackArmy.put("资深骷髅", 4);
+		attackArmy.put("骷髅精", 3);
 		attackArmy.put("骨龙", 3);
-		attackArmy.put("fallen warrior", 5);
-		attackArmy.put("fallen priest", 3);
-		attackArmy.put("fallen high priest", 2);
-		attackArmy.put("lich", 8);
-		attackArmy.put("dead lich", 3);
-		attackArmy.put("high lich", 3);
+		attackArmy.put("堕落武士", 5);
+		attackArmy.put("堕落僧侣", 3);
+		attackArmy.put("堕落高僧", 2);
+		attackArmy.put("巫妖", 8);
+		attackArmy.put("巫妖王", 3);
+		attackArmy.put("大巫妖", 3);
 
 		return attackArmy;
 	}

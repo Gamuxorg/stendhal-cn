@@ -25,13 +25,13 @@ public class FrogmanSheepmanRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("frogman", 7);
-		attackArmy.put("elite frogman", 4);
-		attackArmy.put("wizard frogman", 2);
-		attackArmy.put("sheepman", 6);
-		attackArmy.put("armored sheepman", 3);
-		attackArmy.put("elder sheepman", 2);
-		attackArmy.put("elite sheepman", 1);
+		attackArmy.put("蛙人", 7);
+		attackArmy.put("蛙人精英", 4);
+		attackArmy.put("蛙人巫师", 2);
+		attackArmy.put("羊人", 6);
+		attackArmy.put("武装羊人", 3);
+		attackArmy.put("老年羊人", 2);
+		attackArmy.put("羊人精英", 1);
 		return attackArmy;
 	}
 

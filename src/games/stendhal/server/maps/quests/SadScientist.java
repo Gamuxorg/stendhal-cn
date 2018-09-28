@@ -46,6 +46,7 @@ import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 import games.stendhal.server.entity.npc.condition.KilledForQuestCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
+import games.stendhal.server.entity.npc.condition.PlayerHasDescriptionItemWithHimCondition;
 import games.stendhal.server.entity.npc.condition.PlayerHasItemWithHimCondition;
 import games.stendhal.server.entity.npc.condition.QuestActiveCondition;
 import games.stendhal.server.entity.npc.condition.QuestCompletedCondition;
@@ -331,16 +332,30 @@ public class SadScientist extends AbstractQuest {
 				player.equipOrPutOnGround(item);
 			}
 		};
+
+		final String mayor_response = "她正给她的朋友伊丽莎挑选海芋, 她看见一个地窖的入口, " +
+				" 3个月后, 一个年轻的英雄看到她成了吸血鬼. 多么悲伤的故事. " ;
+
+		// Player has not received note
 		npc.add(ConversationStates.ATTENDING, "Vera",
-				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
+				new AndCondition(
+						new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
+						new NotCondition(new PlayerHasDescriptionItemWithHimCondition("note", LETTER_DESCRIPTION))),
 				ConversationStates.ATTENDING,
 				"什么? 你怎么知道她? 好吧, 这是个悲伤的故事." +
-				" 她正给她的朋友伊丽莎挑选海芋,她看见一个地窖的入口, " +
-				" 3个月后, 一个年轻的英雄看到她成了吸血鬼. " +
-				" 多么悲伤的故事. " +
-				" 我把这封信留给她丈夫, " +
-				" 我想他还呆在 Kalavan." ,
+				mayor_response + " 我把这封信留给她丈夫, " +
+				" 我想他还呆在卡拉文" ,
 				action);
+
+		// Player is already carrying note
+		npc.add(ConversationStates.ATTENDING, "Vera",
+				new AndCondition(
+						new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
+						new PlayerHasDescriptionItemWithHimCondition("note", LETTER_DESCRIPTION)),
+				ConversationStates.ATTENDING,
+				mayor_response + " 请把那封信带给他丈夫. " +
+				" 我想他还呆在卡拉文.",
+				null);
 	}
 
 	private void playerReturnsAfterGivingWhenFinished(final SpeakerNPC npc) {
@@ -366,7 +381,7 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.INFORMATION_1, ConversationPhrases.NO_MESSAGES,
 				condition,
 				ConversationStates.IDLE,
-				"Pah! Bye!",
+				"呸! 再见!",
 				null);
 	}
 
@@ -510,13 +525,13 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.QUEST_STARTED,
-				"我妻子住在 塞门镇 城. 她喜爱宝石. 你能给我带些宝石 #gems 吗?" +
+				"我妻子住在 塞门镇 城. 她喜爱宝石. 你能给我带些 #宝石 吗?" +
 				",我要做一件特别的腿 #legs?" ,
 				null);
 
 		// #gems
 		npc.add(ConversationStates.QUEST_STARTED,
-				Arrays.asList("gem","gems"),
+				"宝石",
 				null,
 				ConversationStates.QUEST_STARTED,
 				"我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
@@ -528,7 +543,7 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("leg","legs"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"宝石腿, 我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
+				"宝石腿, 我需要一个翡翠, 一个黑曜石, 一个蓝宝石, 两个红宝石, 20根金条和一个密银锭." +
 				" 你能为了我妻子弄到这些吗?",
 				null);
 

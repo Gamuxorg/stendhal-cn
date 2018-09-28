@@ -40,7 +40,7 @@
 
   <item name="牛头人钥匙">
     <type class="key" subclass="bronze" tileid="-1"/>
-    <description>You see a fancy bronze key. It smells faintly of minotaur, perhaps one dropped it?</description>
+    <description>You see a fancy bronze key. It smells faintly of 牛头人, perhaps one dropped it?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>

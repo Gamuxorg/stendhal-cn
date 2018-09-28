@@ -61,7 +61,7 @@ import marauroa.common.game.IRPZone;
 /**
  * QUEST: V.S.O.P. Koboldish Torcibud
  * <p>
- * PARTICIPANTS: <ul><li> Wrviliza, the Kobold Barmaid in Wo'fol bar </ul>
+ * PARTICIPANTS: <ul><li> Wrviliza, the 狗头人 Barmaid in Wo'fol bar </ul>
  * <p>
  * STEPS: <ul><li> Wrviliza will ask some items and ingredients
  * to refurbish her stock of supplies for making her famous koboldish torcibud
@@ -140,7 +140,7 @@ public class KoboldishTorcibud extends AbstractQuest {
             return res;
         }
 
-        res.add("I made acquaintance with Wrviliza, the kobold barmaid in Wo'fol bar.");
+        res.add("I made acquaintance with Wrviliza, the 狗头人 barmaid in Wo'fol bar.");
 
         /**
          * NOTE:
@@ -362,7 +362,7 @@ public class KoboldishTorcibud extends AbstractQuest {
     }
 
     /**
-     * The player meets the Kobold Barmaid Wrviliza after he has started the quest
+     * The player meets the 狗头人 Barmaid Wrviliza after he has started the quest
      */
     public void phase_2() {
 

@@ -249,7 +249,7 @@ public class SuppliesForPhalkTest {
 		player.setQuest(questSlot,"clothes;none;armor");
 
 		en.step(player, "hi");
-		assertEquals("Welcome to the Kobold City of Wofol. I hope you come in peace.", getReply(npc));
+		assertEquals("Welcome to the 狗镇 of Wofol. I hope you come in peace.", getReply(npc));
 		en.step(player, "phalk");
 		assertEquals("Aaah, his cloak... yes, it is ready. But I am still waiting for the #payment!", getReply(npc));
 		en.step(player, "payment");
@@ -285,7 +285,7 @@ public class SuppliesForPhalkTest {
 
 		// test for subsequent reply to 'Phalk'
 	    en.step(player, "hi");
-		assertEquals("Welcome to the Kobold City of Wofol. I hope you come in peace.", getReply(npc));
+		assertEquals("Welcome to the 狗镇 of Wofol. I hope you come in peace.", getReply(npc));
 		npc.remove("text");
 
 		en.step(player, "phalk");

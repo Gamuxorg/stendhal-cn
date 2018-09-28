@@ -36,7 +36,7 @@ public class FightingAchievementFactory extends AbstractAchievementFactory {
 		fightingAchievements.add(createAchievement("fight.general.rats", "Rat Hunter", "Kill 15 rats", Achievement.EASY_BASE_SCORE, true,
 													new PlayerHasKilledNumberOfCreaturesCondition("老鼠", 15)));
 		fightingAchievements.add(createAchievement("fight.general.exterminator", "Exterminator", "Kill 10 rats of each kind", Achievement.MEDIUM_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition(10, "老鼠", "洞穴老鼠", "利齿鼠", "毒液鼠", "zombie rat", "巨型鼠", "ratman", "ratwoman", "archrat")));
+													new PlayerHasKilledNumberOfCreaturesCondition(10, "老鼠", "洞穴老鼠", "利齿鼠", "毒液鼠", "僵尸鼠", "巨型鼠", "鼠人", "女鼠人", "鼠人弓箭手")));
 		fightingAchievements.add(createAchievement("fight.general.deer", "Deer Hunter", "Kill 25 鹿", Achievement.EASY_BASE_SCORE, true,
 													new PlayerHasKilledNumberOfCreaturesCondition("鹿", 25)));
 		fightingAchievements.add(createAchievement("fight.general.boars", "Boar Hunter", "Kill 20 boar", Achievement.EASY_BASE_SCORE, true,

@@ -4,7 +4,7 @@
   
   <!-- START: orc -->
   
-  <creature name="orc">
+  <creature name="兽人">
     <type class="orc" subclass="orc" tileid="orc.png:2"/>
     <description>You see an orc which is noisy and silly.</description>
     <attributes>
@@ -38,9 +38,9 @@
     </ai>
   </creature>
   
-  <creature name="orc spearman">
+  <creature name="兽族枪兵">
     <type class="orc" subclass="orc_spearman" tileid="orc.png:4"/>
-    <description>You see an orc spearman. Run away fast before a spear pierces you.</description>
+    <description>You see an 兽族枪兵. Run away fast before a spear pierces you.</description>
     <attributes>
       <atk value="150"/>
       <def value="35"/>
@@ -72,9 +72,9 @@
     </ai>
   </creature>
   
-  <creature name="orc hunter">
+  <creature name="兽族猎手">
     <type class="orc" subclass="orc_hunter" tileid="orc.png:1"/>
-    <description>You see an orc hunter. It it seeking for you!</description>
+    <description>You see an 兽族猎手. It it seeking for you!</description>
     <attributes>
       <atk value="165"/>
       <def value="44"/>
@@ -107,9 +107,9 @@
     </ai>
   </creature>
   
-  <creature name="orc warrior">
+  <creature name="兽族战士">
     <type class="orc" subclass="orc_warrior" tileid="orc.png:3"/>
-    <description>You see an orc warrior which doesn't like you searching in the mountain.</description>
+    <description>You see an 兽族战士 which doesn't like you searching in the mountain.</description>
     <attributes>
       <atk value="166"/>
       <def value="28"/>
@@ -142,9 +142,9 @@
     </ai>
   </creature>
   
-  <creature name="orc chief">
+  <creature name="兽族首领">
     <type class="orc" subclass="orc_chief" tileid="orc.png:0"/>
-    <description>You see an orc chief which is too busy to attend to you!</description>
+    <description>You see an 兽族首领 which is too busy to attend to you!</description>
     <attributes>
       <atk value="200"/>
       <def value="60"/>
@@ -163,7 +163,7 @@
       <item value="护肩铁胸甲" quantity="[1,1]" probability="0.2"/>
       <item value="治疗剂" quantity="[1,1]" probability="30.0"/>
       <item value="铁靴" quantity="[1,1]" probability="0.5"/>
-      <item value="cloak" quantity="[1,1]" probability="10.0"/>
+      <item value="斗蓬" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -184,7 +184,7 @@
   
   <!-- START: mountain orc -->
   
-  <creature name="mountain orc">
+  <creature name="山岭兽人">
     <type class="orc" subclass="mountain_orc" tileid="mountain_orc.png:2"/>
     <description></description>
     <attributes>
@@ -218,7 +218,7 @@
     </ai>
   </creature>
   
-  <creature name="mountain orc warrior">
+  <creature name="山岭兽族勇士">
     <type class="orc" subclass="mountain_orc_warrior" tileid="mountain_orc.png:3"/>
     <description></description>
     <attributes>
@@ -252,7 +252,7 @@
     </ai>
   </creature>
   
-  <creature name="mountain orc hunter">
+  <creature name="山岭兽族猎手">
     <type class="orc" subclass="mountain_orc_hunter" tileid="mountain_orc.png:1"/>
     <description></description>
     <attributes>
@@ -286,7 +286,7 @@
     </ai>
   </creature>
   
-  <creature name="mountain orc chief">
+  <creature name="山岭兽族首领">
     <type class="orc" subclass="mountain_orc_chief" tileid="mountain_orc.png:0"/>
     <description></description>
     <attributes>

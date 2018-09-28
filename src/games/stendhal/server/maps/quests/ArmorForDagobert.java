@@ -50,7 +50,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li>Dagobert asks you to find a 皮胸甲.</li>
- * <li>You get a 皮胸甲, e.g. by killing a cyclops.</li>
+ * <li>You get a 皮胸甲, e.g. by killing a 独眼巨人.</li>
  * <li>Dagobert sees your 皮胸甲 and asks for it and then thanks you.</li>
  * </ul>
  *

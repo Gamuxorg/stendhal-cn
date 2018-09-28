@@ -218,7 +218,7 @@ public class UltimateCollector extends AbstractQuest {
 		items.put("异界之剑",1); // 1347
 		items.put("黑镰刀",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
 		items.put("混沌匕首",1); // 1691
-		items.put("black sword",1); // 6285
+		items.put("黑刃剑",1); // 6285
 
 		// If all quests are completed, ask for an item
 		npc.add(ConversationStates.ATTENDING,

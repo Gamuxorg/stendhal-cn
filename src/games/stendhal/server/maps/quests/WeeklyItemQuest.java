@@ -138,10 +138,10 @@ public class WeeklyItemQuest extends AbstractQuest {
 
 		// helmet
 		items.put("混沌头盔",1);
-		items.put("golden helmet",1);
-		items.put("horned golden helmet",1);
+		items.put("黄金头盔",1);
+		items.put("黄金角盔",1);
 		items.put("奇妙头盔",1);
-		items.put("shadow helmet",1);
+		items.put("影子头盔",1);
 
 		// jewellery
 		items.put("钻石",1);

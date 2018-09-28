@@ -159,7 +159,7 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 				new SellerAdder().addSeller(this, new TorcibudSellerBehaviour(items));
 
 				addGreeting(
-					"Wroff! Welcome into the Kobold's Den bar wanderer!"
+					"Wroff! Welcome into the 狗头人's Den bar wanderer!"
 						+ " I'm Wrviliza, wife of #Wrvil."
 						+ " If you want me to #offer you some beverages, just say so!");
 				addJob("Wroff! I offer 红酒, 啤酒 and my famous #mild or #strong koboldish #torcibud.");

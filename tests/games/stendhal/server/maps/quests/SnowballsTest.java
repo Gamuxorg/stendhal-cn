@@ -53,7 +53,7 @@ public class SnowballsTest {
 	@Test
 	public void testQuest() {
 
-		npc = SingletonRepository.getNPCList().get("Mr. Yeti");
+		npc = SingletonRepository.getNPCList().get("耶提先生");
 		en = npc.getEngine();
 
 

@@ -96,7 +96,7 @@ public class BuyerNPC implements ZoneConfigurator {
 
 		final Sign book2 = new Sign();
 		book2.setPosition(13, 4);
-		book2.setText(" -- Buying -- \n golden helmet\t 3000\n shadow helmet\t 4000\n horned golden helmet 5000\n 混沌头盔\t 6000\n 附魔索链头盔\t 8000\n 黑头盔\t 10000");
+		book2.setText(" -- Buying -- \n 黄金头盔\t 3000\n 影子头盔\t 4000\n 黄金角盔 5000\n 混沌头盔\t 6000\n 附魔索链头盔\t 8000\n 黑头盔\t 10000");
 		book2.setEntityClass("book_red");
 		book2.setResistance(10);
 		zone.add(book2);

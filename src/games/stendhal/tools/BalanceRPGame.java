@@ -136,11 +136,11 @@ public class BalanceRPGame {
 
 		final EntityManager em = SingletonRepository.getEntityManager();
 
-		final Item shield = em.getItem("wooden shield");
+		final Item shield = em.getItem("木盾");
 		final Item armor = em.getItem("dress");
-		final Item helmet = em.getItem("leather helmet");
+		final Item helmet = em.getItem("皮帽");
 		final Item legs = em.getItem("皮裤");
-		final Item boots = em.getItem("leather boots");
+		final Item boots = em.getItem("皮靴");
 
 		player = (Player) new PlayerTransformer().transform(new RPObject());
 		player.equip("lhand", shield);

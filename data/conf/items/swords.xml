@@ -44,9 +44,9 @@
     </equipable>
   </item>
 
-  <item name="black sword">
+  <item name="黑刃剑">
     <type class="sword" subclass="black_sword" tileid="-1"/>
-    <description>You see a black sword.  Its darkness will surely protect you.</description>
+    <description>You see a 黑刃剑.  Its darkness will surely protect you.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -173,9 +173,9 @@
     </equipable>
   </item>
 
-  <item name="dagger">
+  <item name="匕首">
     <type class="sword" subclass="dagger" tileid="-1"/>
-    <description>You see a dagger, it is little more than decorative but you can jab pretty fast with it.</description>
+    <description>You see a 匕首, it is little more than decorative but you can jab pretty fast with it.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="8"/>
@@ -728,7 +728,7 @@
     </equipable>
   </item>
 
-  <item name="sword">
+  <item name="铁剑">
     <type class="sword" subclass="sword" tileid="-1"/>
     <description>You see a sharp sword which might even be worth a little.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>

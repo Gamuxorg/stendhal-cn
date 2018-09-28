@@ -61,7 +61,7 @@ public class OldRatWomanNPC implements ZoneConfigurator {
 				// remaining behaviour defined in games.stendhal.server.maps.quests.FindRatChildren
 			}
 		};
-		woman.setDescription("You see an old ratwoman. She appears somehow worried.");
+		woman.setDescription("You see an old 女鼠人. She appears somehow worried.");
 
 
 		woman.setEntityClass("oldratwomannpc");

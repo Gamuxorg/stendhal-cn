@@ -65,7 +65,7 @@ public class WizardNPC implements ZoneConfigurator {
 
 		};
 
-		npc.setDescription("You see one of the mithrilbourgh wizards, taking in the artwork at the museum");
+		npc.setDescription("You see one of the 白银堡法师s, taking in the artwork at the museum");
 		npc.setEntityClass("mithrilforgernpc");
 		npc.setPosition(23, 3);
 		npc.initHP(100);

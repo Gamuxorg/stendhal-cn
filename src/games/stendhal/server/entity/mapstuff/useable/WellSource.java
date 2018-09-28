@@ -37,7 +37,7 @@ public class WellSource extends PlayerActivityEntity {
 	 */
 	private static final String[] items = { "money", "木头", "铁矿石",
 			"金砂", "治疗剂", "回城卷", "大治疗剂",
-			"蓝宝石", "红宝石", "horned golden helmet", "暗之匕首",
+			"蓝宝石", "红宝石", "黄金角盔", "暗之匕首",
 			"present" };
 
 	/**
@@ -151,7 +151,7 @@ public class WellSource extends PlayerActivityEntity {
 			final Item item = SingletonRepository.getEntityManager().getItem(itemName);
 			int amount = 1;
 			if (itemName.equals("暗之匕首")
-					|| itemName.equals("horned golden helmet")) {
+					|| itemName.equals("黄金角盔")) {
 				/*
 				 * Bound powerful items.
 				 */

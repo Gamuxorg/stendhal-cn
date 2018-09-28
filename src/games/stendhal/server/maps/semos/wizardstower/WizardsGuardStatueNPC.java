@@ -53,7 +53,7 @@ public class WizardsGuardStatueNPC implements ZoneConfigurator {
 				        "Seven wizards form the wizards circle. These are #伊拉斯塔斯, #Elana, #拉瓦夏克, #Jaer, #Cassandra, #Silvanus and #Malleus");
 				addReply("伊拉斯塔斯", "伊拉斯塔斯 is the archmage of the wizards circle. He is the grandmaster of all magics and the wisest person that is known. He is the only one without a part in the practical test.");
 				addReply("elana", "Elana is the warmest and friendliest enchantress. She is the protectress of all living creatures and uses divine magic to save and heal them.");
-				addReply("拉瓦夏克", "拉瓦夏克 is a very mighty necromancer. He has studied the dark magic for ages. 拉瓦夏克 is a mystery, using dark magic to gain the upper hand on his opponents, but fighting the evil liches, his arch enemies.");
+				addReply("拉瓦夏克", "拉瓦夏克 is a very mighty necromancer. He has studied the dark magic for ages. 拉瓦夏克 is a mystery, using dark magic to gain the upper hand on his opponents, but fighting the evil 巫妖es, his arch enemies.");
 				addReply("jaer", "Jaer is the master of illusion. Charming and flighty like a breeze on a hot summer day. His domain is Air and he has many allies in the plains of mythical ghosts.");
 				addReply("cassandra", "Cassandra is a beautiful woman, but foremost a powerful sorceress. Cassandra's domain is Water and she can be cold like ice to achieve her aim.");
 				addReply("silvanus", "Silvanus is a sage druid and perhaps the eldest of all elves. He is a friend of all animals, trees, fairy creatures and ents. His domain is Earth and Nature.");

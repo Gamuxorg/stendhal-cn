@@ -23,7 +23,7 @@ import games.stendhal.server.entity.creature.ItemGuardCreature;
 import games.stendhal.server.entity.mapstuff.spawner.CreatureRespawnPoint;
 
 /**
- * Configure Catacombs to include a Vampire lord Creature who carries a 骷髅戒指.
+ * Configure Catacombs to include a 吸血鬼王 Creature who carries a 骷髅戒指.
  * Then it should give an 骷髅戒指 that is bound to the player, only while they have that quest active.
  */
 public class VampireLordCreature implements ZoneConfigurator {
@@ -41,7 +41,7 @@ public class VampireLordCreature implements ZoneConfigurator {
 
 	private void buildDrowTunnelArea(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
-		final Creature creature = new ItemGuardCreature(manager.getCreature("vampire lord"), "骷髅戒指", "vs_quest", "start");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("吸血鬼王"), "骷髅戒指", "vs_quest", "start");
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 30, 11, creature, 1);
 		zone.add(point);
 	}

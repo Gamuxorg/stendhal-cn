@@ -63,7 +63,7 @@ public class FeaturesTestArea implements ZoneConfigurator {
 	}
 
 	private void attackableAnimal(final StendhalRPZone zone) {
-		Creature creature = new AttackableCreature(manager.getCreature("orc"));
+		Creature creature = new AttackableCreature(manager.getCreature("兽人"));
 		CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 4, 56, creature, 1);
 		point.setRespawnTime(60 * 60 * 3);
 		zone.add(point);

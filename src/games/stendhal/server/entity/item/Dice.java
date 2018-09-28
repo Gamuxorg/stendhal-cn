@@ -147,7 +147,7 @@ public class Dice extends Item {
 
 	@Override
 	public String describe() {
-		return "你看到一套骰子, 正面的是 "
+		return "你看到一套dice, 正面的是 "
 				+ getTopFacesString() + ".";
 	}
 }

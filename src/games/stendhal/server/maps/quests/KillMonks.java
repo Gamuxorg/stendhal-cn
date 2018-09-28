@@ -54,12 +54,12 @@ import marauroa.common.Pair;
  *
  * PARTICIPANTS: <ul>
  * <li> Andy on Ados cemetery
- * <li> Darkmonks and normal monks
+ * <li> 黑暗僧侣s and normal 僧侣s
  * </ul>
  *
  * STEPS:<ul>
  * <li> Andy who is sad about the death of his wife, wants revenge for her death
- * <li> Kill 25 monks and 25 darkmonks for him for reaching his goal
+ * <li> Kill 25 僧侣s and 25 黑暗僧侣s for him for reaching his goal
  * </ul>
  *
  *
@@ -88,10 +88,10 @@ public class KillMonks extends AbstractQuest {
 	public KillMonks() {
 		super();
 
-		 creaturestokill.put("monk",
+		 creaturestokill.put("僧侣",
 				 new Pair<Integer, Integer>(0, 25));
 
-		 creaturestokill.put("darkmonk",
+		 creaturestokill.put("黑暗僧侣",
 				 new Pair<Integer, Integer>(0, 25));
 
 	}
@@ -103,7 +103,7 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"我的爱妻去 Kroip 送新鲜 比萨时, 被一些monk僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
+				"我的爱妻去 Kroip 送新鲜 比萨时, 被一些僧侣僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -132,7 +132,7 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"谢谢你! 请新掉 25 monks 和 25 darkmonks 为了我已故的爱妻. ",
+				"谢谢你! 请新掉 25 僧侣s 和 25 黑暗僧侣s 为了我已故的爱妻. ",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -199,7 +199,7 @@ public class KillMonks extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Kill Monks",
+				"Kill 僧侣s",
 				"Andy 的妻子被僧侣杀了. 现在他要为亡妻报仇. ",
 				false);
 		step_1();
@@ -231,7 +231,7 @@ public class KillMonks extends AbstractQuest {
 				res.add("我拒绝了他的请求.");
 			}
 			if ("start".equals(questState)) {
-				res.add("我答应为Andy的亡妻报仇, 杀死 25 个 monks 和 25 darkmonks. ");
+				res.add("我答应为Andy的亡妻报仇, 杀死 25 个 僧侣s 和 25 黑暗僧侣s. ");
 				if (formatted) {
 					res.addAll(howManyWereKilledFormatted(player, parts[1]));
 				} else {
@@ -242,7 +242,7 @@ public class KillMonks extends AbstractQuest {
 				if(isRepeatable(player)){
 					res.add("现在已过了两周, 我要为Andy的请求做出交待. 也许他需要我的帮助!");
 				} else {
-					res.add("我已杀死了这些 monks , Andy 最后也能睡得踏实了. !");
+					res.add("我已杀死了这些 僧侣s , Andy 最后也能睡得踏实了. !");
 				}
 			}
 			int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
@@ -255,19 +255,19 @@ public class KillMonks extends AbstractQuest {
 
 	private String howManyWereKilled(final Player player, final String questState) {
 		KillsForQuestCounter killsCounter = new KillsForQuestCounter(questState);
-		int killedMonks = 25 - killsCounter.remainingKills(player, "monk");
-		int killedDarkMonks = 25 - killsCounter.remainingKills(player, "darkmonk");
-		return "我已杀死了 " + killedMonks + "monk" + " 和 " + killedDarkMonks + "darkmonk" + ".";
+		int killedMonks = 25 - killsCounter.remainingKills(player, "僧侣");
+		int killedDarkMonks = 25 - killsCounter.remainingKills(player, "黑暗僧侣");
+		return "我已杀死了 " + killedMonks + "僧侣" + " 和 " + killedDarkMonks + "黑暗僧侣" + ".";
 	}
 
 	private List<String> howManyWereKilledFormatted(final Player player, final String questState) {
 		KillsForQuestCounter killsCounter = new KillsForQuestCounter(questState);
-		int killedMonks = 25 - killsCounter.remainingKills(player, "monk");
-		int killedDarkMonks = 25 - killsCounter.remainingKills(player, "darkmonk");
+		int killedMonks = 25 - killsCounter.remainingKills(player, "僧侣");
+		int killedDarkMonks = 25 - killsCounter.remainingKills(player, "黑暗僧侣");
 
 		List<String> entries = new ArrayList<>();
-		entries.add("Monks: <tally>" + killedMonks + "</tally>");
-		entries.add("Darkmonks: <tally>" + killedDarkMonks + "</tally>");
+		entries.add("僧侣s: <tally>" + killedMonks + "</tally>");
+		entries.add("黑暗僧侣s: <tally>" + killedDarkMonks + "</tally>");
 		return entries;
 	}
 

@@ -42,7 +42,7 @@ public class SecondFloorCreatures implements ZoneConfigurator {
 		final Creature creature = manager.getCreature("气元素");
 		final Creature creature1 = manager.getCreature("马德拉风行者");
 		final Creature creature2 = manager.getCreature("神灯");
-		final Creature creature3 = manager.getCreature("invisible man");
+		final Creature creature3 = manager.getCreature("隐形人");
 
 		creature1.setName("cloudwalker");
 		creature2.setName("djinn windmaster");

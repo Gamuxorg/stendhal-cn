@@ -46,14 +46,14 @@ public abstract class UpdateConverter {
 			"chain_armor_+1", "scale_armor_+1", "chain_armor_+3",
 			"scale_armor_+2", "twoside_axe_+3", "elf_cloak_+2", "权杖_+1",
 			"权杖_+2", "铁锤_+3", "chain_helmet_+2", "golden_helmet_+3",
-			"longbow_+1", "lion_shield_+1"
+			"长弓_+1", "lion_shield_+1"
 	);
 	private static final List<String> ITEM_NAMES_NEW = Arrays.asList(
 			"破晓之星", "鳞甲", "护肩皮胸甲",
 			"加固锁子甲", "铁鳞甲", "黄金锁子甲",
 			"护肩铁胸甲", "黄金双刃斧", "蓝灵斗篷", "加强狼牙棒",
-			"黄金权杖", "黄金战锤", "aventail", "horned golden helmet",
-			"composite bow", "加强狮盾"
+			"黄金权杖", "黄金战锤", "护面头盔", "黄金角盔",
+			"复合弓", "加强狮盾"
 	);
 
 	private static final List<String> ITEM_NAMES_OLD_0_66 = Arrays.asList(
@@ -83,7 +83,7 @@ public abstract class UpdateConverter {
 
 		KILL_QUEST_NAMES.put("club_thorns",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"mountain orc chief")));
+					"山岭兽族首领")));
 
 		KILL_QUEST_NAMES.put("kill_dhohr_nuggetcutter",
 				new Pair<Integer, List<String>>(1, Arrays.asList(

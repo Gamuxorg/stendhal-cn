@@ -32,7 +32,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <ul>
  * <li>Ida, a seamstress in Ados.</li>
  * <li>帝国科学家s, in kalavan basement</li>
- * <li>Mithrilbourgh wizards, in kirdneh and magic city</li>
+ * <li>白银堡法师s, in kirdneh and magic city</li>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
  * <li>Terry, the dragon hatcher in 塞门洞穴.</li>

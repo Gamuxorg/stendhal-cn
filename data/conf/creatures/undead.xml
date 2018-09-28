@@ -4,9 +4,9 @@
   
   <!-- START: animal -->
   
-  <creature name="zombie rat">
+  <creature name="僵尸鼠">
     <type class="small_animal" subclass="zombierat" tileid="small_animal.png:4"/>
-    <description>You see a hungry zombie rat and it doesn't like to see you.</description>
+    <description>You see a hungry 僵尸鼠 and it doesn't like to see you.</description>
     <attributes>
       <atk value="105"/>
       <def value="19"/>
@@ -37,9 +37,9 @@
     </ai>
   </creature>
   
-  <creature name="ghost hound">
+  <creature name="幽灵犬">
     <type class="undead" subclass="ghosthound" tileid="undead.png:13"/>
-    <description>As you catch sight of its shaggy shape and gleaming evil eyes, you suddenly remember all the horror stories around the dreaded ghost hound!</description>
+    <description>As you catch sight of its shaggy shape and gleaming evil eyes, you suddenly remember all the horror stories around the dreaded 幽灵犬!</description>
     <attributes>
       <atk value="320"/>
       <def value="110"/>
@@ -79,7 +79,7 @@
   
   <!-- START: fallen -->
   
-  <creature name="fallen warrior">
+  <creature name="堕落武士">
     <type class="undead" subclass="fallen_warrior" tileid="undead_fallen.png:3"/>
     <description></description>
     <attributes>
@@ -110,9 +110,9 @@
     </ai>
   </creature>
   
-  <creature name="fallen priest">
+  <creature name="堕落僧侣">
     <type class="undead" subclass="fallen_priest" tileid="undead_fallen.png:2"/>
-    <description>You see a fallen priest. He was once just a regular human priest, until the dark powers corrupted him and turned him to the dark side. </description>
+    <description>You see a 堕落僧侣. He was once just a regular human priest, until the dark powers corrupted him and turned him to the dark side. </description>
     <attributes>
       <atk value="546"/>
       <def value="80"/>
@@ -141,7 +141,7 @@
     </ai>
   </creature>
   
-  <creature name="fallen high priest">
+  <creature name="堕落高僧">
     <type class="undead" subclass="fallen_high_priest" tileid="undead_fallen.png:1"/>
     <description></description>
     <attributes>
@@ -176,9 +176,9 @@
   
   <!-- START: lich -->
   
-  <creature name="lich">
+  <creature name="巫妖">
     <type class="undead" subclass="lich" tileid="undead_fallen.png:7"/>
-    <description>You see a lich, a dark desolate creature which has been doomed to wander in endless turmoil, feeding on the souls of the righteous.</description>
+    <description>You see a 巫妖, a dark desolate creature which has been doomed to wander in endless turmoil, feeding on the souls of the righteous.</description>
     <attributes>
       <atk value="468"/>
       <def value="53"/>
@@ -209,9 +209,9 @@
     </ai>
   </creature>
   
-  <creature name="dead lich">
+  <creature name="巫妖王">
     <type class="undead" subclass="dead_lich" tileid="undead_fallen.png:0"/>
-    <description>You see a dead lich with his huge green and heavy cloak. Although he is dead and bony, he'll seek revenge for his too early passing and will always return fast and ruthless!</description>
+    <description>You see a 巫妖王 with his huge green and heavy cloak. Although he is dead and bony, he'll seek revenge for his too early passing and will always return fast and ruthless!</description>
     <attributes>
       <atk value="582"/>
       <def value="80"/>
@@ -241,9 +241,9 @@
     </ai>
   </creature>
   
-  <creature name="high lich">
+  <creature name="大巫妖">
     <type class="undead" subclass="high_lich" tileid="undead_fallen.png:4"/>
-    <description>The terrible grinning skull of a high lich leers at you as it prepares to slaughter you in a myriad of magical ways.</description>
+    <description>The terrible grinning skull of a 大巫妖 leers at you as it prepares to slaughter you in a myriad of magical ways.</description>
     <attributes>
       <atk value="693"/>
       <def value="123"/>
@@ -277,9 +277,9 @@
   
   <!-- START: misc -->
   
-  <creature name="death knight">
+  <creature name="死亡骑士">
     <type class="undead" subclass="death_knight" tileid="undead.png:1"/>
-    <description>You see a death knight. Some time ago he fought in tournaments where his only aim was to kill as many enemies as possible.</description>
+    <description>You see a 死亡骑士. Some time ago he fought in tournaments where his only aim was to kill as many enemies as possible.</description>
     <attributes>
       <atk value="421"/>
       <def value="52"/>
@@ -296,7 +296,7 @@
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.0050"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.5"/>
-      <item value="shadow helmet" quantity="[1,1]" probability="0.35"/>
+      <item value="影子头盔" quantity="[1,1]" probability="0.35"/>
       <item value="烈火剑" quantity="[1,1]" probability="0.5"/>
       <item value="暗之匕首" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -352,9 +352,9 @@
   
   <!-- START: mummy -->
   
-  <creature name="mummy">
+  <creature name="木乃伊">
     <type class="mummy" subclass="mummy" tileid="mummy.png:0"/>
-    <description>You see a mummy which usually sleeps in a coffin.</description>
+    <description>You see a 木乃伊 which usually sleeps in a coffin.</description>
     <attributes>
       <atk value="154"/>
       <def value="42"/>
@@ -384,9 +384,9 @@
     </ai>  
   </creature>
   
-  <creature name="royal mummy">
+  <creature name="皇族木乃伊">
     <type class="mummy" subclass="royal_mummy" tileid="mummy.png:1"/>
-    <description>You see a royal mummy. You wonder what keeps this king's soul from finding peace.</description>
+    <description>You see a 皇族木乃伊. You wonder what keeps this king's soul from finding peace.</description>
     <attributes>
       <atk value="250"/>
       <def value="71"/>
@@ -401,7 +401,7 @@
     <drops>
       <item value="money" quantity="[5,33]" probability="100.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="3.0"/>
-      <item value="aventail" quantity="[1,1]" probability="1.0"/>
+      <item value="护面头盔" quantity="[1,1]" probability="1.0"/>
       <item value="骷髅盾" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>
@@ -421,9 +421,9 @@
   
   <!-- START: skeleton -->
   
-  <creature name="skeleton">
+  <creature name="骷髅">
     <type class="undead" subclass="skeleton" tileid="undead.png:9"/>
-    <description>You see a skeleton which survives to get revenge.</description>
+    <description>You see a 骷髅 which survives to get revenge.</description>
     <attributes>
       <atk value="98"/>
       <def value="13"/>
@@ -442,7 +442,7 @@
       <item value="权杖" quantity="[1,1]" probability="1.0"/>
       <item value="木盾" quantity="[1,1]" probability="0.5"/>
       <item value="镶嵌护腿" quantity="[1,1]" probability="1.0"/>
-      <item value="dagger" quantity="[1,1]" probability="0.5"/>
+      <item value="匕首" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -460,9 +460,9 @@
     </ai>
   </creature>
   
-  <creature name="tiny skelly">
+  <creature name="小骷髅">
     <type class="hybrid" subclass="tiny_skelly" tileid="hybrid.png:9"/>
-    <description>You see a tiny skelly. It is silly, little and evil, be careful with its poison...</description>
+    <description>You see a 小骷髅. It is silly, little and evil, be careful with its poison...</description>
     <attributes>
       <atk value="173"/>
       <def value="28"/>
@@ -478,7 +478,7 @@
       <item value="money" quantity="[3,10]" probability="90.0"/>
       <item value="矮人护甲" quantity="[1,1]" probability="0.5"/>
       <item value="小圆盾" quantity="[1,1]" probability="15.5"/>
-      <item value="dagger" quantity="[1,1]" probability="10.5"/>
+      <item value="匕首" quantity="[1,1]" probability="10.5"/>
     </drops>
     <equips>
     </equips>
@@ -495,9 +495,9 @@
     </ai>
   </creature>
   
-  <creature name="warrior skeleton">
+  <creature name="骷髅战士">
     <type class="undead" subclass="warrior_skeleton" tileid="undead.png:10"/>
-    <description>You see a warrior skeleton, it's just a normal skeleton with a shield!</description>
+    <description>You see a 骷髅战士, it's just a normal skeleton with a shield!</description>
     <attributes>
       <atk value="233"/>
       <def value="65"/>
@@ -532,7 +532,7 @@
     </ai>
   </creature> 
   
-  <creature name="elder skeleton">
+  <creature name="资深骷髅">
     <type class="undead" subclass="elder_skeleton" tileid="undead.png:7"/>
     <description>You see the bones of an old man. He lived to a ripe old age, and is sure to know a thing or two that separates him from all the vengeful skeletons that died young.</description>
     <attributes>
@@ -551,7 +551,7 @@
       <item value="权杖" quantity="[1,1]" probability="5.0"/>
       <item value="骷髅盾" quantity="[1,1]" probability="3.0"/> 
       <item value="镶嵌护腿" quantity="[1,1]" probability="10.0"/>
-      <item value="dagger" quantity="[1,1]" probability="5.5"/>
+      <item value="匕首" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>
     </equips>
@@ -569,9 +569,9 @@
     </ai>
   </creature>   
   
-  <creature name="demon skeleton">
+  <creature name="骷髅精">
     <type class="undead" subclass="demon_skeleton" tileid="undead.png:3"/>
-    <description>You see a demon skeleton. Demon skeletons have ascended from the underworld and they are going to take over this world. You really should slay them before it is too late!</description>
+    <description>You see a 骷髅精. 骷髅精s have ascended from the underworld and they are going to take over this world. You really should slay them before it is too late!</description>
     <attributes>
       <atk value="316"/>
       <def value="102"/>
@@ -604,9 +604,9 @@
     </ai>
   </creature>
   
-  <creature name="gashadokuro">
+  <creature name="白骨精">
     <type class="mythical_animal" subclass="gashadokuro" tileid="mythical_animal.png:1"/>
-    <description>A giant figure made of bone, known only as gashadokuro, towers before you. He is created from the bones of starving humans.</description>
+    <description>A giant figure made of bone, known only as 白骨精, towers before you. He is created from the bones of starving humans.</description>
     <attributes>
       <atk value="2000"/>
       <def value="171"/>
@@ -636,7 +636,7 @@
   
   <!-- START: specter -->
   
-  <creature name="ghost">
+  <creature name="幽灵">
     <type class="undead" subclass="ghost" tileid="undead.png:5"/>
     <description>You see a ghost, don't be afraid! It doesn't seem to be evil.</description>
     <attributes>
@@ -668,7 +668,7 @@
     </ai>
   </creature>
   
-  <creature name="death">
+  <creature name="死灵法师">
     <type class="undead" subclass="death" tileid="undead.png:2"/>
     <description>You see Death. Do you have the will to stare him in the face? Today he's not in the mood to bargain with your soul.</description>
     <attributes>
@@ -701,7 +701,7 @@
     </ai>
   </creature>
   
-  <creature name="invisible man">
+  <creature name="隐形人">
     <type class="undead" subclass="invisible_man" tileid="undead_fallen.png:6"/>
     <description>You see nothing but the landscape. As you stare at the point where you think you have seen something, you suddenly see the slight contour of a man!</description>
     <attributes>
@@ -731,7 +731,7 @@
     </ai>
   </creature>
   
-  <creature name="green phantom">
+  <creature name="青色幻影">
     <type class="undead" subclass="green_phantom" tileid="undead.png:12"/>
     <attributes>
       <atk value="462"/>
@@ -760,9 +760,9 @@
     </ai>
   </creature>   
   
-  <creature name="incorporeal armor">
+  <creature name="无人盔甲">
     <type class="undead" subclass="incorporeal_armor" tileid="undead_fallen.png:5"/>
-    <description>You see an incorporeal armor. You are quite surprised as it walks towards you because there is nobody in it.</description>
+    <description>You see an 无人盔甲. You are quite surprised as it walks towards you because there is nobody in it.</description>
     <attributes>
       <atk value="565"/>
       <def value="78"/>
@@ -790,9 +790,9 @@
     </ai>
   </creature>
   
-  <creature name="black death">
+  <creature name="黑暗死灵法师">
     <type class="huge_animal" subclass="black_death" tileid="huge_animal.png:0"/>
-    <description>You see a black death. With his 大镰刀 he reaps your soul and then he takes it over the river where it has to stay until judgement day arrives.</description>
+    <description>You see a 黑暗死灵法师. With his 大镰刀 he reaps your soul and then he takes it over the river where it has to stay until judgement day arrives.</description>
     <attributes>
       <atk value="1451"/>
       <def value="154"/>
@@ -836,9 +836,9 @@
     </ai>
   </creature>
   
-  <creature name="golden death">
+  <creature name="黄金死灵法师">
     <type class="huge_animal" subclass="golden_death" tileid="huge_animal.png:12"/>
-    <description>You see the golden death. He came to take your soul away to pay for all your sins.</description>
+    <description>You see the 黄金死灵法师. He came to take your soul away to pay for all your sins.</description>
     <attributes>
       <atk value="1968"/>
       <def value="171"/>
@@ -884,9 +884,9 @@
   
   <!-- START: vampire -->
   
-  <creature name="vampire bride">
+  <creature name="吸血新娘">
     <type class="vampire" subclass="vampire_lord_bride" tileid="vampire.png:0"/>
-    <description>You see a vampire bride. She was resurrected from the dead by a wicked vampire lord.</description>
+    <description>You see a 吸血新娘. She was resurrected from the dead by a wicked vampire lord.</description>
     <attributes>
       <atk value="186"/>
       <def value="4"/>
@@ -915,9 +915,9 @@
     </ai>
   </creature>
 
-  <creature name="vampirette">
+  <creature name="吸血女郎">
     <type class="vampire" subclass="vampirette" tileid="vampire.png:4"/>
-    <description>You see a Vampirette. Beware of its sharp teeth! She wants to drink your blood and turn you into a vampire!</description>
+    <description>You see a 吸血女郎. Beware of its sharp teeth! She wants to drink your blood and turn you into a vampire!</description>
     <attributes>
       <atk value="353"/>
       <def value="43"/>
@@ -947,9 +947,9 @@
     </ai>
   </creature>
   
-  <creature name="vampire lord">
+  <creature name="吸血鬼王">
     <type class="vampire" subclass="vampire_lord" tileid="vampire.png:2"/>
-    <description>You see a vampire lord. Be careful, he is after your blood!</description>
+    <description>You see a 吸血鬼王. Be careful, he is after your blood!</description>
     <attributes>
       <atk value="497"/>
       <def value="35"/>
@@ -982,9 +982,9 @@
   
   <!-- START: zombie -->
   
-  <creature name="bloody zombie">
+  <creature name="血尸">
     <type class="undead" subclass="bloody_zombie" tileid="undead.png:0"/>
-    <description>You see a bloody zombie. Can you see the drops of blood which fall from his body?</description>
+    <description>You see a 血尸. Can you see the drops of blood which fall from his body?</description>
     <attributes>
       <atk value="182"/>
       <def value="34"/>
@@ -1019,9 +1019,9 @@
     </ai>
   </creature>
   
-  <creature name="zombie">
+  <creature name="僵尸">
     <type class="undead" subclass="zombie" tileid="undead.png:11"/>
-    <description>You see a zombie. It woke up just to take revenge, be silent.</description>
+    <description>You see a 僵尸. It woke up just to take revenge, be silent.</description>
     <attributes>
       <atk value="202"/>
       <def value="49"/>
@@ -1054,9 +1054,9 @@
     </ai>
   </creature>
   
-  <creature name="headless monster">
+  <creature name="无头怪">
     <type class="undead" subclass="headless_monster" tileid="undead.png:6"/>
-    <description>You see a headless monster, how can he hear that we come to him?</description>
+    <description>You see a 无头怪, how can he hear that we come to him?</description>
     <attributes>
       <atk value="221"/>
       <def value="54"/>
@@ -1067,7 +1067,7 @@
     <level value="21"/>
     <experience value="300"/>
     <respawn value="1260"/>
-    <!-- a corpse with a skull is somewhat inapropriate for a headless monster, 
+    <!-- a corpse with a skull is somewhat inapropriate for a 无头怪, 
         but we don't have anything better -->
     <corpse name="humanoid"/>
     <drops>
@@ -1084,9 +1084,9 @@
     </ai>
   </creature>  
   
-  <creature name="rotten zombie">
+  <creature name="腐尸">
     <type class="undead" subclass="rotten_zombie" tileid="undead.png:8"/>
-    <description>You see a rotten zombie. You are disgusted as you see its rotten skin that hangs down in pieces from his half rotten bones.</description>
+    <description>You see a 腐尸. You are disgusted as you see its rotten skin that hangs down in pieces from his half rotten bones.</description>
     <attributes>
       <atk value="256"/>
       <def value="70"/>

@@ -55,7 +55,7 @@ public abstract class PlayerActivityEntity extends UseableEntity {
 				onFinished(player, isSuccessful(player));
 			}
 		} else {
-			player.sendPrivateText("你离 " + this.getName() + " 太远, 靠近一些再拿. ");
+			player.sendPrivateText("你离 " + this.getName() + " 太远, 靠近一些再试.");
 			onFinished(player, false);
 		}
 	}
@@ -147,7 +147,7 @@ public abstract class PlayerActivityEntity extends UseableEntity {
 		// The player must be next to the source to start to use it.
 		if (!player.nextTo(this)) {
 			player.sendPrivateText("你离 " + this.getName()+
-				" 太远, 靠近一点再拿. ");
+				" 太远, 靠近一点再试.");
 			return false;
 		}
 

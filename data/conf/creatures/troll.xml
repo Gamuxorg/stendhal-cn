@@ -4,9 +4,9 @@
   
   <!-- START: cyclops -->
   
-  <creature name="cyclops">
+  <creature name="独眼巨人">
     <type class="giant" subclass="cyclops" tileid="giant.png:0"/>
-    <description>You see a cyclops. It just has one eye.</description>
+    <description>You see a 独眼巨人. It just has one eye.</description>
     <attributes>
       <atk value="125"/>
       <def value="26"/>
@@ -85,9 +85,9 @@
     </ai>
   </creature>
   
-  <creature name="elder ogre">
+  <creature name="老年食人族">
     <type class="giant" subclass="elder_ogre" tileid="giant.png:1"/>
-     <description>You see an elder ogre, he's in the last moments of his life, take pity on him.</description>
+     <description>You see an 老年食人族, he's in the last moments of his life, take pity on him.</description>
     <attributes>
       <atk value="195"/>
       <def value="13"/>
@@ -121,9 +121,9 @@
     </ai>
   </creature>
   
-  <creature name="ogre soldier">
+  <creature name="食人族士兵">
     <type class="giant" subclass="ogre_soldier" tileid="giant.png:3"/>
-    <description>You see an ogre soldier, smelling like it didn't have had a bath for years. Ewww.</description>
+    <description>You see an 食人族士兵, smelling like it didn't have had a bath for years. Ewww.</description>
     <attributes>
       <atk value="222"/>
       <def value="40"/>
@@ -155,9 +155,9 @@
     </ai>
   </creature>
   
-  <creature name="superogre">
+  <creature name="超级食人族">
     <type class="giant" subclass="superogre" tileid="giant.png:4"/>
-    <description>You see a superogre which belongs to the family of very material creatures, the Ogres. Ever since this one happened upon a peculiar helmet and has been revered among its peers. Take care, it throws a mean punch!</description>
+    <description>You see a 超级食人族 which belongs to the family of very material creatures, the Ogres. Ever since this one happened upon a peculiar helmet and has been revered among its peers. Take care, it throws a mean punch!</description>
     <attributes>
       <atk value="296"/>
       <def value="52"/>
@@ -191,7 +191,7 @@
   
   <!-- START: troll -->
   
-  <creature name="troll">
+  <creature name="巨魔">
     <type class="troll" subclass="troll" tileid="troll.png:0"/>
     <description>You see a troll, be careful in his terrain.</description>
     <attributes>
@@ -228,9 +228,9 @@
     </ai>
   </creature>
   
-  <creature name="red troll">
+  <creature name="红巨魔">
     <type class="troll" subclass="red_troll" tileid="troll.png:2"/>
-    <description>You see a red troll, he's burning with anger.</description>
+    <description>You see a 红巨魔, he's burning with anger.</description>
     <attributes>
       <atk value="190"/>
       <def value="34"/>
@@ -265,7 +265,7 @@
     </ai>
   </creature>
   
-  <creature name="cave troll">
+  <creature name="穴居巨魔">
     <type class="troll" subclass="cave_troll" tileid="troll.png:1"/>
     <description></description>
     <attributes>

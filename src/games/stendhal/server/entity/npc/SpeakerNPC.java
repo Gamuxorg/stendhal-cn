@@ -85,7 +85,7 @@ import games.stendhal.server.entity.player.Player;
  *    public void fire(Player player, String text, SpeakerNPC npc) {
  *        int i = text.indexOf(" ");
  *        String item = text.substring(i + 1);
- *        if (item.equals("sword")) {
+ *        if (item.equals("铁剑")) {
  *            npc.say(item + "costs 10 coins. Do you want to buy?");
  *        } else {
  *            npc.say("Sorry, I don't sell " + item + ".");

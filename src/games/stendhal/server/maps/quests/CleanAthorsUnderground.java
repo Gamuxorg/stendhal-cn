@@ -127,15 +127,15 @@ public class CleanAthorsUnderground extends AbstractQuest {
 
 
 		final Map<String, Pair<Integer, Integer>> toKill = new TreeMap<String, Pair<Integer, Integer>>();
-		toKill.put("mummy", new Pair<Integer, Integer>(0,1));
-		toKill.put("royal mummy", new Pair<Integer, Integer>(0,1));
-		toKill.put("monk",new Pair<Integer, Integer>(0,1));
-		toKill.put("darkmonk",new Pair<Integer, Integer>(0,1));
+		toKill.put("木乃伊", new Pair<Integer, Integer>(0,1));
+		toKill.put("皇族木乃伊", new Pair<Integer, Integer>(0,1));
+		toKill.put("僧侣",new Pair<Integer, Integer>(0,1));
+		toKill.put("黑暗僧侣",new Pair<Integer, Integer>(0,1));
 		toKill.put("蝙蝠",new Pair<Integer, Integer>(0,1));
 		toKill.put("棕色史莱姆",new Pair<Integer, Integer>(0,1));
 		toKill.put("绿色史莱姆",new Pair<Integer, Integer>(0,1));
 		toKill.put("黑色史莱姆",new Pair<Integer, Integer>(0,1));
-		toKill.put("minotaur",new Pair<Integer, Integer>(0,1));
+		toKill.put("牛头人",new Pair<Integer, Integer>(0,1));
 		toKill.put("蓝龙",new Pair<Integer, Integer>(0,1));
 		toKill.put("石傀儡",new Pair<Integer, Integer>(0,1));
 

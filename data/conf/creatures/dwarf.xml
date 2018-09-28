@@ -6,7 +6,7 @@
   
   <creature name="杜加矮人">
     <type class="dwarf" subclass="duergar" tileid="dwarf_duergar.png:6"/>
-    <description>You see a 杜加矮人. It is a close relative to dwarves but with a diabolically tainted blood.</description>
+    <description>杜加矮人. 与矮人是近亲, 但身体内流着恶魔的血.</description>
     <attributes>
       <atk value="278"/>
       <def value="49"/>
@@ -80,7 +80,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,50]" probability="90.0"/>
-      <item value="aventail" quantity="[1,1]" probability="10.0"/>
+      <item value="护面头盔" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -232,7 +232,7 @@
       <item value="money" quantity="[30,97]" probability="90.0"/>      
       <item value="石甲" quantity="[1,1]" probability="0.1"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0001"/>
-      <item value="horned golden helmet" quantity="[1,1]" probability="0.5"/>
+      <item value="黄金角盔" quantity="[1,1]" probability="0.5"/>
       <item value="矮人护腿" quantity="[1,1]" probability="1.0" />
     </drops>
     <equips>
@@ -250,7 +250,7 @@
   
   <creature name="矮人">
     <type class="dwarf" subclass="dwarf" tileid="dwarf.png:1"/>
-    <description>You see a 矮人 who works in the mine to find some iron for us.</description>
+    <description>矮人常在矿山中工作, 为我们挖出各种矿产资源.</description>
     <attributes>
       <atk value="168"/>
       <def value="26"/>
@@ -283,7 +283,7 @@
   
   <creature name="矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="dwarf.png:0"/>
-    <description>You see a 矮人守卫 who fights against the humans.</description>
+    <description>矮人守卫对抗着人类.</description>
     <attributes>
       <atk value="200"/>
       <def value="31"/>
@@ -303,7 +303,7 @@
       <item value="战斧" quantity="[1,1]" probability="3.0"/>
       <item value="黄金权杖" quantity="[1,1]" probability="0.5"/>
       <item value="铁靴" quantity="[1,1]" probability="1.0"/>
-      <item value="viking helmet" quantity="[1,1]" probability="3.0"/>
+      <item value="海盗帽" quantity="[1,1]" probability="3.0"/>
     </drops>
     <equips>
     </equips>
@@ -317,7 +317,7 @@
   
   <creature name="矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="dwarf.png:2"/>
-    <description>You see an 矮人壮士, a mighty warrior tired of fighting.</description>
+    <description>矮人壮士是在战斗中有些疲惫的勇士.</description>
     <attributes>
       <atk value="214"/>
       <def value="33"/>
@@ -351,7 +351,7 @@
   
   <creature name="矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="dwarf.png:3"/>
-    <description>You see a 矮人英雄. He is an old dwarf warrior who became a hero for fighting in many dwarf wars and he is very famous for his strength and brutality.</description>
+    <description>矮人英雄作为著名的年长的矮勇士, 参加过很多矮人战争, 也因残忍而闻名于世.</description>
     <attributes>
       <atk value="244"/>
       <def value="43"/>
@@ -384,7 +384,7 @@
   
   <creature name="矮人统领">
     <type class="dwarf" subclass="leader_dwarf" tileid="dwarf.png:4"/>
-    <description>You see a 矮人统领. He is the most mighty dwarf of his tribe so he enjoys much popularity there.</description>
+    <description>矮人统领在他的族人中经历过最多的战斗. 所以他在族内很受尊敬.</description>
     <attributes>
       <atk value="311"/>
       <def value="111"/>
@@ -423,7 +423,7 @@
   
   <creature name="巨型都尔">
     <type class="dwarf" subclass="giant_dwarf" tileid="dwarf.png:5"/>
-    <description>You see a 巨型都尔. It is very hard for him to be a 巨型都尔 because some of the other dwarves don't really see him as one of them because of his height... But in his big heart he is a dwarf and in a battle he will fight against each enemy!</description>
+    <description>巨型都尔的处境相当困难. 因为其他一些矮人不认为他是他们中的一员, 但他的心却一直属于矮人族, 战斗时也一直与矮人们保持一致!</description>
     <attributes>
       <atk value="616"/>
       <def value="99"/>
@@ -489,7 +489,7 @@
   
   <creature name="都林之主">
     <type class="dwarf" subclass="lord_durin" tileid="dwarf.png:7"/>
-    <description>You see the mighty 都林之主, an ancient dwarf who has led his race through countless battles.</description>
+    <description>都林之主作为古矮人一支的王者, 领导着族人经历了无数的战争.</description>
     <attributes>
       <atk value="1855"/>
       <def value="180"/>
@@ -527,7 +527,7 @@
   
   <creature name="山地矮人">
     <type class="dwarf" subclass="dwarf" tileid="mountain_dwarf.png:1"/>
-    <description>You see a 山地矮人. He likes earth, stones and rocks. Deep within the mountain, where no animal and no human has ever been, you can hear the sound of his pickaxe as he searches for gold and ore.</description>
+    <description>山地矮人喜欢泥士, 石头或是山岩. 在人迹罕至的大山的深处活动, 你能听到他们用锄头挖金子或石头的声音.</description>
     <attributes>
       <atk value="437"/>
       <def value="72"/>
@@ -559,7 +559,7 @@
   
   <creature name="山地矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="mountain_dwarf.png:0"/>
-    <description>You see a 山地矮人守卫. He has to watch out for enemies and guards the 山地矮人s while they are doing their work.</description>
+    <description>山地矮人守卫时刻观察着敌人并守护着山地矮人一族.</description>
     <attributes>
       <atk value="461"/>
       <def value="70"/>
@@ -577,7 +577,7 @@
       <item value="大砍刀" quantity="[1,1]" probability="1.0"/>
       <item value="战戟" quantity="[1,1]" probability="0.05"/>
       <item value="石靴" quantity="[1,1]" probability="2.5"/>
-      <item value="golden helmet" quantity="[1,1]" probability="1.0"/>
+      <item value="黄金头盔" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -591,7 +591,7 @@
   
   <creature name="山地矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="mountain_dwarf.png:2"/>
-    <description>You see a 山地矮人壮士. For many years he worked deep in the mountain and found much gold and ore in his life. Soon he will be too old to do this work but at the moment he is still a strong dwarf.</description>
+    <description>山地矮人壮士常年在大山深入工作, 他们挖出大量金矿. 虽然有些年老, 但他们仍然强壮.</description>
     <attributes>
       <atk value="484"/>
       <def value="75"/>
@@ -625,7 +625,7 @@
   
   <creature name="山地矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="mountain_dwarf.png:3"/>
-    <description>You see a 山地矮人英雄. Many, many dwarves admire him! He was a member of a dwarvish group which discovered a very big gold deposit!</description>
+    <description>山地矮人英雄是矮人心中的偶象! 他是矮人团队中发现金矿最多的一员!</description>
     <attributes>
       <atk value="503"/>
       <def value="72"/>
@@ -659,7 +659,7 @@
   
   <creature name="山地矮人首领">
     <type class="dwarf" subclass="leader_dwarf" tileid="mountain_dwarf.png:4"/>
-    <description>You see a 山地矮人首领. He is responsible for the mountain dwarves and their work, and also for the organization of the guardian troops. But in serious cases he will also fight on his own!</description>
+    <description>山地矮人首领负责管理山地矮人的工作分配, 也是矮人军团的组织者. 但在紧急情况下也会亲自应战!</description>
     <attributes>
       <atk value="560"/>
       <def value="83"/>

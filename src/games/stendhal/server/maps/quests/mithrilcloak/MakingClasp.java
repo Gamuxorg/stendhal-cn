@@ -64,7 +64,7 @@ class MakingClasp {
 
 		// offer the clasp when prompted
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "密银胸针", "ida", "cloak", "密银斗篷"),
+			Arrays.asList("clasp", "密银胸针", "ida", "斗蓬", "密银斗篷"),
 			new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 			ConversationStates.SERVICE_OFFERED,
 			"A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one 密银锭. Do you have it?",
@@ -102,7 +102,7 @@ class MakingClasp {
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "密银胸针", "ida", "cloak", "密银斗篷"),
+			Arrays.asList("clasp", "密银胸针", "ida", "斗蓬", "密银斗篷"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -138,7 +138,7 @@ class MakingClasp {
 
 		// Player brought the clasp, don't make them wait any longer for the cloak
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "密银胸针", "cloak", "密银斗篷", "task", "quest"),
+				Arrays.asList("clasp", "密银胸针", "斗蓬", "密银斗篷", "task", "quest"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_clasp"), new PlayerHasItemWithHimCondition("密银胸针")),
 				ConversationStates.ATTENDING,
 				"Wow, Pedinghaus really outdid himself this time. It looks wonderful on your new cloak! Wear it with pride.",
@@ -152,7 +152,7 @@ class MakingClasp {
 
 		// remind about getting clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "密银胸针", "cloak", "密银斗篷", "task", "quest"),
+				Arrays.asList("clasp", "密银胸针", "斗蓬", "密银斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),

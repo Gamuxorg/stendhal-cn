@@ -47,8 +47,8 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li> Orc Saman asks you to kill mountain orc chief in prison for revenge</li>
- * <li> Go kill mountain orc chief in prison using key given by Saman to get in</li>
+ * <li> Orc Saman asks you to kill 山岭兽族首领 in prison for revenge</li>
+ * <li> Go kill 山岭兽族首领 in prison using key given by Saman to get in</li>
  * <li> Return and you get Club of Thorns as reward<li>
  * </ul>
  *
@@ -79,14 +79,14 @@ public class ClubOfThorns extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"Make revenge! Kill de Mountain Orc Chief! unnerstand? ok?",
+			"Make revenge! Kill de 山岭兽族首领! unnerstand? ok?",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Make revenge! #Kill Mountain Orc Chief!",
+			"Make revenge! #Kill 山岭兽族首领!",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -101,7 +101,7 @@ public class ClubOfThorns extends AbstractQuest {
 		start.add(new EquipItemAction("科多奇监狱钥匙", 1, true));
 		start.add(new IncreaseKarmaAction(6.0));
 		start.add(new SetQuestAction(QUEST_SLOT, 0, "start"));
-		start.add(new StartRecordingKillsAction(QUEST_SLOT, 1, "mountain orc chief", 0, 1));
+		start.add(new StartRecordingKillsAction(QUEST_SLOT, 1, "山岭兽族首领", 0, 1));
 
 
 		npc.add(
@@ -120,7 +120,7 @@ public class ClubOfThorns extends AbstractQuest {
 	}
 
 	private void step_2() {
-		// Go kill the mountain orc chief using key to get into prison.
+		// Go kill the 山岭兽族首领 using key to get into prison.
 	}
 
 	private void step_3() {
@@ -144,7 +144,7 @@ public class ClubOfThorns extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, "kill",
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "start"), new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 			ConversationStates.ATTENDING,
-			"kill Mountain Orc Chief! 科多奇 orcs nid revenge!",
+			"kill 山岭兽族首领! 科多奇 orcs nid revenge!",
 			null);
 	}
 
@@ -171,10 +171,10 @@ public class ClubOfThorns extends AbstractQuest {
 			res.add("I do not want to kill anyone for the Orc Saman.");
 		}
 		if (questState.startsWith("start") || questState.equals("done")) {
-			res.add("I like a challenge and want to try kill the captive mountain orc chief. I was given the prison key.");
+			res.add("I like a challenge and want to try kill the captive 山岭兽族首领. I was given the prison key.");
 		}
 		if (questState.startsWith("start") && new KilledForQuestCondition(QUEST_SLOT, 1).fire(player,null,null) || questState.equals("done")) {
-			res.add("I killed the mountain orc chief in 科多奇 Prison.");
+			res.add("I killed the 山岭兽族首领 in 科多奇 Prison.");
 		}
 		if (questState.equals("done")) {
 			res.add("I told the Orc Saman about the kill and he gave me a powerful 类牙棍 to use.");

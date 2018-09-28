@@ -18,7 +18,7 @@ import games.stendhal.common.constants.Actions;
 //import games.stendhal.common.grammar.Grammar;
 
 /**
- * A map object that when looked at shows the server time.
+ * A map object that when looked at shows the  server time要.
  */
 public class Clock extends Sign {
 	/** Maximum seconds the clock can be wrong to either direction */
@@ -76,17 +76,17 @@ public class Clock extends Sign {
 	 */
 	private String describeMinute(int m) {
 		switch (m) {
-		case 5: return "过去5分钟 ";
-		case 10: return "过去10分钟 ";
-		case 15: return "过去15分钟 ";
-		case 20: return "过去20分钟 ";
-		case 25: return "过去25分钟 ";
-		case 30: return "过去半小时 ";
-		case 35: return "过去35分钟 ";
-		case 40: return "过去40分钟 ";
-		case 45: return "过去45分钟 ";
-		case 50: return "过去50分钟 ";
-		case 55: return "过去55分钟 ";
+		case 5: return "过5分钟 ";
+		case 10: return "过10分钟 ";
+		case 15: return "过15分钟 ";
+		case 20: return "过20分钟 ";
+		case 25: return "过25分钟 ";
+		case 30: return "过半小时 ";
+		case 35: return "过35分钟 ";
+		case 40: return "过40分钟 ";
+		case 45: return "过45分钟 ";
+		case 50: return "过50分钟 ";
+		case 55: return "过55分钟 ";
 		default: return "";
 		}
 	}

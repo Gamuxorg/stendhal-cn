@@ -479,7 +479,7 @@ SOUP RECIPE
       <attribute name="text">
 My Wish List
 
-cloak, 精灵斗篷, 矮人斗篷, 蓝灵斗篷, 石斗篷, 绿龙斗篷, 
+斗蓬, 精灵斗篷, 矮人斗篷, 蓝灵斗篷, 石斗篷, 绿龙斗篷, 
 骨龙斗篷, 巫妖斗篷, 吸血鬼斗篷, 蓝龙斗篷 ...
 
  ... and maybe more later!
@@ -1827,7 +1827,7 @@ it back as you got it!
     <entity x="27" y="61">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">... so goodnight dear Diary till tomorrow. P.s. Must remember to get this diary re-bound as the pages are loose! 
-Today I used an orb in the witch Jynath's house and arrived in a city of witches and wizards. I nearly died when I walked around but luckily I found a 回城卷 in the corpse of a littlewizard and now I am about to teleport home.</attribute>
+Today I used an orb in the witch Jynath's house and arrived in a city of witches and wizards. I nearly died when I walked around but luckily I found a 回城卷 in the corpse of a 小巫师 and now I am about to teleport home.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>

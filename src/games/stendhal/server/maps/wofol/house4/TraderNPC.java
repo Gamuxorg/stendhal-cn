@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /*
- * Inside the Kobold City, interior called house4
+ * Inside the 狗镇, interior called house4
  */
 public class TraderNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();
@@ -60,10 +60,10 @@ public class TraderNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Welcome to the Kobold City of Wofol. I hope you come in peace.");
-				addJob("I run a buying and selling #trade with kobolds - or whoever else passes by. I am one of the few Kobolds who can speak with non-Kobolds.");
+				addGreeting("Welcome to the 狗镇 of Wofol. I hope you come in peace.");
+				addJob("I run a buying and selling #trade with 狗头人s - or whoever else passes by. I am one of the few Kobolds who can speak with non-Kobolds.");
 				addHelp("I #deal in all sorts of items.");
-				addQuest("Try Alrak the 山地矮人 who lives here with the kobolds. He'd probably have more than one task to give you.");
+				addQuest("Try Alrak the 山地矮人 who lives here with the 狗头人s. He'd probably have more than one task to give you.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellstuff2")), false);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buystuff2")), false);
 				addOffer("Please look at the each blackboard on the wall to see what I buy and sell at the moment.");

@@ -82,7 +82,7 @@ public class DiceGambling extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("money", STAKE),
 			ConversationStates.ATTENDING,
-			"OK, 这是骰子, 准备好了就扔出来, 祝你好运!",
+			"OK, 这是dice, 准备好了就扔出来, 祝你好运!",
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
@@ -109,7 +109,7 @@ public class DiceGambling extends AbstractQuest {
 			null);
 
 		fillQuestInfo(
-				"骰子游戏",
+				"dice游戏",
 				"在塞门镇酒店的赌上碰碰运气.",
 				true);
 	}
@@ -136,7 +136,7 @@ public class DiceGambling extends AbstractQuest {
 		"你赢到了这个好用的回城卷！"));
 		map.put(15,	new Pair<String, String>("大治疗剂",
 				"你赢了一瓶大生命药济, 但你以前或许从来没用过这个!"));
-		map.put(16,	new Pair<String, String>("longbow",
+		map.put(16,	new Pair<String, String>("长弓",
 		"拿着这个拉风的长弓, 你会是个优秀的弓箭手！"));
 		map.put(17,	new Pair<String, String>("红斗篷",
 		"穿上这件时尚的 红斗篷 你一定变得很酷！"));

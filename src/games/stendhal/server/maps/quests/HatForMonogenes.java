@@ -48,7 +48,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 梦金斯 asks you to buy a hat for him.</li>
  * <li> 辛布兰卡 sells you a leather helmet.</li>
- * <li> 梦金斯 sees your leather helmet and asks for it and then thanks you.</li>
+ * <li> 梦金斯 sees your 皮帽 and asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -78,7 +78,7 @@ public class HatForMonogenes extends AbstractQuest {
 		}
 		res.add("我需要找一顶帽子, 里面的毛皮可以给我的头保暖. ");
 		if (player.isQuestInState(QUEST_SLOT, "start")
-				&& player.isEquipped("leather helmet")
+				&& player.isEquipped("皮帽")
 				|| player.isQuestCompleted(QUEST_SLOT)) {
 			res.add("我发现了一顶帽子.");
 		}
@@ -137,7 +137,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(monogenes.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "start"),
-					new PlayerHasItemWithHimCondition("leather helmet")),
+					new PlayerHasItemWithHimCondition("皮帽")),
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"嗨！这是给我的皮帽吗？", null);
 
@@ -145,13 +145,13 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(monogenes.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "start"),
-					new NotCondition(new PlayerHasItemWithHimCondition("leather helmet"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("皮帽"))),
 			ConversationStates.ATTENDING,
 			"嗨, 我的朋友, 还记得之前答应我的皮帽吗？这里真是太冷了..",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("leather helmet"));
+		reward.add(new DropItemAction("皮帽"));
 		reward.add(new IncreaseXPAction(50));
 		reward.add(new IncreaseKarmaAction(10));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -161,7 +161,7 @@ public class HatForMonogenes extends AbstractQuest {
 		monogenes.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("leather helmet"),
+			new PlayerHasItemWithHimCondition("皮帽"),
 			ConversationStates.ATTENDING,
 			"祝福你我的朋友！现在我的头不再冷了",
 			new MultipleActions(reward));

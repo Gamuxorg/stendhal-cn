@@ -80,9 +80,9 @@
   
   <!-- START: fairy -->
   
-  <creature name="leprechaun">
+  <creature name="地精">
     <type class="fairy" subclass="leprechaun" tileid="fairy.png:2"/>
-    <description>You see a leprechaun, you would be lucky if you found his treasure.</description>
+    <description>You see a 地精, you would be lucky if you found his treasure.</description>
     <attributes>
       <atk value="126"/>
       <def value="20"/>
@@ -113,7 +113,7 @@
     </ai>
   </creature>
   
-  <creature name="littlefairy">
+  <creature name="仙子">
     <type class="fairy" subclass="littlefairy" tileid="fairy.png:3"/>
     <description>You see a little fairy, which is magical and nice.</description>
     <attributes>
@@ -140,9 +140,9 @@
     </ai>
   </creature>
   
-  <creature name="clurichaun">
+  <creature name="克鲁利川">
     <type class="fairy" subclass="clurichaun" tileid="fairy.png:1"/>
-    <description>You see a clurichaun. He is rich, but you don't know if you are able to find his gold!</description>
+    <description>You see a 克鲁利川. He is rich, but you don't know if you are able to find his gold!</description>
     <attributes>
       <atk value="152"/>
       <def value="27"/>
@@ -178,9 +178,9 @@
   
   <!-- START: misc -->
   
-  <creature name="brain ahouga">
+  <creature name="脑海仙">
     <type class="hybrid" subclass="brain_ahouga" tileid="hybrid.png:1"/>
-    <description>You see a brain ahouga, a very strange creature only living in your dreams!</description>
+    <description>You see a 脑海仙, a very strange creature only living in your dreams!</description>
     <attributes>
       <atk value="207"/>
       <def value="38"/>
@@ -230,7 +230,7 @@
       <item value="治疗剂" quantity="[1,2]" probability="10.0"/>
       <item value="奇妙靴子" quantity="[1,1]" probability="0.2"/>
       <item value="双刃剑" quantity="[1,1]" probability="2.0"/>
-       <item value="blue helmet" quantity="[1,1]" probability="2.5"/>
+       <item value="蓝头盔" quantity="[1,1]" probability="2.5"/>
        <item value="蓝色盔甲" quantity="[1,1]" probability="4.0"/>
     </drops>
     <equips>
@@ -262,7 +262,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
-      <item value="dagger" quantity="[1,1]" probability="3.0"/>
+      <item value="匕首" quantity="[1,1]" probability="3.0"/>
       <item value="奇妙靴子" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>

@@ -40,9 +40,9 @@
   
   <!-- START: feline -->
   
-  <creature name="cat woman">
+  <creature name="猫女">
     <type class="mutant" subclass="cat_woman" tileid="mutant.png:5"/>
-     <description>You see a cat woman. She's agile, stealthy, fast and sharp, so stay focused and don't get cut!</description>
+     <description>You see a 猫女. She's agile, stealthy, fast and sharp, so stay focused and don't get cut!</description>
     <attributes>
       <atk value="329"/>
       <def value="84"/>
@@ -75,9 +75,9 @@
   
   <!-- START: frogman -->
   
-  <creature name="frogman">
+  <creature name="蛙人">
     <type class="frogman" subclass="frogman" tileid="frogman.png:1"/>
-    <description>You see a frogman which lives in a lake which isn't very deep.</description>
+    <description>You see a 蛙人 which lives in a lake which isn't very deep.</description>
     <attributes>
       <atk value="171"/>
       <def value="33"/>
@@ -111,9 +111,9 @@
     </ai>
   </creature>
   
-  <creature name="elite frogman">
+  <creature name="蛙人精英">
     <type class="frogman" subclass="caped_frogman" tileid="frogman.png:0"/>
-    <description>You see an elite frogman. His huge eyes let you shiver!</description>
+    <description>You see an 蛙人精英. His huge eyes let you shiver!</description>
     <attributes>
       <atk value="257"/>
       <def value="50"/>
@@ -146,9 +146,9 @@
     </ai>
   </creature>
   
-  <creature name="wizard frogman">
+  <creature name="蛙人巫师">
     <type class="frogman" subclass="wizard_frogman" tileid="frogman.png:2"/>
-    <description>You see a mighty wizard frogman. His wand and magical cloak show his wisdom and power.</description>
+    <description>You see a mighty 蛙人巫师. His wand and magical cloak show his wisdom and power.</description>
     <attributes>
       <atk value="305"/>
       <def value="57"/>
@@ -165,7 +165,7 @@
       <item value="cod" quantity="[1,4]" probability="20.0"/>
       <item value="蓝色条纹斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="蓝靴子" quantity="[1,1]" probability="1.5"/>
-      <item value="blue helmet" quantity="[1,1]" probability="2.5"/>
+      <item value="蓝头盔" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>
     </equips>
@@ -182,11 +182,11 @@
   
   <!-- END: frogman -->
   
-  <!-- START: kobold -->
+  <!-- START: 狗头人 -->
   
-  <creature name="kobold">
+  <creature name="狗头人">
     <type class="kobold" subclass="kobold" tileid="kobold.png:1"/>
-    <description>You see a kobold. People say that it is a mythical spirit.</description>
+    <description>You see a 狗头人. People say that it is a mythical spirit.</description>
     <attributes>
       <atk value="88"/>
       <def value="16"/>
@@ -225,9 +225,9 @@
     </ai>
   </creature>
 
-  <creature name="soldier kobold">
+  <creature name="狗头人士兵">
     <type class="kobold" subclass="soldier_kobold" tileid="kobold.png:3"/>
-    <description>You see a soldier kobold, he's protecting his king.</description>
+    <description>You see a 狗头人士兵, he's protecting his king.</description>
     <attributes>
       <atk value="105"/>
       <def value="20"/>
@@ -246,7 +246,7 @@
       <item value="镶嵌护腿" quantity="[1,1]" probability="8.0"/>
       <item value="手斧" quantity="[1,1]" probability="1.4"/>
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
-      <item value="leather helmet" quantity="[1,1]" probability="1.0"/>
+      <item value="皮帽" quantity="[1,1]" probability="1.0"/>
       <item value="木盾" quantity="[1,1]" probability="1.3"/>
     </drops>
     <equips>
@@ -266,9 +266,9 @@
     </ai>
   </creature>
 
-  <creature name="archer kobold">
+  <creature name="狗头人弓箭手">
     <type class="kobold" subclass="archer_kobold" tileid="kobold.png:0"/>
-    <description>You see an archer kobold. It runs away from humans.</description>
+    <description>You see an 狗头人弓箭手. It runs away from humans.</description>
     <attributes>
       <atk value="115"/>
       <def value="28"/>
@@ -307,9 +307,9 @@
     </ai>
   </creature>
   
-  <creature name="veteran kobold">
+  <creature name="狗头人老兵">
     <type class="kobold" subclass="veteran_kobold" tileid="kobold.png:4"/>
-    <description>You see a veteran kobold, it is mighty!</description>
+    <description>You see a 狗头人老兵, it is mighty!</description>
     <attributes>
       <atk value="125"/>
       <def value="31"/>
@@ -329,7 +329,7 @@
       <item value="皮甲" quantity="[1,1]" probability="10.0"/>
       <item value="重斧" quantity="[1,1]" probability="2.0"/>
       <item value="钉靴" quantity="[1,1]" probability="0.5"/>
-      <item value="leather helmet" quantity="[1,1]" probability="1.5"/>
+      <item value="皮帽" quantity="[1,1]" probability="1.5"/>
       <item value="短剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -348,9 +348,9 @@
     </ai>
   </creature>
   
-  <creature name="leader kobold">
+  <creature name="狗头人队长">
     <type class="kobold" subclass="leader_kobold" tileid="kobold.png:2"/>
-    <description>You see a leader kobold, one of the mighty warriors.</description>
+    <description>You see a 狗头人队长, one of the mighty warriors.</description>
     <attributes>
       <atk value="155"/>
       <def value="39"/>
@@ -371,7 +371,7 @@
       <item value="战斧" quantity="[1,1]" probability="1.5"/>
       <item value="链靴" quantity="[1,1]" probability="1.5"/>
       <item value="小治疗剂" quantity="[1,2]" probability="1.5"/>
-      <item value="chain helmet" quantity="[1,1]" probability="3.0"/>
+      <item value="索链头盔" quantity="[1,1]" probability="3.0"/>
       <item value="钢盾" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -390,7 +390,7 @@
     </ai>
   </creature>
   
-  <!-- END: kobold -->
+  <!-- END: 狗头人 -->
   
   <!-- START mermaid -->
   
@@ -428,9 +428,9 @@
   
   <!-- START: minotaur -->
   
-  <creature name="minotaur">
+  <creature name="牛头人">
     <type class="minotaur" subclass="minotaur" tileid="minotaur.png:1"/>
-    <description>You see a minotaur. He escaped from his labyrinth and is very angry now!</description>
+    <description>You see a 牛头人. He escaped from his labyrinth and is very angry now!</description>
     <attributes>
       <atk value="373"/>
       <def value="122"/>
@@ -465,9 +465,9 @@
     </ai>
   </creature>
   
-  <creature name="minotaur king">
+  <creature name="牛头王">
     <type class="minotaur" subclass="mino_king" tileid="minotaur.png:0"/>
-    <description>You see a Minotaur King. He doesn't have to escape from his labyrinth to be very angry...</description>
+    <description>You see a 牛头王. He doesn't have to escape from his labyrinth to be very angry...</description>
     <attributes>
       <atk value="481"/>
       <def value="57"/>
@@ -506,9 +506,9 @@
   
   <!-- END: minotaur -->
   
-  <!-- START: naga -->
+  <!-- START: 娜迦 -->
   
-  <creature name="naga">
+  <creature name="娜迦">
     <type class="mutant" subclass="naga" tileid="naga.png:2"/>
     <description> You see a naga. She awaits unwary victims to whom she may give her deadly kiss.</description>
     <attributes>
@@ -541,7 +541,7 @@
     </ai>
   </creature>
   
-  <creature name="high naga">
+  <creature name="娜迦精英">
     <type class="mutant" subclass="high_naga" tileid="naga.png:1"/>
     <description></description>
     <attributes>
@@ -575,7 +575,7 @@
     </ai>
   </creature>
   
-  <creature name="armed naga">
+  <creature name="武装娜迦">
     <type class="mutant" subclass="armed_naga" tileid="naga.png:0"/>
     <description></description>
     <attributes>
@@ -611,7 +611,7 @@
     </ai>
   </creature>
   
-  <creature name="lamia">
+  <creature name="女妖">
     <type class="mutant" subclass="lamia" tileid="naga.png:3"/>
     <description></description>
     <attributes>
@@ -644,13 +644,13 @@
     </ai>
   </creature>
   
-  <!-- END: naga -->
+  <!-- END: 娜迦 -->
   
   <!-- START: ratfolk -->
   
-   <creature name="ratman">
+   <creature name="鼠人">
     <type class="ratfolk" subclass="ratman" tileid="ratfolk.png:1"/>
-    <description>You see a ratman. He is a mutation that comes from old times.</description>
+    <description>You see a 鼠人. He is a mutation that comes from old times.</description>
     <attributes>
       <atk value="171"/>
       <def value="19"/>
@@ -686,9 +686,9 @@
     </ai>
   </creature>
 
-  <creature name="ratwoman">
+  <creature name="女鼠人">
     <type class="ratfolk" subclass="ratwoman" tileid="ratfolk.png:2"/>
-    <description>You see a ratwoman. She is a mutation of women with the rats in the century XVIII.</description>
+    <description>You see a 女鼠人. She is a mutation of women with the rats in the century XVIII.</description>
     <attributes>
       <atk value="170"/>
       <def value="18"/>
@@ -722,9 +722,9 @@
     </ai>
   </creature>
 
-  <creature name="archrat">
+  <creature name="鼠人弓箭手">
     <type class="ratfolk" subclass="archrat" tileid="ratfolk.png:0"/>
-    <description>You see an archrat. You will be distracted with its aura, be careful...</description>
+    <description>You see an 鼠人弓箭手. You will be distracted with its aura, be careful...</description>
     <attributes>
       <atk value="229"/>
       <def value="77"/>
@@ -764,7 +764,7 @@
   
   <!-- START: sheepman -->
   
-  <creature name="sheepman">
+  <creature name="羊人">
     <type class="sheepman" subclass="sheepman" tileid="sheepman.png:3"/>
     <description></description>
     <attributes>
@@ -799,7 +799,7 @@
     </ai>
   </creature>
   
-  <creature name="armored sheepman">
+  <creature name="武装羊人">
     <type class="sheepman" subclass="armored_sheepman" tileid="sheepman.png:0"/>
     <description></description>
     <attributes>
@@ -833,7 +833,7 @@
     </ai>
   </creature>
   
-  <creature name="elder sheepman">
+  <creature name="老年羊人">
     <type class="sheepman" subclass="elder_sheepman" tileid="sheepman.png:1"/>
     <description></description>
     <attributes>
@@ -866,7 +866,7 @@
     </ai>
   </creature>
   
-  <creature name="elite sheepman">
+  <creature name="羊人精英">
     <type class="sheepman" subclass="elite_sheepman" tileid="sheepman.png:2"/>
     <description></description>
     <attributes>
@@ -902,11 +902,11 @@
   
   <!-- END: sheepman -->
   
-  <!-- START: werewolf -->
+  <!-- START: 狼人 -->
   
-  <creature name="werewolf">
+  <creature name="狼人">
     <type class="mutant" subclass="werewolf" tileid="mutant.png:2"/>
-    <description>You see a werewolf. Normally he is a human but at fullmoon nights he turns into a dangerous beast! His poison seems to last forever.</description>
+    <description>You see a 狼人. Normally he is a human but at fullmoon nights he turns into a dangerous beast! His poison seems to last forever.</description>
     <attributes>
       <atk value="584"/>
       <def value="79"/>
@@ -933,11 +933,11 @@
     </ai>
   </creature>
   
-  <!-- END: werewolf -->
+  <!-- END: 狼人 -->
   
   <!-- START: xeno -->
   
-  <creature name="xenocium">
+  <creature name="异界人">
     <type class="hybrid" subclass="xenocium" tileid="hybrid.png:6"/>
     <description></description>
     <attributes>

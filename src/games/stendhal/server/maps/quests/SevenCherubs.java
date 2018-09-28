@@ -57,7 +57,7 @@ import games.stendhal.server.entity.status.PoisonStatus;
  * <ul>
  * <li> 2,000 XP </li>
  * <li> some karma (35) </li>
- * <li> either 烈火剑, 金靴子, 黄金铠甲, or golden helmet </li>
+ * <li> either 烈火剑, 金靴子, 黄金铠甲, or 黄金头盔 </li>
  * </ul>
  *
  * REPETITIONS: - Just once.
@@ -208,7 +208,7 @@ public class SevenCherubs extends AbstractQuest {
 								 * it).
 								 *
 								 */
-								final String[] items = { "金靴子", "黄金铠甲", "golden helmet" };
+								final String[] items = { "金靴子", "黄金铠甲", "黄金头盔" };
 								final Item item = SingletonRepository.getEntityManager()
 									.getItem(items[Rand.rand(items.length)]);
 								item.setBoundTo(player.getName());

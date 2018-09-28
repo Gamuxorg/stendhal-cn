@@ -127,7 +127,7 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// cloaks
 		items.put("蓝灵斗篷",1);
-		items.put("cloak",1);
+		items.put("斗蓬",1);
 		items.put("矮人斗篷",1);
 		items.put("精灵斗篷",1);
 		items.put("绿龙斗篷",1);
@@ -213,13 +213,13 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("橄榄",5);
 
 		// helmet
-        items.put("blue helmet",1);
-		items.put("aventail",1);
-		items.put("chain helmet",1);
-		items.put("leather helmet",1);
-		items.put("robins hat",1);
-		items.put("studded helmet",1);
-		items.put("viking helmet",1);
+        items.put("蓝头盔",1);
+		items.put("护面头盔",1);
+		items.put("索链头盔",1);
+		items.put("皮帽",1);
+		items.put("罗宾帽",1);
+		items.put("镶嵌头盔",1);
+		items.put("海盗帽",1);
 
 		// herb
 		items.put("海芋",5);
@@ -243,8 +243,8 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("money",100);
 
 		// ranged
-		items.put("composite bow",1);
-		items.put("longbow",1);
+		items.put("复合弓",1);
+		items.put("长弓",1);
 		items.put("木弓",1);
 
 		// resource
@@ -273,13 +273,13 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("突刺剑",1);
 		items.put("阔剑",1);
 		items.put("双刃剑",1);
-		items.put("dagger",1);
+		items.put("匕首",1);
 		items.put("精灵之剑",1);
 		items.put("太刀",1);
 		items.put("小刀",1);
 		items.put("半月弯刀",1);
 		items.put("短剑",1);
-		items.put("sword",1);
+		items.put("铁剑",1);
 
 		// tool
 		items.put("pick",1);

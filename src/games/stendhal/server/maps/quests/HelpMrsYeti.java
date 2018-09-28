@@ -58,7 +58,7 @@ import games.stendhal.server.maps.Region;
  * </ul>
  *
  * STEPS:
- * Mrs. Yeti lifes in a cave somewhere in semos mountain. She is mournful, because Mr. Yeti turn away from her. Thats why she ask the player for help. She like to have a special 治疗剂 and some other stuff as a present for her husband.
+ * Mrs. Yeti lifes in a cave somewhere in semos mountain. She is mournful, because 耶提先生 turn away from her. Thats why she ask the player for help. She like to have a special 治疗剂 and some other stuff as a present for her husband.
  *
  * There is only one witch who, who can make the special 治疗剂. Mrs. Yeti tell the player where she lives. The player go for the witch. Once he found her, she tell the player, that she will help, but need some ingriedents.
  *
@@ -66,15 +66,15 @@ import games.stendhal.server.maps.Region;
  *
  * The blacksmith is willing to help. But need some stuff too, to craft the magic knife. He sends the player to collect it. The player brings in the needed items and the blacksmith could start make the knife, but he is too hungry to start it right now. Player has to bring him some food and he starts crafting the knife. But the player has to wait a bit until he is ready with it.
  *
- * After bring the knife to the witch, he tell the player that she forgot an important item. The player has to get it and bring it to here. After a while the special 治疗剂 is ready. And the player can bring it to Mrs. Yeti.
+ * After bring the knife to the witch, he tell the player that she forgot an important item. The player has to get it and bring it to here. After a while the special 治疗剂 is ready. And the player can bring it to 耶提女士.
  *
- * Mrs. Yeti is very happy about the special 治疗剂. But she needs some other things to make her husband happy. The player has to collect a baby dragon for her. After player bring the baby dragon to her, she is happy as never befor.
+ * 耶提女士 is very happy about the special 治疗剂. But she needs some other things to make her husband happy. The player has to collect a baby dragon for her. After player bring the baby dragon to her, she is happy as never befor.
  *
  * REWARD:
  * <ul>
  * <li> 1,000 XP </li>
  * <li> some karma (10 + (10 | -10)) </li>
- * <li> Can buy <item>roach</item> from Mrs. Yeti </li>
+ * <li> Can buy <item>roach</item> from 耶提女士 </li>
  * </ul>
  *
  * REPETITIONS:
@@ -96,7 +96,7 @@ import games.stendhal.server.maps.Region;
 	}
 
 	private void startQuest() {
-		final SpeakerNPC npc = npcs.get("Mrs. Yeti");
+		final SpeakerNPC npc = npcs.get("耶提女士");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
@@ -219,7 +219,7 @@ import games.stendhal.server.maps.Region;
 	}
 
 	private void bringPotion() {
-	final SpeakerNPC npc = npcs.get("Mrs. Yeti");
+	final SpeakerNPC npc = npcs.get("耶提女士");
 		final String extraTrigger = "治疗剂";
 	    List<String> questTrigger;
 	    questTrigger = new LinkedList<String>(ConversationPhrases.QUEST_MESSAGES);
@@ -255,7 +255,7 @@ import games.stendhal.server.maps.Region;
 	}
 
 	private void bringDragon() {
-	final SpeakerNPC npc = npcs.get("Mrs. Yeti");
+	final SpeakerNPC npc = npcs.get("耶提女士");
 
 	    final String extraTrigger = "dragon";
 	    List<String> questTrigger;
@@ -294,7 +294,7 @@ import games.stendhal.server.maps.Region;
 						npc.say("Ah you brought the baby dragon! It will make such a wonderful stew. Baby dragon stew is my speciality and Mr Yeti loves it! You've made us both very happy! Come back in a day to see me for a #reward.");
 						player.addKarma(5.0);
 						player.addXP(500);
-						pet.delayedDamage(pet.getHP(), "Mrs. Yeti");
+						pet.delayedDamage(pet.getHP(), "耶提女士");
 						player.setQuest(QUEST_SLOT,"reward;"+System.currentTimeMillis());
 						player.notifyWorldAboutChanges();
 					} else {
@@ -307,7 +307,7 @@ import games.stendhal.server.maps.Region;
 
 	private void getReward() {
 
-	final SpeakerNPC npc = npcs.get("Mrs. Yeti");
+	final SpeakerNPC npc = npcs.get("耶提女士");
 
 	    final String extraTrigger = "reward";
 	    List<String> questTrigger;
@@ -357,8 +357,8 @@ import games.stendhal.server.maps.Region;
 				return res;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
-			res.add("I met Mrs. Yeti in icy caves below 塞门镇 Mountain.");
-			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special 爱之治疗剂 for her husband.");
+			res.add("I met 耶提女士 in icy caves below 塞门镇 Mountain.");
+			res.add("耶提女士 asked me to go to Salva Mattori for a special 爱之治疗剂 for her husband.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help with soppy love stories..");
 				return res;
@@ -382,24 +382,24 @@ import games.stendhal.server.maps.Region;
 			if ("治疗剂".equals(questState)) {
 				return res;
 			}
-			res.add("I must take the 爱之治疗剂 in its heart shaped bottle, to Mrs. Yeti.");
+			res.add("I must take the 爱之治疗剂 in its heart shaped bottle, to 耶提女士.");
 			if ("gotpotion".equals(questState)) {
 				return res;
 			}
-			res.add("Mrs. Yeti needs something else to tempt her husband with and has asked me to bring a baby dragon.");
+			res.add("耶提女士 needs something else to tempt her husband with and has asked me to bring a baby dragon.");
 			if ("dragon".equals(questState)) {
 				return res;
 			}
 			res.add("Oh my! She killed my dragon to make stew! That wasn't the kind of treat I thought she had in mind!");
 			if (questState.startsWith("reward")) {
 				if (new TimePassedCondition(QUEST_SLOT,1,DELAY_IN_MINUTES).fire(player, null, null)) {
-					res.add("Mrs. Yeti told me to come back in a day to collect my reward and it's already been long enough.");
+					res.add("耶提女士 told me to come back in a day to collect my reward and it's already been long enough.");
 				} else {
-					res.add("Mrs. Yeti told me to come back in a day to collect my reward so I need to wait.");
+					res.add("耶提女士 told me to come back in a day to collect my reward so I need to wait.");
 				}
 				return res;
 			}
-			res.add("Mrs. Yeti is really pleased with the outcome of my help and now she'll sell me roach very cheaply.");
+			res.add("耶提女士 is really pleased with the outcome of my help and now she'll sell me roach very cheaply.");
 			if (isCompleted(player)) {
 				return res;
 			}
@@ -423,7 +423,7 @@ import games.stendhal.server.maps.Region;
 
 	@Override
 	public String getNPCName() {
-		return "Mrs. Yeti";
+		return "耶提女士";
 	}
 
 	@Override

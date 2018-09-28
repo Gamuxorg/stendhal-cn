@@ -84,10 +84,10 @@ public class Blackjack extends AbstractQuest {
 		cleanUpTable();
 		playerCards.clear();
 		bankCards.clear();
-		playerCardsItem = (StackableItem) SingletonRepository.getEntityManager().getItem("cards");
+		playerCardsItem = (StackableItem) SingletonRepository.getEntityManager().getItem("扑克");
 		zone.add(playerCardsItem);
 		playerCardsItem.setPosition(25, 38);
-		bankCardsItem = (StackableItem) SingletonRepository.getEntityManager().getItem("cards");
+		bankCardsItem = (StackableItem) SingletonRepository.getEntityManager().getItem("扑克");
 		bankCardsItem.setPosition(27, 38);
 		zone.add(bankCardsItem);
 

@@ -57,7 +57,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
  * <li> 100 moneys for each venomrat
  * <li> 160 moneys for each 利齿鼠
  * <li> 360 moneys for each 巨型鼠
- * <li> 800 moneys for each archrat
+ * <li> 800 moneys for each 鼠人弓箭手
  * <li> 5 karma in total
  * </ul>
  *

@@ -45,12 +45,12 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.red", "Amazon's Menace", "Loot a complete red equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "红铠甲", "red helmet", "红斗篷", "红裤子", "红靴子",
+				new PlayerLootedNumberOfItemsCondition(1, "红铠甲", "红头盔", "红斗篷", "红裤子", "红靴子",
 						"红盾")));
 
 		itemAchievements.add(createAchievement("item.set.blue", "Feeling Blue", "Loot a complete blue equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "蓝色盔甲", "blue helmet", "蓝色条纹斗篷", "蓝裤子",
+				new PlayerLootedNumberOfItemsCondition(1, "蓝色盔甲", "蓝头盔", "蓝色条纹斗篷", "蓝裤子",
 						"蓝靴子", "蓝盾")));
 
 		itemAchievements.add(createAchievement("item.set.elvish", "Nalwor's Bane", "Loot a complete elvish equipment set",
@@ -60,7 +60,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.shadow", "Shadow Dweller", "Loot a complete shadow equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "影子铠甲", "shadow helmet", "影子斗篷", "影子护腿",
+				new PlayerLootedNumberOfItemsCondition(1, "影子铠甲", "影子头盔", "影子斗篷", "影子护腿",
 						"影子靴子", "影盾")));
 
 		itemAchievements.add(createAchievement("item.set.chaos", "Chaotic Looter", "Loot a complete chaos equipment set",
@@ -70,7 +70,7 @@ public class ItemAchievementFactory extends AbstractAchievementFactory {
 
 		itemAchievements.add(createAchievement("item.set.golden", "Golden Boy", "Loot a complete golden equipment set",
 				Achievement.MEDIUM_BASE_SCORE, true,
-				new PlayerLootedNumberOfItemsCondition(1, "黄金铠甲", "golden helmet", "金斗篷", "黄金护腿",
+				new PlayerLootedNumberOfItemsCondition(1, "黄金铠甲", "黄金头盔", "金斗篷", "黄金护腿",
 						"金靴子", "金盾")));
 
 		itemAchievements.add(createAchievement("item.set.black", "Come to the dark side", "Loot a complete black equipment set",

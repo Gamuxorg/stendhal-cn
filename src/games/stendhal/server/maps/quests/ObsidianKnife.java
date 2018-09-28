@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Alrak, a dwarf who abandoned the mountain dwarves to live in Kobold City</li>
+ * <li>Alrak, a dwarf who abandoned the mountain dwarves to live in 狗镇</li>
  * <li>Ceryl, the librarian in 塞门镇</li>
  * </ul>
  *

@@ -80,16 +80,6 @@
       <attribute name="hidden" />
     </portal>
     
-  	<portal x="13" y="126" ref="keep1">
-  		<destination zone="-1_阿多斯_废弃_要塞" ref="up1" />
-  		<attribute name="face">north</attribute>
-  	</portal>
-  	
-  	<portal x="14" y="126" ref="keep2">
-  		<destination zone="-1_阿多斯_废弃_要塞" ref="up2" />
-  		<attribute name="face">north</attribute>
-  	</portal>
-    
     <!-- wishing well-->
     <entity x="86" y="21">
       <implementation class-name="games.stendhal.server.entity.mapstuff.useable.WellSource"/>
@@ -101,7 +91,7 @@
     <point-of-interest x="13" y="126">
       <name>Ados Abandoned Keep</name>
       <type>dungeon</type>
-      <description>Home of mountain orcs, mountain dwarves and duergars. Prepare well before entering this keep.</description>
+      <description>Home of 山岭兽人s, mountain dwarves and duergars. Prepare well before entering this keep.</description>
       <url>https://stendhalgame.org/dungeon/ados_abandoned_keep.html</url>
     </point-of-interest>
     
@@ -5202,22 +5192,6 @@ My fee:
       </implementation>
       <attribute name="class">blackboard</attribute>
     </entity>
-    
-  	<!-- Portals -->
-  	<portal x="13" y="126" ref="up1">
-  		<destination zone="0_阿多斯_山脉_n2_w" ref="keep1" />
-  		<attribute name="face">north</attribute>
-  	</portal>
-  	
-  	<portal x="14" y="126" ref="up2">
-  		<destination zone="0_阿多斯_山脉_n2_w" ref="keep2" />
-  		<attribute name="face">north</attribute>
-  	</portal>
-  	
-  	<portal x="2" y="30" ref="down">
-  		<destination zone="-2_阿多斯_废弃_要塞" ref="up" />
-  		<attribute name="face">east</attribute>
-  	</portal>
   </zone>
   
   <zone name="-1_ados_tunnel_w" level="-1" x="500768" y="499744" file="Level -1/ados/tunnel_w.tmx">
@@ -5447,11 +5421,6 @@ My fee:
   
   
   <zone name="-2_阿多斯_废弃_要塞" level="-2" x="500512" y="499744" file="Level -2/ados/abandoned_keep.tmx">
-  	<!-- Portals -->
-  	<portal x="2" y="30" ref="up">
-  		<destination zone="-1_阿多斯_废弃_要塞" ref="down" />
-  		<attribute name="face">east</attribute>
-  	</portal>
   </zone>
   
   <zone name="-2_阿多斯_郊外_nw" level="-2" x="500640" y="499872" file="Level -2/ados/outside_nw.tmx">
@@ -5571,17 +5540,6 @@ East Tunnel: Uncharted</attribute>
       </implementation>
       <attribute name="class">blackboard</attribute>
     </entity>
-    
-    <!--  Portals -->
-    <portal x="17" y="0" ref="down1">
-    	<destination zone="-4_阿多斯_废弃_要塞" ref="up1" />
-    	<attribute name="face">south</attribute>
-    </portal>
-    
-    <portal x="18" y="0" ref="down2">
-    	<destination zone="-4_阿多斯_废弃_要塞" ref="up2" />
-    	<attribute name="face">south</attribute>
-    </portal>
   </zone>
   
   <zone name="-3_阿多斯_郊外_nw" level="-3" x="500640" y="499872" file="Level -3/ados/outside_nw.tmx">
@@ -5747,7 +5705,7 @@ I have found some water but fear I am trapped. I have yet to find any food and t
     <entity x="37" y="30">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Reader"/>
       <attribute name="text">The journal of Zephiros the explorer:
-It has been three days since I decided to explore the lower levels of the caves and I have yet to find an exit. How I wish I could reach the water source on the upper level. I can hear the nagas in the darkness. I can hardly stand their screaming any longer. May the gods have mercy on me and any who may dare to follow my footsteps.
+It has been three days since I decided to explore the lower levels of the caves and I have yet to find an exit. How I wish I could reach the water source on the upper level. I can hear the 娜迦s in the darkness. I can hardly stand their screaming any longer. May the gods have mercy on me and any who may dare to follow my footsteps.
       </attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
@@ -5773,27 +5731,6 @@ It has been three days since I decided to explore the lower levels of the caves 
       </implementation>
       <attribute name="class">blackboard</attribute>
     </entity>
-    
-    <!-- Portals -->
-    <portal x="17" y="0" ref="up1">
-    	<destination zone="-3_阿多斯_废弃_要塞" ref="down1" />
-    	<attribute name="face">south</attribute>
-    </portal>
-    
-    <portal x="18" y="0" ref="up2">
-    	<destination zone="-3_阿多斯_废弃_要塞" ref="down2" />
-    	<attribute name="face">south</attribute>
-    </portal>
-    
-    <portal x="28" y="15" ref="down1">
-    	<destination zone="-5_阿多斯_废弃_要塞" ref="up1" />
-    	<attribute name="face">west</attribute>
-    </portal>
-    
-    <portal x="28" y="16" ref="down2">
-    	<destination zone="-5_阿多斯_废弃_要塞" ref="up2" />
-    	<attribute name="face">west</attribute>
-    </portal>
   </zone>
   
   
@@ -5804,16 +5741,6 @@ It has been three days since I decided to explore the lower levels of the caves 
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
-    <portal x="28" y="15" ref="up1">
-    	<destination zone="-4_阿多斯_废弃_要塞" ref="down1" />
-    	<attribute name="face">west</attribute>
-    </portal>
-    
-    <portal x="28" y="16" ref="up2">
-    	<destination zone="-4_阿多斯_废弃_要塞" ref="down2" />
-    	<attribute name="face">west</attribute>
-    </portal>
-    
     <portal x="15" y="30" ref="down1">
     	<destination zone="-6_阿多斯_废弃_要塞" ref="up1" />
     	<attribute name="face">north</attribute>
