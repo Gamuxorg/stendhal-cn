@@ -48,7 +48,7 @@ public class FishermansDaughterSellingNPC implements LoadableContent {
 		        "It's just pefect for 塞门镇 矿镇复兴展会周 and Halloween! You can recolour your outfit by right clicking on yourself. Choose Set Outfit and then pick your favourite colour for hair and dress! It's awesome!");
 				addReply("susi", "Oh she is a lovely girl! I met her around here, she is so happy that she can celebrate with all of us again!");
 				addOffer("I sell some snacks and drinks during the Mine Town Weeks. Please take a look at the list close to the stand.");
-				addQuest("I heard that #Susi would love to make friends, she is inside of the house. Or you can ask Fidorea next to me about a little run.");
+				addQuest("I heard that #苏茜 would love to make friends, she is inside of the house. Or you can ask 费多拉 next to me about a little run.");
 				addGoodbye("Bye, hope you'll enjoy the days here!");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellrevivalweeks")), false);
 			}

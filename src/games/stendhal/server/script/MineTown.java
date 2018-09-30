@@ -49,7 +49,7 @@ public class MineTown extends ScriptImpl {
 	 */
 	private void startSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) != null) {
-			admin.sendPrivateText("矿镇复兴展会周 are already active.");
+			admin.sendPrivateText("矿镇复兴展会周 活动已开始.");
 			return;
 		}
 		StendhalQuestSystem.get().loadQuest(new MineTownRevivalWeeks());
@@ -62,7 +62,7 @@ public class MineTown extends ScriptImpl {
 	 */
 	private void stopSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) == null) {
-			admin.sendPrivateText("矿镇复兴展会周 are not active.");
+			admin.sendPrivateText("矿镇复兴展会周 还没开始.");
 			return;
 		}
 		StendhalQuestSystem.get().unloadQuest(MineTownRevivalWeeks.QUEST_NAME);
@@ -91,6 +91,6 @@ public class MineTown extends ScriptImpl {
 // The 塞门镇_halloween.tmx map
 // Banners at:
 // x="53" y="3", x="14" y="4", x="16" y="48", x="58" y="49"
-// <attribute name="text">#Mine #Town #Revival #Weeks #xxxx! Enjoy the #x #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门 镇 #City to reach the #Mine #Town!</attribute>
+// <attribute name="text">#Mine #Town #Revival #Weeks #xxxx! Enjoy the #x #festival and meet #苏茜 and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门 镇 #City to reach the #Mine #Town!</attribute>
 // <attribute name="width">2</attribute>
 // <attribute name="height">2</attribute>

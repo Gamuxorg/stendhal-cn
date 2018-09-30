@@ -31,6 +31,6 @@ public class TPPNextPhase extends ScriptImpl {
 		//ThePiedPiper TPP = (ThePiedPiper) StendhalQuestSystem.get().getQuest("ThePiedPiper");
         ThePiedPiper.switchToNextPhase();
 		final String Phase = ThePiedPiper.getPhase().toString();
-        admin.sendPrivateText("Switched to "+Phase);
+        admin.sendPrivateText("切换到 "+Phase);
 	}
 }

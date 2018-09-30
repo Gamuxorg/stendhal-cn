@@ -21,7 +21,7 @@ public class RemoveClient extends ScriptImpl {
 		}
 
 		PlayerEntry playerEntry = PlayerEntryContainer.getContainer().get(Integer.parseInt(args.get(0)));
-		admin.sendPrivateText("playerEntry: " + playerEntry);
+		admin.sendPrivateText("玩家记录: " + playerEntry);
 
 		if (playerEntry != null) {
 			PlayerEntryContainer.getContainer().remove(Integer.parseInt(args.get(0)));

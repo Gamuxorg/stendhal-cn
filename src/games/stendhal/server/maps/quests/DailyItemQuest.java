@@ -418,7 +418,7 @@ public class DailyItemQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我在Ados城镇大厅中会见了城主 Chalmers. ");
+		res.add("我在Ados城镇大厅中会见了城主 查玛斯. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("我不想帮助Ados城. ");
@@ -454,7 +454,7 @@ public class DailyItemQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"每日物品任务",
-				"城主Chalmers需要为Ados城供应各类物资. ",
+				"城主查玛斯需要为Ados城供应各类物资. ",
 				true);
 
 		buildItemsMap();

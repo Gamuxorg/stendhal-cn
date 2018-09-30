@@ -32,7 +32,7 @@ public class TPPShowQuestState extends ScriptImpl {
 
 		StringBuilder sb = new StringBuilder();
 		ThePiedPiper TPP = (ThePiedPiper) StendhalQuestSystem.get().getQuest("ThePiedPiper");
-		sb.append("The Pied Piper quest state:\n");
+		sb.append("The 彼德彼伯 quest state:\n");
         sb.append("Quest phase: "+ThePiedPiper.getPhase().toString()+"\n");
 		sb.append("Next phase : "+ThePiedPiper.getNextPhase(ThePiedPiper.getPhase()).toString()+"\n");
 		int turns=TPP.getRemainingTurns();

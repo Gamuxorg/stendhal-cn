@@ -46,40 +46,40 @@ final class KalavanHouseseller extends HouseSellerNPCBase {
 
 		// player has not done required quest, hasn't got a house at all
 add(ConversationStates.ATTENDING,
-		Arrays.asList("cost", "house", "buy", "purchase"),
+		Arrays.asList("购房", "房子", "买房", "房价"),
 		new AndCondition(new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT), new QuestNotCompletedCondition(KalavanHouseseller.PRINCESS_QUEST_SLOT)),
 		ConversationStates.ATTENDING,
-			"The cost of a new house is "
+			"购买房子需要花费 "
 		+ getCost()
-		+ " money. But I am afraid I cannot sell you a house until your citizenship has been approved by the King, who you will find "
-		+ " north of here in Kalavan Castle. Try speaking to his daughter first, she is ... friendlier.",
+		+ " 钱. 但我还不能卖给你房子, 因为还要国王能证明你的公民资格, "
+		+ "国王住在卡拉文城堡的北面. 可以先向国王的女儿说, 她...挺友善.",
 			null);
 
 // player is not old enough but they have doen princess quest
 // (don't need to check if they have a house, they can't as they're not old enough)
 add(ConversationStates.ATTENDING,
-		Arrays.asList("cost", "house", "buy", "purchase"),
+		Arrays.asList("购房", "房子", "买房", "房价"),
 		new AndCondition(
 							 new QuestCompletedCondition(KalavanHouseseller.PRINCESS_QUEST_SLOT),
 							 new NotCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE))),
 		ConversationStates.ATTENDING,
-		"The cost of a new house is "
+		"购买房子需要花费 "
 		+ getCost()
-		+ " money. But I am afraid I cannot trust you with house ownership just yet, come back when you have spent at least "
-		+ Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " hours on Faiumoni.",
+		+ "钱. 但恐怕我还不能想信你能长期居住此地, 当你在Faiumoni游戏时长超过 "
+		+ Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " 小时后来来购买.",
 		null);
 
 // player is eligible to buy a house
 		add(ConversationStates.ATTENDING,
-		Arrays.asList("cost", "house", "buy", "purchase"),
+		Arrays.asList("购房", "房子", "买房", "房价"),
 		new AndCondition(new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT),
 						 new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 							 new QuestCompletedCondition(KalavanHouseseller.PRINCESS_QUEST_SLOT)),
 		ConversationStates.QUEST_OFFERED,
-		"The cost of a new house is "
+		"购买房子需要花费 "
 		+ getCost()
-		+ " money. Also, you must pay a house tax of " + HouseTax.BASE_TAX
-		+ " money, every month. You can ask me which houses are #available. Or, if you have a specific house in mind, please tell me the number now.",
+		+ " 钱. 并且, 你还要每月支付房产税 " + HouseTax.BASE_TAX
+		+ " 钱. 你可以问我还有多少房子 #在售. 或者如果你已选好房, 可以现在告诉我房屋号码.",
 		null);
 
 // handle house numbers 1 to 25
@@ -91,12 +91,12 @@ addMatching(ConversationStates.QUEST_OFFERED,
 		null,
 		new BuyHouseChatAction(getCost(), QUEST_SLOT));
 
-addJob("I'm an estate agent. In simple terms, I sell houses to those who have been granted #citizenship. They #cost a lot, of course. Our brochure is at #https://stendhalgame.org/wiki/StendhalHouses.");
-addReply("citizenship",
-			 "The royalty in Kalavan Castle decide that.");
+addJob("我是售房部经理. 我是房子销售经理. 简单说, 我卖房给本地的 #居民. 如果你有兴趣可以寻问 #房价. 我们的售楼部在. #https://stendhalgame.org/wiki/StendhalHouses.");
+addReply("居民",
+			 "卡拉文城堡皇室可以决定居民资格.");
 
 
-setDescription("You see a smart looking man.");
+setDescription("你遇见了一个看上去很精明的人.");
 setEntityClass("estateagentnpc");
 setPosition(55, 94);
 initHP(100);

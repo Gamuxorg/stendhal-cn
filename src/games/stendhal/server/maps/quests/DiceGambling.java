@@ -109,7 +109,7 @@ public class DiceGambling extends AbstractQuest {
 			null);
 
 		fillQuestInfo(
-				"dice游戏",
+				"骰子游戏",
 				"在塞门镇酒店的赌上碰碰运气.",
 				true);
 	}
@@ -131,7 +131,7 @@ public class DiceGambling extends AbstractQuest {
 		map.put(12, new Pair<String, String>("三明治",
 				"你赢了一块美味的三明治！"));
 		map.put(13, new Pair<String, String>("芝士狗",
-				"把这个好吃的 cheesydog 带走吧！"));
+				"把这个好吃的 芝士狗 带走吧！"));
 		map.put(14, new Pair<String, String>("回城卷",
 		"你赢到了这个好用的回城卷！"));
 		map.put(15,	new Pair<String, String>("大治疗剂",

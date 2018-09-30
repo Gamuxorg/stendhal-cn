@@ -300,7 +300,7 @@ public class PizzaDeliveryTest {
 		en.step(player, "yes");
 		assertTrue(getReply(npc1).startsWith("You must bring this Pizza "));
 		en.step(player, "fidorea");
-		assertEquals("Fidorea lives in Ados city. She is a makeup artist. You'll need to walk east from here.", getReply(npc1));
+		assertEquals("费多拉 lives in Ados city. She is a makeup artist. You'll need to walk east from here.", getReply(npc1));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc1));
 		player.drop("pizza");
@@ -308,9 +308,9 @@ public class PizzaDeliveryTest {
 		item.setInfoString("Pizza Napoli");
 		player.getSlot("背包").add(item);
 
-		npc1 = SingletonRepository.getNPCList().get("Fidorea");
+		npc1 = SingletonRepository.getNPCList().get("费多拉");
 		en = npc1.getEngine();
-		player.setQuest(questSlot, "Fidorea;" + System.currentTimeMillis());
+		player.setQuest(questSlot, "费多拉;" + System.currentTimeMillis());
 		// on time
 		en.step(player, "hi");
 		assertEquals("Hi, there. Do you need #help with anything?", getReply(npc1));

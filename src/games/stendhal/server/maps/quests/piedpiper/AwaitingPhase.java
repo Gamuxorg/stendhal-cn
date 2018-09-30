@@ -28,7 +28,7 @@ import games.stendhal.server.entity.npc.interaction.NPCChatting;
 import games.stendhal.server.entity.npc.interaction.NPCFollowing;
 
 /**
- * Implementation of Pied Piper's initial actions (coming, chatting, going to work place)
+ * Implementation of 彼德彼伯's initial actions (coming, chatting, going to work place)
  * @author yoriy
  */
 public class AwaitingPhase extends TPPQuest {
@@ -43,8 +43,8 @@ public class AwaitingPhase extends TPPQuest {
 			new LinkedList<RPZonePath>();
 	private final List<String> conversations = new LinkedList<String>();
 	private final String explainations =
-			"I see that our city's savoiur is here. I have to speak with him quickly. "+
-			"Please speak with me again after we finish talking.";
+			"我在这里见到了我们市的救星. 我必须马上和他谈谈. "+
+			"请在我讲完后再问我.";
 
 
 	/**
@@ -56,18 +56,17 @@ public class AwaitingPhase extends TPPQuest {
 		// Player asking about rats.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("rats", "rats!"),
+				Arrays.asList("鼠灾", "老鼠"),
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Well, we tried to clean up the city. "+
-	    		"You can get a #reward for your help now, ask about #details "+
-				  "if you want to know more.",
+				"好的, 我们尽力打扫城市. "+
+	    		"你的帮助会得到 #奖励, 如果想了解 #详情 只管问.",
 				null);
 
 		// Player asking about details.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"details",
+				"详情",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -76,7 +75,7 @@ public class AwaitingPhase extends TPPQuest {
 		// Player asked about reward
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"reward",
+				"奖励",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -89,29 +88,29 @@ public class AwaitingPhase extends TPPQuest {
 	 */
 	private void fillConversations() {
 		//piper
-		conversations.add("Good day, 查玛斯市长. What did you call me here for?");
+		conversations.add("你好, 查玛斯市长. 你叫我是什么事?");
 		//mayor
-		conversations.add("Hello, very glad to see our respectable hero here. Who hasn't heard about you, there is almost...");
+		conversations.add("Hello, 在这里能见到我们尊敬的英雄我非常开心. 还没听说过你的人, 那就太...");
 		//piper
-		conversations.add("Please talk about your business to me, my time is precious.");
+		conversations.add("请谈谈你的来意, 我的时间不多.");
 		//mayor
-		conversations.add("... ok, what was I saying? Ah yes, our city has a little problem with #rats.");
+		conversations.add("... 好, 我说什么了? 啊对, 我们的城市又出现 #鼠灾 问题.");
 		//piper
-		conversations.add("Again?");
+		conversations.add("又?");
 		//mayor
-		conversations.add("Yes, these animals are too stupid to remember a lesson they learnt only recently.");
+		conversations.add("是的, 这些动物太蠢, 前不久刚教训过它们就忘了.");
 		//piper
-		conversations.add("I can help, if you are ready to pay.");
+		conversations.add("我能帮忙, 如果你付钱的话.");
 		//mayor
-		conversations.add("阿多斯城 has no other way to eliminate this nuisance. We will pay you.");
+		conversations.add("阿多斯城没有别的方法除掉这些害虫. 我们会付钱.");
 		//piper
-		conversations.add("Do you know my usual price?");
+		conversations.add("你了解我的收费吗?");
 		//mayor
-		conversations.add("Yes, I have it written somewhere in my papers.");
+		conversations.add("是的, 我已记在纸上了.");
 		//piper
-		conversations.add("Good. I will return for my reward soon, please prepare it.");
+		conversations.add("好. 我要尽快收到报酬, 请备好钱.");
 		//mayor
-		conversations.add("Don't worry, how can I break your trust in me and my city?");
+		conversations.add("不用担心, 我在我的城内说到做到.");
 	}
 
 
@@ -138,10 +137,10 @@ public class AwaitingPhase extends TPPQuest {
 
 
 	/**
-	 * function for creating pied piper npc
+	 * function for creating 彼德彼伯 npc
 	 */
 	private void createPiedPiper() {
-		piedpiper = new SpeakerNPC("Pied Piper");
+		piedpiper = new SpeakerNPC("彼德彼伯");
 		TPPQuestHelperFunctions.setupPiper(piedpiper);
 		fullpathin = PathsBuildHelper.getAdosIncomingPath();
 		fullpathout = PathsBuildHelper.getAdosTownHallBackwardPath();
@@ -216,22 +215,22 @@ public class AwaitingPhase extends TPPQuest {
 
 
 	/**
-	 *  Pied Piper will now start to collect rats :-)
+	 *  彼德彼伯 will now start to collect rats :-)
 	 *  @return - npc shouts at switching quest phase.
 	 */
 	@Override
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
 			/*
-			"Pied Piper shouts: Ados citizens, now i will clean up your city from rats. I will play " +
+			"彼德彼伯 shouts: Ados citizens, now i will clean up your city from rats. I will play " +
 			"magical melody, and rats will attracts to me. Please do not try to block or kill them, " +
 			"because melody will also protect MY rats. " +
 			"Just enjoy the show.";
 			 */
-			"查玛斯市长 shouts: Thankfully, all the #rats are gone now, " +
-			"the Pied Piper hypnotized them and led them away to the dungeons. "+
-			"Those of you who helped 阿多斯城 with the rats problem "+
-			"can get your #reward now.";
+			"查玛斯市长 高喊: 感谢, 现在所有的 #老鼠 都被清除, " +
+			"彼德彼伯 催眠了它们, 并把它们带出了地牢. "+
+			"帮助过阿多斯城解决鼠灾的人们, "+
+			"现在都能拿到 #奖励.";
 
 		return text;
 	}

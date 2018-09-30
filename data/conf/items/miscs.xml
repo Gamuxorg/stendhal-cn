@@ -4,7 +4,7 @@
 
   <item name="根茎">
     <type class="misc" subclass="bulb" tileid="-1"/>
-    <description>You see a 根茎. It can be planted anywhere, but it will only thrive on fertile ground.</description>
+    <description>某种植物的根茎. 种在肥沃的土地上可以发芽.</description>
     <implementation class-name="games.stendhal.server.entity.item.Seed"/> 
 	 <attributes>
       <quantity value="1"/>
@@ -24,7 +24,7 @@
 
   <item name="种子">
     <type class="misc" subclass="seed" tileid="-1"/>
-    <description>You see a 种子. It can be planted anywhere, but it will only thrive on fertile ground.</description>
+    <description>植物种子. 种在肥沃的土地上可以发芽.</description>
     <implementation class-name="games.stendhal.server.entity.item.Seed"/> 
 	 <attributes>
       <quantity value="1"/>
@@ -44,7 +44,7 @@
 
   <item name="巨人心脏">
     <type class="misc" subclass="giant_heart" tileid="-1"/>
-    <description>You see a 巨人心脏. This proves that a giant was defeated, and has magical properties that you are not sure of.</description>
+    <description>巨人心脏. 击败巨人的证物, 还带有不确定的魔法属性.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -64,7 +64,7 @@
 
   <item name="dice">
     <type class="misc" subclass="dice" tileid="-1"/>
-    <description>You see a set of dice. May lady luck be with you.</description>
+    <description>一套骰子. 希望带给你好运气.</description>
     <implementation class-name="games.stendhal.server.entity.item.Dice"/>
     <attributes>
     </attributes>
@@ -80,7 +80,7 @@
 
   <item name="扑克">
     <type class="misc" subclass="cards" tileid="-1"/>
-    <description>You see a deck of 扑克. Shuffle them well, to get a winning hand.</description>
+    <description>一副扑克. 手感良好, 希望手气不错.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -100,7 +100,7 @@
 
   <item name="teddy">
     <type class="misc" subclass="teddy" tileid="-1"/>
-    <description>You see a teddy bear. Its soft and cuddly, and children love them.</description>
+    <description>柔软可爱的泰迪熊玩具. 孩子们的最爱.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <behavior class-name="games.stendhal.server.entity.item.behavior.MessagingUseBehavior">
     	<parameter name="public" value="!me hugs teddy."/>
@@ -121,7 +121,7 @@
 
   <item name="捕兽夹">
     <type class="misc" subclass="rodent_trap" tileid="-1"/>
-    <description>You see a 捕兽夹.</description> 
+    <description>捕兽夹.</description> 
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -141,7 +141,7 @@
 
   <item name="吸血鬼内脏">
     <type class="misc" subclass="vampirette_entrails" tileid="-1"/>
-    <description>You see some 吸血鬼内脏. These guts proves that a vampirette was slain.</description> 
+    <description>吸血鬼内脏. 杀掉吸血鬼的证明.</description> 
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -161,7 +161,7 @@
 
   <item name="蝙蝠内脏">
     <type class="misc" subclass="bat_entrails" tileid="-1"/>
-    <description>You see some 蝙蝠内脏, full of the blood of a living creature.</description>
+    <description>一滩蝙蝠内脏, 满是鲜血.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -181,7 +181,7 @@
 
   <item name="防晒油">
     <type class="misc" subclass="suntan_cream" tileid="-1"/>
-    <description>You see a clear bottle of 防晒油 and notice that the outside is slippery. A nice scent of coconut mixed with bannana wafts into the air from it.</description>
+    <description>一小瓶防晒油, 注意外面很滑. 散发出一种奇特的椰子混合香蕉的香味.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -201,7 +201,7 @@
 
    <item name="玻璃球">
     <type class="misc" subclass="marbles" tileid="-1"/>
-    <description>You see some 玻璃球. Boys will be boys.</description>
+    <description>一些玻璃球. 男孩子的最爱.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -221,7 +221,7 @@
  
    <item name="金枪鱼罐头">
     <type class="misc" subclass="canotuna" tileid="-1"/>
-    <description>You see what appears to be 金枪鱼罐头. Too bad you don't have a can opener.</description>
+    <description>你想看看金枪鱼罐头里面装着什么. 可惜没有开罐工具.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -241,7 +241,7 @@
   
    <item name="雪珠">
     <type class="misc" subclass="snowglobe" tileid="-1"/>
-    <description>You see a 雪珠. It's so festive, it reminds you of Christmas!</description>
+    <description>一台雪珠. 非常喜庆, 它提醒你圣诞节的到来!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <behavior class-name="games.stendhal.server.entity.item.behavior.MessagingUseBehavior">
       <parameter name="public" value="!me shakes 雪珠."/>
@@ -267,7 +267,7 @@
   <!--must be stackable as it is a produced item-->
   <item name="线轴">
     <type class="misc" subclass="bobbin" tileid="-1"/>
-    <description>You see a 线轴 for a sewing machine.</description>
+    <description>线轴可以用在绕线机上.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -287,7 +287,7 @@
 
   <item name="毒腺">
     <type class="misc" subclass="venom_gland" tileid="-1"/>
-    <description>You see the 毒腺 of a giant cobra. It is filled with deadly toxin.</description>
+    <description>眼镜蛇蛇身上的毒腺, 里面满是死亡毒液.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

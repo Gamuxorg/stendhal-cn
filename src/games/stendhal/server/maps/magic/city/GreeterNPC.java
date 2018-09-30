@@ -83,9 +83,9 @@ public class GreeterNPC implements ZoneConfigurator {
 				//addJob("I am a wizard, like all who dwell in this magic underground city. We practise #magic here.");
 				addJob("我是一个巫师，就像生活在这个地下城的所有的人一样。 我们在这儿练习 #魔法 。");
 				//addReply("magic", "Indeed, enchantments such as our Sunlight Spell to keep the grass and flowers healthy down here. I suppose you are wondering why you have seen traditional enemies such as dark elves and green elves in company together here, let me #explain.");
-				addReply("magic", "真的，魔法，如我们的阳光符咒，让草和花健康地在这里生长。 我想你想知道为什么你会在这里看到传统的敌人，比如暗黑精灵和精灵精灵。让我 #explain.");
+				addReply("魔法", "真的，魔法，如我们的阳光符咒，让草和花健康地在这里生长。 我想你想知道为什么你会在这里看到传统的敌人，比如暗黑精灵和精灵精灵。让我 #说明 一下.");
 				//addReply("explain", "As a city for wizards only, we have much to learn from one another. Thus, old quarrels are forgotten and we live here in peace.");
-				addReply("explain", "作为巫师之城，我们有很多互相学习的地方。因此，古老的争吵被遗忘，我们和平的生活在这里");
+				addReply("说明", "作为巫师之城，我们有很多互相学习的地方。因此，古老的争吵被遗忘，我们和平的生活在这里");
 				//addHelp("It is part of my #job to #offer you enchanted scrolls to travel to any major city in Faiumoni. I also have a supply of scrolls you may mark, and some scrolls to summon creatures. Be aware, they do not come cheap.");
 				addHelp("这是我 #工作 的一部分，为你 #交易 魔法卷轴去在 Faiumoni 的任意主城。 我也有一个你可以标记的卷轴，还有一些卷轴召唤生物。请注意，它们并不便宜。");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("allscrolls")) {

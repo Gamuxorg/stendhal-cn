@@ -37,6 +37,6 @@ public class FrogmanSheepmanRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "Not safe for players below level 30";
+		return "30级以下不安全";
 	}
 }

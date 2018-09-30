@@ -48,7 +48,7 @@ public class Santa extends ScriptImpl {
 	 */
 	private void startChristmas(Player admin) {
 		if (System.getProperty("stendhal.santa") != null) {
-			admin.sendPrivateText("Santa is already active.");
+			admin.sendPrivateText("Santa 已激活.");
 			return;
 		}
 		System.setProperty("stendhal.santa", "true");
@@ -62,7 +62,7 @@ public class Santa extends ScriptImpl {
 	 */
 	private void stopChristmas(Player admin) {
 		if (System.getProperty("stendhal.santa") == null) {
-			admin.sendPrivateText("Santa is not active.");
+			admin.sendPrivateText("Santa 未激活.");
 			return;
 		}
 		System.getProperties().remove("stendhal.santa");

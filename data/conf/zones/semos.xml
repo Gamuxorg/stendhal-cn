@@ -2049,7 +2049,7 @@
     <!-- START MINE TOWN WEEKS signs -->
     <entity x="53" y="3" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #苏茜 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2058,7 +2058,7 @@
 
     <entity x="14" y="4" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #苏茜 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2067,7 +2067,7 @@
 
     <entity x="16" y="48" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #Susi 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
+      <attribute name="text">#矿镇复兴周 庆祝活动开始啦! 请尽情享用 #苏茜 和她爸爸带来的好吃哒和好喝哒! 顺着到 #塞门镇 #向北 的路, 就能到达e #矿镇! 请挑选你 #最爱 的 #色彩 搭配的衣服来庆祝节日!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>
@@ -2076,7 +2076,7 @@
 
     <entity x="58" y="49" condition="stendhal.minetown">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">#Mine #Town #Revival #Weeks! Enjoy the #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门镇 #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
+      <attribute name="text">#Mine #Town #Revival #Weeks! Enjoy the #festival and meet #苏茜 and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门镇 #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
       <attribute name="width">2</attribute>
       <attribute name="height">2</attribute>
       <attribute name="class">transparent</attribute>

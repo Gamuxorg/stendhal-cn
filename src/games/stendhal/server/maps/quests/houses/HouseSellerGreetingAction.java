@@ -29,16 +29,16 @@ final class HouseSellerGreetingAction extends HouseChatAction implements ChatAct
 		String reply = "";
 
 		if (HouseUtilities.playerOwnsHouse(player)) {
-			reply = " At the cost of "
+			reply = " 买一把备用钥匙要花 "
 				+ HouseChatAction.COST_OF_SPARE_KEY
-				+ " money you can purchase a spare key for your house. Do you want to buy one now?";
+				+ " 钱. 确定要买吗?";
 			raiser.setCurrentState(ConversationStates.QUESTION_1);
 		} else if (player.hasQuest(questslot)) {
 			// the player has lost the house. clear the slot so that he can buy a new one if he wants
 			player.removeQuest(questslot);
 		}
 
-		raiser.say("Hello, " + player.getTitle() + "." + reply);
+		raiser.say("你好, " + player.getTitle() + "." + reply);
 	}
 
 }

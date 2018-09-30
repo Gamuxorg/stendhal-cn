@@ -6,7 +6,7 @@
   
   <creature name="黑暗天使">
     <type class="giant_human" subclass="dark_angel" tileid="giant_human.png:6"/>
-    <description>You see a 黑暗天使. He is an strong evil angel, and for now he is under cover of darkness.</description>
+    <description>一个黑暗天使是非常厉害的邪恶天使, 现在服务于黑暗.</description>
     <attributes>
       <atk value="1755"/>
       <def value="142"/>
@@ -52,7 +52,7 @@
   
   <creature name="黑暗天使长">
     <type class="giant_human" subclass="dark_archangel" tileid="giant_human.png:12"/>
-    <description>You see a 黑暗天使长. After she fell from heaven her soul became as dark as she is now.</description>
+    <description>黑暗天使长. 自从她从天堂跌落, 她的灵魂已变得黑暗.</description>
     <attributes>
       <atk value="1965"/>
       <def value="171"/>
@@ -102,7 +102,7 @@
   
   <creature name="堕落天使">
     <type class="giant_human" subclass="fallen_angel" tileid="giant_human.png:7"/>
-    <description>You see a 堕落天使. When he turned away from good, he fell down from heaven.</description>
+    <description>堕落天使变质后, 他就从天堂坠落下来.</description>
     <attributes>
       <atk value="1120"/>
       <def value="105"/>
@@ -143,7 +143,7 @@
   
   <creature name="小天使">
     <type class="fairy" subclass="baby_angel" tileid="fairy.png:0"/>
-    <description>You see a 小天使. Will it ever get a chance to grow up?</description>
+    <description>小天使. 他会成长吗?</description>
     <attributes>
       <atk value="628"/>
       <def value="100"/>
@@ -185,7 +185,7 @@
   
   <creature name="天使">
     <type class="giant_human" subclass="angel" tileid="giant_human.png:4"/>
-    <description>You see an angel. With his flame sword he guards the way and doesn't let you pass.</description>
+    <description>一个带着圣剑的天使. 他看守着通道不让你通过.</description>
     <attributes>
       <atk value="1187"/>
       <def value="128"/>
@@ -227,7 +227,7 @@
   
   <creature name="天使长">
     <type class="giant_human" subclass="archangel" tileid="giant_human.png:11"/>
-    <description>You see an 天使长. She wants to kill you because she doesn't want you in the clouds.</description>
+    <description>一个天使长. 因为她不允许你站在云上, 所以要杀掉你.</description>
     <attributes>
       <atk value="1455"/>
       <def value="162"/>

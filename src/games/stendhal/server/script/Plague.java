@@ -63,12 +63,12 @@ public class Plague extends ScriptImpl {
 		final Creature tempCreature = sandbox.getCreature(creatureClass);
 
 		if (tempCreature == null) {
-			admin.sendPrivateText("No such creature");
+			admin.sendPrivateText("无此生物");
 		} else if (tempCreature.isRare() && !ServerModeUtil.isTestServer()) {
 			// Rare creatures should not be summoned even in raids
 			// Require parameter -Dstendhal.testserver=junk
-			admin.sendPrivateText("Creatures with the rare property may only be summoned on test servers "
-												+ "which are activated with the vm parameter: -Dstendhal.testserver=junk");
+			admin.sendPrivateText("带有稀有物品的生物只能在测试服务器上召唤 "
+												+ "要使用此功能请在开启服务器使用参数: -Dstendhal.testserver=junk");
 		} else {
 			final Creature creature = new RaidCreature(tempCreature);
 
@@ -82,7 +82,7 @@ public class Plague extends ScriptImpl {
 					}
 				}
 			} else {
-				admin.sendPrivateText("That's too many! Please keep <ringcount> less or equal to "
+				admin.sendPrivateText("太多了! 请不要大于 <ringcount> "
 						+ MAX_RING_COUNT + ".");
 			}
 		}

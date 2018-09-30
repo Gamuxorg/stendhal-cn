@@ -7,7 +7,7 @@
 	
   <item name="dummy_ranged">
     <type class="ranged" subclass="dummy_ranged" tileid="-1"/>
-    <description>Ranged weapon. This description should not be seen.</description>
+    <description>远程武器. 此描述应该不可见.</description>
     <implementation class-name="games.stendhal.server.entity.item.DummyWeapon"/>    
     <attributes>
       <atk value="12"/>
@@ -21,7 +21,7 @@
   
   <item name="dummy_melee_8">
     <type class="club" subclass="dummy_melee_8" tileid="-1"/>
-    <description>Ranged weapon. This description should not be seen.</description>
+    <description>远程武器. 此描述应该不可见.</description>
     <implementation class-name="games.stendhal.server.entity.item.DummyWeapon"/>    
     <attributes>
       <atk value="22"/>

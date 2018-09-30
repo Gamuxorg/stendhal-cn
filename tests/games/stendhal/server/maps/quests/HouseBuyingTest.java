@@ -81,7 +81,7 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	public void setUp() throws Exception {
 		super.setUp();
 
-		SingletonRepository.getNPCList().add(new SpeakerNPC("Mr Taxman"));
+		SingletonRepository.getNPCList().add(new SpeakerNPC("税官"));
 
 		new HouseBuying().addToWorld();
 	}
@@ -111,12 +111,12 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 		}
 
 		PlayerTestHelper.removeNPC("Cyk");
-		PlayerTestHelper.removeNPC("Mr Taxman");
-		PlayerTestHelper.removeNPC("Roger Frampton");
+		PlayerTestHelper.removeNPC("税官");
+		PlayerTestHelper.removeNPC("罗格费雷普顿");
 	}
 
 	public HouseBuyingTest() {
-		super(ZONE_NAME, "Barrett Holmes", "Reg Denson", "Mr Taxman");
+		super(ZONE_NAME, "巴瑞特霍木斯", "瑞格丹森", "税官");
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndBye() {
-		final SpeakerNPC npc = getNPC("Reg Denson");
+		final SpeakerNPC npc = getNPC("瑞格丹森");
 		assertNotNull(npc);
 		final Engine en = npc.getEngine();
 
@@ -140,7 +140,7 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testGeneralStuff() {
-		final SpeakerNPC npc = getNPC("Reg Denson");
+		final SpeakerNPC npc = getNPC("瑞格丹森");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));
@@ -161,7 +161,7 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testBuyHouse() {
-		final SpeakerNPC npc = getNPC("Reg Denson");
+		final SpeakerNPC npc = getNPC("瑞格丹森");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));
@@ -231,10 +231,10 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testReally() {
-		final SpeakerNPC npc = getNPC("Reg Denson");
+		final SpeakerNPC npc = getNPC("瑞格丹森");
 		final Engine en = npc.getEngine();
 
-		assertTrue(en.step(player, "hi Reg Denson"));
+		assertTrue(en.step(player, "hi 瑞格丹森"));
 		assertEquals("Hello, player.", getReply(npc));
 
 		assertTrue(en.step(player, "really"));

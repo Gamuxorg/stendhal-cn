@@ -104,10 +104,10 @@ public class FishInspect extends ScriptImpl implements TurnListener {
 
 						new GameEvent("fish inspect", "jail", player.getName(), Integer.toString(-1), "possible macro use to get fish").raise();
 						SingletonRepository.getJail().imprison(player.getName(), player, -1, "possible macro use to get fish");
-						player.sendPrivateText(NotificationType.SUPPORT, "Please use /support to talk to an admin about your large amount of fish which may have been obtained illegally.");
+						player.sendPrivateText(NotificationType.SUPPORT, "请用 /support 报告给admin 你钓了太多鱼, 可能装不下了.");
 						player.notifyWorldAboutChanges();
 
-						message = "auto jailed " + player.getName() + " because of a large number of fish";
+						message = "auto jailed " + player.getName() + " 因为钓了太多的鱼";
 					}
 
 					if (warn || caught) {

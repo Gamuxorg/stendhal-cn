@@ -24,7 +24,7 @@ public class AwaitingPhaseTest extends TPPTestHelper {
 		killRats(TPPQuestHelperFunctions.getRatsCount()/2);
 		questHistory.add("I have killed some rats in Ados city already, and am trying to kill more.");
 		assertEquals(questHistory, quest.getHistory(player));
-		// [18:19] Mayor Chalmers shouts: Saddanly, rats captured city, they are living now under all Ados buildings. I am now in need of call Piped Piper, rats exterminator. Thank to all who tryed to clean up Ados,  you are welcome to get your reward.
+		// [18:19] 查玛斯市长 shouts: Saddanly, rats captured city, they are living now under all Ados buildings. I am now in need of call Piped Piper, rats exterminator. Thank to all who tryed to clean up Ados,  you are welcome to get your reward.
 
 		ThePiedPiper.switchToNextPhase();
 		//quest.phaseInvasionToAwaiting();
@@ -44,12 +44,12 @@ public class AwaitingPhaseTest extends TPPTestHelper {
 		en.step(player, "reward");
 		assertEquals("Please take " + rewardMoneys + " money, thank you very much for your help.", getReply(npc));
 		questHistory.clear();
-		questHistory.add("I have killed some rats in Ados city and got a reward from Mayor Chalmers!");
+		questHistory.add("I have killed some rats in Ados city and got a reward from 查玛斯市长!");
 		assertEquals(questHistory, quest.getHistory(player));
 		en.step(player, "bye");
 		assertEquals("Good day to you.", getReply(npc));
 
-		// [19:20] Mayor Chalmers shouts: Thanx gods, rats is gone now, Pied Piper hypnotized them and lead away to dungeons. Those of you, who helped to Ados city with rats problem, can get your reward now.
+		// [19:20] 查玛斯市长 shouts: Thanx gods, rats is gone now, 彼德彼伯 hypnotized them and lead away to dungeons. Those of you, who helped to Ados city with rats problem, can get your reward now.
 		ThePiedPiper.getPhaseClass(
 				ThePiedPiper.getPhase()).phaseToDefaultPhase(new LinkedList<String>());
 		//quest.phaseAwaitingToInactive();

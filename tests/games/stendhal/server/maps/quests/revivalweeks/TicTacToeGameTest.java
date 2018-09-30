@@ -34,24 +34,24 @@ public class TicTacToeGameTest {
 
 	@Test
 	public void testNPCisThere() throws Exception {
-		assertNotNull(NPCList.get().get("Paul Sheriff"));
+		assertNotNull(NPCList.get().get("保罗史瑞夫"));
 	}
 
 	@Test
 	public void testConversation() throws Exception {
-		SpeakerNPC paul = NPCList.get().get("Paul Sheriff");
+		SpeakerNPC paul = NPCList.get().get("保罗史瑞夫");
 		Engine engine = paul.getEngine();
 		Player player=PlayerTestHelper.createPlayer("ticPlayer");
 		engine.step(player, "hi");
-		assertEquals("Hi, welcome to our small game of Tic Tac Toe. Your task is to fill a row (vertical, horizontal, diagonal) with the same type of tokens. You need an opponent to #play against.", getReply(paul));
+		assertEquals("Hi, 欢迎来玩 井字棋. 你的任务是用同色的棋子填满一条线 (水平, 垂直, 对角). 需要一个对手 #开始 游戏.", getReply(paul));
 		assertEquals(ConversationStates.IDLE, engine.getCurrentState());
 		assertEquals(Direction.DOWN, paul.getDirection());
 
 		paul.setDirection(Direction.UP);
 		assertEquals(Direction.UP, paul.getDirection());
 
-		engine.step(player, "bye");
-		assertEquals("It was nice to meet you.", getReply(paul));
+		engine.step(player, "再见");
+		assertEquals("很高兴遇见你.", getReply(paul));
 		assertEquals(ConversationStates.IDLE, engine.getCurrentState());
 		assertEquals(Direction.DOWN, paul.getDirection());
 

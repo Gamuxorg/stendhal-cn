@@ -18,7 +18,7 @@ public class RewardPlayerAction implements ChatAction, ITPPQuestConstants {
 		    	final int quantity = TPPQuestHelperFunctions.calculateReward(player);
 		    	// to avoid giving karma without job
 		    	if(quantity==0) {
-		    		mayor.say("You didn't kill any rats which invaded the city, so you don't deserve a reward.");
+		    		mayor.say("鼠灾发生期间你没有杀死任何老鼠, 所以你没有奖励.");
 		    		return;
 		    	}
 		    	player.addKarma(5);
@@ -26,7 +26,7 @@ public class RewardPlayerAction implements ChatAction, ITPPQuestConstants {
 		    				.getItem("money");
 		    	moneys.setQuantity(quantity);
 		    	player.equipOrPutOnGround(moneys);
-		    	mayor.say("Please take "+quantity+" money, thank you very much for your help.");
+		    	mayor.say("请拿着 "+quantity+" 奖励, 十分感谢你的帮助.");
 		    	player.setQuest(QUEST_SLOT, "done");
 			}
 }

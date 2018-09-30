@@ -32,16 +32,16 @@ import games.stendhal.server.maps.quests.piedpiper.InvasionPhase;
 import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
 
 /**
- * QUEST: The Pied Piper
+ * QUEST: The 彼德彼伯
  *
  * PARTICIPANTS: <ul>
  * <li> 查玛斯市长
  * <li> George
  * <li> Anna
  * <li> Jens
- * <li> Susi
+ * <li> 苏茜
  * <li> Finn Farmer
- * <li> Pied Piper
+ * <li> 彼德彼伯
  * </ul>
  *
  * STEPS:<ul>
@@ -191,7 +191,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
 		public void onTurnReached(final int currentTurn) {
 			final ITPPQuest i = getPhaseClass(getPhase());
 			i.phaseToNextPhase(getNextPhaseClass(getPhase()),
-					new LinkedList<String>(Arrays.asList("pied piper")));
+					new LinkedList<String>(Arrays.asList("彼德彼伯")));
 		}
 	}
 
@@ -254,7 +254,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
 	public void addToWorld() {
 		questTimer = new QuestTimer();
 		fillQuestInfo(
-				"The Pied Piper",
+				"The 彼德彼伯",
 				"阿多斯城 has a rat problem from time to time.",
 				true);
 

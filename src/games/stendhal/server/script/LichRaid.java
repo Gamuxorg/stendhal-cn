@@ -41,6 +41,6 @@ public class LichRaid extends CreateRaid {
 	}
 	@Override
 	protected String getInfo() {
-		return "Not safe for players below level 80.";
+		return "80级以下不安全.";
 	}
 }

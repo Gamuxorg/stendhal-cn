@@ -43,7 +43,7 @@ final class BuySpareKeyChatAction extends HouseChatAction implements ChatAction 
 
 			if (houseportal == null) {
 				// something bad happened
-				raiser.say("Sorry something bad happened. I'm terribly embarassed.");
+				raiser.say("抱歉, 出现点状况. 真不好意思.");
 				return;
 			}
 
@@ -53,12 +53,12 @@ final class BuySpareKeyChatAction extends HouseChatAction implements ChatAction 
 
 			if (player.equipToInventoryOnly(key)) {
 				player.drop("money", HouseChatAction.COST_OF_SPARE_KEY);
-				raiser.say("Here you go, a spare key to your house. Please remember, only give spare keys to people you #really, #really, trust! Anyone with a spare key can access your chest, and tell anyone that you give a key to, to let you know if they lose it. If that happens, you should #change your locks.");
+				raiser.say("给你备用钥匙, 但要记住, 只能把备用钥匙送给你 #非常, #非常, 信任的人! 任何取得钥匙的人都可以打开储藏箱. 要告诉任何拿到钥匙的人, 如果钥匙丢了要告诉你. 如真的丢了钥匙, 你应该马上 #换锁.");
 			} else {
-				raiser.say("Sorry, you can't carry more keys!");
+				raiser.say("抱歉, 你身上不能带更多的钥匙!");
 			}
 		} else {
-			raiser.say("You do not have enough money for another key!");
+			raiser.say("你没有足够的钱配钥匙!");
 		}
 	}
 }

@@ -30,7 +30,7 @@ import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * A Tic Tac Toe game for two players
+ * A 井字棋 game for two players
  *
  * @author hendrik
  */
@@ -53,7 +53,7 @@ public class TicTacToeGame implements LoadableContent {
 	 * adds the NPC which moderates the game to the world.
 	 */
 	private void addNPC() {
-		paul = new SpeakerNPC("Paul Sheriff") {
+		paul = new SpeakerNPC("保罗史瑞夫") {
 			@Override
 			protected void createPath() {
 				// NPC doesn't move
@@ -66,28 +66,28 @@ public class TicTacToeGame implements LoadableContent {
 						ConversationPhrases.GREETING_MESSAGES,
 						new GreetingMatchesNameCondition(getName()), true,
 						ConversationStates.IDLE,
-						"Hi, welcome to our small game of Tic Tac Toe. Your task is to fill a row "
-						+ "(vertical, horizontal, diagonal) with the same type of tokens. "
-						+ "You need an opponent to #play against.",
+						"Hi, 欢迎来玩井字棋. 你的任务是用一种棋子填满一条直线 "
+						+ "(横向, 竖向, 对角) . "
+						+ "你需要一个对手 #开始 游戏.",
 						null);
 
 				add(ConversationStates.IDLE,
 						ConversationPhrases.HELP_MESSAGES,
 						ConversationStates.IDLE,
-						"You have to stand next to a token in order to move it.",
+						"要站在棋子旁边才能移动它.",
 						null);
 				add(ConversationStates.IDLE,
 						ConversationPhrases.JOB_MESSAGES,
 						ConversationStates.IDLE,
-						"I am the supervisor of this game.",
+						"我是本游戏管理员.",
 						null);
 				add(ConversationStates.IDLE,
 						ConversationPhrases.GOODBYE_MESSAGES,
 						ConversationStates.IDLE,
-						"It was nice to meet you.",
+						"很高兴见到你",
 						new NPCSetDirection(Direction.DOWN));
 				add(ConversationStates.IDLE,
-						Arrays.asList("play", "game", "yes"),
+						Arrays.asList("开始", "是的", "是"),
 						ConversationStates.IDLE,
 						null,
 						new PlayAction(board));
@@ -118,7 +118,7 @@ public class TicTacToeGame implements LoadableContent {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (board.isGameActive()) {
-				npc.say("Sorry, " + player.getName() + " there is already a game in progress. Please wait a little.");
+				npc.say("抱歉, " + player.getName() + " 有其他人正在游戏. 请等一会.");
 				return;
 			}
 
@@ -128,15 +128,15 @@ public class TicTacToeGame implements LoadableContent {
 
 			if (board.getPlayers().isEmpty()) {
 				lastPlayerAdded = System.currentTimeMillis();
-				npc.say("Okay, " + player.getName() + " you are registered for the next game. Does anyone want to #play against " + player.getName() + "?");
+				npc.say("好, " + player.getName() + " 你已报名下次游戏对战. 你要 #开始 与 " + player.getName() + " 对战吗?");
 				board.getPlayers().add(player.getName());
 			} else {
 				if (board.getPlayers().get(0).equals(player.getName())) {
-					npc.say("Okay " + player.getName() + ", you are registered for the next game. Does anyone want to #play against " + player.getName() + "?");
+					npc.say("Okay " + player.getName() + ", 你已报名下次游戏对战. 你要 #开始 与 " + player.getName() + " 对战吗?");
 					return;
 				}
 
-				npc.say(board.getPlayers().get(0) + ", you are playing the blue X and you will go first. " + player.getName() + ", you are playing the red O. May the best man win!");
+				npc.say(board.getPlayers().get(0) + ", 你是蓝色 X 一方, 所以你先下. " + player.getName() + ", 你是 红 O 方. 看看谁能赢!");
 				board.startGame();
 				board.getPlayers().add(player.getName());
 			}
@@ -159,7 +159,7 @@ public class TicTacToeGame implements LoadableContent {
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		NPCList.get().remove("Paul Sheriff");
+		NPCList.get().remove("保罗史瑞夫");
 		zone.remove(paul);
 		zone.remove(board);
 		return true;

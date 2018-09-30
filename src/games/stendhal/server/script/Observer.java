@@ -36,7 +36,7 @@ public class Observer extends ScriptImpl {
 		}
 
 		if (admin.getAdminLevel() < 2000) {
-			admin.sendPrivateText(NotificationType.ERROR, "adminlevel 2000 required,");
+			admin.sendPrivateText(NotificationType.ERROR, "需要管理员等级 2000 以上,");
 			return;
 		}
 

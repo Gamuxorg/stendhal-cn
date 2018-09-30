@@ -42,7 +42,7 @@ public class HealerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Salva Mattori") {
+		final SpeakerNPC npc = new SpeakerNPC("莎娃玛特丽") {
 
 			@Override
 			protected void createPath() {

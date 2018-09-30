@@ -41,23 +41,23 @@ final class ChangeLockAction extends HouseChatAction implements ChatAction {
 				((HouseKey) key).setup(doorId, locknumber, player.getName());
 				if (player.equipToInventoryOnly(key)) {
 					player.drop("money", HouseChatAction.COST_OF_SPARE_KEY);
-					raiser.say("The locks have been changed for " + doorId + ", here is your new key. Do you want to buy a spare key, at a price of "
-							   + HouseChatAction.COST_OF_SPARE_KEY + " money?");
+					raiser.say("号码为 " + doorId + " 的房子的锁已更换, 这把新钥匙给你. 如果还需要备用钥匙, 请付 "
+							   + HouseChatAction.COST_OF_SPARE_KEY + " 钱?");
 					raiser.setCurrentState(ConversationStates.QUESTION_1);
 				} else {
 					// if the player doesn't have the space for the key, change the locks anyway as a security measure, but don't charge.
-					raiser.say("The locks have been changed for "
-							   + doorId + ", but you do not have space to carry the new key. I haven't charged you for this service. "
-							   + "If you want to go away and make space, come back and I will offer you the chance to buy a spare key. Goodbye.");
+					raiser.say("号码为 "
+							   + doorId + " 的房子的锁已更换, 但你没有地方带走这把钥匙了. 我已留置了对你的服务. "
+							   + "如果你身上留出了空间再回来, 那时我会把备用钥匙给你. 再见.");
 					raiser.setCurrentState(ConversationStates.IDLE);
 				}
 			} catch (final NumberFormatException e) {
 				logger.error("Invalid number in house slot", e);
-				raiser.say("Sorry, something bad happened. I'm terribly embarassed.");
+				raiser.say("抱歉, 出现点状况. 真不好意思.");
 				return;
 			}
 		} else {
-			raiser.say("You need to pay " + HouseChatAction.COST_OF_SPARE_KEY + " money to change the lock and get a new key for your house.");
+			raiser.say("你需要支付 " + HouseChatAction.COST_OF_SPARE_KEY + " 换锁钱, 并且配一把新钥匙.");
 		}
 	}
 }

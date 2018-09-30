@@ -31,18 +31,17 @@ public class InactivePhase extends TPPQuest {
 		// Player asking about rats
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("rats", "rats!"),
+				Arrays.asList("老鼠", "鼠灾"),
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Ados isn't being invaded by rats right now. You can still "+
-				  "get a #reward for the last time you helped. You can ask for #details "+
-				  "if you want.",
+				"现在的阿多斯不再有鼠灾了. 你仍然可以根据你上次的帮助成果"+
+				  "领取 #奖励 .你有需要的话可以询问 #详情 ",			  
 				null);
 
 		// Player asking about details
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"details",
+				"详情",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -51,7 +50,7 @@ public class InactivePhase extends TPPQuest {
 		// Player asked about reward
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"reward",
+				"奖励",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,

@@ -33,7 +33,7 @@ public class ServerShutdown extends ScriptImpl {
 	@Override
 	public void execute(final Player admin, final List<String> args) {
 		final String text = admin.getTitle()
-				+ " started shutdown of the server.";
+				+ " 关闭服务器.";
 
 		SingletonRepository.getRuleProcessor().tellAllPlayers(NotificationType.SUPPORT, text);
 

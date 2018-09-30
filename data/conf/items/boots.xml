@@ -4,7 +4,7 @@
 
 <item name="黑靴子">
     <type class="boots" subclass="black_boots" tileid="-1"/>
-    <description>你穿着这双黑靴子时撞伤了脚趾. 可能是它给你带来了霉运？?</description>
+    <description>你穿着这双黑靴子时撞伤了脚趾. 可能是它给你带来了霉运?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="15"/>
@@ -25,7 +25,7 @@
   
 <item name="蓝靴子">
     <type class="boots" subclass="blue_boots" tileid="-1"/>
-    <description>You see a pair of 蓝靴子.</description>
+    <description>一双蓝靴子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -44,7 +44,7 @@
   
   <item name="链靴">
     <type class="boots" subclass="chain_boots" tileid="-1"/>
-    <description>这是一双链靴, 锈蚀严重却依然耐穿. </description>
+    <description>一双链靴, 锈蚀严重却依然耐穿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -62,7 +62,7 @@
   
   <item name="混沌靴">
     <type class="boots" subclass="chaos_boots" tileid="-1"/>
-    <description>这是一双混沌靴. 穿着它, 你步伐不稳, 但它能给你带来额外的防御力. </description>
+    <description>这是一双混沌靴. 穿着它, 你步伐不稳, 但它能给你带来额外的防御力.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -81,7 +81,7 @@
   
    <item name="精灵靴">
     <type class="boots" subclass="elvish_boots" tileid="-1"/>
-    <description>这是一双精灵靴. </description>
+    <description>这是一双精灵靴.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -100,7 +100,7 @@
   
   <item name="金靴子">
     <type class="boots" subclass="golden_boots" tileid="-1"/>
-    <description>这是一双金靴子, 穿起来很重, 但毕竟是金靴子啊. </description>
+    <description>这是一双金靴子, 穿起来很重, 但毕竟是金靴子啊.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="8"/>
@@ -117,9 +117,9 @@
     </equipable>
   </item>
   
-  <item name="绿了吧唧的靴子">
+  <item name="绿色龙靴">
     <type class="boots" subclass="green_dragon_boots" tileid="-1"/>
-    <description>这是一双绿了吧唧的靴子, 里面黏糊糊的, 呃啊. </description>
+    <description>这是一双绿色龙靴, 里面黏糊糊的, 呃啊.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>
@@ -138,7 +138,7 @@
   
    <item name="杀手之靴">
     <type class="boots" subclass="killer_boots" tileid="-1"/>
-    <description>这是一双高跟杀手之靴. 你敢穿吗？</description>
+    <description>这是一双高跟杀手之靴. 你敢穿吗?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>
@@ -174,7 +174,7 @@
   
   <item name="奇妙靴子">
     <type class="boots" subclass="mainio_boots" tileid="-1"/>
-    <description>这是一双奇妙靴子. 很难想象这么好看的靴子能把你的脚保护的这么好. </description>
+    <description>这是一双奇妙靴子. 很难想象这么好看的靴子能把你的脚保护的这么好.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -193,7 +193,7 @@
   
   <item name="密银靴">
     <type class="boots" subclass="mithril_boots" tileid="-1"/>
-    <description>这是一双密银靴. </description>
+    <description>这是一双密银靴.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -214,7 +214,7 @@
   
   <item name="红靴子">
     <type class="boots" subclass="red_boots" tileid="-1"/>
-    <description>这是一双红靴子, 它的颜色提醒你——鲜血. </description>
+    <description>这是一双红靴子, 它的颜色提醒你——鲜血.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -232,7 +232,7 @@
   
    <item name="影子靴子">
     <type class="boots" subclass="shadow_boots" tileid="-1"/>
-    <description>这是一双影子靴子, 你不能辨别它是由什么制成的. </description>
+    <description>这是一双影子靴子, 你不能辨别它是由什么制成的.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -253,7 +253,7 @@
 
   <item name="铁靴">
     <type class="boots" subclass="steel_boots" tileid="-1"/>
-    <description>这是一双铁靴, 适合所有的战士.  石靴=石靴</description>
+    <description>这是一双铁靴, 适合所有的战士.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -272,7 +272,7 @@
   
   <item name="石靴">
     <type class="boots" subclass="stone_boots" tileid="-1"/>
-    <description>这是一双石靴. 它可能很重, 但是它们能很好的保护你的脚. </description>
+    <description>这是一双石靴. 它可能很重, 但是它们能很好的保护你的脚.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -293,7 +293,7 @@
 
  <item name="钉靴">
     <type class="boots" subclass="studded_boots" tileid="-1"/>
-    <description>这是一双磨损的钉靴, 可以为你的脚提供适当的保护. </description>
+    <description>这是一双磨损的钉靴, 可以为你的脚提供适当的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -311,7 +311,7 @@
 
   <item name="异界靴子">
     <type class="boots" subclass="xeno_boots" tileid="-1"/>
-    <description>这是一双精美的工艺品, 一双异界靴子. </description>
+    <description>这是一双精美的工艺品, 一双异界靴子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>

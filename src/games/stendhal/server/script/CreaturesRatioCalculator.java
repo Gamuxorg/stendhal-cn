@@ -127,16 +127,16 @@ public class CreaturesRatioCalculator extends ScriptImpl {
 		try {
 			if(args.isEmpty()) {
 				range = 10;
-				r.append("list range value omitted, used 10.\n");
+				r.append("列表值未指定, 默认为 10.\n");
 			} else {
 				range = Integer.valueOf(args.get(0));
 				if((range < 1) || (range > creatures.size()-1)) {
-					r.append("too big or too small list range value, used 10.\n");
+					r.append("列表值过大或过小, 默认为 10.\n");
 					range = 10;
 				}
 			}
 		} catch (NumberFormatException e) {
-			r.append("cant read properly list range value, used 10.\n");
+			r.append("不能读取列表值, 使用默认值 10.\n");
 			range = 10;
 		}
 		r.append("count results:\n");

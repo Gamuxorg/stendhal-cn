@@ -50,7 +50,7 @@ public class FatherNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hi there.");
-				addJob("I'm looking after my daughter Susi.");
+				addJob("I'm looking after my daughter 苏茜.");
 				addHelp("If you need help finding any buildings in Ados, the guard Julius will give you a map. He is by the city entrance.");
 				addOffer("Sorry I do not have anything to offer you, but there are two places to eat in Ados - the tavern and a bar.");
 				addQuest("At the end of October we will be visiting the #Mine #Town #Revival #Weeks");
@@ -80,7 +80,7 @@ public class FatherNPC implements ZoneConfigurator {
 		npc.setPosition(12, 7);
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);
-		npc.setDescription("You see Susi's dad Mr. Ross. He calmed a bit down after the adventures of his daughter.");
+		npc.setDescription("You see 苏茜's dad Mr. Ross. He calmed a bit down after the adventures of his daughter.");
 		zone.add(npc);
 	}
 

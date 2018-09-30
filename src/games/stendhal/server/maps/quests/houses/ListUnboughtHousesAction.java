@@ -28,9 +28,9 @@ final class ListUnboughtHousesAction implements ChatAction {
 	public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 		final List<String> unbought = HouseUtilities.getUnboughtHousesInLocation(location);
 		if (unbought.size() > 0) {
-			raiser.say("According to my records, " + unbought + " are all available for #purchase.");
+			raiser.say("据我统计, " + unbought + " 就是全部在售的 #房子 了.");
 		} else {
-			raiser.say("Sorry, there are no houses available for sale in " + location + ".");
+			raiser.say("抱歉, " + location + " 地区没有房源在售.");
 		}
 	}
 }

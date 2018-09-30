@@ -46,7 +46,7 @@
 
   <item name="黑刃剑">
     <type class="sword" subclass="black_sword" tileid="-1"/>
-    <description>You see a 黑刃剑.  Its darkness will surely protect you.</description>
+    <description>一把黑刃剑.  它的黑暗气息一定会保护你.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -414,7 +414,7 @@
 
   <item name="冰剑">
     <type class="sword" subclass="ice_sword" tileid="-1"/>
-    <description>一把冰剑, the blade is lethally cold to the touch, and you know it is one of the best weapons you'll find.</description>
+    <description>冰剑, 刀刃寒气逼人, 一看就知道是把上好的武器.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="29"/>
@@ -436,7 +436,7 @@
 
   <item name="将军配剑">
     <type class="sword" subclass="imperator_sword" tileid="-1"/>
-    <description>You see a an 将军配剑, crafted from you know not what.</description>
+    <description>将军配剑, 不知道用什么技法制成.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="14"/>
@@ -457,7 +457,7 @@
 
   <item name="永恒之剑">
     <type class="sword" subclass="magic_sword" tileid="-1"/>
-    <description>This 永恒之剑 is a gift of gods to the chosen one. It is heavy and of exquisite craftsmanship.</description>
+    <description>这把永恒之剑是上帝赠与的礼物. 它制作精良且非常重.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="35"/>
@@ -479,7 +479,7 @@
 
   <item name="太刀">
     <type class="sword" subclass="katana" tileid="-1"/>
-    <description>You see a valuable 太刀, with a lethal looking blade.</description>
+    <description>一把贵重的太刀, 刀刃看上去非常致命.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="15"/>
@@ -500,7 +500,7 @@
 
   <item name="小刀">
     <type class="sword" subclass="knife" tileid="-1"/>
-    <description>You see a blunt 小刀 which looks capable of little damage.</description>
+    <description>一把有些钝的小刀, 看上去能够造成一点破坏.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="7"/>
@@ -520,7 +520,7 @@
 
   <item name="右手剑">
     <type class="sword" subclass="l_hand_sword" tileid="-1"/>
-    <description>You see 右手剑. It must be used with right hand sword.</description>
+    <description>右手剑. 顾名思义要放在右手.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -541,7 +541,7 @@
 
   <item name="暗之匕首">
     <type class="sword" subclass="black_dagger" tileid="-1"/>
-    <description>You see a 暗之匕首, to be used with stealth.</description>
+    <description>一把暗之匕首, 最好乘敌不备时使用.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -584,7 +584,7 @@
 
   <item name="黑曜石刀">
     <type class="sword" subclass="obsidian_knife" tileid="-1"/>
-    <description>You see a knife whose blade is crafted to a lethal edge from finest 黑曜石.</description>
+    <description>黑曜石刀有着鱼鳞状的刀刃, 由极特殊的黑曜石焠火技法制成.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="4"/>
@@ -606,7 +606,7 @@
 
   <item name="兽人重剑">
     <type class="sword" subclass="orc_sword" tileid="-1"/>
-    <description>You see an 兽人重剑 which has a heavy and deadly appearance.</description>
+    <description>兽人重剑很沉, 外形彪悍.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="24"/>
@@ -626,7 +626,7 @@
 
   <item name="兽人大剑">
     <type class="sword" subclass="orcish_sword" tileid="-1"/>
-    <description>This 兽人大剑 is badly done and weighs a lot.</description>
+    <description>兽人大剑破坏力惊人, 但太重.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="38"/>
@@ -647,7 +647,7 @@
 
   <item name="左手剑">
     <type class="sword" subclass="r_hand_sword" tileid="-1"/>
-    <description>You see 左手剑. It must be used with a left hand sword.</description>
+    <description>左手剑. 顾名思义一定用在左手.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -668,7 +668,7 @@
 
   <item name="半月弯刀">
     <type class="sword" subclass="scimitar" tileid="-1"/>
-    <description>This 半月弯刀 catches the light as you look at it, it will be a powerful weapon.</description>
+    <description>这把半月弯刀闪着寒光, 一定是个强力武器.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="14"/>
@@ -689,7 +689,7 @@
 
   <item name="短剑">
     <type class="sword" subclass="short_sword" tileid="-1"/>
-    <description>You see a well kept 短剑 which will be easy to carry as you travel.</description>
+    <description>一把方便携带的短剑, 旅行时使用很方便.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="11"/>
@@ -709,7 +709,7 @@
 
   <item name="灵魂匕首">
     <type class="sword" subclass="soul_dagger" tileid="-1"/>
-    <description>You see a 灵魂匕首. It's so light and sharp that you can stab at a very fast rate.</description>
+    <description>一把 灵魂匕首. 轻便且锋利, 可以用它快速刺向敌人.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="5"/>
@@ -730,7 +730,7 @@
 
   <item name="铁剑">
     <type class="sword" subclass="sword" tileid="-1"/>
-    <description>You see a sharp sword which might even be worth a little.</description>
+    <description>一把锋利的铁剑, 不值钱却实用.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -751,7 +751,7 @@
 
   <item name="吸血鬼之刃">
     <type class="sword" subclass="vampire_sword" tileid="-1"/>
-    <description>You see the 吸血鬼之刃, which will suck life from those you attack with it.</description>
+    <description>吸血鬼之刃, 当攻击敌人时会吸收生命.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="28"/>
@@ -773,7 +773,7 @@
 
   <item name="异界之剑">
     <type class="sword" subclass="xeno_sword" tileid="-1"/>
-    <description>You wield a 异界之剑. Despite the great strength it is strangely light.</description>
+    <description>一把异界之剑. 威力巨大并闪着奇怪的光芒.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="38"/>

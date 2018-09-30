@@ -49,7 +49,7 @@ public class InvasionPhase extends TPPQuest {
 		// Player asking about rats at invasion time.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("rats", "rats!"),
+				Arrays.asList("老鼠", "鼠灾"),
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -65,10 +65,10 @@ public class InvasionPhase extends TPPQuest {
 		//Player asked about details at invasion time.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"details",
+				"详情",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Ados 被老鼠要被占领了! "+
+				"阿多斯 被老鼠要被占领了! "+
 				  "在所有老鼠消灭之前,"+
 				  "我现在不想给你回报或解释什么" ,
 				null);
@@ -76,10 +76,10 @@ public class InvasionPhase extends TPPQuest {
 		// Player asked about reward at invasion time.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"reward",
+				"奖励",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Ados 被老鼠要被占领了! "+
+				"阿多斯 被老鼠要被占领了! "+
 				  "在所有老鼠消灭之前,"+
 				  "我现在不想给你回报或解释什么" ,
 				null);
@@ -158,7 +158,7 @@ public class InvasionPhase extends TPPQuest {
 				// add unique noises to humanoids
 				if (tempCreature.getName().equals("鼠人弓箭手")) {
 					final LinkedList<String> ll = new LinkedList<String>(
-							Arrays.asList("我们会占领Ados!",
+							Arrays.asList("我们会占领阿多斯!",
 							"我们的报复会很可怕!"));
 					LinkedHashMap<String, LinkedList<String>> lhm =
 						new LinkedHashMap<String, LinkedList<String>>();
@@ -186,7 +186,7 @@ public class InvasionPhase extends TPPQuest {
 		}
 		if (rats.size()==0) {
 			phaseToDefaultPhase(
-					new LinkedList<String>(Arrays.asList("pied piper")));
+					new LinkedList<String>(Arrays.asList("彼德彼伯")));
 		}
     }
 
@@ -196,24 +196,24 @@ public class InvasionPhase extends TPPQuest {
 
 	@Override
 	public String getSwitchingToDefPhaseMessage() {
-		final String text = "Chalmers 市长宣布:在Ados没有老鼠 #rats 存活, "+
+		final String text = "查玛斯市长宣布:在阿多斯没有老鼠 #rats 存活, "+
 				            "它们只能住在鬼屋"+
-				            "欢迎Rat 捕鼠猎人领取赏金 #reward.";
+				            "欢迎捕鼠猎人领取 #奖励.";
 		return(text);
 	}
 
 	/**
-	 *  Rats now living under all buildings. Need to call Pied Piper :-)
+	 *  Rats now living under all buildings. Need to call 彼德彼伯 :-)
 	 */
 	@Override
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
-			"市长 Chalmers 播报: 紧急, #rats 老鼠已占领城市, "+
+			"查玛斯市长播报: 紧急, #老鼠 已占领城市, "+
 		  //"查玛斯市长 shouts: The #rats left as suddenly as they arrived. "+
 		  //"Perhaps they have returned to the sewers. "+
-			"我现在南要呼叫Pied Piper, 一个灭鼠人."+
-			"另外, 感谢所有尽力清理 Ados的市民, "+
-			"欢迎你们领取奖金 #reward.";
+			"我现在南要呼叫彼德彼伯, 一个灭鼠人."+
+			"另外, 感谢所有尽力清理 阿多斯的市民, "+
+			"欢迎你们领取 #奖励.";
 		return(text);
 	}
 
@@ -246,8 +246,8 @@ public class InvasionPhase extends TPPQuest {
 	 * @return Ados mayor's call for help message
 	 */
 	protected String ratsProblem() {
-		final String text = "查玛斯市长 shouts: 阿多斯城 is being invaded by #rats!"+
-			              " Anyone who will help to clean up the city, will be rewarded!";
+		final String text = "查玛斯市长 急呼: 阿多斯城发生 #鼠灾 !"+
+			              " 任何帮助阿多斯渡过难关的人, 都有奖励!";
 		return(text);
 	}
 
@@ -259,14 +259,14 @@ public class InvasionPhase extends TPPQuest {
 
 	@Override
 	public void phaseToDefaultPhase(List<String> comments) {
-		comments.add("last rat killed");
+		comments.add("老鼠已全部清除");
 		super.phaseToDefaultPhase(comments);
 	}
 
 
 	@Override
 	public void phaseToNextPhase(ITPPQuest nextPhase, List<String> comments) {
-		comments.add("switch phase, "+rats.size()+" rats still alive.");
+		comments.add("现行状况, 还有 "+rats.size()+" 只老鼠存活.");
 		removeAllRats();
 		super.phaseToNextPhase(nextPhase, comments);
 	}

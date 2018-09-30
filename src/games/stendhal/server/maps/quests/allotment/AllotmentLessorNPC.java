@@ -108,7 +108,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 				// if player already has one rented ask how may help
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment","租房"),
+					Arrays.asList("rent", "租用","租房"),
 					questActive,
 					ConversationStates.QUEST_STARTED,
 					"需要什么服务吗？把钥匙弄丢了？再租个新房？或是咨询房租到期的时间？",
@@ -116,17 +116,17 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 				// if allotment not rented and there are available then ask if player wants to rent
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment","租房"),
+					Arrays.asList("rent", "租用","租房"),
 					new AndCondition(
 							new NotCondition(questActive),
 							hasAllotments),
 					ConversationStates.QUEST_OFFERED,
-					"你想租房吗 Would you like to rent an allotment?",
+					"你想租房吗?",
 					null);
 
 				// if allotment not rented and there are none available then tell player
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment","租房"),
+					Arrays.asList("rent", "租用","租房"),
 					new AndCondition(
 							new NotCondition(questActive),
 							new NotCondition(hasAllotments)),
@@ -198,7 +198,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 												+ TimeUtil.approxTimeUntil((int) (AllotmentUtilities.RENTAL_TIME / 1000L)) + " 的时间.");
 
 										if (!player.equipToInventoryOnly(rentHelper.getKey(zone.getName(), player.getName()))) {
-											npc.say("Oh, 你好像放的东西太多了, 在你回来前, 我会保证东西的安全. 只用问下你租的房间. Just ask about your #allotment.");
+											npc.say("Oh, 你好像放的东西太多了, 在你回来前, 我会保证东西的安全. 只用问下你 #租用 的房间.");
 										}
 
 										new SetQuestAction(QUEST_SLOT, 1, Long.toString(AllotmentUtilities.RENTAL_TIME + System.currentTimeMillis())).fire(player, sentence, npc);
@@ -207,7 +207,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 										npc.say("Uh oh! 有些你的记录有些问题, 请再等一会. ");
 									}
 								} else {
-									npc.say("抱歉, 分配房子的已被取走, that allotment is already taken.");
+									npc.say("抱歉, 你想租用的房子的已被占用.");
 								}
 							}
 						}
@@ -227,12 +227,12 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 							if (key != null) {
 								if (player.equipToInventoryOnly(key)) {
-									npc.say("这是你的钥匙, happy planting.");
+									npc.say("这是你的钥匙, 欢迎入住.");
 								} else {
 									npc.say("在你能带更多钥匙多前, 你不能再拿走这把了. ");
 								}
 							} else {
-								npc.say("文件太多不好整理, 它提示你没有租用过房子. It appears you haven't rented out an allotment.");
+								npc.say("文件太多不好整理, 它提示你没有租用过房子.");
 							}
 						}
 					});
@@ -258,7 +258,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 		npc.setEntityClass("kid6npc");
 		npc.setPosition(85, 11);
 		npc.initHP(100);
-		npc.setDescription("你遇见了 jefs clone. 他好像在等某个人.");
+		npc.setDescription("你遇见了 jefs 的双胞胎兄弟. 他好像在等某个人.");
 		zone.add(npc);
 	}
 }

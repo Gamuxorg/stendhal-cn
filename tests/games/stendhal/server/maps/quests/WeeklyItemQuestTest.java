@@ -71,7 +71,7 @@ public class WeeklyItemQuestTest {
 	@Test
 	public void testQuest() {
 
-		npc = SingletonRepository.getNPCList().get("Hazel");
+		npc = SingletonRepository.getNPCList().get("哈泽尔");
 		en = npc.getEngine();
 
 		en.step(player, "hi");

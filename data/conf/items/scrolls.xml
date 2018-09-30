@@ -64,7 +64,7 @@
 
   <item name="纳尔沃城回城卷">
     <type class="scroll" subclass="nalwor" tileid="-1"/>
-    <description>一个纳尔沃城回城卷, 它会带你回到纳尔沃城. </description>
+    <description>纳尔沃城回城卷, 它会带你回到纳尔沃城. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_纳尔沃_城 40 60"/>
@@ -85,7 +85,7 @@
 
   <item name="阿多斯城回城卷">
     <type class="scroll" subclass="ados" tileid="-1"/>
-    <description>You see a 阿多斯城回城卷, it will take you back to 阿多斯城.</description>
+    <description>阿多斯城回城卷, 它会带你回到阿多斯城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_阿多斯_城_n 50 50"/>
@@ -106,7 +106,7 @@
 
   <item name="法多城回城卷">
     <type class="scroll" subclass="fado" tileid="-1"/>
-    <description>You see a 法多城回城卷, it will take you back to 法多城.</description>
+    <description>法多城回城卷, 它会带你回到法多城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_fado_city 40 30"/>
@@ -127,7 +127,7 @@
 
   <item name="克德内回城卷">
     <type class="scroll" subclass="kirdneh" tileid="-1"/>
-    <description>You see a 克德内回城卷, it will take you back to kirdneh city.</description>
+    <description>克德内回城卷, 它会带你回到克德内城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_kirdneh_city 63 85"/>
@@ -148,7 +148,7 @@
 
   <item name="卡拉文回城卷">
     <type class="scroll" subclass="kalavan" tileid="-1"/>
-    <description>You see a 卡拉文回城卷, it will take you back to kalavan city.</description>
+    <description>卡拉文回城卷, 它会带你回到卡拉文城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_kalavan_city 64 17"/>
@@ -209,7 +209,7 @@
 
   <item name="回城卷">
     <type class="scroll" subclass="home" tileid="-1"/>
-    <description>You see a 回城卷, it will take you back to 塞门镇.</description>
+    <description>回城卷, 它可以带你回到塞门镇.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_塞门_镇 30 40"/>

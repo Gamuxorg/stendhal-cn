@@ -251,9 +251,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"可惜. 已经凉了. 尽管如此还是谢谢你!",
 				20));
 
-		customerDB.put("Fidorea",
+		customerDB.put("费多拉",
 			new CustomerData(
-				"Fidorea 生活在Ados 城. 她是一位化装艺术家. 从这里往东可以找到她. ",
+				"费多拉 生活在Ados 城. 她是一位化装艺术家. 从这里往东可以找到她. ",
 				"比萨 Napoli",
 				// minutes to deliver. Tested by mort: about
 				// 6 min, outrunning all enemies.
@@ -411,7 +411,7 @@ public class PizzaDelivery extends AbstractQuest {
 				new CustomerData(
 					"Martin 农夫正在Ados城度假. 你需要从这里往东走",
 					"比萨 Fiorentina",
-					// minutes to deliver. Time for Fidorea was 7, so 8 should be ok for martin
+					// minutes to deliver. Time for 费多拉 was 7, so 8 should be ok for martin
 					8,
 					// tip when delivered on time
 					160,

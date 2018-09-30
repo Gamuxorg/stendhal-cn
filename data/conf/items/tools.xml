@@ -4,7 +4,7 @@
 
   <item name="食物工坊">
     <type class="tool" subclass="foodmill" tileid="-1"/>
-    <description>You see a 食物工坊. It is the traditional tool to mill food.</description>
+    <description>一部食物工坊. 是传统的研磨食物的工具.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>
@@ -23,7 +23,7 @@
 
   <item name="制糖机">
     <type class="tool" subclass="sugarmill" tileid="-1"/>
-    <description>You see a 制糖机. You can obtain 糖块 if you grind canes with it.</description>
+    <description>一个制糖机. 可以把甘蔗等甜的东西放进去制成糖块.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>
@@ -42,7 +42,7 @@
   
   <item name="重绘机">
     <type class="tool" subclass="scrolleraser" tileid="-1"/>
-    <description>You see a 重绘机. Put a 标记卷轴 in the opposite hand to clean the scroll.</description>
+    <description>一部重绘机. 把已作标记的卷轴放入可以清除为空白卷轴.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>
@@ -61,7 +61,7 @@
 
   <item name="杵和臼">
     <type class="tool" subclass="pestleandmortar" tileid="-1"/>
-    <description>You see a 杵和臼. This is the traditional tool to pound herbs, food and other substances.</description>
+    <description>杵和臼. 是传统的制药工具, 用来把药草, 食物和一些药材磨碎.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -97,7 +97,7 @@
 
   <item name="钓鱼杆">
     <type class="tool" subclass="fishing_rod" tileid="-1"/>
-    <description>You see a 钓鱼杆. If you find a fishing spot you can catch fish with it.</description>
+    <description>钓鱼杆. 如果你发现可以钓鱼的地方, 你可以用它钓鱼.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -115,7 +115,7 @@
 
   <item name="魔法剪刀">
     <type class="tool" subclass="magical_scissors" tileid="-1"/>
-    <description>You see a sparkling pair of 魔法剪刀. Just think what they could cut!</description>
+    <description>一个闪闪光光的魔法剪刀. 只用考虑要剪开什么!</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -133,7 +133,7 @@
   
   <item name="魔法针">
     <type class="tool" subclass="magical_needle" tileid="-1"/>
-    <description>You see a 魔法针 with a very sharp point.</description>
+    <description>一支尖尖的魔法针.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -151,7 +151,7 @@
   
   <item name="鹤嘴锄">
     <type class="tool" subclass="pick" tileid="-1"/>
-    <description>You see a pick. It is a tool which helps you to get some 煤炭.</description>
+    <description>一把鹤嘴锄. 用它可以挖出煤炭等矿物.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

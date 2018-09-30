@@ -59,9 +59,9 @@ public class BringListOfItemsQuestLogic {
 		final String npcName = concreteQuest.getNPC().getName();
 		final String questState = player.getQuest(concreteQuest.getSlotName());
 		if (!"done".equals(questState)) {
-			res.add("I need to collect " + getListOfStillMissingItems(player, false) +  " for " + npcName + ".");
+			res.add("我还需要为 " + npcName + " 收集 " + getListOfStillMissingItems(player, false) +".");
 		} else {
-			res.add("I collected everything that " +  npcName + " needed!");
+			res.add("我收集了 " +  npcName + " 需要的全部物品!");
 		}
 		return res;
 	}
@@ -298,7 +298,7 @@ public class BringListOfItemsQuestLogic {
 		// allow to say goodbye while listening for items
     protected void sayByeWhileInQuestion1() {
 	concreteQuest.getNPC().add(ConversationStates.QUESTION_1, ConversationPhrases.GOODBYE_MESSAGES, null,
-		ConversationStates.IDLE, "Bye.", null);
+		ConversationStates.IDLE, "再见.", null);
     }
 
     /**

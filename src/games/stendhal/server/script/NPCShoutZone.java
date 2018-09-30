@@ -58,7 +58,7 @@ public class NPCShoutZone extends ScriptImpl {
 				}
 				SingletonRepository.getRuleProcessor().sendMessageToSupporters(text);
 			} else {
-				admin.sendPrivateText("zone " + targetZoneName + "not found");
+				admin.sendPrivateText("没发现地区 " + targetZoneName );
 			}
 
 		}

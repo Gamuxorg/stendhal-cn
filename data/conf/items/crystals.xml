@@ -4,7 +4,7 @@
   
   <item name="红色心情水晶">
     <type class="crystal" subclass="crystal_red" tileid="-1" />
-    <description>You see a 红色心情水晶. It feels hot to the touch.</description>
+    <description>红色心情水晶. 摸上去有点烫.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1" />
@@ -24,7 +24,7 @@
   
   <item name="紫色心情水晶">
     <type class="crystal" subclass="crystal_purple" tileid="-1" />
-    <description>You see a 紫色心情水晶. It feels cold to the touch.</description>
+    <description>紫色心情水晶. 摸上去有些凉.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1" />
@@ -44,7 +44,7 @@
   
   <item name="黄色心情水晶">
     <type class="crystal" subclass="crystal_yellow" tileid="-1" />
-    <description>You see a 黄色心情水晶. It energizes you.</description>
+    <description>黄色心情水晶. 它激励着你.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1" />
@@ -64,7 +64,7 @@
   
   <item name="粉色心情水晶">
     <type class="crystal" subclass="crystal_pink" tileid="-1" />
-    <description>You see a 粉色心情水晶. It almost feels soft.</description>
+    <description>粉色心情水晶. 感觉很舒服.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1" />
@@ -84,7 +84,7 @@
   
   <item name="蓝色心情水晶">
     <type class="crystal" subclass="crystal_blue" tileid="-1" />
-    <description>You see a 蓝色心情水晶. While holding it your worries seem to disappear.</description>
+    <description>使着蓝色心情水晶. 你的担心好像消失了.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
       <quantity value="1" />

@@ -157,17 +157,18 @@ class HouseTax implements TurnListener {
 					String remainder;
 					if (payments == MAX_UNPAID_TAXES) {
 						// Give a final warning if appropriate
-						remainder = " This is your final warning, if you do not pay your taxes within a month then "
-							+ "your house will be made available for others to buy, and the locks will be changed. "
-							+ "You will be unable to access your house or its chest.";
+						remainder = " 这是给你最后的通告, 如果你不在一个月内支付房产税, "
+							+ "你的房子就会卖给其他人, 房间的锁也会更换. "
+							+ "你将不能进入房间, 也不能取走储物箱的东西.";
 
 					} else {
-						remainder = " Pay promptly, as I charge interest on debts owed. And if you fail to pay for "
-							+ Integer.toString(MAX_UNPAID_TAXES + 1) + " months, your house will be repossessed.";
+						remainder = " 快交钱, 趁我还对你的债务感兴趣. 如果你没有在 "
+							+ Integer.toString(MAX_UNPAID_TAXES + 1) + " 月内交税, 你的房产将被没收.";
 					}
-					notifyIfNeeded(owner, "You owe " +  Integer.toString(getTaxDebt(payments)) + " money in house tax for "
-							+ payments + "month"
-							+ ". You may come to Ados Townhall to pay your debt." + remainder);
+					notifyIfNeeded(owner, "你还欠 " + payments + "个月共"
+							+ Integer.toString(getTaxDebt(payments)) + " 钱的房产税 "
+							
+							+ ".可以去阿多斯市政厅交纳欠款." + remainder);
 				}
 			}
 		}
@@ -179,8 +180,8 @@ class HouseTax implements TurnListener {
 	 * @param portal the door of the house to confiscate
 	 */
 	private void confiscate(final HousePortal portal) {
-		notifyIfNeeded(portal.getOwner(), "You have neglected to pay your house taxes for too long. "
-					   + "Your house has been repossessed to cover the debt to the state.");
+		notifyIfNeeded(portal.getOwner(), "你的欠税拖得太久. "
+					   + "所以你的房产已被没收, 用以还欠.");
 		logger.info("repossessed " + portal.getDoorId() + ", which used to belong to " + portal.getOwner());
 		portal.changeLock();
 		portal.setOwner("");
@@ -193,16 +194,16 @@ class HouseTax implements TurnListener {
 	 * @param message the delivered message
 	 */
 	private void notifyIfNeeded(final String owner, final String message) {
-		DBCommandQueue.get().enqueue(new MaybeStoreMessageCommand("Mr Taxman", owner, message));
+		DBCommandQueue.get().enqueue(new MaybeStoreMessageCommand("税官", owner, message));
 	}
 
 	private void setupTaxman() {
-		final SpeakerNPC taxman = SingletonRepository.getNPCList().get("Mr Taxman");
+		final SpeakerNPC taxman = SingletonRepository.getNPCList().get("税官");
 
-		taxman.addReply("tax", "All house owners must #pay taxes to the state.");
+		taxman.addReply("房产税", "所有的屋主必须为国家 #支付 房产税.");
 
 		taxman.add(ConversationStates.ATTENDING,
-				"pay",
+				"支付",
 				new ChatCondition() {
 					@Override
 					public boolean fire(final Player player, final Sentence sentence, final Entity npc) {
@@ -210,11 +211,11 @@ class HouseTax implements TurnListener {
 					}
 		},
 		ConversationStates.QUESTION_1,
-		"Do you want to pay your taxes now?",
+		"现在要交税吗?",
 		null);
 
 		taxman.add(ConversationStates.ATTENDING,
-				   Arrays.asList("pay", "payment"),
+				   Arrays.asList("支付", "交税"),
 				   new ChatCondition() {
 					   @Override
 					public boolean fire(final Player player, final Sentence sentence, final Entity npc) {
@@ -222,8 +223,8 @@ class HouseTax implements TurnListener {
 					   }
 				   },
 				   ConversationStates.ATTENDING,
-				   "According to my records you don't currently owe any tax. House owners will get notified by "
-				   + "myself through the postman as soon as they owe money.",
+				   "记录中显示你没有欠税. 一旦房产所有人发生欠税, "
+				   + "我会让信使马上通知你.",
 				   null);
 
 		taxman.add(ConversationStates.QUESTION_1,
@@ -240,19 +241,19 @@ class HouseTax implements TurnListener {
 							player.drop("money", cost);
 							setTaxesPaid(player, periods);
 							StringBuilder msg = new StringBuilder();
-							msg.append("Thank you! You have paid your taxes of ");
-							msg.append(cost);
-							msg.append(" money for the last ");
+							msg.append("谢谢! 你已付清了 ");
 							if (periods > 1) {
 								msg.append(periods);
-								msg.append(" months.");
+								msg.append(" 个月.");
 							} else {
-								msg.append("month.");
+								msg.append("月.");
 							}
+							msg.append(cost);
+							msg.append(" 钱的欠税. ");							
 							npc.say(msg.toString());
 						} else {
-							npc.say("You don't have enough money to pay your taxes. You need at least "
-									+ cost + " money. Don't delay or the interest on what you owe will increase.");
+							npc.say("你的钱不够付清 "
+									+ cost + " 钱的欠税, 别拖欠, 否则还会增加利息.");
 						}
 				}
 			});
@@ -261,7 +262,7 @@ class HouseTax implements TurnListener {
 				   ConversationPhrases.NO_MESSAGES,
 				   null,
 				   ConversationStates.ATTENDING,
-				   "Very well, but don't delay too long, as the interest on what you owe will increase.",
+				   "好吧, 但别拖太久, 否则还会增加利息.",
 				   null);
 	}
 

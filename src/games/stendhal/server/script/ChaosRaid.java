@@ -41,6 +41,6 @@ public class ChaosRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "Not safe for players below level 150";
+		return "不适合150级以下玩家";
 	}
 }

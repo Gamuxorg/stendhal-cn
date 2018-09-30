@@ -40,6 +40,6 @@ public class FarmRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "对于新骑手比较安全.";
+		return "对于新手比较安全.";
 	}
 }

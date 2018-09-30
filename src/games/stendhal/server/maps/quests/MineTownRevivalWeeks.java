@@ -30,8 +30,8 @@ import games.stendhal.server.maps.quests.revivalweeks.SoldierNPCs;
 import games.stendhal.server.maps.quests.revivalweeks.TicTacToeGame;
 
 /**
- * <p>Creates a special version of Susi by the mine town.
- * <p>Creates a special version of Susi's father in a nearby house.
+ * <p>Creates a special version of 苏茜 by the mine town.
+ * <p>Creates a special version of 苏茜's father in a nearby house.
  * <p>Puts a sign by the tower to say why it is shut.
  */
 public class MineTownRevivalWeeks extends AbstractQuest {

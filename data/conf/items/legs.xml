@@ -4,7 +4,7 @@
 
   <item name="黑护腿">
     <type class="legs" subclass="black_legs" tileid="-1"/>
-    <description>You see a pair of 黑护腿.</description>
+    <description>一双黑护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="15"/>
@@ -25,7 +25,7 @@
 	
   <item name="蓝裤子">
     <type class="legs" subclass="blue_legs" tileid="-1"/>
-    <description>You see a pair of shiny new 蓝裤子.</description>
+    <description>一双发光的蓝裤子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -44,7 +44,7 @@
 	
   <item name="索链护腿">
     <type class="legs" subclass="chain_legs" tileid="-1"/>
-    <description>You see a pair of well made 索链护腿. They should protect you against any attacks aimed low.</description>
+    <description>一双做工不错的索链护腿. 应该可以保护你免受轻微攻击.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -62,7 +62,7 @@
 	
   <item name="混沌护腿">
     <type class="legs" subclass="chaos_legs" tileid="-1"/>
-    <description>You see a pair of 混沌护腿. The strange colours confuse you.</description>
+    <description>一双混沌护腿. 上面奇怪的配色可以扰乱敌人.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -81,7 +81,7 @@
   
   <item name="矮人护腿">
     <type class="legs" subclass="dwarvish_legs" tileid="-1"/>
-    <description>You see a pair of 矮人护腿, designed by master craftsmen.</description>
+    <description>一双矮人护腿, 是由大师级工匠完成.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -100,7 +100,7 @@
   
   <item name="精灵护腿">
     <type class="legs" subclass="elvish_legs" tileid="-1"/>
-    <description>You see a pair of 精灵护腿.</description>
+    <description>一双精灵护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -119,7 +119,7 @@
   
   <item name="黄金护腿">
     <type class="legs" subclass="golden_legs" tileid="-1"/>
-    <description>You see a pair of shining, strong 黄金护腿.</description>
+    <description>金光闪闪的黄金护腿.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="8"/>
@@ -138,7 +138,7 @@
   
   <item name="宝石护腿">
     <type class="legs" subclass="jewelled_legs" tileid="-1"/>
-    <description>You see a beautiful pair of 宝石护腿. A large red gem glints at you and they're encrusted all over with sapphires.</description>
+    <description>一双华丽的宝石护腿. 一颗吸睛的大红色宝石镶在一堆黄宝石中.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -157,7 +157,7 @@
   
   <item name="皮裤">
     <type class="legs" subclass="leather_legs" tileid="-1"/>
-    <description>You see a pair of 皮裤. They look new but they're poor quality.</description>
+    <description>一件皮裤. 看上去很新, 但质量一般.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -175,7 +175,7 @@
   
   <item name="奇妙裤子">
     <type class="legs" subclass="mainio_legs" tileid="-1"/>
-    <description>You see a pair of odd looking 奇妙裤子. They are somewhat startling but they give you a good protection.</description>
+    <description>一件古怪的奇妙裤子. 设计有些另类, 但能提供优良的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -194,7 +194,7 @@
   
   <item name="密银护腿">
     <type class="legs" subclass="mithril_legs" tileid="-1"/>
-    <description>You see a pair of 密银护腿. They will serve you well.</description>
+    <description>一双密银护腿. 会给你优良的保护.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -215,7 +215,7 @@
   
   <item name="红裤子">
     <type class="legs" subclass="red_legs" tileid="-1"/>
-    <description>A pair of 红裤子 are in your grasp.</description>
+    <description>一件红裤子.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -233,7 +233,7 @@
   
   <item name="影子护腿">
     <type class="legs" subclass="shadow_legs" tileid="-1"/>
-    <description>You see a pair of 影子护腿. The weight of them is incredible.</description>
+    <description>一双影子护腿. 它重的难以致信.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -254,7 +254,7 @@
 
   <item name="石护腿">
     <type class="legs" subclass="stone_legs" tileid="-1"/>
-    <description>You see a pair of 石护腿, heavy and durable.</description>
+    <description>一双石护腿, 沉重但持久.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -275,7 +275,7 @@
   
   <item name="镶嵌护腿">
     <type class="legs" subclass="studded_legs" tileid="-1"/>
-    <description>You see a pair of blood stained 镶嵌护腿. You're not sure if the blood came from their last owner ... or his enemies.</description>
+    <description>一双沾有血迹的镶嵌护腿. 不知道是不是上个使用人的血 ... 或是平自敌人.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="2"/>
@@ -293,7 +293,7 @@
 
   <item name="异界护腿">
     <type class="legs" subclass="xeno_legs" tileid="-1"/>
-    <description>You see a pair of 异界护腿. They're very strong and look brand new.</description>
+    <description>一双异界护腿. 防护非常好且很新.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>

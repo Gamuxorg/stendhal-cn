@@ -15,7 +15,7 @@ import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.TextHasNumberCondition;
 
 final class KirdnehHouseSeller extends HouseSellerNPCBase {
-	/** Cost to buy house in kirdneh. */
+	/** Cost to buy house in 克德内. */
 	private static final int COST_KIRDNEH = 120000;
 	private static final String KIRDNEH_QUEST_SLOT = "weekly_item";
 
@@ -31,40 +31,40 @@ final class KirdnehHouseSeller extends HouseSellerNPCBase {
 
 		// player is not old enough
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new NotCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE)),
 				 ConversationStates.ATTENDING,
-				 "The cost of a new house in Kirdneh is "
+				 "克德内新房售价为 "
 						 + getCost()
-				 + " money. But I am afraid I cannot trust you with house ownership just yet. Come back when you have spent at least "
-				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " hours on Faiumoni.",
+				 + " 钱. 但恐怕我还不能想信你能长期居住此地, 当你在Faiumoni游戏时长超过  "
+				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " 小时后来来购买.",
 				 null);
 
 		// player is old enough and hasn't got a house but has not done required quest
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestNotCompletedCondition(KirdnehHouseSeller.KIRDNEH_QUEST_SLOT),
 									 new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT)),
 				 ConversationStates.ATTENDING,
-				 "The cost of a new house in Kirdneh is "
+				 "克德内新房售价为 "
 				 + getCost()
-				 + " money. But my principle is never to sell a house without establishing first the good #reputation of the prospective buyer.",
+				 + " 钱. 但我的原则是, 不卖给没有好 #信誉 的购房者.",
 				 null);
 
 		// player is eligible to buy a house
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT),
 								  new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestCompletedCondition(KirdnehHouseSeller.KIRDNEH_QUEST_SLOT)),
 					ConversationStates.QUEST_OFFERED,
-				 "The cost of a new house is "
+				 "克德内新房售价为 "
 				 + getCost()
-				 + " money.  Also, you must pay a house tax of " + HouseTax.BASE_TAX
-				 + " money, every month. If you have a house in mind, please tell me the number now. I will check availability. "
-				 + "Kirdneh Houses are numbered "
-				 + getLowestHouseNumber() + " to " + getHighestHouseNumber() + ".",
+				 + " 钱.  而且, 并且, 你还要每月支付房产税 " + HouseTax.BASE_TAX
+				 + " 钱. 如果你已有房产, 请告诉我房间号码. 我会核对是否有效. "
+				 + "克德内房产的号码包括从 "
+				 + getLowestHouseNumber() + " 到 " + getHighestHouseNumber() + ".",
 				 null);
 
 		// handle house numbers 26 to 49
@@ -76,11 +76,11 @@ final class KirdnehHouseSeller extends HouseSellerNPCBase {
 				null,
 				new BuyHouseChatAction(getCost(), QUEST_SLOT));
 
-		addJob("I'm an estate agent. In simple terms, I sell houses for the city of Kirdneh. Please ask about the #cost if you are interested. Our brochure is at #https://stendhalgame.org/wiki/StendhalHouses.");
-		addReply("reputation", "I will ask Hazel about you. Provided you've finished any task she asked you to do for her recently, and haven't left anything unfinished, she will like you.");
-		addReply("Amber", "Oh Amber... I really miss her, we had an argument just recently. She #left after that. I hope she's okay.");
-		addReply("left", "Personally I have no idea where she is at the moment. Her son杰夫waits for her in town but I heard that some people saw her somewhere around Fado forest, in the south.");
-		setDescription("You see a smart looking man.");
+		addJob("我是房子销售经理. 简单说, 我卖房给克德内的居民. 如果你有兴趣可以寻问 #房价. 我们的售楼部在 #https://stendhalgame.org/wiki/StendhalHouses.");
+		addReply("信誉", "我会向 哈泽尔 咨询你的情况. 她提供你最近为她完成的任务, 并没有留下没完成的任务, 她才会认同你.");
+		addReply("安伯", "Oh 安伯... 我真的想她了, 刚刚我们还讨论过. 然后她就 #离开 了. 希望她还好.");
+		addReply("离开", "我也不知道她现在去了哪儿. 她儿子杰夫还在等她回家, 但我听说一些人曾在法多森林里见过她, 就在南面.");
+		setDescription("你遇见了一个看上去很精明的人.");
 		setEntityClass("man_004_npc");
 		setPosition(31, 4);
 		initHP(100);

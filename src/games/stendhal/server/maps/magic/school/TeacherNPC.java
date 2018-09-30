@@ -45,7 +45,7 @@ public class TeacherNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Esolte Vietta") {
+		final SpeakerNPC npc = new SpeakerNPC("爱索特威塔") {
 
 			@Override
 			protected void createPath() {
@@ -61,12 +61,12 @@ public class TeacherNPC implements ZoneConfigurator {
 			    protected void createDialog() {
 				add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 						new GreetingMatchesNameCondition(getName()), true,
-						ConversationStates.IDLE, "Sit down, shut up, and watch me!", null);
+						ConversationStates.IDLE, "坐下, 起立, 看着我!", null);
 	 	     }
 
 		};
 
-		npc.setDescription("You see a witch flying on a broomstick. She appears to be instructing some pupils.");
+		npc.setDescription("你遇见了骑在扫把上的巫婆 爱索特威塔. 她正教导一些学生.");
 		npc.setEntityClass("witch3npc");
 		npc.setPosition(29, 19);
 		npc.initHP(100);

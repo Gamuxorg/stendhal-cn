@@ -89,7 +89,7 @@ public class BuyerNPC implements ZoneConfigurator {
 		// Add a book with the shop offers
 		final Sign book = new Sign();
 		book.setPosition(12, 3);
-		book.setText(" -- Buying -- \n 铁靴\t 1000\n 金靴子\t 1500\n 影子靴子\t 2000\n 石靴\t 2500\n 混沌靴\t 4000\n 绿了吧唧的靴子\t 6000\n 异界靴子\t 8000");
+		book.setText(" -- Buying -- \n 铁靴\t 1000\n 金靴子\t 1500\n 影子靴子\t 2000\n 石靴\t 2500\n 混沌靴\t 4000\n 绿色龙靴\t 6000\n 异界靴子\t 8000");
 		book.setEntityClass("book_blue");
 		book.setResistance(10);
 		zone.add(book);

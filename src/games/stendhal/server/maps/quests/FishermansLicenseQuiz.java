@@ -41,7 +41,7 @@ import marauroa.common.game.RPObjectNotFoundException;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Santiago the fisherman</li>
+ * <li>圣地亚哥 the fisherman</li>
  * </ul>
  *
  * STEPS:
@@ -93,7 +93,7 @@ public class FishermansLicenseQuiz extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met Santiago in a hut in 阿多斯城. If I pass his quiz I get a fishing license.");
+		res.add("I met 圣地亚哥 in a hut in 阿多斯城. If I pass his quiz I get a fishing license.");
 		if (!player.isQuestCompleted(QUEST_SLOT)) {
 			if (remainingTimeToWait(player)>0) {
 				res.add("I failed the last exam and it's too soon to try again.");
@@ -154,7 +154,7 @@ public class FishermansLicenseQuiz extends AbstractQuest {
 	}
 
 	private void createQuizStep() {
-		final SpeakerNPC fisherman = npcs.get("Santiago");
+		final SpeakerNPC fisherman = npcs.get("圣地亚哥");
 
 		// Don't Use condition here, because of FishermansLicenseCollector
 		fisherman.add(ConversationStates.ATTENDING,
@@ -262,7 +262,7 @@ public class FishermansLicenseQuiz extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Fishermans License Quiz",
-				"Santiago the fisherman will examine fishermen on their knowledge of fish species.",
+				"圣地亚哥 the fisherman will examine fishermen on their knowledge of fish species.",
 				false);
 		createQuizStep();
 	}
@@ -278,6 +278,6 @@ public class FishermansLicenseQuiz extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Santiago";
+		return "圣地亚哥";
 	}
 }

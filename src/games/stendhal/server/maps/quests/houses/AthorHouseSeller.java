@@ -34,38 +34,38 @@ final class AthorHouseSeller extends HouseSellerNPCBase {
 
 		// player is not old enough
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase", "apartment"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new NotCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE)),
 				 ConversationStates.ATTENDING,
-				 "The cost of a new apartment in Athor is "
+				 "阿托尔的房子需要花费 "
 						 + getCost()
-				 + " money. But, you'll have to come back when you have spent at least "
-				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " hours on Faiumoni. Maybe I'll have managed to get a suntan by then.",
+				 + " 钱. 但恐怕我还不能想信你能长期居住此地, 当你在Faiumoni游戏时长超过 "
+				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " 小时后来来购买. 也许到那时我已晒成古铜色皮肤了.",
 				 null);
 
 		// player is old enough and hasn't got a house but has not done required quest
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase", "apartment"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestNotCompletedCondition(AthorHouseSeller.FISHLICENSE2_QUEST_SLOT),
 								  new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT)),
 				 ConversationStates.ATTENDING,
-				 "What do you want with an apartment on Athor when you're not even a good #fisherman? We are trying to attract owners who will spend time on the island. Come back when you have proved yourself a better fisherman.",
+				 "在你还没成为一个合格的 #渔民之前, 买阿托尔的公寓做什么? 我们会跟踪房主在此岛花遇的时间. 在证明了你是个好渔民后再回来吧.",
 				 null);
 
 		// player is eligible to buy a apartment
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase", "apartment"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT),
 								  new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestCompletedCondition(AthorHouseSeller.FISHLICENSE2_QUEST_SLOT)),
 					ConversationStates.QUEST_OFFERED,
-				 "The cost of a new apartment is "
+				 "新公寓要花费 "
 				 + getCost()
-				 + " money.  Also, you must pay a monthly tax of " + HouseTax.BASE_TAX
-				 + " money. If you have an apartment in mind, please tell me the number now. I will check availability. "
-				 + "阿托尔公寓s are numbered "
-				 + getLowestHouseNumber() + " to " + getHighestHouseNumber() + ".",
+				 + " 鍂.  而且, 你还要付 " + HouseTax.BASE_TAX
+				 + " 钱的税金. 如果你有意购买, 请告诉我公寓的号码. 我需要核对公寓的情况."
+				 + "阿托尔公寓的房屋号码是从 "
+				 + getLowestHouseNumber() + " 到 " + getHighestHouseNumber() + ".",
 				 null);
 
 		// handle house numbers 101 to 108
@@ -78,10 +78,10 @@ final class AthorHouseSeller extends HouseSellerNPCBase {
 				new BuyHouseChatAction(getCost(), QUEST_SLOT));
 
 
-		addJob("Well, I'm actually trying to sunbathe here. But, since you ask, I sell apartments here on Athor. Our brochure is at #https://stendhalgame.org/wiki/StendhalHouses.");
-		addReply("fisherman", "A fishing license from Santiago in Ados is the sign of a good fisherman, he sets two exams. Once you have passed both parts you are a good fisherman.");
+		addJob("好吧, 我在这享受日光浴. 不过既然你问了, 我是在销售阿托尔的公寓. 可以看看我们的小册子 #https://stendhalgame.org/wiki/StendhalHouses.");
+		addReply("渔民", "渔民合格证明是由阿多斯的圣地亚哥决定, 他设置了两个测验. 一旦你全部通过就证明你是合格的渔民.");
 		setDirection(Direction.DOWN);
-		setDescription("You see a man trying to catch some sun.");
+		setDescription("你遇见一个正要晒日光浴的人.");
 		setEntityClass("swimmer1npc");
 		setPosition(44, 40);
 		initHP(100);

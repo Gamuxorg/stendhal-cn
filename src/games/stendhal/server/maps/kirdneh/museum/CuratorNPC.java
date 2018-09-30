@@ -50,7 +50,7 @@ public class CuratorNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Hazel") {
+		final SpeakerNPC npc = new SpeakerNPC("哈泽尔") {
 
 			@Override
 			protected void createPath() {
@@ -78,7 +78,7 @@ public class CuratorNPC implements ZoneConfigurator {
 		npc.setPosition(2, 38);
 		npc.setDirection(Direction.RIGHT);
 		npc.initHP(100);
-		npc.setDescription("You see Hazel, the curator of Kirdneh museum.");
+		npc.setDescription("You see 哈泽尔, the curator of Kirdneh museum.");
 		zone.add(npc);
 	}
 }

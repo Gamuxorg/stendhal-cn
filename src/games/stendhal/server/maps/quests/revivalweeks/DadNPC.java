@@ -21,7 +21,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.maps.ados.rosshouse.FatherNPC;
 
 /**
- * Susi's father during the 矿镇复兴展会周
+ * 苏茜's father during the 矿镇复兴展会周
  */
 public class DadNPC implements LoadableContent {
 	private void createDadNPC() {
@@ -35,13 +35,13 @@ public class DadNPC implements LoadableContent {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi there.");
-				addJob("I'm on vacation now for the 矿镇复兴展会周. But I still need to finish some work before my daughter #Susi and I can enjoy the party.");
-				addHelp("My daughter Susi is all excited about the 矿镇复兴展会周. But I am really concerned that something bad may happen to her again. So she will have to wait until I finish my work.");
-				addReply("susi", "My daughter Susi is all excited about the 矿镇复兴展会周. But I am really concerned that something bad may happen to her again. So she will have to wait until I finish my work.");
-				addOffer("Sorry I do not have anything to offer you. I have to walk #Susi home to Ados once the party is over.");
-				addQuest("Go meet my daughter #Susi, she'd love to make friends.");
-				addGoodbye("Bye, nice to meet you.");
+				addGreeting("嗨, 来这儿.");
+				addJob("我在矿镇复兴展会周渡假. 但我还要在我女儿 #苏茜 的聚会开办之前完成一些工作.");
+				addHelp("我女儿 苏茜 对矿镇复兴展会周很是期待. 但我真的担心女儿再出现坏状况. 所以在我完成工作之前她还要等一会.");
+				addReply("苏茜", "我的女儿苏茜对矿镇复兴展会周很是期待. 但我但我真的担心女儿再出现坏状况. 所以在我完成工作之前她还要等一会.");
+				addOffer("抱歉我没有要卖的东西. 等矿镇复兴展会结束后, 我要去阿多斯的 #苏茜 家.");
+				addQuest("去看看我的女儿 #苏茜, 她喜欢交朋友.");
+				addGoodbye("再见, 很高兴见到你.");
 			}
 		};
 
@@ -74,7 +74,7 @@ public class DadNPC implements LoadableContent {
 
 
 	/**
-	 * removes Susi's father from the Mine Town and places him back into his home in Ados.
+	 * removes 苏茜's father from the Mine Town and places him back into his home in Ados.
 	 *
 	 * @return <code>true</code>, if the content was removed, <code>false</code> otherwise
 	 */

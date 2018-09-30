@@ -53,7 +53,7 @@ import games.stendhal.server.maps.Region;
  * PARTICIPANTS:
  * <ul>
  * <li>Mrs Yeti, who lives in a snowy dungeon</li>
- * <li>Salva Mattori, Healer at magic city</li>
+ * <li>莎娃玛特丽, Healer at magic city</li>
  * <li>Hackim Easso, Blacksmith assistant semos</li>
  * </ul>
  *
@@ -116,7 +116,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Thank you for your help! You need to go to Salva Mattori in the magic city for the #治疗剂.",
+				"Thank you for your help! You need to go to 莎娃玛特丽 in the magic city for the #治疗剂.",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		// Player says no, they've lost karma.
@@ -133,7 +133,7 @@ import games.stendhal.server.maps.Region;
 	// 鼠尾草
 	// wine
 	// 黑珍珠
-	final SpeakerNPC npc = npcs.get("Salva Mattori");
+	final SpeakerNPC npc = npcs.get("莎娃玛特丽");
 
     	npc.add(ConversationStates.ATTENDING, "治疗剂",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
@@ -250,7 +250,7 @@ import games.stendhal.server.maps.Region;
 								new QuestInStateCondition(QUEST_SLOT, "pies"),
 								new QuestInStateCondition(QUEST_SLOT, "小刀")),
 				ConversationStates.ATTENDING,
-				"I am waiting for you to return with a 爱之治疗剂. Please ask Salva Mattori in the magic city about: #治疗剂.",
+				"I am waiting for you to return with a 爱之治疗剂. Please ask 莎娃玛特丽 in the magic city about: #治疗剂.",
 				null);
 	}
 
@@ -358,7 +358,7 @@ import games.stendhal.server.maps.Region;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			res.add("I met 耶提女士 in icy caves below 塞门镇 Mountain.");
-			res.add("耶提女士 asked me to go to Salva Mattori for a special 爱之治疗剂 for her husband.");
+			res.add("耶提女士 asked me to go to 莎娃玛特丽 for a special 爱之治疗剂 for her husband.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help with soppy love stories..");
 				return res;
@@ -366,7 +366,7 @@ import games.stendhal.server.maps.Region;
 			if ("start".equals(questState)) {
 				return res;
 			}
-			res.add("Salva Mattori needs a magic knife from Hackim Easso to make her 治疗剂.");
+			res.add("莎娃玛特丽 needs a magic knife from Hackim Easso to make her 治疗剂.");
 			if ("hackim".equals(questState)) {
 				return res;
 			}

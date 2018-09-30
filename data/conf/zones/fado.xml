@@ -1039,9 +1039,9 @@ For example say:  11  if you want the room called Water of Love.
     <entity x="63" y="82">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buyaxe</parameter>
-        <parameter name="title">Woody's list of axes</parameter>
+        <parameter name="title">乌迪's list of axes</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">Woody the Woodcutter will buy these axes:</parameter>
+        <parameter name="caption">乌迪 the Woodcutter will buy these axes:</parameter>
       </implementation>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -2116,9 +2116,9 @@ Today I used an orb in the witch Jynath's house and arrived in a city of witches
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buymagic</parameter>
-        <parameter name="title">Vonda's shop</parameter>
+        <parameter name="title">文达's shop</parameter>
         <parameter name="seller">false</parameter>
-        <parameter name="caption">Vonda will pay the following market rates for your magic items:</parameter>
+        <parameter name="caption">文达 will pay the following market rates for your magic items:</parameter>
       </implementation>
       <attribute name="class">transparent</attribute>
     </entity>

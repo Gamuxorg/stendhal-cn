@@ -56,13 +56,13 @@ import games.stendhal.server.maps.Region;
  * PARTICIPANTS:
  * <ul>
  * <li>Jef</li>
- * <li>Amber</li>
+ * <li>安伯</li>
  * </ul>
  *
  * STEPS:
  * <ul>
  * <li>杰夫waits for his mum in Kirdneh for a longer time now and is frightened that something happened to her</li>
- * <li> You go to find Amber somewhere in Fado forest</li>
+ * <li> You go to find 安伯 somewhere in Fado forest</li>
  * <li> She gives you a flower which you have to bring to Jef</li>
  * <li> You return and give the flower to Jef</li>
  * <li>杰夫will reward you well</li>
@@ -150,7 +150,7 @@ public class FindJefsMom extends AbstractQuest {
 				Arrays.asList("mum", "mother", "mom"),
 				null,
 				ConversationStates.ATTENDING,
-				"我妈妈 Amber 离开我去市场买东西了, 但她还没回来 #yet.",
+				"我妈妈 安伯 离开我去市场买东西了, 但她还没回来 #yet.",
 				null);
 
 		npc.add(
@@ -171,7 +171,7 @@ public class FindJefsMom extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("Roger Frampton", "Roger", "Frampton"),
+				Arrays.asList("罗格费雷普顿", "Roger", "Frampton"),
 				null,
 				ConversationStates.ATTENDING,
 				"可能 Roger 对她的离开有些疑问. 我不确定他的具体位置, 我只知道他在 Kirdneh 的某处售房.",
@@ -180,7 +180,7 @@ public class FindJefsMom extends AbstractQuest {
 	}
 
 	private void findMomStep() {
-		final SpeakerNPC amber = npcs.get("Amber");
+		final SpeakerNPC amber = npcs.get("安伯");
 
         // give the flower if it's at least 5 days since the player activated the quest the last time, and set the time slot again
 		amber.add(ConversationStates.ATTENDING, "杰夫",
@@ -245,7 +245,7 @@ public class FindJefsMom extends AbstractQuest {
 			}
 		};
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("flower", "马蹄莲", "fine", "amber", "done"),
+				Arrays.asList("flower", "马蹄莲", "fine", "安伯", "done"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "found_mom"), new PlayerHasItemWithHimCondition("马蹄莲")),
 				ConversationStates.ATTENDING, null,
 				new MultipleActions(new DropItemAction("马蹄莲"),
@@ -263,7 +263,7 @@ public class FindJefsMom extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"寻找 Jefs 的妈妈",
-				"Jef, 是 Kirdneh 城的一个等妈妈回家小朋友, 他的妈妈 Amber 去了超市, 但一直没回来. ",
+				"Jef, 是 Kirdneh 城的一个等妈妈回家小朋友, 他的妈妈 安伯 去了超市, 但一直没回来. ",
 				false);
 		offerQuestStep();
 		findMomStep();
@@ -285,10 +285,10 @@ public class FindJefsMom extends AbstractQuest {
 			res.add("我寻找他的妈妈时花费了大多的时间, 这是为什么我拒绝帮他找妈妈的原因. ");
 		}
 		if ("start".equals(questState)) {
-			res.add("Jef 请我看望他的去市场买东西没回来的Amber妈妈, 希望她能在我告诉她儿子Jef后能听进我的话. ");
+			res.add("Jef 请我看望他的去市场买东西没回来的安伯妈妈, 希望她能在我告诉她儿子Jef后能听进我的话. ");
 		}
 		if ("found_mom".equals(questState)) {
-			res.add("我找到了 Amber, Jef's 妈妈, 当她在 Fade 森林的某处闲逛, 她给了我一朵花要带回给她儿子, 并且要我对她儿子说她很好. ");
+			res.add("我找到了 安伯, Jef's 妈妈, 当她在 Fade 森林的某处闲逛, 她给了我一朵花要带回给她儿子, 并且要我对她儿子说她很好. ");
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {

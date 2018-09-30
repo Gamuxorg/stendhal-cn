@@ -40,6 +40,6 @@ public class ImperialRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "Not safe for players below level 150";
+		return "150级以下不安全";
 	}
 }

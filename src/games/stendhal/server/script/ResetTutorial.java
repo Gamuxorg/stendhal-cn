@@ -34,7 +34,7 @@ public class ResetTutorial extends ScriptImpl {
 
 		// admin help
 		if (args.size() == 0) {
-			admin.sendPrivateText("Need player name as parameter.");
+			admin.sendPrivateText("需要玩家名称作为参数.");
 			return;
 		}
 
@@ -51,6 +51,6 @@ public class ResetTutorial extends ScriptImpl {
 
 		// notify the player
 		player.sendPrivateText(NotificationType.SUPPORT,
-				"Your tutorial state was reset by " + admin.getTitle());
+				"你的教程状态被重置被 " + admin.getTitle());
 	}
 }

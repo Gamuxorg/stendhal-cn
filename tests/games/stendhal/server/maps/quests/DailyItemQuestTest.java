@@ -71,7 +71,7 @@ public class DailyItemQuestTest {
 	@Test
 	public void testQuest() {
 
-		npc = SingletonRepository.getNPCList().get("Mayor Chalmers");
+		npc = SingletonRepository.getNPCList().get("查玛斯市长");
 		en = npc.getEngine();
 
 		en.step(player, "hi");

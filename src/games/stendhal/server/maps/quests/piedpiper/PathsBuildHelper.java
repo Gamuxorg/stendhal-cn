@@ -23,7 +23,7 @@ import games.stendhal.server.core.pathfinder.RPZonePath;
 public class PathsBuildHelper {
 
 	/**
-	 * route for pied piper incoming
+	 * route for 彼德彼伯 incoming
 	 * @return - incoming path
 	 */
 	public static List<RPZonePath> getAdosIncomingPath() {
@@ -170,7 +170,7 @@ public class PathsBuildHelper {
 
 
 	/**
-	 * route for pied piper outgoing
+	 * route for 彼德彼伯 outgoing
 	 * @return - outgoing path
 	 */
 	public static List<RPZonePath> getAdosTownHallBackwardPath() {
@@ -224,14 +224,14 @@ public class PathsBuildHelper {
 
 	/**
 	 * it is a point where piper should go after speaking with mayor.
-	 * @return - return point where pied piper can go through his multi zones path.
+	 * @return - return point where 彼德彼伯 can go through his multi zones path.
 	 */
 	public static Node getAdosTownHallMiddlePoint() {
 		return new Node(26,14);
 	}
 
 	/**
-	 * route for pied piper outgoing event
+	 * route for 彼德彼伯 outgoing event
 	 * @return - outgoing path
 	 */
 	public static List<List<RPZonePath>> getAdosCollectingRatsPaths() {
@@ -254,7 +254,7 @@ public class PathsBuildHelper {
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
 		/*
-		 * Susi's house
+		 * 苏茜's house
 		 */
 		localroute.clear();
 		localroute.add(new Node(42,97));
@@ -267,7 +267,7 @@ public class PathsBuildHelper {
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
 		/*
-		 * next house from Susi
+		 * next house from 苏茜
 		 */
 		localroute.clear();
 		localroute.add(new Node(42,116));

@@ -55,7 +55,7 @@ import games.stendhal.server.maps.Region;
  * QUEST: Weekly Item Fetch Quest.
  * <p>
  * PARTICIPANTS:
- * <ul><li> Hazel, Museum Curator of Kirdneh
+ * <ul><li> 哈泽尔, Museum Curator of Kirdneh
  * <li> some items
  * </ul>
  * STEPS:<ul>
@@ -206,7 +206,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 	}
 
 	private void getQuest() {
-		final SpeakerNPC npc = npcs.get("Hazel");
+		final SpeakerNPC npc = npcs.get("哈泽尔");
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								 new NotCondition(new TimePassedCondition(QUEST_SLOT,1,expireDelay))),
@@ -240,7 +240,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 	}
 
 	private void completeQuest() {
-		final SpeakerNPC npc = npcs.get("Hazel");
+		final SpeakerNPC npc = npcs.get("哈泽尔");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.FINISH_MESSAGES,
@@ -296,7 +296,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 	}
 
 	private void abortQuest() {
-		final SpeakerNPC npc = npcs.get("Hazel");
+		final SpeakerNPC npc = npcs.get("哈泽尔");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.ABORT_MESSAGES,
@@ -334,7 +334,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Hazel, the curator of Kirdneh museum.");
+		res.add("I have met 哈泽尔, the curator of Kirdneh museum.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("I do not want to help Kirdneh museum become the greatest in the land.");
@@ -351,11 +351,11 @@ public class WeeklyItemQuest extends AbstractQuest {
 			}
 		}
 		if (isRepeatable(player)) {
-			res.add("I took the valuable item to Hazel and the museum can now afford to send me to find another.");
+			res.add("I took the valuable item to 哈泽尔 and the museum can now afford to send me to find another.");
 		} else if (isCompleted(player)) {
-			res.add("I took the valuable item to Hazel within the last 7 days.");
+			res.add("I took the valuable item to 哈泽尔 within the last 7 days.");
 		}
-		// add to history how often player helped Hazel so far
+		// add to history how often player helped 哈泽尔 so far
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
 			res.add("I've brought exhibits for the museum on "
@@ -369,7 +369,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Kirdneh museum needs help!",
-				"Hazel, the curator of the Kirdneh Museum, wants as many rare exhibits as she can afford.",
+				"哈泽尔, the curator of the Kirdneh Museum, wants as many rare exhibits as she can afford.",
 				true);
 		buildItemsMap();
 
@@ -402,6 +402,6 @@ public class WeeklyItemQuest extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Hazel";
+		return "哈泽尔";
 	}
 }

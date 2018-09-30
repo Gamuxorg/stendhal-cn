@@ -29,17 +29,17 @@ public class SetWelcomeText extends ScriptImpl {
 	@Override
 	public void execute(Player admin, List<String> args) {
 		if (args.isEmpty()) {
-			admin.sendPrivateText(NotificationType.ERROR, "Argument missing.");
+			admin.sendPrivateText(NotificationType.ERROR, "缺少参数.");
 			return;
 		}
 
 		if (args.size() > 1) {
-			admin.sendPrivateText(NotificationType.ERROR, "Too many arguments. Please use quotes.");
+			admin.sendPrivateText(NotificationType.ERROR, "参数过多. 请使用 quotes.");
 			return;
 		}
 
 		StendhalRPRuleProcessor.setWelcomeMessage(args.get(0));
-		admin.sendPrivateText("Set welcome text to: " + args.get(0));
+		admin.sendPrivateText("设置欢迎信息: " + args.get(0));
 	}
 
 }

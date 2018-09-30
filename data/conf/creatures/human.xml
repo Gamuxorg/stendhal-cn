@@ -3194,9 +3194,9 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Be quiet or I will lock you on my ship, just like I locked up the girl Susi!"/>
+        <noise state="idle follow fight" value="Be quiet or I will lock you on my ship, just like I locked up the girl 苏茜!"/>
         <noise state="idle follow fight" value="You remind me of the Ados girl we stole to clean our ship!"/>
-        <noise state="idle follow fight" value="You'd make a nice playmate for the Susi girl on our ship..."/>
+        <noise state="idle follow fight" value="You'd make a nice playmate for the 苏茜 girl on our ship..."/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>

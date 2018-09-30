@@ -28,7 +28,7 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 public class OutgoingPhase extends TPPQuest {
-	private final SpeakerNPC piedpiper = new SpeakerNPC("Pied Piper");
+	private final SpeakerNPC piedpiper = new SpeakerNPC("彼德彼伯");
 	private final SpeakerNPC mainNPC = TPPQuestHelperFunctions.getMainNPC();
 	private final int minPhaseChangeTime;
 	private int maxPhaseChangeTime;
@@ -45,18 +45,17 @@ public class OutgoingPhase extends TPPQuest {
 		// Player asking about rats
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("rats", "rats!"),
+				Arrays.asList("老鼠", "鼠灾"),
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"The rats are gone. "+
-	    		"You can get a #reward for your help now, ask about #details "+
-				  "if you want to know more.",
+				"鼠灾消除. "+
+	    		"你们可以为自已的付出得到 #奖励 , 想了解详情请查看 #详情 ",
 				null);
 
 		// Player asking about details.
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"details",
+				"详情",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -65,7 +64,7 @@ public class OutgoingPhase extends TPPQuest {
 		// Player asking about reward
 		mainNPC.add(
 				ConversationStates.ATTENDING,
-				"reward",
+				"奖励",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				null,
@@ -194,15 +193,15 @@ public class OutgoingPhase extends TPPQuest {
 
 
 	/*
-	 *  Pied Piper sent rats away:-)
+	 *  彼德彼伯 sent rats away:-)
 	 */
 	@Override
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
-			"查玛斯市长 shouts: Thankfully, all the #rats are gone now, " +
-			"the Pied Piper hypnotized them and led them away to the dungeons. "+
-			"Those of you who helped 阿多斯城 with the rats problem "+
-			"can get your #reward now.";
+			"查玛斯市长 高喊: 感谢, 现在所有的 #老鼠 都被清除, " +
+			"彼德彼伯 催眠了它们, 并把它们带出了地牢. "+
+			"帮助过阿多斯城解决鼠灾的人们, "+
+			"现在都能拿到 #奖励.";
 		return text;
 	}
 
@@ -212,7 +211,7 @@ public class OutgoingPhase extends TPPQuest {
 	}
 
 	/**
-	 * function for creating pied piper npc
+	 * function for creating 彼德彼伯 npc
 	 */
 	private void createPiedPiper() {
 		TPPQuestHelperFunctions.setupPiper(piedpiper);

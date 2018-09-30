@@ -35,6 +35,6 @@ public class FairyRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "Not safe for players below level 20";
+		return "20级以下不安全";
 	}
 }

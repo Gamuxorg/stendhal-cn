@@ -72,7 +72,7 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 			setupZone(zone);
 		}
 
-		SpeakerNPC taxman = new SpeakerNPC("Mr Taxman");
+		SpeakerNPC taxman = new SpeakerNPC("税官");
 		SingletonRepository.getNPCList().add(taxman);
 
 		new HouseBuying().addToWorld();
@@ -110,7 +110,7 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 
 
 	public HouseBuyingAthorTest() {
-		super(ZONE_NAME, "Barrett Holmes", "Reg Denson", "Mr Taxman", "Cyk");
+		super(ZONE_NAME, "巴瑞特霍木斯", "瑞格丹森", "税官", "Cyk");
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "cost");
 		assertEquals("What do you want with an apartment on Athor when you're not even a good #fisherman? We are trying to attract owners who will spend time on the island. Come back when you have proved yourself a better fisherman.", getReply(npc));
 		en.step(player, "fisherman");
-		assertEquals("A fishing license from Santiago in Ados is the sign of a good fisherman, he sets two exams. Once you have passed both parts you are a good fisherman.", getReply(npc));
+		assertEquals("A fishing license from 圣地亚哥 in Ados is the sign of a good fisherman, he sets two exams. Once you have passed both parts you are a good fisherman.", getReply(npc));
 		// [14:06] Admin player changed your state of the quest 'fishermans_license2' from 'null' to 'done'
 		// [14:06] Changed the state of quest 'fishermans_license2' from 'null' to 'done'
 		player.setQuest("fishermans_license2", "done");

@@ -112,11 +112,11 @@ public class ServerDown extends ScriptImpl {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Oh hello, I don't get many visitors here at this #place.");
-				addJob("Oh nothing really. I just watch over space and time.");
-				addHelp("Thank you for your offer. But there is nothing you can do right now. Just wait and relax.");
-				addReply("place", "This is... Think of it as after the theater, outside space and time, beyond #reality.");
-				addReply("reality", "To get you to this place beyond reality, I had to suspend disbelief.");
+				addGreeting("Oh 你好, 还没有人到过 #此地.");
+				addJob("Oh 真没有. 我只照管空间和时间.");
+				addHelp("谢谢你的好意. 但现在没有什么需要帮忙的. 等着就行了.");
+				addReply("此地", "这里...可以当作舞台的幕后, 空间和时间之外, 在 #真实世界 的另一面.");
+				addReply("真实世界", "To get you to this place beyond reality, I had to suspend disbelief.");
 				addReply("stendhal", "The powers, that be, are currently restoring the Stendhal reality. Just wait and relax.");
 				addReply("pacman", "Oh, that is just one reality among the ones we are watching here. See #https://stendhalgame.org/-49 for details.");
 

@@ -41,19 +41,19 @@ final class AdosHouseSeller extends HouseSellerNPCBase {
 
 		// player is not old enough
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new NotCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE)),
 				 ConversationStates.ATTENDING,
-				 "The cost of a new house in Ados is "
+				 "阿多斯的房子需要花费 "
 				 + getCost()
-				 + " money. But I am afraid I cannot trust you with house ownership just yet, come back when you have spent at least "
-				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " hours on Faiumoni.",
+				 + " 钱. 但恐怕我还不能想信你能长期居住此地, 当你在Faiumoni游戏时长超过 "
+				 + Integer.toString((HouseSellerNPCBase.REQUIRED_AGE / 60)) + " 小时后来来购买.",
 					null);
 
 
 		// player doesn't have a house and is old enough but has not done required quests
 		add(ConversationStates.ATTENDING,
-				 Arrays.asList("cost", "house", "buy", "purchase"),
+				 Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT),
 								  new NotCondition(
@@ -65,14 +65,14 @@ final class AdosHouseSeller extends HouseSellerNPCBase {
 																	   new QuestCompletedCondition(AdosHouseSeller.GHOSTS_QUEST_SLOT),
 																	   new QuestCompletedCondition(AdosHouseSeller.ZARA_QUEST_SLOT)))),
 				 ConversationStates.ATTENDING,
-				 "The cost of a new house in Ados is "
+				 "阿多斯的房子需要花费 "
 				 + getCost()
-				 + " money. But I am afraid I cannot sell you a house yet as you must first prove yourself a worthy #citizen.",
+				 + " 钱. 但恐怕我还不能想信你, 你要先证明自已是个杰出的 #公民.",
 				 null);
 
 		// player is eligible to buy a house
 		add(ConversationStates.ATTENDING,
-					Arrays.asList("cost", "house", "buy", "purchase"),
+					Arrays.asList("购房", "房子", "买房", "房价"),
 				 new AndCondition(new QuestNotStartedCondition(HouseSellerNPCBase.QUEST_SLOT),
 								  new AgeGreaterThanCondition(HouseSellerNPCBase.REQUIRED_AGE),
 								  new QuestCompletedCondition(AdosHouseSeller.DAILY_ITEM_QUEST_SLOT),
@@ -82,12 +82,12 @@ final class AdosHouseSeller extends HouseSellerNPCBase {
 								  new QuestCompletedCondition(AdosHouseSeller.GHOSTS_QUEST_SLOT),
 								  new QuestCompletedCondition(AdosHouseSeller.ZARA_QUEST_SLOT)),
 				 ConversationStates.QUEST_OFFERED,
-				 "The cost of a new house in Ados is "
+				 "阿多斯的房子需要花费 "
 				 + getCost()
-				 + " money. Also, you must pay a house tax of " + HouseTax.BASE_TAX
-				 + " money, every month. If you have a house in mind, please tell me the number now. I will check availability. "
-				 + "The Ados houses are numbered from "
-				 + getLowestHouseNumber() + " to " + getHighestHouseNumber() + ".",
+				 + " 钱. 并且, 你还要每月支付房产税 " + HouseTax.BASE_TAX
+				 + " 钱. 如果你已有房产, 请告诉我房间号码. 我会核对是否有效."
+				 + "阿多斯房产的号码包括从 "
+				 + getLowestHouseNumber() + " 到 " + getHighestHouseNumber() + ".",
 				 null);
 
 		// handle house numbers getLowestHouseNumber() - getHighestHouseNumber()
@@ -99,10 +99,10 @@ final class AdosHouseSeller extends HouseSellerNPCBase {
 				null,
 				new BuyHouseChatAction(getCost(), QUEST_SLOT));
 
-		addJob("I'm an estate agent. In simple terms, I sell houses for the city of Ados. Please ask about the #cost if you are interested. Our brochure is at #https://stendhalgame.org/wiki/StendhalHouses.");
-		addReply("citizen", "I conduct an informal survey amongst the Ados residents. If you have helped everyone in Ados, I see no reason why they shouldn't recommend you. I speak with my friend 约书亚, the Mayor, the little girl Anna, Pequod the fisherman, Zara, and I even commune with Carena, of the spirit world. Together they give a reliable opinion.");
+		addJob("我是房子销售经理. 简单说, 我卖房给阿多斯的居民. 如果你有兴趣可以寻问 #房价. 我们的售楼部在 #https://stendhalgame.org/wiki/StendhalHouses.");
+		addReply("公民", "我会在阿多斯居民中进行调查. 如果你帮助了阿多斯的每一位居民, 我想他们不会不推荐你. 我和我的朋友 约书亚, 市长, 小女孩Anna, 渔夫Pequod, 还有Zara 讲过, 而且我曾经和 Carena 讨论过精神世界. 综合他们的意见作为参考.");
 
-		setDescription("You see a smart looking man.");
+		setDescription("你遇见了一个看上去很精明的人.");
 		setEntityClass("estateagent2npc");
 		setPosition(37, 13);
 		initHP(100);

@@ -41,11 +41,11 @@ public class FriendAchievementFactory extends AbstractAchievementFactory {
 
 	    // TODO: add Pacifist achievement for not participating in pvp for 6 months or more (last_pvp_action_time)
 
-		// Befriend Susi and complete quests for all children
+		// Befriend 苏茜 and complete quests for all children
 		achievements.add(createAchievement("friend.quests.children", "Childrens' friend", "Complete quests for all children",
 				Achievement.MEDIUM_BASE_SCORE, true,
 				new AndCondition(
-						// Susi Quest is never set to done, therefore we check just if the quest has been started (condition "anyFriends" from FoundGirl.java)
+						// 苏茜 Quest is never set to done, therefore we check just if the quest has been started (condition "anyFriends" from FoundGirl.java)
 						new QuestStartedCondition("susi"),
 						// Help 泰德, 塞门镇 Town Hall (Medicine for 泰德)
 						new QuestCompletedCondition("introduce_players"),

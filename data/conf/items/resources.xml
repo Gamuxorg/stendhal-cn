@@ -23,7 +23,7 @@
 
   <item name="甘蔗">
     <type class="resource" subclass="sugarcane" tileid="-1"/>
-    <description>You see a 甘蔗. You can grind it for raw sugar.</description>
+    <description>一根甘蔗. 可以用来制糖.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -123,7 +123,7 @@
 
   <item name="羊毛">
     <type class="resource" subclass="wool" tileid="-1"/>
-    <description>You see 羊毛. It was recently shorn.</description>
+    <description>一些羊毛. 非常柔软.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -143,7 +143,7 @@
 
   <item name="线球">
     <type class="resource" subclass="yarn" tileid="-1"/>
-    <description>You see a ball of 线球. It was spun with care.</description>
+    <description>一团线球. 用线小心的缠在一团.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -161,9 +161,9 @@
     </equipable>
   </item>
 
-  <item name="cloth">
+  <item name="布料">
     <type class="resource" subclass="cloth" tileid="-1"/>
-    <description>You see a roll of cloth. It is of first-class quality.</description>
+    <description>一卷上等质量的布料.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -183,7 +183,7 @@
 
   <item name="金砂">
     <type class="resource" subclass="gold_ore" tileid="-1"/>
-    <description>You see a 金砂. Its rich golden colour shines, and it may be useful.</description>
+    <description>一些金砂. 有着金色光泽, 或许很有用.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -203,7 +203,7 @@
 
   <item name="密银矿石">
     <type class="resource" subclass="mithril_ore" tileid="-1"/>
-    <description>You see a 密银矿石. Its pale silvery color shines, and it may be useful.</description>
+    <description>一些密银矿石. 它闪着淡银色光泽, 或许很有用.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -243,7 +243,7 @@
 
   <item name="金条">
     <type class="resource" subclass="gold_bar" tileid="-1"/>
-    <description>You see a 金条. It will make beautiful jewelry, or fetch a fine price.</description>
+    <description>一根金条. 可以制成漂亮的首饰, 也一定很值钱.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -263,7 +263,7 @@
 
   <item name="密银锭">
     <type class="resource" subclass="mithril_bar" tileid="-1"/>
-    <description>You see a 密银锭. It can be made into excellent armor, or fetch a fine price.</description>
+    <description>一块密银锭. 用它制成的盔甲, 一定可以卖出高价.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -283,7 +283,7 @@
 
   <item name="金蛋">
     <type class="resource" subclass="golden_egg" tileid="-1"/>
-    <description>You see a valuable 金蛋.</description>
+    <description>贵重的金蛋.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -303,7 +303,7 @@
 
   <item name="斑点蛋">
     <type class="food" subclass="spotted_egg" tileid="-1"/>
-    <description>You see a 斑点蛋. They are said to be delicious.</description>
+    <description>一枚斑点蛋. 据说很好吃.</description>
     <implementation class-name="games.stendhal.server.entity.item.Food"/>
     <attributes>
       <amount value="1000"/>
@@ -327,7 +327,7 @@
 
  <item name="绿色的蛋">
     <type class="resource" subclass="green_egg" tileid="-1"/>
-    <description>You see a valuable 绿色的蛋.</description>
+    <description>一枚宝贵的绿色的蛋.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -347,7 +347,7 @@
 
   <item name="蜘蛛丝腺">
     <type class="resource" subclass="silkgland" tileid="-1"/>
-    <description>You see a 蜘蛛丝腺 from a 巨型蜘蛛. Its contents are extremely valuable.</description>
+    <description>巨型蜘蛛身上的蜘蛛丝腺. 里面的东西极具价值.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -367,7 +367,7 @@
 
   <item name="丝线">
     <type class="resource" subclass="silkthread" tileid="-1"/>
-    <description>You see a spool of 丝线, spun from the glands of a 巨型蜘蛛..</description>
+    <description>一团丝线, 使用巨型蜘蛛的线腺制成..</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -387,7 +387,7 @@
 
   <item name="oil">
     <type class="resource" subclass="oil" tileid="-1"/>
-    <description>You see a small can of oil.</description>
+    <description>一小坛油.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -407,7 +407,7 @@
 
   <item name="密银线">
     <type class="resource" subclass="mithril_thread" tileid="-1"/>
-    <description>You see a spool of 密银线, made from silk fused with mithril.</description>
+    <description>一卷密银线, 使用熔化的密银制成.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -427,7 +427,7 @@
 
   <item name="密银布">
     <type class="resource" subclass="mithril_fabric" tileid="-1"/>
-    <description>You see a couple yards of 密银布. It's very sparkly!</description>
+    <description>几米密银布. 银光闪闪!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -447,7 +447,7 @@
   
   <item name="鬃毛">
     <type class="resource" subclass="horsehair" tileid="-1"/>
-    <description>You see some 鬃毛.</description>
+    <description>动物的鬃毛.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -467,7 +467,7 @@
 
   <item name="蜂蜡">
     <type class="resource" subclass="beeswax" tileid="-1"/>
-    <description>You see a piece of 蜂蜡.</description>
+    <description>一块蜂蜡.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -487,7 +487,7 @@
   
   <item name="蜡烛">
     <type class="resource" subclass="candle" tileid="-1"/>
-    <description>You see a 蜡烛 in a 蜡烛 stick.</description>
+    <description>一根插入蜡烛棒的蜡烛.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

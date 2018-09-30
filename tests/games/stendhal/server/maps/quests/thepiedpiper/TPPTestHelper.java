@@ -61,7 +61,7 @@ public class TPPTestHelper implements ITPPQuestConstants {
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
 		new MayorNPC().configureZone(zone, null);
 		quest.addToWorld();
-		npc = SingletonRepository.getNPCList().get("Mayor Chalmers");
+		npc = SingletonRepository.getNPCList().get("查玛斯市长");
 		en = npc.getEngine();
 
 		/*

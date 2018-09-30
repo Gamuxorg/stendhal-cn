@@ -33,7 +33,7 @@ public class TeleportAllPlayers extends ScriptImpl {
 	public void execute(Player admin, List<String> args) {
 		StendhalRPZone targetZone = (StendhalRPZone) SingletonRepository.getRPWorld().getRPZone(args.get(0));
 		if (targetZone == null) {
-			admin.sendPrivateText(NotificationType.ERROR, "No such zone.");
+			admin.sendPrivateText(NotificationType.ERROR, "没有该地区.");
 			return;
 		}
 

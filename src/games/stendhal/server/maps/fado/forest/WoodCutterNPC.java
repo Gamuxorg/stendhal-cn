@@ -47,7 +47,7 @@ public class WoodCutterNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Woody") {
+		final SpeakerNPC npc = new SpeakerNPC("乌迪") {
 
 			@Override
 			protected void createPath() {
@@ -77,7 +77,7 @@ public class WoodCutterNPC implements ZoneConfigurator {
 			}
 		};
 
-		npc.setDescription("You see Woody, an outdoorsy-looking fellow.");
+		npc.setDescription("You see 乌迪, an outdoorsy-looking fellow.");
 		npc.setEntityClass("woodcutternpc");
 		npc.setPosition(55, 84);
 		npc.initHP(100);

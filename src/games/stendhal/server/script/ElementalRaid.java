@@ -36,6 +36,6 @@ public class ElementalRaid extends CreateRaid {
 
 	@Override
 	protected String getInfo() {
-		return "Less safe for players below level 50";
+		return "50以下不安全";
 	}
 }

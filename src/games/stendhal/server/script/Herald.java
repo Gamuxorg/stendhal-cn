@@ -54,17 +54,17 @@ public class Herald extends ScriptImpl {
     private final TurnNotifier turnNotifier = TurnNotifier.get();
 
     //private final String HaveNoTime = "Hi, I have to do my job, so I have no time to speak with you, sorry.";
-    private final String HiOldFriend = "Oh, you're here! Hi, my old friend, glad to see you.";
-    private final String TooScared = "Oh, you are crazy, sure. I can't help you, the Emperor will kill us both for that.";
-    private final String BadJoke = "Joke, yes? I like jokes, but not too much.";
-    private final String FeelBad = "Oh, I don't know what is wrong with me, I'm not feeling very well... sorry, I can't help you...";
-    private final String DontUnderstand = "Sorry, I don't understand you";
-    private final String InfoOnly = "Oh, I think I can trust you enough to tell you my current announcements list. ";
-    private final String WillHelp = "Sure, I will do for you all that you want."+
-									" Tell me '#speech <time interval (seconds)> <time limit (seconds)> <text to speech>'. " +
-									"If you want to remove one of my current announcements, "+
-									"tell me '#remove <number of speech>'. "+
-									"You can also ask me about current announcements, say '#info' for that.";
+    private final String HiOldFriend = "Oh, 你来啦! Hi, 老朋友, 见到你很高兴.";
+    private final String TooScared = "Oh, 你一定疯了吧, 我帮不了你, 皇帝会为此杀掉我们两个.";
+    private final String BadJoke = "是笑话? 我喜欢开玩笑, 但不要过份.";
+    private final String FeelBad = "Oh, 我不清楚哪里不对, 总觉得不太好...抱歉, 我帮不了你...";
+    private final String DontUnderstand = "对不起, 没明白你的意思";
+    private final String InfoOnly = "Oh, 我还不能完全相信你, 所以不能把最新的通知表告诉你. ";
+    private final String WillHelp = "当然, 你想要的我都可以做."+
+									" 告诉我 '#speech <时间间隔 (秒)> <时间总长 (秒)> <讲话内容>'. " +
+									"如果你想在我当前通告中删除一条, "+
+									"请说 '#remove <number of speech>'. "+
+									"你也可以向我要当前公告, 说 '#info' 就行.";
 
     private final LinkedList<HeraldNews> heraldNews = new LinkedList<HeraldNews>();
 
@@ -217,11 +217,11 @@ public class Herald extends ScriptImpl {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc){
 					int newssize = heraldNews.size();
 					if(newssize==0){
-						npc.say("My announcements list is empty.");
+						npc.say("通告列表为空.");
 						return;
 					}
 					StringBuilder sb=new StringBuilder();
-					sb.append("Here " +  " is my current " + "announcement" + ": ");
+					sb.append("以下是当前通告: ");
 
 
 					for(int i=0; i<newssize;i++){
@@ -256,12 +256,12 @@ public class Herald extends ScriptImpl {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc){
 					int newssize = heraldNews.size();
 					if(newssize==0){
-						npc.say("My announcements list is empty.");
+						npc.say("通告列表为空.");
 						return;
 					}
 
 					StringBuilder sb=new StringBuilder();
-					sb.append("Here " +  " is my current " + "announcement" + ": ");
+					sb.append("当前公告为: ");
 
 					for(int i=0; i<newssize;i++){
 						// will add 1 to position numbers to show position 0 as 1.
@@ -289,25 +289,25 @@ public class Herald extends ScriptImpl {
 					logger.info("Original sentence: " + text);
 					final String[] starr = text.split(" ");
 					if(starr.length < 2){
-						npc.say("You forget time limit. I am mortal too and somewhat senile, you know.");
+						npc.say("你忘了加时间限制. 你也知道我也是人而且年龄大了.");
 						return;
 					}
 					try {
 						final int interval = Integer.parseInt(starr[1].trim());
 						final int limit = Integer.parseInt(starr[2].trim());
 						if(limit < interval){
-							npc.say("I can count to "+Integer.toString(interval)+
-									", and "+Integer.toString(limit)+" is less then " + Integer.toString(interval)+
-									". Repeat please.");
+							npc.say("我计算出 "+Integer.toString(interval)+
+									", 和 "+Integer.toString(limit)+" 小于 " + Integer.toString(interval)+
+									". 请再试一次.");
 							return;
 						}
 						try {
 							text = text.substring(starr[0].length()).trim().
 										substring(starr[1].length()).trim().
 								        substring(starr[2].length()).trim();
-							final String out="Interval: "+Integer.toString(interval)+", limit: "+
+							final String out="时间间隔: "+Integer.toString(interval)+", 时间总长: "+
 							Integer.toString(limit)+", text: \""+text+"\"";
-							npc.say("Ok, I have recorded it. "+out);
+							npc.say("Ok,我已记下. "+out);
 							logger.info("Admin "+player.getName()+
 										" added announcement: " +out);
 							final HeraldListener tnl = new HeraldListener(heraldNews.size());
@@ -333,7 +333,7 @@ public class Herald extends ScriptImpl {
 					String text = sentence.getOriginalText();
 					final String[] starr = text.split(" ");
 					if(starr.length < 2){
-						npc.say("Tell me the number of sentence to remove.");
+						npc.say("告诉我要删除通告的编号.");
 						return;
 					}
 					final String number = starr[1];
@@ -344,22 +344,22 @@ public class Herald extends ScriptImpl {
 							return;
 						}
 						if (heraldNews.size()==0) {
-							npc.say("I dont have announcements now.");
+							npc.say("目前没有通告.");
 							return;
 						}
 						if(i>=(heraldNews.size())){
-							npc.say("I have only "+ Integer.toString(heraldNews.size())+
-									" announcements at the moment.");
+							npc.say("现在只有 "+ Integer.toString(heraldNews.size())+
+									" 条通告.");
 							return;
 						}
-						logger.warn("Admin "+player.getName()+" removing announcement #"+
+						logger.warn("Admin "+player.getName()+" 正删除公告 #"+
 									Integer.toString(i)+": interval "+
 									Integer.toString(heraldNews.get(i).getInterval())+", limit "+
 									Integer.toString(heraldNews.get(i).getLimit())+", text \""+
 									heraldNews.get(i).getNews()+"\"");
 						turnNotifier.dontNotify(heraldNews.get(i).getTNL());
 						heraldNews.remove(i);
-						npc.say("Ok, already forget it.");
+						npc.say("Ok, 已删除.");
 					} catch (NumberFormatException nfe) {
 						logger.error("RemoveNewsAction: cant remove "+number+" speech.", nfe);
 						npc.say(DontUnderstand);
@@ -379,10 +379,10 @@ public class Herald extends ScriptImpl {
 							turnNotifier.dontNotify(heraldNews.get(i).getTNL());
 						}
 						if(heraldNews.size()!=0){
-							npc.say("Ufff, I have now some time for rest. I heard, there is a gambling game in 塞门镇?");
+							npc.say("Ufff, 总算有点闲时间. 听说, 塞门镇 可以赌博?");
 							heraldNews.clear();
 						} else {
-							npc.say("Oh, thank you for trying to help me, but I'm ok.");
+							npc.say("Oh, 谢谢你的关心, 但我还好.");
 						}
 					}
 			}
@@ -393,17 +393,17 @@ public class Herald extends ScriptImpl {
 			@Override
 			public void createDialog() {
 				add(ConversationStates.IDLE,
-					Arrays.asList("hi", "hola", "hello", "heya"),
+					Arrays.asList("hi", "喂", "hello", "你好"),
 					new NotCondition(new AdminCondition(REQUIRED_ADMINLEVEL_INFO)),
 					ConversationStates.IDLE,
 					null,	new ReadNewsAction());
 				add(ConversationStates.IDLE,
-					Arrays.asList("hi", "hola", "hello", "heya"),
+					Arrays.asList("hi", "喂", "hello", "你好"),
 					new AdminCondition(REQUIRED_ADMINLEVEL_INFO),
 					ConversationStates.ATTENDING,
 					HiOldFriend, null);
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("help"),
+					Arrays.asList("help", "帮助", "帮忙"),
 					new AdminCondition(REQUIRED_ADMINLEVEL_SET),
 					ConversationStates.ATTENDING,
 					WillHelp, null);
@@ -413,7 +413,7 @@ public class Herald extends ScriptImpl {
 					ConversationStates.ATTENDING,
 					TooScared, null);
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("help"),
+					Arrays.asList("help", "帮助", "帮忙"),
 					new NotCondition(new AdminCondition(REQUIRED_ADMINLEVEL_SET)),
 					ConversationStates.ATTENDING,
 					InfoOnly, new ReadJobsAction());
@@ -428,7 +428,7 @@ public class Herald extends ScriptImpl {
 					ConversationStates.ATTENDING,
 					null, new WriteNewsAction());
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("remove"),
+					Arrays.asList("remove", "删除"),
 					new AdminCondition(REQUIRED_ADMINLEVEL_SET),
 					ConversationStates.ATTENDING,
 					null, new RemoveNewsAction());

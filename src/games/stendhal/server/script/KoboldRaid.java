@@ -35,6 +35,6 @@ public class KoboldRaid extends CreateRaid {
 	}
 	@Override
 	protected String getInfo() {
-		return "Less safe for players below level 10.";
+		return "10级以下不安全.";
 	}
 }

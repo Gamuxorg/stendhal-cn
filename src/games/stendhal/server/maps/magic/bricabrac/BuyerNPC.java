@@ -49,7 +49,7 @@ public class BuyerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Vonda") {
+		final SpeakerNPC npc = new SpeakerNPC("文达") {
 
 			@Override
 			protected void createPath() {
@@ -70,36 +70,36 @@ public class BuyerNPC implements ZoneConfigurator {
 				//addGreeting("你好.//Hello.");
 				addGreeting("你好。");
 				//addJob("I potter around collecting odds and bobs. Sometimes I sell items, but mostly I like to keep them. If you have any relics to #trade, I would be very happy indeed.");
-				addJob("我闲逛着收集一些杂物. 有时候我会卖掉它们,但是通常我会收藏它们。如果你有任何文物来 #trade，我真的会很高兴");
+				addJob("我闲逛着收集一些杂物. 有时候我会卖掉它们,但是通常我会收藏它们。如果你有任何文物来 #交易，我真的会很高兴");
 				//addHelp("I could tell you about some of these wonderful items here. The white #pot, #coffins, #dress, #shield, #armor, #tools, #rug, #flowers, #clock and #'sewing machine' are all fascinating!");
-				addHelp("我可以告诉你一些奇妙的东西。白色的 #pot, #coffins, #dress, #shield, #armor, #tools, #rug, #flowers, #clock and #'sewing machine' 都是迷人的!");
+				addHelp("我可以告诉你一些奇妙的东西。白色的 #壶, #棺材, #衣服, #盾牌, #盔甲, #工具, #地毯, #鲜花, #座钟 和 #缝纫机 都是迷人的!");
 				/*addReply(
 						"pot",
 						"You mean the white and blue one, the oriental pot, I suppose. That is an original made by the ancient oni people. It's very rare.");
 				*/
 				addReply(
-						"pot",
+						"壶",
 						"你是说白色的和蓝色的,我想是东方壶吧. 那是古代东方人的原作。它非常稀有。");
 				/*addReply(
 						"coffins",
 						"Those coffins were looted from some underground catacombs, I had to pay a pretty price for that pair.");
 				*/
 				addReply(
-						"coffins",
+						"棺材",
 						"那些棺材是从地下墓穴掠夺来的, 我花费了很大代价修复它们。");
 				/*addReply(
 						"dress",
 						"I do love that beautiful pink dress. I am told it was worn by the elven princess Tywysoga.");
 				*/
 				addReply(
-						"dress",
+						"衣服",
 						"我很喜欢那件粉色的衣服，我听说它是精灵公主穿的。");
 				/*addReply(
 						"shield",
 						"That is a truly fearsome shield, is it not? There is some enscription on the back about devil knights, but I am afraid I do not understand it.");
 				*/
 				addReply(
-						"shield",
+						"盾牌",
 						"那真是一个可怕的盾牌, 不是吗? 背后有一些关于魔鬼骑士的铭文, 但是我恐怕不能理解它。");
 				/*addReply(
 						"rug",
@@ -107,7 +107,7 @@ public class BuyerNPC implements ZoneConfigurator {
 				*/
 				
 				addReply(
-						"rug",
+						"地毯",
 						"那一是一份真正的远东地毯。我从未见过这样的,除了便宜的西贝货。请不要在上面留下泥脚印！");				
 
 				/*addReply(
@@ -115,23 +115,23 @@ public class BuyerNPC implements ZoneConfigurator {
 						"Ah ha! These are flowers grown with elf magic. I bought them myself from a wonderful florist in Nalwor.");
 */				
 				addReply(
-						"flowers",
-						"啊哈！这些是随着精灵魔力成长的话。我自己从nalwor那里一个很棒的花农那买的。");
+						"鲜花",
+						"啊哈！这些是随着精灵魔力成长的鲜花。我自己从纳尔沃那里一个很棒的花农那买的。");
 				/*addReply(
 						"clock",
 						"That grandfather clock is one of my more modern pieces. If you know Woody the Woodcutter, you may recognise the handiwork.");
 */				
 				addReply(
-						"clock",
-						"那座大座钟是我更现代的收藏品之一。 如果你认识樵夫 Woody, 你可能会认出这件手工作品。");
+						"座钟",
+						"那座大座钟是我更现代的收藏品之一。 如果你认识樵夫 乌迪, 你可能会认出这件手工作品。");
 				
 
 	  			addReply(
-						"tools",
+						"工具",
 						"那些后墙上的工具真是古老！他们被塞门镇的艾克德罗斯的曾祖父使用过，真不可思议！");
 			    
 				addReply(
-						"armor",
+						"盔甲",
 						"啊哈，那个伟大的作品是 Deniran 制作的。关于它我恐怕只知道一点点");
 
 				/*addReply(
@@ -139,7 +139,7 @@ public class BuyerNPC implements ZoneConfigurator {
 						"Oh you know that is my favourite. It was made by a man called Zinger, and it still works just as well as the day it was made.");
 				*/
 				addReply(
-						"sewing machine",
+						"缝纫机",
 						"哦你知道那是我的最爱。 它是一个叫做 Zinger 的男人制作的 , 它仍旧工作得像刚制作的那样好。");
 				/*addQuest("I have no favour to ask of you.");
 				*/
@@ -152,8 +152,7 @@ public class BuyerNPC implements ZoneConfigurator {
 		};
 
 
-		//npc.setDescription("你看见了旺达，一个看起来乱糟糟的女巫。//You see Vonda, a witch who seems to like clutter...");
-		npc.setDescription("你看见了 Vonda ，一个看起来乱糟糟的女巫。");
+		npc.setDescription("你遇见 文达 ，一个看起来乱糟糟的女巫。");
 		npc.setEntityClass("witch2npc");
 		npc.setPosition(4, 12);
 		npc.initHP(100);

@@ -34,19 +34,19 @@ public class ResetSlot extends ScriptImpl {
 
 		// admin help
 		if (args.size() < 2) {
-			admin.sendPrivateText("Need player name and slot name as parameter.");
+			admin.sendPrivateText("需要玩家名称和物品栏名称作为参数.");
 			return;
 		}
 
 		// find the player and slot
 		final Player player = SingletonRepository.getRuleProcessor().getPlayer(args.get(0));
 		if (player == null) {
-			admin.sendPrivateText("No such player: " + args.get(0));
+			admin.sendPrivateText("不存在玩家: " + args.get(0));
 			return;
 		}
 		final RPSlot slot = player.getSlot(args.get(1));
 		if (slot == null) {
-			admin.sendPrivateText("No such slot: " + args.get(1));
+			admin.sendPrivateText("不存在物品栏: " + args.get(1));
 			return;
 		}
 
@@ -59,7 +59,7 @@ public class ResetSlot extends ScriptImpl {
 
 		// notify the player
 		player.sendPrivateText(NotificationType.SUPPORT,
-				"Your " + args.get(1) + " state was reset by "
+				"你的 " + args.get(1) + " 状态被设置为 "
 				+ admin.getTitle());
 	}
 }

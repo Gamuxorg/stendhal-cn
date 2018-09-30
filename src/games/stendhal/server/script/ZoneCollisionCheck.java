@@ -83,7 +83,7 @@ public class ZoneCollisionCheck extends ScriptImpl {
 			try {
 				badnessThreshold = Integer.parseInt(arg);
 			} catch (NumberFormatException e) {
-				admin.sendPrivateText("Invalid number: " + arg);
+				admin.sendPrivateText("无效号码: " + arg);
 				usage();
 				return;
 			}
@@ -208,9 +208,9 @@ public class ZoneCollisionCheck extends ScriptImpl {
 
 	private String collidesMessage(String zone, int x, int y, boolean collides) {
 		if (collides) {
-			return zone + " has collision at [" + x + "," + y + "]";
+			return zone + " 在 [" + x + "," + y + "] 有冲突";
 		} else {
-			return zone + " does not have collision at [" + x + "," + y + "]";
+			return zone + " 在 [" + x + "," + y + "] 没有冲突";
 		}
 	}
 

@@ -107,7 +107,7 @@ public class Maria extends ScriptImpl {
 			"酒吧就在神庙隔壁的左边.");
 		npc.behave("help",
 				"你可以看看本店的服务 #offer ,或者住宿, 或者交结新朋友!");
-		npc.behave("bye", "Bye bye!");
+		npc.behave("bye", "再见!");
 		try {
 			npc.behave("sell", SingletonRepository.getShopList().get(shop));
 		} catch (final NoSuchMethodException e) {

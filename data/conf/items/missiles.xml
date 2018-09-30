@@ -4,7 +4,7 @@
   
   <item name="雪球">
     <type class="missile" subclass="snowballs" tileid="-1"/>
-    <description>You see 雪球s. You can throw them at your friends or put it in your bag to keep your fish fresh. But be careful, there could be little stones in it.</description>
+    <description>可以与朋友一起玩丢雪球. 或者放入包中用来保鲜. 但小心可能会有一些小子在里面.</description>
     <implementation class-name="games.stendhal.server.entity.item.NoStatsStackableItem"/>
     <attributes>
       <atk value="-1"/>
@@ -27,7 +27,7 @@
   
   <item name="呕吐物">
     <type class="missile" subclass="vomit" tileid="-1"/>
-    <description>You see a pile of 呕吐物. Gross!</description>
+    <description>一滩呕吐物. 呕!</description>
     <implementation class-name="games.stendhal.server.entity.item.NoStatsStackableItem"/>
     <attributes>
       <atk value="-1"/>
@@ -93,7 +93,7 @@
   
   <item name="忍者镖">
     <type class="missile" subclass="shuriken" tileid="-1"/>
-    <description>You see a 忍者镖. You'll need to be close before you can use it as a missile. Stand square on, not diagonally, for the best results.</description>
+    <description>忍者镖. 可以在近身搏斗前作为暗器使用. 它成不对称的方形, 这样有最好的效果.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -115,7 +115,7 @@
   
   <item name="忍者炎镖">
     <type class="missile" subclass="fire_shuriken" tileid="-1"/>
-    <description>You see a 忍者炎镖. Throwing this flaming missile unleashes fiendish power.</description>
+    <description>忍者炎镖. 扔出后可爆发出恶魔般的力量.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="12"/>
@@ -138,7 +138,7 @@
   
   <item name="木矛">
     <type class="missile" subclass="wooden_spear" tileid="-1"/>
-    <description>You see a 木矛. You can attack at a distance with this primitive weapon. Stand square on, not diagonally, for the best results.</description>
+    <description>原始武器木矛. 用它攻击敌人时可以保持距离. 站在非对角一侧攻击, 有最好的效果.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="10"/>

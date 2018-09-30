@@ -29,7 +29,7 @@ public class TeleportNPC extends ScriptImpl {
 		}
 		StendhalRPZone zone = StendhalRPWorld.get().getZone(args.get(1));
 		if (zone == null) {
-			admin.sendPrivateText(NotificationType.ERROR, "Zone " + args.get(1) + " does not exist.");
+			admin.sendPrivateText(NotificationType.ERROR, "没有名为 " + args.get(1) + " 的地区.");
 			return;
 		}
 		int x = MathHelper.parseInt(args.get(2));

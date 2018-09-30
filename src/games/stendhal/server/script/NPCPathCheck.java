@@ -42,9 +42,9 @@ public class NPCPathCheck extends ScriptImpl {
 			}
 		}
 		if (found) {
-			res.insert(0, "The following problems were found:\n");
+			res.insert(0, "发现以下问题:\n");
 		} else {
-			res.insert(0, "No problems found in NPC paths.");
+			res.insert(0, "NPC 路径没有问题.");
 		}
 
 		admin.sendPrivateText(res.toString());

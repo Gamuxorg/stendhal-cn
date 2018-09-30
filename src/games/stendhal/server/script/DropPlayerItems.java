@@ -37,7 +37,7 @@ public class DropPlayerItems extends ScriptImpl {
 		}
 
 		if (args.size() > 3) {
-			admin.sendPrivateText("<player> [<amount>] '<item>' - and don't forget those quotes if the item name has spaces");
+			admin.sendPrivateText("<player> [<amount>] '<item>' - 物品名字有空格时不要忘了引号");
 			return;
 		}
 

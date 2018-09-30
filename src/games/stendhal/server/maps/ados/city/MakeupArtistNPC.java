@@ -49,7 +49,7 @@ public class MakeupArtistNPC implements ZoneConfigurator {
 	 * @param y y
 	 */
 	public void buildFidorea(final StendhalRPZone zone, int x, int y) {
-		final SpeakerNPC npc = new SpeakerNPC("Fidorea") {
+		final SpeakerNPC npc = new SpeakerNPC("费多拉") {
 
 			private static final int MINUTES_BEFORE_WEAR_OFF = 5 * 60;
 
@@ -90,7 +90,7 @@ public class MakeupArtistNPC implements ZoneConfigurator {
 		npc.setPosition(x, y);
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);
-		npc.setDescription("You see a beautiful looking woman. Her name is Fidorea and she loooves colours.");
+		npc.setDescription("You see a beautiful looking woman. Her name is 费多拉 and she loooves colours.");
 		zone.add(npc);
 	}
 }

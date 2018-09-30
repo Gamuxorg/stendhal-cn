@@ -44,7 +44,7 @@ public class TeacherNPC implements ZoneConfigurator {
 	}
 
 	private void buildTeacher(final StendhalRPZone zone) {
-		final SpeakerNPC fisherman = new SpeakerNPC("Santiago") {
+		final SpeakerNPC fisherman = new SpeakerNPC("圣地亚哥") {
 
 			@Override
 			protected void createPath() {
@@ -71,7 +71,7 @@ public class TeacherNPC implements ZoneConfigurator {
 		fisherman.setDirection(Direction.DOWN);
 		fisherman.setPosition(3, 3);
 		fisherman.initHP(100);
-		fisherman.setDescription("You see Santiago. All fishermen take trust in his experiences.");
+		fisherman.setDescription("You see 圣地亚哥. All fishermen take trust in his experiences.");
 		zone.add(fisherman);
 	}
 }

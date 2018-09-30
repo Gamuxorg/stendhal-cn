@@ -44,7 +44,7 @@ public class Log4J extends ScriptImpl {
 	public void execute(Player admin, List<String> args) {
 		super.execute(admin, args);
 		if(args.size() != 2) {
-			admin.sendPrivateText("Needed parameters: [full qualified class name] [log level]");
+			admin.sendPrivateText("需要参数: [full qualified class name] [log level]");
 			return;
 		}
 		Level levelToSet = Level.toLevel(args.get(1), Level.INFO);

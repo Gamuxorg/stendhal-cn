@@ -22,7 +22,7 @@ public class InvasionPhaseTest extends TPPTestHelper {
 
 	@Test
 	public void testInvasionPhase() {
-		// [17:50] Mayor Chalmers shouts: Ados city is under rats invasion! Anyone who will help to clean up city, will be rewarded!
+		// [17:50] 查玛斯市长 shouts: Ados city is under rats invasion! Anyone who will help to clean up city, will be rewarded!
         ThePiedPiper.setPhase(TPP_Phase.TPP_INACTIVE);
         ThePiedPiper.switchToNextPhase();
 		//quest.phaseInactiveToInvasion();
@@ -36,7 +36,7 @@ public class InvasionPhaseTest extends TPPTestHelper {
 		assertEquals("Good day to you.", getReply(npc));
 		assertTrue(quest.getHistory(player).isEmpty());
 		killRats(TPPQuestHelperFunctions.getRatsCount());
-		// [17:58] Mayor Chalmers shouts: No rats in Ados now, exclude those who always lived in storage and haunted house. Rats hunters are welcome to get their reward.
+		// [17:58] 查玛斯市长 shouts: No rats in Ados now, exclude those who always lived in storage and haunted house. Rats hunters are welcome to get their reward.
 		LinkedList<String> questHistory = new LinkedList<String>();
 		questHistory.add("I have killed some rats in Ados city already, and am trying to kill more.");
 		assertEquals(questHistory, quest.getHistory(player));
@@ -56,7 +56,7 @@ public class InvasionPhaseTest extends TPPTestHelper {
 		en.step(player, "reward");
 		assertEquals("Please take "+ rewardMoneys +" money, thank you very much for your help.", getReply(npc));
 		questHistory.clear();
-		questHistory.add("I have killed some rats in Ados city and got a reward from Mayor Chalmers!");
+		questHistory.add("I have killed some rats in Ados city and got a reward from 查玛斯市长!");
 		assertEquals(questHistory, quest.getHistory(player));
 		en.step(player, "bye");
 		assertEquals("Good day to you.", getReply(npc));
@@ -69,7 +69,7 @@ public class InvasionPhaseTest extends TPPTestHelper {
         ThePiedPiper.setPhase(TPP_Phase.TPP_INACTIVE);
         ThePiedPiper.switchToNextPhase();
 		//quest.phaseInactiveToInvasion();
-        // [18:09] Mayor Chalmers shouts: Ados city is under rats invasion! Anyone who will help to clean up city, will be rewarded!
+        // [18:09] 查玛斯市长 shouts: Ados city is under rats invasion! Anyone who will help to clean up city, will be rewarded!
 		en.step(player, "bye"); // in case if previous test was failed
 		en.step(player, "hi");
 		assertEquals("On behalf of the citizens of Ados, welcome.", getReply(npc));
@@ -124,7 +124,7 @@ public class InvasionPhaseTest extends TPPTestHelper {
 		en.step(player, "reward");
 		assertEquals("Please take "+ rewardMoneys +" money, thank you very much for your help.", getReply(npc));
 		questHistory.clear();
-		questHistory.add("I have killed some rats in Ados city and got a reward from Mayor Chalmers!");
+		questHistory.add("I have killed some rats in Ados city and got a reward from 查玛斯市长!");
 		assertEquals(questHistory, quest.getHistory(player));
 		en.step(player, "bye");
 		assertEquals("Good day to you.", getReply(npc));

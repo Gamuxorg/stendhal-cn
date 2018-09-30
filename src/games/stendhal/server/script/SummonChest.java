@@ -96,7 +96,7 @@ public class SummonChest extends ScriptImpl {
 		try {
 			i = Integer.parseInt(args.get(1));
 		} catch (final NumberFormatException e) {
-			sandbox.privateText(player, "Please specify a number");
+			sandbox.privateText(player, "请指定一个号码");
 			return;
 		}
 
@@ -105,11 +105,11 @@ public class SummonChest extends ScriptImpl {
 			storage.remove(Integer.valueOf(i));
 			sandbox.remove(chest);
 			final StringBuilder sb = new StringBuilder();
-			sb.append("Removed chest ");
+			sb.append("删除箱子 ");
 			chestToString(sb, chest);
 			sandbox.privateText(player, sb.toString());
 		} else {
-			sandbox.privateText(player, "Chest " + i + " does not exist");
+			sandbox.privateText(player, i + "号箱子不存在");
 		}
 	}
 
@@ -131,7 +131,7 @@ public class SummonChest extends ScriptImpl {
 	 */
 	public void list(final Player player) {
 		final StringBuilder sb = new StringBuilder();
-		sb.append("Listing chests:");
+		sb.append("箱子列表:");
 
 		int i = 1;
 		while (i <= chestcounter) {

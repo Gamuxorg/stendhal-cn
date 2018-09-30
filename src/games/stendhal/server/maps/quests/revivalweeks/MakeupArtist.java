@@ -21,7 +21,7 @@ import games.stendhal.server.maps.ados.city.MakeupArtistNPC;
 import games.stendhal.server.maps.quests.PaperChase;
 
 /**
- * Make up Artist Fidorea during the 矿镇复兴展会周
+ * Make up Artist 费多拉 during the 矿镇复兴展会周
  */
 public class MakeupArtist implements LoadableContent {
 
@@ -40,7 +40,7 @@ public class MakeupArtist implements LoadableContent {
 
 	@Override
 	public void addToWorld() {
-		removeNPC("Fidorea");
+		removeNPC("费多拉");
 
 		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		new MakeupArtistNPC().buildFidorea(zone, 72, 103);
@@ -52,13 +52,13 @@ public class MakeupArtist implements LoadableContent {
 
 
 	/**
-	 * removes Fidorea from the Mine Town and places her back into her home in Ados.
+	 * removes 费多拉 from the Mine Town and places her back into her home in Ados.
 	 *
 	 * @return <code>true</code>, if the content was removed, <code>false</code> otherwise
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		removeNPC("Fidorea");
+		removeNPC("费多拉");
 
 		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_阿多斯_城_n");
 		new MakeupArtistNPC().buildFidorea(zone, 20, 13);

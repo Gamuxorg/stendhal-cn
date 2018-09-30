@@ -55,7 +55,7 @@ public class TestShowItemList extends ScriptImpl {
 		}
 
 		ShowItemListEvent event = new ShowItemListEvent("Aramyk Shop",
-				"Please talk to Aramyk to buy or sell items.",
+				"买卖物品请对 Aramyk 讲.",
 				itemList);
 		admin.addEvent(event);
 		admin.notifyWorldAboutChanges();

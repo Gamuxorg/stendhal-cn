@@ -77,18 +77,18 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 
 
 
-			outfitTypes.put("jumpsuit", JUMPSUIT);
-			outfitTypes.put("dungarees", DUNGAREES);
-			outfitTypes.put("green dress", GREEN_DRESS);
-			outfitTypes.put("gown", GOWN);
-			outfitTypes.put("orange", NOOB);
-			outfitTypes.put("bunny suit", BUNNY);
-			outfitTypes.put("glasses", GLASSES);
-			outfitTypes.put("other glasses", GLASSES_2);
-			outfitTypes.put("hat", HAT);
+			outfitTypes.put("欢快套装", JUMPSUIT);
+			outfitTypes.put("粗而衣服", DUNGAREES);
+			outfitTypes.put("绿色套装", GREEN_DRESS);
+			outfitTypes.put("长外衣", GOWN);
+			outfitTypes.put("橙色外衣", NOOB);
+			outfitTypes.put("兔子装", BUNNY);
+			outfitTypes.put("玻璃装", GLASSES);
+			outfitTypes.put("半透玻璃", GLASSES_2);
+			outfitTypes.put("帽子", HAT);
 			outfitTypes.put("马尾", HORSE);
 			outfitTypes.put("女士双马尾", GIRL_HORSE);
-			outfitTypes.put("alien", ALIEN);
+			outfitTypes.put("异国风情", ALIEN);
 	}
 
 
@@ -135,7 +135,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 						if (type) {
 							if (player.getOutfit().getBody() > 80
 									&& player.getOutfit().getBody() < 99) {
-								seller.say("You already have a magic outfit on which just wouldn't look good with another - could you please put yourself in something more conventional and ask again? Thanks!");
+								seller.say("你已经穿上了魔法外套, 但不如换一种风格 - 请你先换上传统一点的衣服再问我吗? 谢谢!");
 								return false;
 							}
 						}
@@ -147,7 +147,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 							putOnOutfit(player, outfitType);
 							return true;
 						} else {
-							seller.say("Sorry, you don't have enough money!");
+							seller.say("抱歉, 你的钱不够!");
 							return false;
 						}
 					}
@@ -167,18 +167,18 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 					}
 				}
 				final Map<String, Integer> priceList = new HashMap<String, Integer>();
-				priceList.put("jumpsuit", (int) (N * 500));
-				priceList.put("dungarees", (int) (N * 500));
-				priceList.put("green dress", (int) (N * 500));
-				priceList.put("gown", (int) (N * 750));
-				priceList.put("orange", (int) (N * 500));
-				priceList.put("bunny suit", (int) (N * 800));
-				priceList.put("glasses", (int) (N * 400));
-				priceList.put("other glasses", (int) (N * 400));
-				priceList.put("hat", (int) (N * 400));
+				priceList.put("欢快套装", (int) (N * 500));
+				priceList.put("粗而衣服", (int) (N * 500));
+				priceList.put("绿色套装", (int) (N * 500));
+				priceList.put("长外衣", (int) (N * 750));
+				priceList.put("橙色外衣", (int) (N * 500));
+				priceList.put("兔子装", (int) (N * 800));
+				priceList.put("玻璃装", (int) (N * 400));
+				priceList.put("半透玻璃", (int) (N * 400));
+				priceList.put("帽子", (int) (N * 400));
 				priceList.put("马尾", (int) (N * 1200));
 				priceList.put("女士双马尾", (int) (N * 1200));
-				priceList.put("alien", (int) (N * 1200));
+				priceList.put("异国风情", (int) (N * 1200));
 			       	addGreeting("您好！有什么我可以帮助您的吗？");
 				//addQuest("I can't think of anything for you, sorry.");
 				addQuest("我不能代替您考虑，对不起。");
@@ -187,8 +187,8 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 					ConversationPhrases.OFFER_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Just tell me if you want to #hire a #gown, #hire a #green #dress, #hire #glasses, #hire #other #glasses, #hire a #hat, #hire an #alien suit, #hire a #horse outfit, #hire a #girl #horse outfit, #hire a #jumpsuit, #hire #dungarees, #hire a #bunny #suit or #hire an #orange outfit.",
-					new ExamineChatAction("outfits.png", "Outfits", "Price varies"));
+					"如果你想 #租借 套装就告诉我， 可以 #租借 的套装有 #长外衣, #绿色套装, #玻璃装, #半透玻璃, #帽子, #异国风情 , #马尾, #女士双马尾 , #欢快套装,  #粗布衣服,  #兔子装 或者 #橙色外衣 .",
+					new ExamineChatAction("outfits.png", "外衣", "价目表"));
 				//addJob("I work in this clothes boutique. It's no ordinary shop, we use magic to put our clients into fantastic outfits. Ask about the #offer.");
 				addJob("我在魔法装备店工作。 它不是一家普通的店， 我们使用魔法为我们的顾客穿上梦幻般的装备。 询问关于 #买卖");
 				// addJob("I normally work in a clothes boutique, we use magic to put our clients into fantastic outfits. I'm here for 矿镇复兴展会周, where we #offer our outfits at greatly reduced prices, but they last for less time!");
@@ -196,7 +196,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 				//addHelp("Our hired outfits wear off after some time, but you can always come back for more!");
 				addHelp("我们卖的装备会在一段时间后磨损, 但你总是可以回来买更多的。");
 				addGoodbye("再见！");
-				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "Your magical outfit has worn off.");
+				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "你的魔法外衣已脱下.");
 				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "hire", false, false);
 			}
 		};

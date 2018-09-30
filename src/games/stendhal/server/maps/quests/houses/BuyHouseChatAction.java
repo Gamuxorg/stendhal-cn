@@ -43,7 +43,7 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 
 		if (houseportal == null) {
 			// something bad happened
-			raiser.say("Sorry I did not understand you, could you try saying the house number you want again please?");
+			raiser.say("抱歉, 我没明白你的意思, 能再说一次房子号码吗？");
 			raiser.setCurrentState(ConversationStates.QUEST_OFFERED);
 			return;
 		}
@@ -54,7 +54,7 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 			// it's available, so take money
 			if (player.isEquipped("money", cost)) {
 				final Item key = SingletonRepository.getEntityManager().getItem(
-																				"房间钥匙");
+				"房间钥匙");
 
 				final String doorId = houseportal.getDoorId();
 
@@ -62,9 +62,9 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 				((HouseKey) key).setup(doorId, locknumber, player.getName());
 
 				if (player.equipToInventoryOnly(key)) {
-					raiser.say("Congratulations, here is your key to " + doorId
-							   + "! Make sure you change the locks if you ever lose it. Do you want to buy a spare key, at a price of "
-							   + HouseChatAction.COST_OF_SPARE_KEY + " money?");
+					raiser.say("祝贺, 我是你的 " + doorId
+							   + " 号房子的钥匙! 如果你把钥匙弄丢了一定要换锁. 如果你想要一把备用钥匙, 请付 "
+							   + HouseChatAction.COST_OF_SPARE_KEY + " 钱?");
 
 					player.drop("money", cost);
 					// remember what house they own
@@ -80,27 +80,27 @@ final class BuyHouseChatAction extends HouseChatAction implements ChatAction {
 					houseportal.setOwner(player.getName());
 					raiser.setCurrentState(ConversationStates.QUESTION_1);
 				} else {
-					raiser.say("Sorry, you can't carry more keys!");
+					raiser.say("抱歉, 你不能带更多钥匙了!");
 				}
 
 			} else {
-				raiser.say("You do not have enough money to buy a house!");
+				raiser.say("你的钱不够!");
 			}
 
 		} else {
-			raiser.say("Sorry, house " + itemName
-					   + " is sold, please ask for a list of #unsold houses, or give me the number of another house.");
+			raiser.say("抱歉, " + itemName
+					   + " 号房间已售, 请询问 #未售 的房子价目表, 或者选择另一个房间号码.");
 			raiser.setCurrentState(ConversationStates.QUEST_OFFERED);
 		}
 	}
 
 	private static void fillChest(final StoredChest chest, String id) {
 		Item item = SingletonRepository.getEntityManager().getItem("笔记");
-		item.setDescription("WELCOME TO THE HOUSE OWNER\n"
-				+ "1. If you do not pay your house taxes, the house and all the items in the chest will be confiscated.\n"
-				+ "2. All people who can get in the house can use the chest.\n"
-				+ "3. Remember to change your locks as soon as the security of your house is compromised.\n"
-				+ "4. You can resell your house to the state if wished (please don't leave me)\n");
+		item.setDescription("房主需知：\n"
+				+ "1. 如果你没有支付房产税, 你的房子和储物箱中的东西将全部被没收.\n"
+				+ "2. 可以进入房子的所有人都能使用储物箱.\n"
+				+ "3. 如果你的房屋安全出现问题, 请尽快换锁.\n"
+				+ "4. 你可以转卖房子 (请不要离开我)\n");
 		try {
 			chest.add(item);
 

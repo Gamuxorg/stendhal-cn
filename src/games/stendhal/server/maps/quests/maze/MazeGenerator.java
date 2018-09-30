@@ -556,8 +556,8 @@ public class MazeGenerator {
 		DBCommandQueue.get().enqueue(new WriteHallOfFamePointsCommand(player.getName(), "M", points, true));
 		new SetQuestAction("迷宫", 0, "done").fire(player, null, null);
 		new IncrementQuestAction("迷宫", 2, 1).fire(player, null, null);
-		player.sendPrivateText("You used " + TimeUtil.timeUntil((int) (timediff / 1000), true)
-				+ " to solve the maze. That was worth " + points + "points.");
+		player.sendPrivateText("你花了 " + TimeUtil.timeUntil((int) (timediff / 1000), true)
+				+ " 解决了迷宫题. 这是 " + points + " 的奖励.");
 		SingletonRepository.getAchievementNotifier().onFinishQuest(player);
 		player.addXP(REWARD_XP);
 	}

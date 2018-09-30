@@ -22,9 +22,9 @@ public interface ITPPQuestConstants {
 	 * <ul>
 	 * <li> INACTIVE - quest isn't active
 	 * <li> INVASION - part I (rats invasion)
-	 * <li> AWAITING - part II (pied piper called)
-	 * <li> OUTGOING - part III (pied piper killing rats)
-	 * <li> CHILDRENS - part IV (pied piper takes childrens away)
+	 * <li> AWAITING - part II (彼德彼伯 called)
+	 * <li> OUTGOING - part III (彼德彼伯 killing rats)
+	 * <li> CHILDRENS - part IV (彼德彼伯 takes childrens away)
 	 * <li> FINAL - part V (return childrens back to Ados)
 	 * </ul>
 	 */

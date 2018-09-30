@@ -149,7 +149,7 @@ public class BetManager extends ScriptImpl implements TurnListener {
 
 		@Override
 		public String toString() {
-			return playerName + " betted " + betToString();
+			return playerName + " 下注 " + betToString();
 		}
 	}
 
@@ -226,8 +226,8 @@ public class BetManager extends ScriptImpl implements TurnListener {
 
 			// wrong syntax
 			if (errorMsg != null) {
-				raiser.say("Sorry " + player.getTitle()
-						+ ", I did not understand you. " + errorMsg);
+				raiser.say("抱歉 " + player.getTitle()
+						+ ", 没明白你的意思. " + errorMsg);
 				return;
 			}
 
@@ -235,29 +235,29 @@ public class BetManager extends ScriptImpl implements TurnListener {
 			final Item item = SingletonRepository.getEntityManager().getItem(
 					betInfo.itemName);
 			if (!(item instanceof ConsumableItem)) {
-				raiser.say("Sorry " + player.getTitle()
-						+ ", I only accept food and drinks.");
+				raiser.say("抱歉 " + player.getTitle()
+						+ ", 我只接受食物和饮料.");
 				return;
 			}
 
 			// check target
 			if (!targets.contains(betInfo.target)) {
-				raiser.say("Sorry " + player.getTitle()
-						+ ", I only accept bets on " + targets);
+				raiser.say("抱歉 " + player.getTitle()
+						+ ", 我只赌 " + targets);
 				return;
 			}
 
 			// drop item
 			if (!player.drop(betInfo.itemName, betInfo.amount)) {
-				raiser.say("Sorry " + player.getTitle() + ", you don't have "
+				raiser.say("抱歉 " + player.getTitle() + ", 你没有 "
 						+ betInfo.amount + " " + betInfo.itemName);
 				return;
 			}
 
 			// store bet in list and confirm it
 			betInfos.add(betInfo);
-			raiser.say(player.getTitle() + ", your bet "
-					+ betInfo.betToString() + " was accepted");
+			raiser.say(player.getTitle() + ", 你已下注 "
+					+ betInfo.betToString() + " ");
 
 			// TODO: put items on ground and mark items on ground with: playername "betted" amount
 			// itemname "on" target.
@@ -283,10 +283,10 @@ public class BetManager extends ScriptImpl implements TurnListener {
 				// player logged out
 				if (winner.equals(betInfo.target)) {
 					npc.say(betInfo.playerName
-							+ " would have won but he or she went away.");
+							+ " 可能会赢, 但对方离开了.");
 				} else {
 					npc.say(betInfo.playerName
-							+ " went away. But as he or she has lost anyway it makes no differents.");
+							+ " 离开了. 相当于他已输.");
 				}
 
 			} else {
@@ -305,7 +305,7 @@ public class BetManager extends ScriptImpl implements TurnListener {
 					sb.append(betInfo.itemName);
 					sb.append(" back and wins an additional ");
 				} else {
-					sb.append(" lost his ");
+					sb.append(" 失去了 ");
 				}
 				sb.append(betInfo.amount);
 				sb.append(" ");
@@ -369,17 +369,17 @@ public class BetManager extends ScriptImpl implements TurnListener {
 		sandbox.add(npc);
 
 		// Create Dialog
-		npc.behave("greet", "Hi, do you want to bet?");
-		npc.behave("job", "I am the Bet Dialer");
+		npc.behave("greet", "Hi, 想加入赌局吗?");
+		npc.behave("job", "我是 Bet Dialer");
 		npc.behave(
 				"help",
-				"Say \"bet 5 cheese on fire\" to get an additional 5 pieces of cheese if fire wins. If he loses, you will lose your 5 cheese.");
+				"Say \"bet 5 cheese on fire\" , 如果火方赢了就赚了5块干酪. 如果火方输了, 就失去5块干酪.");
 		npc.addGoodbye();
 		npc.add(ConversationStates.IDLE, "bet", new BetCondition(),
 				ConversationStates.IDLE, null, new BetAction());
 		npc.add(ConversationStates.IDLE, "bet", new NoBetCondition(),
 				ConversationStates.IDLE,
-				"I am not accepting any bets at the moment.", null);
+				"现在不接受下注.", null);
 
 
 		admin.sendPrivateText("BetManager is not fully coded yet");
@@ -391,7 +391,7 @@ public class BetManager extends ScriptImpl implements TurnListener {
 		// Help
 		final List<String> commands = Arrays.asList("accept", "action", "winner");
 		if ((args.size() == 0) || (!commands.contains(args.get(0)))) {
-			admin.sendPrivateText("Syntax: /script BetManager.class accept #fire #water\n"
+			admin.sendPrivateText("语法: /script BetManager.class accept #fire #water\n"
 					+ "/script BetManager.class action\n"
 					+ "/script BetManager.class winner #fire\n");
 			return;
@@ -402,46 +402,46 @@ public class BetManager extends ScriptImpl implements TurnListener {
 		case 0:
 			// accept #fire #water
 			if (state != State.IDLE) {
-				admin.sendPrivateText("accept command is only valid in state IDLE. But i am in "
-						+ state + " now.\n");
+				admin.sendPrivateText("仅在状态为IDEL时才可接受命令. 但我还处在 "
+						+ state + " 中.\n");
 				return;
 			}
 			for (int i = 1; i < args.size(); i++) {
 				targets.add(args.get(i));
 			}
-			npc.say("Hi, I am accepting bets on " + targets
-					+ ". If you want to bet simply say: \"bet 5 cheese on "
+			npc.say("Hi, 我在 " + targets
+					+ " 方接受赌注. 如果你要压注, 请对我说: \"bet 5 干酪 on "
 					+ targets.get(0)
-					+ "\" to get an additional 5 pieces of cheese if "
+					+ "\" , 如果 "
 					+ targets.get(0)
-					+ " wins. If he loses, you will lose your 5 cheese.");
+					+ " 赢了, 你就能得到双倍返还. 但如果输了, 你就失去了赌注.");
 			state = State.ACCEPTING_BETS;
 			break;
 
 		case 1:
 			// action
 			if (state != State.ACCEPTING_BETS) {
-				admin.sendPrivateText("action command is only valid in state ACCEPTING_BETS. But i am in "
-						+ state + " now.\n");
+				admin.sendPrivateText("action 在状态为 ACCEPTING_BETS 时可用. 但我处在 "
+						+ state + " 的状态.\n");
 				return;
 			}
-			npc.say("Ok, Let the fun begin! I will not accept bets anymore.");
+			npc.say("Ok, 玩的开心! 我不再接受压注了.");
 			state = State.ACTION;
 			break;
 
 		case 2:
 			// winner #fire
 			if (state != State.ACTION) {
-				admin.sendPrivateText("winner command is only valid in state ACTION. But i am in "
-						+ state + " now.\n");
+				admin.sendPrivateText("处在 ACTION 状态时, 胜者命令可以发出. 但我现在处在 "
+						+ state + " 状态.\n");
 				return;
 			}
 			if (args.size() < 2) {
-				admin.sendPrivateText("Usage: /script BetManager.class winner #fire\n");
+				admin.sendPrivateText("用法: /script BetManager.class winner #fire\n");
 			}
 			winner = args.get(1);
 			state = State.PAYING_BETS;
-			npc.say("And the winner is ... " + winner + ".");
+			npc.say("获胜方为 ... " + winner + ".");
 			SingletonRepository.getTurnNotifier().notifyInTurns(
 					WAIT_TIME_BETWEEN_WINNER_ANNOUNCEMENTS, this);
 			break;

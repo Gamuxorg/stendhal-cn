@@ -2219,7 +2219,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <!-- This must be after the NPC configurator -->
     <entity x="9" y="12">
       <implementation class-name="games.stendhal.server.entity.mapstuff.chest.NPCOwnedChest">
-        <parameter name="npc">Mr Taxman</parameter>
+        <parameter name="npc">税官</parameter>
       </implementation>
     </entity>
     
@@ -2409,7 +2409,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="12" y="14">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buyaxe</parameter>
-        <parameter name="title">-- Woody (Fado) buys --</parameter>
+        <parameter name="title">-- 乌迪 (Fado) buys --</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">book_blue</attribute>
@@ -2454,7 +2454,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="3" y="15">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buymagic</parameter>
-        <parameter name="title">-- Vonda (Magic City) buys --</parameter>
+        <parameter name="title">-- 文达 (Magic City) buys --</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">book_blue</attribute>

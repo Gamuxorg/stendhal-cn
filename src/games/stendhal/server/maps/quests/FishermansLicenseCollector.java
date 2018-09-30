@@ -39,7 +39,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Santiago the fisherman</li>
+ * <li> 圣地亚哥 the fisherman</li>
  * </ul>
  *
  * STEPS:
@@ -107,7 +107,7 @@ public class FishermansLicenseCollector extends AbstractQuest {
 	}
 
 	private void step_1() {
-		final SpeakerNPC npc = npcs.get("Santiago");
+		final SpeakerNPC npc = npcs.get("圣地亚哥");
 
 		// player says hi before starting the quest
 		npc.add(
@@ -212,11 +212,11 @@ public class FishermansLicenseCollector extends AbstractQuest {
 	}
 
 	private void step_2() {
-		// Just find some of the fish somewhere and bring them to Santiago.
+		// Just find some of the fish somewhere and bring them to 圣地亚哥.
 	}
 
 	private void step_3() {
-		final SpeakerNPC npc = npcs.get("Santiago");
+		final SpeakerNPC npc = npcs.get("圣地亚哥");
 
 		// player returns while quest is still active
 		npc.add(
@@ -243,7 +243,7 @@ public class FishermansLicenseCollector extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Fishermans License part 2",
-				"Santiago will grant a fishermans license to those who can prove their skills.",
+				"圣地亚哥 will grant a fishermans license to those who can prove their skills.",
 				true);
 		step_1();
 		step_2();
@@ -257,11 +257,11 @@ public class FishermansLicenseCollector extends AbstractQuest {
 			if (!player.hasQuest(QUEST_SLOT)) {
 				return res;
 			}
-			res.add("The second part of my fishing exam is to take Santiago many species of fish.");
+			res.add("The second part of my fishing exam is to take 圣地亚哥 many species of fish.");
 			if (!isCompleted(player)) {
-				res.add("I still need to bring " + player + " for Santiago to inspect.");
+				res.add("I still need to bring " + player + " for 圣地亚哥 to inspect.");
 			} else {
-				res.add("I brought every fish Santiago wanted and now I'm a real fisherman! I will have more success when I fish.");
+				res.add("I brought every fish 圣地亚哥 wanted and now I'm a real fisherman! I will have more success when I fish.");
 			}
 			return res;
 	}
@@ -278,6 +278,6 @@ public class FishermansLicenseCollector extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Santiago";
+		return "圣地亚哥";
 	}
 }

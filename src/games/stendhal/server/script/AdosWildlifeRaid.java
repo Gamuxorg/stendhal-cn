@@ -91,7 +91,7 @@ public class AdosWildlifeRaid implements TurnListener {
 				break;
 
 			case 4:
-				shout("Marcus 士兵: 他们两个只是一支强大兽人部队的前锋. .");
+				shout("Marcus 士兵: 他们两个只是一支强大兽人部队的前锋.");
 				break;
 
 			case 5:

@@ -45,7 +45,7 @@ public class HouseBuyingMain {
 	 * @param zone target zone
 	 */
 	public void createKalavanNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new KalavanHouseseller("Barrett Holmes", "kalavan", houseTax);
+		final SpeakerNPC npc = new KalavanHouseseller("巴瑞特霍木斯", "kalavan", houseTax);
 		zone.add(npc);
 	}
 
@@ -55,7 +55,7 @@ public class HouseBuyingMain {
 	 * @param zone target zone
 	 */
 	public void createAdosNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new AdosHouseSeller("Reg Denson", "ados", houseTax);
+		final SpeakerNPC npc = new AdosHouseSeller("瑞格丹森", "ados", houseTax);
 		zone.add(npc);
 	}
 
@@ -65,7 +65,7 @@ public class HouseBuyingMain {
 	 * @param zone target zone
 	 */
 	public void createKirdnehNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new KirdnehHouseSeller("Roger Frampton", "kirdneh", houseTax);
+		final SpeakerNPC npc = new KirdnehHouseSeller("罗格费雷普顿", "kirdneh", houseTax);
 		zone.add(npc);
 	}
 
@@ -90,7 +90,7 @@ public class HouseBuyingMain {
 		if(playerHousePortal!=null) {
 			int unpaidPeriods = houseTax.getUnpaidTaxPeriods(player);
 			if (unpaidPeriods>0) {
-				hist.add("我拥有 " + unpaidPeriods + "month" + " 的税款. ");
+				hist.add("我拥有 " + unpaidPeriods + " 月的税款. ");
 			} else {
 				hist.add("我交的房产税到期日期为.");
 			}

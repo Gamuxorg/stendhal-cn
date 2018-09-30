@@ -65,12 +65,12 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 
 			// quest slot 'house' is started so player owns a house
 		add(ConversationStates.ATTENDING,
-			Arrays.asList("cost", "house", "buy", "purchase"),
+			Arrays.asList("房价", "买房", "购房", "buy"),
 			new PlayerOwnsHouseCondition(),
 			ConversationStates.ATTENDING,
-			"As you already know, the cost of a new house is "
+			"如你所知, 买房需要花 "
 				+ getCost()
-			+ " money. But you cannot own more than one house, the market is too demanding for that! You cannot own another house until you #resell the one you already own.",
+			+ " 钱. 但你只能买一所房子, 因为市场需求太大! 你只能把旧房 #转卖 掉然后才能买新房.",
 			null);
 
 		// we need to warn people who buy spare keys about the house
@@ -79,7 +79,7 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.QUESTION_2,
-			"Before we go on, I must warn you that anyone with a key to your house can enter it, and access the items in the chest in your house. Do you still wish to buy a spare key?",
+			"继续之前, 我必须提醒你, 任何有钥匙的人都能进入你的房间, 并且可以使用储物箱的东西. 你仍要配一把备用钥匙吗?",
 			null);
 
 		// player wants spare keys and is OK with house being accessible
@@ -96,7 +96,7 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 				ConversationStates.ATTENDING,
-			"That is wise of you. It is certainly better to restrict use of your house to those you can really trust.",
+			"再次提醒你. 你要确保可以信任的人才能进入你的房子.",
 			null);
 
 		// refused offer to buy spare key
@@ -104,25 +104,25 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 				ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"No problem! Just so you know, if you need to #change your locks, I can do that, and you can also #resell your house to me if you want to.",
+			"没问题! 如果所知, 如果需要 #换锁, 我都能做到, 你也可以 #转卖 房产给我.",
 			null);
 
 		// player is eligible to resell a house
 		add(ConversationStates.ATTENDING,
-			Arrays.asList("resell", "sell"),
+			Arrays.asList("转卖", "售房", "卖房"),
 			new PlayerOwnsHouseCondition(),
 				ConversationStates.QUESTION_3,
-			"The state will pay you "
+			"我会以百分之 "
 			+ Integer.toString(DEPRECIATION_PERCENTAGE)
-			+ " percent of the price you paid for your house, minus any taxes you owe. You should remember to collect any belongings from your house before you sell it. Do you really want to sell your house to the state?",
+			+ " 的你的购房时的价格, 再减去你之前欠下的税款之后的价格付款给你. 你要记得售房前带走你房间里的私人物品. 确定要卖掉你的房产?",
 			null);
 
 		// player is not eligible to resell a house
 		add(ConversationStates.ATTENDING,
-			Arrays.asList("resell", "sell"),
+			Arrays.asList("转卖", "售房", "卖房"),
 			new NotCondition(new PlayerOwnsHouseCondition()),
 			ConversationStates.ATTENDING,
-			"You don't own any house at the moment. If you want to buy one please ask about the #cost.",
+			"现在你没有房产了. 如果想买个新房可以寻问 #房价.",
 			null);
 
 		add(ConversationStates.QUESTION_3,
@@ -137,24 +137,24 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Well, I'm glad you changed your mind.",
+			"好吧, 很高兴你能改变主意.",
 			null);
 
 		// player is eligible to change locks
 		add(ConversationStates.ATTENDING,
-			"change",
+			"换锁",
 			new PlayerOwnsHouseCondition(),
 			ConversationStates.SERVICE_OFFERED,
-			"If you are at all worried about the security of your house or, don't trust anyone you gave a spare key to, "
-			+ "it is wise to change your locks. Do you want me to change your house lock and give you a new key now?",
+			"如果你担心房子的安全, 或者不再想信取得你钥匙的人, "
+			+ "希望给房子换一把新锁. 现在确定要换吗?",
 			null);
 
 		// player is not eligible to change locks
 		add(ConversationStates.ATTENDING,
-			"change",
+			"换锁",
 			new NotCondition(new PlayerOwnsHouseCondition()),
 			ConversationStates.ATTENDING,
-			"You don't own any house at the moment. If you want to buy one please ask about the #cost.",
+			"你还没有房产. 如果你要买房请寻问 #房价 .",
 			null);
 
 		// accepted offer to change locks
@@ -170,25 +170,25 @@ abstract class HouseSellerNPCBase extends SpeakerNPC {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"OK, if you're really sure. Please let me know if I can help with anything else.",
+			"OK, 如果你确定就告诉我.",
 			null);
 
 		add(ConversationStates.ANY,
-			Arrays.asList("available", "unbought", "unsold"),
+			Arrays.asList("可售", "在售", "未售"),
 			null,
 			ConversationStates.ATTENDING,
 			null,
 			new ListUnboughtHousesAction(location));
 
 		addReply(
-				 "buy",
-				 "You should really enquire the #cost before you ask to buy. And check our brochure, #https://stendhalgame.org/wiki/StendhalHouses.");
-		addReply("really",
-				 "That's right, really, really, really. Really.");
-		addOffer("I sell houses, please look at #https://stendhalgame.org/wiki/StendhalHouses for examples of how they look inside. Then ask about the #cost when you are ready.");
-		addHelp("You may be eligible to buy a house if there are any #available. If you can pay the #cost, I'll give you a key. As a house owner you can buy spare keys to give your friends. See #https://stendhalgame.org/wiki/StendhalHouses for pictures inside the houses and more details.");
-		addQuest("You may buy houses from me, please ask the #cost if you are interested. Perhaps you would first like to view our brochure, #https://stendhalgame.org/wiki/StendhalHouses.");
-		addGoodbye("Goodbye.");
+				 "买房",
+				 "买房之前最好先询问 #房价 . 可以看看售房目录在, #https://stendhalgame.org/wiki/StendhalHouses.");
+		addReply("非常",
+				 "一定要, 非常, 非常, 非常. 非常.");
+		addOffer("我是售楼人员, 请在 #https://stendhalgame.org/wiki/StendhalHouses 看看房内的布置. 选定后再向我询问 #房价.");
+		addHelp("如果有 #可售 房源, 你有资格购买. 如果你按 #房价 支付完, 我会把房间钥匙给你. 作为房主你可以再做一把备用钥匙分享给你的朋友. 请先到 #https://stendhalgame.org/wiki/StendhalHouses 查看房内布置.");
+		addQuest("可以向我买房, 如果你有兴趣可以询问 #房价, 要选房可以看看 #https://stendhalgame.org/wiki/StendhalHouses.");
+		addGoodbye("再见.");
 	}
 
 	protected abstract int getCost();

@@ -44,7 +44,7 @@
 
   <item name="传说之卵">
     <type class="special" subclass="mythical_egg" tileid="-1"/>
-    <description>You see a mythical egg, but you do not know, what it is for.</description>
+    <description>一枚传说之卵, 但不知道有什么用.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

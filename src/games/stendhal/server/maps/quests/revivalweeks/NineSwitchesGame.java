@@ -44,7 +44,7 @@ public class NineSwitchesGame implements LoadableContent {
 	}
 
 	private void addNPC() {
-		npc = new SpeakerNPC("Maltos") {
+		npc = new SpeakerNPC("马尔托斯") {
 			@Override
 				protected void createPath() {
 					// NPC doesn't move
@@ -53,17 +53,17 @@ public class NineSwitchesGame implements LoadableContent {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi, welcome to our small game of nine switches. Your task is to make all arrows point to the right."
-						+ " Easy? Well, there is a #catch.");
-				addReply("catch",
-						" Each switch is linked to its neighbour and will change them as well. You have one minute to solve the puzzle."
-						+ " Do you want to #play?.");
-				addJob("I am the supervisor of this game.");
-				addGoodbye("It was nice to meet you.");
+				addGreeting("Hi, 欢迎来玩我们的游戏九宫棋. 你的任务是把全部的箭头指向右."
+						+ " 容易? 好吧, 这是个 #拉手.");
+				addReply("拉手",
+						" 每个开关连都接到隔壁, 并且能改变它们. 你只有一分钟解开这道迷题."
+						+ " 要 #开始 玩吗?");
+				addJob("我是本游戏管理员.");
+				addGoodbye("很高兴见到你.");
 				add(ConversationStates.ATTENDING,
-						Arrays.asList("play", "play?", "game", "yes"),
+						Arrays.asList("开始", "是", "是的"),
 						ConversationStates.ATTENDING,
-						"Good luck.",
+						"好运.",
 						new PlayAction(board));
 			}
 
@@ -75,7 +75,7 @@ public class NineSwitchesGame implements LoadableContent {
 		npc.setEntityClass("gamesupervisornpc");
 		npc.setPlayerChatTimeout(CHAT_TIMEOUT);
 		npc.setPosition(98, 104);
-		npc.setDescription("You see Maltos. Aren't you jealous of his awesome hair?");
+		npc.setDescription("你遇见了马尔托斯. 是不是嫉妒他风骚的头发?");
 		npc.setDirection(Direction.DOWN);
 		zone.add(npc);
 	}
@@ -98,7 +98,7 @@ public class NineSwitchesGame implements LoadableContent {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (board.getPlayerName() != null) {
-				npc.say("Sorry, " + player.getName() + " there is already a game in progress. Please wait a little.");
+				npc.say("抱歉, " + player.getName() + " 有其他人正在玩. 请等一会.");
 				return;
 			}
 			board.setPlayerName(player.getName());
@@ -122,7 +122,7 @@ public class NineSwitchesGame implements LoadableContent {
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		NPCList.get().remove("Paul Sheriff");
+		NPCList.get().remove("保罗史瑞夫");
 		zone.remove(npc);
 		board.remove();
 		return true;

@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * <p>Creates a normal version of Susi in the ross house.
+ * <p>Creates a normal version of 苏茜 in the ross house.
  */
 public class LittleGirlNPC implements ZoneConfigurator {
 
@@ -44,7 +44,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 
 	public void createGirlNPC(final StendhalRPZone zone) {
 
-		final SpeakerNPC npc = new SpeakerNPC("Susi") {
+		final SpeakerNPC npc = new SpeakerNPC("苏茜") {
 			@Override
 			protected void createPath() {
 				final List<Node> nodes = new LinkedList<Node>();
@@ -65,7 +65,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				// TODO: Add different greetings depending on whether Susi's is a friend of the player or not
+				// TODO: Add different greetings depending on whether 苏茜's is a friend of the player or not
 				addGreeting("Hello. Daddy must have left the house door open again. He's always doing that.");
 				addJob("I am just a little girl.");
 				addGoodbye("Have fun!");
@@ -89,7 +89,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 		npc.setPosition(3, 7);
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);
-		npc.setDescription("You see Susi. Did you ever hear the story about her being lost for some time?");
+		npc.setDescription("You see 苏茜. Did you ever hear the story about her being lost for some time?");
 		zone.add(npc);
 	}
 

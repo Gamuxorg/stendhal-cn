@@ -41,11 +41,11 @@ public class LogoutPlayer extends ScriptImpl {
 		try {
 			final Player player = SingletonRepository.getRuleProcessor().getPlayer(args.get(0));
 			if (player == null) {
-				admin.sendPrivateText("Player is not online");
+				admin.sendPrivateText("玩家不在线");
 				return;
 			}
 			SingletonRepository.getRuleProcessor().getRPManager().disconnectPlayer(player);
-			admin.sendPrivateText(args.get(0) + " has been logged out");
+			admin.sendPrivateText(args.get(0) + " 已退出");
 		} catch (final Exception e) {
 			logger.error(e, e);
 		}

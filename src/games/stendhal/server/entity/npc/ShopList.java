@@ -221,7 +221,7 @@ public final class ShopList {
 		shops.add("boots&helm", "影子靴子", 2000);
 		shops.add("boots&helm", "石靴", 2500);
 		shops.add("boots&helm", "混沌靴", 4000);
-        shops.add("boots&helm", "绿了吧唧的靴子", 6000);
+        shops.add("boots&helm", "绿色龙靴", 6000);
         shops.add("boots&helm", "异界靴子", 8000);
         shops.add("boots&helm", "异界头盔", 8000);
 

@@ -35,7 +35,7 @@ public class NameChange extends ScriptImpl {
 			if (!Configuration.getConfiguration().has(CONFIG_KEY)
 					|| !Boolean.parseBoolean(Configuration.getConfiguration().get(
 							CONFIG_KEY))) {
-				admin.sendPrivateText("This script must be enabled in the server configuration file (usually server.ini) with key "
+				admin.sendPrivateText("script 必须在服务器参数文件（server.ini）中使用key , 才可以使用, key为: "
 						+ CONFIG_KEY);
 				return;
 			}
@@ -44,18 +44,18 @@ public class NameChange extends ScriptImpl {
 			return;
 		}
 		if (args.size() < 1) {
-			admin.sendPrivateText("Usage: /script NameChange.class {newname|remove}\n设置你的名字显示为新名字, 或者删除改名效果.\nWarning: Not supported for normal characters. Bound items and spouses will be broken and there may be other unexpected effects.");
+			admin.sendPrivateText("用法: /script NameChange.class {newname|remove}\n设置你的名字显示为新名字, 或者删除改名效果.\nWarning: Not supported for normal characters. Bound items and spouses will be broken and there may be other unexpected effects.");
 		} else {
 			// do title change
 			if (args.get(0).equals("remove")) {
 				admin.setTitle(null);
-				admin.sendPrivateText("Your original name has been restored. Please change zones for the changes to take effect.");
+				admin.sendPrivateText("你的原名被恢复. 请走切换区域后查看改后效果.");
 			} else {
 				final String title = args.get(0);
 
 				admin.setTitle(title);
-				admin.sendPrivateText("Your display name has been changed to " + title
-					+ ". Internally stored names have not been changed and there may be unexpected effects.");
+				admin.sendPrivateText("你的名称改为 " + title
+					+ ". 内部存储名称没有被改变, 另外可能引起意外效果.");
 			}
 
 			admin.notifyWorldAboutChanges();

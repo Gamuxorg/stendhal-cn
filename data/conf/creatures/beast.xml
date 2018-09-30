@@ -92,7 +92,7 @@
   
   <creature name="石像鬼">
     <type class="gargoyle" subclass="gargoyle" tileid="gargoyle.png:2"/>
-    <description>You see a 石像鬼, You should think that it is a statue, but no, it is alive!</description>
+    <description>一尊石像鬼, 你会觉得它不会动, 但并非如此, 它是活的!</description>
     <attributes>
       <atk value="98"/>
       <def value="16"/>
@@ -123,7 +123,7 @@
   
   <creature name="高级石像鬼">
     <type class="gargoyle" subclass="elder_gargoyle" tileid="gargoyle.png:1"/>
-    <description>You see an 高级石像鬼, it is wise...</description>
+    <description>一尊高级石像鬼, 它有思想...</description>
     <attributes>
       <atk value="114"/>
       <def value="16"/>
@@ -153,7 +153,7 @@
   
   <creature name="黑暗石像鬼">
     <type class="gargoyle" subclass="dark_gargoyle" tileid="gargoyle.png:0"/>
-    <description>You see a 黑暗石像鬼, do you feel the fear?</description>
+    <description>一尊黑暗石像鬼, 感到可怕了?</description>
     <attributes>
       <atk value="134"/>
       <def value="22"/>
@@ -187,7 +187,7 @@
   
   <creature name="毒液石像鬼">
     <type class="gargoyle" subclass="venom_gargoyle" tileid="gargoyle.png:3"/>
-    <description>You see a 毒液石像鬼, a hideous and poisonous creature.</description>
+    <description>毒液石像鬼, 是一种丑恶且剧毒的家伙.</description>
     <attributes>
       <atk value="188"/>
       <def value="61"/>
@@ -228,7 +228,7 @@
   
   <creature name="宝箱怪">
     <type class="hybrid" subclass="mimic_idle" tileid="hybrid.png:14"/>
-    <description>You see a 宝箱怪. Its content might be different from what you expect.</description>
+    <description>一个宝箱怪. 它里面的东西可能与你期望的不一样.</description>
     <attributes>
       <atk value="240"/>
       <def value="41"/>
@@ -260,7 +260,7 @@
   
   <creature name="暴食兽">
     <type class="hybrid" subclass="snarfkin" tileid="hybrid.png:11"/>
-    <description>You see a 暴食兽, the favourite pet of wizards. Be careful, its claws are poisonous!</description>
+    <description>暴食兽是巫师喜爱的宠物, 要小心它的爪子有毒!</description>
     <attributes>
       <atk value="472"/>
       <def value="74"/>
@@ -357,7 +357,7 @@
   
   <creature name="古刚">
     <type class="hybrid" subclass="googon" tileid="hybrid.png:10"/>
-    <description>You see a 古刚 that comes from the worst place in this world...Be careful this creature is a deadly killer.</description>
+    <description>古刚来自这个世界最邪恶的地方... 小心这个死亡杀手.</description>
     <attributes>
       <atk value="430"/>
       <def value="128"/>
@@ -452,7 +452,7 @@
   
   <creature name="帝国试验体">
     <type class="mutant" subclass="imperial_experiment" tileid="mutant.png:4"/>
-    <description>You see an 帝国试验体 which mirrors the fate of many of science departments test subjects. It's skin glows and standing before it taxes your body.</description>
+    <description>帝国试验体是科学部门的试验产物. 你站到它前面就能感到它赤热的皮肤.</description>
     <attributes>
       <atk value="572"/>
       <def value="71"/>
@@ -515,7 +515,7 @@
   
   <creature name="thing">
     <type class="huge_animal" subclass="thing" tileid="huge_animal.png:8"/>
-    <description>You see a thing. It looks like a very mutated human and is so scary that you think it has to come from another world.</description>
+    <description>You see a thing. 他看起来好像是一个巨大化的人类, 感觉它是来自另一个世界.</description>
     <attributes>
       <atk value="977"/>
       <def value="121"/>
@@ -531,7 +531,7 @@
       <item value="强治疗剂" quantity="[1,3]" probability="100.0"/>
       <item value="大瓶抗毒药济" quantity="[1,6]" probability="80.0"/>
       <item value="money" quantity="[100,400]" probability="100.0"/>
-      <item value="绿了吧唧的靴子" quantity="[1,1]" probability="2.5"/>
+      <item value="绿色龙靴" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>
     </equips>
@@ -550,7 +550,7 @@
   
   <creature name="绿色史莱姆">
     <type class="animal" subclass="green_slime" tileid="animal.png:12"/>
-    <description>You see a 绿色史莱姆, sticky and shiny.</description>
+    <description>绿色史莱姆粘粘的亮亮的.</description>
     <attributes>
       <atk value="114"/>
       <def value="18"/>
@@ -580,7 +580,7 @@
   
   <creature name="棕色史莱姆">
     <type class="animal" subclass="brown_slime" tileid="animal.png:5"/>
-    <description>You see a 棕色史莱姆, sticky and hungry.</description>
+    <description>棕色史莱姆粘粘的亮亮的.</description>
     <attributes>
       <atk value="184"/>
       <def value="26"/>
@@ -610,7 +610,7 @@
   
   <creature name="黑色史莱姆">
     <type class="animal" subclass="black_slime" tileid="animal.png:3"/>
-    <description>You see a 黑色史莱姆, with a sticky trail behind it.</description>
+    <description>黑色史莱姆粘粘的亮亮的.</description>
     <attributes>
       <atk value="250"/>
       <def value="36"/>
@@ -640,7 +640,7 @@
   
   <creature name="荧光光史莱姆">
     <type class="animal" subclass="twilight_slime" tileid="animal.png:-1"/>
-    <description>You see a 荧光光史莱姆, so strange and beautiful. Why is it coming towards you? Runnnnnnnnn!</description>
+    <description>荧光光史莱姆有种非常奇特美丽. 为什么它朝你走来? 快跑!</description>
     <attributes>
       <atk value="718"/>
       <def value="88"/>

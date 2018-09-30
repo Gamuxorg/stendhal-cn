@@ -22,7 +22,7 @@ import games.stendhal.server.entity.item.token.BoardToken;
 import games.stendhal.server.entity.item.token.Token.TokenMoveListener;
 
 /**
- * A Tic Tac Toe board.
+ * A 井字棋 board.
  *
  * @author hendrik
  */
@@ -37,7 +37,7 @@ public class TicTacToeBoard extends GameBoard implements TokenMoveListener<Board
 		put("class", "tictactoe");
 		board = new BoardToken[3][3];
 		tokenTypes = Arrays.asList("十字游戏币", "圆形游戏币");
-		setDescription("这是 Tic Tac Toe 的游戏面板");
+		setDescription("这是 井字棋 的游戏面板");
 	}
 
 	public void addToWorld() {
