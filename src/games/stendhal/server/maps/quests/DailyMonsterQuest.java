@@ -74,7 +74,7 @@ import games.stendhal.server.maps.Region;
 public class DailyMonsterQuest extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "daily";
-	private final SpeakerNPC npc = npcs.get("Mayor Sakhs");
+	private final SpeakerNPC npc = npcs.get("镇长沙克斯");
 	private static Logger logger = Logger.getLogger("DailyMonsterQuest");
 
 	private final static int delay = MathHelper.MINUTES_IN_ONE_DAY;
@@ -260,7 +260,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我已在 塞门镇 城镇大厅见到了城主 Sakhs. ");
+		res.add("我已在 塞门镇 城镇大厅见到了城主 沙克斯. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("我不想帮助塞门镇城. ");
@@ -399,7 +399,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"可能我还没有向你发出任务 #quest ",
+				"可能我还没有向你发出 #任务",
 				null);
 
 		// player already completed this quest
@@ -458,7 +458,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						new QuestNotStartedCondition(QUEST_SLOT),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"可能我还没有给你发出 #任务 #quest . ",
+				"可能我还没有给你发出 #任务. ",
 				null);
 
 		// player have no expired quest
@@ -482,8 +482,8 @@ public class DailyMonsterQuest extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Daily Monster Quest",
-				"Sakhs城需要勇士保卫塞门镇城的安全. ",
+				"每日杀怪任务",
+				"沙克斯城需要勇士保卫塞门镇城的安全. ",
 				true);
 		step_1();
 		step_2();
@@ -514,6 +514,6 @@ public class DailyMonsterQuest extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Mayor Sakhs";
+		return "镇长沙克斯";
 	}
 }

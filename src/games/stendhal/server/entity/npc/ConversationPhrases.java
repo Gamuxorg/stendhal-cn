@@ -35,7 +35,7 @@ public class ConversationPhrases {
 	public static final List<String> GREETING_MESSAGES = Arrays.asList("hi",
 			"hello", "喂", "嗨", "你好","您好");
 
-	public static final List<String> JOB_MESSAGES = Arrays.asList("job", "work", "工作", "找工作");
+	public static final List<String> JOB_MESSAGES = Arrays.asList("job", "work", "工作", "职业");
 
 	public static final List<String> HELP_MESSAGES = Arrays.asList("help",
 			"帮助","求助","帮忙","帮我");

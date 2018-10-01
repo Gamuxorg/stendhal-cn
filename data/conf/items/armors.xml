@@ -79,9 +79,9 @@
     </equipable>
   </item>
   
-  <item name="浑沌护甲">
+  <item name="混沌护甲">
     <type class="armor" subclass="chaos_armor" tileid="-1"/>
-    <description>发现一件浑沌护甲, 这种反差的配色毫无意义. </description>
+    <description>发现一件混沌护甲, 这种反差的配色毫无意义. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="20"/>

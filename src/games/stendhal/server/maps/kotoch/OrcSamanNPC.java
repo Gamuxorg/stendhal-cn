@@ -39,7 +39,7 @@ public class OrcSamanNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Orc Saman") {
+		final SpeakerNPC npc = new SpeakerNPC("兽人萨满") {
 
 			@Override
 			protected void createPath() {
@@ -56,14 +56,14 @@ public class OrcSamanNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Oof.");
-				addJob("Me, Orc Saman.");
-				addHelp("Orc Saman need help! Make #task.");
-				addOffer("No trade.");
+				addJob("我, 兽人萨满.");
+				addHelp("兽人萨需要帮助! 给你 #任务.");
+				addOffer("不买卖.");
  				addGoodbye("see yoo.");
 			}
 		};
 
-		npc.setDescription("You see an Orc Saman.");
+		npc.setDescription("你遇见了 兽人萨满.");
 		npc.setEntityClass("orcsamannpc");
 		npc.setPosition(8, 113);
 		npc.initHP(100);

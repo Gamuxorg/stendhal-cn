@@ -55,29 +55,29 @@ public class MeetIo extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met the telepath Io Flotto in 塞门镇 Temple.");
+		res.add("我在塞门镇神殿遇见了艾欧弗鲁托.");
 		if (isCompleted(player)) {
-			res.add("Io taught me the six basic elements of telepathy and promised to remind me if I need to refresh my knowledge.");
+			res.add("艾欧告诉我六种基本元素, 并保证如果需要更新知识时会提醒我.");
 		}
 		return res;
 	}
 
 	private void prepareIO() {
 
-		final SpeakerNPC npc = npcs.get("Io Flotto");
+		final SpeakerNPC npc = npcs.get("艾欧弗鲁托");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.HELP_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"I'm a telepath and a telekinetic; I can help you by sharing my mental skills with you. Do you want me to teach you the six basic elements of telepathy? I already know the answer but I'm being polite...",
+			"我是一个传心术师; 我可以把我的精神技能教给你. 你想学习这6种基本元素能力吗? 我想我已经知道答案了, 但出于礼貌我不说...",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.HELP_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Do you want to repeat the six basic elements of telepathy? I already know the answer but I'm being polite...",
+			"你想学习这6种元素的能力吗? 我已知道答案但我不说...",
 			null);
 
 		npc.add(
@@ -85,7 +85,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_1,
-			"Type #/who to ascertain the names of those adventurers who are currently present in the world of Stendhal. Do you want to learn the second basic element of telepathy?",
+			"输入 #/who 查明当前在这个世界中活动的玩家. 你想学习第二种基本的传心术吗?",
 			null);
 
 		npc.add(
@@ -93,7 +93,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_2,
-			"Type #/where #username to discern where in Stendhal that person is currently roaming; you can use #'/where sheep' to keep track of any sheep you might own. To understand the system used for defining positions in Stendhal, try asking #Zynn; he knows more about it than I do. Ready for the third lesson?",
+			"输入 #/where #用户名 洞悉某人当前的位置; 也可以任用 #'/where sheep' 追踪你支配的羊的位置. 要高清楚这个系统的定位方法, 可以问问 #Zynn; 他比我了解的更清楚. 准备好第三课了吗?",
 			null);
 
 		npc.add(
@@ -101,7 +101,7 @@ public class MeetIo extends AbstractQuest {
 			"Zynn",
 			null,
 			ConversationStates.INFORMATION_2,
-			"His full name is Zynn Iwuhos. He spends most of his time in the library, making maps and writing historical record books. Ready for the next lesson?",
+			"他的全名叫 震爱武豪斯. 他在图书管花了大量时间绘制了地图, 还写了史书. 要学下一课吗?",
 			null);
 
 		npc.add(
@@ -109,7 +109,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_3,
-			"Type #'/tell username message' or #'/msg username message' to talk to anybody you wish, no matter where in Stendhal that person is.  You can type #'// response' to continue talking to the last person you send a message to. Ready to learn my fourth tip?",
+			"输入 #'/tell 用户名 消息内容' 或者  #'/msg 用户名 消息内容' 可以与某人通话, 而不论对方在哪里.  你可能输入 #'// 回话' 与上个对话者继续通话. 准备好学习下一课了吗?",
 			null);
 
 		npc.add(
@@ -117,7 +117,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_4,
-			"Press #Shift+Up at the same time to recall things you previously said, in case you need to repeat yourself. Okay, shall we move on to the fifth lesson?",
+			"输入 #Shift+Up 可以重复最后一次输入的内容, 方便你重复发些东西. Okay, 我们开始第5课吧?",
 			null);
 
 		npc.add(
@@ -125,7 +125,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_5,
-			"Type #/support #<message> to report a problem. You can also try the IRC channel ##arianne on #'irc.freenode.net'. There is a web frontend at #https://stendhalgame.org/development/chat.html \nOkay, time for your last lesson in mental manipulation!",
+			"输入 #/support #<message> 向网管报告问题. 你也可以试试到 #'irc.freenode.net' 的IRC 频道 ##arianne. 它有个WEB前端可以直接用 #https://stendhalgame.org/development/chat.html \nOkay, 接下来是精神操作的最后一课!",
 			null);
 
 		npc.add(
@@ -133,16 +133,16 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_6,
-			"You can travel to the astral plane at any time, thereby saving and closing your game. Just type #/quit, or press the #Esc key, or even simply close the window. Okay! Hmm, I think you want to learn how to float in the air like I do.",
+			"你可以随时去精神世界旅行, 因此保存并关掉游戏只用输入 #/quit, 或者按下 #Esc 键, 或者直接关闭游戏窗口. Okay! 嗯, 我想你一定想学习如何像我一样飘在空中.",
 			null);
 
 		/** Give the reward to the patient newcomer user */
-		final String answer = "*yawns* Maybe I'll show you later... I don't want to overload you with too much information at once. You can get a summary of all those lessons at any time, incidentally, just by typing #/help.\n";
+		final String answer = "*yawns* 也许我以后会教你... 我不想给你太多压力. 让你一次学的太多. 你可以随时查看刚才课程的目录, 只需输入 #/help.\n";
 		npc.add(ConversationStates.INFORMATION_6,
 			ConversationPhrases.YES_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.IDLE,
-			answer + "Hey! I know what you're thinking, and I don't like it!",
+			answer + "嗨! 我知道你在想什么, 我并不喜欢这样!",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
@@ -154,7 +154,7 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.IDLE,
-			answer + "Remember, don't let anything disturb your concentration.",
+			answer + "记住, 不要让其他事让你分心.",
 			new MultipleActions(reward));
 
 		npc.add(
@@ -162,15 +162,15 @@ public class MeetIo extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"If you ever decide to widen the frontiers of your mind a bit more, drop by and say hello. Farewell for now!",
+			"如果你决定扩宽知识面, 随时说 你好 .再会!",
 			null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Meet Io",
-				"Io Flotto can teach about how to communicate.",
+				"会见艾欧弗鲁托",
+				"艾欧弗鲁托 教会你如何交流.",
 				false);
 		prepareIO();
 	}
@@ -187,6 +187,6 @@ public class MeetIo extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Io Flotto";
+		return "艾欧弗鲁托";
 	}
 }

@@ -31,7 +31,7 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 
 	private void buildHouseArea(final StendhalRPZone zone) {
 
-		final SpeakerNPC npc = new SpeakerNPC("The Dragon Keeper") {
+		final SpeakerNPC npc = new SpeakerNPC("守龙人") {
 
 			@Override
 			protected void createDialog() {
@@ -43,7 +43,7 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 					@Override
 					public boolean transactAgreedDeal(ItemParserResult res, final EventRaiser seller, final Player player) {
 						if (res.getAmount() > 1) {
-							seller.say("Hmm... 我不认为你一次可以照看一只以上的龙 dragon.");
+							seller.say("Hmm... 我不认为你一次可以照看一只以上的龙 .");
 							return false;
 						} else if (player.hasPet()) {
 							say("好的, 你应该首先照顾好已经有的那只.");
@@ -53,7 +53,7 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 								seller.say("你的钱好像不够.");
 								return false;
 							}
-							seller.say("要给龙锻炼的机会！你应该把它带在身边并和你一成长 #grow .");
+							seller.say("要给龙锻炼的机会！你应该把它带在身边并和你一起 #成长");
 
 							final BabyDragon baby_dragon = new BabyDragon(player);
 
@@ -73,9 +73,9 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 
 				addGreeting();
 				addJob("我与这只龙并肩作战, 或许也有一只适合你.");
-				addHelp("我销售龙. 想买的话只用对我说我想买 #buy #dragon.");
+				addHelp("我销售龙. 想买的话只用对我说我想 #买 #龙 (buy dragon).");
 				addGoodbye();
-				addReply("grow","带着它战斗, 龙也会获得经验并提级等级.");
+				addReply("成长","带着它战斗, 龙也会获得经验并提级等级.");
 				new SellerAdder().addSeller(this, new DragonSellerBehaviour(items));
 			}
 		};

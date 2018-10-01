@@ -37,7 +37,7 @@ public class MeetZynn extends AbstractQuest {
 	}
 	private void step_1() {
 
-		final SpeakerNPC npc = npcs.get("Zynn Iwuhos");
+		final SpeakerNPC npc = npcs.get("震爱武豪斯");
 
 		/**
 		 * Quest can always be started again. Just check that no reward is given
@@ -127,7 +127,7 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"Io",
-						"它的全名是 \"Io Flotto\".她大部分时间都在教堂, 嗯...漂着...她可能有些怪异. 但她的直觉 \"intuition\" 工作远远好过任何指示器, 正如我讲的那样. ");
+						"它的全名是 \"艾欧弗鲁托\".她大部分时间都在教堂, 嗯...漂着...她可能有些怪异. 但她的直觉 \"intuition\" 工作远远好过任何指示器, 正如我讲的那样. ");
 
 		/**
 		 * I still have to think of a way to reward a good amount of XP to the
@@ -151,8 +151,8 @@ public class MeetZynn extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Meet Zynn Iwuhos",
-				"Zynn Iwuhos, 在塞门镇图书管工作, 掌握了相当多的实用信息资源. ",
+				"Meet 震爱武豪斯",
+				"震爱武豪斯, 在塞门镇图书管工作, 掌握了相当多的实用信息资源. ",
 				false);
 		step_1();
 	}
@@ -180,6 +180,6 @@ public class MeetZynn extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Zynn Iwuhos";
+		return "震爱武豪斯";
 	}
 }

@@ -30,7 +30,7 @@ import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.CollisionAction;
 
 /**
- * The blacksmith's young assistant (original name: Hackim Easso).
+ * The blacksmith's young assistant (original name: 黑姆伊索).
  * He smuggles out weapons.
  *
  * @see games.stendhal.server.maps.quests.MeetHackim
@@ -44,7 +44,7 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Hackim Easso") {
+		final SpeakerNPC npc = new SpeakerNPC("黑姆伊索") {
 
 			@Override
 			protected void createPath() {
@@ -79,10 +79,10 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotStartedCondition("meet_hackim")),
 				        ConversationStates.ATTENDING,
-				        "Hi 陌生人, 我是 Hackim Easso, 铁匠铺的助理, 你来这是想买些武器吗？",
+				        "Hi 陌生人, 我是黑姆伊索, 铁匠铺的助理. 你来这是想买些武器吗？",
 				        new SetQuestAction("meet_hackim","start"));
 
-				addGreeting(null, new SayTextAction("Hi 又见面了, [name]. 现在能帮我个忙吗 #help ?"));
+				addGreeting(null, new SayTextAction("Hi 又见面了, [name]. 你现在能 #帮助 我吗?"));
 
 				addHelp("我是铁匠铺的助理, 告诉我...你来这是要买武器吗？");
 				addJob("我帮助 艾克德罗斯 在铁匠铺为 Deniran 的军队制作武器. 我大部分工作是给火添煤, 或者把武器放到架子上. 偶尔当 艾克德罗斯 不注意时, 我喜欢用其中一把剑, 假装是一个著名的冒险家!");
@@ -94,7 +94,7 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 		npc.setPosition(5, 2);
 		npc.setCollisionAction(CollisionAction.REVERSE); // prevent trapping players
 		npc.setEntityClass("naughtyteennpc");
-		npc.setDescription("你见到了 Hackim Easso, Semon 铁匠铺的助手");
+		npc.setDescription("你见到了黑姆伊索, 塞门铁匠铺的助手");
 		zone.add(npc);
 	}
 }

@@ -51,7 +51,7 @@ public class TelepathNPC implements ZoneConfigurator {
 	}
 
 	private void buildSemosTempleArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Io Flotto") {
+		final SpeakerNPC npc = new SpeakerNPC("艾欧弗鲁托") {
 
 			@Override
 			protected void createPath() {
@@ -113,7 +113,7 @@ public class TelepathNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 				        null,
 				        new MultipleActions(
-				        		new SayTextAction("我等着你, [name]. 我怎么知道你的名字？这简单, 我是 Io Flotto, 感知者. 你还要我展示六种基本元素的通灵术吗？"),
+				        		new SayTextAction("我等着你, [name]. 我怎么知道你的名字？这简单, 我是 艾欧弗鲁托, 感知者. 你还要我展示六种基本元素的通灵术吗？"),
 				        		new SetQuestAction("meet_io", "start")));
 
 				add(ConversationStates.QUESTION_1, ConversationPhrases.YES_MESSAGES, null, ConversationStates.ATTENDING,

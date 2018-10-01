@@ -35,7 +35,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * In this quest the player can help Eheneumniranin by bringing
+ * In this quest the player can help 荷奴姆尼瑞恩 by bringing
  * two carts with straw up to the barn near 卡尔.
  *
  * (proof of concept for pushable blocks)
@@ -47,12 +47,12 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Eheneumniranin (the half-elf on Ados farm) </li>
+ * <li> 荷奴姆尼瑞恩 (the half-elf on Ados farm) </li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Eheneumniranin asks you to push some carts full of straw to 卡尔's barn </li>
+ * <li> 荷奴姆尼瑞恩 asks you to push some carts full of straw to 卡尔's barn </li>
  * <li> Push 2 carts to the designated spots in front of the barn </li>
  * </ul>
  *
@@ -81,17 +81,17 @@ public class HelpWithTheHarvest extends AbstractQuest {
 	public List<String> getHistory(Player player) {
 		List<String> result = new ArrayList<String>();
 		if(new QuestStartedCondition(QUEST_SLOT).fire(player, null, null) && !createFinishedCondition().fire(player, null, null)) {
-			result.add("I want to help Eheneumniranin with his harvest.");
+			result.add("I want to help 荷奴姆尼瑞恩 with his harvest.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "rejected")) {
 		    result.add("Farm work is too hard for me at the moment.");
 		}
 
 		if(constructHayCartsNotYetCompletedCondition().fire(player, null, null)) {
-			result.add("I need to bring two straw carts to the barn just north of Eheneumniranin.");
+			result.add("I need to bring two straw carts to the barn just north of 荷奴姆尼瑞恩.");
 		}
 		if(createTaskFinishedCondition().fire(player, null, null)) {
-			result.add("I have brought enough straw carts to the barn. I can tell Eheneumniranin now that I am done.");
+			result.add("I have brought enough straw carts to the barn. I can tell 荷奴姆尼瑞恩 now that I am done.");
 		}
 		if(createFinishedCondition().fire(player, null, null)) {
 			result.add("I have helped " + getNPCName() + " and got my reward.");
@@ -113,11 +113,11 @@ public class HelpWithTheHarvest extends AbstractQuest {
 	public void addToWorld() {
 		placeCartsAndTargets();
 		configureNPC();
-		fillQuestInfo(getName(), "Eheneumniranin needs help with the harvest.", false);
+		fillQuestInfo(getName(), "荷奴姆尼瑞恩 needs help with the harvest.", false);
 	}
 
 	private void configureNPC() {
-		SpeakerNPC npc = npcs.get("Eheneumniranin");
+		SpeakerNPC npc = npcs.get("荷奴姆尼瑞恩");
 
 		/*
 		 * Add a reply on the trigger phrase "quest"
@@ -204,28 +204,28 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("面包"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"#Erna hasn't baked for you yet? It is really worth it, because #Leander can use it to make #三明治s for you.",
+				"#Erna hasn't baked for you yet? It is really worth it, because #蓝德 can use it to make #三明治s for you.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("三明治"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"You haven't tried a #三明治 made by #Leander yet? They are so tasty.",
+				"You haven't tried a #三明治 made by #蓝德 yet? They are so tasty.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("leander"),
+				Arrays.asList("蓝德"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Leander runs the bakery in 塞门镇 and can make #三明治s for you if you bring him the ingredients. Why don't you give him a visit?",
+				"蓝德 runs the bakery in 塞门镇 and can make #三明治s for you if you bring him the ingredients. Why don't you give him a visit?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("erna"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Erna is the assistant to #Leander in the bakery. If you bring her #面粉, she will bake #面包 for you.",
+				"Erna is the assistant to #蓝德 in the bakery. If you bring her #面粉, she will bake #面包 for you.",
 				null);
 
         /*
@@ -328,7 +328,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Eheneumniranin";
+		return "荷奴姆尼瑞恩";
 	}
 
 }

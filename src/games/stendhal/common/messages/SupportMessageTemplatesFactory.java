@@ -55,7 +55,7 @@ public class SupportMessageTemplatesFactory {
 		addTemplate("$rules","Hi %s, please read the Stendhal Rules, which will open via #/rules - thank you.");
 		addTemplate("$spam","Hi %s, repeatedly saying the same thing over and over again is considered spamming, and this is against the rules of the game. Please do not spam, and please open the Stendhal Rules via #/rules, thank you.");
 		addTemplate("$spamsupport","Hi %s, we use a special tool for support, so you don't have to worry about messages being lost. Please note that sending a lot of support messages will lower the priority of your query.");
-		addTemplate("$thief","Hi %s, please ask Dagobert about #trading to learn how to trade safely and securely. Support cannot recover items lost through carelessness.");
+		addTemplate("$thief","Hi %s, please ask 达格伯特 about #trading to learn how to trade safely and securely. Support cannot recover items lost through carelessness.");
 		addTemplate("$wiki","Hi %s, this is a question which is answered on the Stendhal wiki, please look on #https://stendhalgame.org/wiki/Stendhal as this is full of useful information. Thanks for playing Stendhal.");
 	}
 

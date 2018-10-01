@@ -24,7 +24,7 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Provides Eheneumniranin, the 镰刀 wielding NPC.
+ * Provides 荷奴姆尼瑞恩, the 镰刀 wielding NPC.
  * A Halfelf who lost his memory and now works in the 小麦 fields at the farm
  * He will possibly offer a quest to help him find his past.
  *
@@ -44,7 +44,7 @@ public class SickleingHalfelfNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		SpeakerNPC npc = new SpeakerNPC("Eheneumniranin") {
+		SpeakerNPC npc = new SpeakerNPC("荷奴姆尼瑞恩") {
 
 			@Override
 			protected void createPath() {
@@ -77,7 +77,7 @@ public class SickleingHalfelfNPC implements ZoneConfigurator {
 		npc.setPosition(76,97);
 		npc.initHP(100);
 		npc.setCollisionAction(CollisionAction.REVERSE); // So does not block straw carts
-		npc.setDescription("You see Eheneumniranin, the Half Elf... He has lost his memory and always looks confused.");
+		npc.setDescription("You see 荷奴姆尼瑞恩, the Half Elf... He has lost his memory and always looks confused.");
 		zone.add(npc);
 	}
 }

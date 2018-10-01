@@ -34,17 +34,17 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: News from Hackim
+ * QUEST: News from 黑姆伊索
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Hackim </li>
+ * <li> 黑姆伊索 </li>
  * <li> 辛布兰卡 </li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Hackim asks you to give a message to 辛布兰卡. </li>
+ * <li> 黑姆伊索 asks you to give a message to 辛布兰卡. </li>
  * <li> 辛布兰卡 thanks you with a pair of 皮裤. </li>
  * </ul>
  *
@@ -73,7 +73,7 @@ public class NewsFromHackim extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Hackim the blacksmith assistant wants me to bring a secret message to 辛布兰卡 in 塞门镇 tavern.");
+		res.add("黑姆伊索 the blacksmith assistant wants me to bring a secret message to 辛布兰卡 in 塞门镇 tavern.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("That job was just too hot for me and I don't want to do anything illegal.");
@@ -81,13 +81,13 @@ public class NewsFromHackim extends AbstractQuest {
 		}
 		res.add("It can't be that bad to just collect a message to 辛布兰卡. What will happen? I'll do it.");
 		if (isCompleted(player)) {
-			res.add("I brought 辛布兰卡 the message by Hackim. That brought me some nice 皮裤.");
+			res.add("I brought 辛布兰卡 the message by 黑姆伊索. That brought me some nice 皮裤.");
 		}
 		return res;
 	}
 
 	private void step_1() {
-		final SpeakerNPC npc = npcs.get("Hackim Easso");
+		final SpeakerNPC npc = npcs.get("黑姆伊索");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
@@ -147,7 +147,7 @@ public class NewsFromHackim extends AbstractQuest {
 						answer = "Take this set of brand new leather leg armor! Let me know if you want anything else.";
 					}
 					// player.say("Well, to make a long story short; I know
-					// your business with Hackim and I'm here to tell you
+					// your business with 黑姆伊索 and I'm here to tell you
 					// that the next shipment is ready.");
 					raiser.say("Ah, it's ready at last! That is very good news indeed! Here, let me give you a little something for your help... "
 									+ answer);
@@ -166,8 +166,8 @@ public class NewsFromHackim extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"News from Hackim",
-				"Hackim Easso, the 塞门镇 blacksmith assistant, needs help to send a message to someone.",
+				"News from 黑姆伊索",
+				"黑姆伊索, the 塞门镇 blacksmith assistant, needs help to send a message to someone.",
 				false);
 		step_1();
 		step_2();
@@ -185,6 +185,6 @@ public class NewsFromHackim extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Hackim Easso";
+		return "黑姆伊索";
 	}
 }

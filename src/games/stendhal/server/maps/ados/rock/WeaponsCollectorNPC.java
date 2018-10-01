@@ -37,7 +37,7 @@ public class WeaponsCollectorNPC implements ZoneConfigurator {
 	}
 
 	private void buildRockArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Balduin") {
+		final SpeakerNPC npc = new SpeakerNPC("巴尔顿") {
 
 			@Override
 			protected void createPath() {
@@ -65,7 +65,7 @@ public class WeaponsCollectorNPC implements ZoneConfigurator {
 		npc.setPosition(16, 8);
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);
-		npc.setDescription("You see Balduin. He lives on these mountains as a hermit, but maybe he has something for you to do.");
+		npc.setDescription("You see 巴尔顿. He lives on these mountains as a hermit, but maybe he has something for you to do.");
 		zone.add(npc);
 	}
 }

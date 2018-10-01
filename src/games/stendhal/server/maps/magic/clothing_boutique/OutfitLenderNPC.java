@@ -197,7 +197,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 				addHelp("我们卖的装备会在一段时间后磨损, 但你总是可以回来买更多的。");
 				addGoodbye("再见！");
 				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "你的魔法外衣已脱下.");
-				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "hire", false, false);
+				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "租借", false, false);
 			}
 		};
 

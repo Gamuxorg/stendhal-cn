@@ -46,7 +46,7 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public KanmararnSoldiersTest() {
-		super(ZONE_NAME, "Henry", "Sergeant James");
+		super(ZONE_NAME, "Henry", "詹姆士警长");
 	}
 
 	@Override
@@ -68,7 +68,7 @@ public class KanmararnSoldiersTest extends ZonePlayerAndNPCTestImpl {
 		SpeakerNPC henry = SingletonRepository.getNPCList().get("Henry");
 		Engine en1 = henry.getEngine();
 
-		SpeakerNPC james = SingletonRepository.getNPCList().get("Sergeant James");
+		SpeakerNPC james = SingletonRepository.getNPCList().get("詹姆士警长");
 		Engine en2 = james.getEngine();
 
 		// talk with Henry

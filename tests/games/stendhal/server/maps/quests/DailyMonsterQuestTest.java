@@ -55,7 +55,7 @@ public class DailyMonsterQuestTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		new DatabaseFactory().initializeDatabase();
-		mayor = SpeakerNPCTestHelper.createSpeakerNPC("Mayor Sakhs");
+		mayor = SpeakerNPCTestHelper.createSpeakerNPC("镇长沙克斯");
 		NPCList.get().add(mayor);
 		dmq = new DailyMonsterQuest();
 

@@ -248,7 +248,7 @@ public final class ShopList {
 		shops.add("buychaos", "混沌护腿", 8000);
 		shops.add("buychaos", "混沌之剑", 12000);
 		shops.add("buychaos", "混乱之盾", 18000);
-		shops.add("buychaos", "浑沌护甲", 20000);
+		shops.add("buychaos", "混沌护甲", 20000);
 
 		// buy elvish items (albino elf, after quest)
 		shops.add("buyelvish", "精灵靴", 300);
@@ -305,7 +305,7 @@ public final class ShopList {
 		shops.add("buyoddsandends", "大瓶抗毒药济", 80);
 		shops.add("buyoddsandends", "玻璃球", 80);
 		shops.add("buyoddsandends", "魔法针", 1500);
-		shops.add("buyoddsandends", "雪珠", 150);
+		shops.add("buyoddsandends", "雪晶球", 150);
 		shops.add("buyoddsandends", "蜘蛛丝腺", 500);
 
 		// archery shop in nalwor)
@@ -366,7 +366,7 @@ public final class ShopList {
 		shops.add("sellhotdogs", "香草奶昔", 110);
 		shops.add("sellhotdogs", "巧克力奶昔", 110);
 		shops.add("sellhotdogs", "巧克力棒", 100);
-		shops.add("sellhotdogs", "雪珠", 200);
+		shops.add("sellhotdogs", "雪晶球", 200);
 
 		// magic city barmaid)
 		shops.add("sellmagic", "热狗", 160);
@@ -422,7 +422,7 @@ public final class ShopList {
 		shops.add("sellparty", "三明治", 140);
 
 
-		// black items (balduin, when ultimate collector quest completed)
+		// black items (巴尔顿, when ultimate collector quest completed)
 		shops.add("buyblack", "黑色盔甲", 60000);
 		shops.add("buyblack", "黑靴子", 10000);
 		shops.add("buyblack", "黑斗篷", 20000);

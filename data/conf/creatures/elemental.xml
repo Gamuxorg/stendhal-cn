@@ -70,7 +70,7 @@
   <!-- START: earth -->
   
   <creature name="泽地仙女">
-    <type class="elemental" subclass="泽地仙女" tileid="elemental.png:6"/>
+    <type class="elemental" subclass="nymph" tileid="elemental.png:6"/>
     <description>You see a 泽地仙女. She loves nature very much! As you take a look at her she feels disturbed in sun-bathing and talking to the birds, perhaps she was best left alone.</description>
     <attributes>
       <atk value="368"/>
@@ -428,7 +428,7 @@
     </ai>
   </creature>
 
-  <creature name="ent">
+  <creature name="树精">
     <type class="ent" subclass="treant" tileid="ent.png:2"/>
     <description>You see an ent. First you think it is a tree but you will get a surprise when it starts to walk!</description>
     <attributes>

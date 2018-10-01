@@ -53,7 +53,7 @@ import games.stendhal.server.util.ItemCollection;
  * STEPS:
  * <ul>
  * <li>Seremela asks you to bring a variety of flowers to restock the flower shop and 15 bottles of water to maintain them</li>
- * <li>Bring the requested amounts water and each flower type to Seremela</li>
+ * <li>Bring the requested amounts water and each flower type to 赛位莫拉</li>
  * </ul>
  *
  * REWARD:
@@ -86,7 +86,7 @@ public class RestockFlowerShop extends AbstractQuest {
 	private static final int WAIT_TIME = 3 * MathHelper.MINUTES_IN_ONE_DAY;
 
 	// Quest NPC
-	private final SpeakerNPC npc = npcs.get("Seremela");
+	private final SpeakerNPC npc = npcs.get("赛位莫拉");
 
 	@Override
 	public List<String> getHistory(final Player player) {

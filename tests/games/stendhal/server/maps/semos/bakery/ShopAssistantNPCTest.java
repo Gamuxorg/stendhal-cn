@@ -268,7 +268,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"You'll have to speak to Leander and ask if you can help with the pizza before I'm allowed to lend you anything.",
+				"You'll have to speak to 蓝德 and ask if you can help with the pizza before I'm allowed to lend you anything.",
 				getReply(npc));
 
 		player.setQuest("pizza_delivery", "done");
@@ -323,7 +323,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"You'll have to speak to Leander and ask if you can help with the pizza before I'm allowed to lend you anything.",
+				"You'll have to speak to 蓝德 and ask if you can help with the pizza before I'm allowed to lend you anything.",
 				getReply(npc));
 
 		player.setQuest("pizza_delivery", "done");
@@ -376,7 +376,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"You'll have to speak to Leander and ask if you can help with the pizza before I'm allowed to lend you anything.",
+				"You'll have to speak to 蓝德 and ask if you can help with the pizza before I'm allowed to lend you anything.",
 				getReply(npc));
 
 		player.setQuest("pizza_delivery", "done");
@@ -432,7 +432,7 @@ public class ShopAssistantNPCTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "borrow");
 		assertTrue(npc.isTalking());
 		assertEquals(
-				"You'll have to speak to Leander and ask if you can help with the pizza before I'm allowed to lend you anything.",
+				"You'll have to speak to 蓝德 and ask if you can help with the pizza before I'm allowed to lend you anything.",
 				getReply(npc));
 
 		player.setQuest("pizza_delivery", "done");

@@ -42,7 +42,7 @@ public class WeaponsCollector2Test {
 
 	@After
 	public void tearDown() throws Exception {
-		SingletonRepository.getNPCList().remove("Balduin");
+		SingletonRepository.getNPCList().remove("巴尔顿");
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class WeaponsCollector2Test {
 
 	@Test
 	public final void rejectQuest() {
-		SingletonRepository.getNPCList().add(new SpeakerNPC("Balduin"));
+		SingletonRepository.getNPCList().add(new SpeakerNPC("巴尔顿"));
 		final WeaponsCollector2 wc = new WeaponsCollector2();
 		wc.addToWorld();
 		final SpeakerNPC npc = wc.getNPC();
@@ -83,7 +83,7 @@ public class WeaponsCollector2Test {
 
 	@Test
 	public final void doQuest() {
-		SingletonRepository.getNPCList().add(new SpeakerNPC("Balduin"));
+		SingletonRepository.getNPCList().add(new SpeakerNPC("巴尔顿"));
 		final WeaponsCollector2 wc = new WeaponsCollector2();
 
 		wc.addToWorld();

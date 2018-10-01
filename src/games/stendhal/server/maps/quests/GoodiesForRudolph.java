@@ -46,7 +46,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Rudolph (the Red-Nosed Reindeer) - walking around 塞门镇 during Christmas season.</li>
+ * <li>Rudolph (the Red-Nosed 驯鹿) - walking around 塞门镇 during Christmas season.</li>
  * </ul>
  *
  * STEPS:
@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  * <li>100 XP</li>
  * <li>50 gold</li>
  * <li>Karma: 60</li>
- * <li>雪珠</li>
+ * <li>雪晶球</li>
  * </ul>
  *
  * REPETITIONS:
@@ -85,7 +85,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Rudolph. He is the Red-Nosed Reindeer running around in 塞门镇.");
+		res.add("I have met Rudolph. He is the Red-Nosed 驯鹿 running around in 塞门镇.");
 		final String questStateFull = player.getQuest(QUEST_SLOT);
 		final String[] parts = questStateFull.split(";");
 		final String questState = parts[0];
@@ -94,7 +94,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			res.add("He asked me to find goodies for him but I rejected his request.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, 0, "start", "done")) {
-			res.add("I promised to find goodies for him because he is a nice reindeer.");
+			res.add("I promised to find goodies for him because he is a nice 驯鹿.");
 		}
 		if ("start".equals(questState) && player.isEquipped("石蕊", 5)  && player.isEquipped("胡萝卜", 10) && player.isEquipped("苹果", 10) || "done".equals(questState)) {
 			res.add("I got all the goodies and will take them to Rudolph.");
@@ -194,7 +194,7 @@ public class GoodiesForRudolph extends AbstractQuest {
         reward.add(new DropItemAction("胡萝卜", 10));
         reward.add(new DropItemAction("苹果", 10));
 		reward.add(new EquipItemAction("money", 50));
-		reward.add(new EquipItemAction("雪珠"));
+		reward.add(new EquipItemAction("雪晶球"));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(60));
@@ -230,7 +230,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Goodies for Rudolph",
-				"Rudolph, Santa's favorite reindeer, desperately wants some goodies.",
+				"Rudolph, Santa's favorite 驯鹿, desperately wants some goodies.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

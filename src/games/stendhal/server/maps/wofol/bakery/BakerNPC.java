@@ -52,7 +52,7 @@ public class BakerNPC implements ZoneConfigurator {
 	//
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC baker = new SpeakerNPC("Kroip") {
+		final SpeakerNPC baker = new SpeakerNPC("可洛普") {
 
 			@Override
 			protected void createPath() {
@@ -80,17 +80,17 @@ public class BakerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				// This isn't bad grammar. It's his tyle of speech! Do't correct pls.
-				addJob("I #make #比萨. I have learn from the great baker #Leander.");
+				addJob("我 #制作 #比萨. 我曾经在烘焙大师 #蓝德 处学习.");
 				addReply(Arrays.asList("小圆菇", "大脚菇"),
-				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
-				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
-				addReply("干酪", "Cheese? I know not.");
-				addReply("西红柿", "This grow in glass houses.");
-				addReply("火腿", "The pig animal have ham.");
-				addHelp("I have work with #Leander, I #make #比萨.");
-				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #比萨.");
-				addQuest("#Leander need 比萨 send. I #make #比萨, you have ingredients.");
-				addGoodbye("You no take 蜡烛!");
+				        "#蓝德 教会我在森林中采蘑菇. 人们喜欢吃蘑菇, 我就多加一点.");
+				addReply("面粉", "塞门镇附近的磨坊可以用小麦生产.");
+				addReply("干酪", "干酪? 我不知道.");
+				addReply("西红柿", "生长在玻璃温室中.");
+				addReply("火腿", "大型动物身上才有火腿.");
+				addHelp("我和 #蓝德 一起工作过, 我会 #制作 #比萨.");
+				addReply("蓝德", "我向塞门镇的人类, 蓝德大师学习 #制作 #比萨.");
+				addQuest("#蓝德 需要 比萨外卖员. 我 #制作 #比萨, 你得有材料.");
+				addGoodbye("你没有带着蜡烛!");
 
 				// makes a 比萨 if you bring 面粉 cheese mushroom 大脚菇 and ham
 				// (uses sorted TreeMap instead of HashMap)
@@ -102,18 +102,18 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("大脚菇", 1);
 				requiredResources.put("火腿", 1);
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "比萨",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "制作", "比萨",
 				        requiredResources, 5 * 60, true);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Welkom!");
+				        "欢迎!");
 			}
 		};
 
 		baker.setEntityClass("koboldchefnpc");
 		baker.setPosition(15, 3);
 		baker.initHP(1000);
-		baker.setDescription("You see Kroip. He was a trainee of Leander once and is now a famous pizza baker in Wofol.");
+		baker.setDescription("你遇见了可洛普. 他以前是蓝德的实习生, 现在是Wofol有名的比萨师.");
 		zone.add(baker);
 	}
 }

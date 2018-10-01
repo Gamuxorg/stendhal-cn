@@ -64,9 +64,9 @@ public class HealerAdder {
 
 		engine.add(ConversationStates.ATTENDING,
 				ConversationPhrases.OFFER_MESSAGES, null,
-				false, ConversationStates.ATTENDING, "我不能为你 #医疗 #heal.", null);
+				false, ConversationStates.ATTENDING, "我不能为你 #医疗 .", null);
 
-		engine.add(ConversationStates.ATTENDING, "heal", null,
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.HEAL_MESSAGES , null,
 				false, ConversationStates.ATTENDING,
 				null, new ChatAction() {
 					@Override

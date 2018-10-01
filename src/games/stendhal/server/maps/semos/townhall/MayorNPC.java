@@ -41,7 +41,7 @@ public class MayorNPC implements ZoneConfigurator {
 	 */
 	private void buildSemosTownhallAreaMayor(final StendhalRPZone zone) {
 		// We create an NPC
-		final SpeakerNPC npc = new SpeakerNPC("Mayor Sakhs") {
+		final SpeakerNPC npc = new SpeakerNPC("镇长沙克斯") {
 
 			@Override
 			protected void createPath() {
@@ -61,7 +61,7 @@ public class MayorNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("mayornpc");
-		npc.setDescription("The mighty mayor of 塞门镇, Mayor Sakhs, is walking infront of you. He seems to be nervous...");
+		npc.setDescription("The mighty mayor of 塞门镇, 镇长沙克斯, is walking infront of you. He seems to be nervous...");
 		npc.setPosition(13, 3);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);

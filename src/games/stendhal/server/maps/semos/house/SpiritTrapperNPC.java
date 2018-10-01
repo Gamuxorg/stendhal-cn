@@ -61,7 +61,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 
 	private SpeakerNPC buildSemosHouseArea() {
 
-	    final SpeakerNPC mizuno = new SpeakerNPC("Mizuno") {
+	    final SpeakerNPC mizuno = new SpeakerNPC("迷之诺") {
 	                @Override
 			protected void createPath() {
 				// npc does not move
@@ -233,7 +233,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 		mizuno.initHP(100);
 		mizuno.setHP(80);
 		mizuno.setCollisionAction(CollisionAction.REVERSE);
-		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带, 不知道他做些什么.");
+		mizuno.setDescription("你遇见 迷之诺. 他像一个灵魂游荡在 Ados 的无人地带, 不知道他做些什么.");
 
 		// start in int_semos_house
 		final StendhalRPZone	zone = SingletonRepository.getRPWorld().getZone("int_semos_house");

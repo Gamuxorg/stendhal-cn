@@ -65,7 +65,7 @@ import games.stendhal.server.util.ItemCollection;
  * PARTICIPANTS:
  * <ul>
  * <li>Vasi Elos, a scientist in Kalavan</li>
- * <li>Mayor Sakhs, the mayor of semos</li>
+ * <li>镇长沙克斯, the mayor of semos</li>
  * </ul>
  *
  * STEPS:
@@ -136,7 +136,7 @@ public class SadScientist extends AbstractQuest {
 		if (questState.startsWith("making")) {
 			return res;
 		}
-		res.add("Vasi Elos 让我找 Mayor Sakhs 寻问找出 Vera 在哪.");
+		res.add("Vasi Elos 让我找 镇长沙克斯 寻问找出 Vera 在哪.");
 		if ("find_vera".equals(questState) && !player.isEquipped("笔记")) {
 			return res;
 		}
@@ -186,7 +186,7 @@ public class SadScientist extends AbstractQuest {
 
 	private void prepareScientist() {
 		final SpeakerNPC scientistNpc = npcs.get("Vasi Elos");
-		final SpeakerNPC mayorNpc = npcs.get("Mayor Sakhs");
+		final SpeakerNPC mayorNpc = npcs.get("镇长沙克斯");
 		startOfQuest(scientistNpc);
 		bringItemsPhase(scientistNpc);
 		playerReturnsAfterRequestForLegs(scientistNpc);
@@ -317,7 +317,7 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition,
 				ConversationStates.IDLE,
-				"问问 Mayor Sakhs 我的妻子 Vera 的近况.",
+				"问问 镇长沙克斯 我的妻子 Vera 的近况.",
 				null);
 	}
 
@@ -369,7 +369,7 @@ public class SadScientist extends AbstractQuest {
 				ConversationStates.INFORMATION_1,
 				"我完成了腿的工作. 但我不想信你, 在我把珠宝腿给你之前" +
 				" 我需要给我的爱人送封信. " +
-				" 问问 Mayor Sakhs , Vera 怎么样了. 你能做到吗?",
+				" 问问 镇长沙克斯 , Vera 怎么样了. 你能做到吗?",
 				null);
 
 		npc.add(ConversationStates.INFORMATION_1, ConversationPhrases.YES_MESSAGES,

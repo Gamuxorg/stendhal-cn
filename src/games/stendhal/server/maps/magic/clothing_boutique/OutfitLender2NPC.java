@@ -184,7 +184,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 				addHelp("我可以用法术给你穿上魔法装备。他们会在一段时间后自动消失。我希望我可以 #销售 一些你喜欢的东西。 如果不是 莉莉娅娜 也可以从不同的范围出租。");
 				addGoodbye("再见！");
 				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "你的魔法装备已经磨损。");
-				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "hire", false, false);
+				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "租借", false, false);
 			}
 		};
 

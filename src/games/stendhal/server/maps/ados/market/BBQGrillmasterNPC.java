@@ -24,7 +24,7 @@ import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a npc in Ados (name:Haunchy Meatoch) who is a grillmaster on the market
+ * Builds a npc in Ados (name:哈文米特奇) who is a grillmaster on the market
  *
  * @author storyteller (idea) and Vanessa Julius (implemented)
  *
@@ -37,7 +37,7 @@ public class BBQGrillmasterNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Haunchy Meatoch") {
+		final SpeakerNPC npc = new SpeakerNPC("哈文米特奇") {
 
 			@Override
 			protected void createPath() {
@@ -70,7 +70,7 @@ public class BBQGrillmasterNPC implements ZoneConfigurator {
 			}
 		};
 
-		npc.setDescription("You see Haunchy Meatoch. He is surrounded by a nice smell of fresh grilled meat.");
+		npc.setDescription("You see 哈文米特奇. He is surrounded by a nice smell of fresh grilled meat.");
 		npc.setEntityClass("bbqgrillmasternpc");
 		npc.setPosition(14, 25);
 		npc.setDirection(Direction.RIGHT);

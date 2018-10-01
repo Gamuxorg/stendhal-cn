@@ -82,29 +82,29 @@ public class AdosWildlifeRaid implements TurnListener {
 				break;
 
 			case 2:
-				shout("士兵头领说: 我会派几个 Marcus 士兵帮助你. ");
+				shout("士兵头领说: 我会派几个 马鲁斯 士兵帮助你. ");
 				wait = 60 * 3;
 				break;
 
 			case 3:
-				shout("Marcus 士兵: 我杀了这两个兽人, 但从探子的消息看出:");
+				shout("马鲁斯 士兵: 我杀了这两个兽人, 但从探子的消息看出:");
 				break;
 
 			case 4:
-				shout("Marcus 士兵: 他们两个只是一支强大兽人部队的前锋.");
+				shout("马鲁斯 士兵: 他们两个只是一支强大兽人部队的前锋.");
 				break;
 
 			case 5:
-				shout("Marcus 士兵: 我们要在10分钟内加强防御工事");
+				shout("马鲁斯 士兵: 我们要在10分钟内加强防御工事");
 				wait = 10 * 3;
 				break;
 
 			case 6:
-				shout("Io Flotto 说: 我在Semons村西面临近Carmen的地方修建了一个通道. ");
+				shout("艾欧弗鲁托 说: 我在Semons村西面临近Carmen的地方修建了一个通道. ");
 				break;
 
 			case 7:
-				shout("Io Flotto 说: 你们可以从那里及时赶到 Ados 野外营地.");
+				shout("艾欧弗鲁托 说: 你们可以从那里及时赶到 Ados 野外营地.");
 				wait = 120 * 3;
 				break;
 

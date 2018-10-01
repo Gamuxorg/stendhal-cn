@@ -41,7 +41,7 @@ public class SergeantNPC implements ZoneConfigurator  {
 	}
 
 	private void buildHideoutArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Sergeant James") {
+		final SpeakerNPC npc = new SpeakerNPC("詹姆士警长") {
 
 			@Override
 			protected void createPath() {
@@ -61,7 +61,7 @@ public class SergeantNPC implements ZoneConfigurator  {
 		};
 
 		npc.setEntityClass("royalguardnpc");
-		npc.setDescription("Sergeant James 是 塞门镇军队的军士长. 他看起来有点失落...");
+		npc.setDescription("詹姆士警长 是 塞门镇军队的军士长. 他看起来有点失落...");
 		npc.setPosition(66, 46);
 		npc.setBaseHP(100);
 		npc.initHP(75);

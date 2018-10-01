@@ -239,13 +239,13 @@
     </equipable>
   </item>
   
-   <item name="雪珠">
+   <item name="雪晶球">
     <type class="misc" subclass="snowglobe" tileid="-1"/>
-    <description>一台雪珠. 非常喜庆, 它提醒你圣诞节的到来!</description>
+    <description>一台雪晶球. 非常喜庆, 它提醒你圣诞节的到来!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <behavior class-name="games.stendhal.server.entity.item.behavior.MessagingUseBehavior">
-      <parameter name="public" value="!me shakes 雪珠."/>
-      <parameter name="private" value="Snowflakes twirl around and fall softly to the ground of the 雪珠."/>
+      <parameter name="public" value="!me shakes 雪晶球."/>
+      <parameter name="private" value="Snowflakes twirl around and fall softly to the ground of the 雪晶球."/>
     </behavior>
     <attributes>
       <quantity value="1"/>

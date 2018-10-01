@@ -65,28 +65,28 @@ import marauroa.common.game.SlotIsFullException;
  * hence the player can't get cash
  *
  * PARTICIPANTS:
- * <li> Henry
- * <li> Sergeant James
+ * <li> 享利
+ * <li> 詹姆士警长
  * <li> corpse of Tom
  * <li> corpse of Charles
  * <li> corpse of Peter
  *
  * STEPS:
- * <li> optional: speak to Sergeant James to get the task to find the map
- * <li> talk to Henry to get the task to find some proof that the other 3
+ * <li> optional: speak to 詹姆士警长 to get the task to find the map
+ * <li> talk to 享利 to get the task to find some proof that the other 3
  * soldiers are dead.
  * <li> collect the item in each of the corpses of the three other soldiers
- * <li> bring them back to Henry to get the map - bring the map to Sergeant
+ * <li> bring them back to 享利 to get the map - bring the map to Sergeant
  * James
  *
  * REWARD:
  * <p>
- * from Henry:
+ * from 享利:
  * <li> you can keep the IOU paper (for quest MCPeglegIOU)
  * <li> 2,500 XP
  * <li> some karma (15)
  * <p>
- * from Sergeant James
+ * from 詹姆士警长
  * <li> 奇妙靴子
  * <li> some karma (15)
  *
@@ -223,7 +223,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 	 * We add text for NPC Henry who will get us on the quest.
 	 */
 	private void prepareCowardSoldier() {
-		final SpeakerNPC henry = npcs.get("Henry");
+		final SpeakerNPC henry = npcs.get("享利");
 
 		henry.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
@@ -376,14 +376,14 @@ public class KanmararnSoldiers extends AbstractQuest {
 	 * add James.
 	 */
 	private void prepareSergeant() {
-		final SpeakerNPC james = npcs.get("Sergeant James");
+		final SpeakerNPC james = npcs.get("詹姆士警长");
 
 		// quest related stuff
 		james.addHelp("Think I need a little help myself. My #group got killed and #one of my men ran away. Too bad he had the #map.");
 		james.addQuest("Find my fugitive soldier and bring him to me ... or at least the #map he's carrying.");
 		james.addReply("group",
 			"We were five, three of us died. You probably passed their corpses.");
-		james.addReply(Arrays.asList("one", "henry"),
+		james.addReply(Arrays.asList("one", "享利"),
 			"Yes, my youngest soldier. He ran away.");
 		james.addReply("地图",
 			"The #treasure map that leads into the heart of the #dwarven #kingdom.");
@@ -400,22 +400,22 @@ public class KanmararnSoldiers extends AbstractQuest {
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(5000));
-		actions.add(new DropInfostringItemAction("地图","Henry"));
+		actions.add(new DropInfostringItemAction("地图","享利"));
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 15.0));
 		actions.add(new EquipItemAction("奇妙靴子", 1, true));
 
 		james.add(ConversationStates.ATTENDING,
-				Arrays.asList("地图", "henry"),
+				Arrays.asList("地图", "享利"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "地图"),
-								new PlayerHasInfostringItemWithHimCondition("地图", "henry")),
+								new PlayerHasInfostringItemWithHimCondition("地图", "享利")),
 				ConversationStates.ATTENDING,
 				"The map! Wonderful! Thank you. And here is your reward. I got these boots while on the #dreamscape.",
 				new MultipleActions(actions));
 
 		james.add(ConversationStates.ATTENDING,
-				Arrays.asList("地图", "henry"),
+				Arrays.asList("地图", "享利"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "地图"),
-								new NotCondition(new PlayerHasInfostringItemWithHimCondition("地图", "henry"))),
+								new NotCondition(new PlayerHasInfostringItemWithHimCondition("地图", "享利"))),
 				ConversationStates.ATTENDING,
 				"Well, where is the map?",
 				null);
@@ -430,7 +430,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				ConversationStates.ATTENDING,
 				"Thanks again for bringing me the map!", null);
 
-		james.add(ConversationStates.ATTENDING, Arrays.asList("地图", "henry",
+		james.add(ConversationStates.ATTENDING, Arrays.asList("地图", "享利",
 			 "group", "one"),
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
@@ -441,7 +441,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"卡梅伦 Soldiers",
-				"Some time ago, Sergeant James started with his crew of four brave soldiers to their adventure of finding a treasure in 卡梅伦, the city of dwarves. They didn't return yet.",
+				"Some time ago, 詹姆士警长 started with his crew of four brave soldiers to their adventure of finding a treasure in 卡梅伦, the city of dwarves. They didn't return yet.",
 				true);
 		prepareCowardSoldier();
 		prepareCorpses();
@@ -457,17 +457,17 @@ public class KanmararnSoldiers extends AbstractQuest {
 			final String questState = player.getQuest(QUEST_SLOT);
 			res.add("I met a scared soldier in 卡梅伦 City. He asked me to find his friends, Peter, Charles, and Tom.");
 			if ("rejected".equals(questState)) {
-				res.add("I don't want to help Henry.");
+				res.add("I don't want to help 享利.");
 				return res;
 			}
 			if ("start".equals(questState)) {
 				return res;
 			}
-			res.add("Sadly I only found corpses of Peter, Charles, and Tom. Henry was aghast. He gave me a map and an IOU, but didn't say what I should do with them now.");
+			res.add("Sadly I only found corpses of Peter, Charles, and Tom. 享利 was aghast. He gave me a map and an IOU, but didn't say what I should do with them now.");
 			if ("地图".equals(questState)) {
 				return res;
 			}
-			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of 奇妙靴子 in return.");
+			res.add("I met 詹姆士警长 and gave him the treasure map. He gave me an excellent pair of 奇妙靴子 in return.");
 			if (isCompleted(player)) {
 				return res;
 			}
@@ -490,7 +490,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Henry";
+		return "享利";
 	}
 
 	@Override

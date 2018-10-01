@@ -77,7 +77,7 @@ public class FarmerNPC implements ZoneConfigurator {
 				addReply("Philomena","She's in the farm house just south west from here.");
 				addHelp("You need help? I can tell you a bit about the #neighborhood.");
 				addReply("neighborhood.","In the north is a cave with bears and other creatures. If you go to the north-east " +
-						"you will reach after some time the great city Ados. At the east is a biiig rock. Does Balduin " +
+						"you will reach after some time the great city Ados. At the east is a biiig rock. Does 巴尔顿 " +
 						"still live there? You want to go south-east? Well.. you can reach Ados there too, but I think the " +
 						"way is a bit harder.");
 				addQuest("I don't have time for those things, sorry. Working.. working.. working..");

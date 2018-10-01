@@ -36,7 +36,7 @@ public class KillMonksTest extends ZonePlayerAndNPCTestImpl {
 
 	private static final String CITY_ZONE_NAME = "0_阿多斯_城_s";
 
-	private static final String NPC_TALK_QUEST_OFFER = "My lovely wife was killed when she went to Wo'fol to order some freshmade 比萨 by Kroip. Some monks stepped into her way and she had no chance. Now I want revenge! May you help me?";
+	private static final String NPC_TALK_QUEST_OFFER = "My lovely wife was killed when she went to Wo'fol to order some freshmade 比萨 by 可洛普. Some monks stepped into her way and she had no chance. Now I want revenge! May you help me?";
 	private static final String NPC_TALK_QUEST_REJECT = "That is a pity... Maybe you'll change your mind soon and help a sad man then.";
 	private static final String NPC_TALK_QUEST_ACCEPT = "Thank you! Please kill 25 monks and 25 黑暗僧侣s in the name of my beloved wife.";
 	private static final String NPC_TALK_QUEST_REMIND = "Please help me with reaching my goal of taking revenge!";

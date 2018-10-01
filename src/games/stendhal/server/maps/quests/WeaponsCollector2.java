@@ -39,17 +39,17 @@ import games.stendhal.server.maps.Region;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Balduin, a hermit living on a mountain between 塞门镇 and Ados
+ * <li> 巴尔顿, a hermit living on a mountain between 塞门镇 and Ados
  * </ul>
  * <p>
  * STEPS:
  * <ul>
- * <li> Balduin asks you for some new weapons.
+ * <li> 巴尔顿 asks you for some new weapons.
  * <li> You get one of the weapons somehow, e.g. by killing a monster.
- * <li> You bring the weapon up the mountain and give it to Balduin.
- * <li> Repeat until Balduin received all weapons. (Of course you can bring up
+ * <li> You bring the weapon up the mountain and give it to 巴尔顿.
+ * <li> Repeat until 巴尔顿 received all weapons. (Of course you can bring up
  * several weapons at the same time.)
- * <li> Balduin gives you a pair of swords in exchange.
+ * <li> 巴尔顿 gives you a pair of swords in exchange.
  * </ul>
  * REWARD:
  * <ul>
@@ -86,7 +86,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 	}
 
 	public SpeakerNPC getNPC() {
-		return npcs.get("Balduin");
+		return npcs.get("巴尔顿");
 	}
 
 	/**
@@ -268,7 +268,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 	}
 
 	private void step_2() {
-		// Just find some of the weapons somewhere and bring them to Balduin.
+		// Just find some of the weapons somewhere and bring them to 巴尔顿.
 	}
 
 	private void step_3() {
@@ -305,7 +305,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Weapon Collector 2",
-				"Balduin, the hermit who is living on Ados rock, has heard of more weapons he can collect.",
+				"巴尔顿, the hermit who is living on Ados rock, has heard of more weapons he can collect.",
 				true);
 		step_1();
 		step_2();
@@ -320,9 +320,9 @@ public class WeaponsCollector2 extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting weapons for Balduin's collection. I still need " + missingWeapons(player, false) + ".");
+				res.add("I'm collecting weapons for 巴尔顿's collection. I still need " + missingWeapons(player, false) + ".");
 			} else {
-				res.add("I found all the weapons Balduin asked for and he rewarded me with a pair of handed swords.");
+				res.add("I found all the weapons 巴尔顿 asked for and he rewarded me with a pair of handed swords.");
 			}
 			return res;
 	}
@@ -340,7 +340,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Balduin";
+		return "巴尔顿";
 	}
 
 	@Override

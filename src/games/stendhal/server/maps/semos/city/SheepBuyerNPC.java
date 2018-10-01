@@ -156,7 +156,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addGreeting();
-				addJob("我在 塞门镇 收购羊, 然后把羊出口到 Ados 城. ");
+				addJob("我在 塞门镇 收购羊, 然后把羊出口到 阿多斯 城. ");
 				addHelp("我收购羊,但要公平合理的价格. 有羊的话, 你只需要对我说卖羊 #sell #sheep, 我会马上处理!");
 				addGoodbye();
 				addQuest("Hmm 我要给我朋友引见一下, 或许你问问 尼世亚 ,他可以给你出点主意...");

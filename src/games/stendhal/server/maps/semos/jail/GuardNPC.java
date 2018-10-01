@@ -30,7 +30,7 @@ import games.stendhal.server.entity.player.Jail;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * The prison guard (original name: Marcus) who's patrolling along the cells.
+ * The prison guard (original name: 马鲁斯) who's patrolling along the cells.
  *
  * @author hendrik
  */
@@ -43,7 +43,7 @@ public class GuardNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Marcus") {
+		final SpeakerNPC npc = new SpeakerNPC("马鲁斯") {
 
 			@Override
 			protected void createPath() {
@@ -90,7 +90,7 @@ public class GuardNPC implements ZoneConfigurator  {
 				addGoodbye();
 			}};
 			npc.setPosition(9, 7);
-			npc.setDescription("你遇到了 塞门镇 监狱的看守, Marcus.");
+			npc.setDescription("你遇到了 塞门镇 监狱的看守, 马鲁斯.");
 			npc.setEntityClass("youngsoldiernpc");
 			zone.add(npc);
 	}

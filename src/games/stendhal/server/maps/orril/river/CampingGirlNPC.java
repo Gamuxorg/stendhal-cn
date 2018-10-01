@@ -57,7 +57,7 @@ public class CampingGirlNPC implements ZoneConfigurator {
 		sally.setPosition(40, 61);
 		sally.setDirection(Direction.RIGHT);
 		sally.initHP(100);
-		sally.setDescription("You see 莎丽. She is the daughter of Leander, the 塞门镇 baker and currently camping near the river.");
+		sally.setDescription("You see 莎丽. She is the daughter of 蓝德, the 塞门镇 baker and currently camping near the river.");
 		zone.add(sally);
 	}
 }

@@ -93,7 +93,7 @@ public class CloaksForBario extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Hey! How did you get down here? You did what? Huh. Well, I'm Bario. I don't suppose you could do a #task for me.",
+				"Hey! 你是怎么下来的? 你做了什么? Huh. 好吧, 我是Bario. 不敢想像你能为我做 #任务.",
 				null);
 
 		// player is willing to help
@@ -101,7 +101,7 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I don't dare go upstairs anymore because I stole a 啤酒 barrel from the dwarves. But it is so cold down here... Can you help me?",
+				"我再不敢上楼, 因为我从矮人那儿偷了一个啤酒桶. 但它在那里太凉... 你能帮忙吗?",
 				null);
 
 		// player should already be getting cloaks
@@ -109,7 +109,7 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"You promised me to bring me ten blue elven cloaks. Remember?",
+				"你答应给我带10个蓝灵斗篷. 记得吗?",
 				null);
 
 		// player has already finished the quest
@@ -117,20 +117,20 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I don't have anything for you to do, really.", null);
+				"我不需要你做什么, 真的.", null);
 
 		// player is willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"I need some blue elven cloaks if I'm to survive the winter. Bring me ten of them, and I will give you a reward.",
+				"如果我想活过冬天, 就需要一些蓝灵斗篷. 请带10个来, 我会给你报酬.",
 				new SetQuestAction(QUEST_SLOT, Integer.toString(REQUIRED_CLOAKS)));
 
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Oh dear... I'm going to be in trouble...",
+				"Oh 天啊... 我该怎么办...",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 	}
 
@@ -149,11 +149,11 @@ public class CloaksForBario extends AbstractQuest {
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						raiser.say("Hi again! I still need "
+						raiser.say("又见面了! 我还需要 "
 							+ player.getQuest(QUEST_SLOT)
-							+ " blue elven "
+							+ " 蓝色精灵 "
 							+ MathHelper.parseInt(player.getQuest(QUEST_SLOT))
-								+	"cloak" + ". Do you have any for me?");
+								+	"斗篷" + ". 你带的有吗?");
 					}
 				});
 
@@ -162,11 +162,11 @@ public class CloaksForBario extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Welcome! Thanks again for those cloaks.", null);
+				"欢迎! 再次谢谢你的斗篷.", null);
 
 		// player says he doesn't have any 蓝灵斗篷s with him
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES, null,
-				ConversationStates.ATTENDING, "Too bad.", null);
+				ConversationStates.ATTENDING, "真失望.", null);
 
 		// player says he has a 蓝灵斗篷 with him but he needs to bring more than one still
 		// could also have used GreaterThanCondition for Quest State but this is okay, note we can only get to question 1 if we were active
@@ -185,9 +185,9 @@ public class CloaksForBario extends AbstractQuest {
 
 								player.setQuest(QUEST_SLOT,
 										Integer.toString(toBring));
-								raiser.say("Thank you very much! Do you have another one? I still need "
+								raiser.say("非常感谢! 你还带的有吗? 我还需要 "
 										+ toBring +
-												"cloak"+ "one" + ".");
+												"斗篷"+ "one" + ".");
 
 							}
 						}));
@@ -203,14 +203,14 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.ATTENDING,
-				"Thank you very much! Now I have enough cloaks to survive the winter. Here, take this 金盾 as a reward.",
+				"太谢谢了! 现在我有足够的斗篷过冬了. 给你, 这面金盾是送你的.",
 				new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
 				new NotCondition(new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.ATTENDING,
-				"Really? I don't see any...",
+				"真的? 没看到啊...",
 				null);
 	}
 
@@ -220,8 +220,8 @@ public class CloaksForBario extends AbstractQuest {
 		step_2();
 		step_3();
 		fillQuestInfo(
-				"Cloaks for Bario",
-				"Bario, the freezing dwarf, needs cloaks to keep him warm.",
+				"Bario的斗篷",
+				"Bario, 一个冻僵的矮人, 需要用斗篷保暖.",
 				false);
 	}
 
@@ -231,15 +231,15 @@ public class CloaksForBario extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met a freezing dwarf hiding below ground in Ados Outside NW. He asked me to bring him 10 蓝灵斗篷s.");
+		res.add("我在阿多斯西北的郊外的地下遇见了一个冻僵的矮人. 他问我要了 10 个蓝灵斗篷.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("I do not want to help Bario.");
+			res.add("我不想帮助 Bario.");
 		} else if (!questState.equals("done")) {
 			int cloaks = MathHelper.parseIntDefault(player.getQuest(QUEST_SLOT),  REQUIRED_CLOAKS);
-			res.add("I need to bring Bario " + cloaks + "蓝灵斗篷"+ "one" + "." );
+			res.add("我需要给 Bario 送去 " + cloaks + "蓝灵斗篷"+ "one" + "." );
 		} else {
-			res.add("Bario gave me a precious 金盾 in return for the 精灵斗篷s!");
+			res.add("Bario 给了我一面贵重的 金盾 来交换 精灵斗篷!");
 		}
 		return res;
 	}

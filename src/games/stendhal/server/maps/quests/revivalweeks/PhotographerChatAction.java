@@ -54,7 +54,7 @@ public class PhotographerChatAction implements ChatAction {
 	}
 
 	private static final String[] CAPTIONS = new String[] {
-		" meeting Balduin",
+		" meeting 巴尔顿",
 		" starting the adventure",
 		" exploring 塞门镇 Dungeon",
 		" visiting the 塞门镇 Temple",

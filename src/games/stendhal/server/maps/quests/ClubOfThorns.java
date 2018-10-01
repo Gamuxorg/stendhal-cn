@@ -38,16 +38,16 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: 类牙棍
+ * QUEST: 尖牙棍
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Orc Saman</li>
+ * <li> 兽人萨满</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Orc Saman asks you to kill 山岭兽族首领 in prison for revenge</li>
+ * <li> 兽人萨满 asks you to kill 山岭兽族首领 in prison for revenge</li>
  * <li> Go kill 山岭兽族首领 in prison using key given by Saman to get in</li>
  * <li> Return and you get Club of Thorns as reward<li>
  * </ul>
@@ -73,7 +73,7 @@ public class ClubOfThorns extends AbstractQuest {
 	}
 
 	private void step_1() {
-		final SpeakerNPC npc = npcs.get("Orc Saman");
+		final SpeakerNPC npc = npcs.get("兽人萨满");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
@@ -125,10 +125,10 @@ public class ClubOfThorns extends AbstractQuest {
 
 	private void step_3() {
 
-		final SpeakerNPC npc = npcs.get("Orc Saman");
+		final SpeakerNPC npc = npcs.get("兽人萨满");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new EquipItemAction("类牙棍", 1, true));
+		reward.add(new EquipItemAction("尖牙棍", 1, true));
 		reward.add(new IncreaseKarmaAction(10.0));
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -154,8 +154,8 @@ public class ClubOfThorns extends AbstractQuest {
 		step_2();
 		step_3();
 		fillQuestInfo(
-				"类牙棍",
-				"The Orc Saman will give a dangerous weapon to a mercenary who will help him.",
+				"尖牙棍",
+				"The 兽人萨满 will give a dangerous weapon to a mercenary who will help him.",
 				false);
 	}
 
@@ -165,10 +165,10 @@ public class ClubOfThorns extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met the Orc Saman in 科多奇.");
+		res.add("I met the 兽人萨满 in 科多奇.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("I do not want to kill anyone for the Orc Saman.");
+			res.add("I do not want to kill anyone for the 兽人萨满.");
 		}
 		if (questState.startsWith("start") || questState.equals("done")) {
 			res.add("I like a challenge and want to try kill the captive 山岭兽族首领. I was given the prison key.");
@@ -177,7 +177,7 @@ public class ClubOfThorns extends AbstractQuest {
 			res.add("I killed the 山岭兽族首领 in 科多奇 Prison.");
 		}
 		if (questState.equals("done")) {
-			res.add("I told the Orc Saman about the kill and he gave me a powerful 类牙棍 to use.");
+			res.add("I told the 兽人萨满 about the kill and he gave me a powerful 尖牙棍 to use.");
 		}
 		return res;
 	}
@@ -194,7 +194,7 @@ public class ClubOfThorns extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Orc Saman";
+		return "兽人萨满";
 	}
 
 	@Override

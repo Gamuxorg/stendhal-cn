@@ -62,7 +62,7 @@ public class McPeglegIOU extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("McPegleg");
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "笔记"),
+			Arrays.asList("iou", "享利", "charles", "笔记"),
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING, null,
 			new ChatAction() {
@@ -95,7 +95,7 @@ public class McPeglegIOU extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "笔记"),
+			Arrays.asList("iou", "享利", "charles", "笔记"),
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
 			"You already got cash for that damned IOU!", null);
@@ -117,7 +117,7 @@ public class McPeglegIOU extends AbstractQuest {
 			final List<String> res = new ArrayList<String>();
 			// only valid if player started the kanmararn soldiers quest
 			if(player.isQuestCompleted("soldier_henry")) {
-				res.add("Henry gave me an IOU with McPegleg's name on it.");
+				res.add("享利 gave me an IOU with McPegleg's name on it.");
 			}
 			if (isCompleted(player)) {
 				res.add("McPegleg did honour the IOU - I got 250 money!");

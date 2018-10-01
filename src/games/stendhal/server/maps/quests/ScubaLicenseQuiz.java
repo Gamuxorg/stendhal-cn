@@ -66,16 +66,16 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 
 	private static Map<String, String> anwsers = new HashMap<String, String>();
 	static {
-		anwsers.put("When nitrogen bubbles block blood flow in your body after a dive, you are experiencing?",
-				"decompression sickness");
-		anwsers.put("What percentage of air is oxygen? Just give me a number.",
+		anwsers.put("潜水结束后, 氮气泡泡封住了你身体的血, 这种感觉叫?",
+				"减压症");
+		anwsers.put("空气中氧气占比多少? 只写数字.",
 						"21");
-		anwsers.put("Waves are caused by ...",
-						"wind");
-		anwsers.put("Most scuba diving injuries caused by fish and aquatic animals happen because they are ... of you.",
-						"afraid");
-		anwsers.put("You should never even consider diving when you have a ...",
-						"cold");
+		anwsers.put("起浪是由于 ...",
+						"风");
+		anwsers.put("大多数潜水装的损坏是因鱼和水生动物引起, 原因是它们____你.",
+						"害怕");
+		anwsers.put("当你____时, 不应考虑潜水",
+						"感冒");
 	}
 
 
@@ -89,11 +89,11 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met Edward a former diver who now teaches other people how. If I can pass his exam I'll get a diving license.");
+		res.add("我遇见了潜水员 Edward , 他教人们如何潜水. 如果我能通过他的考试, 我就可以得到一张潜水执照.");
 		if (!player.isQuestCompleted(QUEST_SLOT)) {
-			res.add("The question I must answer is " + player.getQuest(QUEST_SLOT) + ".");
+			res.add("我必须回答的问题是 " + player.getQuest(QUEST_SLOT) + ".");
 		} else {
-			res.add("I passed Edward's exam and got the diving license.");
+			res.add("我通过 Edward 的考试, 并且拿到了潜水执照.");
 		}
 		return res;
 	}
@@ -109,34 +109,34 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					if (!player.hasQuest(QUEST_SLOT)) {
-						npc.say("Hi I am Faiumoni's one and only teacher for diving. If you want to explore the wonderful world below the sea you need a #license and #scuba #gear.");
+						npc.say("Hi 我是 Faiumoni 唯一的潜水教练. 如果你想畅游美妙的海底世界, 还需要一张潜水 #执照 和 #潜水装.");
 					} else if (!player.isQuestCompleted(QUEST_SLOT)) {
 						final String name = player.getQuest(QUEST_SLOT);
-						npc.say("You're back! I trust you studied up and can answer the question. " + name);
+						npc.say("你回来了! 我想信你完成学业并能正确回答这些问题. " + name);
 						npc.setCurrentState(ConversationStates.QUESTION_1);
 					} else {
-						npc.say("Welcome aboard!");
+						npc.say("欢迎上船!");
 					}
 				}
 			});
 
 		instructor.add(ConversationStates.ATTENDING,
-				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("exam", "test")),
+				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("考试", "测验")),
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Are you ready to take the test?",
+				"确定要开始答题?",
 				null);
 
 		// TODO: point to diving location
 		instructor.add(ConversationStates.ATTENDING,
-				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("exam", "test")),
+				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("考试", "测验")),
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"You've already passed the exam! Now find a good spot to explore the ocean.",
+				"你通过了考试! 现在可以去找个好的潜水地点了.",
 				null);
 
 		instructor.add(ConversationStates.ATTENDING,
-				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("exam", "test")),
+				ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, Arrays.asList("考试", "测验")),
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
 				null,
@@ -144,14 +144,14 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 						final String name = player.getQuest(QUEST_SLOT);
-						npc.say("I trust you studied up and can answer the question. " + name);
+						npc.say("我想信你完成学业并能正确回答这些问题. " + name);
 					}
 				});
 
 		instructor.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES, null,
 			ConversationStates.ATTENDING,
-			"Okay, diving is not for everyone, but don't hesitate to come back to me if you change your mind. Feel free to #study in the mean time.", null);
+			"Okay, 潜水不是适合所有人, 但如果你改变主意不要犹豫马上回来. 同时感受自由的 #学习.", null);
 
 		instructor.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES, null,
@@ -160,7 +160,7 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final String name = Rand.rand(anwsers.keySet());
-					npc.say("Very well. Here is your question. " + name);
+					npc.say("很好. 下面是你的问题. " + name);
 					player.setQuest(QUEST_SLOT, name);
 				}
 			});
@@ -185,18 +185,18 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 					final Sentence expected = ConversationParser.parse(quote, new SimilarExprMatcher());
 
 					if (answer.matchesFull(expected)) {
-						npc.say("Correct, well done! You are now licensed to go scuba diving! But you'll need #buy set of #scuba #gear first. Afraid I don't give 'em away for free anymore.");
+						npc.say("正确, 不错! 现在你有潜水资格了! 但首先你还要 #买 #潜水装 . 恐怕我不能再给你免费使用了.");
 						//Free samples are over.
 						player.addXP(100);
 						player.addKarma(5);
 						player.setQuest(QUEST_SLOT, "done");
 						player.notifyWorldAboutChanges();
 					} else if (ConversationPhrases.GOODBYE_MESSAGES.contains(sentence.getTriggerExpression().getNormalized())) {
-						npc.say("Good bye - see you next time!");
+						npc.say("再见 - 下次再来!");
 						npc.setCurrentState(ConversationStates.IDLE);
 					} else {
 						npc.setCurrentState(ConversationStates.ATTENDING);
-						npc.say("Incorrect. #Study up and come back to me.");
+						npc.say("不对. #学习 完成后再来吧.");
 					}
 				}
 			});
@@ -205,8 +205,8 @@ public class ScubaLicenseQuiz extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Diving License Quiz",
-				"Edward hands out diving licenses for passing his exam.",
+				"潜水资格考试",
+				"Edward 掌管潜水执照的发放. 但要考试合格",
 				false);
 		createLicense();
 	}

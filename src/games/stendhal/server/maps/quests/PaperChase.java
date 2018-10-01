@@ -57,11 +57,11 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 	private static final int TELEPORT_PENALTY_IN_MINUTES = 10;
 
-	private static final List<String> NPC_IDLE = Arrays.asList("泰德", "Haunchy Meatoch", "Pdiddi", "Ketteh Wehoh");
+	private static final List<String> NPC_IDLE = Arrays.asList("泰德", "哈文米特奇", "Pdiddi", "Ketteh Wehoh");
 
-	private List<String> points = Arrays.asList("尼世亚", "Marcus", "Eheneumniranin", "Balduin", "Rachel", "Fritz",
-												"Alice Farmer", "伊丽莎白", "Sue", "Old Mother Helena", "哈泽尔",
-												"Captain Brownbeard", "Jane", "Seremela", "Phalk", "费多拉");
+	private List<String> points = Arrays.asList("尼世亚", "马鲁斯", "荷奴姆尼瑞恩", "巴尔顿", "Rachel", "Fritz",
+												"农妇爱丽丝", "伊丽莎白", "Sue", "老妇荷茉娜", "哈泽尔",
+												"布朗伯德船长", "Jane", "赛位莫拉", "Phalk", "费多拉");
 
 	private Map<String, String> texts = new HashMap<String, String>();
 
@@ -72,41 +72,41 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 	private void setupGreetings() {
 		// Each greeting is said by the previous NPC to point to the NPC in the key.
-		greetings.put("Marcus", "My sheep knew that you were on the way to me. ");
-		greetings.put("Eheneumniranin", "Long time ago that someone visited me here. Nice that you found me. ");
-		greetings.put("Balduin", "Ahh, you found me while gathering sheaves of 小麦 with my 镰刀. Great! ");
-		greetings.put("Rachel", "It's windy here, isn't it? Hope the latest hint how to find me wasn't too easy. ");
-		greetings.put("Fritz", "Oh I love customers of Ados bank! They are so sweet! ");
-		greetings.put("Alice Farmer", "Smelling fish here, right? That's the spirit of the ocean! ");
-		greetings.put("伊丽莎白", "Fantastic vacation so far and so much to explore! ");
-		greetings.put("Sue", "I love chocolate! You found me, maybe you can bring me a bar next time. ");
-		greetings.put("Old Mother Helena", "All of these flowers around give me a warm feeling. Hope you enjoy them too, thanks for visiting me! ");
-		greetings.put("哈泽尔", "Oh hello, so nice that you found me here. Come and join me again soon to let me cook some nice soup for you. ");
-		greetings.put("Captain Brownbeard", "The museum really is a lovely place to work at. Wonderful that you found me here. ");
-		greetings.put("Jane", "Yaaarrrr! My boatey will bring you over the sea, the sea! *sing* ");
-		greetings.put("Seremela", "It's hot here at the beach, hope you used some 防晒油. ");
-		greetings.put("Phalk", "Beautiful flowers in this city here! Unfortunately those elves don't appreciate them much. ");
-		greetings.put("费多拉", "Young warrior, you did great things on your journey! Now return to finish it. You must be thirsty! ");
+		greetings.put("马鲁斯", "我的羊知道你正朝我这儿来.");
+		greetings.put("荷奴姆尼瑞恩", "上次有人来这是很早的事了. 你能来真好. ");
+		greetings.put("巴尔顿", "啊, 当我把镰刀割下的小麦准备集中放到独轮车时你找到了我. 太好了! ");
+		greetings.put("Rachel", "这儿风沙天气严重吧? 希望这次找到我的提示不要太简单.");
+		greetings.put("Fritz", "我爱阿多斯银库的顾客! 他们太可爱了! ");
+		greetings.put("农妇爱丽丝", "这里都是鱼腥味对吧? 那是大海的灵魂! ");
+		greetings.put("伊丽莎白", "如此远的奇妙旅程, 有太多的事情要探索! ");
+		greetings.put("Sue", "我喜爱巧克力! 你遇到了我, 也许下次你就会带一块给我. ");
+		greetings.put("老妇荷茉娜", "周围的所有花让我感到温暖. 希望你也一样, 谢谢你的来访! ");
+		greetings.put("哈泽尔", "Oh 你好, 在这找到我真好. 快来加入我的煲汤工作, 我给你做点好吃的汤. ");
+		greetings.put("布朗伯德船长", "博物馆真是个工作的好地方, 在这找到我真是不错. ");
+		greetings.put("Jane", "呀! 我的船会带你到海上航行, 航行! *sing* ");
+		greetings.put("赛位莫拉", "海边很热, 建议你用用 防晒油. ");
+		greetings.put("Phalk", "这里的花太美了! 不幸的是这此精灵们不太懂欣赏. ");
+		greetings.put("费多拉", "小伙子, 你在旅途中有太多事要做! 现在去完成它们. 你一定很着急! ");
 	}
 
 
 	private void setupTexts() {
-		texts.put("Marcus", "The next person you should find takes care of thieves and other criminals. "
-				  + "He works in a fort near 塞门镇.");
-		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering 小麦.");
-		texts.put("Balduin", "The next person on your trail sits on top of a really windy mountain.");
-		texts.put("Rachel", "The next lady to find works in a bank and can tell you all about her job.");
-		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named 卡若琳.");
-		texts.put("Alice Farmer", "The next person you'll have to seek out is on vacation in Ados, together with her whole family. She also knows everything about food and drinks.");
-		texts.put("伊丽莎白", "Now you have to find a young girl who plays on a playground in Kirdneh and loves chocolate.");
-		texts.put("Sue", "Please go and find the nice gardener who owns some greenhouses with 西红柿es inside near Kalavan.");
-		texts.put("Old Mother Helena", "Now please go and try to find a nice old woman who is really famous for her soups which can keep you warm and healthy. She might ask you about them first, just try to put her off for now :)");
-		texts.put("哈泽尔", "I know a really nice lady who can help you next. She works in a museum and loves her job.");
-		texts.put("Captain Brownbeard", "Now you have to travel on a ferry and talk to an old salt who will lead you to the next person to meet up with.");
-		texts.put("Jane", "Harrr yarrr the next lady enjoys a sunbath together with her husband on Athor beach.");
-		texts.put("Seremela", "It's not long ago that the next person you have to find opened a beautiful flowershop. I've seen lots of long eared creatures walking around her, hidden in a city which lays in a forest.");
-		texts.put("Phalk", "The next person you have to find is an old warrior who guards the mines, north to 塞门镇.");
-		texts.put("费多拉", "The final person to talk to, is the one who started all this.");
+		texts.put("马鲁斯", "你要找的下个人是, 注意着小偷和其他罪犯的人. "
+				  + "他在塞门镇附近工作.");
+		texts.put("荷奴姆尼瑞恩", "我下个要找的是, 阿多斯农场找拿着半月形东西的精灵, 还有. 他总是忙着收割小麦.");
+		texts.put("巴尔顿", "你要找的下个人是, 坐在一个多风的山顶上的某个人.");
+		texts.put("Rachel", "一个要找的是一位在银行工作的女士, 她对她的工作知无不言.");
+		texts.put("Fritz", "请去阿多斯找到一位老渔民, 他会讲很多有关鱼的故事, 还有个女儿叫卡若琳.");
+		texts.put("农妇爱丽丝", "你要找到的下个人是在阿多斯休假的人, 正和她全家一起. 她也了解各种食物和饮料.");
+		texts.put("伊丽莎白", "现在你要找一位女孩, 她在科徳内的广场玩, 而且喜欢巧克力.");
+		texts.put("Sue", "请找一位好园丁, 他在卡拉文附近拥有种着西红柿的绿房子.");
+		texts.put("老妇荷茉娜", "现在请去找一位好心老妇, 她做的汤很有名, 可以温暖你的心. 她可能会先问你汤如何, 不用太在意她就好 :)");
+		texts.put("哈泽尔", "我知道一位好心女士, 她可以帮你进行到下一环节. 她在某个博物馆并喜爱着这项工作.");
+		texts.put("布朗伯德船长", "现在你要去一个渡口, 并且与这个老水手谈谈, 他会提示你下个要找的人.");
+		texts.put("Jane", "哈呀下个要找的是一位女士, 她正与她丈夫一起在阿托尔海滨度假.");
+		texts.put("赛位莫拉", "你要找的下个人不久前开了一家花店. 我看到很多长耳动物在她周围, 藏在一个森林边的城市里.");
+		texts.put("Phalk", "你要找的下个人是一位老战士, 他守卫着塞门镇北方的矿山.");
+		texts.put("费多拉", "最后要找的人, 现在就站在这.");
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 			// player does not have this quest or finished it
 			if (questState == null) {
-				raiser.say("Please talk to 费多拉 in the Mine Town north of 塞门镇 to start the paper chase.");
+				raiser.say("请与塞门镇北方矿镇的费多拉说, 开始 纸片人生.");
 				return;
 			}
 
@@ -136,12 +136,12 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 			// is the player supposed to speak to another NPC?
 			if (!nextNPC.equals(state)) {
-				raiser.say("What do you say? \"" + texts.get(nextNPC) + "\" That's obviously not me.");
+				raiser.say("你说的什么? \"" + texts.get(nextNPC) + "\" 明显不是我.");
 				return;
 			}
 
 			// send player to the next NPC and record it in quest state
-			raiser.say(greetings.get(next) + texts.get(next) + " Good luck!");
+			raiser.say(greetings.get(next) + texts.get(next) + " 好运!");
 			player.setQuest(QUEST_SLOT, 0, next);
 			player.addXP((idx + 1) * 10);
 		}
@@ -163,17 +163,17 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 	private void addTaskToNPC(final int idx) {
 		final String state = points.get(idx);
 		final SpeakerNPC npc = npcs.get(state);
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("paper", "chase", "paperchase"), new SystemPropertyCondition("stendhal.minetown"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("纸片人生"), new SystemPropertyCondition("stendhal.minetown"),
 				ConversationStates.ATTENDING, null, new PaperChasePoint(idx));
 		if (NPC_IDLE.contains(state)) {
-			npc.add(ConversationStates.ANY, Arrays.asList("paper", "chase", "paperchase"), new SystemPropertyCondition("stendhal.minetown"),
+			npc.add(ConversationStates.ANY, Arrays.asList("纸片人生"), new SystemPropertyCondition("stendhal.minetown"),
 					ConversationStates.ANY, null, new PaperChasePoint(idx));
 		}
 	}
 
 
 	private void createHallOfFameSign() {
-		loadSignFromHallOfFame = new LoadSignFromHallOfFameAction(null, "Those who travelled the world on behalf of 费多拉:\n", FAME_TYPE, 2000, true);
+		loadSignFromHallOfFame = new LoadSignFromHallOfFameAction(null, "这些以费多拉的名义在世界旅行的人:\n", FAME_TYPE, 2000, true);
 		loadSignFromHallOfFame.fire(null, null, null);
 	}
 
@@ -201,22 +201,22 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 			ConversationPhrases.QUEST_MESSAGES,
 			new AndCondition(new QuestStartedCondition(QUEST_SLOT), new SystemPropertyCondition("stendhal.minetown")),
 			ConversationStates.ATTENDING,
-			"I have nothing to do for you. But thanks for asking.",
+			"我还没有需要你做的事情, 但还是谢谢关心.",
 			null);
 		npc.add(
 			ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new AndCondition(new QuestNotStartedCondition(QUEST_SLOT), new SystemPropertyCondition("stendhal.minetown")),
 			ConversationStates.QUEST_OFFERED,
-			"Those who had to stay at home because of their duties, have prepared a #paper #chase.",
+			"这些因为职责而呆在家的人们, 共同制作了 #纸片人生 游戏.",
 			null);
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("paper", "chase"),
+			Arrays.asList("纸片人生"),
 			new SystemPropertyCondition("stendhal.minetown"),
 			ConversationStates.ATTENDING,
-			"You must ask every person on the trail about the #paper #chase. Your journey starts in 塞门镇 Village, where you find a sheep loving and sheep selling man. "
-			+ "And just a warning: you may teleport on your journey, but every teleport will count as " + TELEPORT_PENALTY_IN_MINUTES + " minutes on the high score sign.",
+			"你必须根据线索访问 #纸片人生 中的每个人. 你的旅行在 塞门镇 村庄开始, 就是你看到卖羊人的地方. "
+			+ "还有个警告: 旅途中要以传送, 但每次传送要计算 " + TELEPORT_PENALTY_IN_MINUTES + " 分钟到最终计时得分.",
 			startAction);
 
 
@@ -226,16 +226,16 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		}
 
 		// Fidorea does the post processing of this quest
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("paper", "chase"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("纸片人生"),
 				new AndCondition(new QuestNotStartedCondition(QUEST_SLOT), new SystemPropertyCondition("stendhal.minetown")),
-			ConversationStates.ATTENDING, "Oh, that is a nice #quest.", null);
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("paper", "chase"),
+			ConversationStates.ATTENDING, "Oh, 不错的 #任务 .", null);
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("纸片人生"),
 			new AndCondition(
 					new QuestStartedCondition(QUEST_SLOT),
 					new QuestNotInStateCondition(QUEST_SLOT, 0, "费多拉"),
 					new QuestNotInStateCondition(QUEST_SLOT, 0, "done"),
 					new SystemPropertyCondition("stendhal.minetown")),
-			ConversationStates.ATTENDING, "I guess you still have to talk to some people.", null);
+			ConversationStates.ATTENDING, "我猜你还要与某个人谈谈.", null);
 
 		ChatAction reward = new MultipleActions(
 			new IncreaseKarmaAction(15),
@@ -245,10 +245,10 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 			new SetHallOfFameToAgeDiffAction(QUEST_SLOT, 1, FAME_TYPE),
 			loadSignFromHallOfFame);
 
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("paper", "chase"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("纸片人生"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "费多拉"), new SystemPropertyCondition("stendhal.minetown")),
 			ConversationStates.ATTENDING,
-			"Very good. You did the complete quest, talking to all those people around the world. I will add your name to the sign for everyone to see. And here are some magic scrolls as reward. They will help you on further travels.",
+			"很好, 你完成了任务, 与遍布世界的所有人说了话. 我会把你的名字记下来展示给所有人. 这有张魔法卷轴作为奖励. 他们会在你今后的旅程中帮到你.",
 			reward);
 	}
 
@@ -256,8 +256,8 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Paper Chase",
-				"Some rumours are going around in Faiumoni. Maybe some of the guys who live around there know something.",
+				"纸片人生",
+				"在 Faiumoni 有着这样的传闻. 可能有些住在那里的人知道一些事情.",
 				false);
 		setupGreetings();
 		setupTexts();

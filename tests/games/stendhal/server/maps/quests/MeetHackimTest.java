@@ -44,7 +44,7 @@ public class MeetHackimTest {
 	public void setUp() {
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
 		new BlacksmithAssistantNPC().configureZone(zone, null);
-		npc = SingletonRepository.getNPCList().get("Hackim Easso");
+		npc = SingletonRepository.getNPCList().get("黑姆伊索");
 
 		en = npc.getEngine();
 
@@ -60,7 +60,7 @@ public class MeetHackimTest {
 	@Test
 	public void testQuest() {
 		en.step(player, "hi");
-		assertEquals("Hi stranger, I'm Hackim Easso, the blacksmith's assistant. Have you come here to buy weapons?", getReply(npc));
+		assertEquals("Hi stranger, I'm 黑姆伊索, the blacksmith's assistant. Have you come here to buy weapons?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("We aren't allowed to sell weapons to adventurers nowadays; we're working flat-out to produce equipment for the glorious Imperial Deniran Army as they fight against Blordrough's dark legions in the south. (Sssh... can you come here so I can whisper?)", getReply(npc));
 		en.step(player, "no");

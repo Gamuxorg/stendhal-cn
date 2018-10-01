@@ -25,7 +25,7 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 /**
- * ZoneConfigurator configuring Rudolph the Red-Nosed Reindeer who clops around 塞门镇 during Christmas season
+ * ZoneConfigurator configuring Rudolph the Red-Nosed 驯鹿 who clops around 塞门镇 during Christmas season
  */
 public class RudolphNPC implements ZoneConfigurator {
 
@@ -80,7 +80,7 @@ public class RudolphNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(2, 3);
 		npc.setDirection(Direction.DOWN);
-		npc.setDescription("你见到红鼻子驯鹿 Reindeer. 他的鼻子很大, 还闪着光.");
+		npc.setDescription("你见到红鼻子驯鹿 驯鹿. 他的鼻子很大, 还闪着光.");
 		npc.setBaseSpeed(1);
 		npc.setEntityClass("rudolphnpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);

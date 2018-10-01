@@ -59,7 +59,7 @@ public class UltimateCollectorTest {
 
 	@After
 	public void tearDown() throws Exception {
-		SingletonRepository.getNPCList().remove("Balduin");
+		SingletonRepository.getNPCList().remove("巴尔顿");
 	}
 
 	@Test
@@ -67,7 +67,7 @@ public class UltimateCollectorTest {
 
 
 
-		npc = SingletonRepository.getNPCList().get("Balduin");
+		npc = SingletonRepository.getNPCList().get("巴尔顿");
 		en = npc.getEngine();
 		// -----------------------------------------------
 

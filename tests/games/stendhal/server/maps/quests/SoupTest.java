@@ -58,7 +58,7 @@ public class SoupTest {
 	@Test
 	public void testQuest() {
 
-		npc = SingletonRepository.getNPCList().get("Old Mother Helena");
+		npc = SingletonRepository.getNPCList().get("老妇荷茉娜");
 		en = npc.getEngine();
 		player.setXP(100);
 		en.step(player, "hi");
@@ -66,11 +66,7 @@ public class SoupTest {
 		en.step(player, "revive");
 		assertEquals("My special soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
-<<<<<<< HEAD
-		assertEquals("I need 9 ingredients before I make the soup: #胡萝卜, #菠菜, #西葫芦, #甘蓝, #色拉, #洋葱, #白花菜, #绿花菜, and #韭菜. Will you collect them?", getReply(npc));
-=======
 		assertEquals("I need 9 ingredients before I make the soup: #carrot, #菠菜, #西葫芦, #甘蓝, #色拉, #洋葱, #洋花菜, #西蓝花, and #韭菜. Will you collect them?", getReply(npc));
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "no");
 		assertEquals("Oh, never mind. It's your loss.", getReply(npc));
 		en.step(player, "bye");
@@ -80,11 +76,7 @@ public class SoupTest {
 		en.step(player, "revive");
 		assertEquals("My special soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
-<<<<<<< HEAD
-		assertEquals("I need 9 ingredients before I make the soup: #胡萝卜, #菠菜, #西葫芦, #甘蓝, #色拉, #洋葱, #白花菜, #绿花菜, and #韭菜. Will you collect them?", getReply(npc));
-=======
 		assertEquals("I need 9 ingredients before I make the soup: #carrot, #菠菜, #西葫芦, #甘蓝, #色拉, #洋葱, #洋花菜, #西蓝花, and #韭菜. Will you collect them?", getReply(npc));
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "yes");
 		assertEquals("You made a wise choice. Do you have anything I need already?", getReply(npc));
 		en.step(player, "yes");
@@ -98,21 +90,12 @@ public class SoupTest {
 		// [16:51] Removed contained 回城卷 item with ID 6 from bag
 		// [16:52] You see 菠菜. It is enriched with vitamins. Stats are (HP: 30).
 		// summon all except 色拉 and 洋葱 in player's bag
-<<<<<<< HEAD
-		PlayerTestHelper.equipWithItem(player, "胡萝卜");
-		PlayerTestHelper.equipWithItem(player, "菠菜");
-		PlayerTestHelper.equipWithItem(player, "西葫芦");
-		PlayerTestHelper.equipWithItem(player, "甘蓝");
-		PlayerTestHelper.equipWithItem(player, "白花菜");
-		PlayerTestHelper.equipWithItem(player, "绿花菜");
-=======
 		PlayerTestHelper.equipWithItem(player, "carrot");
 		PlayerTestHelper.equipWithItem(player, "菠菜");
 		PlayerTestHelper.equipWithItem(player, "西葫芦");
 		PlayerTestHelper.equipWithItem(player, "甘蓝");
 		PlayerTestHelper.equipWithItem(player, "洋花菜");
 		PlayerTestHelper.equipWithItem(player, "西蓝花");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		PlayerTestHelper.equipWithItem(player, "韭菜");
 		en.step(player, "hi");
 		assertEquals("Welcome back! I hope you collected some #ingredients for the soup, or #everything.", getReply(npc));

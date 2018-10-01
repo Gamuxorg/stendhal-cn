@@ -103,7 +103,7 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"我的爱妻去 Kroip 送新鲜 比萨时, 被一些僧侣僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
+				"我的爱妻去 可洛普 送新鲜 比萨时, 被一些僧侣僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,

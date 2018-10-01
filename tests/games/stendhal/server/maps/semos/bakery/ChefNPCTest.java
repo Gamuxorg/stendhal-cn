@@ -41,7 +41,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public ChefNPCTest() {
-		setNpcNames("Leander");
+		setNpcNames("蓝德");
 		setZoneForPlayer(ZONE_NAME);
 		addZoneConfigurator(new ChefNPC(), ZONE_NAME);
 	}
@@ -60,7 +60,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	@Test
 	public void testHiAndBye() {
 
-		final SpeakerNPC npc = getNPC("Leander");
+		final SpeakerNPC npc = getNPC("蓝德");
 		final Engine en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -78,7 +78,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndMakeNoStuff() {
-		final SpeakerNPC npc = getNPC("Leander");
+		final SpeakerNPC npc = getNPC("蓝德");
 		final Engine en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -101,7 +101,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndMakeWithStuffSingle() {
-		final SpeakerNPC npc = getNPC("Leander");
+		final SpeakerNPC npc = getNPC("蓝德");
 		final Engine en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -158,7 +158,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndMakeWithStuffMultiple() {
-		final SpeakerNPC npc = getNPC("Leander");
+		final SpeakerNPC npc = getNPC("蓝德");
 		final Engine en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -216,7 +216,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testMultipleWithoutName() {
-		final SpeakerNPC npc = getNPC("Leander");
+		final SpeakerNPC npc = getNPC("蓝德");
 		final Engine en = npc.getEngine();
 
 		en.step(player, "hi");

@@ -46,13 +46,13 @@ import games.stendhal.server.maps.Region;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Leander (the baker in 塞门镇)
+ * <li> 蓝德 (the baker in 塞门镇)
  * <li> NPC's all over the world (as customers)
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Leander gives you a 比萨 and tells you who ordered it, and how much
+ * <li> 蓝德 gives you a 比萨 and tells you who ordered it, and how much
  * time you have to deliver.
  * <li> As a gimmick, you get a 比萨 delivery uniform.
  * <li> You walk to the customer and say "比萨".
@@ -176,32 +176,32 @@ public class PizzaDelivery extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("我见到 Leander, 并同意帮他送出比萨快递");
+		res.add("我见到 蓝德, 并同意帮他送出比萨快递");
 		if (!"done".equals(questState)) {
 			final String[] questData = questState.split(";");
 			final String customerName = questData[0];
 			final CustomerData customerData = customerDB.get(customerName);
-			res.add("Leander 给了我一份 " + customerData.flavor + " 要送给 " + customerName + ".");
-			res.add("Leander 告诉我: \"" + customerData.npcDescription + "\"");
+			res.add("蓝德 给了我一份 " + customerData.flavor + " 要送给 " + customerName + ".");
+			res.add("蓝德 告诉我: \"" + customerData.npcDescription + "\"");
 			if (!isDeliveryTooLate(player)) {
 				res.add("如果我快点, 我尽可能保证比萨还是热的. ");
 			} else {
 				res.add("比萨已经凉了. ");
 			}
 		} else {
-			res.add("我送出了Leander给我的最后一份比萨. ");
+			res.add("我送出了蓝德给我的最后一份比萨. ");
 		}
 		return res;
 	}
 
-	// Don't add 莎丽 here, as it would conflict with Leander telling
+	// Don't add 莎丽 here, as it would conflict with 蓝德 telling
 	// about his daughter.
 	private static void buildCustomerDatabase() {
 		customerDB = new HashMap<String, CustomerData>();
 
-		customerDB.put("Balduin",
+		customerDB.put("巴尔顿",
 			new CustomerData(
-				"Balduin 是一个隐士, 他住在Semons 和 Ados 之间的一坐大山中. 他被称为 Ados Rock. 要从这里往东走. ",
+				"巴尔顿 是一个隐士, 他住在Semons 和 Ados 之间的一坐大山中. 他被称为 Ados Rock. 要从这里往东走. ",
 				"比萨Prosciutto",
 				// minutes to deliver. Tested by mort: 6:30
 				// min, with killing some orcs.
@@ -327,9 +327,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"恶. 我恨冷比萨. 我会把它喂动物们了. ",
 				10));
 
-		customerDB.put("Marcus",
+		customerDB.put("马鲁斯",
 			new CustomerData(
-				"Marcus 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "比萨 Tonno",
+				"马鲁斯 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "比萨 Tonno",
 				// minutes to deliver. Tested by kymara: takes longer than before due to fence in village
 				3,
 				// tip when delivered on time. A bit higher than 詹妮
@@ -550,7 +550,7 @@ public class PizzaDelivery extends AbstractQuest {
 	}
 
 	private void prepareBaker() {
-		final SpeakerNPC leander = npcs.get("Leander");
+		final SpeakerNPC leander = npcs.get("蓝德");
 
 		// haven't done the 比萨 quest before or already delivered the last one, ok to wear 比萨 outfit
 		leander.add(ConversationStates.ATTENDING,
@@ -651,7 +651,7 @@ public class PizzaDelivery extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"比萨 Delivery",
-				"Leander 的 比萨 店招收新手男女快递员.",
+				"蓝德 的 比萨 店招收新手男女快递员.",
 				false);
 		buildCustomerDatabase();
 		prepareBaker();
@@ -670,6 +670,6 @@ public class PizzaDelivery extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Leander";
+		return "蓝德";
 	}
 }

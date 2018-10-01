@@ -83,7 +83,7 @@ public class MagicTeacherNPC implements ZoneConfigurator {
 		};
 		npc.addGreeting("Hello, 我是这里的魔法老师！可以 #传授 给你一些魔法技能.");
 		npc.addJob("我的工作是 #传授 基础魔法, 所以你可以在这里学习.");
-		npc.addHelp("如果你需要更多的帮助, 请查看 #https://stendhalgame.org/wiki/Ideas_for_Stendhal/Magic , 或者, 你可以向 #'#arianne' 寻求帮助.");
+		npc.addHelp("如果你需要更多的帮助, 请查看 #https://stendhalgame.org/wiki/Ideas_for_Stendhal/Magic , 或者, 你可以向 '#arianne' 寻求帮助.");
 		npc.addOffer("我能 #传授 给你一些魔法知识.");
 		npc.addGoodbye("要坚持训练!");
 		npc.setPosition(20, 26);

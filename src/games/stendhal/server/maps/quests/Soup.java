@@ -45,9 +45,9 @@ import marauroa.common.game.IRPZone;
 /**
  * QUEST: Special 蔬菜汤.
  * <p>
- * PARTICIPANTS: <ul><li> Old Mother Helena in Fado tavern</ul>
+ * PARTICIPANTS: <ul><li> 老妇荷茉娜 in Fado tavern</ul>
  *
- * STEPS: <ul><li> Old Mother Helena tells you the ingredients of a special 蔬菜汤 <li> You
+ * STEPS: <ul><li> 老妇荷茉娜 tells you the ingredients of a special 蔬菜汤 <li> You
  * collect the ingredients <li> You bring the ingredients to the tavern <li> The 蔬菜汤
  * is served at table<li> Eating the 蔬菜汤 heals you fully over time <li> Making it adds karma
  * </ul>
@@ -122,7 +122,7 @@ public class Soup extends AbstractQuest {
 	}
 
 	private void step_1() {
-		final SpeakerNPC npc = npcs.get("Old Mother Helena");
+		final SpeakerNPC npc = npcs.get("老妇荷茉娜");
 
 		// player says hi before starting the quest
 		npc.add(
@@ -239,7 +239,7 @@ public class Soup extends AbstractQuest {
 	}
 
 	private void step_3() {
-		final SpeakerNPC npc = npcs.get("Old Mother Helena");
+		final SpeakerNPC npc = npcs.get("老妇荷茉娜");
 
 		// player returns while quest is still active
 		npc.add(
@@ -400,7 +400,7 @@ public class Soup extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"蔬菜汤",
-				"Old Mother Helena makes a wonderful vegetable 蔬菜汤.",
+				"老妇荷茉娜 makes a wonderful vegetable 蔬菜汤.",
 				false);
 		step_1();
 		step_2();
@@ -416,9 +416,9 @@ public class Soup extends AbstractQuest {
 			if (!isCompleted(player)) {
 				res.add("I'm collecting ingredients to make vegetable 蔬菜汤. I still need " + missingFood(player, false) + ".");
 			} else if(isRepeatable(player)){
-				res.add("Old Mother Helena is ready to make 蔬菜汤 for me again!");
+				res.add("老妇荷茉娜 is ready to make 蔬菜汤 for me again!");
 			} else {
-				res.add("I made some healthy 蔬菜汤. Old Mother Helena is now busy washing the dishes.");
+				res.add("I made some healthy 蔬菜汤. 老妇荷茉娜 is now busy washing the dishes.");
 			}
 			return res;
 	}
@@ -441,6 +441,6 @@ public class Soup extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Old Mother Helena";
+		return "老妇荷茉娜";
 	}
 }

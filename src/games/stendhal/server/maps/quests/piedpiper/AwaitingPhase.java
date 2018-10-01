@@ -110,7 +110,7 @@ public class AwaitingPhase extends TPPQuest {
 		//piper
 		conversations.add("好. 我要尽快收到报酬, 请备好钱.");
 		//mayor
-		conversations.add("不用担心, 我在我的城内说到做到.");
+		conversations.add("不用担心, 我从来都是说到做到.");
 	}
 
 

@@ -198,7 +198,7 @@ public class PlayerDieer {
 	}
 
 	private void handlePlayerKiller(final Player playerKiller) {
-		// Do not punish on suicide. (That happen at least with 类牙棍).
+		// Do not punish on suicide. (That happen at least with 尖牙棍).
 		if (playerKiller != player) {
 			playerKiller.setLastPlayerKill(System.currentTimeMillis());
 		}

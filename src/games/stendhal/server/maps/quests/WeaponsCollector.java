@@ -30,16 +30,16 @@ import games.stendhal.server.maps.quests.logic.BringListOfItemsQuestLogic;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Balduin, a hermit living on a mountain between 塞门镇 and Ados </li>
+ * <li> 巴尔顿, a hermit living on a mountain between 塞门镇 and Ados </li>
  * </ul>
  * <p>
  * STEPS:
  * <ul>
- * <li> Balduin asks you for some weapons. </li>
+ * <li> 巴尔顿 asks you for some weapons. </li>
  * <li> You get one of the weapons somehow, e.g. by killing a monster. </li>
- * <li> You bring the weapon up the mountain and give it to Balduin. </li>
- * <li> Repeat until Balduin received all weapons. (Of course you can bring up several weapons at the same time.) </li>
- * <li> Balduin gives you an 冰剑 in exchange. </li>
+ * <li> You bring the weapon up the mountain and give it to 巴尔顿. </li>
+ * <li> Repeat until 巴尔顿 received all weapons. (Of course you can bring up several weapons at the same time.) </li>
+ * <li> 巴尔顿 gives you an 冰剑 in exchange. </li>
  * </ul>
  * <p>
  * REWARD:
@@ -71,7 +71,7 @@ public class WeaponsCollector extends AbstractQuest implements
 	public void addToWorld() {
 		fillQuestInfo(
 				"Weapon Collector",
-				"Balduin, the hermit who is living on Ados rock, wants to expand his weapons collection.",
+				"巴尔顿, the hermit who is living on Ados rock, wants to expand his weapons collection.",
 				true);
 		setupAbstractQuest();
 	}
@@ -84,7 +84,7 @@ public class WeaponsCollector extends AbstractQuest implements
 
 	@Override
 	public SpeakerNPC getNPC() {
-		return npcs.get("Balduin");
+		return npcs.get("巴尔顿");
 	}
 
 	@Override
@@ -114,7 +114,7 @@ public class WeaponsCollector extends AbstractQuest implements
 
 	@Override
 	public String welcomeBeforeStartingQuest() {
-		return "Greetings. I am Balduin. Are you interested in weapons? "
+		return "Greetings. I am 巴尔顿. Are you interested in weapons? "
 				+ "I certainly am, I have been collecting them since I was "
 				+ "young. Maybe you can do a little #task for me.";
 	}
@@ -237,7 +237,7 @@ public class WeaponsCollector extends AbstractQuest implements
 
 	@Override
 	public String getNPCName() {
-		return "Balduin";
+		return "巴尔顿";
 	}
 
 	@Override

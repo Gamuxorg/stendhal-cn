@@ -87,7 +87,7 @@ public class RatChefNPC implements ZoneConfigurator {
                 addReply("kitchen tool",
                     "Yes, a 制糖机! Too bad I've lost mine which I borrowed from Erna some time ago... Oh, please avoid mentioning my name to her!");
                 addReply("erna",
-                    "Oh, she's Leander assistant and you always find her in 塞门镇 bakery!");
+                    "Oh, she's 蓝德 assistant and you always find her in 塞门镇 bakery!");
                 addReply(Arrays.asList("cane", "canes", "cane field", "cane fields", "甘蔗", "甘蔗s"),
                     "I have heard that 甘蔗s need a warm and humid climate to thrive. Maybe you might find some on 阿托尔岛");
 				addOffer("I will serve you 可丽饼 au chocolate if you ask me to #bake one!");

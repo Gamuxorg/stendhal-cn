@@ -385,7 +385,7 @@
       <item value="money" quantity="[50,100]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="影子护腿" quantity="[1,1]" probability="1.0"/>
-      <item value="浑沌护甲" quantity="[1,1]" probability="0.0050"/>
+      <item value="混沌护甲" quantity="[1,1]" probability="0.0050"/>
       <item value="混沌靴" quantity="[1,1]" probability="0.05"/>
       <item value="金斗篷" quantity="[1,1]" probability="0.2"/>
       <item value="卓尔之剑" quantity="[1,1]" probability="0.5"/>

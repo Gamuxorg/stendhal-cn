@@ -48,24 +48,24 @@ public class ScubaNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addGoodbye("So long...");
-				addHelp("Hm, maybe you'd like to go on an adventure?");
-				addOffer("To licensed divers I can sell #scuba #gear.");
-				new SellerAdder().addSeller(this, new QuestCompletedSellerBehaviour("get_diving_license", "I can't sell #scuba #gear to just anyone!", shops.get("sellScubaStuff")), false);
-				addJob("I'm an assistant on this ship.");
+				addGoodbye("等太久了...");
+				addHelp("Hm, 可能你喜欢冒险?");
+				addOffer("#学习 过 #执照 我才卖 #潜水装.");
+				new SellerAdder().addSeller(this, new QuestCompletedSellerBehaviour("get_diving_license", "我不能卖 #潜水装 给任何人!", shops.get("sellScubaStuff")), false);
+				addJob("我是这艘船上的助理.");
 
 				//scuba gear phrases
-				addReply("潜水装","You need 潜水装 to explore the beautiful world below the sea.");
-				addReply("scuba","You need 潜水装 to explore the beautiful world below the sea.");
-				addReply("gear","You need 潜水装 to explore the beautiful world below the sea.");
+				addReply("潜水装","你需要 潜水装 周游美丽的海底世界.");
+				//addReply("scuba","你需要 潜水装 周游美丽的海底世界.");
+				//addReply("gear","You need 潜水装 to explore the beautiful world below the sea.");
 				//clue for the player.
-				addReply("study","Go to a library and check out the Diver's Handbook.");
+				addReply("学习","去图书馆学习操作员手册.");
 
 				//quest phrases;
-				addReply("license","Scuba diving can be dangerous before I can give you 潜水装 you need to pass an #exam.");
-				addReply("Mizuno","Do I know that name? Hmm... why yes! Come to think of it we sometimes see a man by that name wandering the #swamp during our breaks on the mainland.");
-				addReply("swamp","Ai it lies just north of the dock but, beware that marsh has been haunted since the days of #Blordrough.");
-				addReply("Blordrough","The demon lord Blordrough waged war in these lands some years ago until the day his army was routed by a coalition of the wood elves and Deniran forces. The three armies fought tooth and nail but, in the end, the demon lord flooded the lake and fled out to sea.");
+				addReply("执照","在我给你潜水装之前潜水会很危险, 你需要通过一场 #考试.");
+				addReply("迷之诺","你知道他? 嗯.. 为何是他! 想起来了, 在我们在陆地上休息期间, 时常看到叫这个名字的人在 #沼泽 地区游荡.");
+				addReply("沼泽","就是码头北面, 但是自从 #Blordrough 之日后, 那个沼泽开始闹鬼, 要小心.");
+				addReply("Blordrough","几年前魔王 Blordrough 在这些岛上发动战争, 直到森林精灵和 Deniran 势力联合抵抗后, 才把他的军队阻挡住. 三方军队拼命撕杀, 但最后魔王被赶到了湖和海的另一侧.");
 				add(ConversationStates.ATTENDING,
 						"status",
 						null,
@@ -96,11 +96,11 @@ public class ScubaNPC implements ZoneConfigurator  {
 				case ANCHORED_AT_MAINLAND:
 				case ANCHORED_AT_ISLAND:
 					// capital letters symbolize shouting
-					npc.say("LET GO ANCHOR!");
+					npc.say("启航!");
 					break;
 
 				default:
-					npc.say("ANCHORS AWEIGH! SET SAIL!");
+					npc.say("起锚! 扬帆!");
 					break;
 				}
 				// Turn back to the wheel
@@ -111,7 +111,7 @@ public class ScubaNPC implements ZoneConfigurator  {
 
 		npc.setPosition(17, 40);
 		npc.setEntityClass("pirate_sailornpc");
-		npc.setDescription ("You see a well seasoned sailor, but he seems preoccupied with something.");
+		npc.setDescription ("你遇见一个经验丰富的老船员, 但他好像若有所思.");
 		npc.setDirection(Direction.LEFT);
 		zone.add(npc);
 	}

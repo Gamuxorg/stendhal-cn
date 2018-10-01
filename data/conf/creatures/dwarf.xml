@@ -474,7 +474,7 @@
       <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
       <item value="密银矿石" quantity="[1,1]" probability="0.2"/>
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
-      <item value="雪珠" quantity="[1,1]" probability="15.0"/>
+      <item value="雪晶球" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
     </equips>

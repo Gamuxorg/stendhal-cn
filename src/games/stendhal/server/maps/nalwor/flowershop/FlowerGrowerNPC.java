@@ -36,7 +36,7 @@ public class FlowerGrowerNPC implements ZoneConfigurator {
     }
 
     private void buildNPC(final StendhalRPZone zone) {
-    	final SpeakerNPC npc = new SpeakerNPC("Seremela") {
+    	final SpeakerNPC npc = new SpeakerNPC("赛位莫拉") {
 
     		@Override
     		protected void createPath() {

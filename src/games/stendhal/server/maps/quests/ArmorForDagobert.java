@@ -40,18 +40,18 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Armor for Dagobert
+ * QUEST: Armor for 达格伯特
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Dagobert, the consultant at the bank of 塞门镇</li>
+ * <li>达格伯特, the consultant at the bank of 塞门镇</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Dagobert asks you to find a 皮胸甲.</li>
+ * <li>达格伯特 asks you to find a 皮胸甲.</li>
  * <li>You get a 皮胸甲, e.g. by killing a 独眼巨人.</li>
- * <li>Dagobert sees your 皮胸甲 and asks for it and then thanks you.</li>
+ * <li>达格伯特 sees your 皮胸甲 and asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -79,7 +79,7 @@ public class ArmorForDagobert extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我见到了 Dagobert. 他是 塞门镇 银行的顾问. ");
+		res.add("我见到了 达格伯特. 他是 塞门镇 银行的顾问. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("他让我找一件 皮胸甲 , 但我拒绝了他的请求. ");
@@ -88,16 +88,16 @@ public class ArmorForDagobert extends AbstractQuest {
 			res.add("我答应给他找一件 皮胸甲, 因为他被抢劫过. ");
 		}
 		if ("start".equals(questState) && (player.isEquipped("皮胸甲") || player.isEquipped("护肩皮胸甲")) || "done".equals(questState)) {
-			res.add("我找到了一件 皮胸甲 , 然后会把它带给 Dagobert.");
+			res.add("我找到了一件 皮胸甲 , 然后会把它带给 达格伯特.");
 		}
 		if ("done".equals(questState)) {
-			res.add("我把 皮胸甲 带给 Dagobert. 作为答谢, 他允许我使用私人仓库. ");
+			res.add("我把 皮胸甲 带给 达格伯特. 作为答谢, 他允许我使用私人仓库. ");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Dagobert");
+		final SpeakerNPC npc = npcs.get("达格伯特");
 
 		npc.add(
 			ConversationStates.ATTENDING,
@@ -143,7 +143,7 @@ public class ArmorForDagobert extends AbstractQuest {
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Dagobert");
+		final SpeakerNPC npc = npcs.get("达格伯特");
 
 		// player returns while quest is still active
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -209,8 +209,8 @@ public class ArmorForDagobert extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Dagobert的皮胸甲",
-				"Dagobert, 塞门镇的银行顾问, 需要安全保护.",
+				"达格伯特的皮胸甲",
+				"达格伯特, 塞门镇的银行顾问, 需要安全保护.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -238,6 +238,6 @@ public class ArmorForDagobert extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Dagobert";
+		return "达格伯特";
 	}
 }

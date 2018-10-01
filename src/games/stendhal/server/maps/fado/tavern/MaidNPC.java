@@ -55,7 +55,7 @@ public class MaidNPC implements ZoneConfigurator {
 	//
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC tavernMaid = new SpeakerNPC("Old Mother Helena") {
+		final SpeakerNPC tavernMaid = new SpeakerNPC("老妇荷茉娜") {
 
 			@Override
 			protected void createPath() {
@@ -97,7 +97,7 @@ public class MaidNPC implements ZoneConfigurator {
 		tavernMaid.setPosition(10, 16);
 		tavernMaid.setCollisionAction(CollisionAction.STOP);
 		tavernMaid.initHP(100);
-		tavernMaid.setDescription("You see Old Mother Helena. She is a fantastic cook and her 蔬菜汤 is world-famous.");
+		tavernMaid.setDescription("You see 老妇荷茉娜. She is a fantastic cook and her 蔬菜汤 is world-famous.");
 		zone.add(tavernMaid);
 	}
 }

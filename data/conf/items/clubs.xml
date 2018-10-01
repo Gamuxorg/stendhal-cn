@@ -45,7 +45,7 @@
     </equipable>
   </item>
 
-  <item name="类牙棍">
+  <item name="尖牙棍">
     <type class="club" subclass="club_of_thorns" tileid="-1"/>
     <description>这是一根尖牙棍, 上面沾满了受刑人的鲜血, 它非常强大但是使用它会消耗你的生命值</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>

@@ -43,7 +43,7 @@ public class HolidayingWomanNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Alice Farmer") {
+		final SpeakerNPC npc = new SpeakerNPC("农妇爱丽丝") {
 
 			@Override
 			protected void createPath() {
@@ -83,7 +83,7 @@ public class HolidayingWomanNPC implements ZoneConfigurator {
 		npc.setEntityClass("woman_016_npc");
 		npc.setPosition(47, 90);
 		npc.initHP(100);
-		npc.setDescription("You see Alice Farmer. She is on holidays in Ados.");
+		npc.setDescription("You see 农妇爱丽丝. She is on holidays in Ados.");
 		zone.add(npc);
 	}
 }

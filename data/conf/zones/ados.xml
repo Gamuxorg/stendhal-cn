@@ -284,13 +284,13 @@
     
     <entity x="43" y="44">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-        <attribute name="text">Hello and welcome to #Ados #Market! You can find nice offers here! Visit #Alexander (walking salesman), #Haunchy #Meatoch (west), #Uncle #Dag (next to the path), #Adena (in the north west) and #Florence #Boullabaisse (in the north east) at their market stands.
+        <attribute name="text">Hello and welcome to #Ados #Market! You can find nice offers here! Visit #Alexander (walking salesman), #哈文米特奇 (west), #Uncle #Dag (next to the path), #Adena (in the north west) and #Florence #Boullabaisse (in the north east) at their market stands.
 - Market Supervisor -</attribute>
     </entity>
     
     <entity x="38" y="44">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Hello and welcome to #Ados #Market! You can find nice offers here! Visit #Alexander (walking salesman), #Haunchy #Meatoch (west), #Uncle #Dag (next to the path), #Adena (in the north west) and #Florence #Boullabaisse (in the north east) at their market stands.
+      <attribute name="text">Hello and welcome to #Ados #Market! You can find nice offers here! Visit #Alexander (walking salesman), #哈文米特奇 (west), #Uncle #Dag (next to the path), #Adena (in the north west) and #Florence #Boullabaisse (in the north east) at their market stands.
 - Market Supervisor -</attribute>
     </entity>
     
@@ -303,7 +303,7 @@
     <entity x="38" y="26">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">Can you smell the BBQ already? Visit me at the west side of the market!
-- Haunchy Meatoch -</attribute>
+- 哈文米特奇 -</attribute>
     </entity>
     
     <entity x="38" y="11">

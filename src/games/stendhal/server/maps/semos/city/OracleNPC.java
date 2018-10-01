@@ -47,7 +47,7 @@ public class OracleNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Periwinkle") {
+		final SpeakerNPC npc = new SpeakerNPC("帕丽温克") {
 
 			@Override
 			public void createDialog() {
@@ -69,7 +69,7 @@ public class OracleNPC implements ZoneConfigurator {
 				addOffer("*giggles* 我什么也不卖. 如果你喜欢, 我可以把我的 ＃name 或者我的姐妹们 #sisters 的名字告诉你.");
 				addReply("sisters", "我的姐妹们住在其他的城镇, 找到他们学习如何帮助 #help 那些离她们最近的人.");
 				addReply("name", "他和我的姐妹们 #sisters 都有一个花名. " +
-						"我妈妈喜爱 forget-me-not 勿忘我的一种花. 好在她没有给我取名勿忘我, 所以她给我取名长春花 Periwinkle , 因为它和勿忘我的花有几分相似. 因此, 请不要忘记我....");
+						"我妈妈喜爱 forget-me-not 勿忘我的一种花. 好在她没有给我取名勿忘我, 所以她给我取名长春花 帕丽温克 , 因为它和勿忘我的花有几分相似. 因此, 请不要忘记我....");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
@@ -92,7 +92,7 @@ public class OracleNPC implements ZoneConfigurator {
 			}
 		};
 		npc.setPosition(2, 29);
-		npc.setDescription("你见到 Periwinkle. 她看起来心烦意乱.");
+		npc.setDescription("你见到 帕丽温克. 她看起来心烦意乱.");
 		npc.setEntityClass("oracle1npc");
 		zone.add(npc);
 	}

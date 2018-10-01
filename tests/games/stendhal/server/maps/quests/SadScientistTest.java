@@ -179,18 +179,18 @@ public class SadScientistTest {
 		player.setQuest(QUEST_SLOT, "making;1");
 
 		en.step(player, "hi");
-		assertEquals("I finished the legs. But I cannot trust you. Before I give the 宝石护腿 to you, I need a message from my darling. Ask Mayor Sakhs for Vera. Can you do that for me?", getReply(npc));
+		assertEquals("I finished the legs. But I cannot trust you. Before I give the 宝石护腿 to you, I need a message from my darling. Ask 镇长沙克斯 for Vera. Can you do that for me?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Oh, thank you. I am waiting.", getReply(npc));
 
 		// -----------------------------------------------
 
 		en.step(player, "hi");
-		assertEquals("Please ask Mayor Sakhs about my wife Vera.", getReply(npc));
+		assertEquals("Please ask 镇长沙克斯 about my wife Vera.", getReply(npc));
 
 		// -----------------------------------------------
 
-		npc = SingletonRepository.getNPCList().get("Mayor Sakhs");
+		npc = SingletonRepository.getNPCList().get("镇长沙克斯");
 		en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -209,7 +209,7 @@ public class SadScientistTest {
 		// [23:03] You put a valuable item on the ground. Please note that it will expire in 10 minutes, as all items do. But in this case there is no way to restore it.
 		// I did test removing the note also but I am too lazy to add it in right now
 		// en.step(player, "hi");
-		// assertEquals("Please ask Mayor Sakhs about my wife Vera.", getReply(npc));
+		// assertEquals("Please ask 镇长沙克斯 about my wife Vera.", getReply(npc));
 
 		// -----------------------------------------------
 

@@ -169,7 +169,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 				Arrays.asList("樱桃", "cherries"),
 				null,
 				ConversationStates.ATTENDING,
-				"Old Mother Helena in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely 樱桃派 already, made by Gertha in Kalavan City gardens.", null);
+				"老妇荷茉娜 in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely 樱桃派 already, made by Gertha in Kalavan City gardens.", null);
 
 		npc.add(
 				ConversationStates.ATTENDING,

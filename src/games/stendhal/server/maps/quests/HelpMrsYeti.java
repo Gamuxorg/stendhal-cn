@@ -54,7 +54,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li>Mrs Yeti, who lives in a snowy dungeon</li>
  * <li>莎娃玛特丽, Healer at magic city</li>
- * <li>Hackim Easso, Blacksmith assistant semos</li>
+ * <li>黑姆伊索, Blacksmith assistant semos</li>
  * </ul>
  *
  * STEPS:
@@ -138,7 +138,7 @@ import games.stendhal.server.maps.Region;
     	npc.add(ConversationStates.ATTENDING, "治疗剂",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 			    ConversationStates.ATTENDING, "I will help you make this 治疗剂, Mrs Yeti is an old friend of mine. But the blade on "
-				+ "my magic knife has snapped yet again. I need another. I get mine from Hackim Easso of 塞门镇, will you go to him and "
+				+ "my magic knife has snapped yet again. I need another. I get mine from 黑姆伊索 of 塞门镇, will you go to him and "
 				+ "ask him to make another knife? Just say my name: #salva",
 				new SetQuestAction(QUEST_SLOT, "hackim"));
 
@@ -146,7 +146,7 @@ import games.stendhal.server.maps.Region;
 			ConversationStates.ATTENDING, Arrays.asList("salva","小刀"),
 			new NotCondition(new QuestInStateCondition(QUEST_SLOT, "小刀")),
 			ConversationStates.ATTENDING,
-			"You need to go to Hackim Easso and ask him about a magic knife for #salva before I can help you.",
+			"You need to go to 黑姆伊索 and ask him about a magic knife for #salva before I can help you.",
 			null);
 
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","小刀","治疗剂"),
@@ -195,7 +195,7 @@ import games.stendhal.server.maps.Region;
 	private void makeMagicKnife() {
 		// although the player does end up just taking an ordinary knife to salva, this step must be completed
 		// (must be in quest state 'knife' when they take the knife)
-	final SpeakerNPC npc = npcs.get("Hackim Easso");
+	final SpeakerNPC npc = npcs.get("黑姆伊索");
 		npc.add(ConversationStates.ATTENDING, "salva",
 				new QuestInStateCondition(QUEST_SLOT, "hackim"),
 			    ConversationStates.ATTENDING, "Salva needs another magic knife does she? Ok, I can help you but not while I am so hungry. "
@@ -366,15 +366,15 @@ import games.stendhal.server.maps.Region;
 			if ("start".equals(questState)) {
 				return res;
 			}
-			res.add("莎娃玛特丽 needs a magic knife from Hackim Easso to make her 治疗剂.");
+			res.add("莎娃玛特丽 needs a magic knife from 黑姆伊索 to make her 治疗剂.");
 			if ("hackim".equals(questState)) {
 				return res;
 			}
-			res.add("Hackim is hungry and wants 5 meat pies before he helps me.");
+			res.add("黑姆伊索 is hungry and wants 5 meat pies before he helps me.");
 			if ("pies".equals(questState)) {
 				return res;
 			}
-			res.add("Hackim said I should go buy a standard knife like from 辛布兰卡!! Apparently he tricked Salva all these years into believing they are magic, I better not let on...");
+			res.add("黑姆伊索 said I should go buy a standard knife like from 辛布兰卡!! Apparently he tricked Salva all these years into believing they are magic, I better not let on...");
 			if ("小刀".equals(questState)) {
 				return res;
 			}

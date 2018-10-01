@@ -57,7 +57,7 @@ public class HousewifeNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hi 看这里, 年轻的英雄.");
 				addJob("我是一个平常的家庭主妇.");
-				addHelp("Oh 我爱吃 Leander 生产的面包. 他的三明治太帅了！你知道吗？他正需要个助手?");
+				addHelp("Oh 我爱吃 蓝德 生产的面包. 他的三明治太帅了！你知道吗？他正需要个助手?");
 				addGoodbye();
 			}
 		};

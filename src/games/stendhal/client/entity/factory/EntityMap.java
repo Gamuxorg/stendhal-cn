@@ -78,7 +78,7 @@ public final class EntityMap {
 
 		register("player", null, null, Player.class);
 
-		register("creature", "ent", null, BossCreature.class);
+		register("creature", "树精", null, BossCreature.class);
 		register("creature", null, null, Creature.class);
 
 		register("sheep", null, null, Sheep.class);

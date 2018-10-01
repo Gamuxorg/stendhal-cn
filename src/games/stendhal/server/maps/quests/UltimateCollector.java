@@ -44,16 +44,16 @@ import games.stendhal.server.maps.Region;
 /**
  * QUEST: Ultimate Collector
  * <p>
- * PARTICIPANTS: <ul><li> Balduin  </ul>
+ * PARTICIPANTS: <ul><li> 巴尔顿  </ul>
  *
  * STEPS:
- * <ul><li> Balduin challenges you to be the ultimate weapons collector
- *     <li> Balduin asks you to complete each quest where you win a rare item
- *	   <li> Balduin asks you to bring him one extra rare item from a list
+ * <ul><li> 巴尔顿 challenges you to be the ultimate weapons collector
+ *     <li> 巴尔顿 asks you to complete each quest where you win a rare item
+ *	   <li> 巴尔顿 asks you to bring him one extra rare item from a list
  *</ul>
  *
  * REWARD: <ul>
- * <li> You can sell black items to Balduin
+ * <li> You can sell black items to 巴尔顿
  * <li> 100000 XP
  * <li> 90 karma
  * </ul>
@@ -65,7 +65,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Quest slot for this quest, the Ultimate Collector */
 	private static final String QUEST_SLOT = "ultimate_collector";
 
-	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
+	/** 尖牙棍 in Kotoch: The 兽人萨满 is the NPC */
 	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // 科多奇
 
 	/** Vampire Sword quest: Hogart is the NPC */
@@ -94,10 +94,10 @@ public class UltimateCollector extends AbstractQuest {
 	/** 精灵护甲 quest: Lupos is the NPC */
 	private static final String ELVISH_ARMOR_QUEST_SLOT = "elvish_armor"; // specific for this one
 
-	/** Kanmararn Soldiers quest: Henry is the NPC  */
+	/** Kanmararn Soldiers quest: 享利 is the NPC  */
 	private static final String KANMARARN_QUEST_SLOT = "soldier_henry"; // specific for this one
 
-	/** Weapons Collector 2nd quest: Balduin is the NPC (Completing 2nd requires 1st) */
+	/** Weapons Collector 2nd quest: 巴尔顿 is the NPC (Completing 2nd requires 1st) */
 	private static final String WEAPONSCOLLECTOR2_QUEST_SLOT = "weapons_collector2";
 
 
@@ -112,7 +112,7 @@ public class UltimateCollector extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Balduin 想要我帮他找到最新的终极武器.");
+		res.add("巴尔顿 想要我帮他找到最新的终极武器.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("现在我不想给他任何武器");
@@ -120,16 +120,16 @@ public class UltimateCollector extends AbstractQuest {
 		}
 		res.add("我接受了他的终极武器收集请求, 答应他找到一个特号而且罕见的武器.");
 		if (!isCompleted(player)) {
-			res.add("Balduin 让我带给他 " + player.getRequiredItemName(QUEST_SLOT,0) + ".");
+			res.add("巴尔顿 让我带给他 " + player.getRequiredItemName(QUEST_SLOT,0) + ".");
 		}
 		if (isCompleted(player)) {
-			res.add("Yay! 我乃终极武器收藏家, 我卖各种黑武器给 Balduin!");
+			res.add("Yay! 我乃终极武器收藏家, 我卖各种黑武器给 巴尔顿!");
 		}
 		return res;
 	}
 
 	private void checkCollectingQuests() {
-		final SpeakerNPC npc = npcs.get("Balduin");
+		final SpeakerNPC npc = npcs.get("巴尔顿");
 
 
 		npc.add(
@@ -205,7 +205,7 @@ public class UltimateCollector extends AbstractQuest {
 
 	private void requestItem() {
 
-		final SpeakerNPC npc = npcs.get("Balduin");
+		final SpeakerNPC npc = npcs.get("巴尔顿");
 		final Map<String,Integer> items = new HashMap<String, Integer>();
 
 		// the numbers are based on depo's metric for rarity (bigger number = more rare) which may be out of date https://sourceforge.net/tracker/?func=detail&aid=2066597&group_id=1111&atid=973767
@@ -244,7 +244,7 @@ public class UltimateCollector extends AbstractQuest {
 
 	private void collectItem() {
 
-		final SpeakerNPC npc = npcs.get("Balduin");
+		final SpeakerNPC npc = npcs.get("巴尔顿");
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
@@ -282,7 +282,7 @@ public class UltimateCollector extends AbstractQuest {
 	}
 
 	private void offerSteps() {
-  		final SpeakerNPC npc = npcs.get("Balduin");
+  		final SpeakerNPC npc = npcs.get("巴尔顿");
 
 		// player returns after finishing the quest and says offer
 		npc.add(
@@ -307,7 +307,7 @@ public class UltimateCollector extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Ultimate Weapon Collector",
-				"Balduin, 是一个集在 Ados 山上的隐士, 他要收集一个最终的装备才能成为收藏家. ",
+				"巴尔顿, 是一个集在 Ados 山上的隐士, 他要收集一个最终的装备才能成为收藏家. ",
 				true);
 
 		checkCollectingQuests();
@@ -330,7 +330,7 @@ public class UltimateCollector extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Balduin";
+		return "巴尔顿";
 	}
 
 	@Override

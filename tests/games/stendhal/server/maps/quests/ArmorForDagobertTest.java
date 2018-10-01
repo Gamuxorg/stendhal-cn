@@ -50,7 +50,7 @@ public class ArmorForDagobertTest {
 		StendhalRPZone zone = new StendhalRPZone("admin_test");
 		new CustomerAdvisorNPC().configureZone(zone, null);
 
-		npc = SingletonRepository.getNPCList().get("Dagobert");
+		npc = SingletonRepository.getNPCList().get("达格伯特");
 		quest = new ArmorForDagobert();
 		quest.addToWorld();
 		en = npc.getEngine();
@@ -76,7 +76,7 @@ public class ArmorForDagobertTest {
 				getReply(npc));
 		en.step(player, "no");
 		java.util.List<String> questHistory = new LinkedList<String>();
-		questHistory.add("I have met Dagobert. He is the consultant at the bank in Semos.");
+		questHistory.add("I have met 达格伯特. He is the consultant at the bank in Semos.");
 		questHistory.add("He asked me to find a leather cuirass but I rejected his request.");
 		assertEquals(questHistory, quest.getHistory(player));
 
@@ -96,7 +96,7 @@ public class ArmorForDagobertTest {
 				getReply(npc));
 		en.step(player, "yes");
 		questHistory = new LinkedList<String>();
-		questHistory.add("I have met Dagobert. He is the consultant at the bank in Semos.");
+		questHistory.add("I have met 达格伯特. He is the consultant at the bank in Semos.");
 		questHistory.add("I promised to find a leather cuirass for him because he has been robbed.");
 		assertEquals(questHistory, quest.getHistory(player));
 		assertEquals(
@@ -114,7 +114,7 @@ public class ArmorForDagobertTest {
 		// -----------------------------------------------
 		final Item item = ItemTestHelper.createItem("leather cuirass");
 		player.getSlot("背包").add(item);
-		questHistory.add("I found a leather cuirass and will take it to Dagobert.");
+		questHistory.add("I found a leather cuirass and will take it to 达格伯特.");
 		assertEquals(questHistory, quest.getHistory(player));
 
 		en.step(player, "hi");
@@ -138,7 +138,7 @@ public class ArmorForDagobertTest {
 		// put it out of bag onto ground, then say yes.
 		player.drop("leather cuirass");
 		assertFalse(player.isEquipped("leather cuirass"));
-		questHistory.remove("I found a leather cuirass and will take it to Dagobert.");
+		questHistory.remove("I found a leather cuirass and will take it to 达格伯特.");
 		assertEquals(questHistory, quest.getHistory(player));
 		npc.remove("text");
 		en.step(player, "yes");
@@ -153,13 +153,13 @@ public class ArmorForDagobertTest {
 
 		player.getSlot("背包").add(item);
 		en.step(player, "hi");
-		questHistory.add("I found a leather cuirass and will take it to Dagobert.");
+		questHistory.add("I found a leather cuirass and will take it to 达格伯特.");
 		assertEquals(questHistory, quest.getHistory(player));
 		assertEquals("Excuse me, please! I have noticed the leather cuirass you're carrying. Is it for me?",
 				getReply(npc));
 		final int xpBeforeReward = player.getXP();
 		en.step(player, "yes");
-		questHistory.add("I took the leather cuirass to Dagobert. As a little thank you, he will allow me to use a private vault.");
+		questHistory.add("I took the leather cuirass to 达格伯特. As a little thank you, he will allow me to use a private vault.");
 		assertEquals(questHistory, quest.getHistory(player));
 		assertEquals("Oh, I am so thankful! Here is some gold I found ... ehm ... somewhere. Now that you have proven yourself a trusted customer, you may have access to your own private banking #vault any time you like.", getReply(npc));
 		assertEquals(xpBeforeReward + 50, player.getXP());

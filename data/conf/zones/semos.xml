@@ -2023,7 +2023,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
       <attribute name="text">上面写着: "面包和比萨外卖. 刚出炉的面包!"
-哈, 真好闻. 下面还有行小字: "最新!烘焙大师Leander亲手制作三明治!"</attribute>
+哈, 真好闻. 下面还有行小字: "最新!烘焙大师蓝德亲手制作三明治!"</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
       <attribute name="class">transparent</attribute>
@@ -2636,7 +2636,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">来自镇长 Sakhs 的公告, 塞门镇的市民为抵抗怪物做了大量的工作, 请継做好街道的清理工作.</attribute>
+      <attribute name="text">来自镇长 沙克斯 的公告, 塞门镇的市民为抵抗怪物做了大量的工作, 请継做好街道的清理工作.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2823,7 +2823,7 @@ Holy mackerel! These chips are tasty.
 
     <entity x="14" y="0">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向Dagobert申请私人仓库.
+      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向达格伯特申请私人仓库.
      </attribute>
       <attribute name="class">transparent</attribute>
     </entity>
@@ -2847,7 +2847,7 @@ Holy mackerel! These chips are tasty.
 
     <entity x="21" y="0">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向Dagobert申请私人仓库.
+      <attribute name="text">当你打开自已的箱子时, 其他人也可能查看里面的东西, 所以最好向达格伯特申请私人仓库.
      </attribute>
       <attribute name="class">transparent</attribute>
     </entity>

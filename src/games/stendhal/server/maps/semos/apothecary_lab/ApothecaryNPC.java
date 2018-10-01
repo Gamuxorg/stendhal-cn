@@ -51,7 +51,7 @@ public class ApothecaryNPC implements ZoneConfigurator {
 
 	        @Override
 			protected void createDialog() {
-	            addGreeting("Hello, 欢迎来到我的试验室.");
+	            addGreeting("你好, 欢迎来到我的试验室.");
 	            addJob("我以前是个 #药济师 , 但现在退休了");
 	            addHelp("抱歉, 但我不认为我能帮到你什么.");
 	            addOffer("我什么都不卖.");

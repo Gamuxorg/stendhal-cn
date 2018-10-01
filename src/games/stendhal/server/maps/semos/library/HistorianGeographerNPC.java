@@ -43,7 +43,7 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 	}
 
 	private void buildSemosLibraryArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Zynn Iwuhos") {
+		final SpeakerNPC npc = new SpeakerNPC("震爱武豪斯") {
 
 			@Override
 			protected void createPath() {
@@ -100,7 +100,7 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("wisemannpc");
-		npc.setDescription("你遇见了 Zynn Iwuhos. 他看起来比他家四周挂着的破旧地图还苍老");
+		npc.setDescription("你遇见了 震爱武豪斯. 他看起来比他家四周挂着的破旧地图还苍老");
 		npc.setPosition(15, 3);
 		npc.initHP(100);
 		zone.add(npc);

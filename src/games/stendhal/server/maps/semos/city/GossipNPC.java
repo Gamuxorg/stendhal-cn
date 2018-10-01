@@ -48,7 +48,7 @@ public class GossipNPC implements ZoneConfigurator {
 
             @Override
             public void createDialog() {
-                addGreeting(null,new SayTextAction("又见面了, [name]. 现在需要我帮忙吗 #help ?"));
+                addGreeting(null,new SayTextAction("又见面了, [name]. 现在需要我 #帮忙 吗?"));
 
                 // A little trick to make NPC remember if it has met
                 // player before and react accordingly
@@ -59,7 +59,7 @@ public class GossipNPC implements ZoneConfigurator {
                     new AndCondition(new GreetingMatchesNameCondition(getName()),
                     		new QuestNotCompletedCondition("Nomyr")),
                     ConversationStates.INFORMATION_1,
-                    "呵呵... Oh, 你好陌生人！hello stranger! 你好像有点迷惑...想听听最近的小道消息吗？",
+                    "呵呵... Oh, 你好陌生人! 你好像有点迷惑...想听听最近的小道消息吗？",
                     new SetQuestAction("Nomyr", "done"));
 
                 add(ConversationStates.ATTENDING,
@@ -77,7 +77,7 @@ public class GossipNPC implements ZoneConfigurator {
                     null);
 
                 add(ConversationStates.ATTENDING,
-                    "sack",
+                    "布袋",
                     null,
                     ConversationStates.ATTENDING,
                     "啊. 你不是真的好奇我麻袋里装了什么, 你可以向 卡尔 要一个空的, 可以把一些你喜欢的东西放进去, 甚至是糖!",
@@ -87,7 +87,7 @@ public class GossipNPC implements ZoneConfigurator {
                     "karl",
                     null,
                     ConversationStates.ATTENDING,
-                    "Oh. 他是一个平易近人的老农夫, 住在离这不远的东面, 顺着到 Ados 的路很容易就找到他",
+                    "Oh. 他是一个平易近人的老农夫, 住在离这不远的东面, 顺着到 阿多斯 的路很容易就找到他",
                     null);
 
                 add(ConversationStates.INFORMATION_1,
@@ -101,13 +101,13 @@ public class GossipNPC implements ZoneConfigurator {
                     ConversationPhrases.NO_MESSAGES,
                     null,
                     ConversationStates.IDLE,
-                    "Awww... 原因你是个胆心鬼？呼呼.",
+                    "Awww... 因为你是个胆小鬼？呼呼.",
                     null);
 
-                addHelp("我是... 他们都叫我万事通 \"observer\". 我可以告诉你最近的一些传言. 你要听吗?");
-                addJob("我知道每个 塞门镇 的每个传言！也虚构了传言中的大部分. 然而,其中一个关于 Hackim 把私武器走私给像你一样的冒险者的消息却是真的!");
-                addQuest("感谢你的提问, 但现在不需要任何东西！... 咦! 我只希望这个布袋 #sack 不那么笨重.");
-                addOffer("Tz 尽管我背着这个麻袋 #sack, 也不意味着我能卖你什么东西...但我听说那边的老家货 hMonogenes 需要帮助");
+                addHelp("我是... 他们都叫我万事通. 我可以告诉你最近的一些传言. 你要听吗?");
+                addJob("我知道每个 塞门镇 的每个传言！也虚构了传言中的大部分. 然而,其中一个关于 黑姆伊索 把私武器走私给像你一样的冒险者的消息却是真的!");
+                addQuest("感谢你的提问, 但现在不需要任何东西！... 咦! 我只希望这个 #布袋 不那么笨重.");
+                addOffer("Tz 尽管我背着这个 #布袋, 也不意味着我能卖你什么东西...但我听说那边的老家货 梦金斯 需要帮助");
                 addGoodbye();
             }
 

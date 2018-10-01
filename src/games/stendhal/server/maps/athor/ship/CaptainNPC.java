@@ -39,7 +39,7 @@ public class CaptainNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Captain Brownbeard") {
+		final SpeakerNPC npc = new SpeakerNPC("布朗伯德船长") {
 
 			@Override
 			public void createDialog() {

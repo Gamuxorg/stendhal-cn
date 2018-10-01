@@ -48,7 +48,7 @@ public class NewsFromHackimTest {
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
 
 		new BlacksmithAssistantNPC().configureZone(zone, null);
-		npcHackim = SingletonRepository.getNPCList().get("Hackim Easso");
+		npcHackim = SingletonRepository.getNPCList().get("黑姆伊索");
 
 		enHackim = npcHackim.getEngine();
 
@@ -69,7 +69,7 @@ public class NewsFromHackimTest {
 	@Test
 	public void testQuest() {
 		enHackim.step(player, "hi");
-		assertEquals("Hi stranger, I'm Hackim Easso, the blacksmith's assistant. Have you come here to buy weapons?", getReply(npcHackim));
+		assertEquals("Hi stranger, I'm 黑姆伊索, the blacksmith's assistant. Have you come here to buy weapons?", getReply(npcHackim));
 		enHackim.step(player, "bye");
 		assertEquals("Bye.", getReply(npcHackim));
 
@@ -92,7 +92,7 @@ public class NewsFromHackimTest {
 		assertEquals("Ah, it's ready at last! That is very good news indeed! Here, let me give you a little something for your help... Take this set of brand new leather leg armor! Let me know if you want anything else.", getReply(npcXin));
 		// [22:38] rosie earns 10 experience points.
 		enXin.step(player, "task");
-		assertEquals("Talk to Hackim Easso in the smithy, he might want you.", getReply(npcXin));
+		assertEquals("Talk to 黑姆伊索 in the smithy, he might want you.", getReply(npcXin));
 
 		// -----------------------------------------------
 

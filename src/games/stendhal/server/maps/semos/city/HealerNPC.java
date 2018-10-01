@@ -45,7 +45,7 @@ public class HealerNPC implements ZoneConfigurator {
 			public void createDialog() {
 				addGreeting("Hi, 如果需要 #帮助 , 只要跟我说一声.");
 				addJob("我的特殊能力可以让我给受伤的人们治疗伤口. 我也销售药济和解毒济.");
-				addHelp("我能在免费 #治疗 #heal 你的伤(#救命 #奶我 #医疗 #医治). 或者出去探险前买点我的药, 当然要 #支付 一点钱.");
+				addHelp("我可以免费 #治疗 你的伤(#救命 #奶我 #医疗 #医治). 你也可以在外出探险前向我买点药, 当然要 #支付 一点钱.");
 				addEmotionReply("hugs", "hugs");
 				addGoodbye();
 			}
@@ -62,7 +62,7 @@ public class HealerNPC implements ZoneConfigurator {
 		new HealerAdder().addHealer(npc, 0);
 		npc.setPosition(5, 46);
 		npc.setCollisionAction(CollisionAction.STOP);
-		npc.setDescription("你看到了好心的 卡蔓. 喜欢帮助人. 你有需要时可以找她.");
+		npc.setDescription("你看到了好心的卡蔓. 喜欢帮助人. 你有需要时可以找她.");
 		npc.setEntityClass("welcomernpc");
 		npc.setSounds(Arrays.asList("giggle-1", "giggle-2"));
 		zone.add(npc);

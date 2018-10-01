@@ -176,7 +176,7 @@ public class HerbsForCarmen extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("小圆菇","porcino","大脚菇","大脚菇s"),
+			Arrays.asList("小圆菇","大脚菇"),
 			null,
 			ConversationStates.ATTENDING,
 			"有人告诉我在 塞门镇 森林中有一些不同种类的蘑菇, 从这往南走就能到. ",
@@ -188,7 +188,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			null,
 			ConversationStates.ATTENDING,
 			"出了 塞门镇 向北, 在 grove 树的旁边, 生着名叫 arnandula 的药草, 给你看看它的图片, 方但你找到它. ",
-			new ExamineChatAction("arandula.png", "卡蔓's drawing", "海芋"));
+			new ExamineChatAction("arandula.png", "卡蔓的画", "海芋"));
 
 	}
 

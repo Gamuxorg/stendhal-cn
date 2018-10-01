@@ -40,7 +40,7 @@ public class GreeterNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addJob("我是 迪金斯 的大哥, 我也不记得我以前是做什么的了...我现在退休了.");
-				addOffer("我在 塞门镇做地标 #buildings 指引员. 帮助新来的移民指路. 当我心情不好时, 也会故意指错路逗自已开心. . . 呵呵呵！当然, 有时我指的错路, 他们最终还是找到正确的路, 哈哈哈!");
+				addOffer("我在 塞门镇做 #地标 指引员. 帮助新来的移民指路. 当我心情不好时, 也会故意指错路逗自已开心. . . 呵呵呵！当然, 有时我指错路, 他们最终还是找到正确的路, 哈哈哈!");
 				// All further behaviour is defined in quest classes.
 			}
 
@@ -54,7 +54,7 @@ public class GreeterNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(27, 43);
 		npc.setEntityClass("oldmannpc");
-		npc.setDescription("你见到了 梦金斯. 他看起来很苍老. 可能他还知道一两件事...");
+		npc.setDescription("你见到了 梦金斯. 看起来很苍老. 或许他知道一点情况...");
 		npc.setDirection(Direction.LEFT);
 		zone.add(npc);
 	}

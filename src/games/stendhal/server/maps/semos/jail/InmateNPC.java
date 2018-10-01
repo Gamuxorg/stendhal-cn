@@ -42,7 +42,7 @@ public class InmateNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Let me out!");
+				addGreeting("让我出去!");
 				addGoodbye();
 			}};
 			npc.setPosition(13, 3);

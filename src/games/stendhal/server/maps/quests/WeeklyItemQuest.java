@@ -95,7 +95,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 
 		// armor
 		items.put("野蛮人护甲",1);
-		items.put("浑沌护甲",1);
+		items.put("混沌护甲",1);
 		items.put("矮人护甲",1);
 		items.put("黄金铠甲",1);
 		items.put("冰护甲",1);

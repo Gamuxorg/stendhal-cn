@@ -41,7 +41,7 @@ public class JailKeeperNPC implements ZoneConfigurator {
 	}
 
 	private void buildJailKeeper(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Sten Tanquilos") {
+		final SpeakerNPC npc = new SpeakerNPC("斯坦魁洛斯") {
 
 			@Override
 			protected void createPath() {
@@ -55,15 +55,15 @@ public class JailKeeperNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Greetings! How may I #help you?");
-				addJob("I am the jail keeper. You have been confined here because of your bad behaviour.");
-				addHelp("Please wait for an administrator to come here and decide what to do with you. In the meantime, there is no escape for you.");
+				addGreeting("你好! 需要我 #帮忙 吗?");
+				addJob("我是监狱的看守. 由于你的不良行为已被刑拘在这里.");
+				addHelp("请等待管理员, 他会来处置你. 但此时你是跑不掉的.");
 				addGoodbye();
 			}
 		};
 
 		npc.setEntityClass("youngsoldiernpc");
-		npc.setDescription("You see one of the 塞门镇 jail keepers, Sten Tanquilos.");
+		npc.setDescription("你遇见了塞门镇监狱看守, 斯坦魁洛斯.");
 		npc.setPosition(4, 17);
 		npc.initHP(100);
 		zone.add(npc);

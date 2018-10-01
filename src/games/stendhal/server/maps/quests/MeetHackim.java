@@ -31,11 +31,11 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Speak with Hackim
+ * QUEST: Speak with 黑姆伊索
  *
- * PARTICIPANTS: - Hackim Easso, the blacksmith's assistant
+ * PARTICIPANTS: - 黑姆伊索, the blacksmith's assistant
  *
- * STEPS: - Talk to Hackim to activate the quest and keep speaking with Hackim.
+ * STEPS: - Talk to 黑姆伊索 to activate the quest and keep speaking with 黑姆伊索.
  *
  * REWARD: - 10 XP - 5 gold coins
  *
@@ -67,7 +67,7 @@ public class MeetHackim extends AbstractQuest {
 
 	private void prepareHackim() {
 
-		final SpeakerNPC npc = npcs.get("Hackim Easso");
+		final SpeakerNPC npc = npcs.get("黑姆伊索");
 
 		npc.add(
 			ConversationStates.ATTENDING,
@@ -130,8 +130,8 @@ public class MeetHackim extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Meet Hackim Easso",
-				"The blacksmith assistant Hackim Easso has some useful information.",
+				"Meet 黑姆伊索",
+				"The blacksmith assistant 黑姆伊索 has some useful information.",
 				false);
 		yesTrigger = new LinkedList<String>(ConversationPhrases.YES_MESSAGES);
 		yesTrigger.add("辛布兰卡");
@@ -152,6 +152,6 @@ public class MeetHackim extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Hackim Easso";
+		return "黑姆伊索";
 	}
 }

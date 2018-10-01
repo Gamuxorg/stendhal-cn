@@ -161,7 +161,7 @@ public class Vault extends StendhalRPZone {
 	}
 
 	/**
-	 * Notifies the user of the vault in the name of Dagobert.
+	 * Notifies the user of the vault in the name of 达格伯特.
 	 *
 	 * @param target the player to be notified
 	 * @param message the delivered message
@@ -171,7 +171,7 @@ public class Vault extends StendhalRPZone {
 
 		final Player player = SingletonRepository.getRuleProcessor().getPlayer(target);
 
-		new GuaranteedDelayedPlayerTextSender("Dagobert", player, message, 2);
+		new GuaranteedDelayedPlayerTextSender("达格伯特", player, message, 2);
 
 	}
 

@@ -93,8 +93,8 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 			public void createDialog() {
 				addJob("我是本面包店的助理.");
 				addReply("面粉",
-				"我们用的面粉 #面粉 是采用东北方的磨坊生产的,本地麦子磨的面粉. 但狼群吃了他们的送货员！如果你能帮匀们带一些过来, 我们能烘焙 #bake 些好吃的面包给你.");
-				addHelp("面包对你很好, 尤其在你外出冒险时, 不能总吞下红色的生肉. 我的老板 Leander 是这个岛上做的三明治 三明治es 最好的面包师!");
+				"我们用的 #面粉 是镇东北方的磨坊生产的, 用本地出产的麦子研磨. 但狼群咬伤了他们的送货员! 如果你能帮我们带一些面粉过来, 我们能 #烘焙 出好吃的面包给你.");
+				addHelp("面包对人很好, 尤其在你外出冒险时, 不能总吞下红色的生肉. 我的老板 蓝德 是这个岛上做的三明治最好的面包师!");
 				addGoodbye();
 
 				// Erna bakes 面包 if you bring her 面粉.
@@ -102,10 +102,10 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				requiredResources.put("面粉", 2);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("erna_bake_bread",
-						"bake", "面包", requiredResources, 10 * 60);
+						"烘焙", "面包", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包. ");
+				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #烘焙 出好吃的面包. ");
 
 				addOffer("我们的 比萨 外卖团队可以 #借 一些厨师制服给你.");
 
@@ -118,7 +118,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new LevelGreaterThanCondition(5), new QuestNotCompletedCondition("pizza_delivery")),
 				    ConversationStates.ATTENDING,
-				    "你需要和 Leander 讲, 问他如果你能帮送 比萨 外卖, 然后我才可能会借给你.",
+				    "你需要和 蓝德 讲, 问他如果你能帮送 比萨 外卖, 然后我才可能会借给你.",
 				    null);
 
 				add(ConversationStates.ATTENDING, "借",
@@ -134,7 +134,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				    ConversationStates.QUESTION_1,
-				    "你没归还我上次借给你的东西！你想为此付 " + COST + " 给我吗?",
+				    "你没归还我上次借给你的东西！你想为此付 " + COST + " 钱给我吗?",
 				    null);
 
 				// player already has 借ed something it didn't return and will return it
@@ -172,7 +172,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.NO_MESSAGES,
 				    null,
 				    ConversationStates.ATTENDING,
-				    "没问题, 你借用多久都可以, 但一次只能借一件, 再借要把上次的还回来. 否则要付钱.",
+				    "没问题, 你借用多久都可以, 但一次只能借一件, 再借要把上次的还回来. 否则要赔钱.",
 				    null);
 				// does want to pay for it now
 				add(ConversationStates.QUESTION_1,
@@ -210,7 +210,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 								} else {
 									player.equipOrPutOnGround(item);
 									player.setQuest(QUEST_SLOT, itemName);
-									npc.say("给你！不要忘记归还 #return , 否则你将为些付钱!");
+									npc.say("给你！不要忘记 #归还 , 否则你将为此付钱!");
 								}
 							}
 						});
@@ -224,7 +224,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					        new QuestCompletedCondition("pizza_delivery"),
 					        new QuestNotActiveCondition(QUEST_SLOT)),
 					    ConversationStates.ATTENDING,
-					    "抱歉, 我不能借给你糖 糖块, 只有 #sugar #mill.",
+					    "抱歉, 我不能借给你糖块, 只有 #制糖机 .",
 					    null);
 
 				// too low level
@@ -248,25 +248,25 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    ITEMS,
 					    new QuestNotCompletedCondition("pizza_delivery"),
 					    ConversationStates.ATTENDING,
-					    "只有 比萨 外卖人员才能借工具. 请为 Leander 送一次外卖, 再说借的事.",
+					    "只有 比萨 外卖人员才能借工具. 请为 蓝德 送一次外卖, 再说借的事.",
 					    null);
 
 				// player asks about pay from attending state
-				add(ConversationStates.ATTENDING, "pay",
+				add(ConversationStates.ATTENDING, Arrays.asList("赔钱", "赔付", "支付"),
 				    new QuestActiveCondition(QUEST_SLOT),
 				    ConversationStates.QUESTION_1,
 				    "如果你弄丢了借我的东西, 你可以赔付 " + COST + " 金币. 你现在想付钱吗?",
 				    null);
 
 				// player asks about return from attending state
-				add(ConversationStates.ATTENDING, "return",
+				add(ConversationStates.ATTENDING, "归还",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				    ConversationStates.QUESTION_2,
 				    "你现在要把借的工具归还吗？",
 				    null);
 
 				// player asks about return from attending state
-				add(ConversationStates.ATTENDING, "return",
+				add(ConversationStates.ATTENDING, "归还",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				    ConversationStates.QUESTION_1,
 				    "你没带着借我的工具呀！要为此赔付 " + COST + " 金币我吗?",
@@ -275,7 +275,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 			}};
 			npc.setPosition(26, 9);
 			npc.setEntityClass("housewifenpc");
-			npc.setDescription("你看到了 Erna. 她为 Leander 工作了很长时间, 现在是他忠实的助理.");
+			npc.setDescription("你看到了 Erna. 她为 蓝德 工作了很长时间, 现在是他忠实的助理.");
 			zone.add(npc);
 	}
 }

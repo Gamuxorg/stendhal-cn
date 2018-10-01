@@ -38,7 +38,7 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 	}
 
 	private void buildHideoutArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Henry") {
+		final SpeakerNPC npc = new SpeakerNPC("享利") {
 
 			@Override
 			protected void createPath() {
@@ -69,7 +69,7 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("youngsoldiernpc");
-		npc.setDescription("你遇见了 Henry. 他是 Smemos 镇的一个失散的士兵, 现在藏在黑暗的洞窟中...");
+		npc.setDescription("你遇见了 享利. 他是 Smemos 镇的一个失散的士兵, 现在藏在黑暗的洞窟中...");
 		npc.setPosition(57, 113);
 		npc.setBaseHP(100);
 		npc.initHP(20);
